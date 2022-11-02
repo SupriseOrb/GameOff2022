@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	38624190	TestSound			\Default Work Unit\TestSound	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	632420613	Test_Sound	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Jackpot_Winner2_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test_Sound		701892
+

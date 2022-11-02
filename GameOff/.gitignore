@@ -69,11 +69,11 @@ UserSettings/EditorUserSettings.asset
 ## ---------------- ##
 
 # project stuff
-WWiseProject/.cache/
-WWiseProject/*.prof
-WwiseProject/*_WwiseProject.*.validationcache
-WwiseProject/*_WwiseProject.*.wsettings
-WwiseProject/**/*.akd
+GameOff2022Wwise/.cache/
+GameOff2022Wwise/*.prof
+GameOff2022Wwise/*_WwiseProject.*.validationcache
+GameOff2022Wwise/*_WwiseProject.*.wsettings
+GameOff2022Wwise/**/*.akd
 
 Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
 
