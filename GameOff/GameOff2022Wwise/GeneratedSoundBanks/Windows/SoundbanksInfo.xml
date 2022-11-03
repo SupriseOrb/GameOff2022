@@ -16,7 +16,7 @@
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="38624190" Name="TestSound" ObjectPath="\Events\Default Work Unit\TestSound">
+				<Event Id="38624190" Name="TestSound" ObjectPath="\Events\Default Work Unit\TestSound" DurationType="OneShot" DurationMin="3.977982" DurationMax="3.977982">
 					<IncludedMemoryFiles>
 						<File Id="632420613" Language="SFX">
 							<ShortName>Jackpot_Winner2_v1.wav</ShortName>
