@@ -10,6 +10,7 @@ public class TestUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private float _currentUnitAttackCooldown;
 
 #region UnitStats
+    [SerializeField] private string _unitName;
     [SerializeField] private  GameObject _spawnedUnit;
     [SerializeField] private string _unitType;
     [SerializeField] private float _unitAbilityCooldown;
@@ -39,6 +40,7 @@ public class TestUnitScript : MonoBehaviour, IUnitStamp
 
     public void LoadBaseStats()
     {
+        _unitName = _unitSO.StampName;
         _spawnedUnit = _unitSO.SpawnedUnit;
         _unitType = _unitSO.UnitType;
         _unitAbilityCooldown = _unitSO.UnitAbilityCooldown;
@@ -68,6 +70,11 @@ public class TestUnitScript : MonoBehaviour, IUnitStamp
             }
             _currentUnitAttackCooldown -= Time.deltaTime;
         }
+    }
+
+    public void UpgradeUnit()
+    {
+        //bring up the upgrade menu I think
     }
 
 #region Ability Functions
@@ -124,5 +131,10 @@ public class TestUnitScript : MonoBehaviour, IUnitStamp
     public void EnableStamp()
     {
         _isActive = true;
+    }
+
+    public string GetUnitName()
+    {
+        return _unitName;
     }
 }

@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8219a680d11d2214dbd7ff16e95671cc, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
-  _stampName: 
-  _stampCost: 0
-  _stampImage: {fileID: 0}
+  _stampName: Test
+  _stampCost: 4
+  _stampImage: {fileID: 21300000, guid: 8a86904d9d8614a6995c0b8f3b8f67e5, type: 3}
   _spawnedUnit: {fileID: 0}
-  _unitType: 
-  _unitCooldownReduction: 0
-  _unitDamage: 0
-  _unitAttackSpeed: 0
+  _unitType: Ranged
+  _unitAbilityCooldown: 0
+  _unitCooldownReduction: 1
+  _unitDamage: 1
+  _unitAttackSpeed: 2
   _unitSlowAmount: 0

@@ -8,6 +8,8 @@ public class BoardLane : MonoBehaviour
     [SerializeField] Sprite currentLaneSprite;
     [SerializeField] List<GameObject> laneEnemies;
     [SerializeField] IStamp[] laneUnits;
+    [SerializeField] BoardTile[] laneTiles;
+    
     // Start is called before the first frame update
     void Start()
     {

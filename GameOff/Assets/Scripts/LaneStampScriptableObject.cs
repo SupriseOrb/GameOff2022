@@ -7,6 +7,7 @@ public class LaneStampScriptableObject : ScriptableObject
 #region SO Backing Fields
     [SerializeField] private string _stampName;
     [SerializeField] private int _stampCost;
+    //not super important to have in here
     [SerializeField] private IStamp _stampAbilityScript;
     [SerializeField] private Sprite _stampImage;
 #endregion
