@@ -11,11 +11,35 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="4278346771">
+		<SoundBank Id="393239870" Language="SFX" Hash="1517684831">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2187765656" Name="Card_Swipe" ObjectPath="\Events\Default Work Unit\Card_Swipe" DurationType="OneShot" DurationMin="1.212132" DurationMax="1.255986">
+					<IncludedMemoryFiles>
+						<File Id="357053908" Language="SFX">
+							<ShortName>Card Swipe1.wav</ShortName>
+							<Path>SFX/Card Swipe1_10C4C929.wem</Path>
+						</File>
+						<File Id="623709360" Language="SFX">
+							<ShortName>Card Swipe2.wav</ShortName>
+							<Path>SFX/Card Swipe2_10C4C929.wem</Path>
+						</File>
+						<File Id="966815386" Language="SFX">
+							<ShortName>Card Swipe3.wav</ShortName>
+							<Path>SFX/Card Swipe3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1231477946" Name="Stamp" ObjectPath="\Events\Default Work Unit\Stamp" DurationType="OneShot" DurationMin="0.463084" DurationMax="0.463084">
+					<IncludedMemoryFiles>
+						<File Id="357140707" Language="SFX">
+							<ShortName>Stamp_v1.wav</ShortName>
+							<Path>SFX/Stamp_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="38624190" Name="TestSound" ObjectPath="\Events\Default Work Unit\TestSound" DurationType="OneShot" DurationMin="3.977982" DurationMax="3.977982">
 					<IncludedMemoryFiles>
 						<File Id="632420613" Language="SFX">

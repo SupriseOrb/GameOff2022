@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CARD_SWIPE = 2187765656U;
+        static const AkUniqueID STAMP = 1231477946U;
         static const AkUniqueID TESTSOUND = 38624190U;
     } // namespace EVENTS
 

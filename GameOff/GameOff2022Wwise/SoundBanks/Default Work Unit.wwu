@@ -10,6 +10,8 @@
 				</SoundBank>
 				<SoundBank Name="SFX" ID="{E9B23D65-894B-4188-BCA2-AF7B46D34DAA}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Stamp" ID="{B0323596-6BE7-4874-838D-899071D4DC57}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Card_Swipe" ID="{A5058C67-0EC8-4C1D-97E1-1919B89D0B29}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TestSound" ID="{BCF66CC1-CE17-4F30-BA85-C8D45496F774}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

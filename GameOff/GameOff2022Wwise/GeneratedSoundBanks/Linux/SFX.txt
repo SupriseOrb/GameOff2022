@@ -1,6 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
 	38624190	TestSound			\Default Work Unit\TestSound	
+	1231477946	Stamp			\Default Work Unit\Stamp	
+	2187765656	Card_Swipe			\Default Work Unit\Card_Swipe	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	357053908	Card Swipe1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Card Swipe1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Card Swipe\Card Swipe1		221180
+	357140707	Stamp	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamp		81752
+	623709360	Card Swipe2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Card Swipe2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Card Swipe\Card Swipe2		221620
 	632420613	Test_Sound	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Jackpot_Winner2_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test_Sound		701892
+	966815386	Card Swipe3	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Card Swipe3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Card Swipe\Card Swipe3		213884
 

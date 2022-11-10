@@ -14,6 +14,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stamp" ID="{B0323596-6BE7-4874-838D-899071D4DC57}">
+					<ChildrenList>
+						<Action Name="" ID="{C297B51C-59DB-4D8F-8DE3-8EA5B8ADBFA0}" ShortID="747083246">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Stamp" ID="{E7E19623-88D1-4751-9AD7-DE799B5AECBE}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Card_Swipe" ID="{A5058C67-0EC8-4C1D-97E1-1919B89D0B29}">
+					<ChildrenList>
+						<Action Name="" ID="{FFF09C1E-CAA6-448F-8FE6-A738AEF2BBA2}" ShortID="438325081">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Card Swipe" ID="{0F3B90D5-4F33-4E11-8E83-F9E05FBC41F0}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
