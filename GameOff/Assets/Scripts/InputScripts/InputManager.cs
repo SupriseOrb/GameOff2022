@@ -91,7 +91,7 @@ public class InputManager : MonoBehaviour
     {
         //Need to test to see if having this be checked only on "performed" is actually getting the value consistently
         //Also wtf is the z value if I passed it in as a Vector3? Can a Vector2 work anyways for the raycast?
-        _mousePosition = context.ReadValue<Vector3>();
+        _mousePosition = context.ReadValue<Vector2>();
     }
 
     // Update is called once per frame
