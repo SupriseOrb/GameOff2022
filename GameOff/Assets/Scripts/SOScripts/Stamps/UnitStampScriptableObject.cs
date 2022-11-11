@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "UnitStampScriptableObject", menuName = "GameOff2022/UnitStampSO", order = 0)]
+[CreateAssetMenu(fileName = "UnitStampScriptableObject", menuName = "GameOff2022/Stamps/UnitStampSO", order = 0)]
 public class UnitStampScriptableObject : ScriptableObject
 {
 #region SO Backing Fields

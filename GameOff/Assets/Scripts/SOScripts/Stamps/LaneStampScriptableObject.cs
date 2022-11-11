@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "LaneStampScriptableObject", menuName = "GameOff2022/Stamps/LaneStampSO", order = 1)]
 public class LaneStampScriptableObject : ScriptableObject
 {
 #region SO Backing Fields
