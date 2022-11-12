@@ -37,6 +37,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""OnLeftClickHold"",
+                    ""type"": ""Button"",
+                    ""id"": ""6b390318-0281-421a-b87c-e6eb82c54b7a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(duration=1.5)"",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""OnRightClick"",
                     ""type"": ""Button"",
                     ""id"": ""a3d616d3-58a4-4f30-a4df-11ced216e3df"",
@@ -58,7 +67,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""name"": ""MousePos"",
                     ""type"": ""Value"",
                     ""id"": ""13aba83b-86b6-4050-b838-14a450b02671"",
-                    ""expectedControlType"": ""Vector3"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -108,6 +117,17 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""MousePos"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d1b1eaed-bc6c-43de-a5a1-61d6991152c8"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OnLeftClickHold"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -117,6 +137,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_OnLeftClick = m_Player.FindAction("OnLeftClick", throwIfNotFound: true);
+        m_Player_OnLeftClickHold = m_Player.FindAction("OnLeftClickHold", throwIfNotFound: true);
         m_Player_OnRightClick = m_Player.FindAction("OnRightClick", throwIfNotFound: true);
         m_Player_OnMiddleClick = m_Player.FindAction("OnMiddleClick", throwIfNotFound: true);
         m_Player_MousePos = m_Player.FindAction("MousePos", throwIfNotFound: true);
@@ -180,6 +201,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_OnLeftClick;
+    private readonly InputAction m_Player_OnLeftClickHold;
     private readonly InputAction m_Player_OnRightClick;
     private readonly InputAction m_Player_OnMiddleClick;
     private readonly InputAction m_Player_MousePos;
@@ -188,6 +210,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         private @PlayerInputActions m_Wrapper;
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @OnLeftClick => m_Wrapper.m_Player_OnLeftClick;
+        public InputAction @OnLeftClickHold => m_Wrapper.m_Player_OnLeftClickHold;
         public InputAction @OnRightClick => m_Wrapper.m_Player_OnRightClick;
         public InputAction @OnMiddleClick => m_Wrapper.m_Player_OnMiddleClick;
         public InputAction @MousePos => m_Wrapper.m_Player_MousePos;
@@ -203,6 +226,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @OnLeftClick.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnLeftClick;
                 @OnLeftClick.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnLeftClick;
                 @OnLeftClick.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnLeftClick;
+                @OnLeftClickHold.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnLeftClickHold;
+                @OnLeftClickHold.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnLeftClickHold;
+                @OnLeftClickHold.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnLeftClickHold;
                 @OnRightClick.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnRightClick;
                 @OnRightClick.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnRightClick;
                 @OnRightClick.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOnRightClick;
@@ -219,6 +245,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @OnLeftClick.started += instance.OnOnLeftClick;
                 @OnLeftClick.performed += instance.OnOnLeftClick;
                 @OnLeftClick.canceled += instance.OnOnLeftClick;
+                @OnLeftClickHold.started += instance.OnOnLeftClickHold;
+                @OnLeftClickHold.performed += instance.OnOnLeftClickHold;
+                @OnLeftClickHold.canceled += instance.OnOnLeftClickHold;
                 @OnRightClick.started += instance.OnOnRightClick;
                 @OnRightClick.performed += instance.OnOnRightClick;
                 @OnRightClick.canceled += instance.OnOnRightClick;
@@ -235,6 +264,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnOnLeftClick(InputAction.CallbackContext context);
+        void OnOnLeftClickHold(InputAction.CallbackContext context);
         void OnOnRightClick(InputAction.CallbackContext context);
         void OnOnMiddleClick(InputAction.CallbackContext context);
         void OnMousePos(InputAction.CallbackContext context);
