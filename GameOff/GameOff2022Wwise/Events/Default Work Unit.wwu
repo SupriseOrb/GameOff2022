@@ -3,39 +3,117 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="TestSound" ID="{BCF66CC1-CE17-4F30-BA85-C8D45496F774}">
+				<Folder Name="SFX Events" ID="{40BE9AE7-443C-4A76-85D7-1E2925420A6B}" ShortID="340388825">
 					<ChildrenList>
-						<Action Name="" ID="{E5A3C6DC-8246-4601-836B-FA86E1D0F3CE}" ShortID="566431976">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Test_Sound" ID="{DF4652E1-C770-4632-ADDA-DF7DE15E3F50}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Stamp" ID="{B0323596-6BE7-4874-838D-899071D4DC57}">
+							<ChildrenList>
+								<Action Name="" ID="{C297B51C-59DB-4D8F-8DE3-8EA5B8ADBFA0}" ShortID="747083246">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stamp" ID="{E7E19623-88D1-4751-9AD7-DE799B5AECBE}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="TestSound" ID="{BCF66CC1-CE17-4F30-BA85-C8D45496F774}">
+							<ChildrenList>
+								<Action Name="" ID="{E5A3C6DC-8246-4601-836B-FA86E1D0F3CE}" ShortID="566431976">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Test_Sound" ID="{DF4652E1-C770-4632-ADDA-DF7DE15E3F50}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="Cliche UI" ID="{8ED1D3D6-AA17-43DE-B92B-F8514F57BA6E}" ShortID="483565813">
+							<ChildrenList>
+								<Event Name="Cliche_HandCycle" ID="{19029E53-357C-49C1-A219-DB7DBDEB411C}">
+									<ChildrenList>
+										<Action Name="" ID="{238B6888-4A71-4B6F-AE2D-E832D81C64BC}" ShortID="939788678">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Cliche Hand Cycle" ID="{41FB3350-2BF5-46F7-BAB3-5F1521EA5049}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Cliche_Hover" ID="{A5058C67-0EC8-4C1D-97E1-1919B89D0B29}">
+									<ChildrenList>
+										<Action Name="" ID="{FFF09C1E-CAA6-448F-8FE6-A738AEF2BBA2}" ShortID="438325081">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Cliche Hover" ID="{0F3B90D5-4F33-4E11-8E83-F9E05FBC41F0}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Cliche_Movement" ID="{5D5D493C-FE88-45B1-94A7-4D665FBA9C23}">
+									<ChildrenList>
+										<Action Name="" ID="{F7727E01-E11C-4DCB-9E24-6AA6C5B532F1}" ShortID="878440266">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Cliche Movement" ID="{916A96F9-22F1-49DB-A17D-BD2DD7EF254C}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Cliche_MovementCancel" ID="{74AE54F2-D22B-4CF0-BED0-2BE88494B1A4}">
+									<ChildrenList>
+										<Action Name="" ID="{FCD497B5-C8BA-42DC-AE68-80303F724EC8}" ShortID="244438600">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Cliche Movement Cancel" ID="{716DC9B1-BB28-42BB-853E-FF8DB9B5A346}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Timer" ID="{CCCF5211-AF10-4B51-BED2-A256C289C5B2}">
+									<ChildrenList>
+										<Action Name="" ID="{BB40BAFF-2798-498E-9664-A690E9EAE660}" ShortID="635621637">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Hand Cycle Timer" ID="{2E370106-CBA4-4044-B463-6DD51B4FBF01}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Ink" ID="{5E67059F-FC17-4027-B665-C3E9AD14ACF4}" ShortID="451112682">
+							<ChildrenList>
+								<Event Name="Ink_Full" ID="{0A1BB36C-9949-44A4-A783-1C42F1503A37}">
+									<ChildrenList>
+										<Action Name="" ID="{70ED6C69-A683-4E47-BFF0-26A1E0DE01E3}" ShortID="960368560">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ink Full" ID="{D43238EA-9879-4E02-9CFC-C33A9AC2ED56}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Ink_Depleted" ID="{4791D040-BCF5-45D2-81DF-465A1F03E0E0}">
+									<ChildrenList>
+										<Action Name="" ID="{E4D853FC-1DB4-402B-8277-DF6E17E626D8}" ShortID="952631361">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ink Depleted" ID="{683C17F2-AD66-41E4-A96F-B385995FAE52}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
-				</Event>
-				<Event Name="Stamp" ID="{B0323596-6BE7-4874-838D-899071D4DC57}">
-					<ChildrenList>
-						<Action Name="" ID="{C297B51C-59DB-4D8F-8DE3-8EA5B8ADBFA0}" ShortID="747083246">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Stamp" ID="{E7E19623-88D1-4751-9AD7-DE799B5AECBE}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Card_Swipe" ID="{A5058C67-0EC8-4C1D-97E1-1919B89D0B29}">
-					<ChildrenList>
-						<Action Name="" ID="{FFF09C1E-CAA6-448F-8FE6-A738AEF2BBA2}" ShortID="438325081">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Card Swipe" ID="{0F3B90D5-4F33-4E11-8E83-F9E05FBC41F0}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

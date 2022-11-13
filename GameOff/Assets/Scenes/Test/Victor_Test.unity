@@ -680,8 +680,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInput: {fileID: 127956240}
   _heldObject: {fileID: 0}
-  _mousePosition: {x: 0, y: 0, z: 0}
+  _mousePositionScreen: {x: 0, y: 0, z: 0}
+  _mousePositionWorld: {x: 0, y: 0, z: 0}
+  _selectedCard: {fileID: 0}
+  _spriteDragScript: {fileID: 0}
   _lClickString: OnLeftClick
+  _lClickHoldString: 
   _rClickString: OnRightClick
   _mClickString: OnMiddleClick
   _mousePosString: MousePos
@@ -3354,6 +3358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1919361189}
   - component: {fileID: 1919361190}
+  - component: {fileID: 1919361191}
   m_Layer: 0
   m_Name: Deck Manager
   m_TagString: Untagged
@@ -3417,6 +3422,28 @@ MonoBehaviour:
   _isFirstDraw: 1
   _timerSlider: {fileID: 1005783283}
   _timerText: {fileID: 1388759372}
+--- !u!114 &1919361191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919361188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f512193b903da4484b2cb52e9245f89a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1962871062
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,6 +3454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1962871064}
   - component: {fileID: 1962871063}
+  - component: {fileID: 1962871065}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -3474,6 +3502,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1962871065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962871062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b80eac0aeebf4257bc341fb792014c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4d378cd36c5084e2cae04b1f94a54a7f, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1969823583
 GameObject:
   m_ObjectHideFlags: 0

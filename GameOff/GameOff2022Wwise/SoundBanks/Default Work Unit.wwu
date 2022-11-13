@@ -10,8 +10,14 @@
 				</SoundBank>
 				<SoundBank Name="SFX" ID="{E9B23D65-894B-4188-BCA2-AF7B46D34DAA}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Ink_Full" ID="{0A1BB36C-9949-44A4-A783-1C42F1503A37}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Cliche_Movement" ID="{5D5D493C-FE88-45B1-94A7-4D665FBA9C23}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ink_Depleted" ID="{4791D040-BCF5-45D2-81DF-465A1F03E0E0}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stamp" ID="{B0323596-6BE7-4874-838D-899071D4DC57}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Card_Swipe" ID="{A5058C67-0EC8-4C1D-97E1-1919B89D0B29}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Cliche_HandCycle" ID="{19029E53-357C-49C1-A219-DB7DBDEB411C}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Timer" ID="{CCCF5211-AF10-4B51-BED2-A256C289C5B2}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Cliche_Hover" ID="{A5058C67-0EC8-4C1D-97E1-1919B89D0B29}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Cliche_MovementCancel" ID="{74AE54F2-D22B-4CF0-BED0-2BE88494B1A4}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TestSound" ID="{BCF66CC1-CE17-4F30-BA85-C8D45496F774}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

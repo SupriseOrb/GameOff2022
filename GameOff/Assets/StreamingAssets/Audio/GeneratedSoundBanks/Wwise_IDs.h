@@ -13,9 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID CARD_SWIPE = 2187765656U;
+        static const AkUniqueID CLICHE_HANDCYCLE = 3559121215U;
+        static const AkUniqueID CLICHE_HOVER = 4214958302U;
+        static const AkUniqueID CLICHE_MOVEMENT = 4002117311U;
+        static const AkUniqueID CLICHE_MOVEMENTCANCEL = 1178417457U;
+        static const AkUniqueID INK_DEPLETED = 2721373727U;
+        static const AkUniqueID INK_FULL = 967542901U;
         static const AkUniqueID STAMP = 1231477946U;
         static const AkUniqueID TESTSOUND = 38624190U;
+        static const AkUniqueID TIMER = 3920142940U;
     } // namespace EVENTS
 
     namespace BANKS

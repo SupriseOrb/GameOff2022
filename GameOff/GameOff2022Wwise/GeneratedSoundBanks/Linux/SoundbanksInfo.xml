@@ -11,28 +11,72 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1517684831">
+		<SoundBank Id="393239870" Language="SFX" Hash="1885377782">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2187765656" Name="Card_Swipe" ObjectPath="\Events\Default Work Unit\Card_Swipe" DurationType="OneShot" DurationMin="1.212132" DurationMax="1.255986">
+				<Event Id="3559121215" Name="Cliche_HandCycle" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Cliche_HandCycle" DurationType="OneShot" DurationMin="1.741814" DurationMax="1.741814">
 					<IncludedMemoryFiles>
-						<File Id="357053908" Language="SFX">
-							<ShortName>Card Swipe1.wav</ShortName>
-							<Path>SFX/Card Swipe1_10C4C929.wem</Path>
-						</File>
-						<File Id="623709360" Language="SFX">
-							<ShortName>Card Swipe2.wav</ShortName>
-							<Path>SFX/Card Swipe2_10C4C929.wem</Path>
-						</File>
-						<File Id="966815386" Language="SFX">
-							<ShortName>Card Swipe3.wav</ShortName>
-							<Path>SFX/Card Swipe3_10C4C929.wem</Path>
+						<File Id="31150185" Language="SFX">
+							<ShortName>Cliche_HandCycle_v1.wav</ShortName>
+							<Path>SFX/Cliche_HandCycle_v1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1231477946" Name="Stamp" ObjectPath="\Events\Default Work Unit\Stamp" DurationType="OneShot" DurationMin="0.463084" DurationMax="0.463084">
+				<Event Id="4214958302" Name="Cliche_Hover" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Cliche_Hover" DurationType="OneShot" DurationMin="0.173152" DurationMax="0.173152">
+					<IncludedMemoryFiles>
+						<File Id="23787489" Language="SFX">
+							<ShortName>Cliche_HoverAnimation_3_v1.wav</ShortName>
+							<Path>SFX/Cliche_HoverAnimation_3_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="273100381" Language="SFX">
+							<ShortName>Cliche_HoverAnimation_2_v1.wav</ShortName>
+							<Path>SFX/Cliche_HoverAnimation_2_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="577290544" Language="SFX">
+							<ShortName>Cliche_HoverAnimation_4_v1.wav</ShortName>
+							<Path>SFX/Cliche_HoverAnimation_4_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="934060521" Language="SFX">
+							<ShortName>Cliche_HoverAnimation_1_v1.wav</ShortName>
+							<Path>SFX/Cliche_HoverAnimation_1_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4002117311" Name="Cliche_Movement" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Cliche_Movement" DurationType="OneShot" DurationMin="0.373356" DurationMax="0.373356">
+					<IncludedMemoryFiles>
+						<File Id="187588092" Language="SFX">
+							<ShortName>Cliche_Movement_v1.wav</ShortName>
+							<Path>SFX/Cliche_Movement_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1178417457" Name="Cliche_MovementCancel" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Cliche_MovementCancel" DurationType="OneShot" DurationMin="0.17712" DurationMax="0.17712">
+					<IncludedMemoryFiles>
+						<File Id="761191295" Language="SFX">
+							<ShortName>Cliche_MovementCancel_v1.wav</ShortName>
+							<Path>SFX/Cliche_MovementCancel_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2721373727" Name="Ink_Depleted" ObjectPath="\Events\Default Work Unit\SFX Events\Ink\Ink_Depleted" DurationType="OneShot" DurationMin="0.305057" DurationMax="0.305057">
+					<IncludedMemoryFiles>
+						<File Id="1040327169" Language="SFX">
+							<ShortName>Ink_Depleted_v1.wav</ShortName>
+							<Path>SFX/Ink_Depleted_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="967542901" Name="Ink_Full" ObjectPath="\Events\Default Work Unit\SFX Events\Ink\Ink_Full" DurationType="OneShot" DurationMin="0.14873" DurationMax="0.14873">
+					<IncludedMemoryFiles>
+						<File Id="742379802" Language="SFX">
+							<ShortName>Ink_Full_v1.wav</ShortName>
+							<Path>SFX/Ink_Full_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1231477946" Name="Stamp" ObjectPath="\Events\Default Work Unit\SFX Events\Stamp" DurationType="OneShot" DurationMin="0.463084" DurationMax="0.463084">
 					<IncludedMemoryFiles>
 						<File Id="357140707" Language="SFX">
 							<ShortName>Stamp_v1.wav</ShortName>
@@ -40,11 +84,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="38624190" Name="TestSound" ObjectPath="\Events\Default Work Unit\TestSound" DurationType="OneShot" DurationMin="3.977982" DurationMax="3.977982">
+				<Event Id="38624190" Name="TestSound" ObjectPath="\Events\Default Work Unit\SFX Events\TestSound" DurationType="OneShot" DurationMin="3.977982" DurationMax="3.977982">
 					<IncludedMemoryFiles>
 						<File Id="632420613" Language="SFX">
 							<ShortName>Jackpot_Winner2_v1.wav</ShortName>
 							<Path>SFX/Jackpot_Winner2_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3920142940" Name="Timer" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Timer" DurationType="OneShot" DurationMin="3.000408" DurationMax="3.000408">
+					<IncludedMemoryFiles>
+						<File Id="378939211" Language="SFX">
+							<ShortName>Timer_Click_v1.wav</ShortName>
+							<Path>SFX/Timer_Click_v1_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

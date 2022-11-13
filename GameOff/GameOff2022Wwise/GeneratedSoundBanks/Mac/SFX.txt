@@ -1,12 +1,25 @@
 Event	ID	Name			Wwise Object Path	Notes
-	38624190	TestSound			\Default Work Unit\TestSound	
-	1231477946	Stamp			\Default Work Unit\Stamp	
-	2187765656	Card_Swipe			\Default Work Unit\Card_Swipe	
+	38624190	TestSound			\Default Work Unit\SFX Events\TestSound	
+	967542901	Ink_Full			\Default Work Unit\SFX Events\Ink\Ink_Full	
+	1178417457	Cliche_MovementCancel			\Default Work Unit\SFX Events\Cliche UI\Cliche_MovementCancel	
+	1231477946	Stamp			\Default Work Unit\SFX Events\Stamp	
+	2721373727	Ink_Depleted			\Default Work Unit\SFX Events\Ink\Ink_Depleted	
+	3559121215	Cliche_HandCycle			\Default Work Unit\SFX Events\Cliche UI\Cliche_HandCycle	
+	3920142940	Timer			\Default Work Unit\SFX Events\Cliche UI\Timer	
+	4002117311	Cliche_Movement			\Default Work Unit\SFX Events\Cliche UI\Cliche_Movement	
+	4214958302	Cliche_Hover			\Default Work Unit\SFX Events\Cliche UI\Cliche_Hover	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	357053908	Card Swipe1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Card Swipe1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Card Swipe\Card Swipe1		221180
+	23787489	Cliche_HoverAnimation_3_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_HoverAnimation_3_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_3_v1		15336
+	31150185	Cliche Hand Cycle	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_HandCycle_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hand Cycle		307320
+	187588092	Cliche Movement	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_Movement_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Movement		32994
+	273100381	Cliche_HoverAnimation_2_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_HoverAnimation_2_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_2_v1		15336
 	357140707	Stamp	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamp		81752
-	623709360	Card Swipe2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Card Swipe2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Card Swipe\Card Swipe2		221620
+	378939211	Hand Cycle Timer	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Timer_Click_v1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Hand Cycle Timer		88276
+	577290544	Cliche_HoverAnimation_4_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_HoverAnimation_4_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_4_v1		15336
 	632420613	Test_Sound	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Jackpot_Winner2_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test_Sound		701892
-	966815386	Card Swipe3	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Card Swipe3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Card Swipe\Card Swipe3		213884
+	742379802	Ink Full	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Ink_Full_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ink Full		13182
+	761191295	Cliche Movement Cancel	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_MovementCancel_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Movement Cancel		15686
+	934060521	Cliche_HoverAnimation_1_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_HoverAnimation_1_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_1_v1		15336
+	1040327169	Ink Depleted	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Ink_Depleted_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ink Depleted		26970
 

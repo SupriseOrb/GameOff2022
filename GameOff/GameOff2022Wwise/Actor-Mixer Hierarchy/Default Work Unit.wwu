@@ -26,135 +26,6 @@
 						<ActiveSource Name="Test Sound" ID="{3ED72C38-628B-4C5F-95F5-3488BDC580A2}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<RandomSequenceContainer Name="Card Swipe" ID="{0F3B90D5-4F33-4E11-8E83-F9E05FBC41F0}" ShortID="310913018">
-					<PropertyList>
-						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="Card Swipe1" ID="{C63A5065-C972-4D4D-9F0C-9F0A2B9DF667}" ShortID="800939783">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Card Swipe1" ID="{90339CDB-C249-45B6-BBFB-876F490CDAF1}">
-									<Language>SFX</Language>
-									<AudioFile>Card Swipe1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="357053908"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="Card Swipe1" ID="{90339CDB-C249-45B6-BBFB-876F490CDAF1}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Card Swipe2" ID="{FD5D7C8D-6618-4D16-A636-220E555FA32C}" ShortID="1030230417">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>5</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Card Swipe2" ID="{B3D6C12F-7684-4792-8C9F-459E3F7F5E18}">
-									<Language>SFX</Language>
-									<AudioFile>Card Swipe2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="623709360"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="Card Swipe2" ID="{B3D6C12F-7684-4792-8C9F-459E3F7F5E18}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Card Swipe3" ID="{75002C9A-67C1-49F5-9B1C-8BBF67FF9B9D}" ShortID="394601532">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>4</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Card Swipe3" ID="{BCFD1EC5-3EB2-4E31-8030-166103AB4203}">
-									<Language>SFX</Language>
-									<AudioFile>Card Swipe3.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="966815386"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="Card Swipe3" ID="{BCFD1EC5-3EB2-4E31-8030-166103AB4203}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Card Swipe4" ID="{7314EF5A-AA0A-4D28-A565-CADA9C93AE54}" ShortID="258311399">
-							<PropertyList>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Card Swipe4" ID="{3015ADA8-7DA8-4D34-B8AE-5B72B57945F9}">
-									<Language>SFX</Language>
-									<AudioFile>Card Swipe4.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="286162107"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="Card Swipe4" ID="{3015ADA8-7DA8-4D34-B8AE-5B72B57945F9}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-					<ObjectLists/>
-				</RandomSequenceContainer>
 				<Sound Name="Stamp" ID="{E7E19623-88D1-4751-9AD7-DE799B5AECBE}" ShortID="630463421">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -176,6 +47,261 @@
 					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="Stamp_v1" ID="{1C89D175-0500-4FF2-8E03-0D886D7F5894}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Folder Name="Cliche" ID="{E3DC66E5-F48D-45F1-B7AD-3A8038AD51B9}" ShortID="678946049">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Cliche Hover" ID="{0F3B90D5-4F33-4E11-8E83-F9E05FBC41F0}" ShortID="310913018">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Cliche_HoverAnimation_1_v1" ID="{6D7C45FC-C1FB-4893-8989-E22D162AD918}" ShortID="880820430">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Cliche_HoverAnimation_1_v1" ID="{0DE17121-F3C7-4ABB-B595-7E303095ECB7}">
+											<Language>SFX</Language>
+											<AudioFile>Cliche_HoverAnimation_1_v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="934060521"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Cliche_HoverAnimation_1_v1" ID="{0DE17121-F3C7-4ABB-B595-7E303095ECB7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Cliche_HoverAnimation_2_v1" ID="{6B95EEC3-C257-4620-BF5C-9DB333EE7251}" ShortID="104272433">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Cliche_HoverAnimation_2_v1" ID="{CD205909-5105-48CA-8333-119A21FA607C}">
+											<Language>SFX</Language>
+											<AudioFile>Cliche_HoverAnimation_2_v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="273100381"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Cliche_HoverAnimation_2_v1" ID="{CD205909-5105-48CA-8333-119A21FA607C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Cliche_HoverAnimation_3_v1" ID="{4373667F-F49C-4BD4-9116-4B140677BC79}" ShortID="729211335">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Cliche_HoverAnimation_3_v1" ID="{E34072C6-E633-42AB-B01E-F9FCAB82D15D}">
+											<Language>SFX</Language>
+											<AudioFile>Cliche_HoverAnimation_3_v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="23787489"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Cliche_HoverAnimation_3_v1" ID="{E34072C6-E633-42AB-B01E-F9FCAB82D15D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Cliche_HoverAnimation_4_v1" ID="{8AACAE52-5780-4090-A947-FD51718B6A26}" ShortID="283498540">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Cliche_HoverAnimation_4_v1" ID="{341103DC-D749-4273-B122-5285E7C64434}">
+											<Language>SFX</Language>
+											<AudioFile>Cliche_HoverAnimation_4_v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="577290544"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Cliche_HoverAnimation_4_v1" ID="{341103DC-D749-4273-B122-5285E7C64434}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<Sound Name="Cliche Hand Cycle" ID="{41FB3350-2BF5-46F7-BAB3-5F1521EA5049}" ShortID="599368527">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cliche_HandCycle_v1" ID="{DAE16AAB-EA73-4E71-867B-625888851AF5}">
+									<Language>SFX</Language>
+									<AudioFile>Cliche_HandCycle_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="31150185"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Cliche_HandCycle_v1" ID="{DAE16AAB-EA73-4E71-867B-625888851AF5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Cliche Movement" ID="{916A96F9-22F1-49DB-A17D-BD2DD7EF254C}" ShortID="663630041">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cliche_Movement_v1" ID="{1D9A66C5-9361-43A6-8DC8-960AEFFC6BBD}">
+									<Language>SFX</Language>
+									<AudioFile>Cliche_Movement_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="187588092"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Cliche_Movement_v1" ID="{1D9A66C5-9361-43A6-8DC8-960AEFFC6BBD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Cliche Movement Cancel" ID="{716DC9B1-BB28-42BB-853E-FF8DB9B5A346}" ShortID="118254321">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cliche_MovementCancel_v1" ID="{CA59F8FD-147A-4C40-8513-459365E5CE96}">
+									<Language>SFX</Language>
+									<AudioFile>Cliche_MovementCancel_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="761191295"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Cliche_MovementCancel_v1" ID="{CA59F8FD-147A-4C40-8513-459365E5CE96}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Hand Cycle Timer" ID="{2E370106-CBA4-4044-B463-6DD51B4FBF01}" ShortID="774255731">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
+								<Property Name="LoopCount" Type="int32" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Timer_Click_v1" ID="{223AFF97-5241-4350-A041-1341A318A47A}">
+									<Language>SFX</Language>
+									<AudioFile>Timer_Click_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="378939211"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Timer_Click_v1" ID="{223AFF97-5241-4350-A041-1341A318A47A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Sound Name="Ink Full" ID="{D43238EA-9879-4E02-9CFC-C33A9AC2ED56}" ShortID="696956519">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ink_Full_v1" ID="{C66D96CE-C73F-4966-B9E0-81C4F7E96208}">
+							<Language>SFX</Language>
+							<AudioFile>Ink_Full_v1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="742379802"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Ink_Full_v1" ID="{C66D96CE-C73F-4966-B9E0-81C4F7E96208}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ink Depleted" ID="{683C17F2-AD66-41E4-A96F-B385995FAE52}" ShortID="521201199">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ink_Depleted_v1" ID="{DE16ED21-B1E3-44D3-915A-7EB6F88F426F}">
+							<Language>SFX</Language>
+							<AudioFile>Ink_Depleted_v1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1040327169"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Ink_Depleted_v1" ID="{DE16ED21-B1E3-44D3-915A-7EB6F88F426F}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

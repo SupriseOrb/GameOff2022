@@ -35,10 +35,16 @@ public class DeckManager : MonoBehaviour
             CycleHand();
             DrawCards();
             _currentReshuffleTimer = _baseReshuffleTimer;
+            AkSoundEngine.PostEvent("Cliche_HandCycle", gameObject);
         }
         _currentReshuffleTimer -= Time.deltaTime;    
         _timerText.text = ((int)_currentReshuffleTimer).ToString() + "s";
-        _timerSlider.value = _currentReshuffleTimer/_baseReshuffleTimer;    
+        _timerSlider.value = _currentReshuffleTimer/_baseReshuffleTimer;
+        /* Not sure how to properly trigger the timer sound when the timer reads 3 seconds - Collin
+        if (_currentReshuffletimer == 3f);
+        {
+            AkSoundEngine.PostEvent("Timer", gameObject);
+        }*/
     }
 
     private void CycleHand()
