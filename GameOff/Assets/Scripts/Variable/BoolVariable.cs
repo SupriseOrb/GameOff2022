@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Bool", menuName = "Variables/BoolVar")]
+[CreateAssetMenu(fileName = "New Bool", menuName = "SupriseOrb/Variables/BoolVar")]
 public class BoolVariable : ScriptableObject
 {
     [SerializeField] private bool _defaultValue;

@@ -16,12 +16,12 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private Slider _allSlider;
     [SerializeField] private Slider _musicSlider;
     [SerializeField] private Slider _sfxSlider;
-    [SerializeField] private Slider _ambianceSlider;
+    // [SerializeField] private Slider _ambianceSlider;
     private IEnumerator _musicCoroutine;
     private static string _all = "AllVolume";
     private static string _music = "MusicVolume";
     private static string _sfx = "SFXVolume";
-    private static string _ambiance =  "AmbianceVolume";
+    // private static string _ambiance =  "AmbianceVolume";
 
     void Awake()
     {
@@ -57,8 +57,8 @@ public class SettingsManager : MonoBehaviour
         AkSoundEngine.SetRTPCValue(_music, GetVolume(_savedSettings.MusicVolume));
         _sfxSlider.value = _savedSettings.SFXVolume;
         AkSoundEngine.SetRTPCValue(_sfx, GetVolume(_savedSettings.SFXVolume));
-        _ambianceSlider.value = _savedSettings.SFXVolume;
-        AkSoundEngine.SetRTPCValue(_ambiance, GetVolume(_savedSettings.AmbianceVolume));
+        // _ambianceSlider.value = _savedSettings.SFXVolume;
+        // AkSoundEngine.SetRTPCValue(_ambiance, GetVolume(_savedSettings.AmbianceVolume));
     }
 
     public void SavePrefs()
@@ -66,7 +66,7 @@ public class SettingsManager : MonoBehaviour
         _savedSettings.AllVolume = _allSlider.value;
         _savedSettings.MusicVolume = _musicSlider.value;
         _savedSettings.SFXVolume = _sfxSlider.value;
-        _savedSettings.AmbianceVolume = _ambianceSlider.value;
+        // _savedSettings.AmbianceVolume = _ambianceSlider.value;
     }
 
     public void ResetPrefs()
@@ -74,7 +74,7 @@ public class SettingsManager : MonoBehaviour
         _allSlider.value = _savedSettings.AllVolume = _defaultSettings.AllVolume;
         _musicSlider.value = _savedSettings.MusicVolume = _defaultSettings.MusicVolume;
         _sfxSlider.value = _savedSettings.SFXVolume = _defaultSettings.SFXVolume;
-        _ambianceSlider.value = _savedSettings.AmbianceVolume = _defaultSettings.AmbianceVolume;
+        // _ambianceSlider.value = _savedSettings.AmbianceVolume = _defaultSettings.AmbianceVolume;
     }
 
     public void SetAllVolume(float volume)
@@ -92,36 +92,11 @@ public class SettingsManager : MonoBehaviour
         AkSoundEngine.SetRTPCValue(_sfx, GetVolume(volume));
     }
 
-    public void SetAmbianceVolume(float volume)
+    /* public void SetAmbianceVolume(float volume)
     {
         AkSoundEngine.SetRTPCValue(_ambiance, GetVolume(volume));
-    }
+    } */
 
-    public void StartPuzzle(float delay = 0)
-    {
-        if (_musicCoroutine != null)
-        {
-            StopCoroutine(_musicCoroutine);
-            
-        }
-        else
-        {
-            AkSoundEngine.SetRTPCValue(_music, GetVolume(_musicSlider.value/3));
-        }
-        // Set music slider to 30 % of current volume
-        _musicCoroutine =DelayEndPuzzle(delay);
-        StartCoroutine(_musicCoroutine);
-    }
-    private IEnumerator DelayEndPuzzle(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        EndPuzzle();
-    }
-
-    private void EndPuzzle()
-    {
-        _musicCoroutine = null;
-        // Set music slider back 
-        AkSoundEngine.SetRTPCValue(_music, GetVolume(_musicSlider.value));
-    }
+    // TODO: Implement resolution dropdown
+    // TODO: Implement full screen toggle
 }

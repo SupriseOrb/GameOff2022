@@ -16,13 +16,14 @@ public class PauseMenu : Menu
         _currentEventSystem = EventSystem.current;
         _isPaused.Value = false;
 
-        // Play Gameplay Music
+        // Rob TODO: Play Gameplay Music
+        // Note: There may be a bug where music duplicates
     }
     public void PauseGame()
     {
         if(!_isPaused.Value)
         {
-            // Play pause sound
+            // Collin TODO: Play pause sfx
             // AkSoundEngine.PostEvent("Play_UIPause", this.gameObject);
 
             _pauseMenuCanvas.enabled = true;
@@ -35,7 +36,7 @@ public class PauseMenu : Menu
     {
         if(_isPaused.Value)
         {
-            // Play resume sound
+            // Collin TODO: Play resume sfx
             // AkSoundEngine.PostEvent("Play_UIResume", this.gameObject);
             
             _pauseMenuCanvas.enabled = false;

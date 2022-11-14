@@ -15,7 +15,7 @@ public class Menu : MonoBehaviour
 
     protected void LoadScene(int sceneIndex)
     {
-        // Play regular button sound
+        // Collin TODO: Play regular button sound
         // AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
         
         SceneManager.LoadScene(sceneIndex);
@@ -38,27 +38,32 @@ public class Menu : MonoBehaviour
     {
         if (canSee)
         {
-            // Play regular button sound
+            // Collin TODO: Play regular button sound
             // AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
         }
         else
         {
-            // Play back sound
+            // Collin TODO: Play back sound
             // AkSoundEngine.PostEvent("Play_UIBack", this.gameObject);
         }
         
         canvas.enabled = canSee;
     }
-
-    public void OpenSettings()
-    {
-        SetCanvasVisibility(_settingsCanvas.GetComponent<Canvas>(), true);
-    }
     
-    public void CloseSettings()
+    public void CloseSettings(Canvas canvas)
     {
-        _settingsCanvas.GetComponent<SettingsManager>().CloseSettings();
-        SetCanvasVisibility(_settingsCanvas.GetComponent<Canvas>(), false);
+        canvas.gameObject.GetComponent<SettingsManager>().CloseSettings();
+        SetCanvasVisibility(canvas, false);
+    }
+
+    public void OpenCanvas(Canvas canvas)
+    {
+        SetCanvasVisibility(canvas, true);
+    }
+
+    public void CloseCanvas(Canvas canvas)
+    {
+        SetCanvasVisibility(canvas, false);
     }
 
     public void QuitGame()
