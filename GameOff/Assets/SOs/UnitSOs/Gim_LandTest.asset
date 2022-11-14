@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78c4df2d70e761f4c9272f3149829178, type: 3}
-  m_Name: TestCard
+  m_Script: {fileID: 11500000, guid: dddf4b8ca1cac0349b1bf9fe52db770d, type: 3}
+  m_Name: Gim_LandTest
   m_EditorClassIdentifier: 
-  _cardName: Test
-  _cardDescription: uwu I'm a test owo
-  _inkCost: 1
-  _hasBeenUsed: 0
-  _stampObjectRef: {fileID: 0}
-  _cardType: 0
+  _stampName: Land
+  _stampCost: 0
+  _stampSprite: {fileID: 21300000, guid: cee9dbe90b270c944ae1dabf41c93b10, type: 3}
+  _spawnedLand: {fileID: 0}

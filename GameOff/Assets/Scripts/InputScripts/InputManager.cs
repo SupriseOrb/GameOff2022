@@ -7,12 +7,12 @@ public class InputManager : MonoBehaviour
 {
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private GameObject _heldObject = null;
-    [SerializeField] private Vector3 _mousePositionScreen;
+    private Vector3 _mousePositionScreen;
     [SerializeField] private Vector3 _mousePositionWorld;
-    [SerializeField] private CardScriptLoader _selectedCard = null;
+    [SerializeField] private CardScriptLoader _selectedCard;
     [SerializeField] private SpriteDrag _spriteDragScript;
-    private Ray _raycast;
-    private RaycastHit _raycastHit;
+    private Ray2D _raycast;
+    private RaycastHit2D _raycastHit;
 
     public Vector3 MousePositionWorld
     {
@@ -67,49 +67,59 @@ public class InputManager : MonoBehaviour
         _mousePosAction.performed -= MousePosition;
     }
 
+    //TODO: Need to check before clicking if _selectedCard is not null. If so, deselect the other card and update 
+    //..._selectedCard to current card
     public void OnLeftClick(InputAction.CallbackContext context)
     {
-        _raycast = Camera.main.ScreenPointToRay(_mousePositionWorld);
-        if(Physics.Raycast(_raycast, out _raycastHit))
+        _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
+        if (_raycastHit.transform.gameObject.TryGetComponent(out CardScriptLoader card))
         {
-            if (_raycastHit.transform.gameObject.TryGetComponent(out CardScriptLoader card))
+            Debug.Log("Clicked Card!");
+            //Do something to make it clear to the player that the card has been selected
+            //Make it bigger, push it up, highlight it somehow, etc etc
+            _selectedCard = card;
+            _selectedCard.transform.localScale = (Vector3.one * 2); //Selected Indicator (for now)
+        }
+        else if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
+        {
+            if (_selectedCard != null && _selectedCard.GetCardType() == CardScriptableObject.Type.UNIT)
             {
-                //Do something to make it clear to the player that the card has been selected
-                //Make it bigger, push it up, highlight it somehow, etc etc
-                _selectedCard = card;
-            }
-
-            //Might want to separate LandTiles and the others (Unit, Land) as they function quite differently
-            //if (_raycastHit.transform.gameObject.TryGetComponent(out LandTile landTile))
-            {
-                if (_selectedCard != null && _selectedCard.GetCardType() == CardScriptableObject.Type.LAND)
-                {
-                    //_selectedCard.CardSO.StampObjectRef.SetActive = true;
-                    //_selectedCard.HasBeenUsed = true;  
-                    //landTile.heldStamp =  _selectedCard.CardSO.StampObjectRef;
-                    //Need some kind of reference to the lane to know which lane to put the land tile on
-                }
-            }
-            //else if (_raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile)
-            {
-                if (_selectedCard != null && (_selectedCard.GetCardType() == CardScriptableObject.Type.UNIT
-                || _selectedCard.GetCardType() == CardScriptableObject.Type.ITEM))
-                {
-                    //_selectedCard.CardSO.StampObjectRef.SetActive = true;
-                    //_selectedCard.HasBeenUsed = true; 
-                    //boardTile.heldStamp =  _selectedCard.CardSO.StampObjectRef;
-                }
-            }
-            //else
-            {
-                _spriteDragScript.gameObject.SetActive(false);
-                //Undo effects to _selectedCard
-                _selectedCard = null;
+                UnitStampScriptableObject unitSO = (UnitStampScriptableObject)_selectedCard.GetCardSO.StampObjectRef;
+                unitSO.SpawnedUnit.SetActive(true);
+                _selectedCard.HasBeenUsed = true;  
+                unitTile.SetHeldStamp(unitSO.SpawnedUnit);
+                ResetCardSelection();
             }
         }
+        else if (_raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile))
+        {
+            if (_selectedCard != null)
+            {
+                if (_selectedCard.GetCardType() == CardScriptableObject.Type.ITEM)
+                {   
+                    ItemStampScriptableObject itemSO = (ItemStampScriptableObject)_selectedCard.GetCardSO.StampObjectRef;
+                    itemSO.SpawnedItem.SetActive(true);
+                    _selectedCard.HasBeenUsed = true; 
+                    boardTile.SetHeldStamp(itemSO.SpawnedItem);
+                    ResetCardSelection();
+                }
+                else if (_selectedCard.GetCardType() == CardScriptableObject.Type.LAND)
+                {
+                    LandStampScriptableObject itemSO = (LandStampScriptableObject)_selectedCard.GetCardSO.StampObjectRef;
+                    itemSO.SpawnedLand.SetActive(true);
+                    _selectedCard.HasBeenUsed = true; 
+                    boardTile.SetHeldStamp(itemSO.SpawnedLand);
+                    ResetCardSelection();
+                }
+            }
+                
+        }
+        else
+        {
+            ResetCardSelection();
+        }
 
-
-
+    }
         /*
         _raycast = Camera.main.ScreenPointToRay(_mousePositionWorld);
         if(Physics.Raycast(_raycast, out _raycastHit))
@@ -133,72 +143,83 @@ public class InputManager : MonoBehaviour
                     }
                 }
             }*/
-    }
 
     public void OnRightClick(InputAction.CallbackContext context)
     {
-        _spriteDragScript.gameObject.SetActive(false);
-        //Undo effects to _selectedCard
-        _selectedCard = null;
+        ResetCardSelection();
     }
 
     public void OnLeftClickRelease(InputAction.CallbackContext context)
     {
-        _raycast = Camera.main.ScreenPointToRay(_mousePositionWorld);
-        if(Physics.Raycast(_raycast, out _raycastHit))
+        _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
+        //TODO: Apparently error here if you left-click while "dragging" a tile
+        if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
         {
-           //if (_raycastHit.transform.gameObject.TryGetComponent(out LandTile landTile))
+            if (_selectedCard != null && _selectedCard.GetCardType() == CardScriptableObject.Type.UNIT)
             {
-                if (_selectedCard != null && _selectedCard.GetCardType() == CardScriptableObject.Type.LAND)
-                {
-                    //_selectedCard.CardSO.StampObjectRef.SetActive = true;
-                    //_selectedCard.HasBeenUsed = true;  
-                    //landTile.heldStamp =  _selectedCard.CardSO.StampObjectRef;
-                    //Need some kind of reference to the lane to know which lane to put the land tile on
-                }
-            }
-            //else if (_raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile)
-            {
-                if (_selectedCard != null && (_selectedCard.GetCardType() == CardScriptableObject.Type.UNIT
-                || _selectedCard.GetCardType() == CardScriptableObject.Type.ITEM))
-                {
-                    //_selectedCard.CardSO.StampObjectRef.SetActive = true;
-                    //_selectedCard.HasBeenUsed = true; 
-                    //boardTile.heldStamp =  _selectedCard.CardSO.StampObjectRef;
-                }
-            }
-            //else
-            {
-                _spriteDragScript.gameObject.SetActive(false);
-                //Undo effects to _selectedCard
-                _selectedCard = null;
+                UnitStampScriptableObject unitSO = (UnitStampScriptableObject)_selectedCard.GetCardSO.StampObjectRef;
+                unitSO.SpawnedUnit.SetActive(true);
+                _selectedCard.HasBeenUsed = true;  
+                unitTile.SetHeldStamp(unitSO.SpawnedUnit);
+                ResetCardSelection();
             }
         }
+        else if (_raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile))
+        {
+            if (_selectedCard != null)
+            {
+                if (_selectedCard.GetCardType() == CardScriptableObject.Type.ITEM)
+                {   
+                    ItemStampScriptableObject itemSO = (ItemStampScriptableObject)_selectedCard.GetCardSO.StampObjectRef;
+                    itemSO.SpawnedItem.SetActive(true);
+                    _selectedCard.HasBeenUsed = true; 
+                    boardTile.SetHeldStamp(itemSO.SpawnedItem);
+                    ResetCardSelection();
+                }
+                else if (_selectedCard.GetCardType() == CardScriptableObject.Type.LAND)
+                {
+                    LandStampScriptableObject itemSO = (LandStampScriptableObject)_selectedCard.GetCardSO.StampObjectRef;
+                    itemSO.SpawnedLand.SetActive(true);
+                    _selectedCard.HasBeenUsed = true; 
+                    boardTile.SetHeldStamp(itemSO.SpawnedLand);
+                    ResetCardSelection();
+                }      
+            }
+                
+        }
+        else if (_selectedCard != null && _raycastHit.transform.gameObject.TryGetComponent(out CardScriptLoader card)) 
+        {       
+            //Done to prevent initial a perpetual loop of LClick picking up card ==> LClickRelease dropping it
+            Debug.Log("No interaction needed!");
+            return;
+        }
+        else
+        {
+            ResetCardSelection();
+        }
+
     }
 
     public void OnLeftClickHold(InputAction.CallbackContext context)
     {
-        _raycast = Camera.main.ScreenPointToRay(_mousePositionWorld);
-        if(Physics.Raycast(_raycast, out _raycastHit))
+        Debug.Log("Held Card!");
+        _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
+        if (_raycastHit.transform.gameObject.TryGetComponent(out CardScriptLoader card))
         {
-            if (_raycastHit.transform.gameObject.TryGetComponent(out CardScriptLoader card))
-            {
-                //If OnLeftClick isn't also happening here: 
-                    //Do something to make it clear to the player that the card has been selected
-                    //Make it bigger, push it up, highlight it somehow, etc etc
-                    _selectedCard = card;
-                //Sprite _cardSprite = _selectedCard.CardSO.StampImage
-                _spriteDragScript.gameObject.SetActive(true);
-                //_spriteDragScript.SpriteReference = _cardSprite;
-                //_spriteDragScript.IsDragging = true;
-            }
+            //Note: OnLeftClick is also being called if OnLeftClickHold is
+            Sprite _cardSprite = _selectedCard.GetCardSO.StampObjectRef.StampSprite;
+            Debug.Log(_cardSprite);
+            _spriteDragScript.gameObject.SetActive(true);
+            _spriteDragScript.SpriteReference = _cardSprite;
+            _spriteDragScript.IsDragging = true;
         }
     }
 
+    //TODO: Use MousePosition to drag the card instead of having a requirement of holding left-click down on a card
+    //Not sure how to do this though? Once you click on a card, if you move your mouse, how would you know to drag vs just click on a tile?
     public void MousePosition(InputAction.CallbackContext context)
     {
         //Need to test to see if having this be checked only on "performed" is actually getting the value consistently
-        //Also wtf is the z value if I passed it in as a Vector3? Can a Vector2 work anyways for the raycast?
         _mousePositionScreen = context.ReadValue<Vector2>();
         _mousePositionWorld = Camera.main.ScreenToWorldPoint(_mousePositionScreen);
     }
@@ -206,6 +227,18 @@ public class InputManager : MonoBehaviour
     public void OnMiddleClick(InputAction.CallbackContext context)
     {
 
+    }
+
+    public void ResetCardSelection()
+    {
+        _spriteDragScript.IsDragging = false;
+        _spriteDragScript.gameObject.SetActive(false);
+        if (_selectedCard != null)
+        {
+            //Undo effects to _selectedCard
+            _selectedCard.transform.localScale = Vector3.one;
+            _selectedCard = null;
+        }  
     }
 
     // Update is called once per frame

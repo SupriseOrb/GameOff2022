@@ -14,7 +14,7 @@ public class SpriteDrag : MonoBehaviour
     public Sprite SpriteReference
     {
         get {return _spriteRef;}
-        set {_isDragging = value;}
+        set {_spriteRef = value;}
     }
 
     public bool IsDragging
@@ -28,12 +28,11 @@ public class SpriteDrag : MonoBehaviour
         if (_isDragging == true)
         {
             _spriteRender.sprite = _spriteRef;
-            gameObject.transform.position = _input.MousePositionWorld;
+            gameObject.transform.position = new Vector3(_input.MousePositionWorld.x, _input.MousePositionWorld.y, 0);
         }
         if (_isDragging == false)
         {
             _spriteRender.sprite = null;
-            gameObject.SetActive(false);
         }
     }
 }

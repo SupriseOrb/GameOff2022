@@ -106,9 +106,9 @@ public class DeckManager : MonoBehaviour
                 //replace w/ animation later
                 _cardHand[i].transform.position = _cardHolders[i].transform.position;
             }
-            Debug.Log("Deck Length - 1: " + (_activeDeck.Count -1));
+            //Debug.Log("Deck Length - 1: " + (_activeDeck.Count -1));
             int j = Random.Range(0, _activeDeck.Count);
-            Debug.Log("j: " + j);
+            //Debug.Log("j: " + j);
             _cardHand[3] = _activeDeck[j];
             _activeDeck.RemoveAt(j);
             _cardHand[3].transform.position = _cardHolders[3].transform.position;

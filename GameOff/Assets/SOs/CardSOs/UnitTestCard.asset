@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c4df2d70e761f4c9272f3149829178, type: 3}
-  m_Name: LandTestCard
+  m_Name: UnitTestCard
   m_EditorClassIdentifier: 
-  _cardName: LandTest
-  _cardDescription: uwu I'm a test but LAND
+  _cardName: UnitTest
+  _cardDescription: uwu I'm a test but UNIT
   _inkCost: 1
   _hasBeenUsed: 0
-  _stampObjectRef: {fileID: 11400000, guid: b19d31ef7c279ea478cf2ebe31c17cce, type: 2}
-  _cardType: 2
+  _stampObjectRef: {fileID: 11400000, guid: a8f9cadb417494445b21e742558a45b8, type: 2}
+  _cardType: 1

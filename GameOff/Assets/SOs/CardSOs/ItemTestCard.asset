@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c4df2d70e761f4c9272f3149829178, type: 3}
-  m_Name: UnitTestCard 1
+  m_Name: ItemTestCard
   m_EditorClassIdentifier: 
-  _cardName: Test
-  _cardDescription: uwu I'm a test but UNIT
+  _cardName: ItemTest
+  _cardDescription: uwu I'm a test but ITEM
   _inkCost: 1
   _hasBeenUsed: 0
-  _stampObjectRef: {fileID: 0}
-  _cardType: 1
+  _stampObjectRef: {fileID: 11400000, guid: 62a664ff4f4fbf043a507f7df72a741a, type: 2}
+  _cardType: 3

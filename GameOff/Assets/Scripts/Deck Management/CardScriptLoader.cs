@@ -29,4 +29,15 @@ public class CardScriptLoader : MonoBehaviour
         return _cardType;
     }
 
+    public CardScriptableObject GetCardSO
+    {
+        get {return _cardSO;}
+    }
+
+    public bool HasBeenUsed
+    {
+        get {return _hasBeenUsed;}
+        set {_hasBeenUsed = value;}
+    }
+
 }

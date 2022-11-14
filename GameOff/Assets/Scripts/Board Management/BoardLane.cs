@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoardLane : MonoBehaviour
 {
-    [SerializeField] LaneStampScriptableObject currentLaneStamp = null;
+    [SerializeField] LandStampScriptableObject currentLaneStamp = null;
     [SerializeField] Sprite currentLaneSprite;
     [SerializeField] List<GameObject> laneEnemies;
     [SerializeField] IStamp[] laneUnits;
@@ -22,11 +22,11 @@ public class BoardLane : MonoBehaviour
         
     }
 
-    public void ApplyLaneStamp(LaneStampScriptableObject laneStamp)
+    public void ApplyLaneStamp(LandStampScriptableObject laneStamp)
     {
         //kill all enemies in the lane
         currentLaneStamp = laneStamp;
-        currentLaneSprite = currentLaneStamp.StampImage;
+        currentLaneSprite = currentLaneStamp.StampSprite;
     }
 
     //called at the start of a wave

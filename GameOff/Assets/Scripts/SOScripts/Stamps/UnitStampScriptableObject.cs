@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "UnitStampScriptableObject", menuName = "GameOff2022/Stamps/UnitStampSO", order = 0)]
-public class UnitStampScriptableObject : ScriptableObject
+public class UnitStampScriptableObject : StampScriptableObject
 {
 #region SO Backing Fields
-    [SerializeField] private string _stampName;
-    [SerializeField] private int _stampCost;
-    [SerializeField] private Sprite _stampImage;
+    
 
     //Unit Stats
     [SerializeField] private GameObject _spawnedUnit;
@@ -23,20 +21,6 @@ public class UnitStampScriptableObject : ScriptableObject
 #endregion
 
 #region SO Getters
-    public string StampName
-    {
-        get {return _stampName;}
-    }
-
-    public int StampCost
-    {
-        get {return _stampCost;}
-    }
-
-    public Sprite StampImage
-    {
-        get {return _stampImage;}
-    }
 
     public GameObject SpawnedUnit
     {

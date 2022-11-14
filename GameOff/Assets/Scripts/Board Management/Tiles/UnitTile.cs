@@ -15,13 +15,13 @@ public class UnitTile : MonoBehaviour
     {
         if(stamp.TryGetComponent(out IUnitStamp stampScript))
         {
-            if(stampScript.GetUnitName() != _heldStamp.GetComponent<IUnitStamp>().GetUnitName())
+            if(stampScript.GetUnitName() != _heldStamp.GetComponent<IUnitStamp>().GetUnitName()) //If it's a different stamp
             {
-                _heldStamp = stamp;
+                _heldStamp = stamp; //Replace the unit on the tile
             }
             else
             {
-                //do upgrade magic here
+                //Upgrade the current unit on the tile
             }
             return true;
         }
