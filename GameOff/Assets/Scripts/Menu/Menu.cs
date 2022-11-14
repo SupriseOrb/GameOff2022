@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] private GameObject _settingsCanvas;
-
     [SerializeField] protected BoolVariable _isMusicPlaying;
 
     // [SerializeField] private GameObject _loadingScreen;
