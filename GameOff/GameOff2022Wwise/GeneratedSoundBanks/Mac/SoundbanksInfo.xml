@@ -11,27 +11,11 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="3741482716">
+		<SoundBank Id="393239870" Language="SFX" Hash="1442292456">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2886972203" Name="Back_Button" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Back_Button" DurationType="OneShot" DurationMin="0.1722" DurationMax="0.1722">
-					<IncludedMemoryFiles>
-						<File Id="783715838" Language="SFX">
-							<ShortName>MenuUI_BackButton_v1.wav</ShortName>
-							<Path>SFX/MenuUI_BackButton_v1_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="977454165" Name="Button" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Button" DurationType="OneShot" DurationMin="0.100748" DurationMax="0.100748">
-					<IncludedMemoryFiles>
-						<File Id="797317282" Language="SFX">
-							<ShortName>MenuUI_Button_v1.wav</ShortName>
-							<Path>SFX/MenuUI_Button_v1_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
 				<Event Id="3559121215" Name="Cliche_HandCycle" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Cliche_HandCycle" DurationType="OneShot" DurationMin="1.741814" DurationMax="1.741814">
 					<IncludedMemoryFiles>
 						<File Id="31150185" Language="SFX">
@@ -92,7 +76,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Pause" DurationType="OneShot" DurationMin="0.525646" DurationMax="0.525646">
+				<Event Id="1224305705" Name="Play_UIBack" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UIBack" DurationType="OneShot" DurationMin="0.1722" DurationMax="0.1722">
+					<IncludedMemoryFiles>
+						<File Id="783715838" Language="SFX">
+							<ShortName>MenuUI_BackButton_v1.wav</ShortName>
+							<Path>SFX/MenuUI_BackButton_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1830907318" Name="Play_UIPause" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UIPause" DurationType="OneShot" DurationMin="0.525646" DurationMax="0.525646">
 					<IncludedMemoryFiles>
 						<File Id="276893809" Language="SFX">
 							<ShortName>MenuUI_Pause_v2.wav</ShortName>
@@ -100,11 +92,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="953277036" Name="Resume" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Resume" DurationType="OneShot" DurationMin="0.664263" DurationMax="0.664263">
+				<Event Id="235035089" Name="Play_UIResume" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UIResume" DurationType="OneShot" DurationMin="0.664263" DurationMax="0.664263">
 					<IncludedMemoryFiles>
 						<File Id="902073114" Language="SFX">
 							<ShortName>MenuUI_Resume_v2.wav</ShortName>
 							<Path>SFX/MenuUI_Resume_v2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3703192648" Name="Play_UISelect" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UISelect" DurationType="OneShot" DurationMin="0.100748" DurationMax="0.100748">
+					<IncludedMemoryFiles>
+						<File Id="797317282" Language="SFX">
+							<ShortName>MenuUI_Button_v1.wav</ShortName>
+							<Path>SFX/MenuUI_Button_v1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

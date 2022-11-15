@@ -1,14 +1,14 @@
 Event	ID	Name			Wwise Object Path	Notes
 	38624190	TestSound			\Default Work Unit\SFX Events\TestSound	
-	953277036	Resume			\Default Work Unit\SFX Events\Menu UI\Resume	
+	235035089	Play_UIResume			\Default Work Unit\SFX Events\Menu UI\Play_UIResume	
 	967542901	Ink_Full			\Default Work Unit\SFX Events\Ink\Ink_Full	
-	977454165	Button			\Default Work Unit\SFX Events\Menu UI\Button	
 	1178417457	Cliche_MovementCancel			\Default Work Unit\SFX Events\Cliche UI\Cliche_MovementCancel	
+	1224305705	Play_UIBack			\Default Work Unit\SFX Events\Menu UI\Play_UIBack	
 	1231477946	Stamp			\Default Work Unit\SFX Events\Stamp	
+	1830907318	Play_UIPause			\Default Work Unit\SFX Events\Menu UI\Play_UIPause	
 	2721373727	Ink_Depleted			\Default Work Unit\SFX Events\Ink\Ink_Depleted	
-	2886972203	Back_Button			\Default Work Unit\SFX Events\Menu UI\Back_Button	
-	3092587493	Pause			\Default Work Unit\SFX Events\Menu UI\Pause	
 	3559121215	Cliche_HandCycle			\Default Work Unit\SFX Events\Cliche UI\Cliche_HandCycle	
+	3703192648	Play_UISelect			\Default Work Unit\SFX Events\Menu UI\Play_UISelect	
 	3920142940	Timer			\Default Work Unit\SFX Events\Cliche UI\Timer	
 	4002117311	Cliche_Movement			\Default Work Unit\SFX Events\Cliche UI\Cliche_Movement	
 	4214958302	Cliche_Hover			\Default Work Unit\SFX Events\Cliche UI\Cliche_Hover	
