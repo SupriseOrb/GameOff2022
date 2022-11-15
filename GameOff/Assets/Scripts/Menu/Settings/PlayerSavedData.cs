@@ -2,20 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Settings", menuName = "SupriseOrb/Settings")]
-public class Settings : ScriptableObject
+public class PlayerSavedData
 {
-    [Header("Volume")]
-    [SerializeField] [Range(0f, 1f)] private float _allVolume = 1f;
-    
-    [SerializeField] [Range(0f, 1f)] private float _musicVolume = 1f;
-    
-    [SerializeField] [Range(0f, 1f)] private float _sfxVolume = 1f;
-
-    [Header("Resolution")]
-    [SerializeField] private bool _fullscreen = true;
-    [SerializeField] [Range(0,1)] private int _resolutionIndex = 0;
-
+    #region Volume
+    [SerializeField] private float _allVolume;
+    [SerializeField] private float _musicVolume;
+    [SerializeField] private float _sfxVolume;
     public float AllVolume
     { 
         get{return _allVolume;} 
@@ -31,16 +23,20 @@ public class Settings : ScriptableObject
         get{return _sfxVolume;} 
         set{_sfxVolume = value;} 
     }
+    #endregion
 
+    #region Resolution
+    [SerializeField] private bool _fullscreen;
+    [SerializeField] private int _resolutionIndex;
     public bool FullScreen
     {
         get{return _fullscreen;}
         set{_fullscreen = value;}
     }
-
     public int ResolutionIndex
     {
         get{return _resolutionIndex;}
         set{_resolutionIndex = value;}
     }
+    #endregion
 }

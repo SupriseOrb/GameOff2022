@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SettingsManager : MonoBehaviour
 {
@@ -11,18 +12,29 @@ public class SettingsManager : MonoBehaviour
     }
     private static SettingsManager instance;
 
-    [SerializeField] private Settings _savedSettings;
-    [SerializeField] private Settings _defaultSettings; 
+    [Header("Settings")]
+    [SerializeField] private Settings _defaultSettings;
+    static private string SAVED_DATA_FILE_NAME = "PlayerSaveData";
+    [Header("Volume")]
     [SerializeField] private Slider _allSlider;
     [SerializeField] private Slider _musicSlider;
     [SerializeField] private Slider _sfxSlider;
-    // [SerializeField] private Slider _ambianceSlider;
-    private IEnumerator _musicCoroutine;
     private static string _all = "AllVolume";
     private static string _music = "MusicVolume";
     private static string _sfx = "SFXVolume";
-    // private static string _ambiance =  "AmbianceVolume";
+    [Header("Resolution")]
 
+    [SerializeField] private Toggle _fullScreenToggle;
+    [SerializeField] private TMP_Dropdown _resolutionDropdown;
+    [SerializeField] private Resolution[] _resolutions;
+
+    [System.Serializable]
+    public struct Resolution
+    {
+        public int width;
+        public int height;
+    }
+    
     void Awake()
     {
         if (instance == null)
@@ -48,55 +60,95 @@ public class SettingsManager : MonoBehaviour
     {
         return 100 * percentage;
     }
+    private void UseDefaultSettings()
+    {
+        _allSlider.value = _defaultSettings.AllVolume;
+        AkSoundEngine.SetRTPCValue(_all, GetVolume(_allSlider.value));
+        _musicSlider.value = _defaultSettings.MusicVolume;
+        AkSoundEngine.SetRTPCValue(_music, GetVolume(_musicSlider.value));
+        _sfxSlider.value = _defaultSettings.SFXVolume;
+        AkSoundEngine.SetRTPCValue(_sfx, GetVolume(_sfxSlider.value));
+
+        _fullScreenToggle.isOn = _defaultSettings.FullScreen;
+        _resolutionDropdown.value = _defaultSettings.ResolutionIndex;
+        _resolutionDropdown.RefreshShownValue();
+        Resolution resolution = _resolutions[_defaultSettings.ResolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, _fullScreenToggle.isOn);
+    }
 
     public void LoadPrefs()
     {
-        _allSlider.value = _savedSettings.AllVolume;
-        AkSoundEngine.SetRTPCValue(_all, GetVolume(_savedSettings.AllVolume));
-        _musicSlider.value = _savedSettings.MusicVolume;
-        AkSoundEngine.SetRTPCValue(_music, GetVolume(_savedSettings.MusicVolume));
-        _sfxSlider.value = _savedSettings.SFXVolume;
-        AkSoundEngine.SetRTPCValue(_sfx, GetVolume(_savedSettings.SFXVolume));
-        // _ambianceSlider.value = _savedSettings.SFXVolume;
-        // AkSoundEngine.SetRTPCValue(_ambiance, GetVolume(_savedSettings.AmbianceVolume));
+        PlayerSavedData loadedSettings = DataSaver.LoadData<PlayerSavedData>(SAVED_DATA_FILE_NAME);
+        if (loadedSettings == null)
+        {
+            UseDefaultSettings();
+        }
+        else
+        {
+            _allSlider.value = loadedSettings.AllVolume;
+            AkSoundEngine.SetRTPCValue(_all, GetVolume(_allSlider.value));
+            _musicSlider.value = loadedSettings.MusicVolume;
+            AkSoundEngine.SetRTPCValue(_music, GetVolume(_musicSlider.value));
+            _sfxSlider.value = loadedSettings.SFXVolume;
+            AkSoundEngine.SetRTPCValue(_sfx, GetVolume(_sfxSlider.value));
+
+            _fullScreenToggle.isOn = loadedSettings.FullScreen;
+            _resolutionDropdown.value = loadedSettings.ResolutionIndex;
+            _resolutionDropdown.RefreshShownValue();
+            Resolution resolution = _resolutions[loadedSettings.ResolutionIndex];
+            Screen.SetResolution(resolution.width, resolution.height, _fullScreenToggle.isOn);
+        }
     }
 
     public void SavePrefs()
     {
-        _savedSettings.AllVolume = _allSlider.value;
-        _savedSettings.MusicVolume = _musicSlider.value;
-        _savedSettings.SFXVolume = _sfxSlider.value;
-        // _savedSettings.AmbianceVolume = _ambianceSlider.value;
+        PlayerSavedData saveFile = new PlayerSavedData();
+
+        saveFile.AllVolume = _allSlider.value;
+        saveFile.MusicVolume = _musicSlider.value;
+        saveFile.SFXVolume = _sfxSlider.value;
+
+        saveFile.FullScreen = _fullScreenToggle.isOn;
+        saveFile.ResolutionIndex = _resolutionDropdown.value;
+        DataSaver.SaveData(saveFile, SAVED_DATA_FILE_NAME);
     }
 
     public void ResetPrefs()
     {
-        _allSlider.value = _savedSettings.AllVolume = _defaultSettings.AllVolume;
-        _musicSlider.value = _savedSettings.MusicVolume = _defaultSettings.MusicVolume;
-        _sfxSlider.value = _savedSettings.SFXVolume = _defaultSettings.SFXVolume;
-        // _ambianceSlider.value = _savedSettings.AmbianceVolume = _defaultSettings.AmbianceVolume;
+        // Collin TODO: Play sfx
+        UseDefaultSettings();
     }
 
     public void SetAllVolume(float volume)
     {
+        // COLLIN TODO: Play sfx sound
         AkSoundEngine.SetRTPCValue(_all, GetVolume(volume));
     }
 
     public void SetMusicVolume(float volume)
     {
+        // COLLIN TODO: Play sfx sound
         AkSoundEngine.SetRTPCValue(_music, GetVolume(volume));
     }
 
     public void SetSFXVolume(float volume)
     {
+        // COLLIN TODO: Play sfx sound
         AkSoundEngine.SetRTPCValue(_sfx, GetVolume(volume));
     }
 
-    /* public void SetAmbianceVolume(float volume)
+    public void SetFullScreen(bool isFullScreen)
     {
-        AkSoundEngine.SetRTPCValue(_ambiance, GetVolume(volume));
-    } */
+        // COLLIN TODO: Play sfx sound
+        Screen.fullScreen = isFullScreen;
+    }
 
-    // TODO: Implement resolution dropdown
-    // TODO: Implement full screen toggle
+    public void SetResolution(int resolutionIndex)
+    {
+        // COLLIN TODO: Play sfx sound
+
+        // TODO: When full screen is enabled, any resolution that is not the default resolution looks wonky
+        Resolution resolution = _resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, _fullScreenToggle.isOn);
+    }
 }

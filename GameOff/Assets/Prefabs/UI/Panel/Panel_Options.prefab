@@ -509,7 +509,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4222065491193889592}
+        m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
+        m_MethodName: SetFullScreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!114 &847698975487821645
 MonoBehaviour:
@@ -825,7 +837,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4222065491193889592}
+        m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
+        m_MethodName: SetResolution
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!1 &4343398964920552962
 GameObject:
@@ -1897,11 +1921,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80daeb38fee01464da957df95f27a274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _savedSettings: {fileID: 11400000, guid: 958e077e8ee24e94fb5ebf6437e2cbae, type: 2}
   _defaultSettings: {fileID: 11400000, guid: af5a1a6849617e342987b0c627b5c1bd, type: 2}
   _allSlider: {fileID: 4054523645354323794}
   _musicSlider: {fileID: 3132589767062207065}
   _sfxSlider: {fileID: 8095407323872026068}
+  _fullScreenToggle: {fileID: 4097388761950882741}
+  _resolutionDropdown: {fileID: 7373344342678284169}
+  _resolutions:
+  - width: 1920
+    height: 1080
+  - width: 1280
+    height: 720
 --- !u!224 &8624736464151190434 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7345074477644954555, guid: 0eea429360209484c9817a2aa499ea0d, type: 3}

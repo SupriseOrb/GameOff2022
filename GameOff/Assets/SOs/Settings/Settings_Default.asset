@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da369b4738d0854b95a90b20b915a1f, type: 3}
   m_Name: Settings_Default
   m_EditorClassIdentifier: 
-  _allVolume: 1
-  _musicVolume: 1
-  _sfxVolume: 1
-  _ambianceVolume: 1
+  _allVolume: 0.7
+  _musicVolume: 0.7
+  _sfxVolume: 0.7
+  _fullscreen: 1
+  _resolutionIndex: 0
+  _resolutions:
+  - width: 1920
+    height: 1080
+  - width: 1280
+    height: 720
