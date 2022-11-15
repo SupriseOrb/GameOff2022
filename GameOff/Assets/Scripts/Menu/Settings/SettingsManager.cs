@@ -62,11 +62,11 @@ public class SettingsManager : MonoBehaviour
     }
     private void UseDefaultSettings()
     {
-        _allSlider.value = _defaultSettings.AllVolume;
+        _allSlider.SetValueWithoutNotify(_defaultSettings.AllVolume);
         AkSoundEngine.SetRTPCValue(_all, GetVolume(_allSlider.value));
-        _musicSlider.value = _defaultSettings.MusicVolume;
+        _musicSlider.SetValueWithoutNotify(_defaultSettings.MusicVolume);
         AkSoundEngine.SetRTPCValue(_music, GetVolume(_musicSlider.value));
-        _sfxSlider.value = _defaultSettings.SFXVolume;
+        _sfxSlider.SetValueWithoutNotify(_defaultSettings.SFXVolume);
         AkSoundEngine.SetRTPCValue(_sfx, GetVolume(_sfxSlider.value));
 
         _fullScreenToggle.isOn = _defaultSettings.FullScreen;
@@ -85,11 +85,11 @@ public class SettingsManager : MonoBehaviour
         }
         else
         {
-            _allSlider.value = loadedSettings.AllVolume;
+            _allSlider.SetValueWithoutNotify(loadedSettings.AllVolume);
             AkSoundEngine.SetRTPCValue(_all, GetVolume(_allSlider.value));
-            _musicSlider.value = loadedSettings.MusicVolume;
+            _musicSlider.SetValueWithoutNotify(loadedSettings.MusicVolume);
             AkSoundEngine.SetRTPCValue(_music, GetVolume(_musicSlider.value));
-            _sfxSlider.value = loadedSettings.SFXVolume;
+            _sfxSlider.SetValueWithoutNotify(loadedSettings.SFXVolume);
             AkSoundEngine.SetRTPCValue(_sfx, GetVolume(_sfxSlider.value));
 
             _fullScreenToggle.isOn = loadedSettings.FullScreen;
@@ -122,18 +122,25 @@ public class SettingsManager : MonoBehaviour
     public void SetAllVolume(float volume)
     {
         // COLLIN TODO: Play sfx sound
+        /* TODO: Bug with all volume sliders
+            There's a bug when you slide the slider, it continuously plays sfx
+            Connect to input manager so that it only plays when the player lets go of the slider
+        */
+        // AkSoundEngine.PostEvent("Play_UISelect", gameObject);
         AkSoundEngine.SetRTPCValue(_all, GetVolume(volume));
     }
 
     public void SetMusicVolume(float volume)
     {
         // COLLIN TODO: Play sfx sound
+        // AkSoundEngine.PostEvent("Play_UISelect", gameObject);
         AkSoundEngine.SetRTPCValue(_music, GetVolume(volume));
     }
 
     public void SetSFXVolume(float volume)
     {
         // COLLIN TODO: Play sfx sound
+        // AkSoundEngine.PostEvent("Play_UISelect", gameObject);
         AkSoundEngine.SetRTPCValue(_sfx, GetVolume(volume));
     }
 
