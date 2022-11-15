@@ -6,6 +6,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	1224305705	Play_UIBack			\Default Work Unit\SFX Events\Menu UI\Play_UIBack	
 	1231477946	Stamp			\Default Work Unit\SFX Events\Stamp	
 	1830907318	Play_UIPause			\Default Work Unit\SFX Events\Menu UI\Play_UIPause	
+	2502251926	Play_UIHover			\Default Work Unit\SFX Events\Menu UI\Play_UIHover	
+	2719045197	Pay_UISlider			\Default Work Unit\SFX Events\Menu UI\Pay_UISlider	
 	2721373727	Ink_Depleted			\Default Work Unit\SFX Events\Ink\Ink_Depleted	
 	3559121215	Cliche_HandCycle			\Default Work Unit\SFX Events\Cliche UI\Cliche_HandCycle	
 	3703192648	Play_UISelect			\Default Work Unit\SFX Events\Menu UI\Play_UISelect	
@@ -14,8 +16,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	4214958302	Cliche_Hover			\Default Work Unit\SFX Events\Cliche UI\Cliche_Hover	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	3597688	MenuUI_Hover_Eb_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Hover_Eb_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_Eb_v1		10742
 	23787489	Cliche_HoverAnimation_3_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_HoverAnimation_3_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_3_v1		15336
 	31150185	Cliche Hand Cycle	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_HandCycle_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hand Cycle		307320
+	160367648	MenuUI_Hover_C_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Hover_C_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_C_v1		12728
+	162393702	MenuUI_Hover_G_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Hover_G_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_G_v1		17592
 	187588092	Cliche Movement	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_Movement_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Movement		32994
 	273100381	Cliche_HoverAnimation_2_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_HoverAnimation_2_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_2_v1		15336
 	276893809	Pause	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Pause_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Pause		46426
@@ -23,11 +28,15 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	378939211	Hand Cycle Timer	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Timer_Click_v1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Hand Cycle Timer		88276
 	577290544	Cliche_HoverAnimation_4_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_HoverAnimation_4_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_4_v1		15336
 	632420613	Test_Sound	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Jackpot_Winner2_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test_Sound		701892
+	657855576	Slider Tick	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Slider_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Slider Tick		12242
+	687362730	MenuUI_Hover_Bb_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Hover_Bb_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_Bb_v1		12626
 	742379802	Ink Full	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Ink_Full_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ink Full		13182
 	761191295	Cliche Movement Cancel	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_MovementCancel_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Movement Cancel		15686
 	783715838	Back_Button	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_BackButton_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Back_Button		15252
 	797317282	Button	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Button_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Button		8950
 	902073114	Resume	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Resume_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Resume		58652
 	934060521	Cliche_HoverAnimation_1_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_HoverAnimation_1_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_1_v1		15336
+	966265383	MenuUI_Hover_D_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Hover_D_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_D_v1		14108
 	1040327169	Ink Depleted	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Ink_Depleted_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ink Depleted		26970
+	1060547979	MenuUI_Hover_F_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Hover_F_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_F_v1		10180
 

@@ -10,6 +10,7 @@
 				</SoundBank>
 				<SoundBank Name="SFX" ID="{E9B23D65-894B-4188-BCA2-AF7B46D34DAA}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Pay_UISlider" ID="{966CD5B5-C917-427C-9145-4B1AF451EA57}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIBack" ID="{D77C439C-E288-42F0-8B90-E5370FB9BB59}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIPause" ID="{529A7150-D0F0-4354-A940-4080C67090F2}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UISelect" ID="{2774CB0E-7435-4425-ADED-7A1AD176FA30}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
@@ -17,6 +18,7 @@
 						<ObjectRef Name="Cliche_Movement" ID="{5D5D493C-FE88-45B1-94A7-4D665FBA9C23}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Ink_Depleted" ID="{4791D040-BCF5-45D2-81DF-465A1F03E0E0}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stamp" ID="{B0323596-6BE7-4874-838D-899071D4DC57}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UIHover" ID="{DA8A0EE9-F0D7-48B2-976A-53FC0D2C6BC3}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIResume" ID="{56C6ACD0-ECD0-490C-AFF4-BF7ED0FBD2F1}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Cliche_HandCycle" ID="{19029E53-357C-49C1-A219-DB7DBDEB411C}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Timer" ID="{CCCF5211-AF10-4B51-BED2-A256C289C5B2}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>

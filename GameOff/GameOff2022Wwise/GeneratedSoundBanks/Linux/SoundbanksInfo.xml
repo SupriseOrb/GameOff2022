@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1442292456">
+		<SoundBank Id="393239870" Language="SFX" Hash="368069414">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -76,11 +76,47 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2719045197" Name="Pay_UISlider" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Pay_UISlider" DurationType="OneShot" DurationMin="0.138073" DurationMax="0.138073">
+					<IncludedMemoryFiles>
+						<File Id="657855576" Language="SFX">
+							<ShortName>MenuUI_Slider.wav</ShortName>
+							<Path>SFX/MenuUI_Slider_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1224305705" Name="Play_UIBack" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UIBack" DurationType="OneShot" DurationMin="0.1722" DurationMax="0.1722">
 					<IncludedMemoryFiles>
 						<File Id="783715838" Language="SFX">
 							<ShortName>MenuUI_BackButton_v1.wav</ShortName>
 							<Path>SFX/MenuUI_BackButton_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2502251926" Name="Play_UIHover" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UIHover" DurationType="OneShot" DurationMin="0.114694" DurationMax="0.19873">
+					<IncludedMemoryFiles>
+						<File Id="3597688" Language="SFX">
+							<ShortName>MenuUI_Hover_Eb_v1.wav</ShortName>
+							<Path>SFX/MenuUI_Hover_Eb_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="160367648" Language="SFX">
+							<ShortName>MenuUI_Hover_C_v1.wav</ShortName>
+							<Path>SFX/MenuUI_Hover_C_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="162393702" Language="SFX">
+							<ShortName>MenuUI_Hover_G_v1.wav</ShortName>
+							<Path>SFX/MenuUI_Hover_G_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="687362730" Language="SFX">
+							<ShortName>MenuUI_Hover_Bb_v1.wav</ShortName>
+							<Path>SFX/MenuUI_Hover_Bb_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="966265383" Language="SFX">
+							<ShortName>MenuUI_Hover_D_v1.wav</ShortName>
+							<Path>SFX/MenuUI_Hover_D_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="1060547979" Language="SFX">
+							<ShortName>MenuUI_Hover_F_v1.wav</ShortName>
+							<Path>SFX/MenuUI_Hover_F_v1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

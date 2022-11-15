@@ -158,6 +158,28 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Play_UIHover" ID="{DA8A0EE9-F0D7-48B2-976A-53FC0D2C6BC3}">
+									<ChildrenList>
+										<Action Name="" ID="{5EBAAF76-57FE-463E-B6CD-03A54AF63EE0}" ShortID="1025743896">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Hover" ID="{9351841F-3CA0-4595-82C7-37B67596A5B8}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pay_UISlider" ID="{966CD5B5-C917-427C-9145-4B1AF451EA57}">
+									<ChildrenList>
+										<Action Name="" ID="{A43D0172-6514-42E4-A633-B2ED92929DFE}" ShortID="156906076">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Slider Tick" ID="{A2DD87DC-0D83-411B-A9C2-1C5F91F07B46}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

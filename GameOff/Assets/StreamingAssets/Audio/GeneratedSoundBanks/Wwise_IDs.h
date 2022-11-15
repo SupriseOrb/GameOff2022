@@ -19,7 +19,9 @@ namespace AK
         static const AkUniqueID CLICHE_MOVEMENTCANCEL = 1178417457U;
         static const AkUniqueID INK_DEPLETED = 2721373727U;
         static const AkUniqueID INK_FULL = 967542901U;
+        static const AkUniqueID PAY_UISLIDER = 2719045197U;
         static const AkUniqueID PLAY_UIBACK = 1224305705U;
+        static const AkUniqueID PLAY_UIHOVER = 2502251926U;
         static const AkUniqueID PLAY_UIPAUSE = 1830907318U;
         static const AkUniqueID PLAY_UIRESUME = 235035089U;
         static const AkUniqueID PLAY_UISELECT = 3703192648U;
