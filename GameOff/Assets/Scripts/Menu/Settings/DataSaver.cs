@@ -20,12 +20,11 @@ public class DataSaver
         {
             Directory.CreateDirectory(Path.GetDirectoryName(tempPath));
         }
-        // Debug.Log(path);
 
         try
         {
             File.WriteAllBytes(tempPath, jsonByte);
-            Debug.Log("Saved Data to: " + tempPath.Replace("/", "\\"));
+            //Debug.Log("Saved Data to: " + tempPath.Replace("/", "\\"));
         }
         catch (Exception e)
         {
@@ -57,7 +56,7 @@ public class DataSaver
         try
         {
             jsonByte = File.ReadAllBytes(tempPath);
-            Debug.Log("Loaded Data from: " + tempPath.Replace("/", "\\"));
+            //Debug.Log("Loaded Data from: " + tempPath.Replace("/", "\\"));
         }
         catch (Exception e)
         {
