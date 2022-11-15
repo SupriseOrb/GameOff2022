@@ -112,6 +112,54 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Menu UI" ID="{94C822FC-A2F9-44FA-B853-3250B2B07CAC}" ShortID="231237117">
+							<ChildrenList>
+								<Event Name="Play_UISelect" ID="{2774CB0E-7435-4425-ADED-7A1AD176FA30}">
+									<ChildrenList>
+										<Action Name="" ID="{99B9E737-99D9-41C6-A266-D29D714142F0}" ShortID="994699511">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Button" ID="{9FD202C3-E7D3-44B5-971D-D9ACF8A5DF64}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_UIBack" ID="{D77C439C-E288-42F0-8B90-E5370FB9BB59}">
+									<ChildrenList>
+										<Action Name="" ID="{32BDFD15-2EAE-454A-9250-C6A2447F02AE}" ShortID="717262228">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Back_Button" ID="{1B603DA1-656C-4E0E-9969-FF5BA81F1DF7}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_UIPause" ID="{529A7150-D0F0-4354-A940-4080C67090F2}">
+									<ChildrenList>
+										<Action Name="" ID="{CE007A8B-D76E-4935-A1F4-E543F8645B85}" ShortID="627870956">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Pause" ID="{83D1E9AD-AC18-42AC-9BC2-0E9E82D5706E}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_UIResume" ID="{56C6ACD0-ECD0-490C-AFF4-BF7ED0FBD2F1}">
+									<ChildrenList>
+										<Action Name="" ID="{4DAEB44B-BEA3-4132-BDA0-0FAA2111D7C9}" ShortID="155019183">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Resume" ID="{8618A815-BEC2-4204-A3A0-315B869F246E}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

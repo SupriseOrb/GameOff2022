@@ -13,8 +13,7 @@ public class Menu : MonoBehaviour
 
     protected void LoadScene(int sceneIndex)
     {
-        // Collin TODO: Play regular button sound
-        // AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
+        AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
         
         SceneManager.LoadScene(sceneIndex);
         // StartCoroutine(LoadSceneAsynchronously(sceneIndex));
@@ -36,13 +35,11 @@ public class Menu : MonoBehaviour
     {
         if (canSee)
         {
-            // Collin TODO: Play regular button sound
-            // AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
+            AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
         }
         else
         {
-            // Collin TODO: Play back sound
-            // AkSoundEngine.PostEvent("Play_UIBack", this.gameObject);
+            AkSoundEngine.PostEvent("Play_UIBack", this.gameObject);
         }
         
         canvas.enabled = canSee;

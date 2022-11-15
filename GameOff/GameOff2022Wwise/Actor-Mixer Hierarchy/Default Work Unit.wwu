@@ -304,6 +304,130 @@
 						<ActiveSource Name="Ink_Depleted_v1" ID="{DE16ED21-B1E3-44D3-915A-7EB6F88F426F}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="Menu UI" ID="{AA0D3997-49F1-4B30-A858-27012289DF59}" ShortID="567771543">
+					<ChildrenList>
+						<Sound Name="Button" ID="{9FD202C3-E7D3-44B5-971D-D9ACF8A5DF64}" ShortID="403919801">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MenuUI_Button_v1" ID="{D18B0A59-B00D-41CC-956D-D88807611765}">
+									<Language>SFX</Language>
+									<AudioFile>MenuUI_Button_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="797317282"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="MenuUI_Button_v1" ID="{D18B0A59-B00D-41CC-956D-D88807611765}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Back_Button" ID="{1B603DA1-656C-4E0E-9969-FF5BA81F1DF7}" ShortID="350062024">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MenuUI_BackButton_v1" ID="{1C2C72B4-E919-4D13-AF59-9647A6AE8B22}">
+									<Language>SFX</Language>
+									<AudioFile>MenuUI_BackButton_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="783715838"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="MenuUI_BackButton_v1" ID="{1C2C72B4-E919-4D13-AF59-9647A6AE8B22}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Pause" ID="{83D1E9AD-AC18-42AC-9BC2-0E9E82D5706E}" ShortID="663993853">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MenuUI_Pause_v2" ID="{DC0AE4BD-33EE-4411-8C58-91D52FD16032}">
+									<Language>SFX</Language>
+									<AudioFile>MenuUI_Pause_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="276893809"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="MenuUI_Pause_v2" ID="{DC0AE4BD-33EE-4411-8C58-91D52FD16032}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Resume" ID="{8618A815-BEC2-4204-A3A0-315B869F246E}" ShortID="606864643">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MenuUI_Resume_v2" ID="{3BC1A0E0-8245-458B-872D-7E6059923969}">
+									<Language>SFX</Language>
+									<AudioFile>MenuUI_Resume_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="902073114"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="MenuUI_Resume_v2" ID="{3BC1A0E0-8245-458B-872D-7E6059923969}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

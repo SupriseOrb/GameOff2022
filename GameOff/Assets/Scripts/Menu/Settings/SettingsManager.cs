@@ -115,7 +115,7 @@ public class SettingsManager : MonoBehaviour
 
     public void ResetPrefs()
     {
-        // Collin TODO: Play sfx
+        AkSoundEngine.PostEvent("Play_UISelect", gameObject);
         UseDefaultSettings();
     }
 
@@ -139,13 +139,13 @@ public class SettingsManager : MonoBehaviour
 
     public void SetFullScreen(bool isFullScreen)
     {
-        // COLLIN TODO: Play sfx sound
+        AkSoundEngine.PostEvent("Play_UISelect", gameObject);
         Screen.fullScreen = isFullScreen;
     }
 
     public void SetResolution(int resolutionIndex)
     {
-        // COLLIN TODO: Play sfx sound
+        AkSoundEngine.PostEvent("Play_UISelect", gameObject);
 
         // TODO: When full screen is enabled, any resolution that is not the default resolution looks wonky
         Resolution resolution = _resolutions[resolutionIndex];

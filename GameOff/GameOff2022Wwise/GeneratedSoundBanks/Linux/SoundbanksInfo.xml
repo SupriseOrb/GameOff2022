@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2004919786">
+		<SoundBank Id="393239870" Language="SFX" Hash="1442292456">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -73,6 +73,38 @@
 						<File Id="742379802" Language="SFX">
 							<ShortName>Ink_Full_v1.wav</ShortName>
 							<Path>SFX/Ink_Full_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1224305705" Name="Play_UIBack" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UIBack" DurationType="OneShot" DurationMin="0.1722" DurationMax="0.1722">
+					<IncludedMemoryFiles>
+						<File Id="783715838" Language="SFX">
+							<ShortName>MenuUI_BackButton_v1.wav</ShortName>
+							<Path>SFX/MenuUI_BackButton_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1830907318" Name="Play_UIPause" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UIPause" DurationType="OneShot" DurationMin="0.525646" DurationMax="0.525646">
+					<IncludedMemoryFiles>
+						<File Id="276893809" Language="SFX">
+							<ShortName>MenuUI_Pause_v2.wav</ShortName>
+							<Path>SFX/MenuUI_Pause_v2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="235035089" Name="Play_UIResume" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UIResume" DurationType="OneShot" DurationMin="0.664263" DurationMax="0.664263">
+					<IncludedMemoryFiles>
+						<File Id="902073114" Language="SFX">
+							<ShortName>MenuUI_Resume_v2.wav</ShortName>
+							<Path>SFX/MenuUI_Resume_v2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3703192648" Name="Play_UISelect" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UISelect" DurationType="OneShot" DurationMin="0.100748" DurationMax="0.100748">
+					<IncludedMemoryFiles>
+						<File Id="797317282" Language="SFX">
+							<ShortName>MenuUI_Button_v1.wav</ShortName>
+							<Path>SFX/MenuUI_Button_v1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -19,7 +19,7 @@ public class SystemTextManager : MonoBehaviour
 
     public void StartStoryViaButton(TextAsset inkFile)
     {
-        // Collin TODO: Regular button sfx
+        AkSoundEngine.PostEvent("Play_UISelect", gameObject);
         StartStory(inkFile);
     }
 
@@ -109,7 +109,7 @@ public class SystemTextManager : MonoBehaviour
         {
             if (_story.canContinue)
             {
-                // Collin TODO: Regular button sfx
+                AkSoundEngine.PostEvent("Play_UISelect", gameObject);
                 /* 
                     TODO: There will be a bug when a text is first placed via a button
                     The regular button sfx will play twice

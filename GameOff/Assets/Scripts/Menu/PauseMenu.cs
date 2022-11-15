@@ -22,8 +22,7 @@ public class PauseMenu : Menu
     {
         if (!_isPaused.Value && _pauseMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("PauseMenu_IdleClose"))
         {
-            // Collin TODO: Play pause sfx
-            // AkSoundEngine.PostEvent("Play_UIPause", this.gameObject);
+            AkSoundEngine.PostEvent("Play_UIPause", this.gameObject);
 
             _isPaused.Value = true;
             _pauseMenuAnimator.Play("PauseMenu_Open");
@@ -35,8 +34,7 @@ public class PauseMenu : Menu
     {
         if (_isPaused.Value && _pauseMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("PauseMenu_IdleOpen"))
         {
-            // Collin TODO: Play resume sfx
-            // AkSoundEngine.PostEvent("Play_UIResume", this.gameObject);
+            AkSoundEngine.PostEvent("Play_UIResume", this.gameObject);
             
             _isPaused.Value = false;
             _pauseMenuAnimator.Play("PauseMenu_Close");
