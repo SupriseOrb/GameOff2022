@@ -19,8 +19,7 @@ public class SystemTextManager : MonoBehaviour
 
     public void StartStoryViaButton(TextAsset inkFile)
     {
-        AkSoundEngine.PostEvent("Play_UISelect", gameObject);
-        StartStory(inkFile);
+        StartStoryHelper(inkFile, playButtonSFX: true);
     }
 
     public void StartStory(TextAsset inkFile, UnityEvent endEvent = null)
@@ -30,7 +29,7 @@ public class SystemTextManager : MonoBehaviour
 
     public void OnAdvanceDialogue()
     {
-        AdvanceDialogue();
+        AdvanceDialogue(true);
     }
 
     private static SystemTextManager _instance;
@@ -80,10 +79,14 @@ public class SystemTextManager : MonoBehaviour
         SceneManager.activeSceneChanged -= OnChangeScene;
     }
 
-    private void StartStoryHelper(TextAsset inkFile, UnityEvent endEvent = null)
+    private void StartStoryHelper(TextAsset inkFile, UnityEvent endEvent = null, bool playButtonSFX = false)
     {
         if(!_systemTextOn.Value && !_isPaused.Value)
         {
+            if (playButtonSFX)
+            {
+                AkSoundEngine.PostEvent("Play_UISelect", gameObject);
+            }
             _story = new Story(inkFile.text);
             _endEvent = endEvent;
             _textHolder.text = "";
@@ -103,22 +106,21 @@ public class SystemTextManager : MonoBehaviour
         AdvanceDialogue();
     }
 
-    private void AdvanceDialogue()
+    private void AdvanceDialogue(bool playButtonSfx = false)
     {
         if(_playerCanContinue && _systemTextOn.Value && !_isPaused.Value && _story!=null)
         {
             if (_story.canContinue)
             {
-                AkSoundEngine.PostEvent("Play_UISelect", gameObject);
-                /* 
-                    TODO: There will be a bug when a text is first placed via a button
-                    The regular button sfx will play twice
-                */
+                if (playButtonSfx)
+                {
+                    AkSoundEngine.PostEvent("Play_UISelect", gameObject);
+                }
+                
                 _canContinueIndicator.SetActive(false);
                 _playerCanContinue = false;
 
-                _textHolder.text = _story.Continue();
-                StartCoroutine(WaitBetweenText());
+                StartCoroutine(TypeSentence(_story.Continue()));
             }
             else
             {
@@ -127,14 +129,26 @@ public class SystemTextManager : MonoBehaviour
         }          
     }
 
-    private IEnumerator WaitBetweenText()
+    private IEnumerator TypeSentence(string sentence)
     {
-        yield return new WaitForSeconds(_waitTime);
+        _textHolder.text = "";
+        // Collin TODO: Play type writer sfx
+
+        for(int charIndex = 1; charIndex < sentence.Length; charIndex++)
+        {
+
+            _textHolder.text = sentence.Substring(0,charIndex) 
+                                + "<color=#ffffff00>" 
+                                + sentence.Substring(charIndex)
+                                + "</color>";
+            yield return null;            
+        }
+        
+        // Collin TODO: Stop type writer sfx
         _canContinueIndicator.SetActive(true);
         _playerCanContinue = true;
     }
 
-    //Finishes the dialogue
     private void FinishDialogue()
     {
         animator.Play("SystemText_Close");

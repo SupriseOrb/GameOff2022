@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SystemTextTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private TextAsset _story;
+    [SerializeField] private UnityEvent _endEvent;
+    
 
-    // Update is called once per frame
-    void Update()
+    public void TriggerStory()
     {
-        
+        SystemTextManager.Instance.StartStory(_story, _endEvent);
     }
 }
