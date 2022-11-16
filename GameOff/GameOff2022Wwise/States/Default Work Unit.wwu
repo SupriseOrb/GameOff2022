@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FD3B0150-50BC-41A4-9784-D9DD5EEB3810}" SchemaVersion="103">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{FD3B0150-50BC-41A4-9784-D9DD5EEB3810}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{FD3B0150-50BC-41A4-9784-D9DD5EEB3810}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Music_State" ID="{072CD6D4-733A-44C9-835D-E2ED35888428}">
+					<ChildrenList>
+						<State Name="None" ID="{4D3AD3D2-3F6E-45DE-BDCD-44AA57EF0333}"/>
+						<State Name="Title" ID="{BFA391C7-C9AF-4231-A182-E8BF4AC6FDF7}"/>
+						<State Name="Battle" ID="{05029B2D-7F58-46C1-8207-3AF1677D41F8}"/>
+						<State Name="Win" ID="{46AEB5AF-D516-4559-A351-52BF4BDA48D9}"/>
+						<State Name="Lose" ID="{4F24EAA2-1AAD-4FA2-9B55-BFEBAEE0287B}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Battle_Intensity" ID="{4D858E8B-6BDA-4098-AB19-1910F0EC9F18}">
+					<ChildrenList>
+						<State Name="None" ID="{5DAF9D39-F78C-4534-88E1-7C4E679CD931}"/>
+						<State Name="Battle_Intensity_1" ID="{D85FCDF0-5F32-4588-8933-BC446D0CFB9A}"/>
+						<State Name="Battle_Intensity_2" ID="{3407E5A0-7DE9-4531-9956-F89833DC81A8}"/>
+						<State Name="Battle_Intensity_3" ID="{F5404297-96CB-4787-B9FF-BB405B4A8E8B}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>
