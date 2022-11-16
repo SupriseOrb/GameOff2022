@@ -152,6 +152,7 @@ public class InputManager : MonoBehaviour
 
     public void OnLeftClickRelease(InputAction.CallbackContext context)
     {
+        //move isdraggingcard to bottom of function because we want to use this as a check
         _isDraggingCard = false;
         _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
         //TODO: Apparently error here if you left-click while "dragging" a tile
