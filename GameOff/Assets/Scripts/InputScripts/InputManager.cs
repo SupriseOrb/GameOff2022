@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
     private Vector3 _mousePositionScreen;
     [SerializeField] private Vector3 _mousePositionWorld;
     [SerializeField] private CardScriptLoader _selectedCard;
+    [SerializeField] private bool _isDraggingCard;
     [SerializeField] private SpriteDrag _spriteDragScript;
     private Ray2D _raycast;
     private RaycastHit2D _raycastHit;
@@ -151,6 +152,7 @@ public class InputManager : MonoBehaviour
 
     public void OnLeftClickRelease(InputAction.CallbackContext context)
     {
+        _isDraggingCard = false;
         _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
         //TODO: Apparently error here if you left-click while "dragging" a tile
         if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
@@ -202,17 +204,13 @@ public class InputManager : MonoBehaviour
 
     public void OnLeftClickHold(InputAction.CallbackContext context)
     {
-        Debug.Log("Held Card!");
-        _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
-        if (_raycastHit.transform.gameObject.TryGetComponent(out CardScriptLoader card))
-        {
-            //Note: OnLeftClick is also being called if OnLeftClickHold is
-            Sprite _cardSprite = _selectedCard.GetCardSO.StampObjectRef.StampSprite;
-            Debug.Log(_cardSprite);
-            _spriteDragScript.gameObject.SetActive(true);
-            _spriteDragScript.SpriteReference = _cardSprite;
-            _spriteDragScript.IsDragging = true;
-        }
+        _isDraggingCard = true;
+        //Note: OnLeftClick is also being called if OnLeftClickHold is
+        Sprite _cardSprite = _selectedCard.GetCardSO.StampObjectRef.StampSprite;
+        Debug.Log(_cardSprite);
+        _spriteDragScript.gameObject.SetActive(true);
+        _spriteDragScript.SpriteReference = _cardSprite;
+        _spriteDragScript.IsDragging = true;
     }
 
     //TODO: Use MousePosition to drag the card instead of having a requirement of holding left-click down on a card
