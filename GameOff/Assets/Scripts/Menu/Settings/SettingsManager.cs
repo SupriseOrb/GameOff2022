@@ -121,26 +121,16 @@ public class SettingsManager : MonoBehaviour
 
     public void SetAllVolume(float volume)
     {
-        // COLLIN TODO: Play sfx sound
-        /* TODO: Bug with all volume sliders
-            There's a bug when you slide the slider, it continuously plays sfx
-            Connect to input manager so that it only plays when the player lets go of the slider
-        */
-        // AkSoundEngine.PostEvent("Play_UISelect", gameObject);
         AkSoundEngine.SetRTPCValue(_all, GetVolume(volume));
     }
 
     public void SetMusicVolume(float volume)
     {
-        // COLLIN TODO: Play sfx sound
-        // AkSoundEngine.PostEvent("Play_UISelect", gameObject);
         AkSoundEngine.SetRTPCValue(_music, GetVolume(volume));
     }
 
     public void SetSFXVolume(float volume)
     {
-        // COLLIN TODO: Play sfx sound
-        // AkSoundEngine.PostEvent("Play_UISelect", gameObject);
         AkSoundEngine.SetRTPCValue(_sfx, GetVolume(volume));
     }
 
