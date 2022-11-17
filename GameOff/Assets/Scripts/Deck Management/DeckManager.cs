@@ -191,11 +191,13 @@ public class DeckManager : MonoBehaviour
             _cardFrameAnimator.GetCurrentAnimatorStateInfo(0).IsName(_cardFrameIdleCloseString))
         {
             _cardFrameAnimator.Play(_cardFrameOpenString);
+            AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
         }
         else if (_cardFrameAnimator.GetCurrentAnimatorStateInfo(0).IsName(_cardFrameOpenString) ||
                 _cardFrameAnimator.GetCurrentAnimatorStateInfo(0).IsName(_cardFrameIdleOpenString))
         {
             _cardFrameAnimator.Play(_cardFrameCloseString);
+            AkSoundEngine.PostEvent("Play_UIBack", this.gameObject);
         }
     }
 }

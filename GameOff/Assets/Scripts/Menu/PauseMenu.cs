@@ -15,6 +15,7 @@ public class PauseMenu : Menu
         _currentEventSystem = EventSystem.current;
         _isPaused.Value = false;
 
+        AkSoundEngine.SetState("Music_State", "Battle");
         AkSoundEngine.SetState("Battle_Intensity", "Battle_Intensity_1");
     }
     public void PauseGame()
