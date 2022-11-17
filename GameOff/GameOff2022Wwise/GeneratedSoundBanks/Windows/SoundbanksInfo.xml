@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
-		<SourceFilesRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ProjectRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="368069414">
+		<SoundBank Id="393239870" Language="SFX" Hash="703838624">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -170,7 +170,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3066013982">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3148767825">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -180,10 +180,76 @@
 				<GameParameter Id="2731583604" Name="AllVolume" ObjectPath="\Game Parameters\Default Work Unit\AllVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="3012300438">
+		<SoundBank Id="3991942870" Language="SFX" Hash="2750057380">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Default Work Unit\Music Events\Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="71543844" Language="SFX">
+							<ShortName>Battle_Intensity_2_V1_120bpm3-4_L60M-P0.wav</ShortName>
+							<Path>SFX/Battle_Intensity_2_V1_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
+						</File>
+						<File Id="458433170" Language="SFX">
+							<ShortName>Battle_Intensity_1_V1_120bpm3-4_L60M-P0.wav</ShortName>
+							<Path>SFX/Battle_Intensity_1_V1_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
+						</File>
+						<File Id="604336901" Language="SFX">
+							<ShortName>Title_V1_120bpm4-4_L32M-P0.wav</ShortName>
+							<Path>SFX/Title_V1_120bpm4-4_L32M-P0_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{05029B2D-7F58-46C1-8207-3AF1677D41F8}">
+							<Children>
+								<SwitchContainer SwitchValue="{05029B2D-7F58-46C1-8207-3AF1677D41F8}">
+									<Children>
+										<SwitchContainer SwitchValue="{D85FCDF0-5F32-4588-8933-BC446D0CFB9A}">
+											<Media>
+												<File Id="458433170"/>
+											</Media>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{05029B2D-7F58-46C1-8207-3AF1677D41F8}">
+									<Children>
+										<SwitchContainer SwitchValue="{3407E5A0-7DE9-4531-9956-F89833DC81A8}">
+											<Media>
+												<File Id="71543844"/>
+											</Media>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{BFA391C7-C9AF-4231-A182-E8BF4AC6FDF7}">
+							<Media>
+								<File Id="604336901"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</IncludedEvents>
+			<StateGroups>
+				<StateGroup Id="851019197" Name="Battle_Intensity" ObjectPath="\States\Default Work Unit\Battle_Intensity" GUID="{4D858E8B-6BDA-4098-AB19-1910F0EC9F18}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Battle_Intensity\None" GUID="{5DAF9D39-F78C-4534-88E1-7C4E679CD931}"/>
+						<State Id="2723048505" Name="Battle_Intensity_1" ObjectPath="\States\Default Work Unit\Battle_Intensity\Battle_Intensity_1" GUID="{D85FCDF0-5F32-4588-8933-BC446D0CFB9A}"/>
+						<State Id="2723048506" Name="Battle_Intensity_2" ObjectPath="\States\Default Work Unit\Battle_Intensity\Battle_Intensity_2" GUID="{3407E5A0-7DE9-4531-9956-F89833DC81A8}"/>
+						<State Id="2723048507" Name="Battle_Intensity_3" ObjectPath="\States\Default Work Unit\Battle_Intensity\Battle_Intensity_3" GUID="{F5404297-96CB-4787-B9FF-BB405B4A8E8B}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3826569560" Name="Music_State" ObjectPath="\States\Default Work Unit\Music_State" GUID="{072CD6D4-733A-44C9-835D-E2ED35888428}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music_State\None" GUID="{4D3AD3D2-3F6E-45DE-BDCD-44AA57EF0333}"/>
+						<State Id="3705726509" Name="Title" ObjectPath="\States\Default Work Unit\Music_State\Title" GUID="{BFA391C7-C9AF-4231-A182-E8BF4AC6FDF7}"/>
+						<State Id="2937832959" Name="Battle" ObjectPath="\States\Default Work Unit\Music_State\Battle" GUID="{05029B2D-7F58-46C1-8207-3AF1677D41F8}"/>
+						<State Id="979765101" Name="Win" ObjectPath="\States\Default Work Unit\Music_State\Win" GUID="{46AEB5AF-D516-4559-A351-52BF4BDA48D9}"/>
+						<State Id="221232726" Name="Lose" ObjectPath="\States\Default Work Unit\Music_State\Lose" GUID="{4F24EAA2-1AAD-4FA2-9B55-BFEBAEE0287B}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

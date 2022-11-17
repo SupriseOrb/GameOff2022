@@ -1,3 +1,18 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	851019197	Battle_Intensity			\Default Work Unit\Battle_Intensity	
+	3826569560	Music_State			\Default Work Unit\Music_State	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Battle_Intensity			
+	2723048505	Battle_Intensity_1	Battle_Intensity			
+	2723048506	Battle_Intensity_2	Battle_Intensity			
+	2723048507	Battle_Intensity_3	Battle_Intensity			
+	221232726	Lose	Music_State			
+	748895195	None	Music_State			
+	979765101	Win	Music_State			
+	2937832959	Battle	Music_State			
+	3705726509	Title	Music_State			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	
