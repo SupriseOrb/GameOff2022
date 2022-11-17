@@ -123,6 +123,35 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &749139098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2120806402740415620, guid: 69eaf4459dd56c84288b67e907a56cd4, type: 3}
+  m_PrefabInstance: {fileID: 2120806403120472860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &749139099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749139098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b80eac0aeebf4257bc341fb792014c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a1d7af52e3f444d3e95b6569447e5647, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1268047100
 GameObject:
   m_ObjectHideFlags: 0
