@@ -14,13 +14,13 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID CLICHE_HANDCYCLE = 3559121215U;
-        static const AkUniqueID CLICHE_HOVER = 4214958302U;
-        static const AkUniqueID CLICHE_MOVEMENT = 4002117311U;
-        static const AkUniqueID CLICHE_MOVEMENTCANCEL = 1178417457U;
-        static const AkUniqueID INK_DEPLETED = 2721373727U;
-        static const AkUniqueID INK_FULL = 967542901U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PAY_UISLIDER = 2719045197U;
+        static const AkUniqueID PLAY_CLICHEHOVER = 1817342604U;
+        static const AkUniqueID PLAY_CLICHEMOVEMENT = 1396175505U;
+        static const AkUniqueID PLAY_CLICHEMOVEMENTCANCEL = 3212791047U;
+        static const AkUniqueID PLAY_INKDEPLETED = 289833391U;
+        static const AkUniqueID PLAY_INKFULL = 3028081509U;
         static const AkUniqueID PLAY_STAMPCOW = 679587648U;
         static const AkUniqueID PLAY_STAMPGENERAL = 2266250969U;
         static const AkUniqueID PLAY_STAMPINK = 1200679653U;

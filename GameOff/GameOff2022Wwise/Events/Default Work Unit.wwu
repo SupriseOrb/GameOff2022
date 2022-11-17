@@ -29,7 +29,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Cliche_Hover" ID="{A5058C67-0EC8-4C1D-97E1-1919B89D0B29}">
+								<Event Name="Play_ClicheHover" ID="{A5058C67-0EC8-4C1D-97E1-1919B89D0B29}">
 									<ChildrenList>
 										<Action Name="" ID="{FFF09C1E-CAA6-448F-8FE6-A738AEF2BBA2}" ShortID="438325081">
 											<ReferenceList>
@@ -40,7 +40,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Cliche_Movement" ID="{5D5D493C-FE88-45B1-94A7-4D665FBA9C23}">
+								<Event Name="Play_ClicheMovement" ID="{5D5D493C-FE88-45B1-94A7-4D665FBA9C23}">
 									<ChildrenList>
 										<Action Name="" ID="{F7727E01-E11C-4DCB-9E24-6AA6C5B532F1}" ShortID="878440266">
 											<ReferenceList>
@@ -51,7 +51,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Cliche_MovementCancel" ID="{74AE54F2-D22B-4CF0-BED0-2BE88494B1A4}">
+								<Event Name="Play_ClicheMovementCancel" ID="{74AE54F2-D22B-4CF0-BED0-2BE88494B1A4}">
 									<ChildrenList>
 										<Action Name="" ID="{FCD497B5-C8BA-42DC-AE68-80303F724EC8}" ShortID="244438600">
 											<ReferenceList>
@@ -77,7 +77,7 @@
 						</Folder>
 						<Folder Name="Ink" ID="{5E67059F-FC17-4027-B665-C3E9AD14ACF4}" ShortID="451112682">
 							<ChildrenList>
-								<Event Name="Ink_Full" ID="{0A1BB36C-9949-44A4-A783-1C42F1503A37}">
+								<Event Name="Play_InkFull" ID="{0A1BB36C-9949-44A4-A783-1C42F1503A37}">
 									<ChildrenList>
 										<Action Name="" ID="{70ED6C69-A683-4E47-BFF0-26A1E0DE01E3}" ShortID="960368560">
 											<ReferenceList>
@@ -88,7 +88,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Ink_Depleted" ID="{4791D040-BCF5-45D2-81DF-465A1F03E0E0}">
+								<Event Name="Play_InkDepleted" ID="{4791D040-BCF5-45D2-81DF-465A1F03E0E0}">
 									<ChildrenList>
 										<Action Name="" ID="{E4D853FC-1DB4-402B-8277-DF6E17E626D8}" ShortID="952631361">
 											<ReferenceList>

@@ -1,12 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
 	38624190	TestSound			\Default Work Unit\SFX Events\TestSound	
 	235035089	Play_UIResume			\Default Work Unit\SFX Events\Menu UI\Play_UIResume	
+	289833391	Play_InkDepleted			\Default Work Unit\SFX Events\Ink\Play_InkDepleted	
 	377318551	Play_WaveStart			\Default Work Unit\SFX Events\Combat\Play_WaveStart	
 	679587648	Play_StampCow			\Default Work Unit\SFX Events\Stamps\Play_StampCow	
-	967542901	Ink_Full			\Default Work Unit\SFX Events\Ink\Ink_Full	
-	1178417457	Cliche_MovementCancel			\Default Work Unit\SFX Events\Cliche UI\Cliche_MovementCancel	
 	1200679653	Play_StampInk			\Default Work Unit\SFX Events\Stamps\Play_StampInk	
 	1224305705	Play_UIBack			\Default Work Unit\SFX Events\Menu UI\Play_UIBack	
+	1396175505	Play_ClicheMovement			\Default Work Unit\SFX Events\Cliche UI\Play_ClicheMovement	
+	1817342604	Play_ClicheHover			\Default Work Unit\SFX Events\Cliche UI\Play_ClicheHover	
 	1830907318	Play_UIPause			\Default Work Unit\SFX Events\Menu UI\Play_UIPause	
 	2235615413	Stop_Text			\Default Work Unit\SFX Events\Text\Stop_Text	
 	2266250969	Play_StampGeneral			\Default Work Unit\SFX Events\Stamps\Play_StampGeneral	
@@ -14,16 +15,15 @@ Event	ID	Name			Wwise Object Path	Notes
 	2502251926	Play_UIHover			\Default Work Unit\SFX Events\Menu UI\Play_UIHover	
 	2666091979	Play_StampRoughGround			\Default Work Unit\SFX Events\Stamps\Play_StampRoughGround	
 	2719045197	Pay_UISlider			\Default Work Unit\SFX Events\Menu UI\Pay_UISlider	
-	2721373727	Ink_Depleted			\Default Work Unit\SFX Events\Ink\Ink_Depleted	
 	3000230226	Play_StampTimePiece			\Default Work Unit\SFX Events\Stamps\Play_StampTimePiece	
+	3028081509	Play_InkFull			\Default Work Unit\SFX Events\Ink\Play_InkFull	
 	3036508647	Play_Text			\Default Work Unit\SFX Events\Text\Play_Text	
+	3212791047	Play_ClicheMovementCancel			\Default Work Unit\SFX Events\Cliche UI\Play_ClicheMovementCancel	
 	3559121215	Cliche_HandCycle			\Default Work Unit\SFX Events\Cliche UI\Cliche_HandCycle	
 	3703192648	Play_UISelect			\Default Work Unit\SFX Events\Menu UI\Play_UISelect	
 	3893200314	Play_StampSpikeyBush			\Default Work Unit\SFX Events\Stamps\Play_StampSpikeyBush	
 	3920142940	Timer			\Default Work Unit\SFX Events\Cliche UI\Timer	
 	3991942870	Music			\Default Work Unit\Music Events\Music	
-	4002117311	Cliche_Movement			\Default Work Unit\SFX Events\Cliche UI\Cliche_Movement	
-	4214958302	Cliche_Hover			\Default Work Unit\SFX Events\Cliche UI\Cliche_Hover	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	3597688	MenuUI_Hover_Eb_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Hover_Eb_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_Eb_v1		10742
