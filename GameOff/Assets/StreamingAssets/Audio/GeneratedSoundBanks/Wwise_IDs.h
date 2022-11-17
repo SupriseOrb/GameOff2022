@@ -19,16 +19,57 @@ namespace AK
         static const AkUniqueID CLICHE_MOVEMENTCANCEL = 1178417457U;
         static const AkUniqueID INK_DEPLETED = 2721373727U;
         static const AkUniqueID INK_FULL = 967542901U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PAY_UISLIDER = 2719045197U;
+        static const AkUniqueID PLAY_STAMPCOW = 679587648U;
+        static const AkUniqueID PLAY_STAMPGENERAL = 2266250969U;
+        static const AkUniqueID PLAY_STAMPINK = 1200679653U;
+        static const AkUniqueID PLAY_STAMPPOTION = 2448762110U;
+        static const AkUniqueID PLAY_STAMPROUGHGROUND = 2666091979U;
+        static const AkUniqueID PLAY_STAMPSPIKEYBUSH = 3893200314U;
+        static const AkUniqueID PLAY_STAMPTIMEPIECE = 3000230226U;
+        static const AkUniqueID PLAY_TEXT = 3036508647U;
         static const AkUniqueID PLAY_UIBACK = 1224305705U;
         static const AkUniqueID PLAY_UIHOVER = 2502251926U;
         static const AkUniqueID PLAY_UIPAUSE = 1830907318U;
         static const AkUniqueID PLAY_UIRESUME = 235035089U;
         static const AkUniqueID PLAY_UISELECT = 3703192648U;
-        static const AkUniqueID STAMP = 1231477946U;
+        static const AkUniqueID PLAY_WAVESTART = 377318551U;
+        static const AkUniqueID STOP_TEXT = 2235615413U;
         static const AkUniqueID TESTSOUND = 38624190U;
         static const AkUniqueID TIMER = 3920142940U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace BATTLE_INTENSITY
+        {
+            static const AkUniqueID GROUP = 851019197U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BATTLE_INTENSITY_1 = 2723048505U;
+                static const AkUniqueID BATTLE_INTENSITY_2 = 2723048506U;
+                static const AkUniqueID BATTLE_INTENSITY_3 = 2723048507U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace BATTLE_INTENSITY
+
+        namespace MUSIC_STATE
+        {
+            static const AkUniqueID GROUP = 3826569560U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BATTLE = 2937832959U;
+                static const AkUniqueID LOSE = 221232726U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID TITLE = 3705726509U;
+                static const AkUniqueID WIN = 979765101U;
+            } // namespace STATE
+        } // namespace MUSIC_STATE
+
+    } // namespace STATES
 
     namespace GAME_PARAMETERS
     {

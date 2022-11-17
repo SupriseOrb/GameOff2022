@@ -5,17 +5,6 @@
 			<ChildrenList>
 				<Folder Name="SFX Events" ID="{40BE9AE7-443C-4A76-85D7-1E2925420A6B}" ShortID="340388825">
 					<ChildrenList>
-						<Event Name="Stamp" ID="{B0323596-6BE7-4874-838D-899071D4DC57}">
-							<ChildrenList>
-								<Action Name="" ID="{C297B51C-59DB-4D8F-8DE3-8EA5B8ADBFA0}" ShortID="747083246">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Stamp" ID="{E7E19623-88D1-4751-9AD7-DE799B5AECBE}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="TestSound" ID="{BCF66CC1-CE17-4F30-BA85-C8D45496F774}">
 							<ChildrenList>
 								<Action Name="" ID="{E5A3C6DC-8246-4601-836B-FA86E1D0F3CE}" ShortID="566431976">
@@ -175,6 +164,121 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Slider Tick" ID="{A2DD87DC-0D83-411B-A9C2-1C5F91F07B46}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Stamps" ID="{C2399809-7D80-4BA8-9CA3-06EFF9BDCD73}" ShortID="417418503">
+							<ChildrenList>
+								<Event Name="Play_StampGeneral" ID="{B0323596-6BE7-4874-838D-899071D4DC57}">
+									<ChildrenList>
+										<Action Name="" ID="{FA891806-441F-4BE7-BD58-093E3AAF7CF6}" ShortID="236009906">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Stamp" ID="{E7E19623-88D1-4751-9AD7-DE799B5AECBE}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_StampCow" ID="{6BC84963-8496-4F00-AAA9-406904D14F76}">
+									<ChildrenList>
+										<Action Name="" ID="{687D6150-8936-4886-90AE-98F6E198C347}" ShortID="565328661">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Cow Moo Item Stamp_v1" ID="{0FB092F5-7F60-4675-8CA8-41A3FBDECDA9}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_StampInk" ID="{A0618F6C-5B35-494D-9090-109F040509C4}">
+									<ChildrenList>
+										<Action Name="" ID="{A2A471DD-2252-4596-B0BE-89A5A564D1FC}" ShortID="51055927">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ink Blot Stamp_v1" ID="{D4D7E21A-6014-48CD-A98E-F79D79DEFD44}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_StampRoughGround" ID="{A09B1EC9-5F4E-4E26-9D70-61BBA686A7C8}">
+									<ChildrenList>
+										<Action Name="" ID="{B6247E72-1868-4CBE-9AF9-2F7455B49379}" ShortID="842899572">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Rough Ground Item Stamp_v1" ID="{48611A85-2F90-44D8-A6E9-5AC9A5CC450A}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_StampPotion" ID="{62ECA254-2341-4F45-B568-762B7FC77225}"/>
+								<Event Name="Play_StampTimePiece" ID="{720179D2-9E6C-4F8F-8B2F-16185246BA41}">
+									<ChildrenList>
+										<Action Name="" ID="{DD1EF8FA-548A-47C3-B99A-A55FF4043E0E}" ShortID="322049362">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Time Piece Stamp_v1" ID="{21C414DD-583D-478C-BAC5-CE902F47F676}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_StampSpikeyBush" ID="{D3BEF240-C5B5-4B03-B1EC-231319B1DBDC}">
+									<ChildrenList>
+										<Action Name="" ID="{80EB3BB1-CEC5-4C50-BEB9-8B1D93409B5D}" ShortID="964470294">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Spikey Bush Stamp_v1" ID="{C2633BA9-7C9C-4460-BCD3-BDC1EEE575E1}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Text" ID="{10CA57DD-9F6C-4C1C-95DE-1B7F679B0AB9}" ShortID="685348060">
+							<ChildrenList>
+								<Event Name="Play_Text" ID="{71AD5968-9025-470D-89C4-ACADEA1552B5}">
+									<ChildrenList>
+										<Action Name="" ID="{9E816F1C-88A9-4F25-AD47-D04F4BAFDDA5}" ShortID="342342199">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Text animation" ID="{89B0AC16-149E-45F1-842F-1CE2E36E1216}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_Text" ID="{CA166924-74F7-4674-8F30-AA71C2D6B932}">
+									<ChildrenList>
+										<Action Name="" ID="{159A8DAA-83B0-4B52-B52A-76C0DB619F35}" ShortID="1064946251">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Text animation" ID="{89B0AC16-149E-45F1-842F-1CE2E36E1216}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Combat" ID="{FC5C785A-6374-42FD-9748-DF766BEEA0D1}" ShortID="1044341072">
+							<ChildrenList>
+								<Event Name="Play_WaveStart" ID="{EA2C7185-B14E-44A9-8CA5-9E9FC73E20FF}">
+									<ChildrenList>
+										<Action Name="" ID="{8E64DAE4-1B25-486D-95C8-9B2C2BD32932}" ShortID="783748440">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Wave Start_v1" ID="{818E440E-1A93-46C8-98DC-065623F0D917}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
-		<SourceFilesRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Mac/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ProjectRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Mac/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="703838624">
+		<SoundBank Id="393239870" Language="SFX" Hash="1467927605">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -76,11 +76,103 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Default Work Unit\Music Events\Music" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{05029B2D-7F58-46C1-8207-3AF1677D41F8}">
+							<Children>
+								<SwitchContainer SwitchValue="{05029B2D-7F58-46C1-8207-3AF1677D41F8}">
+									<Children>
+										<SwitchContainer SwitchValue="{D85FCDF0-5F32-4588-8933-BC446D0CFB9A}">
+											<Media>
+												<File Id="458433170"/>
+											</Media>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{05029B2D-7F58-46C1-8207-3AF1677D41F8}">
+									<Children>
+										<SwitchContainer SwitchValue="{3407E5A0-7DE9-4531-9956-F89833DC81A8}">
+											<Media>
+												<File Id="71543844"/>
+											</Media>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{BFA391C7-C9AF-4231-A182-E8BF4AC6FDF7}">
+							<Media>
+								<File Id="604336901"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="2719045197" Name="Pay_UISlider" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Pay_UISlider" DurationType="OneShot" DurationMin="0.138073" DurationMax="0.138073">
 					<IncludedMemoryFiles>
 						<File Id="657855576" Language="SFX">
 							<ShortName>MenuUI_Slider.wav</ShortName>
 							<Path>SFX/MenuUI_Slider_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="679587648" Name="Play_StampCow" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampCow" DurationType="OneShot" DurationMin="1.208186" DurationMax="1.208186">
+					<IncludedMemoryFiles>
+						<File Id="957178096" Language="SFX">
+							<ShortName>Cow Moo Item Stamp_v1.wav</ShortName>
+							<Path>SFX/Cow Moo Item Stamp_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2266250969" Name="Play_StampGeneral" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampGeneral" DurationType="OneShot" DurationMin="0.463084" DurationMax="0.463084">
+					<IncludedMemoryFiles>
+						<File Id="357140707" Language="SFX">
+							<ShortName>Stamp_v1.wav</ShortName>
+							<Path>SFX/Stamp_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1200679653" Name="Play_StampInk" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampInk" DurationType="OneShot" DurationMin="0.484989" DurationMax="0.484989">
+					<IncludedMemoryFiles>
+						<File Id="597791133" Language="SFX">
+							<ShortName>Ink Blot Stamp_v1.wav</ShortName>
+							<Path>SFX/Ink Blot Stamp_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2448762110" Name="Play_StampPotion" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampPotion" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2666091979" Name="Play_StampRoughGround" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampRoughGround" DurationType="OneShot" DurationMin="0.956168" DurationMax="0.956168">
+					<IncludedMemoryFiles>
+						<File Id="95509999" Language="SFX">
+							<ShortName>Rough Ground Item Stamp_v1.wav</ShortName>
+							<Path>SFX/Rough Ground Item Stamp_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3893200314" Name="Play_StampSpikeyBush" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampSpikeyBush" DurationType="OneShot" DurationMin="0.590884" DurationMax="0.590884">
+					<IncludedMemoryFiles>
+						<File Id="366129106" Language="SFX">
+							<ShortName>Spikey Bush Stamp_v1.wav</ShortName>
+							<Path>SFX/Spikey Bush Stamp_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3000230226" Name="Play_StampTimePiece" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampTimePiece" DurationType="OneShot" DurationMin="1.208186" DurationMax="1.208186">
+					<IncludedMemoryFiles>
+						<File Id="45222698" Language="SFX">
+							<ShortName>Time Piece Stamp_v1.wav</ShortName>
+							<Path>SFX/Time Piece Stamp_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3036508647" Name="Play_Text" ObjectPath="\Events\Default Work Unit\SFX Events\Text\Play_Text" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="622411637" Language="SFX">
+							<ShortName>Text Sound 2_v1.wav</ShortName>
+							<Path>SFX/Text Sound 2_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="897393330" Language="SFX">
+							<ShortName>Text Sound 1_v1.wav</ShortName>
+							<Path>SFX/Text Sound 1_v1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -144,14 +236,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1231477946" Name="Stamp" ObjectPath="\Events\Default Work Unit\SFX Events\Stamp" DurationType="OneShot" DurationMin="0.463084" DurationMax="0.463084">
+				<Event Id="377318551" Name="Play_WaveStart" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_WaveStart" DurationType="OneShot" DurationMin="5.908095" DurationMax="5.908095">
 					<IncludedMemoryFiles>
-						<File Id="357140707" Language="SFX">
-							<ShortName>Stamp_v1.wav</ShortName>
-							<Path>SFX/Stamp_v1_10C4C929.wem</Path>
+						<File Id="843979227" Language="SFX">
+							<ShortName>Wave Start_v1.wav</ShortName>
+							<Path>SFX/Wave Start_v1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2235615413" Name="Stop_Text" ObjectPath="\Events\Default Work Unit\SFX Events\Text\Stop_Text" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="38624190" Name="TestSound" ObjectPath="\Events\Default Work Unit\SFX Events\TestSound" DurationType="OneShot" DurationMin="3.977982" DurationMax="3.977982">
 					<IncludedMemoryFiles>
 						<File Id="632420613" Language="SFX">
@@ -169,6 +262,25 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<StateGroups>
+				<StateGroup Id="851019197" Name="Battle_Intensity" ObjectPath="\States\Default Work Unit\Battle_Intensity" GUID="{4D858E8B-6BDA-4098-AB19-1910F0EC9F18}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Battle_Intensity\None" GUID="{5DAF9D39-F78C-4534-88E1-7C4E679CD931}"/>
+						<State Id="2723048505" Name="Battle_Intensity_1" ObjectPath="\States\Default Work Unit\Battle_Intensity\Battle_Intensity_1" GUID="{D85FCDF0-5F32-4588-8933-BC446D0CFB9A}"/>
+						<State Id="2723048506" Name="Battle_Intensity_2" ObjectPath="\States\Default Work Unit\Battle_Intensity\Battle_Intensity_2" GUID="{3407E5A0-7DE9-4531-9956-F89833DC81A8}"/>
+						<State Id="2723048507" Name="Battle_Intensity_3" ObjectPath="\States\Default Work Unit\Battle_Intensity\Battle_Intensity_3" GUID="{F5404297-96CB-4787-B9FF-BB405B4A8E8B}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3826569560" Name="Music_State" ObjectPath="\States\Default Work Unit\Music_State" GUID="{072CD6D4-733A-44C9-835D-E2ED35888428}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Music_State\None" GUID="{4D3AD3D2-3F6E-45DE-BDCD-44AA57EF0333}"/>
+						<State Id="3705726509" Name="Title" ObjectPath="\States\Default Work Unit\Music_State\Title" GUID="{BFA391C7-C9AF-4231-A182-E8BF4AC6FDF7}"/>
+						<State Id="2937832959" Name="Battle" ObjectPath="\States\Default Work Unit\Music_State\Battle" GUID="{05029B2D-7F58-46C1-8207-3AF1677D41F8}"/>
+						<State Id="979765101" Name="Win" ObjectPath="\States\Default Work Unit\Music_State\Win" GUID="{46AEB5AF-D516-4559-A351-52BF4BDA48D9}"/>
+						<State Id="221232726" Name="Lose" ObjectPath="\States\Default Work Unit\Music_State\Lose" GUID="{4F24EAA2-1AAD-4FA2-9B55-BFEBAEE0287B}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="570333479">
 			<ObjectPath>Init</ObjectPath>
@@ -180,7 +292,7 @@
 				<GameParameter Id="2731583604" Name="AllVolume" ObjectPath="\Game Parameters\Default Work Unit\AllVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="2750057380">
+		<SoundBank Id="3991942870" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
