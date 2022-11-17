@@ -15,8 +15,7 @@ public class PauseMenu : Menu
         _currentEventSystem = EventSystem.current;
         _isPaused.Value = false;
 
-        // Rob TODO: Play Gameplay Music
-        // Note: There may be a bug where music duplicates
+        AkSoundEngine.SetState("Battle_Intensity", "Battle_Intensity_1");
     }
     public void PauseGame()
     {

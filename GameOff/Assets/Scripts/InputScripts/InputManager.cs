@@ -68,20 +68,27 @@ public class InputManager : MonoBehaviour
         _mousePosAction.performed -= MousePosition;
     }
 
+    public void OnClickCard(CardScriptLoader card)
+    {
+        if (_selectedCard != null)
+        {
+            ResetCardSelection();
+        }
+
+        _selectedCard = card;
+    }
+
     //TODO: Need to check before clicking if _selectedCard is not null. If so, deselect the other card and update 
     //..._selectedCard to current card
     public void OnLeftClick(InputAction.CallbackContext context)
     {
         _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
-        if (_raycastHit.transform.gameObject.TryGetComponent(out CardScriptLoader card))
+        if (_raycastHit.collider == null)
         {
-            Debug.Log("Clicked Card!");
-            //Do something to make it clear to the player that the card has been selected
-            //Make it bigger, push it up, highlight it somehow, etc etc
-            _selectedCard = card;
-            _selectedCard.transform.localScale = (Vector3.one * 2); //Selected Indicator (for now)
+            return;
         }
-        else if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
+
+        if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
         {
             if (_selectedCard != null && _selectedCard.GetCardType() == CardScriptableObject.Type.UNIT)
             {
@@ -115,35 +122,8 @@ public class InputManager : MonoBehaviour
             }
                 
         }
-        else
-        {
-            ResetCardSelection();
-        }
 
     }
-        /*
-        _raycast = Camera.main.ScreenPointToRay(_mousePositionWorld);
-        if(Physics.Raycast(_raycast, out _raycastHit))
-            {
-                if(_heldObject != null)
-                {
-                    if(_raycastHit.transform.gameObject.TryGetComponent(out BoardTile selectedBoardTile))
-                    {
-                        //attempt to place stamp in tile
-                        if(!selectedBoardTile.SetHeldStamp(_heldObject))
-                        {
-                            //Do error stuff
-                        }
-                    }
-                    else if(_raycastHit.transform.gameObject.TryGetComponent(out UnitTile selectedUnitTile))
-                    {
-                        if(!selectedUnitTile.SetHeldStamp(_heldObject))
-                        {
-                            //Do error stuff
-                        }
-                    }
-                }
-            }*/
 
     public void OnRightClick(InputAction.CallbackContext context)
     {
@@ -152,7 +132,7 @@ public class InputManager : MonoBehaviour
 
     public void OnLeftClickRelease(InputAction.CallbackContext context)
     {
-        //move isdraggingcard to bottom of function because we want to use this as a check
+        /*//move isdraggingcard to bottom of function because we want to use this as a check
         _isDraggingCard = false;
         _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
         //TODO: Apparently error here if you left-click while "dragging" a tile
@@ -199,12 +179,13 @@ public class InputManager : MonoBehaviour
         else
         {
             ResetCardSelection();
-        }
+        }*/
 
     }
 
     public void OnLeftClickHold(InputAction.CallbackContext context)
     {
+        /*
         _isDraggingCard = true;
         //Note: OnLeftClick is also being called if OnLeftClickHold is
         Sprite _cardSprite = _selectedCard.GetCardSO.StampObjectRef.StampSprite;
@@ -212,6 +193,7 @@ public class InputManager : MonoBehaviour
         _spriteDragScript.gameObject.SetActive(true);
         _spriteDragScript.SpriteReference = _cardSprite;
         _spriteDragScript.IsDragging = true;
+        */
     }
 
     //TODO: Use MousePosition to drag the card instead of having a requirement of holding left-click down on a card
@@ -234,8 +216,6 @@ public class InputManager : MonoBehaviour
         _spriteDragScript.gameObject.SetActive(false);
         if (_selectedCard != null)
         {
-            //Undo effects to _selectedCard
-            _selectedCard.transform.localScale = Vector3.one;
             _selectedCard = null;
         }  
     }

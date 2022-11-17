@@ -18,33 +18,51 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private bool _isFirstDraw = false; //Is this the first draw of the wave?
     [SerializeField] private Slider _timerSlider;
     [SerializeField] private TextMeshProUGUI _timerText;
+    [SerializeField] private float _firstDrawDelay;
+    [Header("Animation")]
+    [SerializeField] private Animator _cardFrameAnimator;
+    [SerializeField] private string _cardFrameOpenString = "CardFrame_Open";
+    [SerializeField] private string _cardFrameCloseString = "CardFrame_Close";
+    [SerializeField] private string _cardFrameIdleOpenString = "CardFrame_IdleOpen";
+    [SerializeField] private string _cardFrameIdleCloseString = "CardFrame_IdleClose";
 
     private static System.Random r = new System.Random();
 
     // Start is called before the first frame update
     void Start()
     {
-        //Might want to initialize the decks here, like adding cards and setting up the hand for the tutorial and such
-        DrawCards();
+        // TODO: Might want to initialize the decks here, like adding cards and setting up the hand for the tutorial and such
+        // Note: Need slight delay in order to get the correct _cardHolders transforms 
+        StartCoroutine(DelayDrawCards());
     }
 
+    private IEnumerator DelayDrawCards()
+    {
+        yield return new WaitForSeconds(_firstDrawDelay);
+        DrawCards();
+    }
+    
     private void FixedUpdate() 
     {
-        if (_currentReshuffleTimer <= 0)
+        if (!_isFirstDraw)
         {
-            CycleHand();
-            DrawCards();
-            _currentReshuffleTimer = _baseReshuffleTimer;
-            AkSoundEngine.PostEvent("Cliche_HandCycle", gameObject);
+            if (_currentReshuffleTimer <= 0)
+            {
+                CycleHand();
+                DrawCards();
+                _currentReshuffleTimer = _baseReshuffleTimer;
+                AkSoundEngine.PostEvent("Cliche_HandCycle", gameObject);
+            }
+            _currentReshuffleTimer -= Time.deltaTime;    
+            _timerText.text = ((int)_currentReshuffleTimer).ToString() + "s";
+            _timerSlider.value = _currentReshuffleTimer/_baseReshuffleTimer;
+            /* Not sure how to properly trigger the timer sound when the timer reads 3 seconds - Collin
+            if (_currentReshuffletimer == 3f);
+            {
+                AkSoundEngine.PostEvent("Timer", gameObject);
+            }*/
         }
-        _currentReshuffleTimer -= Time.deltaTime;    
-        _timerText.text = ((int)_currentReshuffleTimer).ToString() + "s";
-        _timerSlider.value = _currentReshuffleTimer/_baseReshuffleTimer;
-        /* Not sure how to properly trigger the timer sound when the timer reads 3 seconds - Collin
-        if (_currentReshuffletimer == 3f);
-        {
-            AkSoundEngine.PostEvent("Timer", gameObject);
-        }*/
+        
     }
 
     private void CycleHand()
@@ -121,6 +139,7 @@ public class DeckManager : MonoBehaviour
                 _cardHand[i] = _activeDeck[randomNum];
                 _activeDeck.RemoveAt(randomNum);
                 _cardHand[i].transform.position = _cardHolders[i].position;
+
             }
         }
         //Choose [4] random cards from _activeDeck, add them to _cardHand (and _cardHolders), then activate and move them to the correct pos
@@ -164,5 +183,19 @@ public class DeckManager : MonoBehaviour
     public void IsFirstDraw()
     {
         _isFirstDraw = true;
+    }
+
+    public void ToggleCardFrameVisibility()
+    {
+        if (_cardFrameAnimator.GetCurrentAnimatorStateInfo(0).IsName(_cardFrameCloseString) ||
+            _cardFrameAnimator.GetCurrentAnimatorStateInfo(0).IsName(_cardFrameIdleCloseString))
+        {
+            _cardFrameAnimator.Play(_cardFrameOpenString);
+        }
+        else if (_cardFrameAnimator.GetCurrentAnimatorStateInfo(0).IsName(_cardFrameOpenString) ||
+                _cardFrameAnimator.GetCurrentAnimatorStateInfo(0).IsName(_cardFrameIdleOpenString))
+        {
+            _cardFrameAnimator.Play(_cardFrameCloseString);
+        }
     }
 }
