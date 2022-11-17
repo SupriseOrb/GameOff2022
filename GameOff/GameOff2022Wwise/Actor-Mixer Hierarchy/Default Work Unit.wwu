@@ -31,6 +31,11 @@
 						<RandomSequenceContainer Name="Cliche Hover" ID="{0F3B90D5-4F33-4E11-8E83-F9E05FBC41F0}" ShortID="310913018">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -137,6 +142,13 @@
 							<ObjectLists/>
 						</RandomSequenceContainer>
 						<Sound Name="Cliche Hand Cycle" ID="{41FB3350-2BF5-46F7-BAB3-5F1521EA5049}" ShortID="599368527">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -360,6 +372,11 @@
 						<RandomSequenceContainer Name="Hover" ID="{9351841F-3CA0-4595-82C7-37B67596A5B8}" ShortID="708675230">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -512,6 +529,13 @@
 							<ObjectLists/>
 						</RandomSequenceContainer>
 						<Sound Name="Slider Tick" ID="{A2DD87DC-0D83-411B-A9C2-1C5F91F07B46}" ShortID="135529726">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -567,10 +591,17 @@
 										<MediaID ID="897393330"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Text Sound 1_v2" ID="{6DD166EF-65B8-4B28-9805-C4D2F541FEFD}">
+									<Language>SFX</Language>
+									<AudioFile>Text Sound 1_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="19163811"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Text Sound 1_v1" ID="{5ACC5722-8C2E-4038-8A61-BB54DFEBD62C}" Platform="Linked"/>
+								<ActiveSource Name="Text Sound 1_v2" ID="{6DD166EF-65B8-4B28-9805-C4D2F541FEFD}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Text Sound 2_v1" ID="{F44003A0-8D38-4768-9AEA-5A7E20D0EF95}" ShortID="1016191918">
@@ -590,10 +621,17 @@
 										<MediaID ID="622411637"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Text Sound 2_v2" ID="{1A33BE3C-5210-48BC-9C37-F535339FC6E0}">
+									<Language>SFX</Language>
+									<AudioFile>Text Sound 2_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="86519014"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Text Sound 2_v1" ID="{C53C86B5-F600-43DF-907C-F3E80366B090}" Platform="Linked"/>
+								<ActiveSource Name="Text Sound 2_v2" ID="{1A33BE3C-5210-48BC-9C37-F535339FC6E0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -744,6 +782,13 @@
 				<Folder Name="Ink UI" ID="{E5C7E1CE-4412-43E4-BB5C-12EF4483038B}" ShortID="917611174">
 					<ChildrenList>
 						<Sound Name="Ink Depleted" ID="{683C17F2-AD66-41E4-A96F-B385995FAE52}" ShortID="521201199">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>

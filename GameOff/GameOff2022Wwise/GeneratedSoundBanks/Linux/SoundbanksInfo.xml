@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2111138294">
+		<SoundBank Id="393239870" Language="SFX" Hash="1813680972">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -166,13 +166,13 @@
 				</Event>
 				<Event Id="3036508647" Name="Play_Text" ObjectPath="\Events\Default Work Unit\SFX Events\Text\Play_Text" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="622411637" Language="SFX">
-							<ShortName>Text Sound 2_v1.wav</ShortName>
-							<Path>SFX/Text Sound 2_v1_10C4C929.wem</Path>
+						<File Id="19163811" Language="SFX">
+							<ShortName>Text Sound 1_v2.wav</ShortName>
+							<Path>SFX/Text Sound 1_v2_10C4C929.wem</Path>
 						</File>
-						<File Id="897393330" Language="SFX">
-							<ShortName>Text Sound 1_v1.wav</ShortName>
-							<Path>SFX/Text Sound 1_v1_10C4C929.wem</Path>
+						<File Id="86519014" Language="SFX">
+							<ShortName>Text Sound 2_v2.wav</ShortName>
+							<Path>SFX/Text Sound 2_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -282,7 +282,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3630591829">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1367895123">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>

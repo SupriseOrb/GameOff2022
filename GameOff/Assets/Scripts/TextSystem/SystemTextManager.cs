@@ -132,7 +132,7 @@ public class SystemTextManager : MonoBehaviour
     private IEnumerator TypeSentence(string sentence)
     {
         _textHolder.text = "";
-        // Collin TODO: Play type writer sfx
+        AkSoundEngine.PostEvent("Play_Text", gameObject);
 
         for(int charIndex = 1; charIndex < sentence.Length; charIndex++)
         {
@@ -143,8 +143,8 @@ public class SystemTextManager : MonoBehaviour
                                 + "</color>";
             yield return null;            
         }
-        
-        // Collin TODO: Stop type writer sfx
+
+        AkSoundEngine.PostEvent("Stop_Text", gameObject);
         _canContinueIndicator.SetActive(true);
         _playerCanContinue = true;
     }
