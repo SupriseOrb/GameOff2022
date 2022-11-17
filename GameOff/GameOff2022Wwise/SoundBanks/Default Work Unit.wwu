@@ -12,7 +12,7 @@
 				</SoundBank>
 				<SoundBank Name="SFX" ID="{E9B23D65-894B-4188-BCA2-AF7B46D34DAA}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Music" ID="{70E2C04F-B2F5-41FB-8983-734605B3D4D8}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{70E2C04F-B2F5-41FB-8983-734605B3D4D8}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="0"/>
 						<ObjectRef Name="Pay_UISlider" ID="{966CD5B5-C917-427C-9145-4B1AF451EA57}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIBack" ID="{D77C439C-E288-42F0-8B90-E5370FB9BB59}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIPause" ID="{529A7150-D0F0-4354-A940-4080C67090F2}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
@@ -23,6 +23,7 @@
 						<ObjectRef Name="Play_InkDepleted" ID="{4791D040-BCF5-45D2-81DF-465A1F03E0E0}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Text" ID="{CA166924-74F7-4674-8F30-AA71C2D6B932}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Text" ID="{71AD5968-9025-470D-89C4-ACADEA1552B5}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_EnemyTakeDamage" ID="{EF49E9F7-EAAB-484A-9FA2-E1B675DBE616}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampGeneral" ID="{B0323596-6BE7-4874-838D-899071D4DC57}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIHover" ID="{DA8A0EE9-F0D7-48B2-976A-53FC0D2C6BC3}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIResume" ID="{56C6ACD0-ECD0-490C-AFF4-BF7ED0FBD2F1}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
@@ -33,6 +34,7 @@
 						<ObjectRef Name="Play_ClicheHover" ID="{A5058C67-0EC8-4C1D-97E1-1919B89D0B29}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ClicheMovementCancel" ID="{74AE54F2-D22B-4CF0-BED0-2BE88494B1A4}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampRoughGround" ID="{A09B1EC9-5F4E-4E26-9D70-61BBA686A7C8}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_ItemTakeDamage" ID="{923885FC-4A28-4E2A-9E89-0E24440E67EA}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampCow" ID="{6BC84963-8496-4F00-AAA9-406904D14F76}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="TestSound" ID="{BCF66CC1-CE17-4F30-BA85-C8D45496F774}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampPotion" ID="{62ECA254-2341-4F45-B568-762B7FC77225}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>

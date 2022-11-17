@@ -217,7 +217,17 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Play_StampPotion" ID="{62ECA254-2341-4F45-B568-762B7FC77225}"/>
+								<Event Name="Play_StampPotion" ID="{62ECA254-2341-4F45-B568-762B7FC77225}">
+									<ChildrenList>
+										<Action Name="" ID="{2C0B8BEB-624B-4507-9AEA-60D5C35E44E3}" ShortID="739427791">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Potion Item Stamp_v1" ID="{73EFF819-8C73-4192-A1C7-8A5F43D6E792}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 								<Event Name="Play_StampTimePiece" ID="{720179D2-9E6C-4F8F-8B2F-16185246BA41}">
 									<ChildrenList>
 										<Action Name="" ID="{DD1EF8FA-548A-47C3-B99A-A55FF4043E0E}" ShortID="322049362">
@@ -279,6 +289,28 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Wave Start_v1" ID="{818E440E-1A93-46C8-98DC-065623F0D917}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_EnemyTakeDamage" ID="{EF49E9F7-EAAB-484A-9FA2-E1B675DBE616}">
+									<ChildrenList>
+										<Action Name="" ID="{529C6EF5-5BB4-4CE6-8D1D-46D6320116C6}" ShortID="879656550">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Enemy Take Damage_v1" ID="{3857A841-BC0E-46A6-BC87-45DFAF35A8C9}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_ItemTakeDamage" ID="{923885FC-4A28-4E2A-9E89-0E24440E67EA}">
+									<ChildrenList>
+										<Action Name="" ID="{DD8F8F79-58B2-4607-A1D0-175226066FE2}" ShortID="536325834">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Item take Damage_v1" ID="{F14DA957-1143-408A-897B-41F909CC81F2}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

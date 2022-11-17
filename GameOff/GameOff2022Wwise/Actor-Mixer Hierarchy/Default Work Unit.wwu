@@ -777,6 +777,29 @@
 								<ActiveSource Name="Time Piece Stamp_v1" ID="{C33FF554-ACDA-4170-A7D9-2C2DFBE04DFD}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Potion Item Stamp_v1" ID="{73EFF819-8C73-4192-A1C7-8A5F43D6E792}" ShortID="436828440">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Potion Item Stamp_v1" ID="{EEB903AD-D78E-4314-BE1F-07FDF9E63371}">
+									<Language>SFX</Language>
+									<AudioFile>Potion Item Stamp_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="370467919"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Potion Item Stamp_v1" ID="{EEB903AD-D78E-4314-BE1F-07FDF9E63371}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ink UI" ID="{E5C7E1CE-4412-43E4-BB5C-12EF4483038B}" ShortID="917611174">
@@ -859,6 +882,52 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Wave Start_v1" ID="{35D2A221-6EE9-47BE-A24D-6FD69931397B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Enemy Take Damage_v1" ID="{3857A841-BC0E-46A6-BC87-45DFAF35A8C9}" ShortID="994237843">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Enemy Take Damage_v1" ID="{E197A904-F30C-48A7-BB0B-A6A466EF256D}">
+									<Language>SFX</Language>
+									<AudioFile>Enemy Take Damage_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="273270463"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Enemy Take Damage_v1" ID="{E197A904-F30C-48A7-BB0B-A6A466EF256D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Item take Damage_v1" ID="{F14DA957-1143-408A-897B-41F909CC81F2}" ShortID="725908145">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Item take Damage_v1" ID="{94D86786-8C49-4BF7-8A37-FF32D4CD1720}">
+									<Language>SFX</Language>
+									<AudioFile>Item take Damage_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="593876093"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Item take Damage_v1" ID="{94D86786-8C49-4BF7-8A37-FF32D4CD1720}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
