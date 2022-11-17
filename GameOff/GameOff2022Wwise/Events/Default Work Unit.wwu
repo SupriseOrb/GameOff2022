@@ -327,7 +327,7 @@
 								<Action Name="" ID="{758E9C3B-1837-4E9F-9C3F-EF29386FAB7D}" ShortID="890732843">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Music" ID="{75595D23-8CDB-471C-8B6E-F8DF15B7C82A}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+											<ObjectRef Name="Music_Main" ID="{75595D23-8CDB-471C-8B6E-F8DF15B7C82A}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

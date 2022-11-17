@@ -19,5 +19,6 @@ State	ID	Name	State Group			Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	71543844	Battle_Intensity_2_V1_120bpm3-4_L60M-P0	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Battle_Intensity_2_V1_120bpm3-4_L60M-P0_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Battle\Battle_Intensity_2\Battle_Intensity_2_V1_120bpm3-4_L60M-P0\Battle_Intensity_2_V1_120bpm3-4_L60M-P0		16211264
 	458433170	Battle_Intensity_1_V1_120bpm3-4_L60M-P0	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Battle_Intensity_1_V1_120bpm3-4_L60M-P0_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Battle\Battle_Intensity_1\Battle_Intensity_1_V1_120bpm3-4_L60M-P0\Battle_Intensity_1_V1_120bpm3-4_L60M-P0		16211264
+	534264164	Title-Battle_Transition	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Title-Battle_Transition_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Transitions\Title-Battle_Transition\Title-Battle_Transition		648572
 	604336901	Title_V1_120bpm4-4_L32M-P0	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Title_V1_120bpm4-4_L32M-P0_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Title\Title_V1_120bpm4-4_L32M-P0\Title_V1_120bpm4-4_L32M-P0		11754720
 
