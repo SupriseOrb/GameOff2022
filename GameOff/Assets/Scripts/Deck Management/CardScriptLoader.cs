@@ -40,4 +40,8 @@ public class CardScriptLoader : MonoBehaviour
         set {_hasBeenUsed = value;}
     }
 
+    public void OpenCardInfoPanel()
+    {
+        DeckManager.Instance.OpenCardInfoPanel(_cardSO.CardDescription);
+    }
 }

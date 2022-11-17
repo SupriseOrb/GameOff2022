@@ -31,7 +31,12 @@ public class CardScriptableObject : ScriptableObject
 
     public string CardDescription
     {
-        get {return _cardDescription;}
+        get
+        {
+            // TODO: Figure out how we want to format the card description
+            // For now, just return _cardDescription, but we might want to list stats and upgrades (if applicable)
+            return _cardDescription;
+        }
     }
 
     public int InkCost
