@@ -13,6 +13,7 @@ public class CardScriptableObject : ScriptableObject
     [SerializeField] private bool _hasBeenUsed = false;
     [SerializeField] private StampScriptableObject _stampObjectRef = null;
     [SerializeField] private Type _cardType = Type.NONE;
+    [SerializeField] private Sprite _cardIcon;
     #endregion
 
     public enum Type
@@ -57,6 +58,11 @@ public class CardScriptableObject : ScriptableObject
     public Type CardType
     {
         get {return _cardType;}
+    }
+
+    public Sprite CardIcon
+    {
+        get {return _cardIcon;}
     }
     #endregion
 

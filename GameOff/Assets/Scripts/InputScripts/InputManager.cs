@@ -11,7 +11,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private Vector3 _mousePositionWorld;
     [SerializeField] private CardScriptLoader _selectedCard;
     [SerializeField] private bool _isDraggingCard;
-    [SerializeField] private SpriteDrag _spriteDragScript;
+    [SerializeField] private SpriteDrag _spriteDrag;
     private Ray2D _raycast;
     private RaycastHit2D _raycastHit;
 
@@ -25,7 +25,6 @@ public class InputManager : MonoBehaviour
     [SerializeField] private string _lClickString;
     [SerializeField] private string _lClickHoldString;
     [SerializeField] private string _rClickString;
-    [SerializeField] private string _mClickString;
     [SerializeField] private string _mousePosString;
     #endregion
 
@@ -33,7 +32,6 @@ public class InputManager : MonoBehaviour
     private InputAction _lClickAction;
     private InputAction _lClickHoldAction;
     private InputAction _rClickAction;
-    private InputAction _mClickAction;
     private InputAction _mousePosAction;
     #endregion
 
@@ -42,32 +40,42 @@ public class InputManager : MonoBehaviour
         _lClickAction = _playerInput.actions[_lClickString];
         _lClickHoldAction = _playerInput.actions[_lClickHoldString];
         _rClickAction = _playerInput.actions[_rClickString];
-        _mClickAction = _playerInput.actions[_mClickString];
         _mousePosAction = _playerInput.actions[_mousePosString];
     }
 
     private void OnEnable() 
     {
-        _lClickAction.performed += OnLeftClick;
+        //_lClickAction.performed += OnLeftClick;
         _lClickAction.canceled += OnLeftClickRelease;
         _lClickHoldAction.performed += OnLeftClickHold;
 
         _rClickAction.performed += OnRightClick;
-        _mClickAction.performed += OnMiddleClick;
         _mousePosAction.performed += MousePosition;
     }
 
     private void OnDisable() 
     {
-        _lClickAction.performed -= OnLeftClick;
+        //_lClickAction.performed -= OnLeftClick;
         _lClickAction.canceled -= OnLeftClickRelease;
         _lClickHoldAction.performed -= OnLeftClickHold;
 
         _rClickAction.performed -= OnRightClick;
-        _mClickAction.performed -= OnMiddleClick;
         _mousePosAction.performed -= MousePosition;
     }
 
+    public void OnRightClick(InputAction.CallbackContext context)
+    { 
+        DeckManager.Instance.DeselectCard();
+        //ResetCardSelection();
+    }
+
+    public void MousePosition(InputAction.CallbackContext context)
+    {
+        //Need to test to see if having this be checked only on "performed" is actually getting the value consistently
+        _mousePositionScreen = context.ReadValue<Vector2>();
+        _mousePositionWorld = Camera.main.ScreenToWorldPoint(_mousePositionScreen);
+        _spriteDrag.Move(_mousePositionWorld);
+    }
 
     /*
     TODO:
@@ -80,19 +88,9 @@ public class InputManager : MonoBehaviour
     - HahahahahahaHAhahahahaHAHAHahHAhah no
     */
 
-    public void OnClickCard(CardScriptLoader card)
-    {
-        if (_selectedCard != null)
-        {
-            ResetCardSelection();
-        }
-
-        _selectedCard = card;
-    }
-
     //TODO: Need to check before clicking if _selectedCard is not null. If so, deselect the other card and update 
     //..._selectedCard to current card
-    public void OnLeftClick(InputAction.CallbackContext context)
+    /*public void OnLeftClick(InputAction.CallbackContext context)
     {
         _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
         if (_raycastHit.collider == null)
@@ -135,13 +133,9 @@ public class InputManager : MonoBehaviour
                 
         }
 
-    }
+    }*/
 
-    public void OnRightClick(InputAction.CallbackContext context)
-    { 
-        DeckManager.Instance.DeselectCard();
-        //ResetCardSelection();
-    }
+    
 
     public void OnLeftClickRelease(InputAction.CallbackContext context)
     {
@@ -209,71 +203,4 @@ public class InputManager : MonoBehaviour
         */
     }
 
-    //TODO: Use MousePosition to drag the card instead of having a requirement of holding left-click down on a card
-    //Not sure how to do this though? Once you click on a card, if you move your mouse, how would you know to drag vs just click on a tile?
-    public void MousePosition(InputAction.CallbackContext context)
-    {
-        //Need to test to see if having this be checked only on "performed" is actually getting the value consistently
-        _mousePositionScreen = context.ReadValue<Vector2>();
-        _mousePositionWorld = Camera.main.ScreenToWorldPoint(_mousePositionScreen);
-    }
-
-    public void OnMiddleClick(InputAction.CallbackContext context)
-    {
-
-    }
-
-    public void ResetCardSelection()
-    {
-        _spriteDragScript.IsDragging = false;
-        _spriteDragScript.gameObject.SetActive(false);
-        if (_selectedCard != null)
-        {
-            _selectedCard = null;
-        }  
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        /*
-        //Probably replace with new unity input system if needed
-        //Primary button
-        if (Input.GetMouseButtonDown(0))
-        {
-            _raycast = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if(Physics.Raycast(_raycast, out _raycastHit))
-            {
-                if(_heldObject != null)
-                {
-                    if(_raycastHit.transform.gameObject.TryGetComponent(out BoardTile selectedBoardTile))
-                    {
-                        //attempt to place stamp in tile
-                        if(!selectedBoardTile.SetHeldStamp(_heldObject))
-                        {
-                            //Do error stuff
-                        }
-                    }
-                    else if(_raycastHit.transform.gameObject.TryGetComponent(out UnitTile selectedUnitTile))
-                    {
-                        if(!selectedUnitTile.SetHeldStamp(_heldObject))
-                        {
-                            //Do error stuff
-                        }
-                    }
-                }
-            }
-        }
-        //Secondary button
-        if (Input.GetMouseButtonDown(1))
-        {
-
-        }
-        //Middle button
-        if (Input.GetMouseButtonDown(2))
-        {
-
-        }
-        */
-    }
 }

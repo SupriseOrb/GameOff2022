@@ -16,6 +16,7 @@ public class DeckManager : MonoBehaviour
     
     [Header("Select Card")]
     [SerializeField] private CardScriptLoader _selectedCard;
+    [SerializeField] private SpriteDrag _spriteDrag;
 
     [Header("Card Info Panel")]
     [SerializeField] private GameObject _cardInfoPanel;
@@ -240,6 +241,7 @@ public class DeckManager : MonoBehaviour
     {
         _selectedCard.ToggleBorder(false);
         _selectedCard = null;
+        _spriteDrag.ToggleIsDragging(false);
     }
 
     private void SelectCardHelper(CardScriptLoader cardToSelect)
@@ -247,5 +249,6 @@ public class DeckManager : MonoBehaviour
         AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
         _selectedCard = cardToSelect;
         _selectedCard.ToggleBorder(true);
+        _spriteDrag.ToggleIsDragging(true, cardToSelect);
     }
 }

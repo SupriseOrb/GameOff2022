@@ -4,35 +4,31 @@ using UnityEngine;
 
 public class SpriteDrag : MonoBehaviour
 {
-    [SerializeField] private Sprite _spriteRef = null;
-    [SerializeField] private SpriteRenderer _spriteRender;
-    [SerializeField] private bool _isDragging = false;
-
-    //Consider making _mousePositionWorld a Vector3 SO instead of having to make this many connections to get the info
-    [SerializeField] private InputManager _input;
-
-    public Sprite SpriteReference
+    [SerializeField] private bool _isDragging;
+    [SerializeField] private SpriteRenderer _iconSR;
+    [SerializeField] private GameObject _gameObject;
+    private void Awake()
     {
-        get {return _spriteRef;}
-        set {_spriteRef = value;}
+        _isDragging = false;
     }
 
-    public bool IsDragging
+    public void ToggleIsDragging(bool isDragging, CardScriptLoader card = null)
     {
-        get {return _isDragging;}
-        set {_isDragging = value;}
-    }
-
-    private void Update()
-    {
-        if (_isDragging == true)
+        _isDragging = isDragging;
+        
+        if (_isDragging && card !=null)
         {
-            _spriteRender.sprite = _spriteRef;
-            gameObject.transform.position = new Vector3(_input.MousePositionWorld.x, _input.MousePositionWorld.y, 0);
+            _iconSR.sprite = card.CardSO.CardIcon;
         }
-        if (_isDragging == false)
+
+        _gameObject.SetActive(_isDragging);
+    }
+
+    public void Move(Vector2 position)
+    {
+        if (_isDragging)
         {
-            _spriteRender.sprite = null;
+            transform.position = position;
         }
     }
 }
