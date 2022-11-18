@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e1cbc222da9e674eb7b47ed89b1bf37, type: 3}
-  m_Name: StandardEnemy
+  m_Name: RegularSoldierEnemy
   m_EditorClassIdentifier: 
   _spawnedUnit: {fileID: 0}
-  _enemyHealth: 0
+  _enemyHealth: 11
   _enemyAbilityCooldown: 0
   _enemyCooldownReduction: 0
-  _enemyDamage: 0
-  _enemyAttackSpeed: 0
-  _enemyMovementSpeed: 0
+  _enemyDamage: 1
+  _enemyAttackSpeed: 1
+  _enemyMovementSpeed: 1

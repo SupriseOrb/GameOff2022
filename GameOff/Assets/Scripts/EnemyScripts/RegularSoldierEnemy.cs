@@ -2,51 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StandardEnemyUnit : MonoBehaviour, IEnemy
+public class RegularSoldierEnemy : MonoBehaviour, IEnemy
 {
-    [SerializeField] private EnemyScriptableObject _enemySO;
+    [SerializeField] private EnemyScriptableObject _soldierSO;
     [SerializeField] private bool _isAttacking = false;
-    [SerializeField] private float _enemyAttackCooldown;
+    [SerializeField] private float _soliderAttackCooldown;
 
 #region UnitStats
     [SerializeField] private GameObject _spawnedUnit;
-    [SerializeField] private float _enemyHealth;
-    [SerializeField] private float _enemyAbilityCooldown;
-    [SerializeField] private float _enemyCooldownReduction;
-    [SerializeField] private float _enemyDamage;
-    [SerializeField] private float _enemyAttackSpeed;
-    [SerializeField] private float _enemyMovementSpeed;
+    [SerializeField] private float _soldierHealth;
+    [SerializeField] private float _soldierAbilityCooldown;
+    [SerializeField] private float _soldierCooldownReduction;
+    [SerializeField] private float _soldierDamage;
+    [SerializeField] private float _soldierAttackSpeed;
+    [SerializeField] private float _soldierMovementSpeed;
 #endregion
 
     [SerializeField] private GameObject _attackTarget;
     [SerializeField] private bool _isStunned = false;
-    [SerializeField] private Rigidbody2D _enemyRigidBody;
+    [SerializeField] private Rigidbody2D _soldierRigidBody;
 
     [SerializeField] private float _currentStunDuration;
 
     private void Start() 
     {
         LoadBaseStats();
-        _enemyRigidBody = GetComponent<Rigidbody2D>();    
-        _enemyRigidBody.velocity = Vector2.left * _enemyMovementSpeed;
+        _soldierRigidBody = GetComponent<Rigidbody2D>();    
+        _soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
     }
 
     public void LoadBaseStats()
     {
-        _spawnedUnit = _enemySO.SpawnedUnit;
-        _enemyHealth = _enemySO.EnemyHealth;
-        _enemyAbilityCooldown = _enemySO.EnemyAbilityCooldown;
-        _enemyCooldownReduction = _enemySO.EnemyCooldownReduction;
-        _enemyDamage = _enemySO.EnemyDamage;
-        _enemyAttackSpeed = _enemySO.EnemyAttackSpeed;
-        _enemyMovementSpeed = _enemySO.EnemyMovementSpeed;
-        _enemyAttackCooldown = 1 / _enemyAttackSpeed;
+        _spawnedUnit = _soldierSO.SpawnedUnit;
+        _soldierHealth = _soldierSO.EnemyHealth;
+        _soldierAbilityCooldown = _soldierSO.EnemyAbilityCooldown;
+        _soldierCooldownReduction = _soldierSO.EnemyCooldownReduction;
+        _soldierDamage = _soldierSO.EnemyDamage;
+        _soldierAttackSpeed = _soldierSO.EnemyAttackSpeed;
+        _soldierMovementSpeed = _soldierSO.EnemyMovementSpeed;
+        _soliderAttackCooldown = 1 / _soldierAttackSpeed;
     }
 
     public void TakeDamage(float damage)
     {
-        _enemyHealth -= damage;
-        if(_enemyHealth <= 0)
+        _soldierHealth -= damage;
+        if(_soldierHealth <= 0)
         {
             //Temp Destroy
             Destroy(gameObject);
@@ -75,14 +75,14 @@ public class StandardEnemyUnit : MonoBehaviour, IEnemy
             if(_attackTarget == null)
             {
                 _isAttacking = false;
-                _enemyRigidBody.velocity = Vector2.left * _enemyMovementSpeed;
+                _soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
             }
-            if(_enemyAttackCooldown <= 0)
+            if(_soliderAttackCooldown <= 0)
             {
                 ActivateStampAttack();
-                _enemyAttackCooldown = 1 / _enemyAttackSpeed;
+                _soliderAttackCooldown = 1 / _soldierAttackSpeed;
             }
-            _enemyAttackCooldown -= Time.deltaTime;
+            _soliderAttackCooldown -= Time.deltaTime;
         }
     }
 
@@ -90,12 +90,12 @@ public class StandardEnemyUnit : MonoBehaviour, IEnemy
     {
         _attackTarget = target;
         _isAttacking = true;
-        _enemyRigidBody.velocity = Vector2.zero;
+        _soldierRigidBody.velocity = Vector2.zero;
     }
 
     public void ActivateStampAttack()
     {
-        _attackTarget.GetComponent<IItemStamp>().TakeDamage(_enemyDamage);
+        _attackTarget.GetComponent<IItemStamp>().TakeDamage(_soldierDamage);
         //Play attack animation
     }
 
@@ -108,7 +108,7 @@ public class StandardEnemyUnit : MonoBehaviour, IEnemy
     {
         _isAttacking = false;
         _isStunned = true;
-        _enemyRigidBody.velocity = Vector3.zero;
+        _soldierRigidBody.velocity = Vector3.zero;
         _currentStunDuration = stunDuration;
     }
 }

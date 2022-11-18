@@ -33,7 +33,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         upgradeTwo = 2,
         upgradeThree = 3
     }
-    public TestUnitUpgradePaths currentUpgradePath = TestUnitUpgradePaths.upgradeBase;
+    public TestUnitUpgradePaths _currentUpgradePath = TestUnitUpgradePaths.upgradeBase;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +45,12 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 
     public void LoadBaseStats()
     {
+        //Test variables:
+        if (_currentUpgradePath == TestUnitUpgradePaths.upgradeThree)
+        {
+            _redcapStunDuration = 3;
+        }
+        
         _redcapName = _redcapSO.StampName;
         _unitType = _redcapSO.UnitType;
         _redcapDamage = _redcapSO.UnitDamage;
@@ -76,7 +82,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 #region Ability Functions
     public void ActivateStampAbility()
     {
-        switch(currentUpgradePath)
+        switch(_currentUpgradePath)
         {
             case TestUnitUpgradePaths.upgradeOne:
                 UpgradeOneAbilityHelper();
@@ -123,7 +129,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         //Consider just declaring the inkballScript
         RedcapInkBallProjectile inkballScript = inkball.GetComponent<RedcapInkBallProjectile>();
         inkballScript.SetDamage(_redcapDamage);
-        switch(currentUpgradePath)
+        switch(_currentUpgradePath)
         {
             /*
             For pierce, maybe have a raycast shoot out when the inkball hits the 1st enemy and check for other enemies
