@@ -42,7 +42,7 @@ public class CardScriptLoader : MonoBehaviour
 
     public void OpenCardInfoPanel()
     {
-        DeckManager.Instance.OpenCardInfoPanel(_cardSO.CardDescription);
+        DeckManager.Instance.OpenCardInfoPanel(_cardSO.CardDescription, transform.localPosition);
     }
 
     public void OnPointerClick()

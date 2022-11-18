@@ -19,6 +19,7 @@ public class DeckManager : MonoBehaviour
     [Header("Card Info Panel")]
     [SerializeField] private GameObject _cardInfoPanel;
     [SerializeField] private TextMeshProUGUI _cardInfoDescription;
+    [SerializeField] private Vector3 _cardInfoPanelOffset;
 
     [Header("Deck Vars")]
     [SerializeField] private float _firstDrawDelay;
@@ -191,9 +192,11 @@ public class DeckManager : MonoBehaviour
             AkSoundEngine.PostEvent("Play_UIBack", this.gameObject);
         }
     }
-    public void OpenCardInfoPanel(string description)
+    public void OpenCardInfoPanel(string description, Vector2 localPosition)
     {
         _cardInfoDescription.text = description;
+        _cardInfoPanel.transform.localPosition = localPosition;
+        _cardInfoPanel.transform.localPosition += _cardInfoPanelOffset;
         _cardInfoPanel.SetActive(true);
     }
     public void CloseCardInfoPanel()
