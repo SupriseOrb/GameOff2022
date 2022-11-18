@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
+    [SerializeField] private BoolVariable _leftClick;
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private GameObject _heldObject = null;
     private Vector3 _mousePositionScreen;
@@ -82,6 +83,7 @@ public class InputManager : MonoBehaviour
     //..._selectedCard to current card
     public void OnLeftClick(InputAction.CallbackContext context)
     {
+        _leftClick.Value = true;
         _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
         if (_raycastHit.collider == null)
         {
@@ -90,9 +92,9 @@ public class InputManager : MonoBehaviour
 
         if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
         {
-            if (_selectedCard != null && _selectedCard.GetCardType() == CardScriptableObject.Type.UNIT)
+            if (_selectedCard != null && _selectedCard.CardType == CardScriptableObject.Type.UNIT)
             {
-                UnitStampScriptableObject unitSO = (UnitStampScriptableObject)_selectedCard.GetCardSO.StampObjectRef;
+                UnitStampScriptableObject unitSO = (UnitStampScriptableObject)_selectedCard.CardSO.StampObjectRef;
                 unitSO.SpawnedUnit.SetActive(true);
                 _selectedCard.HasBeenUsed = true;  
                 unitTile.SetHeldStamp(unitSO.SpawnedUnit);
@@ -103,17 +105,17 @@ public class InputManager : MonoBehaviour
         {
             if (_selectedCard != null)
             {
-                if (_selectedCard.GetCardType() == CardScriptableObject.Type.ITEM)
+                if (_selectedCard.CardType == CardScriptableObject.Type.ITEM)
                 {   
-                    ItemStampScriptableObject itemSO = (ItemStampScriptableObject)_selectedCard.GetCardSO.StampObjectRef;
+                    ItemStampScriptableObject itemSO = (ItemStampScriptableObject)_selectedCard.CardSO.StampObjectRef;
                     itemSO.SpawnedItem.SetActive(true);
                     _selectedCard.HasBeenUsed = true; 
                     boardTile.SetHeldStamp(itemSO.SpawnedItem);
                     ResetCardSelection();
                 }
-                else if (_selectedCard.GetCardType() == CardScriptableObject.Type.LAND)
+                else if (_selectedCard.CardType == CardScriptableObject.Type.LAND)
                 {
-                    LandStampScriptableObject itemSO = (LandStampScriptableObject)_selectedCard.GetCardSO.StampObjectRef;
+                    LandStampScriptableObject itemSO = (LandStampScriptableObject)_selectedCard.CardSO.StampObjectRef;
                     itemSO.SpawnedLand.SetActive(true);
                     _selectedCard.HasBeenUsed = true; 
                     boardTile.SetHeldStamp(itemSO.SpawnedLand);
@@ -127,7 +129,9 @@ public class InputManager : MonoBehaviour
 
     public void OnRightClick(InputAction.CallbackContext context)
     {
-        ResetCardSelection();
+        _leftClick.Value = false;
+        DeckManager.Instance.DeselectCard();
+        //ResetCardSelection();
     }
 
     public void OnLeftClickRelease(InputAction.CallbackContext context)

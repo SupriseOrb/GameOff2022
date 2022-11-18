@@ -12,6 +12,11 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private List<GameObject> _discardDeck; //Holds all discarded cards
     [SerializeField] private Transform[] _cardHolders; //Holds positions for each card in _cardHand
     [SerializeField] private GameObject[] _cardHand; //Holds all cards in hand (filling the card "slots")
+
+    [SerializeField] private CardScriptLoader _selectedCard;
+    [SerializeField] private BoolVariable _isLeftClick;
+
+    [Header("Card Info Panel")]
     [SerializeField] private GameObject _cardInfoPanel;
     [SerializeField] private TextMeshProUGUI _cardInfoDescription;
 
@@ -108,13 +113,13 @@ public class DeckManager : MonoBehaviour
         foreach(GameObject card in _cardHand)
         {
             CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
-            if(loader.GetCardType() == CardScriptableObject.Type.LAND && loader._hasBeenUsed == true)
+            if(loader.CardType == CardScriptableObject.Type.LAND && loader._hasBeenUsed == true)
             {
                 _discardDeck.Add(card);
                 _activeDeck.Remove(card);
             }
             //If card is a unit, put it back in the top 3 cards in the deck list
-            else if(loader.GetCardType() == CardScriptableObject.Type.UNIT)
+            else if(loader.CardType == CardScriptableObject.Type.UNIT)
             {
                 _activeDeck.Insert(0, card);
             }
@@ -194,5 +199,53 @@ public class DeckManager : MonoBehaviour
     public void CloseCardInfoPanel()
     {
         _cardInfoPanel.SetActive(false);
+    }
+
+    /*
+        There are 3 scenarios:
+        [1] No card is selected, selecting for the first time
+        [2] A card is selected, but we're selecting a different card
+        [3] A card is selected, and we're selecting the same card. Do nothing
+    */
+    public void SelectCard(CardScriptLoader cardToSelect)
+    {   
+        if (!_isLeftClick.Value)
+        {
+            return;
+        }   
+
+        //Scenario 1
+        if (_selectedCard == null)
+        {
+            AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
+            _selectedCard = cardToSelect;
+            Debug.Log("Select Card: Scenario 1; Select " + cardToSelect.name);
+        }
+        else
+        {
+            // Scenario 2
+            if (_selectedCard != cardToSelect)
+            {
+                AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
+                ResetCardSelection();
+                _selectedCard = cardToSelect;
+                Debug.Log("Select Card: Scenario 2; Select " + cardToSelect.name);
+            }
+        }
+    }
+
+    public void DeselectCard()
+    {
+        if (_selectedCard != null)
+        {
+            AkSoundEngine.PostEvent("Play_UIBack", this.gameObject);
+            ResetCardSelection();
+            Debug.Log("Deselect card");
+        }
+    }
+
+    private void ResetCardSelection()
+    {
+        _selectedCard = null;
     }
 }

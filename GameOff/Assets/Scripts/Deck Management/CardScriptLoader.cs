@@ -24,12 +24,12 @@ public class CardScriptLoader : MonoBehaviour
         _hasBeenUsed = _cardSO.HasBeenUsed;
     }
 
-    public CardScriptableObject.Type GetCardType()
+    public CardScriptableObject.Type CardType
     {
-        return _cardType;
+        get {return _cardType;}
     }
 
-    public CardScriptableObject GetCardSO
+    public CardScriptableObject CardSO
     {
         get {return _cardSO;}
     }
@@ -43,5 +43,10 @@ public class CardScriptLoader : MonoBehaviour
     public void OpenCardInfoPanel()
     {
         DeckManager.Instance.OpenCardInfoPanel(_cardSO.CardDescription);
+    }
+
+    public void OnPointerClick()
+    {
+        DeckManager.Instance.SelectCard(this);
     }
 }
