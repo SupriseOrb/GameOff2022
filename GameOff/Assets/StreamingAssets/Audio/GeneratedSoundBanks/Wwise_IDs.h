@@ -19,8 +19,10 @@ namespace AK
         static const AkUniqueID PLAY_CLICHEHOVER = 1817342604U;
         static const AkUniqueID PLAY_CLICHEMOVEMENT = 1396175505U;
         static const AkUniqueID PLAY_CLICHEMOVEMENTCANCEL = 3212791047U;
+        static const AkUniqueID PLAY_ENEMYTAKEDAMAGE = 3195081828U;
         static const AkUniqueID PLAY_INKDEPLETED = 289833391U;
         static const AkUniqueID PLAY_INKFULL = 3028081509U;
+        static const AkUniqueID PLAY_ITEMTAKEDAMAGE = 400957009U;
         static const AkUniqueID PLAY_STAMPCOW = 679587648U;
         static const AkUniqueID PLAY_STAMPGENERAL = 2266250969U;
         static const AkUniqueID PLAY_STAMPINK = 1200679653U;

@@ -265,7 +265,7 @@
 				<GameParameter Id="2731583604" Name="AllVolume" ObjectPath="\Game Parameters\Default Work Unit\AllVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="2764892713">
+		<SoundBank Id="3991942870" Language="SFX" Hash="1227123950">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
@@ -275,6 +275,10 @@
 						<File Id="71543844" Language="SFX">
 							<ShortName>Battle_Intensity_2_V1_120bpm3-4_L60M-P0.wav</ShortName>
 							<Path>SFX/Battle_Intensity_2_V1_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
+						</File>
+						<File Id="417475394" Language="SFX">
+							<ShortName>Battle1-2_Transition.wav</ShortName>
+							<Path>SFX/Battle1-2_Transition_D79FB2B7.wem</Path>
 						</File>
 						<File Id="458433170" Language="SFX">
 							<ShortName>Battle_Intensity_1_V1_120bpm3-4_L60M-P0.wav</ShortName>
