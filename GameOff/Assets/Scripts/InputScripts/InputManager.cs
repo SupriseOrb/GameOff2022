@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    [SerializeField] private BoolVariable _leftClick;
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private GameObject _heldObject = null;
     private Vector3 _mousePositionScreen;
@@ -95,7 +94,6 @@ public class InputManager : MonoBehaviour
     //..._selectedCard to current card
     public void OnLeftClick(InputAction.CallbackContext context)
     {
-        _leftClick.Value = true;
         _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
         if (_raycastHit.collider == null)
         {

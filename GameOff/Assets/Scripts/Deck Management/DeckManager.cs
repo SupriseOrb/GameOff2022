@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
 
 public class DeckManager : MonoBehaviour
@@ -12,9 +13,9 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private List<GameObject> _discardDeck; //Holds all discarded cards
     [SerializeField] private Transform[] _cardHolders; //Holds positions for each card in _cardHand
     [SerializeField] private GameObject[] _cardHand; //Holds all cards in hand (filling the card "slots")
-
+    
+    [Header("Select Card")]
     [SerializeField] private CardScriptLoader _selectedCard;
-    [SerializeField] private BoolVariable _isLeftClick;
 
     [Header("Card Info Panel")]
     [SerializeField] private GameObject _cardInfoPanel;
@@ -212,28 +213,16 @@ public class DeckManager : MonoBehaviour
     */
     public void SelectCard(CardScriptLoader cardToSelect)
     {   
-        if (!_isLeftClick.Value)
-        {
-            return;
-        }   
-
         //Scenario 1
         if (_selectedCard == null)
         {
-            AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
-            _selectedCard = cardToSelect;
-            Debug.Log("Select Card: Scenario 1; Select " + cardToSelect.name);
+            SelectCardHelper(cardToSelect);
         }
-        else
+        //Scenario 2
+        else if (_selectedCard != cardToSelect)
         {
-            // Scenario 2
-            if (_selectedCard != cardToSelect)
-            {
-                AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
-                ResetCardSelection();
-                _selectedCard = cardToSelect;
-                Debug.Log("Select Card: Scenario 2; Select " + cardToSelect.name);
-            }
+            ResetCardSelection();
+            SelectCardHelper(cardToSelect);
         }
     }
 
@@ -241,7 +230,7 @@ public class DeckManager : MonoBehaviour
     {
         if (_selectedCard != null)
         {
-            AkSoundEngine.PostEvent("Play_UIBack", this.gameObject);
+            AkSoundEngine.PostEvent("Play_UIBack", gameObject);
             ResetCardSelection();
             Debug.Log("Deselect card");
         }
@@ -249,6 +238,14 @@ public class DeckManager : MonoBehaviour
 
     private void ResetCardSelection()
     {
+        _selectedCard.ToggleBorder(false);
         _selectedCard = null;
+    }
+
+    private void SelectCardHelper(CardScriptLoader cardToSelect)
+    {
+        AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
+        _selectedCard = cardToSelect;
+        _selectedCard.ToggleBorder(true);
     }
 }

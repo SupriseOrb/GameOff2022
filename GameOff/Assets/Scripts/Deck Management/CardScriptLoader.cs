@@ -1,14 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class CardScriptLoader : MonoBehaviour
+public class CardScriptLoader : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     //NOTE: With this design, these cards shouldn't really have functionality beyond "building" themselves aesthetically (LoadCardValues)
     [SerializeField] CardScriptableObject _cardSO = null;
     
     [SerializeField] public CardScriptableObject.Type _cardType {get; protected set;}
     [SerializeField] public bool _hasBeenUsed;
+    [SerializeField] private GameObject _selectedBorder;
+
+    [Header("Animation")]
+    [SerializeField] private Animator _animator;
+    [SerializeField] private string _animationHighlight;
+    [SerializeField] private string _animationIdle;
     private void Start()
     {
        LoadCardValues(); 
@@ -40,13 +47,29 @@ public class CardScriptLoader : MonoBehaviour
         set {_hasBeenUsed = value;}
     }
 
-    public void OpenCardInfoPanel()
+    public void OnPointerClick(PointerEventData eventData)
     {
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            DeckManager.Instance.SelectCard(this);
+        }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        _animator.Play(_animationHighlight);
+        AkSoundEngine.PostEvent("Play_ClicheHover", gameObject);
         DeckManager.Instance.OpenCardInfoPanel(_cardSO.CardDescription, transform.localPosition);
     }
 
-    public void OnPointerClick()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        DeckManager.Instance.SelectCard(this);
+        _animator.Play(_animationIdle);
+        DeckManager.Instance.CloseCardInfoPanel();
+    }
+
+    public void ToggleBorder(bool isOn)
+    {
+        _selectedBorder.SetActive(isOn);
     }
 }
