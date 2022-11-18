@@ -8,4 +8,5 @@ public interface IUnitStamp : IStamp
     void LoadBaseStats();
     string GetUnitName();
     void UpgradeUnit();
+    void SetLane(int lane);
 }

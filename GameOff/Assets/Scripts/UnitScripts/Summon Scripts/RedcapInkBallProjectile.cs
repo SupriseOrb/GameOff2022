@@ -62,6 +62,7 @@ public class RedcapInkBallProjectile : MonoBehaviour
             else if(_projectilePiercingAmt <= 0)
             {
                 enemy.TakeDamage(_projectileDamage);
+                _projectileDamage = 0;
                 Destroy(gameObject);
             }
 

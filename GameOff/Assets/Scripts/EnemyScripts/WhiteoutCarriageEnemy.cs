@@ -23,6 +23,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     [SerializeField] private Rigidbody2D _carriageRigidBody;
 
     [SerializeField] private float _currentStunDuration;
+    [SerializeField] private int _laneNumber;
 
     private void Start() 
     {
@@ -50,10 +51,12 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
         {
             /*
             If we want the Whiteout Carriage to summon Regular Soliders:
+            *IMPORTANT*: We also need to add them to their respective Lane's _laneEnemies
             Instantiate(_soliderPrefab,gameObject.transform.position, Quaternion.identity);
             */
 
             //Temp Destroy
+            BoardManager.Instance.GetLane(_laneNumber).RemoveEnemyFromList(gameObject);
             Destroy(gameObject);
 
             /*TODO:

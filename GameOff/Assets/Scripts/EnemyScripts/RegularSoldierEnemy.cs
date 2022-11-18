@@ -23,6 +23,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     [SerializeField] private Rigidbody2D _soldierRigidBody;
 
     [SerializeField] private float _currentStunDuration;
+    [SerializeField] private int _laneNumber;
 
     private void Start() 
     {
@@ -48,6 +49,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         _soldierHealth -= damage;
         if(_soldierHealth <= 0)
         {
+            BoardManager.Instance.GetLane(_laneNumber).RemoveEnemyFromList(gameObject);
             //Temp Destroy
             Destroy(gameObject);
             /*TODO:

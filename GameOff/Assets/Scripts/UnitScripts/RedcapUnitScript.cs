@@ -24,6 +24,8 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private Animator _redcapAnimator;
     [SerializeField] private string _redcapAttackAnimationName = "Redcap_Attack";
     [SerializeField] private string _redcapAppearAnimationName = "Redcap_Appear";
+    //Just in case we need this value (unlikely for redcap but necessary for ink demon)
+    [SerializeField] private int _redcapLane;
 #endregion
 
     public enum TestUnitUpgradePaths
@@ -56,6 +58,11 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         _redcapDamage = _redcapSO.UnitDamage;
         _redcapAttackSpeed = _redcapSO.UnitAttackSpeed;
         _unitSlowAmount = _redcapSO.UnitSlowAmount;
+    }
+
+    public void SetLane(int lane)
+    {
+        _redcapLane = lane;
     }
 
     private void FixedUpdate() 

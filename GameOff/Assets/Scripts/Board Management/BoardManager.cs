@@ -4,50 +4,44 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
-    [SerializeField] (int, int) boardDimensions;
-    [SerializeField] BoardLane[] boardLane;
+    
+    [SerializeField] (int, int) _boardDimensions;
+    [SerializeField] BoardLane[] _boardLane;
 
-/*    public enum upgradeAmount
-    {
-        Upgradebase = 0,
-        path1 = 1,
-        path2 = 2,
-        parh3 = 3
-    }
-    public upgradeAmount currUpgrade = 0;
+    private static BoardManager _instance;
 
-    // Start is called before the first frame update
-    void Start()
+    public static BoardManager Instance
     {
-        
+        get{return _instance;}
     }
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
-    }
-
-    public void ActivateStampAbility()
-    {
-        //maybe use switch case
-        if(currUpgrade == 0)
+        if (_instance == null)
         {
-            //do basic stuff
+            _instance = this;
         }
-        else if(currUpgrade == upgradeAmount.path1)
+        else
         {
-            //call upgrade 1 helper function
+            Destroy(this);
         }
     }
 
-    public void DisableAbility()
+    private void Start() 
     {
-
+        //Tells the each lane what lane number they
+        //Each lane then tells each of their tiles their lane and tile number
+        for(int i = 0; i < _boardLane.Length; i++)
+        {
+            _boardLane[i]._laneNumber = i;
+            _boardLane[i].SetTileLanes();
+        }
     }
 
-    public void EnableAbility()
+    //Its kinda wild this returns the boardlane instead of the boardlane array
+    //Not sure we want things to access all lanes however so idk 
+    public BoardLane GetLane(int laneNumber)
     {
-
-    }*/
+        return _boardLane[laneNumber];
+    }
 }

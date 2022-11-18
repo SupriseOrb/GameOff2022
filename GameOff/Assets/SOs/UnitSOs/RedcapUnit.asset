@@ -19,6 +19,6 @@ MonoBehaviour:
   _unitType: Ranged
   _unitAbilityCooldown: 0
   _unitCooldownReduction: 0
-  _unitDamage: 5
-  _unitAttackSpeed: 0.2
+  _unitDamage: 0
+  _unitAttackSpeed: 1
   _unitSlowAmount: 0

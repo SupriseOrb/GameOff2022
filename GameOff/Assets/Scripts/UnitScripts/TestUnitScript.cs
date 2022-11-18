@@ -20,6 +20,8 @@ public class TestUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private float _unitSlowAmount;
 #endregion
 
+    [SerializeField] private int _unitLane;
+
     public enum TestUnitUpgradePaths
     {
         upgradeBase = 0,
@@ -48,6 +50,11 @@ public class TestUnitScript : MonoBehaviour, IUnitStamp
         _unitDamage = _unitSO.UnitDamage;
         _unitAttackSpeed = _unitSO.UnitAttackSpeed;
         _unitSlowAmount = _unitSO.UnitSlowAmount;
+    }
+
+    public void SetLane(int lane)
+    {
+        _unitLane = lane;
     }
 
     private void FixedUpdate() 

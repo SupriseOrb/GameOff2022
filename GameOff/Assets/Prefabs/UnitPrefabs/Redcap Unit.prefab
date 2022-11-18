@@ -238,11 +238,13 @@ MonoBehaviour:
   _redcapSO: {fileID: 11400000, guid: acaec4a539d4648458bdaaa715435b7d, type: 2}
   _isActive: 1
   _redcapAttackCooldown: 0
-  _unitName: 
+  _redcapName: 
   _unitType: 
-  _unitDamage: 0
+  _redcapDamage: 0
   _redcapAttackSpeed: 0
   _unitSlowAmount: 0
+  _redcapPierceAmount: 0
+  _redcapStunDuration: 0
   _inkProjectile: {fileID: 6197164183251949288, guid: e5d27ba7bc3d1fb4b9cf0eb0542d543b, type: 3}
   _inkProjectileSpawnLocation: {fileID: 5931444528080003716}
   _redcapAnimator: {fileID: 5931444527902903502}
