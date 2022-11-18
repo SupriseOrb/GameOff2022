@@ -6,9 +6,9 @@ public class EnemyDetectionScript : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        Debug.Log("peepee poopoo");
         if(other.TryGetComponent(out IItemStamp item))
         {
+            Debug.Log("Enemy attacking item stamp!");
             GetComponentInParent<IEnemy>().GetAttackTarget(other.gameObject);
         }
     }

@@ -14,6 +14,7 @@ public class RedcapInkBallProjectile : MonoBehaviour
     [SerializeField] private float _destroyTime;
     [SerializeField] private float _projectileDamage;
     [SerializeField] private int _projectilePiercingAmt = 0;
+    [SerializeField] private float _projectileStunDuration;
     [SerializeField] private bool _projectileStunActive = false;
     // Start is called before the first frame update
     void Start()
@@ -50,14 +51,24 @@ public class RedcapInkBallProjectile : MonoBehaviour
         //deal damage here
         if(other.gameObject.TryGetComponent(out IEnemy enemy))
         {
-            if(_projectilePiercingAmt + 1 > 0)
+            //If upgrade 2 is active
+            if(_projectilePiercingAmt > 0)
             {
+                Debug.Log("Pierced!");
                 enemy.TakeDamage(_projectileDamage);
                 _projectilePiercingAmt--;
+                Debug.Log(_projectilePiercingAmt);
             }
-            if(_projectilePiercingAmt <= 0)
+            else if(_projectilePiercingAmt <= 0)
             {
+                enemy.TakeDamage(_projectileDamage);
                 Destroy(gameObject);
+            }
+
+            //If upgrade 3 is active
+            if (_projectileStunActive == true)
+            {
+                enemy.Stun(_projectileStunDuration);
             }
         }
     }
@@ -72,8 +83,9 @@ public class RedcapInkBallProjectile : MonoBehaviour
         _projectilePiercingAmt = pierce;
     }
 
-    public void SetStun(bool stun)
+    public void SetStunValues(bool isStunned, float duration)
     {
-        _projectileStunActive = stun;
+        _projectileStunActive = isStunned;
+        _projectileStunDuration = duration;
     }
 }

@@ -19,7 +19,10 @@ public class StandardEnemyUnit : MonoBehaviour, IEnemy
 #endregion
 
     [SerializeField] private GameObject _attackTarget;
+    [SerializeField] private bool _isStunned = false;
     [SerializeField] private Rigidbody2D _enemyRigidBody;
+
+    [SerializeField] private float _currentStunDuration;
 
     private void Start() 
     {
@@ -57,6 +60,16 @@ public class StandardEnemyUnit : MonoBehaviour, IEnemy
 
     private void FixedUpdate() 
     {
+        if (_isStunned)
+        {
+            _currentStunDuration -= Time.deltaTime;
+            if (_currentStunDuration <= 0)
+            {
+                _isStunned = false;
+                _isAttacking = true;
+            }
+        }
+
         if(_isAttacking)
         {
             if(_attackTarget == null)
@@ -89,5 +102,13 @@ public class StandardEnemyUnit : MonoBehaviour, IEnemy
     public void ModifyStat()
     {
 
+    }
+
+    public void Stun(float stunDuration)
+    {
+        _isAttacking = false;
+        _isStunned = true;
+        _enemyRigidBody.velocity = Vector3.zero;
+        _currentStunDuration = stunDuration;
     }
 }

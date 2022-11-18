@@ -7,5 +7,6 @@ public interface IEnemy
     void TakeDamage(float damage);
     void GetAttackTarget(GameObject target);
     void ActivateStampAttack();
+    void Stun(float stunDuration);
     void ModifyStat();
 }

@@ -30,7 +30,7 @@ public class TestItemScript : MonoBehaviour , IItemStamp
 
     public void ActivateStampAbility()
     {
-
+    
     }
 
     public void EnableStamp()

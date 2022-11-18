@@ -9,11 +9,13 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private float _redcapAttackCooldown;
 
 #region UnitStats
-    [SerializeField] private string _unitName;
+    [SerializeField] private string _redcapName;
     [SerializeField] private string _unitType;
-    [SerializeField] private float _unitDamage;
+    [SerializeField] private float _redcapDamage;
     [SerializeField] private float _redcapAttackSpeed;
     [SerializeField] private float _unitSlowAmount;
+    [SerializeField] private int _redcapPierceAmount;
+    [SerializeField] private float _redcapStunDuration;
 #endregion
 
 #region UnitVariables
@@ -43,9 +45,9 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 
     public void LoadBaseStats()
     {
-        _unitName = _redcapSO.StampName;
+        _redcapName = _redcapSO.StampName;
         _unitType = _redcapSO.UnitType;
-        _unitDamage = _redcapSO.UnitDamage;
+        _redcapDamage = _redcapSO.UnitDamage;
         _redcapAttackSpeed = _redcapSO.UnitAttackSpeed;
         _unitSlowAmount = _redcapSO.UnitSlowAmount;
     }
@@ -66,6 +68,9 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     public void UpgradeUnit()
     {
         //bring up the upgrade menu I think
+
+        //Note: Cap Atk Speed at 1.0 (matches animation length)
+        //Random Upgradable Stats: Attack, Attack Speed, Pierce Amt/Stun Duration (depending on Upgrade path)
     }
 
 #region Ability Functions
@@ -115,15 +120,23 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         _redcapAnimator.Play(_redcapAttackAnimationName);
         // Do the attack
         GameObject inkball = Instantiate(_inkProjectile, _inkProjectileSpawnLocation.position, Quaternion.identity);
+        //Consider just declaring the inkballScript
         RedcapInkBallProjectile inkballScript = inkball.GetComponent<RedcapInkBallProjectile>();
-        inkballScript.SetDamage(_unitDamage);
+        inkballScript.SetDamage(_redcapDamage);
         switch(currentUpgradePath)
         {
+            /*
+            For pierce, maybe have a raycast shoot out when the inkball hits the 1st enemy and check for other enemies
+            If they exist, deal x% of the initial hit to them?
+            */
             case TestUnitUpgradePaths.upgradeTwo:
-                inkballScript.SetPiercing(1);
+                inkballScript.SetPiercing(_redcapPierceAmount);
                 break;
+            /*
+            For stun, have the enemy hit have their velocity set to 0 for x amount of time
+            */
             case TestUnitUpgradePaths.upgradeThree:
-                inkballScript.SetStun(true);
+                inkballScript.SetStunValues(true, _redcapStunDuration);
                 break;
             default:
                 break;
@@ -142,6 +155,6 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 
     public string GetUnitName()
     {
-        return _unitName;
+        return _redcapName;
     }
 }

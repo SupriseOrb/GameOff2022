@@ -69,6 +69,18 @@ public class InputManager : MonoBehaviour
         _mousePosAction.performed -= MousePosition;
     }
 
+
+    /*
+    TODO:
+    Set up all the inputs to work for the tiles exclusively, with the cards working thru inspector calls + DeckManager
+    [1] Left Click (OnClick)
+    - If you click a tile, if _selectedCard isn't null, setStamp(_selectedCard)
+    - setStamp should take the GO referenced in the SO in _selectedCard and activate it and move its position/instantiate it on the tile
+    - Note: this will need different functionality for the land stamps
+    [2] Drag
+    - HahahahahahaHAhahahahaHAHAHahHAhah no
+    */
+
     public void OnClickCard(CardScriptLoader card)
     {
         if (_selectedCard != null)
@@ -128,8 +140,7 @@ public class InputManager : MonoBehaviour
     }
 
     public void OnRightClick(InputAction.CallbackContext context)
-    {
-        _leftClick.Value = false;
+    { 
         DeckManager.Instance.DeselectCard();
         //ResetCardSelection();
     }
