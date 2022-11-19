@@ -998,7 +998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4354047173407271892
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1613,7 +1613,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _selectedCard: {fileID: 0}
-  _isLeftClick: {fileID: 11400000, guid: da5f11c504727064f93842775306cd86, type: 2}
+  _spriteDrag: {fileID: 0}
   _cardInfoPanel: {fileID: 4354047173407271891}
   _cardInfoDescription: {fileID: 4195161308774078090}
   _cardInfoPanelOffset: {x: 0, y: 240, z: 0}

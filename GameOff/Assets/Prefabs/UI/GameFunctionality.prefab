@@ -181,7 +181,6 @@ MonoBehaviour:
   _heldObject: {fileID: 0}
   _mousePositionWorld: {x: 0, y: 0, z: 0}
   _selectedCard: {fileID: 0}
-  _isDraggingCard: 0
   _spriteDrag: {fileID: 7971274496512903152}
   _lClickString: OnLeftClick
   _lClickHoldString: OnLeftClickHold
@@ -232,7 +231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &998038057897414294
 Transform:
   m_ObjectHideFlags: 0
