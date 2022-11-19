@@ -11,7 +11,7 @@ public class CardScriptableObject : ScriptableObject
     [SerializeField] private string _cardDescription = "";
     [SerializeField] private int _inkCost = 0;
     [SerializeField] private bool _hasBeenUsed = false;
-    [SerializeField] private StampScriptableObject _stampObjectRef = null;
+    [SerializeField] private GameObject _stampGORef;
     [SerializeField] private Type _cardType = Type.NONE;
     [SerializeField] private Sprite _cardIcon;
     #endregion
@@ -50,9 +50,9 @@ public class CardScriptableObject : ScriptableObject
         get {return _hasBeenUsed;}
     }
 
-    public StampScriptableObject StampObjectRef
+    public GameObject StampGO
     {
-        get {return _stampObjectRef;}
+        get {return _stampGORef;}
     }
 
     public Type CardType

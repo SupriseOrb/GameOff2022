@@ -16,6 +16,12 @@ public class DeckManager : MonoBehaviour
     
     [Header("Select Card")]
     [SerializeField] private CardScriptLoader _selectedCard;
+
+    public CardScriptLoader SelectedCard
+    {
+        get {return _selectedCard;}
+    }
+    
     [SerializeField] private SpriteDrag _spriteDrag;
 
     [Header("Card Info Panel")]
@@ -237,7 +243,7 @@ public class DeckManager : MonoBehaviour
         }
     }
 
-    private void ResetCardSelection()
+    public void ResetCardSelection()
     {
         _selectedCard.ToggleBorder(false);
         _selectedCard = null;

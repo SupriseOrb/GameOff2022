@@ -10,7 +10,6 @@ public class InputManager : MonoBehaviour
     private Vector3 _mousePositionScreen;
     [SerializeField] private Vector3 _mousePositionWorld;
     [SerializeField] private CardScriptLoader _selectedCard;
-    [SerializeField] private bool _isDraggingCard;
     [SerializeField] private SpriteDrag _spriteDrag;
     private Ray2D _raycast;
     private RaycastHit2D _raycastHit;
@@ -45,9 +44,8 @@ public class InputManager : MonoBehaviour
 
     private void OnEnable() 
     {
-        //_lClickAction.performed += OnLeftClick;
-        _lClickAction.canceled += OnLeftClickRelease;
-        _lClickHoldAction.performed += OnLeftClickHold;
+        _lClickAction.performed += OnLeftClick;
+        _lClickAction.canceled += OnLeftClick;
 
         _rClickAction.performed += OnRightClick;
         _mousePosAction.performed += MousePosition;
@@ -55,9 +53,8 @@ public class InputManager : MonoBehaviour
 
     private void OnDisable() 
     {
-        //_lClickAction.performed -= OnLeftClick;
-        _lClickAction.canceled -= OnLeftClickRelease;
-        _lClickHoldAction.performed -= OnLeftClickHold;
+        _lClickAction.performed -= OnLeftClick;
+        _lClickAction.canceled -= OnLeftClick;
 
         _rClickAction.performed -= OnRightClick;
         _mousePosAction.performed -= MousePosition;
@@ -67,6 +64,46 @@ public class InputManager : MonoBehaviour
     { 
         DeckManager.Instance.DeselectCard();
         //ResetCardSelection();
+    }
+
+    public void OnLeftClick(InputAction.CallbackContext context)
+    {
+        _selectedCard = DeckManager.Instance.SelectedCard;
+        if (_spriteDrag.IsDragging && _selectedCard != null) //Need to figure out how we're getting _selectedCard
+        {
+            _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
+            if (_raycastHit.collider == null) //If no collider on click
+            {
+                return;
+            }
+
+            if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile)) //If drag is released on UnitTile / UnitTile clicked
+            {
+                if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.UNIT)
+                {
+                    unitTile.SetHeldStamp(_selectedCard.CardSO.StampGO);
+                    Debug.Log("Placed Unit " + _selectedCard + " onto UnitTile!");
+                    DeckManager.Instance.ResetCardSelection();
+                }
+                
+            }
+            else if (_raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile)) //If drag is released on BoardTile / BoardTile clicked
+            {
+                if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.ITEM)
+                {
+                    boardTile.SetHeldStamp(_selectedCard.CardSO.StampGO);
+                    Debug.Log("Placed Item " + _selectedCard + " onto BoardTile!");
+                    DeckManager.Instance.ResetCardSelection();
+                }
+                else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.LAND)
+                {
+                    BoardLane boardLane = BoardManager.Instance.GetLane(boardTile._laneNumber);
+                    boardLane.ApplyLaneStamp(_selectedCard.CardSO.StampGO);
+                    Debug.Log("Placed Land " + _selectedCard + " onto BoardLane!");
+                    DeckManager.Instance.ResetCardSelection();
+                }
+            }
+        }
     }
 
     public void MousePosition(InputAction.CallbackContext context)
@@ -137,8 +174,7 @@ public class InputManager : MonoBehaviour
 
     
 
-    public void OnLeftClickRelease(InputAction.CallbackContext context)
-    {
+  
         /*//move isdraggingcard to bottom of function because we want to use this as a check
         _isDraggingCard = false;
         _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
@@ -188,7 +224,7 @@ public class InputManager : MonoBehaviour
             ResetCardSelection();
         }*/
 
-    }
+    
 
     public void OnLeftClickHold(InputAction.CallbackContext context)
     {

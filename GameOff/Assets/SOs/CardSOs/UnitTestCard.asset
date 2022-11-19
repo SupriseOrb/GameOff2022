@@ -16,5 +16,6 @@ MonoBehaviour:
   _cardDescription: uwu I'm a test but UNIT
   _inkCost: 1
   _hasBeenUsed: 0
-  _stampObjectRef: {fileID: 11400000, guid: a8f9cadb417494445b21e742558a45b8, type: 2}
+  _stampGORef: {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
   _cardType: 1
+  _cardIcon: {fileID: 0}

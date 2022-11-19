@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoardLane : MonoBehaviour
 {
-    [SerializeField] private LandStampScriptableObject _currentLaneStamp = null;
+    [SerializeField] private GameObject _currentLaneStamp = null;
     [SerializeField] private Sprite _currentLaneSprite;
     [SerializeField] private List<GameObject> _laneEnemies;
     [SerializeField] private BoardTile[] _laneTiles;
@@ -24,11 +24,11 @@ public class BoardLane : MonoBehaviour
     }
 
     //Called when user places down an lane stamp
-    public void ApplyLaneStamp(LandStampScriptableObject laneStamp)
+    public void ApplyLaneStamp(GameObject laneStamp)
     {
         //kill all enemies in the lane
         _currentLaneStamp = laneStamp;
-        _currentLaneSprite = _currentLaneStamp.StampSprite;
+        //_currentLaneSprite = how to get the SO info?
         foreach(GameObject enemy in _laneEnemies)
         {
             enemy.GetComponent<IEnemy>().TakeDamage(1000);
