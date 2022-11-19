@@ -8,6 +8,7 @@ public class StampScriptableObject : ScriptableObject
     [SerializeField] private string _stampName;
     [SerializeField] private int _stampCost;
     [SerializeField] private Sprite _stampSprite;
+    [SerializeField] private int _stampHealth;
     #endregion
 
     #region SO Getters
@@ -24,6 +25,11 @@ public class StampScriptableObject : ScriptableObject
     public Sprite StampSprite
     {
         get {return _stampSprite;}
+    }
+
+    public int StampHealth
+    {
+        get {return _stampHealth;}
     }
     #endregion
 }

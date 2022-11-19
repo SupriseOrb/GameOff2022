@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
-    
-    [SerializeField] (int, int) _boardDimensions;
-    [SerializeField] BoardLane[] _boardLane;
+    [SerializeField] BoardLane[] _boardLanes;
 
     private static BoardManager _instance;
 
@@ -29,19 +27,19 @@ public class BoardManager : MonoBehaviour
 
     private void Start() 
     {
-        //Tells the each lane what lane number they
+        //Tells each lane what lane number they
         //Each lane then tells each of their tiles their lane and tile number
-        for(int i = 0; i < _boardLane.Length; i++)
+        for(int i = 0; i < _boardLanes.Length; i++)
         {
-            _boardLane[i]._laneNumber = i;
-            _boardLane[i].SetTileLanes();
+            _boardLanes[i]._laneNumber = i;
+            _boardLanes[i].SetTileIndexValues();
         }
     }
 
-    //Its kinda wild this returns the boardlane instead of the boardlane array
+    //Its kinda wild this returns the boardlane instead of the boardlanes array
     //Not sure we want things to access all lanes however so idk 
     public BoardLane GetLane(int laneNumber)
     {
-        return _boardLane[laneNumber];
+        return _boardLanes[laneNumber];
     }
 }

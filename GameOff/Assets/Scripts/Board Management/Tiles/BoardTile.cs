@@ -10,7 +10,11 @@ public class BoardTile : MonoBehaviour
 
     public GameObject GetHeldStamp()
     {
-        return _heldStamp;
+        if(gameObject.transform.childCount == 1)
+        {
+            return _heldStamp;
+        }
+        return _heldStamp = null;
     }
 
     public virtual bool SetHeldStamp(GameObject stamp)
@@ -22,14 +26,9 @@ public class BoardTile : MonoBehaviour
             {
                 Destroy(gameObject.transform.GetChild(0));
             }
-            Instantiate(stamp, Vector3.zero, Quaternion.identity, gameObject.transform);
+            Instantiate(stamp, gameObject.transform.position, Quaternion.identity, gameObject.transform);
             return true;
         }
         return false;
-    }
-
-    public bool TileIsEmpty()
-    {
-        return _heldStamp == null;
     }
 }

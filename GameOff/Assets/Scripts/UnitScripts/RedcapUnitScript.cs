@@ -25,17 +25,16 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private string _redcapAttackAnimationName = "Redcap_Attack";
     [SerializeField] private string _redcapAppearAnimationName = "Redcap_Appear";
     //Just in case we need this value (unlikely for redcap but necessary for ink demon)
-    [SerializeField] private int _redcapLane;
+    [SerializeField] private int _redcapLaneNumber;
 #endregion
 
-    public enum TestUnitUpgradePaths
+    public enum RedcapUpgradePaths
     {
         upgradeBase = 0,
         upgradeOne = 1,
         upgradeTwo = 2,
-        upgradeThree = 3
     }
-    public TestUnitUpgradePaths _currentUpgradePath = TestUnitUpgradePaths.upgradeBase;
+    public RedcapUpgradePaths _currentUpgradePath = RedcapUpgradePaths.upgradeBase;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +47,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     public void LoadBaseStats()
     {
         //Test variables:
-        if (_currentUpgradePath == TestUnitUpgradePaths.upgradeThree)
+        if (_currentUpgradePath == RedcapUpgradePaths.upgradeTwo)
         {
             _redcapStunDuration = 3;
         }
@@ -62,7 +61,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 
     public void SetLane(int lane)
     {
-        _redcapLane = lane;
+        _redcapLaneNumber = lane;
     }
 
     private void FixedUpdate() 
@@ -91,39 +90,13 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     {
         switch(_currentUpgradePath)
         {
-            case TestUnitUpgradePaths.upgradeOne:
-                UpgradeOneAbilityHelper();
+            case RedcapUpgradePaths.upgradeOne:
                 break;
-            case TestUnitUpgradePaths.upgradeTwo:
-                UpgradeTwoAbilityHelper();
-                break;
-            case TestUnitUpgradePaths.upgradeThree:
-                UpgradeThreeAbilityHelper();
+            case RedcapUpgradePaths.upgradeTwo:
                 break;
             default:
-                UpgradeBaseAbilityHelper();
                 break;
         }
-    }
-
-    private void UpgradeBaseAbilityHelper()
-    {
-
-    }
-
-    private void UpgradeOneAbilityHelper()
-    {
-        
-    }
-
-    private void UpgradeTwoAbilityHelper()
-    {
-        
-    }
-
-    private void UpgradeThreeAbilityHelper()
-    {
-        
     }
 #endregion
     
@@ -142,13 +115,13 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
             For pierce, maybe have a raycast shoot out when the inkball hits the 1st enemy and check for other enemies
             If they exist, deal x% of the initial hit to them?
             */
-            case TestUnitUpgradePaths.upgradeTwo:
+            case RedcapUpgradePaths.upgradeOne:
                 inkballScript.SetPiercing(_redcapPierceAmount);
                 break;
             /*
             For stun, have the enemy hit have their velocity set to 0 for x amount of time
             */
-            case TestUnitUpgradePaths.upgradeThree:
+            case RedcapUpgradePaths.upgradeTwo:
                 inkballScript.SetStunValues(true, _redcapStunDuration);
                 break;
             default:

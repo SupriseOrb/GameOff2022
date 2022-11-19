@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8219a680d11d2214dbd7ff16e95671cc, type: 3}
-  m_Name: RedcapUnit
+  m_Name: InkDemonUnit
   m_EditorClassIdentifier: 
-  _stampName: Redcap
+  _stampName: 
   _stampCost: 1
-  _stampSprite: {fileID: 1501192276, guid: c77cce2d7856e3844b3d1e2021741876, type: 3}
-  _spawnedUnit: {fileID: 0}
-  _unitType: Ranged
-  _unitAbilityCooldown: 0
+  _stampSprite: {fileID: 0}
+  _stampHealth: 3
+  _spawnedUnit: {fileID: 942562487849597904, guid: 23f564e76c8a65b419d9862be6fbcd11, type: 3}
+  _unitType: Summoner
+  _unitAbilityCooldown: 10
   _unitCooldownReduction: 0
-  _unitDamage: 5
-  _unitAttackSpeed: 0.2
+  _unitDamage: 1
+  _unitAttackSpeed: 1
   _unitSlowAmount: 0

@@ -50,7 +50,7 @@ public class BoardLane : MonoBehaviour
     }
 
     //Tells each of its tiles what lane and tile number they are
-    public void SetTileLanes()
+    public void SetTileIndexValues()
     {
         for(int i = 0; i < _laneTiles.Length; i++)
         {
@@ -80,9 +80,9 @@ public class BoardLane : MonoBehaviour
 
     //Gets the rightmost tile that does not have a held stamp inside of it
     //Used by the Ink Demon
-    public BoardTile GetFurthestFreeTile(int lane)
+    public BoardTile GetNearestFreeTile()
     {
-        for(int i = _laneTiles.Length - 1; i >= 0; i--)
+        for(int i = 2; i < _laneTiles.Length; i++)
         {
             if(_laneTiles[i].GetHeldStamp() == null)
             {
