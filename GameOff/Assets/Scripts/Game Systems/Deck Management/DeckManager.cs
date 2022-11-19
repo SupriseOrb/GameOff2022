@@ -34,8 +34,8 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private int _drawNumber; //How many cards to draw (how many cards we want in hand at a time)
     [SerializeField] private float _baseReshuffleTimer; //Base time till hand is reset
     [SerializeField] private float _currentReshuffleTimer; //Current time till hand is reset
-    [SerializeField] private bool _isInWave = false; //Is there currently a wave happening? //Does this belong here? Should this be a SO bool?
-    [SerializeField] private bool _isFirstDraw = false; //Is this the first draw of the wave?
+    [SerializeField] private BoolVariable _isInWave; //Is there currently a wave happening? //Does this belong here? Should this be a SO bool?
+    [SerializeField] private bool _isFirstDraw; //Is this the first draw of the wave?
 
     [Header("Timer")]
     [SerializeField] private Slider _timerSlider;
@@ -106,9 +106,9 @@ public class DeckManager : MonoBehaviour
 
     private void CycleHand()
     {
-        if(!_isInWave)
+        if(!_isInWave.Value)
         {
-            _isInWave = true;
+            _isInWave.Value = true;
             foreach(GameObject card in _discardDeck)
             {
                 CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
@@ -177,7 +177,7 @@ public class DeckManager : MonoBehaviour
 
     public void ToggleInWave()
     {
-        _isInWave = !_isInWave;
+        _isInWave.Value = !_isInWave.Value;
     }
 
     public void IsFirstDraw()
