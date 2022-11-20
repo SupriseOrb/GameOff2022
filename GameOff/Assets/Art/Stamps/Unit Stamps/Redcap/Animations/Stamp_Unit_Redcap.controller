@@ -333,7 +333,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Redcap_Appear
+  m_Name: Redcap_Red_Appear
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -360,7 +360,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Redcap_Idle
+  m_Name: Redcap_Red_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
