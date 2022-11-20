@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Linux" BasePlatform="Linux" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
-		<SourceFilesRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Linux/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Linux/</SoundBanksRoot>
+		<ProjectRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Linux/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Linux/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Linux</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Linux</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX">
+		<SoundBank Id="393239870" Language="SFX" Hash="2811883397">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -29,6 +29,14 @@
 						<File Id="657855576" Language="SFX">
 							<ShortName>MenuUI_Slider.wav</ShortName>
 							<Path>SFX/MenuUI_Slider_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1584037851" Name="Play_BramblePatch" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_BramblePatch" DurationType="OneShot" DurationMin="0.597732" DurationMax="0.597732">
+					<IncludedMemoryFiles>
+						<File Id="249095607" Language="SFX">
+							<ShortName>Bramble Patch_v1.wav</ShortName>
+							<Path>SFX/Bramble Patch_v1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -92,11 +100,27 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4293477421" Name="Play_InkReservoir" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_InkReservoir" DurationType="OneShot" DurationMin="1.442018" DurationMax="1.442018">
+					<IncludedMemoryFiles>
+						<File Id="385046979" Language="SFX">
+							<ShortName>Ink reservoir_v1.wav</ShortName>
+							<Path>SFX/Ink reservoir_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="400957009" Name="Play_ItemTakeDamage" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_ItemTakeDamage" DurationType="OneShot" DurationMin="0.240771" DurationMax="0.240771">
 					<IncludedMemoryFiles>
 						<File Id="593876093" Language="SFX">
 							<ShortName>Item take Damage_v1.wav</ShortName>
 							<Path>SFX/Item take Damage_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="173327921" Name="Play_Placeholder" ObjectPath="\Events\Default Work Unit\SFX Events\Play_Placeholder" DurationType="OneShot" DurationMin="1.699955" DurationMax="1.699955">
+					<IncludedMemoryFiles>
+						<File Id="21150305" Language="SFX">
+							<ShortName>Placeholder.wav</ShortName>
+							<Path>SFX/Placeholder_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -228,6 +252,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2062295234" Name="Play_Upgrade" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_Upgrade" DurationType="OneShot" DurationMin="3.176009" DurationMax="3.176009">
+					<IncludedMemoryFiles>
+						<File Id="1057876740" Language="SFX">
+							<ShortName>Upgrade Select_v1.wav</ShortName>
+							<Path>SFX/Upgrade Select_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="377318551" Name="Play_WaveStart" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_WaveStart" DurationType="OneShot" DurationMin="5.908095" DurationMax="5.908095">
 					<IncludedMemoryFiles>
 						<File Id="843979227" Language="SFX">
@@ -237,14 +269,6 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2235615413" Name="Stop_Text" ObjectPath="\Events\Default Work Unit\SFX Events\Text\Stop_Text" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="38624190" Name="TestSound" ObjectPath="\Events\Default Work Unit\SFX Events\TestSound" DurationType="OneShot" DurationMin="3.977982" DurationMax="3.977982">
-					<IncludedMemoryFiles>
-						<File Id="632420613" Language="SFX">
-							<ShortName>Jackpot_Winner2_v1.wav</ShortName>
-							<Path>SFX/Jackpot_Winner2_v1_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
 				<Event Id="3920142940" Name="Timer" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Timer" DurationType="OneShot" DurationMin="3.000408" DurationMax="3.000408">
 					<IncludedMemoryFiles>
 						<File Id="378939211" Language="SFX">
@@ -265,7 +289,7 @@
 				<GameParameter Id="2731583604" Name="AllVolume" ObjectPath="\Game Parameters\Default Work Unit\AllVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="3035830185">
+		<SoundBank Id="3991942870" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>

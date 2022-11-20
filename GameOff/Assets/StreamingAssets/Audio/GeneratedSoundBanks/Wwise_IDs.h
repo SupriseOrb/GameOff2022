@@ -16,13 +16,16 @@ namespace AK
         static const AkUniqueID CLICHE_HANDCYCLE = 3559121215U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PAY_UISLIDER = 2719045197U;
+        static const AkUniqueID PLAY_BRAMBLEPATCH = 1584037851U;
         static const AkUniqueID PLAY_CLICHEHOVER = 1817342604U;
         static const AkUniqueID PLAY_CLICHEMOVEMENT = 1396175505U;
         static const AkUniqueID PLAY_CLICHEMOVEMENTCANCEL = 3212791047U;
         static const AkUniqueID PLAY_ENEMYTAKEDAMAGE = 3195081828U;
         static const AkUniqueID PLAY_INKDEPLETED = 289833391U;
         static const AkUniqueID PLAY_INKFULL = 3028081509U;
+        static const AkUniqueID PLAY_INKRESERVOIR = 4293477421U;
         static const AkUniqueID PLAY_ITEMTAKEDAMAGE = 400957009U;
+        static const AkUniqueID PLAY_PLACEHOLDER = 173327921U;
         static const AkUniqueID PLAY_STAMPCOW = 679587648U;
         static const AkUniqueID PLAY_STAMPGENERAL = 2266250969U;
         static const AkUniqueID PLAY_STAMPINK = 1200679653U;
@@ -36,9 +39,9 @@ namespace AK
         static const AkUniqueID PLAY_UIPAUSE = 1830907318U;
         static const AkUniqueID PLAY_UIRESUME = 235035089U;
         static const AkUniqueID PLAY_UISELECT = 3703192648U;
+        static const AkUniqueID PLAY_UPGRADE = 2062295234U;
         static const AkUniqueID PLAY_WAVESTART = 377318551U;
         static const AkUniqueID STOP_TEXT = 2235615413U;
-        static const AkUniqueID TESTSOUND = 38624190U;
         static const AkUniqueID TIMER = 3920142940U;
     } // namespace EVENTS
 

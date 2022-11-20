@@ -3,7 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Test_Sound" ID="{DF4652E1-C770-4632-ADDA-DF7DE15E3F50}" ShortID="266594201">
+				<Sound Name="Placeholder" ID="{DF4652E1-C770-4632-ADDA-DF7DE15E3F50}" ShortID="266594201">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -20,10 +20,17 @@
 								<MediaID ID="632420613"/>
 							</MediaIDList>
 						</AudioFileSource>
+						<AudioFileSource Name="Placeholder" ID="{AAE298A2-5A7C-4BE8-8077-7D8DE35693A0}">
+							<Language>SFX</Language>
+							<AudioFile>Placeholder.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="21150305"/>
+							</MediaIDList>
+						</AudioFileSource>
 					</ChildrenList>
 					<ObjectLists/>
 					<ActiveSourceList>
-						<ActiveSource Name="Test Sound" ID="{3ED72C38-628B-4C5F-95F5-3488BDC580A2}" Platform="Linked"/>
+						<ActiveSource Name="Placeholder" ID="{AAE298A2-5A7C-4BE8-8077-7D8DE35693A0}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Folder Name="Cliche" ID="{E3DC66E5-F48D-45F1-B7AD-3A8038AD51B9}" ShortID="678946049">
@@ -558,6 +565,43 @@
 								<ActiveSource Name="MenuUI_Slider" ID="{99AC5FB2-F8B7-4500-AA8B-9DA791A5114F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Select Upgrade" ID="{4DC557D2-280F-4C38-B082-FA51F5411562}" ShortID="165377875">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MenuUI_Slider" ID="{22675301-022E-4914-8D5E-2E1A0C848363}">
+									<Language>SFX</Language>
+									<AudioFile>MenuUI_Slider.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="657855576"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="Upgrade Select_v1" ID="{A8955CCC-AFB8-4077-872D-F2CC31CB2EDD}">
+									<Language>SFX</Language>
+									<AudioFile>Upgrade Select_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1057876740"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Upgrade Select_v1" ID="{A8955CCC-AFB8-4077-872D-F2CC31CB2EDD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<RandomSequenceContainer Name="Text animation" ID="{89B0AC16-149E-45F1-842F-1CE2E36E1216}" ShortID="1001916098">
@@ -639,7 +683,7 @@
 				</RandomSequenceContainer>
 				<Folder Name="Stamps" ID="{A3DC1F8E-9760-4AD2-BAA2-438DCD1BB3AA}" ShortID="265107524">
 					<ChildrenList>
-						<Sound Name="Stamp" ID="{E7E19623-88D1-4751-9AD7-DE799B5AECBE}" ShortID="630463421">
+						<Sound Name="Unit Stamp" ID="{E7E19623-88D1-4751-9AD7-DE799B5AECBE}" ShortID="630463421">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -798,6 +842,73 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Potion Item Stamp_v1" ID="{EEB903AD-D78E-4314-BE1F-07FDF9E63371}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Bramble Patch" ID="{D06F5455-A982-47F8-A9C8-C434579C9393}" ShortID="367744878">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Time Piece Stamp_v1" ID="{51C73F57-E2A9-47DC-8314-75D0E620B486}">
+									<Language>SFX</Language>
+									<AudioFile>Time Piece Stamp_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="45222698"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="Bramble Patch_v1" ID="{CE9B5A36-744D-4A43-8A9A-EB12472CB004}">
+									<Language>SFX</Language>
+									<AudioFile>Bramble Patch_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="249095607"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Bramble Patch_v1" ID="{CE9B5A36-744D-4A43-8A9A-EB12472CB004}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Ink Reservoir" ID="{995BD140-135F-4938-B480-F67A4BC8D972}" ShortID="562877585">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Time Piece Stamp_v1" ID="{1F33327E-B959-4113-A608-D0F8C4D249E7}">
+									<Language>SFX</Language>
+									<AudioFile>Time Piece Stamp_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="45222698"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="Ink reservoir_v1" ID="{918DFA12-2DEE-44DC-83E8-D227B337A8D6}">
+									<Language>SFX</Language>
+									<AudioFile>Ink reservoir_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="385046979"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Ink reservoir_v1" ID="{918DFA12-2DEE-44DC-83E8-D227B337A8D6}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

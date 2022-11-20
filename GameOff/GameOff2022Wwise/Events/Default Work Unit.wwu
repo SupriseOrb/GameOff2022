@@ -5,12 +5,12 @@
 			<ChildrenList>
 				<Folder Name="SFX Events" ID="{40BE9AE7-443C-4A76-85D7-1E2925420A6B}" ShortID="340388825">
 					<ChildrenList>
-						<Event Name="TestSound" ID="{BCF66CC1-CE17-4F30-BA85-C8D45496F774}">
+						<Event Name="Play_Placeholder" ID="{BCF66CC1-CE17-4F30-BA85-C8D45496F774}">
 							<ChildrenList>
 								<Action Name="" ID="{E5A3C6DC-8246-4601-836B-FA86E1D0F3CE}" ShortID="566431976">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Test_Sound" ID="{DF4652E1-C770-4632-ADDA-DF7DE15E3F50}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+											<ObjectRef Name="Placeholder" ID="{DF4652E1-C770-4632-ADDA-DF7DE15E3F50}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -169,6 +169,17 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Play_Upgrade" ID="{A2A2D83C-274D-4408-B0CF-C85BDB6313BA}">
+									<ChildrenList>
+										<Action Name="" ID="{7598C568-1E7A-413D-9D83-C415EA8CE29C}" ShortID="963530862">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Select Upgrade" ID="{4DC557D2-280F-4C38-B082-FA51F5411562}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Stamps" ID="{C2399809-7D80-4BA8-9CA3-06EFF9BDCD73}" ShortID="417418503">
@@ -178,7 +189,7 @@
 										<Action Name="" ID="{FA891806-441F-4BE7-BD58-093E3AAF7CF6}" ShortID="236009906">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Stamp" ID="{E7E19623-88D1-4751-9AD7-DE799B5AECBE}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+													<ObjectRef Name="Unit Stamp" ID="{E7E19623-88D1-4751-9AD7-DE799B5AECBE}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -245,6 +256,28 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Spikey Bush Stamp_v1" ID="{C2633BA9-7C9C-4460-BCD3-BDC1EEE575E1}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_BramblePatch" ID="{4170ADD7-C828-4601-92CD-162879DCB17D}">
+									<ChildrenList>
+										<Action Name="" ID="{CCEA9634-FB95-4517-9C1C-5312A31E5454}" ShortID="213023521">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Bramble Patch" ID="{D06F5455-A982-47F8-A9C8-C434579C9393}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_InkReservoir" ID="{77D73884-32FD-48FA-BC75-505AE4D159FF}">
+									<ChildrenList>
+										<Action Name="" ID="{71680EF3-C380-4EE2-A7EF-4CE616BA8503}" ShortID="871315781">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ink Reservoir" ID="{995BD140-135F-4938-B480-F67A4BC8D972}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

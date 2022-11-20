@@ -15,16 +15,19 @@
 						<ObjectRef Name="Pay_UISlider" ID="{966CD5B5-C917-427C-9145-4B1AF451EA57}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIBack" ID="{D77C439C-E288-42F0-8B90-E5370FB9BB59}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIPause" ID="{529A7150-D0F0-4354-A940-4080C67090F2}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Upgrade" ID="{A2A2D83C-274D-4408-B0CF-C85BDB6313BA}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UISelect" ID="{2774CB0E-7435-4425-ADED-7A1AD176FA30}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_InkFull" ID="{0A1BB36C-9949-44A4-A783-1C42F1503A37}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_WaveStart" ID="{EA2C7185-B14E-44A9-8CA5-9E9FC73E20FF}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ClicheMovement" ID="{5D5D493C-FE88-45B1-94A7-4D665FBA9C23}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_InkDepleted" ID="{4791D040-BCF5-45D2-81DF-465A1F03E0E0}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BramblePatch" ID="{4170ADD7-C828-4601-92CD-162879DCB17D}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Text" ID="{CA166924-74F7-4674-8F30-AA71C2D6B932}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Text" ID="{71AD5968-9025-470D-89C4-ACADEA1552B5}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyTakeDamage" ID="{EF49E9F7-EAAB-484A-9FA2-E1B675DBE616}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampGeneral" ID="{B0323596-6BE7-4874-838D-899071D4DC57}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIHover" ID="{DA8A0EE9-F0D7-48B2-976A-53FC0D2C6BC3}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_InkReservoir" ID="{77D73884-32FD-48FA-BC75-505AE4D159FF}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIResume" ID="{56C6ACD0-ECD0-490C-AFF4-BF7ED0FBD2F1}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampInk" ID="{A0618F6C-5B35-494D-9090-109F040509C4}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Cliche_HandCycle" ID="{19029E53-357C-49C1-A219-DB7DBDEB411C}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
@@ -35,7 +38,7 @@
 						<ObjectRef Name="Play_StampRoughGround" ID="{A09B1EC9-5F4E-4E26-9D70-61BBA686A7C8}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ItemTakeDamage" ID="{923885FC-4A28-4E2A-9E89-0E24440E67EA}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampCow" ID="{6BC84963-8496-4F00-AAA9-406904D14F76}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="TestSound" ID="{BCF66CC1-CE17-4F30-BA85-C8D45496F774}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Placeholder" ID="{BCF66CC1-CE17-4F30-BA85-C8D45496F774}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampPotion" ID="{62ECA254-2341-4F45-B568-762B7FC77225}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampTimePiece" ID="{720179D2-9E6C-4F8F-8B2F-16185246BA41}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
