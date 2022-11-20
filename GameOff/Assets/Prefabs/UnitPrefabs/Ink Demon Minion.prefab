@@ -58,8 +58,8 @@ MonoBehaviour:
   _inkMinionAttackRange: 2
   _inkMinionHitColliders: []
   _inkMinionAnimator: {fileID: 942562487899098156}
-  _inkMinionAttackAnimationName: Redcap_Attack
-  _inkMinionAppearAnimationName: Redcap_Appear
+  _inkMinionAttackAnimationName: Redcap_Blue_Attack
+  _inkMinionAppearAnimationName: Redcap_Blue_Appear
   _inkMinionLaneNumber: 0
 --- !u!61 &1612765099
 BoxCollider2D:
@@ -162,7 +162,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1955674828, guid: 36b9336961a5e254f880a4677c340c4a, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.59383893, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

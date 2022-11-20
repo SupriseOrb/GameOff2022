@@ -9,4 +9,5 @@ public interface IEnemy
     void ActivateStampAttack();
     void Stun(float stunDuration);
     void ModifyStat();
+    void SetLane(int laneNumber);
 }

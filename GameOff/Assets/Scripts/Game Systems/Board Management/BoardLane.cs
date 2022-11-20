@@ -43,6 +43,12 @@ public class BoardLane : MonoBehaviour
         _currentLaneSprite = null;
     }
 
+    public void AddEnemyToList(GameObject enemy)
+    {
+        _laneEnemies.Add(enemy);
+        enemy.GetComponent<IEnemy>().SetLane(_laneNumber);
+    }
+
     //Needs to be called when an enemy dies
     public void RemoveEnemyFromList(GameObject enemy)
     {

@@ -14,18 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wave:
   - _enemies:
+    - {fileID: 0}
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 0}
     _timeToSpawn: 1
-    _laneNum: 0
-    _isEnemySummoned: 0
   - _enemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    _timeToSpawn: 2
-    _laneNum: 1
-    _isEnemySummoned: 0
+    - {fileID: 0}
+    - {fileID: 0}
+    _timeToSpawn: 5
+  - _enemies:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _timeToSpawn: 10
+  - _enemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 0}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _timeToSpawn: 11
   - _enemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    _timeToSpawn: 3
-    _laneNum: 2
-    _isEnemySummoned: 0
+    - {fileID: 0}
+    _timeToSpawn: 12
+  - _enemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _timeToSpawn: 13
+  _waveDuration: 15
+  _waveBreakBeforeDuration: 10

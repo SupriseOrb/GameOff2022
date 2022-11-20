@@ -6,32 +6,37 @@ using UnityEngine;
 public class WaveScriptableObject : ScriptableObject
 {
     [System.Serializable]
-    public class EnemySpawn
+    public struct EnemySpawn
     {
-        public List<GameObject> _enemies; //Prefab of enemy that will be spawned
-        public float _timeToSpawn; //What time the enemy will be spawned
-        public int _laneNum; //What lane the enemy will spawn in (should this be rng?)
-        public bool _isEnemySummoned; //Has the enemy been summoned?
+        [Tooltip("Array of prefab of the enemies that will be spawned. Their index corresponds with the lane they will be spawned in. If you dont want to spawn in all three lanes, have the other two indices exist but hold nothing")]
+        public GameObject[] _enemies; //Array of prefab of the enemies that will be spawned
+
+        [Tooltip("How many seconds into the wave they will be spawned")]
+        public int _timeToSpawn; //What time the enemy will be spawned
     }
 
+    [Tooltip("All of the enemy spawns that will occur in this wave")]
     [SerializeField] private List<EnemySpawn> _wave;
+    
+    [Tooltip("How many seconds the wave will last")]
+    [SerializeField] private float _waveDuration;
+
+    [Tooltip("How many seconds before the wave starts from a break between waves")]
+    [SerializeField] private float _waveBreakBeforeDuration;
 
     public List<EnemySpawn> Wave
     {
         get {return _wave;}
     }
 
-    public EnemySpawn GetEnemySpawn(int index)
+    public float WaveDuration
     {
-        return _wave[index];
+        get {return _waveDuration;}
     }
 
-    private void OnEnable() //Resets SO values
+    public float WaveBreakBeforeDuration
     {
-        foreach (EnemySpawn spawn in _wave)
-        {
-            spawn._isEnemySummoned = false;
-        }
+        get {return _waveBreakBeforeDuration;}
     }
 
 }

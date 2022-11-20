@@ -44,6 +44,11 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         _soliderAttackCooldown = 1 / _soldierAttackSpeed;
     }
 
+    public void SetLane(int laneNumber)
+    {
+        _laneNumber = laneNumber;
+    }
+
     public void TakeDamage(float damage)
     {
         _soldierHealth -= damage;
@@ -97,7 +102,10 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
 
     public void ActivateStampAttack()
     {
-        _attackTarget.GetComponent<IItemStamp>().TakeDamage(_soldierDamage);
+        if(_attackTarget != null)
+        {
+            _attackTarget.GetComponent<IItemStamp>().TakeDamage(_soldierDamage);
+        }
         //Play attack animation
     }
 

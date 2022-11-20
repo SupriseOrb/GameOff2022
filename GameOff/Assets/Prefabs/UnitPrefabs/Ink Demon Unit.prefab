@@ -61,7 +61,7 @@ MonoBehaviour:
   _summonTile: {fileID: 0}
   _currentInkDemonAbilityCooldown: 0
   _inkDemonAnimator: {fileID: 2645122873858024069}
-  _inkDemonAttackAnimationName: Redcap_Attack
+  _inkDemonAttackAnimationName: Redcap_Red_Attack
   _inkDemonAppearAnimationName: Redcap_Appear
   _inkDemonLaneNumber: 0
   _activeMinions: []

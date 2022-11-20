@@ -44,6 +44,11 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
         _carriageAttackCooldown = 1 / _carriageAttackSpeed;
     }
 
+    public void SetLane(int laneNumber)
+    {
+        _laneNumber = laneNumber;
+    }
+
     public void TakeDamage(float damage)
     {
         _carriageHealth -= damage;
