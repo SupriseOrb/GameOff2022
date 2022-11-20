@@ -351,6 +351,76 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Ambience" ID="{6E0B9678-4952-48FA-898D-58617236A38C}" ShortID="44228726">
+							<ChildrenList>
+								<Event Name="Play_Ambience" ID="{8D979914-47DE-4831-BAD6-7F5F126143F9}">
+									<ChildrenList>
+										<Action Name="" ID="{0718F1CF-513D-4399-B588-EE2B5659D9C8}" ShortID="321037072">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ambience Loop 1" ID="{FC8D75F1-6896-42A4-AB77-34AD27DB23C7}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{DEBDF49A-6E4D-4721-AB70-E2324C0C3460}" ShortID="76400748">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ambience Loop 2 (wind)" ID="{345822E2-90B7-44F5-B454-C5BC0556F200}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_AllAmbience" ID="{721CD5A3-A45C-489B-838D-5A8A2FCB50F9}">
+									<ChildrenList>
+										<Action Name="" ID="{DC97A81B-1DF0-4A39-8387-E70F07C5E5E4}" ShortID="990665726">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ambience Loop 1" ID="{FC8D75F1-6896-42A4-AB77-34AD27DB23C7}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{4C731AC4-4E76-48D5-97D6-E796A70A8C22}" ShortID="69959249">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ambience Loop 2 (wind)" ID="{345822E2-90B7-44F5-B454-C5BC0556F200}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Wind" ID="{80CA8BB2-3525-4D5E-845D-F68E14235F9D}">
+									<ChildrenList>
+										<Action Name="" ID="{78FFD001-E184-41EF-B5BC-85454FE365D5}" ShortID="733602225">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ambience Loop 2 (wind)" ID="{345822E2-90B7-44F5-B454-C5BC0556F200}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{CFBB8AA4-F3A6-4B59-BE0B-C61C44F73DD5}" ShortID="1004620821">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ambience Loop 1" ID="{FC8D75F1-6896-42A4-AB77-34AD27DB23C7}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music Events" ID="{7E5BB50D-8823-45DC-8F2B-FECC89E1DE41}" ShortID="66101945">
