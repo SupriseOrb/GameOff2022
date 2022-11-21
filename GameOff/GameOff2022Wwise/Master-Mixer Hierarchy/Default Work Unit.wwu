@@ -142,6 +142,42 @@
 						</Bus>
 						<Bus Name="Ambience" ID="{0CAED3A4-89D2-46DB-B78E-2BBF48FFA4F2}">
 							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{89A1EA81-F8D2-4306-B79D-14CB8898470F}" ShortID="177542660">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="MusicVolume" ID="{4A1D2C2F-0D27-4F7F-9D44-856492FCC85C}" WorkUnitID="{9B49F9C4-C032-4014-AC8A-C0ECD3D54925}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{99AE23BE-04F1-4B0D-98A0-E53AC9B2F071}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0.21448</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>69.91261</XPos>
+														<YPos>-6.29138</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>-200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{CB5C1685-AAA3-42C3-8FD6-0C2CB3F39B74}" ShortID="681301292">

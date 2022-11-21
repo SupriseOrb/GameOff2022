@@ -33,13 +33,13 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="MusicVolume" ID="{4A1D2C2F-0D27-4F7F-9D44-856492FCC85C}"/>
-							<Value>70.1622971285893</Value>
+							<Value>38.0774032459426</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{5DAF9D39-F78C-4534-88E1-7C4E679CD931}"/>
-						<CurrentStateRef Name="None" ID="{4D3AD3D2-3F6E-45DE-BDCD-44AA57EF0333}"/>
-						<CurrentStateRef Name="Ambience_2" ID="{E9BDBE55-1810-4124-816D-F965D36E5D5C}"/>
+						<CurrentStateRef Name="Battle_Intensity_1" ID="{D85FCDF0-5F32-4588-8933-BC446D0CFB9A}"/>
+						<CurrentStateRef Name="Battle" ID="{05029B2D-7F58-46C1-8207-3AF1677D41F8}"/>
+						<CurrentStateRef Name="Ambience_1" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

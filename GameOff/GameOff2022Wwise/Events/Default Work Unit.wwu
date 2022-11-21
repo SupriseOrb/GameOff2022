@@ -349,6 +349,42 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Play_RedcapAbility" ID="{C9105AD8-D0E0-466E-ADB5-AFD6C4C3E610}">
+									<ChildrenList>
+										<Action Name="" ID="{E080484B-41B0-4165-A4F1-EFE414994948}" ShortID="85333004">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Redcap Ability" ID="{D1E82BBF-E2A9-499F-AF74-147BAFA338F6}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_RedcapAbility" ID="{5CDF75AC-13CD-4678-98CE-F7CFF0FC16C1}">
+									<ChildrenList>
+										<Action Name="" ID="{23D07158-482E-4A0D-8973-9EB347420172}" ShortID="87061320">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Redcap Ability" ID="{D1E82BBF-E2A9-499F-AF74-147BAFA338F6}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_DeathAnimation" ID="{5FEC9B67-0A5D-4BF3-B84F-BAA3518ED4CC}">
+									<ChildrenList>
+										<Action Name="" ID="{8124661B-E17B-466F-A839-ACB66CE799B6}" ShortID="623879083">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Item &amp; Enemy death" ID="{6BAAEFD4-8A13-4A15-B926-B87C72188EF2}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Ambience" ID="{6E0B9678-4952-48FA-898D-58617236A38C}" ShortID="44228726">

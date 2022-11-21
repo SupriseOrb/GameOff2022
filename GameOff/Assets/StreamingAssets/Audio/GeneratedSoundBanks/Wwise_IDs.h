@@ -22,12 +22,14 @@ namespace AK
         static const AkUniqueID PLAY_CLICHEHOVER = 1817342604U;
         static const AkUniqueID PLAY_CLICHEMOVEMENT = 1396175505U;
         static const AkUniqueID PLAY_CLICHEMOVEMENTCANCEL = 3212791047U;
+        static const AkUniqueID PLAY_DEATHANIMATION = 2720241158U;
         static const AkUniqueID PLAY_ENEMYTAKEDAMAGE = 3195081828U;
         static const AkUniqueID PLAY_INKDEPLETED = 289833391U;
         static const AkUniqueID PLAY_INKFULL = 3028081509U;
         static const AkUniqueID PLAY_INKRESERVOIR = 4293477421U;
         static const AkUniqueID PLAY_ITEMTAKEDAMAGE = 400957009U;
         static const AkUniqueID PLAY_PLACEHOLDER = 173327921U;
+        static const AkUniqueID PLAY_REDCAPABILITY = 1011269733U;
         static const AkUniqueID PLAY_STAMPCOW = 679587648U;
         static const AkUniqueID PLAY_STAMPGENERAL = 2266250969U;
         static const AkUniqueID PLAY_STAMPINK = 1200679653U;
@@ -44,6 +46,7 @@ namespace AK
         static const AkUniqueID PLAY_UPGRADE = 2062295234U;
         static const AkUniqueID PLAY_WAVESTART = 377318551U;
         static const AkUniqueID STOP_AMBIENCE = 2477713992U;
+        static const AkUniqueID STOP_REDCAPABILITY = 334102883U;
         static const AkUniqueID STOP_TEXT = 2235615413U;
         static const AkUniqueID TIMER = 3920142940U;
         static const AkUniqueID UNMUTE_AMBIENCE = 4159098002U;

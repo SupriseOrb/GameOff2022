@@ -3,9 +3,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	235035089	Play_UIResume			\Default Work Unit\SFX Events\Menu UI\Play_UIResume	
 	278617630	Play_Ambience			\Default Work Unit\SFX Events\Ambience\Play_Ambience	
 	289833391	Play_InkDepleted			\Default Work Unit\SFX Events\Ink\Play_InkDepleted	
+	334102883	Stop_RedcapAbility			\Default Work Unit\SFX Events\Combat\Stop_RedcapAbility	
 	377318551	Play_WaveStart			\Default Work Unit\SFX Events\Combat\Play_WaveStart	
 	400957009	Play_ItemTakeDamage			\Default Work Unit\SFX Events\Combat\Play_ItemTakeDamage	
 	679587648	Play_StampCow			\Default Work Unit\SFX Events\Stamps\Play_StampCow	
+	1011269733	Play_RedcapAbility			\Default Work Unit\SFX Events\Combat\Play_RedcapAbility	
 	1200679653	Play_StampInk			\Default Work Unit\SFX Events\Stamps\Play_StampInk	
 	1224305705	Play_UIBack			\Default Work Unit\SFX Events\Menu UI\Play_UIBack	
 	1396175505	Play_ClicheMovement			\Default Work Unit\SFX Events\Cliche UI\Play_ClicheMovement	
@@ -20,6 +22,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2502251926	Play_UIHover			\Default Work Unit\SFX Events\Menu UI\Play_UIHover	
 	2666091979	Play_StampRoughGround			\Default Work Unit\SFX Events\Stamps\Play_StampRoughGround	
 	2719045197	Pay_UISlider			\Default Work Unit\SFX Events\Menu UI\Pay_UISlider	
+	2720241158	Play_DeathAnimation			\Default Work Unit\SFX Events\Combat\Play_DeathAnimation	
 	3000230226	Play_StampTimePiece			\Default Work Unit\SFX Events\Stamps\Play_StampTimePiece	
 	3028081509	Play_InkFull			\Default Work Unit\SFX Events\Ink\Play_InkFull	
 	3036508647	Play_Text			\Default Work Unit\SFX Events\Text\Play_Text	
@@ -43,41 +46,43 @@ State	ID	Name	State Group			Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	3597688	MenuUI_Hover_Eb_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Hover_Eb_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_Eb_v1		10742
-	19163811	Text Sound 1_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Text Sound 1_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Text animation\Text Sound 1_v1		293994
 	21150305	Placeholder	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Placeholder_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Placeholder		150000
-	23787489	Cliche_HoverAnimation_3_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_HoverAnimation_3_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_3_v1		15336
 	31150185	Cliche Hand Cycle	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_HandCycle_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hand Cycle		307320
 	45222698	Time Piece Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Time Piece Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Time Piece Stamp_v1		106626
-	86519014	Text Sound 2_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Text Sound 2_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Text animation\Text Sound 2_v1		216170
 	95509999	Rough Ground Item Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Rough Ground Item Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Rough Ground Item Stamp_v1		84398
 	160367648	MenuUI_Hover_C_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Hover_C_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_C_v1		12728
 	162393702	MenuUI_Hover_G_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Hover_G_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_G_v1		17592
 	187588092	Cliche Movement	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_Movement_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Movement		32994
+	220711120	Redcap Ability	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Redcap Ability_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Redcap Ability		330992
+	225264234	Cliche_HoverAnimation_1_v2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_HoverAnimation_1_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_1_v2		8628
 	249095607	Bramble Patch	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Bramble Patch_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Bramble Patch		52784
-	273100381	Cliche_HoverAnimation_2_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_HoverAnimation_2_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_2_v1		15336
 	273270463	Enemy Take Damage_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Enemy Take Damage_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Enemy Take Damage_v1		21656
 	276893809	Pause	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Pause_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Pause		46426
 	287838291	Ambience Loop 1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Ambience Loop 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Ambience_States\Ambience_Loop_1\Ambience Loop 1\Ambience Loop 1		27375004
+	288070851	Cliche_HoverAnimation_4_v2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_HoverAnimation_4_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_4_v2		9100
 	353146256	Ambience Loop 2 (wind)	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Ambience Loop 2 (wind)_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Ambience_States\Ambience_Loop_2\Ambience Loop 2 (wind)\Ambience Loop 2 (wind)		17896984
 	357140707	Unit Stamp	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Unit Stamp		81752
 	366129106	Spikey Bush Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Spikey Bush Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Spikey Bush Stamp_v1		52180
 	370467919	Potion Item Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Potion Item Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Potion Item Stamp_v1		235284
 	378939211	Hand Cycle Timer	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Timer_Click_v1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Hand Cycle Timer		88276
+	384752991	Cliche_HoverAnimation_3_v2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_HoverAnimation_3_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_3_v2		8628
 	385046979	Ink Reservoir	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Ink reservoir_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Ink Reservoir		127250
-	577290544	Cliche_HoverAnimation_4_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_HoverAnimation_4_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_4_v1		15336
 	593876093	Item take Damage_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Item take Damage_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Item take Damage_v1		21300
 	597791133	Ink Blot Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Ink Blot Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Ink Blot Stamp_v1		42840
 	657855576	Slider Tick	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Slider_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Slider Tick		12242
 	687362730	MenuUI_Hover_Bb_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Hover_Bb_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_Bb_v1		12626
+	733354389	Text Sound 2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Text Sound 2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Text animation\Text Sound 2		216170
 	742379802	Ink Full	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Ink_Full_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ink UI\Ink Full		13182
 	761191295	Cliche Movement Cancel	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_MovementCancel_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Movement Cancel		15686
 	783715838	Back_Button	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_BackButton_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Back_Button		15252
 	797317282	Button	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Button_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Button		8950
+	811228173	Item & Enemy death	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Item and Enemy Death_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Item & Enemy death		102762
 	843979227	Wave Start_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Wave Start_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Wave Start_v1		521158
 	902073114	Resume	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Resume_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Resume		58652
-	934060521	Cliche_HoverAnimation_1_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_HoverAnimation_1_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_1_v1		15336
+	907166050	Cliche_HoverAnimation_2_v2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_HoverAnimation_2_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_2_v2		9100
 	957178096	Cow Moo Item Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cow Moo Item Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Cow Moo Item Stamp_v1		106626
 	966265383	MenuUI_Hover_D_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Hover_D_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_D_v1		14108
+	974058342	Text Sound 1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Text Sound 1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Text animation\Text Sound 1		293994
 	1040327169	Ink Depleted	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Ink_Depleted_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ink UI\Ink Depleted		26970
 	1057876740	Select Upgrade	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Upgrade Select_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Select Upgrade		280188
 	1060547979	MenuUI_Hover_F_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Hover_F_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_F_v1		10180

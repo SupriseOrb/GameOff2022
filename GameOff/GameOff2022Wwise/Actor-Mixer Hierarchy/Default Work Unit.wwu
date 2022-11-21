@@ -71,7 +71,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Cliche_HoverAnimation_1_v1" ID="{6D7C45FC-C1FB-4893-8989-E22D162AD918}" ShortID="880820430">
+								<Sound Name="Cliche_HoverAnimation_1_v2" ID="{370F5A86-1052-4DBC-A06A-990DB756239D}" ShortID="404330522">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -81,20 +81,20 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Cliche_HoverAnimation_1_v1" ID="{0DE17121-F3C7-4ABB-B595-7E303095ECB7}">
+										<AudioFileSource Name="Cliche_HoverAnimation_1_v2" ID="{951CF312-EC43-4EA1-B2D7-737CEE2D580C}">
 											<Language>SFX</Language>
-											<AudioFile>Cliche_HoverAnimation_1_v1.wav</AudioFile>
+											<AudioFile>Cliche_HoverAnimation_1_v2.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="934060521"/>
+												<MediaID ID="225264234"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Cliche_HoverAnimation_1_v1" ID="{0DE17121-F3C7-4ABB-B595-7E303095ECB7}" Platform="Linked"/>
+										<ActiveSource Name="Cliche_HoverAnimation_1_v2" ID="{951CF312-EC43-4EA1-B2D7-737CEE2D580C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Cliche_HoverAnimation_2_v1" ID="{6B95EEC3-C257-4620-BF5C-9DB333EE7251}" ShortID="104272433">
+								<Sound Name="Cliche_HoverAnimation_2_v2" ID="{29E09E7D-5344-4A4C-AE0F-401F5F20AEDE}" ShortID="623209009">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -104,20 +104,20 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Cliche_HoverAnimation_2_v1" ID="{CD205909-5105-48CA-8333-119A21FA607C}">
+										<AudioFileSource Name="Cliche_HoverAnimation_2_v2" ID="{AD9A3C7D-DA3F-4CAB-B968-0A98E13BF085}">
 											<Language>SFX</Language>
-											<AudioFile>Cliche_HoverAnimation_2_v1.wav</AudioFile>
+											<AudioFile>Cliche_HoverAnimation_2_v2.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="273100381"/>
+												<MediaID ID="907166050"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Cliche_HoverAnimation_2_v1" ID="{CD205909-5105-48CA-8333-119A21FA607C}" Platform="Linked"/>
+										<ActiveSource Name="Cliche_HoverAnimation_2_v2" ID="{AD9A3C7D-DA3F-4CAB-B968-0A98E13BF085}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Cliche_HoverAnimation_3_v1" ID="{4373667F-F49C-4BD4-9116-4B140677BC79}" ShortID="729211335">
+								<Sound Name="Cliche_HoverAnimation_3_v2" ID="{5CCEDEDE-1A20-448D-BECD-CB4EF7351E37}" ShortID="451887360">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -127,20 +127,20 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Cliche_HoverAnimation_3_v1" ID="{E34072C6-E633-42AB-B01E-F9FCAB82D15D}">
+										<AudioFileSource Name="Cliche_HoverAnimation_3_v2" ID="{3CE9EC46-0695-45FB-8889-5B1DE60303D4}">
 											<Language>SFX</Language>
-											<AudioFile>Cliche_HoverAnimation_3_v1.wav</AudioFile>
+											<AudioFile>Cliche_HoverAnimation_3_v2.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="23787489"/>
+												<MediaID ID="384752991"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Cliche_HoverAnimation_3_v1" ID="{E34072C6-E633-42AB-B01E-F9FCAB82D15D}" Platform="Linked"/>
+										<ActiveSource Name="Cliche_HoverAnimation_3_v2" ID="{3CE9EC46-0695-45FB-8889-5B1DE60303D4}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Cliche_HoverAnimation_4_v1" ID="{8AACAE52-5780-4090-A947-FD51718B6A26}" ShortID="283498540">
+								<Sound Name="Cliche_HoverAnimation_4_v2" ID="{6F1B6B60-1CFE-42EC-8893-0676A6C24E7C}" ShortID="1046944818">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -150,17 +150,17 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Cliche_HoverAnimation_4_v1" ID="{341103DC-D749-4273-B122-5285E7C64434}">
+										<AudioFileSource Name="Cliche_HoverAnimation_4_v2" ID="{B162CA7D-6496-4564-9ED5-96D645D81680}">
 											<Language>SFX</Language>
-											<AudioFile>Cliche_HoverAnimation_4_v1.wav</AudioFile>
+											<AudioFile>Cliche_HoverAnimation_4_v2.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="577290544"/>
+												<MediaID ID="288070851"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Cliche_HoverAnimation_4_v1" ID="{341103DC-D749-4273-B122-5285E7C64434}" Platform="Linked"/>
+										<ActiveSource Name="Cliche_HoverAnimation_4_v2" ID="{B162CA7D-6496-4564-9ED5-96D645D81680}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -636,7 +636,10 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Text Sound 1_v1" ID="{E925181E-74EA-4D17-90AD-228B7EA224F7}" ShortID="597243450">
+						<Sound Name="Text Sound 1" ID="{4F678E74-6BE5-4BA8-874F-B0E8BA852D1A}" ShortID="1046267587">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -646,27 +649,23 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Text Sound 1_v1" ID="{5ACC5722-8C2E-4038-8A61-BB54DFEBD62C}">
+								<AudioFileSource Name="Text Sound 1" ID="{72978A49-1E7D-4149-B47A-00662051A005}">
 									<Language>SFX</Language>
-									<AudioFile>Text Sound 1_v1.wav</AudioFile>
+									<AudioFile>Text Sound 1.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="897393330"/>
-									</MediaIDList>
-								</AudioFileSource>
-								<AudioFileSource Name="Text Sound 1_v2" ID="{6DD166EF-65B8-4B28-9805-C4D2F541FEFD}">
-									<Language>SFX</Language>
-									<AudioFile>Text Sound 1_v2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="19163811"/>
+										<MediaID ID="974058342"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Text Sound 1_v2" ID="{6DD166EF-65B8-4B28-9805-C4D2F541FEFD}" Platform="Linked"/>
+								<ActiveSource Name="Text Sound 1" ID="{72978A49-1E7D-4149-B47A-00662051A005}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Text Sound 2_v1" ID="{F44003A0-8D38-4768-9AEA-5A7E20D0EF95}" ShortID="1016191918">
+						<Sound Name="Text Sound 2" ID="{E2804C05-29B5-4B78-8685-EF1B98C1E947}" ShortID="264614302">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -676,24 +675,17 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Text Sound 2_v1" ID="{C53C86B5-F600-43DF-907C-F3E80366B090}">
+								<AudioFileSource Name="Text Sound 2" ID="{BBE10555-790E-4830-94A6-D7BB485B1427}">
 									<Language>SFX</Language>
-									<AudioFile>Text Sound 2_v1.wav</AudioFile>
+									<AudioFile>Text Sound 2.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="622411637"/>
-									</MediaIDList>
-								</AudioFileSource>
-								<AudioFileSource Name="Text Sound 2_v2" ID="{1A33BE3C-5210-48BC-9C37-F535339FC6E0}">
-									<Language>SFX</Language>
-									<AudioFile>Text Sound 2_v2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="86519014"/>
+										<MediaID ID="733354389"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Text Sound 2_v2" ID="{1A33BE3C-5210-48BC-9C37-F535339FC6E0}" Platform="Linked"/>
+								<ActiveSource Name="Text Sound 2" ID="{BBE10555-790E-4830-94A6-D7BB485B1427}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -716,7 +708,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1111,6 +1103,65 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Item take Damage_v1" ID="{94D86786-8C49-4BF7-8A37-FF32D4CD1720}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Redcap Ability" ID="{D1E82BBF-E2A9-499F-AF74-147BAFA338F6}" ShortID="418320996">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Redcap Ability_v1" ID="{AB5A5668-AF8C-46CE-9644-643238503A67}">
+									<Language>SFX</Language>
+									<AudioFile>Redcap Ability_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="220711120"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Redcap Ability_v1" ID="{AB5A5668-AF8C-46CE-9644-643238503A67}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Item &amp; Enemy death" ID="{6BAAEFD4-8A13-4A15-B926-B87C72188EF2}" ShortID="637727673">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Item and Enemy Death_v1" ID="{197E4CB6-A06E-407A-9377-9E6CFC9ECD40}">
+									<Language>SFX</Language>
+									<AudioFile>Item and Enemy Death_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="811228173"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Item and Enemy Death_v1" ID="{197E4CB6-A06E-407A-9377-9E6CFC9ECD40}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
