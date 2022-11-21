@@ -38,7 +38,6 @@ public class SystemTextManager : MonoBehaviour
     private static Story _story;
     [SerializeField] private UnityEvent _endEvent;
     [SerializeField] private float _animationTime = 0.5f;
-    [SerializeField] private float _waitTime = 0.1f;
     private string _currentSentence;
     #endregion
     	

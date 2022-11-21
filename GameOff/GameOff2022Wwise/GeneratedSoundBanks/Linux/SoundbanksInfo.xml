@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="984202401">
+		<SoundBank Id="393239870" Language="SFX" Hash="3121711537">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -65,23 +65,23 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1817342604" Name="Play_ClicheHover" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Play_ClicheHover" DurationType="OneShot" DurationMin="0.173152" DurationMax="0.173152">
+				<Event Id="1817342604" Name="Play_ClicheHover" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Play_ClicheHover" DurationType="OneShot" DurationMin="0.097098" DurationMax="0.102449">
 					<IncludedMemoryFiles>
-						<File Id="23787489" Language="SFX">
-							<ShortName>Cliche_HoverAnimation_3_v1.wav</ShortName>
-							<Path>SFX/Cliche_HoverAnimation_3_v1_10C4C929.wem</Path>
+						<File Id="225264234" Language="SFX">
+							<ShortName>Cliche_HoverAnimation_1_v2.wav</ShortName>
+							<Path>SFX/Cliche_HoverAnimation_1_v2_10C4C929.wem</Path>
 						</File>
-						<File Id="273100381" Language="SFX">
-							<ShortName>Cliche_HoverAnimation_2_v1.wav</ShortName>
-							<Path>SFX/Cliche_HoverAnimation_2_v1_10C4C929.wem</Path>
+						<File Id="288070851" Language="SFX">
+							<ShortName>Cliche_HoverAnimation_4_v2.wav</ShortName>
+							<Path>SFX/Cliche_HoverAnimation_4_v2_10C4C929.wem</Path>
 						</File>
-						<File Id="577290544" Language="SFX">
-							<ShortName>Cliche_HoverAnimation_4_v1.wav</ShortName>
-							<Path>SFX/Cliche_HoverAnimation_4_v1_10C4C929.wem</Path>
+						<File Id="384752991" Language="SFX">
+							<ShortName>Cliche_HoverAnimation_3_v2.wav</ShortName>
+							<Path>SFX/Cliche_HoverAnimation_3_v2_10C4C929.wem</Path>
 						</File>
-						<File Id="934060521" Language="SFX">
-							<ShortName>Cliche_HoverAnimation_1_v1.wav</ShortName>
-							<Path>SFX/Cliche_HoverAnimation_1_v1_10C4C929.wem</Path>
+						<File Id="907166050" Language="SFX">
+							<ShortName>Cliche_HoverAnimation_2_v2.wav</ShortName>
+							<Path>SFX/Cliche_HoverAnimation_2_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -98,6 +98,14 @@
 						<File Id="761191295" Language="SFX">
 							<ShortName>Cliche_MovementCancel_v1.wav</ShortName>
 							<Path>SFX/Cliche_MovementCancel_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2720241158" Name="Play_DeathAnimation" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_DeathAnimation" DurationType="OneShot" DurationMin="1.164376" DurationMax="1.164376">
+					<IncludedMemoryFiles>
+						<File Id="811228173" Language="SFX">
+							<ShortName>Item and Enemy Death_v1.wav</ShortName>
+							<Path>SFX/Item and Enemy Death_v1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -146,6 +154,14 @@
 						<File Id="21150305" Language="SFX">
 							<ShortName>Placeholder.wav</ShortName>
 							<Path>SFX/Placeholder_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1011269733" Name="Play_RedcapAbility" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_RedcapAbility" DurationType="OneShot" DurationMin="3.752018" DurationMax="3.752018">
+					<IncludedMemoryFiles>
+						<File Id="220711120" Language="SFX">
+							<ShortName>Redcap Ability_v1.wav</ShortName>
+							<Path>SFX/Redcap Ability_v1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -207,13 +223,13 @@
 				</Event>
 				<Event Id="3036508647" Name="Play_Text" ObjectPath="\Events\Default Work Unit\SFX Events\Text\Play_Text" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="19163811" Language="SFX">
-							<ShortName>Text Sound 1_v2.wav</ShortName>
-							<Path>SFX/Text Sound 1_v2_10C4C929.wem</Path>
+						<File Id="733354389" Language="SFX">
+							<ShortName>Text Sound 2.wav</ShortName>
+							<Path>SFX/Text Sound 2_D79FB2B7.wem</Path>
 						</File>
-						<File Id="86519014" Language="SFX">
-							<ShortName>Text Sound 2_v2.wav</ShortName>
-							<Path>SFX/Text Sound 2_v2_10C4C929.wem</Path>
+						<File Id="974058342" Language="SFX">
+							<ShortName>Text Sound 1.wav</ShortName>
+							<Path>SFX/Text Sound 1_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -294,6 +310,7 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2477713992" Name="Stop_Ambience" ObjectPath="\Events\Default Work Unit\SFX Events\Ambience\Stop_Ambience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="334102883" Name="Stop_RedcapAbility" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Stop_RedcapAbility" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2235615413" Name="Stop_Text" ObjectPath="\Events\Default Work Unit\SFX Events\Text\Stop_Text" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3920142940" Name="Timer" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Timer" DurationType="OneShot" DurationMin="3.000408" DurationMax="3.000408">
 					<IncludedMemoryFiles>
@@ -315,7 +332,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3604582750">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2661386005">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -327,7 +344,7 @@
 				<GameParameter Id="2731583604" Name="AllVolume" ObjectPath="\Game Parameters\Default Work Unit\AllVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX">
+		<SoundBank Id="3991942870" Language="SFX" Hash="2186987517">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>

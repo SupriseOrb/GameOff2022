@@ -24,7 +24,9 @@
 						<ObjectRef Name="Play_ClicheMovement" ID="{5D5D493C-FE88-45B1-94A7-4D665FBA9C23}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_InkDepleted" ID="{4791D040-BCF5-45D2-81DF-465A1F03E0E0}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BramblePatch" ID="{4170ADD7-C828-4601-92CD-162879DCB17D}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_RedcapAbility" ID="{C9105AD8-D0E0-466E-ADB5-AFD6C4C3E610}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Text" ID="{CA166924-74F7-4674-8F30-AA71C2D6B932}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_RedcapAbility" ID="{5CDF75AC-13CD-4678-98CE-F7CFF0FC16C1}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Text" ID="{71AD5968-9025-470D-89C4-ACADEA1552B5}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience" ID="{8D979914-47DE-4831-BAD6-7F5F126143F9}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyTakeDamage" ID="{EF49E9F7-EAAB-484A-9FA2-E1B675DBE616}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
@@ -37,6 +39,7 @@
 						<ObjectRef Name="Cliche_HandCycle" ID="{19029E53-357C-49C1-A219-DB7DBDEB411C}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampSpikeyBush" ID="{D3BEF240-C5B5-4B03-B1EC-231319B1DBDC}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Timer" ID="{CCCF5211-AF10-4B51-BED2-A256C289C5B2}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DeathAnimation" ID="{5FEC9B67-0A5D-4BF3-B84F-BAA3518ED4CC}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ClicheHover" ID="{A5058C67-0EC8-4C1D-97E1-1919B89D0B29}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ClicheMovementCancel" ID="{74AE54F2-D22B-4CF0-BED0-2BE88494B1A4}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampRoughGround" ID="{A09B1EC9-5F4E-4E26-9D70-61BBA686A7C8}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>

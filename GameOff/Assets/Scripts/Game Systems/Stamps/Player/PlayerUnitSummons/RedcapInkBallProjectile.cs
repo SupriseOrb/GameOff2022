@@ -22,7 +22,7 @@ public class RedcapInkBallProjectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AkSoundEngine.PostEvent("Play_Placeholder", gameObject);
+        AkSoundEngine.PostEvent("Play_RedcapAbility",gameObject);
         _projectileRigidbody = GetComponent<Rigidbody2D>(); 
         _projectileRigidbody.velocity = Vector2.right * _projectileMovementSpeed;
         _spriteRotationSpeed = _projectileMovementSpeed * 100;

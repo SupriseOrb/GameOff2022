@@ -39,16 +39,22 @@ public class PauseMenu : Menu
         if (_isPaused.Value && _pauseMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("PauseMenu_IdleOpen"))
         {
             AkSoundEngine.PostEvent("Play_UIResume", this.gameObject);
-            AkSoundEngine.SetRTPCValue("Is_Paused", 0f);
-            AkSoundEngine.PostEvent("Unmute_Ambience", this.gameObject);
-
+            ResumeAudio();
             _isPaused.Value = false;
             _pauseMenuAnimator.Play("PauseMenu_Close");
         }    
     }
 
+    private void ResumeAudio()
+    {
+        AkSoundEngine.SetRTPCValue("Is_Paused", 0f);
+        AkSoundEngine.PostEvent("Unmute_Ambience", this.gameObject);
+    }
+
     public void MainMenu()
     {
+        ResumeAudio();
+        AkSoundEngine.PostEvent("Stop_Ambience", this.gameObject);
         LoadScene(0);
     }
 }
