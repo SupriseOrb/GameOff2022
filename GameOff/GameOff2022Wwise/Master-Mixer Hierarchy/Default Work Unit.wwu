@@ -80,7 +80,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-24</Value>
+										<Value>-20</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{56A1509B-16CA-4311-B254-5FEA969A81C3}" ShortID="802800077">
@@ -109,7 +109,7 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
-								<Property Name="Highpass" Type="int16">
+								<Property Name="Lowpass" Type="int16">
 									<RTPCList>
 										<RTPC Name="" ID="{E92F2B4A-6A71-4641-ABE7-E84C7F14436A}" ShortID="66801339">
 											<ReferenceList>
