@@ -22,6 +22,7 @@ public class RedcapInkBallProjectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AkSoundEngine.PostEvent("Play_Placeholder", gameObject);
         _projectileRigidbody = GetComponent<Rigidbody2D>(); 
         _projectileRigidbody.velocity = Vector2.right * _projectileMovementSpeed;
         _spriteRotationSpeed = _projectileMovementSpeed * 100;
@@ -54,6 +55,7 @@ public class RedcapInkBallProjectile : MonoBehaviour
         //deal damage here
         if(other.gameObject.TryGetComponent(out IEnemy enemy))
         {
+            AkSoundEngine.PostEvent("Play_EnemyTakeDamage", gameObject);
             //If upgrade 2 is active
             if(_projectilePiercingAmt > 0)
             {

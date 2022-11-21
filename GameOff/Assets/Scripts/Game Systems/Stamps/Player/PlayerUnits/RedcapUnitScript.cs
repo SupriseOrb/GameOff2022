@@ -47,6 +47,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     // Start is called before the first frame update
     void Start()
     {
+        AkSoundEngine.PostEvent("Play_StampGeneral", gameObject);
         LoadBaseStats();
         _redcapAttackCooldown = 1 / _redcapAttackSpeed;
         _redcapAnimator.Play(_redcapAppearAnimationName);

@@ -93,6 +93,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
         {
             if(collider.transform.gameObject.TryGetComponent(out IEnemy enemyScript))
             {
+                AkSoundEngine.PostEvent("Play_EnemyTakeDamage", gameObject);
                 enemyScript.TakeDamage(_inkMinionAttackDamage);
             }
         }

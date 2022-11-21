@@ -8,7 +8,8 @@ public class TestLandScript : MonoBehaviour, ILandStamp
 
     public void ActivateStampAbility()
     {
-
+        //I'll need to update this audio post event later - Collin
+        AkSoundEngine.PostEvent("Play_BramblePatch", gameObject);
     }
 
     public void DisableStamp()

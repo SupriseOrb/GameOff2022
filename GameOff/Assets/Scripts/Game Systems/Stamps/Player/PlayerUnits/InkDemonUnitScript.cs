@@ -48,6 +48,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
     // Start is called before the first frame update
     void Start()
     {
+        AkSoundEngine.PostEvent("Play_StampGeneral", gameObject);
         LoadBaseStats();
         _inkDemonAnimator.Play(_inkDemonAppearAnimationName);
     }
