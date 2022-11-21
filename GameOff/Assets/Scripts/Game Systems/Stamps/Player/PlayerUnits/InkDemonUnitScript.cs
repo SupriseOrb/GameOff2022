@@ -84,7 +84,12 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
         }
     }
 
-    public void UpgradeUnit()
+    public void OpenUnitUpgrade()
+    {
+        //Opens the upgrade UI
+    }
+
+    public void UpgradeUnit(int upgradePath)
     {
         //bring up the upgrade menu I think
         if(_currentUpgradePath == InkDemonUpgradePaths.upgradeOne)

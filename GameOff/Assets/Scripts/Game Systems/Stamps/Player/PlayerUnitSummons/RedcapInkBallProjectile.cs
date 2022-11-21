@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class RedcapInkBallProjectile : MonoBehaviour
 {
-    [SerializeField] private Transform _spriteTransform;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Sprite _upgradeBaseSprite;
+    [SerializeField] private Sprite _upgradeOneSprite;
+    [SerializeField] private Sprite _upgradeTwoSprite;
     private float _spriteRotationSpeed;
     [SerializeField] private Vector3 _projectileScale;
     [SerializeField] private float _projectileScaleTime;
@@ -43,7 +46,7 @@ public class RedcapInkBallProjectile : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        _spriteTransform.Rotate(Vector3.back * (_spriteRotationSpeed * Time.deltaTime));
+        _spriteRenderer.gameObject.transform.Rotate(Vector3.back * (_spriteRotationSpeed * Time.deltaTime));
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -88,5 +91,21 @@ public class RedcapInkBallProjectile : MonoBehaviour
     {
         _projectileStunActive = isStunned;
         _projectileStunDuration = duration;
+    }
+
+    public void SetSprite(int upgrade)
+    {
+        switch (upgrade)
+        {
+            case 0:
+                _spriteRenderer.sprite = _upgradeBaseSprite;
+                break;
+            case 1:
+                _spriteRenderer.sprite = _upgradeOneSprite;
+                break;
+            default:
+                _spriteRenderer.sprite = _upgradeTwoSprite;
+                break;
+        }
     }
 }

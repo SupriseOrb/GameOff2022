@@ -24,7 +24,7 @@ public class UnitTile : BoardTile
             else
             {
                 //Upgrade the current unit on the tile
-                _heldStamp.GetComponent<IUnitStamp>().UpgradeUnit();
+                _heldStamp.GetComponent<IUnitStamp>().OpenUnitUpgrade();
                 return true;
             }
         }

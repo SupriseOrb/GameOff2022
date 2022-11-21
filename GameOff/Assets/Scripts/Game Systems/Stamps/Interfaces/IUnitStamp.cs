@@ -7,6 +7,7 @@ public interface IUnitStamp : IStamp
     void ActivateStampAttack();
     void LoadBaseStats();
     string GetUnitName();
-    void UpgradeUnit();
+    void OpenUnitUpgrade();
+    void UpgradeUnit(int upgradePath);
     void SetLane(int lane);
 }
