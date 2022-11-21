@@ -26,7 +26,8 @@ public class BoardTile : MonoBehaviour
             {
                 Destroy(gameObject.transform.GetChild(0));
             }
-            Instantiate(stamp, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+            GameObject createdStamp = Instantiate(stamp, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+            createdStamp.GetComponent<IStamp>().SetLane(_laneNumber);
             return true;
         }
         return false;

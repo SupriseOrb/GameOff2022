@@ -20,16 +20,53 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
 
     [SerializeField] private GameObject _attackTarget;
     [SerializeField] private bool _isStunned = false;
+    [SerializeField] private bool _isDead = false;
     [SerializeField] private Rigidbody2D _soldierRigidBody;
+    [SerializeField] private BoxCollider2D _soldierCollider;
 
     [SerializeField] private float _currentStunDuration;
     [SerializeField] private int _laneNumber;
+    [SerializeField] private Animator _soldierAnimator;
+    [SerializeField] private float _soldierAttackAnimationLength;
+    [SerializeField] private float _soldierWalkAnimationLength;
+    [SerializeField] private float _soldierDieAnimationLength;
+    [SerializeField] private string _soldierAppearAnimationName = "Soldier_Pink_Appear";
+    [SerializeField] private string _soldierAttackAnimationName = "Soldier_Pink_Attack";
+    [SerializeField] private string _soldierWalkAnimationName = "Soldier_Pink_Walk";
+    [SerializeField] private string _soldierDieAnimationName = "Soldier_Pink_Death";
+
+    private void Awake() 
+    {
+        _soldierRigidBody = GetComponent<Rigidbody2D>();    
+        _soldierCollider = GetComponent<BoxCollider2D>();
+    }
 
     private void Start() 
     {
         LoadBaseStats();
-        _soldierRigidBody = GetComponent<Rigidbody2D>();    
-        _soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
+        _isAttacking = true;
+        
+        foreach(AnimationClip clip in _soldierAnimator.runtimeAnimatorController.animationClips)
+        {
+            if(clip.name == _soldierAttackAnimationName)
+            {
+                _soldierAttackAnimationLength = clip.length;
+            }
+            else if(clip.name == _soldierWalkAnimationName)
+            {
+                _soldierWalkAnimationLength = clip.length;
+            }
+            else if(clip.name == _soldierDieAnimationName)
+            {
+                _soldierDieAnimationLength = clip.length;
+            }
+        }
+        _soldierAnimator.SetFloat("WalkSpeedMultiplier", _soldierMovementSpeed / (1/_soldierWalkAnimationLength));
+        if(_soldierAttackSpeed > 1/_soldierAttackAnimationLength)
+        {
+            _soldierAnimator.SetFloat("AttackSpeedMultiplier", _soldierAttackSpeed / (1/_soldierAttackAnimationLength));
+        }
+        _soldierAnimator.Play(_soldierAppearAnimationName);
     }
 
     public void LoadBaseStats()
@@ -55,8 +92,9 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         if(_soldierHealth <= 0)
         {
             BoardManager.Instance.GetLane(_laneNumber).RemoveEnemyFromList(gameObject);
-            //Temp Destroy
-            Destroy(gameObject);
+            _soldierAnimator.Play(_soldierDieAnimationName);
+            _isDead = true;
+            _soldierCollider.enabled = false;
             /*TODO:
                 Disable enemy collider
                 Play death animation
@@ -67,27 +105,40 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
 
     private void FixedUpdate() 
     {
-        if (_isStunned)
+        if(_isDead)
+        {
+            _soldierAnimator.speed = 1;
+            _soldierDieAnimationLength -= Time.deltaTime;
+            if(_soldierDieAnimationLength <= -1)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if (_isStunned)
         {
             _currentStunDuration -= Time.deltaTime;
-            if (_currentStunDuration <= 0)
+            if(_currentStunDuration <= 0)
             {
+                _soldierAnimator.speed = 1;
                 _isStunned = false;
                 _isAttacking = true;
             }
         }
-
-        if(_isAttacking)
+        else if(_isAttacking)
         {
-            if(_attackTarget == null)
-            {
-                _isAttacking = false;
-                _soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
-            }
             if(_soliderAttackCooldown <= 0)
             {
-                ActivateStampAttack();
-                _soliderAttackCooldown = 1 / _soldierAttackSpeed;
+                if(_attackTarget == null)
+                {
+                    _isAttacking = false;
+                    _soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
+                    _soldierAnimator.Play(_soldierWalkAnimationName);
+                }
+                else
+                {
+                    ActivateStampAttack();
+                    _soliderAttackCooldown = 1 / _soldierAttackSpeed;
+                }
             }
             _soliderAttackCooldown -= Time.deltaTime;
         }
@@ -104,6 +155,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     {
         if(_attackTarget != null)
         {
+            _soldierAnimator.Play(_soldierAttackAnimationName);
             _attackTarget.GetComponent<IItemStamp>().TakeDamage(_soldierDamage);
         }
         //Play attack animation
@@ -118,6 +170,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     {
         _isAttacking = false;
         _isStunned = true;
+        _soldierAnimator.speed = 0;
         _soldierRigidBody.velocity = Vector3.zero;
         _currentStunDuration = stunDuration;
     }

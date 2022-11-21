@@ -123,8 +123,8 @@ public class WaveManager : MonoBehaviour
                 {
                     if(_currentEnemySpawns[i] != null)
                     {
-                        Instantiate(_currentEnemySpawns[i], _spawnLocations[i].position, Quaternion.identity);
-                        BoardManager.Instance.GetLane(i).AddEnemyToList(_currentEnemySpawns[i]);
+                        GameObject spawnedEnemy = Instantiate(_currentEnemySpawns[i], _spawnLocations[i].position, Quaternion.identity);
+                        BoardManager.Instance.GetLane(i).AddEnemyToList(spawnedEnemy);
                     }
                 } 
             }

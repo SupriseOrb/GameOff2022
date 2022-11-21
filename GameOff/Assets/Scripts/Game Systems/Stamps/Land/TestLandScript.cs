@@ -12,6 +12,11 @@ public class TestLandScript : MonoBehaviour, ILandStamp
         AkSoundEngine.PostEvent("Play_BramblePatch", gameObject);
     }
 
+    public void SetLane(int laneNumber)
+    {
+
+    }
+
     public void DisableStamp()
     {
 

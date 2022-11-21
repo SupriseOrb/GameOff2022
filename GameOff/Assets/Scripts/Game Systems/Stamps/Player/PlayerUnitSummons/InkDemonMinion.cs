@@ -22,7 +22,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
     [SerializeField] private string _inkMinionAttackAnimationName = "InkDemon_Attack";
     [SerializeField] private string _inkMinionAppearAnimationName = "InkDemon_Appear";
     //Might be needed idk
-    public int _inkMinionLaneNumber;
+    [SerializeField] private int _inkMinionLaneNumber;
 
     // Start is called before the first frame update
     void Start()
@@ -114,6 +114,11 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
                 Destroy after animation completes
             */
         }
+    }
+
+    public void SetLane(int laneNumber)
+    {
+        _inkMinionLaneNumber = laneNumber;
     }
 
     public void DisableStamp()

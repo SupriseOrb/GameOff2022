@@ -9,5 +9,4 @@ public interface IUnitStamp : IStamp
     string GetUnitName();
     void OpenUnitUpgrade();
     void UpgradeUnit(int upgradePath);
-    void SetLane(int lane);
 }

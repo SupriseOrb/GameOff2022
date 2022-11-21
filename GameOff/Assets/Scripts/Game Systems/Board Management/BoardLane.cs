@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BoardLane : MonoBehaviour
 {
-    [SerializeField] private GameObject _currentLaneStamp = null;
-    [SerializeField] private Sprite _currentLaneSprite;
+    [SerializeField] private GameObject _currentLandStamp = null;
+    [SerializeField] private ILandStamp _currentLandStampScript;
+    [SerializeField] private Vector3 _landStampSpawnPosition;
     [SerializeField] private List<GameObject> _laneEnemies;
     [SerializeField] private BoardTile[] _laneTiles;
     [SerializeField] private GameObject[] _laneUnits;
@@ -14,7 +15,7 @@ public class BoardLane : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        _landStampSpawnPosition = new Vector3(gameObject.transform.position.x + 14, gameObject.transform.position.y, gameObject.transform.position.z);
     }
 
     // Update is called once per frame
@@ -24,23 +25,24 @@ public class BoardLane : MonoBehaviour
     }
 
     //Called when user places down an lane stamp
-    public void ApplyLaneStamp(GameObject laneStamp)
+    public void ApplyLandStamp(GameObject landStamp)
     {
         //kill all enemies in the lane
-        _currentLaneStamp = laneStamp;
+        _currentLandStamp = Instantiate(landStamp, _landStampSpawnPosition, Quaternion.identity, gameObject.transform);
+        _currentLandStampScript = _currentLandStamp.GetComponent<ILandStamp>();
         //_currentLaneSprite = how to get the SO info?
-        foreach(GameObject enemy in _laneEnemies)
+        for(int i = _laneEnemies.Count - 1; i >= 0; i--)
         {
-            enemy.GetComponent<IEnemy>().TakeDamage(1000);
+            _laneEnemies[i].GetComponent<IEnemy>().TakeDamage(1000);
         }
         _laneEnemies.Clear();
     }
 
     //called at the start of a wave
-    public void RemoveLaneStamp()
+    public void RemoveLandStamp()
     {
-        _currentLaneStamp = null;
-        _currentLaneSprite = null;
+        Destroy(_currentLandStamp);
+        _currentLandStampScript = null;
     }
 
     public void AddEnemyToList(GameObject enemy)

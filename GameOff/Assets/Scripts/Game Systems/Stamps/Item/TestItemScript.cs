@@ -33,6 +33,11 @@ public class TestItemScript : MonoBehaviour , IItemStamp
     
     }
 
+    public void SetLane(int laneNumber)
+    {
+        
+    }
+
     public void EnableStamp()
     {
 

@@ -275,8 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b3fcc54fbe5a640a9aca2fd7c75c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentLaneStamp: {fileID: 0}
-  _currentLaneSprite: {fileID: 0}
+  _currentLandStamp: {fileID: 0}
+  _landStampSpawnPosition: {x: 0, y: 0, z: 0}
   _laneEnemies: []
   _laneTiles:
   - {fileID: 4365034427643399917}
@@ -346,8 +346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b3fcc54fbe5a640a9aca2fd7c75c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentLaneStamp: {fileID: 0}
-  _currentLaneSprite: {fileID: 0}
+  _currentLandStamp: {fileID: 0}
+  _landStampSpawnPosition: {x: 0, y: 0, z: 0}
   _laneEnemies: []
   _laneTiles:
   - {fileID: 4365034427596686134}
@@ -3734,16 +3734,19 @@ MonoBehaviour:
   - {fileID: 1858233533}
   - {fileID: 666406589}
   - {fileID: 1779245666}
+  _isInWave: {fileID: 11400000, guid: 8f4a5478ae728304a813c62d9be70350, type: 2}
   _currentWave: {fileID: 0}
   _currentEnemySpawns: []
   _currentWaveIndex: 0
+  _isInWaveValueDebug: 0
   _baseWaveDuration: 0
   _currentWaveDuration: 0
   _currentWaveTime: 0
+  _previousWaveTime: 0
   _baseWaveBreakDuration: 0
   _currentWaveBreakDuration: 0
-  _isInWave: {fileID: 11400000, guid: 8f4a5478ae728304a813c62d9be70350, type: 2}
   _addedSpawnCorrectly: 0
+  _levelFinished: 0
 --- !u!1 &4365034428043049832
 GameObject:
   m_ObjectHideFlags: 0
@@ -3799,12 +3802,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b3fcc54fbe5a640a9aca2fd7c75c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentLaneStamp: {fileID: 0}
-  _currentLaneSprite: {fileID: 0}
-  _laneEnemies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _currentLandStamp: {fileID: 0}
+  _landStampSpawnPosition: {x: 0, y: 0, z: 0}
+  _laneEnemies: []
   _laneTiles:
   - {fileID: 4365034426936585603}
   - {fileID: 4365034427063251881}

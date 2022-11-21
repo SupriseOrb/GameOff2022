@@ -98,7 +98,7 @@ public class InputManager : MonoBehaviour
                 else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.LAND)
                 {
                     BoardLane boardLane = BoardManager.Instance.GetLane(boardTile._laneNumber);
-                    boardLane.ApplyLaneStamp(_selectedCard.CardSO.StampGO);
+                    boardLane.ApplyLandStamp(_selectedCard.CardSO.StampGO);
                     Debug.Log("Placed Land " + _selectedCard + " onto BoardLane!");
                     DeckManager.Instance.ResetCardSelection();
                 }
