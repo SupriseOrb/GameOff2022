@@ -16,5 +16,6 @@ public class MainMenu : Menu
     public void StartGame()
     {
         LoadScene(1);
+        
     }
 }

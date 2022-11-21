@@ -20,6 +20,13 @@
 						<State Name="Battle_Intensity_3" ID="{F5404297-96CB-4787-B9FF-BB405B4A8E8B}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Ambience_states" ID="{15F33CAD-23F8-48F3-A4AB-9E7FC70A61A4}">
+					<ChildrenList>
+						<State Name="None" ID="{336F76E2-B0BE-40EF-B868-0EF257228F7A}"/>
+						<State Name="Ambience_1" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
+						<State Name="Ambience_2" ID="{E9BDBE55-1810-4124-816D-F965D36E5D5C}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

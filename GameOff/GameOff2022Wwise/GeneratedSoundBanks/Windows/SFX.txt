@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	173327921	Play_Placeholder			\Default Work Unit\SFX Events\Play_Placeholder	
 	235035089	Play_UIResume			\Default Work Unit\SFX Events\Menu UI\Play_UIResume	
+	278617630	Play_Ambience			\Default Work Unit\SFX Events\Ambience\Play_Ambience	
 	289833391	Play_InkDepleted			\Default Work Unit\SFX Events\Ink\Play_InkDepleted	
 	377318551	Play_WaveStart			\Default Work Unit\SFX Events\Combat\Play_WaveStart	
 	400957009	Play_ItemTakeDamage			\Default Work Unit\SFX Events\Combat\Play_ItemTakeDamage	
@@ -15,6 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2235615413	Stop_Text			\Default Work Unit\SFX Events\Text\Stop_Text	
 	2266250969	Play_StampGeneral			\Default Work Unit\SFX Events\Stamps\Play_StampGeneral	
 	2448762110	Play_StampPotion			\Default Work Unit\SFX Events\Stamps\Play_StampPotion	
+	2477713992	Stop_Ambience			\Default Work Unit\SFX Events\Ambience\Stop_Ambience	
 	2502251926	Play_UIHover			\Default Work Unit\SFX Events\Menu UI\Play_UIHover	
 	2666091979	Play_StampRoughGround			\Default Work Unit\SFX Events\Stamps\Play_StampRoughGround	
 	2719045197	Pay_UISlider			\Default Work Unit\SFX Events\Menu UI\Pay_UISlider	
@@ -25,9 +27,19 @@ Event	ID	Name			Wwise Object Path	Notes
 	3212791047	Play_ClicheMovementCancel			\Default Work Unit\SFX Events\Cliche UI\Play_ClicheMovementCancel	
 	3559121215	Cliche_HandCycle			\Default Work Unit\SFX Events\Cliche UI\Cliche_HandCycle	
 	3703192648	Play_UISelect			\Default Work Unit\SFX Events\Menu UI\Play_UISelect	
+	3851911629	Mute_Ambience			\Default Work Unit\SFX Events\Ambience\Mute_Ambience	
 	3893200314	Play_StampSpikeyBush			\Default Work Unit\SFX Events\Stamps\Play_StampSpikeyBush	
 	3920142940	Timer			\Default Work Unit\SFX Events\Cliche UI\Timer	
+	4159098002	Unmute_Ambience			\Default Work Unit\SFX Events\Ambience\Unmute_Ambience	
 	4293477421	Play_InkReservoir			\Default Work Unit\SFX Events\Stamps\Play_InkReservoir	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1768843490	Ambience_states			\Default Work Unit\Ambience_states	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Ambience_states			
+	1625584349	Ambience_1	Ambience_states			
+	1625584350	Ambience_2	Ambience_states			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	3597688	MenuUI_Hover_Eb_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\MenuUI_Hover_Eb_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_Eb_v1		10742
@@ -45,6 +57,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	273100381	Cliche_HoverAnimation_2_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Cliche_HoverAnimation_2_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_2_v1		15336
 	273270463	Enemy Take Damage_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Enemy Take Damage_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Enemy Take Damage_v1		21656
 	276893809	Pause	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\MenuUI_Pause_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Pause		46426
+	287838291	Ambience Loop 1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Ambience Loop 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Ambience_States\Ambience_Loop_1\Ambience Loop 1\Ambience Loop 1		27375004
+	353146256	Ambience Loop 2 (wind)	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Ambience Loop 2 (wind)_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Ambience_States\Ambience_Loop_2\Ambience Loop 2 (wind)\Ambience Loop 2 (wind)		17896984
 	357140707	Unit Stamp	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Unit Stamp		81752
 	366129106	Spikey Bush Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Spikey Bush Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Spikey Bush Stamp_v1		52180
 	370467919	Potion Item Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Potion Item Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Potion Item Stamp_v1		235284

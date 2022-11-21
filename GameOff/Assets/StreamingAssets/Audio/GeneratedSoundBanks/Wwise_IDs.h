@@ -15,7 +15,9 @@ namespace AK
     {
         static const AkUniqueID CLICHE_HANDCYCLE = 3559121215U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID MUTE_AMBIENCE = 3851911629U;
         static const AkUniqueID PAY_UISLIDER = 2719045197U;
+        static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_BRAMBLEPATCH = 1584037851U;
         static const AkUniqueID PLAY_CLICHEHOVER = 1817342604U;
         static const AkUniqueID PLAY_CLICHEMOVEMENT = 1396175505U;
@@ -41,12 +43,26 @@ namespace AK
         static const AkUniqueID PLAY_UISELECT = 3703192648U;
         static const AkUniqueID PLAY_UPGRADE = 2062295234U;
         static const AkUniqueID PLAY_WAVESTART = 377318551U;
+        static const AkUniqueID STOP_AMBIENCE = 2477713992U;
         static const AkUniqueID STOP_TEXT = 2235615413U;
         static const AkUniqueID TIMER = 3920142940U;
+        static const AkUniqueID UNMUTE_AMBIENCE = 4159098002U;
     } // namespace EVENTS
 
     namespace STATES
     {
+        namespace AMBIENCE_STATES
+        {
+            static const AkUniqueID GROUP = 1768843490U;
+
+            namespace STATE
+            {
+                static const AkUniqueID AMBIENCE_1 = 1625584349U;
+                static const AkUniqueID AMBIENCE_2 = 1625584350U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace AMBIENCE_STATES
+
         namespace BATTLE_INTENSITY
         {
             static const AkUniqueID GROUP = 851019197U;
@@ -79,6 +95,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID ALLVOLUME = 2731583604U;
+        static const AkUniqueID AMBIENCEVOLUME = 1204480359U;
         static const AkUniqueID IS_PAUSED = 316213210U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID SFXVOLUME = 988953028U;

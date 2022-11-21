@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX">
+		<SoundBank Id="393239870" Language="SFX" Hash="1779509395">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -24,6 +24,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3851911629" Name="Mute_Ambience" ObjectPath="\Events\Default Work Unit\SFX Events\Ambience\Mute_Ambience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2719045197" Name="Pay_UISlider" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Pay_UISlider" DurationType="OneShot" DurationMin="0.138073" DurationMax="0.138073">
 					<IncludedMemoryFiles>
 						<File Id="657855576" Language="SFX">
@@ -31,6 +32,30 @@
 							<Path>SFX/MenuUI_Slider_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\SFX Events\Ambience\Play_Ambience" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="287838291" Language="SFX">
+							<ShortName>Ambience Loop 1.wav</ShortName>
+							<Path>SFX/Ambience Loop 1_D79FB2B7.wem</Path>
+						</File>
+						<File Id="353146256" Language="SFX">
+							<ShortName>Ambience Loop 2 (wind).wav</ShortName>
+							<Path>SFX/Ambience Loop 2 (wind)_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{E9BDBE55-1810-4124-816D-F965D36E5D5C}">
+							<Media>
+								<File Id="353146256"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{CC158771-B0EB-4744-A788-5B07A6460296}">
+							<Media>
+								<File Id="287838291"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 				<Event Id="1584037851" Name="Play_BramblePatch" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_BramblePatch" DurationType="OneShot" DurationMin="0.597732" DurationMax="0.597732">
 					<IncludedMemoryFiles>
@@ -268,6 +293,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2477713992" Name="Stop_Ambience" ObjectPath="\Events\Default Work Unit\SFX Events\Ambience\Stop_Ambience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2235615413" Name="Stop_Text" ObjectPath="\Events\Default Work Unit\SFX Events\Text\Stop_Text" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3920142940" Name="Timer" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Timer" DurationType="OneShot" DurationMin="3.000408" DurationMax="3.000408">
 					<IncludedMemoryFiles>
@@ -277,15 +303,26 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4159098002" Name="Unmute_Ambience" ObjectPath="\Events\Default Work Unit\SFX Events\Ambience\Unmute_Ambience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
+			<StateGroups>
+				<StateGroup Id="1768843490" Name="Ambience_states" ObjectPath="\States\Default Work Unit\Ambience_states" GUID="{15F33CAD-23F8-48F3-A4AB-9E7FC70A61A4}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Ambience_states\None" GUID="{336F76E2-B0BE-40EF-B868-0EF257228F7A}"/>
+						<State Id="1625584349" Name="Ambience_1" ObjectPath="\States\Default Work Unit\Ambience_states\Ambience_1" GUID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
+						<State Id="1625584350" Name="Ambience_2" ObjectPath="\States\Default Work Unit\Ambience_states\Ambience_2" GUID="{E9BDBE55-1810-4124-816D-F965D36E5D5C}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2583376276">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3604582750">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<GameParameters>
 				<GameParameter Id="316213210" Name="Is_Paused" ObjectPath="\Game Parameters\Default Work Unit\Is_Paused"/>
 				<GameParameter Id="988953028" Name="SFXVolume" ObjectPath="\Game Parameters\Default Work Unit\SFXVolume"/>
+				<GameParameter Id="1204480359" Name="AmbienceVolume" ObjectPath="\Game Parameters\Default Work Unit\AmbienceVolume"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\MusicVolume"/>
 				<GameParameter Id="2731583604" Name="AllVolume" ObjectPath="\Game Parameters\Default Work Unit\AllVolume"/>
 			</GameParameters>

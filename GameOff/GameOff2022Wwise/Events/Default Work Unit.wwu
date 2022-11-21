@@ -358,62 +358,61 @@
 										<Action Name="" ID="{0718F1CF-513D-4399-B588-EE2B5659D9C8}" ShortID="321037072">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Ambience Loop 1" ID="{FC8D75F1-6896-42A4-AB77-34AD27DB23C7}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+													<ObjectRef Name="Ambience_States" ID="{0CB55472-4306-4866-8E6E-1595AAE43024}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
-										<Action Name="" ID="{DEBDF49A-6E4D-4721-AB70-E2324C0C3460}" ShortID="76400748">
+										<Action Name="" ID="{CA534647-F3D6-4642-BDB7-C94658276C69}" ShortID="37161785">
 											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="ActionType" Type="int16" Value="38"/>
+												<Property Name="GameParameterValue" Type="Real64" Value="100"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Ambience Loop 2 (wind)" ID="{345822E2-90B7-44F5-B454-C5BC0556F200}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+													<ObjectRef Name="AmbienceVolume" ID="{003FB62E-3072-4B7E-BFF0-F8A957BFB63E}" WorkUnitID="{9B49F9C4-C032-4014-AC8A-C0ECD3D54925}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Stop_AllAmbience" ID="{721CD5A3-A45C-489B-838D-5A8A2FCB50F9}">
+								<Event Name="Mute_Ambience" ID="{721CD5A3-A45C-489B-838D-5A8A2FCB50F9}">
 									<ChildrenList>
 										<Action Name="" ID="{DC97A81B-1DF0-4A39-8387-E70F07C5E5E4}" ShortID="990665726">
 											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="ActionType" Type="int16" Value="38"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Ambience Loop 1" ID="{FC8D75F1-6896-42A4-AB77-34AD27DB23C7}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-										<Action Name="" ID="{4C731AC4-4E76-48D5-97D6-E796A70A8C22}" ShortID="69959249">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="2"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Ambience Loop 2 (wind)" ID="{345822E2-90B7-44F5-B454-C5BC0556F200}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+													<ObjectRef Name="AmbienceVolume" ID="{003FB62E-3072-4B7E-BFF0-F8A957BFB63E}" WorkUnitID="{9B49F9C4-C032-4014-AC8A-C0ECD3D54925}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Play_Wind" ID="{80CA8BB2-3525-4D5E-845D-F68E14235F9D}">
+								<Event Name="Stop_Ambience" ID="{3A128923-861C-428D-8C06-84569EC2B2F9}">
 									<ChildrenList>
-										<Action Name="" ID="{78FFD001-E184-41EF-B5BC-85454FE365D5}" ShortID="733602225">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Ambience Loop 2 (wind)" ID="{345822E2-90B7-44F5-B454-C5BC0556F200}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-										<Action Name="" ID="{CFBB8AA4-F3A6-4B59-BE0B-C61C44F73DD5}" ShortID="1004620821">
+										<Action Name="" ID="{0E318201-EDBC-47E6-9756-836F513B6543}" ShortID="1061207510">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Ambience Loop 1" ID="{FC8D75F1-6896-42A4-AB77-34AD27DB23C7}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+													<ObjectRef Name="Ambience_States" ID="{0CB55472-4306-4866-8E6E-1595AAE43024}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Unmute_Ambience" ID="{4C7BBD87-F4AB-4057-974F-7B5B80B34D41}">
+									<ChildrenList>
+										<Action Name="" ID="{692DB089-5A42-4AE1-84E9-ADD9E07B1F61}" ShortID="486075169">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="38"/>
+												<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="AmbienceVolume" ID="{003FB62E-3072-4B7E-BFF0-F8A957BFB63E}" WorkUnitID="{9B49F9C4-C032-4014-AC8A-C0ECD3D54925}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

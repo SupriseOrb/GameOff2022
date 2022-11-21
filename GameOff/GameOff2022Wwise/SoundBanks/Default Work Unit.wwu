@@ -12,7 +12,9 @@
 				</SoundBank>
 				<SoundBank Name="SFX" ID="{E9B23D65-894B-4188-BCA2-AF7B46D34DAA}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Unmute_Ambience" ID="{4C7BBD87-F4AB-4057-974F-7B5B80B34D41}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Pay_UISlider" ID="{966CD5B5-C917-427C-9145-4B1AF451EA57}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Ambience" ID="{3A128923-861C-428D-8C06-84569EC2B2F9}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIBack" ID="{D77C439C-E288-42F0-8B90-E5370FB9BB59}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIPause" ID="{529A7150-D0F0-4354-A940-4080C67090F2}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Upgrade" ID="{A2A2D83C-274D-4408-B0CF-C85BDB6313BA}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
@@ -24,8 +26,10 @@
 						<ObjectRef Name="Play_BramblePatch" ID="{4170ADD7-C828-4601-92CD-162879DCB17D}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Text" ID="{CA166924-74F7-4674-8F30-AA71C2D6B932}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Text" ID="{71AD5968-9025-470D-89C4-ACADEA1552B5}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambience" ID="{8D979914-47DE-4831-BAD6-7F5F126143F9}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyTakeDamage" ID="{EF49E9F7-EAAB-484A-9FA2-E1B675DBE616}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampGeneral" ID="{B0323596-6BE7-4874-838D-899071D4DC57}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Mute_Ambience" ID="{721CD5A3-A45C-489B-838D-5A8A2FCB50F9}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIHover" ID="{DA8A0EE9-F0D7-48B2-976A-53FC0D2C6BC3}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_InkReservoir" ID="{77D73884-32FD-48FA-BC75-505AE4D159FF}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIResume" ID="{56C6ACD0-ECD0-490C-AFF4-BF7ED0FBD2F1}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>

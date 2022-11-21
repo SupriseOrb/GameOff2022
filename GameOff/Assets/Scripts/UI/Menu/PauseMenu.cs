@@ -17,6 +17,8 @@ public class PauseMenu : Menu
 
         AkSoundEngine.SetState("Music_State", "Battle");
         AkSoundEngine.SetState("Battle_Intensity", "Battle_Intensity_1");
+        AkSoundEngine.SetState("Ambience_states", "Ambience_1");
+        AkSoundEngine.PostEvent("Play_Ambience", this.gameObject);
     }
     public void PauseGame()
     {
@@ -24,6 +26,7 @@ public class PauseMenu : Menu
         {
             AkSoundEngine.PostEvent("Play_UIPause", this.gameObject);
             AkSoundEngine.SetRTPCValue("Is_Paused", 100f);
+            AkSoundEngine.PostEvent("Mute_Ambience", this.gameObject);
 
             _isPaused.Value = true;
             _pauseMenuAnimator.Play("PauseMenu_Open");
@@ -37,6 +40,7 @@ public class PauseMenu : Menu
         {
             AkSoundEngine.PostEvent("Play_UIResume", this.gameObject);
             AkSoundEngine.SetRTPCValue("Is_Paused", 0f);
+            AkSoundEngine.PostEvent("Unmute_Ambience", this.gameObject);
 
             _isPaused.Value = false;
             _pauseMenuAnimator.Play("PauseMenu_Close");

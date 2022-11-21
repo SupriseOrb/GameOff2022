@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{5B07742B-CB03-4145-B55D-6EC9EDADD7BA}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{5B07742B-CB03-4145-B55D-6EC9EDADD7BA}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{5B07742B-CB03-4145-B55D-6EC9EDADD7BA}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Ambience Testing" ID="{500D6DC5-5C6C-4B9B-9A18-1F92692B2F34}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Ambience" ID="{8D979914-47DE-4831-BAD6-7F5F126143F9}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Mute_Ambience" ID="{721CD5A3-A45C-489B-838D-5A8A2FCB50F9}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Is_Paused" ID="{B0CAEB18-E3DB-416E-938A-4C7FFA46563C}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="AllVolume" ID="{7E7B122A-9145-4910-8BC9-8083DEF38723}"/>
+							<Value>71.7852684144819</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SFXVolume" ID="{0624FF16-60E5-4B3E-9A98-E0102DB7D98A}"/>
+							<Value>70</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="AmbienceVolume" ID="{003FB62E-3072-4B7E-BFF0-F8A957BFB63E}"/>
+							<Value>1.11633116878862E-315</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="MusicVolume" ID="{4A1D2C2F-0D27-4F7F-9D44-856492FCC85C}"/>
+							<Value>70.1622971285893</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{5DAF9D39-F78C-4534-88E1-7C4E679CD931}"/>
+						<CurrentStateRef Name="None" ID="{4D3AD3D2-3F6E-45DE-BDCD-44AA57EF0333}"/>
+						<CurrentStateRef Name="Ambience_2" ID="{E9BDBE55-1810-4124-816D-F965D36E5D5C}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

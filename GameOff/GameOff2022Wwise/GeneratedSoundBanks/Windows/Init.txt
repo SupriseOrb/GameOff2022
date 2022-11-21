@@ -1,5 +1,6 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	851019197	Battle_Intensity			\Default Work Unit\Battle_Intensity	
+	1768843490	Ambience_states			\Default Work Unit\Ambience_states	
 	3826569560	Music_State			\Default Work Unit\Music_State	
 
 State	ID	Name	State Group			Notes
@@ -7,6 +8,9 @@ State	ID	Name	State Group			Notes
 	2723048505	Battle_Intensity_1	Battle_Intensity			
 	2723048506	Battle_Intensity_2	Battle_Intensity			
 	2723048507	Battle_Intensity_3	Battle_Intensity			
+	748895195	None	Ambience_states			
+	1625584349	Ambience_1	Ambience_states			
+	1625584350	Ambience_2	Ambience_states			
 	221232726	Lose	Music_State			
 	748895195	None	Music_State			
 	979765101	Win	Music_State			
@@ -19,6 +23,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	
 	841620460	Concrete			\Factory Acoustic Textures\Textures\Concrete	
 	988953028	SFXVolume			\Default Work Unit\SFXVolume	
+	1204480359	AmbienceVolume			\Default Work Unit\AmbienceVolume	
 	1755085759	Wood_Deep			\Factory Acoustic Textures\Textures\Wood_Deep	
 	1873957695	Anechoic			\Factory Acoustic Textures\Textures\Anechoic	
 	1970351858	Fabric			\Factory Acoustic Textures\Textures\Fabric	

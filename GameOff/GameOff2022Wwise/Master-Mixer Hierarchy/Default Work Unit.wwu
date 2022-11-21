@@ -141,6 +141,36 @@
 							<ObjectLists/>
 						</Bus>
 						<Bus Name="Ambience" ID="{0CAED3A4-89D2-46DB-B78E-2BBF48FFA4F2}">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{CB5C1685-AAA3-42C3-8FD6-0C2CB3F39B74}" ShortID="681301292">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="AmbienceVolume" ID="{003FB62E-3072-4B7E-BFF0-F8A957BFB63E}" WorkUnitID="{9B49F9C4-C032-4014-AC8A-C0ECD3D54925}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{B00D51A6-4A2E-4346-806A-91DA5162A766}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
 							<ObjectLists/>
 						</Bus>
 					</ChildrenList>
