@@ -111,7 +111,7 @@ public class InputManager : MonoBehaviour
         //Need to test to see if having this be checked only on "performed" is actually getting the value consistently
         _mousePositionScreen = context.ReadValue<Vector2>();
         _mousePositionWorld = Camera.main.ScreenToWorldPoint(_mousePositionScreen);
-        _spriteDrag.Move(_mousePositionWorld);
+        _spriteDrag.Move(new Vector3(_mousePositionWorld.x, _mousePositionWorld.y, 0f));
     }
 
     /*
