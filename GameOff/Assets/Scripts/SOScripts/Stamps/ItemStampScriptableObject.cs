@@ -6,18 +6,18 @@ using UnityEngine;
 public class ItemStampScriptableObject : StampScriptableObject
 {
     #region SO Backing Fields
-    [SerializeField] private GameObject _spawnedItem;
-    [SerializeField] private IStamp _stampAbilityScript;
+    [SerializeField] private float _itemStampValue;
+    [SerializeField] private float _itemCooldown;
     #endregion
 
     #region SO Getters
-    public GameObject SpawnedItem
+    public float ItemStampValue
     {
-        get {return _spawnedItem;}
-    } 
-    public IStamp StampAbilityScript
+        get {return _itemStampValue;}
+    }
+    public float ItemCooldown
     {
-        get {return _stampAbilityScript;}
+        get {return _itemCooldown;}
     }
     #endregion
 

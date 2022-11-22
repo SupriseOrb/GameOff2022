@@ -6,7 +6,6 @@ public class StampScriptableObject : ScriptableObject
 {
     #region SO Backing Fields
     [SerializeField] private string _stampName;
-    [SerializeField] private int _stampCost;
     [SerializeField] private Sprite _stampSprite;
     [SerializeField] private int _stampHealth;
     #endregion
@@ -15,11 +14,6 @@ public class StampScriptableObject : ScriptableObject
     public string StampName
     {
         get {return _stampName;}
-    }
-
-    public int StampCost
-    {
-        get {return _stampCost;}
     }
 
     public Sprite StampSprite

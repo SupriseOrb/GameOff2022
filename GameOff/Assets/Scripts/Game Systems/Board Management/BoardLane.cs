@@ -80,6 +80,11 @@ public class BoardLane : MonoBehaviour
         return _laneEnemies;
     }
 
+    public GameObject CurrentLandStamp
+    {
+        get {return _currentLandStamp;}
+    }
+
     //Keeping track of player units inside of a lane just in case we need to access them    
     public void SetLaneUnit(GameObject unit, int tileNumber)
     {
