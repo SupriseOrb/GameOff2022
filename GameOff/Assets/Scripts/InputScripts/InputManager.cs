@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private Vector3 _mousePositionWorld;
     [SerializeField] private CardScriptLoader _selectedCard;
     [SerializeField] private SpriteDrag _spriteDrag;
+    [SerializeField] private LayerMask _layerMask;
     private Ray2D _raycast;
     private RaycastHit2D _raycastHit;
 
@@ -71,7 +72,7 @@ public class InputManager : MonoBehaviour
         _selectedCard = DeckManager.Instance.SelectedCard;
         if (_spriteDrag.IsDragging) //Need to figure out how we're getting _selectedCard
         {
-            _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
+            _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f, _layerMask);
 
             if (_raycastHit.collider == null) //If no collider on click
             {
