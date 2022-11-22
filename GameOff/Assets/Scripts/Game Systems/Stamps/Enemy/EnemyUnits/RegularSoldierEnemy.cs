@@ -109,7 +109,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         {
             _soldierAnimator.speed = 1;
             _soldierDieAnimationLength -= Time.deltaTime;
-            if(_soldierDieAnimationLength <= -1)
+            if(_soldierDieAnimationLength < 0)
             {
                 Destroy(gameObject);
             }
@@ -128,7 +128,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         {
             if(_soliderAttackCooldown <= 0)
             {
-                if(_attackTarget == null)
+                if(_attackTarget == null || !_attackTarget.TryGetComponent<BoxCollider2D>(out BoxCollider2D collider))
                 {
                     _isAttacking = false;
                     _soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;

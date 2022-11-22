@@ -29,8 +29,13 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private float _currentInkDemonAbilityCooldown;
     //[SerializeField] private Transform _inkProjectileSpawnLocation;
     [SerializeField] private Animator _inkDemonAnimator;
-    [SerializeField] private string _inkDemonAttackAnimationName = "InkDemon_Attack";
-    [SerializeField] private string _inkDemonAppearAnimationName = "InkDemon_Appear";
+    [SerializeField] private string _inkDemonGreenAttackAnimationName = "InkDemon_Green_Attack";
+    [SerializeField] private string _inkDemonGreenAppearAnimationName = "InkDemon_Green_Appear";
+    [SerializeField] private string _inkDemonBlueAttackAnimationName = "InkDemon_Blue_Attack";
+    [SerializeField] private string _inkDemonBlueAppearAnimationName = "InkDemon_Blue_Appear";
+    [SerializeField] private string _inkDemonRedAttackAnimationName = "InkDemon_Red_Attack";
+    [SerializeField] private string _inkDemonRedAppearAnimationName = "InkDemon_Red_Appear";
+    [SerializeField] private float _inkMinionAttackAnimationLength;
     //Just in case we need this value (unlikely for redcap but necessary for ink demon)
     [SerializeField] private int _inkDemonLaneNumber;
     [SerializeField] private List<InkDemonMinion> _activeMinions;
@@ -49,7 +54,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
     {
         AkSoundEngine.PostEvent("Play_StampGeneral", gameObject);
         LoadBaseStats();
-        _inkDemonAnimator.Play(_inkDemonAppearAnimationName);
+        _inkDemonAnimator.Play(_inkDemonGreenAppearAnimationName);
     }
 
     public void LoadBaseStats()
@@ -100,7 +105,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
         //Random Upgradable Stats: Minion Attack, Minion Attack Speed, Ink Minion Health, Slow Duration(depending on upgrade path)
         foreach(InkDemonMinion inkMinion in _activeMinions)
         {
-            inkMinion.UpdateMinionStats(_inkMinionHealth, _inkMinionAttackSpeed, _inkMinionDamage, _inkMinionDeathDamageMultiplier, _inkMinionSlowAmount, _inkMinionSlowDuration, _inkDemonLaneNumber);
+            inkMinion.UpdateMinionStats(_currentUpgradePath, _inkMinionHealth, _inkMinionAttackSpeed, _inkMinionDamage, _inkMinionDeathDamageMultiplier, _inkMinionSlowAmount, _inkMinionSlowDuration, _inkDemonLaneNumber);
         }
     }
 
@@ -135,19 +140,33 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
         {
             _summonTile.SetHeldStamp(_inkMinionPrefab);
             _activeMinions.Insert(0, _summonTile.GetHeldStamp().GetComponent<InkDemonMinion>());
-            _activeMinions[0].UpdateMinionStats(_inkMinionHealth, _inkMinionAttackSpeed, _inkMinionDamage, laneNumber: _inkDemonLaneNumber); //Set its stats based on its upgrades
-            _inkDemonAnimator.Play(_inkDemonAttackAnimationName);
+            _activeMinions[0].UpdateMinionStats(_currentUpgradePath, _inkMinionHealth, _inkMinionAttackSpeed, _inkMinionDamage, laneNumber: _inkDemonLaneNumber); //Set its stats based on its upgrades
+            _inkDemonAnimator.Play(_inkDemonGreenAttackAnimationName);
         }
     }
 
     private void UpgradeOneAbilityHelper()
     {
-        
+        _summonTile = BoardManager.Instance.GetLane(_inkDemonLaneNumber).GetNearestFreeTile();
+        if(_summonTile != null)
+        {
+            _summonTile.SetHeldStamp(_inkMinionPrefab);
+            _activeMinions.Insert(0, _summonTile.GetHeldStamp().GetComponent<InkDemonMinion>());
+            _activeMinions[0].UpdateMinionStats(_currentUpgradePath, _inkMinionHealth, _inkMinionAttackSpeed, _inkMinionDamage, 4, 5, _inkDemonLaneNumber); //Set its stats based on its upgrades
+            _inkDemonAnimator.Play(_inkDemonBlueAttackAnimationName);
+        }
     }
 
     private void UpgradeTwoAbilityHelper()
     {
-        
+        _summonTile = BoardManager.Instance.GetLane(_inkDemonLaneNumber).GetNearestFreeTile();
+        if(_summonTile != null)
+        {
+            _summonTile.SetHeldStamp(_inkMinionPrefab);
+            _activeMinions.Insert(0, _summonTile.GetHeldStamp().GetComponent<InkDemonMinion>());
+            _activeMinions[0].UpdateMinionStats(_currentUpgradePath, _inkMinionHealth, _inkMinionAttackSpeed, _inkMinionDamage, laneNumber: _inkDemonLaneNumber); //Set its stats based on its upgrades
+            _inkDemonAnimator.Play(_inkDemonRedAttackAnimationName);
+        }
     }
 
 #endregion
