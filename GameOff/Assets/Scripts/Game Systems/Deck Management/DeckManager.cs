@@ -186,7 +186,7 @@ public class DeckManager : MonoBehaviour
 
     public void UpdateInkBar()
     {
-        _inkBar.value = _currentInk/_maxInk;
+        _inkBar.value = (float)_currentInk/_maxInk;
         _inkText.text = "" + _currentInk;
     }
 
