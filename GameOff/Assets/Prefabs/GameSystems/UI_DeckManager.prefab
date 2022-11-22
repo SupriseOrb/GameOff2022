@@ -1374,7 +1374,7 @@ GameObject:
   - component: {fileID: 4354047173843501280}
   - component: {fileID: 4354047173843501284}
   m_Layer: 5
-  m_Name: UI_GameGUI
+  m_Name: UI_DeckManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
