@@ -5,7 +5,6 @@ using UnityEngine;
 public class BoardLane : MonoBehaviour
 {
     [SerializeField] private GameObject _currentLandStamp = null;
-    [SerializeField] private ILandStamp _currentLandStampScript;
     [SerializeField] private Vector3 _landStampSpawnPosition;
     [SerializeField] private List<GameObject> _laneEnemies;
     [SerializeField] private BoardTile[] _laneTiles;
@@ -27,9 +26,13 @@ public class BoardLane : MonoBehaviour
     //Called when user places down an lane stamp
     public void ApplyLandStamp(GameObject landStamp)
     {
+        if(_currentLandStamp != null)
+        {
+            RemoveLandStamp();
+        }
         //kill all enemies in the lane
         _currentLandStamp = Instantiate(landStamp, _landStampSpawnPosition, Quaternion.identity, gameObject.transform);
-        _currentLandStampScript = _currentLandStamp.GetComponent<ILandStamp>();
+        _currentLandStamp.GetComponent<ILandStamp>().SetLane(_laneNumber);
         //_currentLaneSprite = how to get the SO info?
         for(int i = _laneEnemies.Count - 1; i >= 0; i--)
         {
@@ -42,7 +45,6 @@ public class BoardLane : MonoBehaviour
     public void RemoveLandStamp()
     {
         Destroy(_currentLandStamp);
-        _currentLandStampScript = null;
     }
 
     public void AddEnemyToList(GameObject enemy)

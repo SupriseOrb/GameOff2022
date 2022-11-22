@@ -95,6 +95,11 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
         _isOnCooldown = true;
     }
 
+    public string GetStampName()
+    {
+        return _bushItemSO.StampName;
+    }
+
     public void EnableStamp()
     {
         //SetActive true? or have stamp ability play based on _isActive?

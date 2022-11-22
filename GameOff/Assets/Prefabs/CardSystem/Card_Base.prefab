@@ -405,6 +405,9 @@ MonoBehaviour:
   _cardSO: {fileID: 0}
   _hasBeenUsed: 0
   _selectedBorder: {fileID: 3284363774167275362}
+  _cardIcon: {fileID: 2171606191311826053}
+  _nameText: {fileID: 4791784848072929565}
+  _inkCostText: {fileID: 530646878377744206}
   _animator: {fileID: 4461831600584056642}
   _animationHighlight: Card_Highlighted
   _animationIdle: Card_Idle
@@ -645,6 +648,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ef4debedbeae394399bc74f8afd9377, type: 3}
+--- !u!114 &530646878377744206 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 651124599631088235, guid: 4ef4debedbeae394399bc74f8afd9377, type: 3}
+  m_PrefabInstance: {fileID: 1032589687722056997}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2679389631137856955 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3133208423562322078, guid: 4ef4debedbeae394399bc74f8afd9377, type: 3}
@@ -747,6 +761,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8aefd64e2a4bcc940bd15438723f6415, type: 3}
+--- !u!114 &4791784848072929565 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7476143714974505312, guid: 8aefd64e2a4bcc940bd15438723f6415, type: 3}
+  m_PrefabInstance: {fileID: 2719980623735253117}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6921452927903751144 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5022286761861395349, guid: 8aefd64e2a4bcc940bd15438723f6415, type: 3}

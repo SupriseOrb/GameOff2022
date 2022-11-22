@@ -37,6 +37,11 @@ public class TestItemScript : MonoBehaviour , IItemStamp
     {
         
     }
+    
+    public string GetStampName()
+    {
+        return "";
+    }
 
     public void EnableStamp()
     {

@@ -50,6 +50,11 @@ public class BramblePatchLand : MonoBehaviour, ILandStamp
         _laneNumber = laneNumber;
     }
 
+    public string GetStampName()
+    {
+        return _brambleSO.StampName;
+    }
+
     public void EnableStamp()
     {
 

@@ -8,7 +8,6 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private bool _isActive = false;
 
 #region UnitStats
-    [SerializeField] private string _inkDemonName;
     [SerializeField] private string _unitType;
     [SerializeField] private float _inkDemonAbilityCooldown;
     [SerializeField] private float _inkDemonCooldownReduction;
@@ -55,7 +54,6 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 
     public void LoadBaseStats()
     {        
-        _inkDemonName = _inkDemonSO.StampName;
         _unitType = _inkDemonSO.UnitType;
         _inkDemonAbilityCooldown = _inkDemonSO.UnitAbilityCooldown;
         _inkDemonCooldownReduction = _inkDemonSO.UnitCooldownReduction;
@@ -192,8 +190,8 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
         _isActive = true;
     }
 
-    public string GetUnitName()
+    public string GetStampName()
     {
-        return _inkDemonName;
+        return _inkDemonSO.StampName;
     }
 }

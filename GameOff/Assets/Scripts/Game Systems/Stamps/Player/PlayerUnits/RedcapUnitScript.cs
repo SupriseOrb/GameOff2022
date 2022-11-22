@@ -9,7 +9,6 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private float _redcapAttackCooldown;
 
 #region UnitStats
-    [SerializeField] private string _redcapName;
     [SerializeField] private string _unitType;
     [SerializeField] private float _redcapDamage;
     [SerializeField] private float _redcapAttackSpeed;
@@ -59,8 +58,6 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         _redcapStunDuration = 3;
         _redcapPierceAmount = 1;
 
-        
-        _redcapName = _redcapSO.StampName;
         _unitType = _redcapSO.UnitType;
         _redcapDamage = _redcapSO.UnitDamage;
         _redcapAttackSpeed = _redcapSO.UnitAttackSpeed;
@@ -179,8 +176,8 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         _isActive = true;
     }
 
-    public string GetUnitName()
+    public string GetStampName()
     {
-        return _redcapName;
+        return _redcapSO.StampName;
     }
 }

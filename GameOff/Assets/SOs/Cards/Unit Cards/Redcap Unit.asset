@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c4df2d70e761f4c9272f3149829178, type: 3}
+  m_Name: Redcap Unit
+  m_EditorClassIdentifier: 
+  _cardName: Redcap
+  _cardDescription: Rolls ink at your enemies
+  _inkCost: 3
+  _hasBeenUsed: 0
+  _stampGORef: {fileID: 5931444529041067665, guid: d924d01c6850f5a43bbcfcfec2a5792b, type: 3}
+  _cardType: 1
+  _cardIcon: {fileID: 181836390, guid: 3bebed15645ecc04dba4b8294d251608, type: 3}

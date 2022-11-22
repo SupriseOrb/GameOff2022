@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
+using UnityEngine.UI;
 
 public class CardScriptLoader : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -11,6 +13,9 @@ public class CardScriptLoader : MonoBehaviour, IPointerDownHandler, IPointerEnte
     [SerializeField] public CardScriptableObject.Type _cardType {get; protected set;}
     [SerializeField] public bool _hasBeenUsed;
     [SerializeField] private GameObject _selectedBorder;
+    [SerializeField] private Image _cardIcon;
+    [SerializeField] private TextMeshProUGUI _nameText;
+    [SerializeField] private TextMeshProUGUI _inkCostText;
 
     [Header("Animation")]
     [SerializeField] private Animator _animator;
@@ -29,6 +34,9 @@ public class CardScriptLoader : MonoBehaviour, IPointerDownHandler, IPointerEnte
             //...if the cards can't be easily added to/abstract enough to support simply adding the values from the SO to the UI
         _cardType = _cardSO.CardType;
         _hasBeenUsed = _cardSO.HasBeenUsed;
+        _nameText.text = _cardSO.CardName;
+        _inkCostText.text = "" + _cardSO.InkCost;
+        _cardIcon.sprite = _cardSO.CardIcon;
     }
 
     public CardScriptableObject.Type CardType

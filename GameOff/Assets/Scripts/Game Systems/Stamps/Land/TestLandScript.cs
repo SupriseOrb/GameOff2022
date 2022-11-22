@@ -17,6 +17,11 @@ public class TestLandScript : MonoBehaviour, ILandStamp
 
     }
 
+    public string GetStampName()
+    {
+        return "";
+    }
+
     public void DisableStamp()
     {
 

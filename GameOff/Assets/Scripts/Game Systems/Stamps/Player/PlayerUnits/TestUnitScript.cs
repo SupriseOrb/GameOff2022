@@ -145,7 +145,7 @@ public class TestUnitScript : MonoBehaviour, IUnitStamp
         _isActive = true;
     }
 
-    public string GetUnitName()
+    public string GetStampName()
     {
         return _unitName;
     }
