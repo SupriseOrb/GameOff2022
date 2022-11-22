@@ -113,8 +113,7 @@ public class DeckManager : MonoBehaviour
             }*/
             if(_currentInkTimer <= 0)
             {
-                _currentInk += _inkPerSecond;
-                UpdateInkBar();
+                AddInk(_inkPerSecond);
                 _currentInkTimer = 1;
             }
             _currentInkTimer -= Time.deltaTime;
