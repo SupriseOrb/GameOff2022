@@ -27,26 +27,26 @@ public class PauseMenu : Menu
     }
     public void PauseGame()
     {
-        if (!_isPaused.Value && _pauseMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("PauseMenu_IdleClose"))
+        if (!_isPaused.Value && _pauseMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("Panel_IdleClose"))
         {
             AkSoundEngine.PostEvent("Play_UIPause", this.gameObject);
             AkSoundEngine.SetRTPCValue("Is_Paused", 100f);
             AkSoundEngine.PostEvent("Mute_Ambience", this.gameObject);
 
             _isPaused.Value = true;
-            _pauseMenuAnimator.Play("PauseMenu_Open");
+            _pauseMenuAnimator.Play("Panel_Open");
         }
         
     }
 
     public void ResumeGame()
     {
-        if (_isPaused.Value && _pauseMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("PauseMenu_IdleOpen"))
+        if (_isPaused.Value && _pauseMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("Panel_IdleOpen"))
         {
             AkSoundEngine.PostEvent("Play_UIResume", this.gameObject);
             ResumeAudio();
             _isPaused.Value = false;
-            _pauseMenuAnimator.Play("PauseMenu_Close");
+            _pauseMenuAnimator.Play("Panel_Close");
         }    
     }
 
