@@ -84,8 +84,16 @@ public class InputManager : MonoBehaviour
                 {
                     if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.UNIT)
                     {
-                        unitTile.SetHeldStamp(_selectedCard.CardSO.StampGO);
-                        Debug.Log("Placed Unit " + _selectedCard + " onto UnitTile!");
+                        if(DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
+                        {
+                            unitTile.SetHeldStamp(_selectedCard.CardSO.StampGO);
+                            Debug.Log("Placed Unit " + _selectedCard + " onto UnitTile!");
+                        }
+                        else
+                        {
+                            //do some error thing
+                            //Maybe make the ink bar flash w/ a shader
+                        }
                         DeckManager.Instance.ResetCardSelection();
                     }
                     
@@ -94,15 +102,31 @@ public class InputManager : MonoBehaviour
                 {
                     if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.ITEM)
                     {
-                        boardTile.SetHeldStamp(_selectedCard.CardSO.StampGO);
-                        Debug.Log("Placed Item " + _selectedCard + " onto BoardTile!");
+                        if(DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
+                        {
+                            boardTile.SetHeldStamp(_selectedCard.CardSO.StampGO);
+                            Debug.Log("Placed Item " + _selectedCard + " onto BoardTile!");
+                        }
+                        else
+                        {
+                            //do some error thing
+                            //Maybe make the ink bar flash w/ a shader
+                        }
                         DeckManager.Instance.ResetCardSelection();
                     }
                     else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.LAND)
                     {
-                        BoardLane boardLane = BoardManager.Instance.GetLane(boardTile._laneNumber);
-                        boardLane.ApplyLandStamp(_selectedCard.CardSO.StampGO);
-                        Debug.Log("Placed Land " + _selectedCard + " onto BoardLane!");
+                        if(DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
+                        {
+                            BoardLane boardLane = BoardManager.Instance.GetLane(boardTile._laneNumber);
+                            boardLane.ApplyLandStamp(_selectedCard.CardSO.StampGO);
+                            Debug.Log("Placed Land " + _selectedCard + " onto BoardLane!");
+                        }
+                        else
+                        {
+                            //do some error thing
+                            //Maybe make the ink bar flash w/ a shader
+                        }
                         DeckManager.Instance.ResetCardSelection();
                     }
                 }

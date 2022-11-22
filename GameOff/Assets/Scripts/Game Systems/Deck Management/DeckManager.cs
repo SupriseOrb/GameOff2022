@@ -48,6 +48,15 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private string _cardFrameIdleOpenString = "CardFrame_IdleOpen";
     [SerializeField] private string _cardFrameIdleCloseString = "CardFrame_IdleClose";
 
+    [Header("Ink Information")]
+    [SerializeField] private int _maxInk;
+    [SerializeField] private int _currentInk;
+    [SerializeField] private int _startingInk;
+    [SerializeField] private Slider _inkBar;
+    [SerializeField] private TextMeshProUGUI _inkText;
+    [SerializeField] private int _inkPerSecond;
+    private float _currentInkTimer; 
+
     private static System.Random r = new System.Random();
     private static DeckManager _instance;
 
@@ -73,6 +82,8 @@ public class DeckManager : MonoBehaviour
         // TODO: Might want to initialize the decks here, like adding cards and setting up the hand for the tutorial and such
         // Note: Need slight delay in order to get the correct _cardHolders transforms 
         StartCoroutine(DelayDrawCards());
+        _currentInk = _startingInk;
+        UpdateInkBar();
     }
 
     private IEnumerator DelayDrawCards()
@@ -100,8 +111,16 @@ public class DeckManager : MonoBehaviour
             {
                 AkSoundEngine.PostEvent("Timer", gameObject);
             }*/
+            if(_currentInkTimer <= 0)
+            {
+                _currentInk += _inkPerSecond;
+                UpdateInkBar();
+                _currentInkTimer = 1;
+            }
+            _currentInkTimer -= Time.deltaTime;
         }
         
+
     }
 
     private void CycleHand()
@@ -139,6 +158,36 @@ public class DeckManager : MonoBehaviour
             }
             card.transform.position = _activeDeckTransform.position;
         }
+    }
+
+    public void AddInk(int ink)
+    {
+        if(_currentInk + ink <= _maxInk)
+        {
+            _currentInk += ink;
+        }
+        else
+        {
+            _currentInk = _maxInk;
+        }
+        UpdateInkBar();
+    }
+
+    public bool RemoveInk(int ink)
+    {
+        if(_currentInk - ink >= 0)
+        {
+            _currentInk -= ink;
+            UpdateInkBar();
+            return true;
+        }
+        return false;
+    }
+
+    public void UpdateInkBar()
+    {
+        _inkBar.value = _currentInk/_maxInk;
+        _inkText.text = "" + _currentInk;
     }
 
     private void DrawCards()
