@@ -106,6 +106,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
         _inkMinionCurrentHealth -= damage;
         if(_inkMinionCurrentHealth <= 0)
         {
+            AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
             ActivateStampAbility();
             Destroy(gameObject);
 
