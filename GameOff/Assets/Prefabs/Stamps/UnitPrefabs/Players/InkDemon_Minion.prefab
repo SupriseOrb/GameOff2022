@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 942562487849597906}
   - component: {fileID: 1612765099}
   m_Layer: 0
-  m_Name: Ink Demon Minion
+  m_Name: InkDemon_Minion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

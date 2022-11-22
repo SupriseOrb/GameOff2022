@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2645122873845147036}
   - component: {fileID: 2645122873845147039}
   m_Layer: 0
-  m_Name: PlayerUnit_Ink_Demon
+  m_Name: InkDemon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inkDemonSO: {fileID: 11400000, guid: e38f8e183e514b14baff580bbf626115, type: 2}
   _isActive: 1
-  _inkDemonName: 
   _unitType: 
   _inkDemonAbilityCooldown: 0
   _inkDemonCooldownReduction: 0
@@ -141,7 +140,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1501192276, guid: c77cce2d7856e3844b3d1e2021741876, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

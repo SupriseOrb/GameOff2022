@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 5931444529041067664}
   - component: {fileID: 5931444529041067667}
   m_Layer: 0
-  m_Name: PlayerUnit_RedCap
+  m_Name: RedCap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
