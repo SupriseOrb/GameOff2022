@@ -15,6 +15,11 @@ public class PauseMenu : Menu
         _currentEventSystem = EventSystem.current;
         _isPaused.Value = false;
 
+        if (!_isMusicPlaying.Value)
+        {
+            AkSoundEngine.PostEvent("Music", gameObject);
+            _isMusicPlaying.Value = true;
+        }
         AkSoundEngine.SetState("Music_State", "Battle");
         AkSoundEngine.SetState("Battle_Intensity", "Battle_Intensity_1");
         AkSoundEngine.SetState("Ambience_states", "Ambience_1");

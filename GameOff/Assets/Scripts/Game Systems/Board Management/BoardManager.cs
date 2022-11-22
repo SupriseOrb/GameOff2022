@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BoardManager : MonoBehaviour
 {
+    // TODO: Implement Tile info panel
+    [SerializeField] GameObject _tileInfoPanel;
+    [SerializeField] TextMeshProUGUI _tileInfoPanelText;
     [SerializeField] BoardLane[] _boardLanes;
 
     private static BoardManager _instance;
