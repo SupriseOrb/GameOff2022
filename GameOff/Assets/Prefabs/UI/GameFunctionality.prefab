@@ -182,6 +182,9 @@ MonoBehaviour:
   _mousePositionWorld: {x: 0, y: 0, z: 0}
   _selectedCard: {fileID: 0}
   _spriteDrag: {fileID: 7971274496512903152}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 64
   _lClickString: OnLeftClick
   _lClickHoldString: OnLeftClickHold
   _rClickString: OnRightClick
