@@ -82,6 +82,19 @@ public class BoardLane : MonoBehaviour
         return _laneEnemies;
     }
 
+    public List<GameObject> GetLaneItems()
+    {
+        List<GameObject> laneItems = new List<GameObject>();
+        foreach(BoardTile tile in _laneTiles)
+        {
+            if(tile.GetHeldStamp() != null)
+            {
+                laneItems.Add(tile.GetHeldStamp());
+            }
+        }
+        return laneItems;
+    }
+
     public GameObject CurrentLandStamp
     {
         get {return _currentLandStamp;}

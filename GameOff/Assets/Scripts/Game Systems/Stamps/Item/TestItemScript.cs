@@ -28,6 +28,11 @@ public class TestItemScript : MonoBehaviour , IItemStamp
         }
     }
 
+    public void HealHealth(float health)
+    {
+
+    }
+
     public void ActivateStampAbility()
     {
     

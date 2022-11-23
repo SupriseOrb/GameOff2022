@@ -43,7 +43,7 @@ public class BramblePatchLand : MonoBehaviour, ILandStamp
         {
             _laneEnemies[i].GetComponent<IEnemy>().TakeDamage(_brambleDamage);
         }
-                    AkSoundEngine.PostEvent("Play_StampGeneral", gameObject);
+        //AkSoundEngine.PostEvent("Play_StampGeneral", gameObject);
     }
 
     public void SetLane(int laneNumber)
