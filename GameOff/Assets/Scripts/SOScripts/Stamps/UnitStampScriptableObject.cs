@@ -57,6 +57,7 @@ public class UnitStampScriptableObject : StampScriptableObject
     {
         get {return _unitSlowAmount;}
     }
+    
     public int UnitHealth
     {
         get {return _unitHealth;}

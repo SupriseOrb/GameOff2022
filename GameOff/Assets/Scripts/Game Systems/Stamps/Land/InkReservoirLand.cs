@@ -40,7 +40,10 @@ public class InkReservoirLand : MonoBehaviour, ILandStamp
         _laneItems = BoardManager.Instance.GetLane(_laneNumber).GetLaneItems();
         foreach(GameObject item in _laneItems)
         {
-            item.GetComponent<IItemStamp>().TakeDamage(_reservoirHeal);
+            if(item != null)
+            {
+                item.GetComponent<IItemStamp>().HealHealth(_reservoirHeal);
+            }
         }
         //AkSoundEngine.PostEvent("Play_StampGeneral", gameObject);
     }

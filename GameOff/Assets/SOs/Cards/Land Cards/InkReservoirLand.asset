@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c4df2d70e761f4c9272f3149829178, type: 3}
-  m_Name: BramblePatch Land
+  m_Name: InkReservoirLand
   m_EditorClassIdentifier: 
-  _cardName: Bramble Patch
-  _cardDescription: Periodically Damages Enemies
-  _inkCost: 45
+  _cardName: Ink Reservoir
+  _cardDescription: Periodically Heals Allies
+  _inkCost: 1
   _hasBeenUsed: 0
-  _stampGORef: {fileID: 6221314376822832820, guid: 22e99187584c2c747a5666c3a5b91f16, type: 3}
+  _stampGORef: {fileID: 7704762201357935458, guid: 1f70b25f88717604ebb4d48cfa1350f9, type: 3}
   _cardType: 2
-  _cardIcon: {fileID: 21300000, guid: 7b180861fc9727140935f25bd04ae1a3, type: 3}
+  _cardIcon: {fileID: 21300000, guid: 541cf4f7f152d074491b0af96de9d1d0, type: 3}

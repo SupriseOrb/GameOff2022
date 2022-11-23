@@ -14,6 +14,7 @@ public class InkCowItem : MonoBehaviour, IItemStamp
     [SerializeField] private Sprite _cowSprite;
     [SerializeField] private BoxCollider2D _cowCollider;
     [SerializeField] private ItemStampScriptableObject _cowItemSO;
+    [SerializeField] private int _laneNumber;
 
     #region Animation
     [SerializeField] private Animator _cowAnimator; 
@@ -86,7 +87,15 @@ public class InkCowItem : MonoBehaviour, IItemStamp
 
     public void ActivateStampAbility()
     {
-        DeckManager.Instance.AddInk(_cowInkGeneration);
+        if(BoardManager.Instance.GetLane(_laneNumber).GetLeylineStatus())
+        {
+            float multiplier = BoardManager.Instance.GetLane(_laneNumber).GetLeylineMultiplier();
+            DeckManager.Instance.AddInk((int)(_cowInkGeneration * multiplier));
+        }
+        else
+        {
+            DeckManager.Instance.AddInk(_cowInkGeneration);
+        }
         _isOnCooldown = true;
     }
  
@@ -107,7 +116,7 @@ public class InkCowItem : MonoBehaviour, IItemStamp
 
     public void SetLane(int lane)
     {
-
+        _laneNumber = lane;
     }
 
     public bool IsDead()

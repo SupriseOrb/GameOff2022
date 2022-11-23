@@ -9,6 +9,8 @@ public class BoardLane : MonoBehaviour
     [SerializeField] private List<GameObject> _laneEnemies;
     [SerializeField] private BoardTile[] _laneTiles;
     [SerializeField] private GameObject[] _laneUnits;
+    [SerializeField] private BoolVariable _leylineActive;
+    [SerializeField] private float _leylineMultiplier;
     [SerializeField] public int _laneNumber;
     
     // Start is called before the first frame update
@@ -85,11 +87,11 @@ public class BoardLane : MonoBehaviour
     public List<GameObject> GetLaneItems()
     {
         List<GameObject> laneItems = new List<GameObject>();
-        foreach(BoardTile tile in _laneTiles)
+        for(int i = 2; i < _laneTiles.Length; i++)
         {
-            if(tile.GetHeldStamp() != null)
+            if(_laneTiles[i].GetHeldStamp() != null)
             {
-                laneItems.Add(tile.GetHeldStamp());
+                laneItems.Add(_laneTiles[i].GetHeldStamp());
             }
         }
         return laneItems;
@@ -119,4 +121,24 @@ public class BoardLane : MonoBehaviour
         }
         return null;
     }
+
+    public BoolVariable GetLeylineStatus()
+    {
+        return _leylineActive;
+    }
+
+    public void SetLeylineStatus(bool status)
+    {
+        _leylineActive.Value = status;
+    }
+
+    public float GetLeylineMultiplier()
+    {
+        return _leylineMultiplier;
+    }
+
+    public void SetLeylineMultiplier(float multiplier)
+    {
+        _leylineMultiplier = multiplier;
+    }    
 }

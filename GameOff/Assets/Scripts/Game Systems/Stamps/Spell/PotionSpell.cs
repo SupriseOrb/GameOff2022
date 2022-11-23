@@ -52,8 +52,10 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
     {
         if (_affectedItem.TryGetComponent(out IItemStamp itemStamp))
         {
-            if (_isEmpowered)
+            if (BoardManager.Instance.GetLane(_laneNumber).GetLeylineStatus())
             {
+                //float multiplier = BoardManager.Instance.GetLane(_laneNumber).GetLeylineMultiplier();
+                //itemStamp.HealHealth(_potionHealAmount * multiplier); 
                 itemStamp.HealHealth(_empoweredPotionHealAmount); 
                 //This value will likely just be 999
             }
@@ -64,6 +66,11 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
             _isDead = true;
             _potionAnimator.Play(_potionDisappearAnim);
         }
+    }
+    
+    public string GetStampName()
+    {
+        return _potionSpellSO.StampName;
     }
 
     public void EnableStamp()

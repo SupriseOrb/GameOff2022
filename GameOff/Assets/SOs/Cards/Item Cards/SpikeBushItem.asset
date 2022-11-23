@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c4df2d70e761f4c9272f3149829178, type: 3}
-  m_Name: InkDemon Unit
+  m_Name: SpikeBushItem
   m_EditorClassIdentifier: 
-  _cardName: Ink Demon
-  _cardDescription: Duplicates and summons ink minions to fight for it.
-  _inkCost: 5
+  _cardName: Spike Bush
+  _cardDescription: Damages enemies that attack it.
+  _inkCost: 1
   _hasBeenUsed: 0
-  _stampGORef: {fileID: 2645122873845147038, guid: 9ff3cf4caccb93948bc1f270223c3f0c, type: 3}
-  _cardType: 1
-  _cardIcon: {fileID: 380381763, guid: 3fb4c9b35f51d4f4ca127582b9f06b8a, type: 3}
+  _stampGORef: {fileID: 5551045160796070647, guid: 318f92eff39c8ab419a6e83855998c2f, type: 3}
+  _cardType: 3
+  _cardIcon: {fileID: 21300000, guid: 4cf96dda4497d5548bc85a8e8878df82, type: 3}
