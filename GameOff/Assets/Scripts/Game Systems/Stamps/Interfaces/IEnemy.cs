@@ -8,6 +8,6 @@ public interface IEnemy
     void GetAttackTarget(GameObject target);
     void ActivateStampAttack();
     void Stun(float stunDuration);
-    void ModifyStat();
+    void ModifySpeeds(float movementModifier, float moveDuration = 0, float attackSpeedModifier = 0, float attackDuration = 0);
     void SetLane(int laneNumber);
 }

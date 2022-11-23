@@ -6,7 +6,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
 {
     [SerializeField] private EnemyScriptableObject _soldierSO;
     [SerializeField] private bool _isAttacking = false;
-    [SerializeField] private float _soliderAttackCooldown;
+    [SerializeField] private float _soldierAttackCooldown;
 
 #region UnitStats
     [SerializeField] private GameObject _spawnedUnit;
@@ -15,16 +15,22 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     [SerializeField] private float _soldierCooldownReduction;
     [SerializeField] private float _soldierDamage;
     [SerializeField] private float _soldierAttackSpeed;
+    [SerializeField] private float _soldierBaseAttackSpeed;
     [SerializeField] private float _soldierMovementSpeed;
+    [SerializeField] private float _soldierBaseMovementSpeed;
 #endregion
 
     [SerializeField] private GameObject _attackTarget;
     [SerializeField] private bool _isStunned = false;
+    [SerializeField] private bool _isMoveSlowed = false;
+    [SerializeField] private bool _isAttackSlowed = false;
     [SerializeField] private bool _isDead = false;
     [SerializeField] private Rigidbody2D _soldierRigidBody;
     [SerializeField] private BoxCollider2D _soldierCollider;
 
     [SerializeField] private float _currentStunDuration;
+    [SerializeField] private float _currentMoveSlowDuration;
+    [SerializeField] private float _currentAttackSlowDuration;
     [SerializeField] private int _laneNumber;
     [SerializeField] private Animator _soldierAnimator;
     [SerializeField] private float _soldierAttackAnimationLength;
@@ -61,11 +67,8 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
                 _soldierDieAnimationLength = clip.length;
             }
         }
-        _soldierAnimator.SetFloat("WalkSpeedMultiplier", _soldierMovementSpeed / (1/_soldierWalkAnimationLength));
-        if(_soldierAttackSpeed > 1/_soldierAttackAnimationLength)
-        {
-            _soldierAnimator.SetFloat("AttackSpeedMultiplier", _soldierAttackSpeed / (1/_soldierAttackAnimationLength));
-        }
+        
+        SetAnimationSpeeds();
         _soldierAnimator.Play(_soldierAppearAnimationName);
     }
 
@@ -76,9 +79,13 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         _soldierAbilityCooldown = _soldierSO.EnemyAbilityCooldown;
         _soldierCooldownReduction = _soldierSO.EnemyCooldownReduction;
         _soldierDamage = _soldierSO.EnemyDamage;
-        _soldierAttackSpeed = _soldierSO.EnemyAttackSpeed;
-        _soldierMovementSpeed = _soldierSO.EnemyMovementSpeed;
-        _soliderAttackCooldown = 1 / _soldierAttackSpeed;
+        _soldierBaseAttackSpeed = _soldierSO.EnemyAttackSpeed;
+        _soldierAttackSpeed = _soldierBaseAttackSpeed;
+
+        _soldierBaseMovementSpeed = _soldierSO.EnemyMovementSpeed;
+        _soldierMovementSpeed = _soldierBaseMovementSpeed;
+
+        _soldierAttackCooldown = 1 / _soldierAttackSpeed;
     }
 
     public void SetLane(int laneNumber)
@@ -105,6 +112,32 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
 
     private void FixedUpdate() 
     {
+        if(_isMoveSlowed)
+        {
+            if(_currentMoveSlowDuration > 0)
+            {
+                _currentMoveSlowDuration -= Time.deltaTime;
+            }
+            else
+            {
+                _soldierMovementSpeed = _soldierBaseMovementSpeed;
+                _isAttacking = true;
+                SetAnimationSpeeds();
+            }
+        }
+        if(_isAttackSlowed)
+        {
+            if(_currentAttackSlowDuration > 0)
+            {
+                _currentAttackSlowDuration -= Time.deltaTime;
+            }
+            else
+            {
+                _soldierAttackSpeed = _soldierBaseAttackSpeed;
+                SetAnimationSpeeds();
+            }
+        }
+
         if(_isDead)
         {
             _soldierAnimator.speed = 1;
@@ -126,7 +159,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         }
         else if(_isAttacking)
         {
-            if(_soliderAttackCooldown <= 0)
+            if(_soldierAttackCooldown <= 0)
             {
                 if(_attackTarget == null || _attackTarget.GetComponent<IItemStamp>().IsDead())
                 {
@@ -138,11 +171,12 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
                 {
                     Debug.Log("Target is Dead = " + _attackTarget.GetComponent<IItemStamp>().IsDead());
                     ActivateStampAttack();
-                    _soliderAttackCooldown = 1 / _soldierAttackSpeed;
+                    _soldierAttackCooldown = 1 / _soldierAttackSpeed;
                 }
             }
-            _soliderAttackCooldown -= Time.deltaTime;
+            _soldierAttackCooldown -= Time.deltaTime;
         }
+        
     }
 
     public void GetAttackTarget(GameObject target)
@@ -162,9 +196,30 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         //Play attack animation
     }
 
-    public void ModifyStat()
+    public void ModifySpeeds(float movementModifier, float moveDuration = 0, float attackSpeedModifier = 0, float attackDuration = 0)
     {
+        _soldierMovementSpeed = _soldierMovementSpeed * movementModifier;
+        _currentMoveSlowDuration = moveDuration;
+        _isAttacking = true;
+        if(moveDuration > 0)
+        {
+            _isMoveSlowed = true;
+        }
 
+        _soldierAttackSpeed = _soldierAttackSpeed * attackSpeedModifier;
+        _currentAttackSlowDuration = attackDuration;
+        if(attackDuration > 0)
+        {
+            _isAttackSlowed = true;
+        }
+        //_soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
+        SetAnimationSpeeds();
+    }
+
+    private void SetAnimationSpeeds()
+    {
+        _soldierAnimator.SetFloat("WalkSpeedMultiplier", _soldierMovementSpeed / (1/_soldierWalkAnimationLength));
+        _soldierAnimator.SetFloat("AttackSpeedMultiplier", _soldierAttackSpeed / (1/_soldierAttackAnimationLength));
     }
 
     public void Stun(float stunDuration)

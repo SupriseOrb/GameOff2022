@@ -113,9 +113,18 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
         //Play attack animation
     }
 
-    public void ModifyStat()
+    public void ModifySpeeds(float movementModifier, float moveDuration, float attackSpeedModifier = 0, float attackDuration = 0)
     {
+        /*
+        _soldierMovementSpeed = _soldierMovementSpeed * (1 - movementModifier);
+        _currentMoveSlowDuration = moveDuration;
+        _isAttacking = true;
 
+        _soldierAttackSpeed = _soldierAttackSpeed * (1 - attackSpeedModifier);
+        _currentAttackSlowDuration = attackDuration;
+        //_soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
+        SetAnimationSpeeds();
+        */
     }
 
     public void Stun(float stunDuration)

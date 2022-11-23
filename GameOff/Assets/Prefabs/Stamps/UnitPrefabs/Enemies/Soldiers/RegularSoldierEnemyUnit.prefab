@@ -57,13 +57,19 @@ MonoBehaviour:
   _soldierCooldownReduction: 0
   _soldierDamage: 0
   _soldierAttackSpeed: 0
+  _soldierBaseAttackSpeed: 0
   _soldierMovementSpeed: 0
+  _soldierBaseMovementSpeed: 0
   _attackTarget: {fileID: 0}
   _isStunned: 0
+  _isMoveSlowed: 0
+  _isAttackSlowed: 0
   _isDead: 0
   _soldierRigidBody: {fileID: 0}
   _soldierCollider: {fileID: 0}
   _currentStunDuration: 0
+  _currentMoveSlowDuration: 0
+  _currentAttackSlowDuration: 0
   _laneNumber: 0
   _soldierAnimator: {fileID: 3594619414032416753}
   _soldierAttackAnimationLength: 0
@@ -166,7 +172,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.8647423, y: -0.072885394}
+  m_Offset: {x: -0.8647423, y: 0.2535604}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -177,7 +183,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.56681824, y: 2.1370113}
+  m_Size: {x: 0.56681824, y: 1.4841197}
   m_EdgeRadius: 0
 --- !u!114 &4928695221142355364
 MonoBehaviour:
