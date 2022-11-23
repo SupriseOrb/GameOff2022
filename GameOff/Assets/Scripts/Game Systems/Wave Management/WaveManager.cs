@@ -9,6 +9,15 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private BoolVariable _isInWave;
     private Dictionary<int, GameObject[]> _currentWaveSpawns;
 
+    private const int MAXINTENSITYLEVEL = 3;
+    private int _currentIntensity
+    {
+        get
+        {
+            return Mathf.Min(_currentWaveIndex / MAXINTENSITYLEVEL + 1, MAXINTENSITYLEVEL);
+        }
+    }
+
     [Header("Debug Variables")]
     [SerializeField] private WaveScriptableObject _currentWave;
     [SerializeField] private GameObject[] _currentEnemySpawns;
@@ -34,6 +43,7 @@ public class WaveManager : MonoBehaviour
     {
         _currentWaveIndex = 0;
         _currentWaveSpawns = new Dictionary<int, GameObject[]>();
+        BroadcastIntensityChange();
         LoadNextWave();
     }
 
@@ -41,13 +51,13 @@ public class WaveManager : MonoBehaviour
     // This way we can disable card draw and stuff only when no enemies are present
     private void FixedUpdate()
     {
-        if(!_levelFinished)
+        if (!_levelFinished)
         {
             _isInWaveValueDebug = _isInWave.Value;
             //TODO:: Figure when to reset these current timer values
-            if(_isInWave.Value)
+            if (_isInWave.Value)
             {
-                if(_currentWaveDuration <= 0)
+                if (_currentWaveDuration <= 0)
                 {
                     //Wave is over
                     LoadNextWave();
@@ -60,7 +70,7 @@ public class WaveManager : MonoBehaviour
             }
             else
             {
-                if(_currentWaveBreakDuration <= 0)
+                if (_currentWaveBreakDuration <= 0)
                 {
                     //Break is over
                     StartWave();
@@ -84,14 +94,16 @@ public class WaveManager : MonoBehaviour
         //Clear last wave information
         _currentWaveSpawns.Clear();
 
-        if(_currentWaveIndex < _waves.Count)
+        if (_currentWaveIndex < _waves.Count)
         {
+            BroadcastIntensityChange();
+
             //Load next wave information
             _currentWave = _waves[_currentWaveIndex];
-            foreach(WaveScriptableObject.EnemySpawn spawn in _currentWave.Wave)
+            foreach (WaveScriptableObject.EnemySpawn spawn in _currentWave.Wave)
             {
                 _addedSpawnCorrectly = _currentWaveSpawns.TryAdd(spawn._timeToSpawn, spawn._enemies);
-                if(_addedSpawnCorrectly != true)
+                if (_addedSpawnCorrectly != true)
                 {
                     Debug.LogError("Enemies are already being spawned at this time: " + spawn._timeToSpawn);
                 }
@@ -113,15 +125,15 @@ public class WaveManager : MonoBehaviour
     private void SpawnEnemies()
     {
         _currentWaveTime = Mathf.FloorToInt(_baseWaveDuration - _currentWaveDuration);
-        if(_previousWaveTime != _currentWaveTime)    
+        if (_previousWaveTime != _currentWaveTime)    
         {
             _previousWaveTime = _currentWaveTime;
-            if(_currentWaveSpawns.ContainsKey(_currentWaveTime))
+            if (_currentWaveSpawns.ContainsKey(_currentWaveTime))
             {
                 _currentEnemySpawns = _currentWaveSpawns[_currentWaveTime];
-                for(int i = 0; i < 3; i++) //We always know the size of the spawns will be 3
+                for (int i = 0; i < 3; i++) //We always know the size of the spawns will be 3
                 {
-                    if(_currentEnemySpawns[i] != null)
+                    if (_currentEnemySpawns[i] != null)
                     {
                         GameObject spawnedEnemy = Instantiate(_currentEnemySpawns[i], _spawnLocations[i].position, Quaternion.identity);
                         BoardManager.Instance.GetLane(i).AddEnemyToList(spawnedEnemy);
@@ -161,6 +173,13 @@ public class WaveManager : MonoBehaviour
     {
         _levelFinished = true;
         Debug.Log("YOU WIN SMILE");
+    }
+
+    // Used to broadcast intensity changes to the music and art
+    private void BroadcastIntensityChange()
+    {
+        AkSoundEngine.SetState("Battle_Intensity", "Battle_Intensity_" + _currentIntensity);
+        AkSoundEngine.SetState("Ambience_states", "Ambience_" + _currentIntensity);
     }
 }
 
