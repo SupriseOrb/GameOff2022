@@ -195,6 +195,11 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
         }
     }
 
+    public bool IsDead()
+    {
+        return _isDead;
+    }
+
     public void SetLane(int laneNumber)
     {
         _inkMinionLaneNumber = laneNumber;

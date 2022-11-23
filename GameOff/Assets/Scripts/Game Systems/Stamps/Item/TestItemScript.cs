@@ -43,6 +43,11 @@ public class TestItemScript : MonoBehaviour , IItemStamp
         return "";
     }
 
+    public bool IsDead()
+    {
+        return false;
+    }
+
     public void EnableStamp()
     {
 

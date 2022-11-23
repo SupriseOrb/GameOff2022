@@ -117,4 +117,9 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
 
     }
 
+    public bool IsDead()
+    {
+        return _isDead;
+    }
+
 }

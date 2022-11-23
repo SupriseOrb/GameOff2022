@@ -5,4 +5,5 @@ using UnityEngine;
 public interface IItemStamp : IStamp
 {
     void TakeDamage(float damage);
+    bool IsDead();
 }

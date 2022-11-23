@@ -128,7 +128,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         {
             if(_soliderAttackCooldown <= 0)
             {
-                if(_attackTarget == null || !_attackTarget.TryGetComponent<BoxCollider2D>(out BoxCollider2D collider))
+                if(_attackTarget == null || _attackTarget.GetComponent<IItemStamp>().IsDead())
                 {
                     _isAttacking = false;
                     _soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
@@ -136,6 +136,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
                 }
                 else
                 {
+                    Debug.Log("Target is Dead = " + _attackTarget.GetComponent<IItemStamp>().IsDead());
                     ActivateStampAttack();
                     _soliderAttackCooldown = 1 / _soldierAttackSpeed;
                 }
