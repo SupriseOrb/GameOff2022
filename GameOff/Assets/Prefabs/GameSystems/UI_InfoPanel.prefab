@@ -108,6 +108,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8220365055881799347}
     m_Modifications:
+    - target: {fileID: 5302253879563389176, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
+      propertyPath: m_margin.y
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 7086832390021043891, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
       propertyPath: m_Name
       value: Tile_InfoPanel

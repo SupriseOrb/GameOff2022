@@ -16,7 +16,8 @@ public class BramblePatchLand : MonoBehaviour, ILandStamp
     // Start is called before the first frame update
     void Start()
     {
-        LoadBaseStats();   
+        LoadBaseStats();
+        AkSoundEngine.PostEvent("Play_BramblePatch", gameObject);
     }
 
     private void LoadBaseStats()

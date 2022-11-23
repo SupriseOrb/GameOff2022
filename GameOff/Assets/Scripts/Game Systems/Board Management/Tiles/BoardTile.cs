@@ -21,13 +21,12 @@ public class BoardTile : MonoBehaviour
     {
         if(stamp.TryGetComponent(out IStamp stampScript))
         {
-            _heldStamp = stamp;
             if(gameObject.transform.childCount == 1)
             {
                 Destroy(gameObject.transform.GetChild(0).gameObject);
             }
-            GameObject createdStamp = Instantiate(stamp, gameObject.transform.position, Quaternion.identity, gameObject.transform);
-            createdStamp.GetComponent<IStamp>().SetLane(_laneNumber);
+            _heldStamp = Instantiate(stamp, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+            _heldStamp.GetComponent<IStamp>().SetLane(_laneNumber);
             return true;
         }
         return false;

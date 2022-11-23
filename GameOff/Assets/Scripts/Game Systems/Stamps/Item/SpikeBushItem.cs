@@ -25,6 +25,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
 
     private void Start() 
     {
+        AkSoundEngine.PostEvent("Play_StampSpikeyBush", gameObject);
         _bushBaseHealth = _bushItemSO.ItemHealth;
         _bushCurrentHealth = _bushBaseHealth;
         _bushSprite = _bushItemSO.StampSprite;
@@ -50,6 +51,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
             _bushDisappearAnimLength -= Time.deltaTime;
             if (_bushDisappearAnimLength <= -1)
             {
+                AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
                 Destroy(gameObject);
             }
         }
@@ -113,6 +115,11 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
     public void SetLane(int lane)
     {
 
+    }
+
+    public bool IsDead()
+    {
+        return _isDead;
     }
 
 }

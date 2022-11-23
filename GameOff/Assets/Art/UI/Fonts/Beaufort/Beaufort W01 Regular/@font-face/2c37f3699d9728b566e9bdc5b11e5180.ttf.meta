@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 590af1bb7413f2b47898af15ec92f53e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - BeaufortW01-Regular
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 502f1b4f745966b41a0ebea2a8db81b1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
