@@ -31,6 +31,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     [SerializeField] private float _currentStunDuration;
     [SerializeField] private float _currentMoveSlowDuration;
     [SerializeField] private float _currentAttackSlowDuration;
+    [SerializeField] private float _currentSlowMultiplier;
     [SerializeField] private int _laneNumber;
     [SerializeField] private Animator _soldierAnimator;
     [SerializeField] private float _soldierAttackAnimationLength;
@@ -120,7 +121,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
             }
             else
             {
-                _soldierMovementSpeed = _soldierBaseMovementSpeed;
+                _soldierMovementSpeed = _soldierMovementSpeed / _currentSlowMultiplier;
                 _isAttacking = true;
                 SetAnimationSpeeds();
             }
@@ -203,6 +204,14 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         _isAttacking = true;
         if(moveDuration > 0)
         {
+            if(_currentSlowMultiplier != 0)
+            {
+                _currentSlowMultiplier = _currentSlowMultiplier * movementModifier;
+            }
+            else
+            {
+                _currentSlowMultiplier = _currentSlowMultiplier * movementModifier;
+            }
             _isMoveSlowed = true;
         }
 
