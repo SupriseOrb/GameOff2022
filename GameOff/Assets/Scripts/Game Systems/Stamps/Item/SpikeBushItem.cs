@@ -123,7 +123,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
 
     public void SetLane(int lane)
     {
-
+        
     }
 
     public bool IsDead()

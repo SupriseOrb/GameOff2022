@@ -130,6 +130,27 @@ public class InputManager : MonoBehaviour
                         }
                         DeckManager.Instance.ResetCardSelection();
                     }
+                    else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.SPELL)
+                    {
+                        if (boardTile.GetHeldStamp() != null)
+                        {
+                            if (DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
+                            { 
+                                boardTile.PlaySpell(_selectedCard.CardSO.StampGO);
+                                Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
+                            }
+                            else
+                            {
+                                //do some error thing
+                                //Maybe make the ink bar flash w/ a shader
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("There is no item stamp on this tile!");
+                        }
+                        DeckManager.Instance.ResetCardSelection(); 
+                    }
                 }
             }
             else //if selectedCard = null
@@ -151,7 +172,7 @@ public class InputManager : MonoBehaviour
                     {
                         //add item desc to land desc panel with magic
                     }
-
+                    //Note: Shouldn't need to showcase desc panel for Spell Stamps
                 }
             }
             

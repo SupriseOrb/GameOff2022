@@ -5,6 +5,7 @@ using UnityEngine;
 public class BoardTile : MonoBehaviour
 {
     [SerializeField] protected GameObject _heldStamp;
+    [SerializeField] protected GameObject _currentSpell = null;
     [SerializeField] public int _laneNumber;
     [SerializeField] public int _tileNumber;
 
@@ -28,6 +29,21 @@ public class BoardTile : MonoBehaviour
             _heldStamp = Instantiate(stamp, gameObject.transform.position, Quaternion.identity, gameObject.transform);
             _heldStamp.GetComponent<IStamp>().SetLane(_laneNumber);
             return true;
+        }
+        return false;
+    }
+
+    public virtual bool PlaySpell(GameObject spell)
+    {
+        if (spell.TryGetComponent(out ISpellStamp spellStamp))
+        {
+            if(gameObject.transform.childCount == 1 && _currentSpell == null)
+            {
+                spellStamp.SetAffectedItem(gameObject.transform.GetChild(0).gameObject);
+                _currentSpell = Instantiate(spell, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+                _currentSpell.GetComponent<IStamp>().SetLane(_laneNumber);
+                return true;
+            }
         }
         return false;
     }
