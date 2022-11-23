@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6513590b69d69054baeabdd8051abbad
+      internalID: 1385101175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_1
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 1536
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0534e1222fdd99409e1dca278e88c0c
+      internalID: -1255988094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_2
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 1536
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94baab772c2ca3d45bc9afcb35df7e47
+      internalID: 2109192949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_3
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 1536
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf721210afde137479d5abd902e54485
+      internalID: -671481026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8caf0e0cf035e1a4aa3bbfeb4dfb6c86
+      internalID: -1653500983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_5
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 1024
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d6c0e5becf18449aec046614b38f1f
+      internalID: 348383411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_6
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 1024
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e4d3951cb878848b90a357f30cc6fa
+      internalID: -644663511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_7
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 1024
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed7dd70caa12af44b6d93ed10c0bf98
+      internalID: 937727140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cf56fde17648d43aeeb40a64cc8bb3
+      internalID: 262480906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_9
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 512
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c3fd2d5ee4e1b4f82df9de5b229759
+      internalID: 2028757024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_10
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 512
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76303c0e43c36d649a29575af5c9ffb3
+      internalID: 1544192317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_11
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 512
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09cbc67b2e38b164eb8f7b60e88d8a53
+      internalID: 1499476906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4b4218956bffd4799fcf4373b95c52
+      internalID: 1290471635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_13
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 0
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b4f8217f6bffe4cb6ed1b8820e5945
+      internalID: -474252701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stamp_unit_carriage_death_14
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 0
+        width: 692
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7689a245f0e0145af6e3a94a304fbe
+      internalID: 1832801753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +441,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stamp_unit_carriage_death_9: 2028757024
+      stamp_unit_carriage_death_0: 1385101175
+      stamp_unit_carriage_death_3: -671481026
+      stamp_unit_carriage_death_11: 1499476906
+      stamp_unit_carriage_death_1: -1255988094
+      stamp_unit_carriage_death_14: 1832801753
+      stamp_unit_carriage_death_7: 937727140
+      stamp_unit_carriage_death_2: 2109192949
+      stamp_unit_carriage_death_10: 1544192317
+      stamp_unit_carriage_death_13: -474252701
+      stamp_unit_carriage_death_12: 1290471635
+      stamp_unit_carriage_death_8: 262480906
+      stamp_unit_carriage_death_4: -1653500983
+      stamp_unit_carriage_death_5: 348383411
+      stamp_unit_carriage_death_6: -644663511
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
