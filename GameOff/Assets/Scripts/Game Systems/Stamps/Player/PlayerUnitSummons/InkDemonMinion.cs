@@ -195,6 +195,15 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
         }
     }
 
+    public void HealHealth(float health)
+    {
+        _inkMinionCurrentHealth += health;
+        if(_inkMinionCurrentHealth > _inkMinionMaxHealth)
+        {
+            _inkMinionCurrentHealth = _inkMinionMaxHealth;
+        }
+    }    
+
     public bool IsDead()
     {
         return _isDead;

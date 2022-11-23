@@ -75,6 +75,15 @@ public class InkCowItem : MonoBehaviour, IItemStamp
         }
     }
 
+    public void HealHealth(float health)
+    {
+        _cowCurrentHealth += health;
+        if(_cowCurrentHealth > _cowBaseHealth)
+        {
+            _cowCurrentHealth = _cowBaseHealth;
+        }
+    }
+
     public void ActivateStampAbility()
     {
         DeckManager.Instance.AddInk(_cowInkGeneration);

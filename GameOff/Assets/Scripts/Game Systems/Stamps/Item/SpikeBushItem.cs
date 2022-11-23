@@ -81,6 +81,15 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
         }
     }
 
+    public void HealHealth(float health)
+    {
+        _bushCurrentHealth += health;
+        if(_bushCurrentHealth > _bushBaseHealth)
+        {
+            _bushCurrentHealth = _bushBaseHealth;
+        }
+    }
+
     public void ActivateStampAbility()
     {
         _bushColliders = Physics2D.OverlapCircleAll(transform.position, _bushAttackRange);
