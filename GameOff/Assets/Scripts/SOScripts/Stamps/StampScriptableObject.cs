@@ -7,7 +7,6 @@ public class StampScriptableObject : ScriptableObject
     #region SO Backing Fields
     [SerializeField] private string _stampName;
     [SerializeField] private Sprite _stampSprite;
-    [SerializeField] private int _stampHealth;
     #endregion
 
     #region SO Getters
@@ -19,11 +18,6 @@ public class StampScriptableObject : ScriptableObject
     public Sprite StampSprite
     {
         get {return _stampSprite;}
-    }
-
-    public int StampHealth
-    {
-        get {return _stampHealth;}
     }
     #endregion
 }

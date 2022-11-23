@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1b30c92b4b41e945b2977395e98ef99, type: 3}
-  m_Name: SpikeBushItem
+  m_Name: InkCowItem
   m_EditorClassIdentifier: 
-  _stampName: Spiky Bush
-  _stampSprite: {fileID: 21300000, guid: 66ccc869a7c8eeb4d9fdbded507bb671, type: 3}
-  _itemStampValue: 4
+  _stampName: 'Ink Cow '
+  _stampSprite: {fileID: 21300000, guid: 3fc721d25b7e4b74fa6c3d1666f058b4, type: 3}
+  _itemStampValue: 1
   _itemCooldown: 1
   _itemHealth: 10

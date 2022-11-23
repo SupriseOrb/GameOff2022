@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RedcapUnit
   m_EditorClassIdentifier: 
   _stampName: Redcap
-  _stampCost: 1
   _stampSprite: {fileID: 1501192276, guid: c77cce2d7856e3844b3d1e2021741876, type: 3}
+  _stampHealth: 0
   _spawnedUnit: {fileID: 0}
   _unitType: Ranged
   _unitAbilityCooldown: 0
@@ -22,3 +22,4 @@ MonoBehaviour:
   _unitDamage: 5
   _unitAttackSpeed: 0.2
   _unitSlowAmount: 0
+  _unitHealth: 5

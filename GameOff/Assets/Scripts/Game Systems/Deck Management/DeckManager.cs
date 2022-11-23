@@ -161,15 +161,18 @@ public class DeckManager : MonoBehaviour
 
     public void AddInk(int ink)
     {
-        if(_currentInk + ink <= _maxInk)
+        if (_isInWave)
         {
-            _currentInk += ink;
+            if(_currentInk + ink <= _maxInk)
+            {
+                _currentInk += ink;
+            }
+            else
+            {
+                _currentInk = _maxInk;
+            }
+            UpdateInkBar();
         }
-        else
-        {
-            _currentInk = _maxInk;
-        }
-        UpdateInkBar();
     }
 
     public bool RemoveInk(int ink)

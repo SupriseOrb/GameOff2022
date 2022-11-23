@@ -25,7 +25,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
 
     private void Start() 
     {
-        _bushBaseHealth = _bushItemSO.StampHealth;
+        _bushBaseHealth = _bushItemSO.ItemHealth;
         _bushCurrentHealth = _bushBaseHealth;
         _bushSprite = _bushItemSO.StampSprite;
         _bushDamage = _bushItemSO.ItemStampValue;
@@ -82,7 +82,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
     public void ActivateStampAbility()
     {
         _bushColliders = Physics2D.OverlapCircleAll(transform.position, _bushAttackRange);
-        if (_bushColliders != null)
+        if (_bushColliders != null && _bushCollider != null)
         {
             foreach (Collider2D collider in _bushColliders)
             {

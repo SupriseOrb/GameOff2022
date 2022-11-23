@@ -8,6 +8,7 @@ public class ItemStampScriptableObject : StampScriptableObject
     #region SO Backing Fields
     [SerializeField] private float _itemStampValue;
     [SerializeField] private float _itemCooldown;
+    [SerializeField] private int _itemHealth;
     #endregion
 
     #region SO Getters
@@ -18,6 +19,10 @@ public class ItemStampScriptableObject : StampScriptableObject
     public float ItemCooldown
     {
         get {return _itemCooldown;}
+    }
+    public int ItemHealth
+    {
+        get {return _itemHealth;}
     }
     #endregion
 

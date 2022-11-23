@@ -6,19 +6,18 @@ using UnityEngine;
 public class LandStampScriptableObject : StampScriptableObject
 {
 #region SO Backing Fields
-    //not super important to have in here
-    [SerializeField] private float _stampAbilityCooldown;
-    [SerializeField] private float _stampAbilityValue;
+    [SerializeField] private float _landStampAbilityCooldown;
+    [SerializeField] private float _landStampAbilityValue;
 #endregion
 
 #region SO Getters
-    public float StampAbilityCooldown
+    public float LandAbilityCooldown
     {
-        get {return _stampAbilityCooldown;}
+        get {return _landStampAbilityCooldown;}
     }
-    public float StampAbilityValue
+    public float LandAbilityValue
     {
-        get {return _stampAbilityValue;}
+        get {return _landStampAbilityValue;}
     }
 #endregion
 }

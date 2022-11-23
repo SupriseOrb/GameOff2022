@@ -16,6 +16,7 @@ public class UnitStampScriptableObject : StampScriptableObject
     [SerializeField] private float _unitDamage;
     [SerializeField] private float _unitAttackSpeed;
     [SerializeField] private float _unitSlowAmount;
+    [SerializeField] private int _unitHealth;
     //not super important to have in here
     [SerializeField] private IStamp _stampAbilityScript;
 #endregion
@@ -55,6 +56,10 @@ public class UnitStampScriptableObject : StampScriptableObject
     public float UnitSlowAmount
     {
         get {return _unitSlowAmount;}
+    }
+    public int UnitHealth
+    {
+        get {return _unitHealth;}
     }
 
     public IStamp StampAbilityScript

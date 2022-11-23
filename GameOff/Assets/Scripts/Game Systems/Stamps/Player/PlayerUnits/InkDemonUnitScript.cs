@@ -59,7 +59,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
         _inkDemonCooldownReduction = _inkDemonSO.UnitCooldownReduction;
         
         _inkMinionPrefab = _inkDemonSO.SpawnedUnit;
-        _inkMinionHealth = _inkDemonSO.StampHealth;
+        _inkMinionHealth = _inkDemonSO.UnitHealth;
         _inkMinionAttackSpeed = _inkDemonSO.UnitAttackSpeed;
         _inkMinionDamage = _inkDemonSO.UnitDamage;
     }

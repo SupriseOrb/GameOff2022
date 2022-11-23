@@ -53,6 +53,9 @@ TagManager:
   - name: Item
     uniqueID: 1639880483
     locked: 0
+  - name: Spell
+    uniqueID: 3093757711
+    locked: 0
   - name: Foreground
     uniqueID: 336284779
     locked: 0

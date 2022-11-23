@@ -21,7 +21,8 @@ public class CardScriptableObject : ScriptableObject
         NONE = 0,
         UNIT = 1,
         LAND = 2,
-        ITEM = 3
+        ITEM = 3,
+        SPELL = 4
     }
 
     #region SO Getters

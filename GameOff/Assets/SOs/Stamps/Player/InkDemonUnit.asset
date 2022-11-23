@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: InkDemonUnit
   m_EditorClassIdentifier: 
   _stampName: 
-  _stampCost: 1
   _stampSprite: {fileID: 0}
-  _stampHealth: 3
   _spawnedUnit: {fileID: 942562487849597904, guid: 23f564e76c8a65b419d9862be6fbcd11, type: 3}
   _unitType: Summoner
   _unitAbilityCooldown: 10
@@ -23,3 +21,4 @@ MonoBehaviour:
   _unitDamage: 1
   _unitAttackSpeed: 1
   _unitSlowAmount: 0
+  _unitHealth: 5
