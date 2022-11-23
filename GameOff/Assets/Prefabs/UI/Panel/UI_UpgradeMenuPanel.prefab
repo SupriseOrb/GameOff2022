@@ -305,6 +305,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5136388587487895597}
     m_Modifications:
+    - target: {fileID: 1811770798691425387, guid: 672749be344f13141b1db8847e851460, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811770798691425387, guid: 672749be344f13141b1db8847e851460, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811770798691425387, guid: 672749be344f13141b1db8847e851460, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811770798691425387, guid: 672749be344f13141b1db8847e851460, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6031995771527583841, guid: 672749be344f13141b1db8847e851460, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6031995771527583841, guid: 672749be344f13141b1db8847e851460, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6031995771527583841, guid: 672749be344f13141b1db8847e851460, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6031995771527583841, guid: 672749be344f13141b1db8847e851460, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6031995772054734680, guid: 672749be344f13141b1db8847e851460, type: 3}
       propertyPath: m_Name
       value: CardUpgradeBase (1)
@@ -498,10 +530,6 @@ PrefabInstance:
     - target: {fileID: 3966253082767843281, guid: cc330ab131035c94e9e263e2516213c4, type: 3}
       propertyPath: m_text
       value: 'Choose Your Upgrade:'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3966253082767843281, guid: cc330ab131035c94e9e263e2516213c4, type: 3}
-      propertyPath: m_fontSize
-      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3966253082767843281, guid: cc330ab131035c94e9e263e2516213c4, type: 3}
       propertyPath: m_fontSizeBase

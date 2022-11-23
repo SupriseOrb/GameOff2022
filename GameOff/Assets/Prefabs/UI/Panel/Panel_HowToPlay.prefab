@@ -11,9 +11,13 @@ PrefabInstance:
       propertyPath: m_text
       value: How To Play
       objectReference: {fileID: 0}
+    - target: {fileID: 2418035945193544231, guid: 0eea429360209484c9817a2aa499ea0d, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2662772456287768035, guid: 3d5efca15fb2c1d41bcc22e833d26a2c, type: 2}
     - target: {fileID: 5168056364305601115, guid: 0eea429360209484c9817a2aa499ea0d, type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7345074477644954552, guid: 0eea429360209484c9817a2aa499ea0d, type: 3}
       propertyPath: m_Name
