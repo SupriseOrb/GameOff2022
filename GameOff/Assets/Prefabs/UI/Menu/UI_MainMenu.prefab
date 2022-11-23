@@ -2470,6 +2470,22 @@ PrefabInstance:
       propertyPath: m_text
       value: Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 2371857296523986230, guid: 8a0aec236b51f4d4088d2d567d620291, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.16470589
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371857296523986230, guid: 8a0aec236b51f4d4088d2d567d620291, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371857296523986230, guid: 8a0aec236b51f4d4088d2d567d620291, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.25490198
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371857296523986230, guid: 8a0aec236b51f4d4088d2d567d620291, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4280955713
+      objectReference: {fileID: 0}
     - target: {fileID: 5308874597133768636, guid: 8a0aec236b51f4d4088d2d567d620291, type: 3}
       propertyPath: m_Sprite
       value: 
