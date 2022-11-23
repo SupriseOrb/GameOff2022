@@ -22,8 +22,8 @@ public class BramblePatchLand : MonoBehaviour, ILandStamp
 
     private void LoadBaseStats()
     {
-        _brambleDamage = _brambleSO.StampAbilityValue;
-        _baseDamageCooldown = _brambleSO.StampAbilityCooldown;
+        _brambleDamage = _brambleSO.LandAbilityValue;
+        _baseDamageCooldown = _brambleSO.LandAbilityCooldown;
         _currentDamageCooldown = _baseDamageCooldown;
     }
 

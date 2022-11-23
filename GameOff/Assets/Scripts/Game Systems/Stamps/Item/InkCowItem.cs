@@ -101,4 +101,9 @@ public class InkCowItem : MonoBehaviour, IItemStamp
 
     }
 
+    public bool IsDead()
+    {
+        return _isDead;
+    }
+
 }
