@@ -5,13 +5,13 @@ using UnityEngine;
 public class BoardTile : MonoBehaviour
 {
     [SerializeField] protected GameObject _heldStamp;
-    [SerializeField] protected GameObject _currentSpell = null;
+    [SerializeField] protected GameObject _currentSpell;
     [SerializeField] public int _laneNumber;
     [SerializeField] public int _tileNumber;
 
     public GameObject GetHeldStamp()
     {
-        if(gameObject.transform.childCount == 1)
+        if(gameObject.transform.childCount >= 1)
         {
             return _heldStamp;
         }
@@ -33,14 +33,29 @@ public class BoardTile : MonoBehaviour
         return false;
     }
 
+
     public virtual bool PlaySpell(GameObject spell)
     {
         if (spell.TryGetComponent(out ISpellStamp spellStamp))
         {
-            if(gameObject.transform.childCount == 1 && _currentSpell == null)
+            if (true)
             {
+                if (gameObject.transform.childCount == 1) //If there is an item (as to not break other functionality)
+                {
+                    _currentSpell = Instantiate(spell, gameObject.transform.position, Quaternion.identity, gameObject.transform.GetChild(0).gameObject.transform);
+                }
+                else //If there is no item; empty tile
+                {
+                    _currentSpell = Instantiate(spell, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+                }
+                _currentSpell.GetComponent<IStamp>().SetLane(_laneNumber);
+                return true;
+            }
+            else if(gameObject.transform.childCount == 1)
+            {
+                //This is technically setting the item before the item is actually instantiated, which, while is working, is concerning?
                 spellStamp.SetAffectedItem(gameObject.transform.GetChild(0).gameObject);
-                _currentSpell = Instantiate(spell, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+                _currentSpell = Instantiate(spell, gameObject.transform.position, Quaternion.identity, gameObject.transform.GetChild(0).gameObject.transform);
                 _currentSpell.GetComponent<IStamp>().SetLane(_laneNumber);
                 return true;
             }

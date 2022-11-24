@@ -210,7 +210,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
             }
             else
             {
-                _currentSlowMultiplier = _currentSlowMultiplier * movementModifier;
+                _currentSlowMultiplier = movementModifier;
             }
             _isMoveSlowed = true;
         }

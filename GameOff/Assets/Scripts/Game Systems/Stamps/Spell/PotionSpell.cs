@@ -5,11 +5,12 @@ using UnityEngine;
 public class PotionSpell : MonoBehaviour, ISpellStamp
 {
     [SerializeField] private bool _isDead = false;
+    [SerializeField] private bool _isOffensive = false;
     [SerializeField] private int _potionHealAmount;
     [SerializeField] private int _empoweredPotionHealAmount;
-    [SerializeField] private bool _isEmpowered = false;
     [SerializeField] private Sprite _potionSprite;
     [SerializeField] private int _laneNumber;
+    //[SerializeField] private float _potionDelayTimer = 1f;
     [SerializeField] private GameObject _affectedItem;
     [SerializeField] private SpellStampScriptableObject _potionSpellSO;
 
@@ -23,6 +24,7 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
     {
         _potionSprite = _potionSpellSO.StampSprite;
         _potionHealAmount = (int)_potionSpellSO.SpellValue;
+        _isOffensive = _potionSpellSO.IsOffensive;
         _empoweredPotionHealAmount = 999;
 
         foreach (AnimationClip clip in _potionAnimator.runtimeAnimatorController.animationClips)
@@ -32,7 +34,6 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
                 _potionDisappearAnimLength = clip.length;
             }
         }
-
         ActivateStampAbility();
     }
 
@@ -68,6 +69,11 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
         }
     }
     
+    public bool IsOffensive()
+    {
+        return _isOffensive;
+    }
+
     public string GetStampName()
     {
         return _potionSpellSO.StampName;
