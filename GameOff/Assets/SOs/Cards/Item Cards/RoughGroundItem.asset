@@ -18,4 +18,4 @@ MonoBehaviour:
   _hasBeenUsed: 0
   _stampGORef: {fileID: 4424480200185991471, guid: d49ffd6296a3c7f4c8d93ced4c5711d2, type: 3}
   _cardType: 3
-  _cardIcon: {fileID: 21300000, guid: 2bde755ece2c17a4d900aa37069a287d, type: 3}
+  _cardIcon: {fileID: 21300000, guid: 5f4acb0808fb84e499978be306836ca3, type: 3}

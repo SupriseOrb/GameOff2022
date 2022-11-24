@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PotionSpell : MonoBehaviour, ISpellStamp
 {
-    [SerializeField] private bool _isDead = false;
-    [SerializeField] private bool _isOffensive = false;
+    [SerializeField] private bool _isDeactivated = true;
+    [SerializeField] private bool _isActivated = false;
     [SerializeField] private int _potionHealAmount;
     [SerializeField] private int _empoweredPotionHealAmount;
     [SerializeField] private Sprite _potionSprite;
@@ -15,20 +15,35 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
 
     #region Animation
     [SerializeField] private Animator _potionAnimator; 
-    [SerializeField] private string _potionDisappearAnim;
-    [SerializeField] private float _potionDisappearAnimLength;
+    [SerializeField] private string _potionAppearAnimation;
+    [SerializeField] private float _potionAppearAnimationLength;
+    [SerializeField] private string _potionDisappearAnimation;
+    [SerializeField] private float _potionDisappearAnimationLength;
     #endregion
+
+    private void Start() 
+    {
+        
+    }
 
     private void FixedUpdate() 
     {
-        if (_isDead)
+        if(_isDeactivated)
         {
-            _potionDisappearAnimLength -= Time.deltaTime;
-            if (_potionDisappearAnimLength <= -1)
+            _potionDisappearAnimationLength -= Time.deltaTime;
+            if(_potionDisappearAnimationLength <= -1)
             {
                 Destroy(gameObject);
             }
         }
+        else if(_isActivated)
+        {
+            _potionAppearAnimationLength -= Time.deltaTime;
+            if(_potionAppearAnimationLength <= 0)
+            {
+                _isDeactivated = true;
+            }
+        } 
     }
 
     public void LoadBaseStats()
@@ -39,9 +54,13 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
 
         foreach (AnimationClip clip in _potionAnimator.runtimeAnimatorController.animationClips)
         {
-            if (clip.name == _potionDisappearAnim)
+            if (clip.name == _potionDisappearAnimation)
             {
-                _potionDisappearAnimLength = clip.length;
+                _potionDisappearAnimationLength = clip.length;
+            }
+            else if(clip.name == _potionAppearAnimation)
+            {
+                _potionAppearAnimationLength = clip.length;
             }
         }
     }
@@ -66,18 +85,14 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
                     {
                         itemStamp.HealHealth(_potionHealAmount);    
                     }
-                    _isDead = true;
-                    _potionAnimator.Play(_potionDisappearAnim);
+                    _isDeactivated = false;
+                    _isActivated = true;
+                    _potionAnimator.Play(_potionAppearAnimation);
                 }
             }
         }
     }
     
-    public bool IsOffensive()
-    {
-        return _isOffensive;
-    }
-
     public string GetStampName()
     {
         return _potionSpellSO.StampName;
@@ -101,10 +116,5 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
     public void SetTile(BoardTile tile)
     {
         _affectedTile = tile;
-    }
-
-    public bool IsDead()
-    {
-        return _isDead;
     }
 }

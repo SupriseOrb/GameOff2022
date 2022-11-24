@@ -89,6 +89,11 @@ public class TestUnitScript : MonoBehaviour, IUnitStamp
         //bring up the upgrade menu I think
     }
 
+    public void ReduceCooldown(float reductionAmount)
+    {
+
+    }    
+
 #region Ability Functions
     public void ActivateStampAbility()
     {

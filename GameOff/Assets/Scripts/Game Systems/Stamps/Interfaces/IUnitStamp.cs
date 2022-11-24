@@ -7,5 +7,6 @@ public interface IUnitStamp : IStamp
     void ActivateStampAttack();
     void LoadBaseStats();
     void OpenUnitUpgrade();
+    void ReduceCooldown(float reductionAmount);
     void UpgradeUnit(int upgradePath);
 }

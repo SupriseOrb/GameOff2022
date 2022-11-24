@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c4df2d70e761f4c9272f3149829178, type: 3}
-  m_Name: InkReservoirLand
+  m_Name: TimepieceSpell
   m_EditorClassIdentifier: 
-  _cardName: Ink Reservoir
-  _cardDescription: Periodically Heals Allies
+  _cardName: Timepiece
+  _cardDescription: Reduces the current cooldown of units in this lane by an amount
   _inkCost: 1
   _hasBeenUsed: 0
-  _stampGORef: {fileID: 7704762201357935458, guid: 1f70b25f88717604ebb4d48cfa1350f9, type: 3}
-  _cardType: 2
-  _cardIcon: {fileID: 21300000, guid: 2626737837f150049bb4f4aa96e22d99, type: 3}
+  _stampGORef: {fileID: 4239279702888943664, guid: c122c83a2fb43b64fa44ade8c8598219, type: 3}
+  _cardType: 4
+  _cardIcon: {fileID: 21300000, guid: 5b988fc38df85a343afce1b0e22df442, type: 3}
