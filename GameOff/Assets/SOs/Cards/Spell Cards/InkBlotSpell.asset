@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c4df2d70e761f4c9272f3149829178, type: 3}
+  m_Name: InkBlotSpell
+  m_EditorClassIdentifier: 
+  _cardName: Ink Blot
+  _cardDescription: Deal damage to enemies on the tile.
+  _inkCost: 1
+  _hasBeenUsed: 0
+  _stampGORef: {fileID: 8786394634965217155, guid: 2b6495b82de3bcd4ab578730ca5a72ea, type: 3}
+  _cardType: 4
+  _cardIcon: {fileID: 21300000, guid: b4f9dcf82f85ce9488b81b962e219092, type: 3}

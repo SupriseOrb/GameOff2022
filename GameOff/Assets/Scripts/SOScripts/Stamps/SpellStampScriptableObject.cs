@@ -6,14 +6,9 @@ using UnityEngine;
 public class SpellStampScriptableObject : StampScriptableObject
 {
     [SerializeField] private float _spellStampValue;
-    [SerializeField] private bool _isOffensive;
 
     public float SpellValue
     {
         get {return _spellStampValue;}
-    }
-    public bool IsOffensive
-    {
-        get {return _isOffensive;}
     }
 }

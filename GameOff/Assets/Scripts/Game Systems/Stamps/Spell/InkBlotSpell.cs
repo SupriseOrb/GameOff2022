@@ -5,12 +5,12 @@ using UnityEngine;
 public class InkBlotSpell : MonoBehaviour, ISpellStamp
 {
     [SerializeField] private bool _isDead = false;
-    [SerializeField] private bool _isOffensive = false;
-    [SerializeField] private int _blotDamageAmount;
+    [SerializeField] private int _blotDamage;
     [SerializeField] private BoardTile _affectedTile;
-    //[SerializeField] private int _empoweredBlotHealAmount;
     [SerializeField] private Sprite _blotSprite;
     [SerializeField] private int _laneNumber;
+    [SerializeField] private Collider2D[] _blotColliders;
+    [SerializeField] private float _blotRange;
     [SerializeField] private SpellStampScriptableObject _blotSpellSO;
 
     #region Animation
@@ -19,12 +19,10 @@ public class InkBlotSpell : MonoBehaviour, ISpellStamp
     [SerializeField] private float _blotDisappearAnimLength;
     #endregion
 
-    private void Start() 
+    private void LoadBaseStats() 
     {
         _blotSprite = _blotSpellSO.StampSprite;
-        _blotDamageAmount = (int)_blotSpellSO.SpellValue;
-        _isOffensive = _blotSpellSO.IsOffensive;  
-
+        _blotDamage = (int)_blotSpellSO.SpellValue;
         foreach (AnimationClip clip in _blotAnimator.runtimeAnimatorController.animationClips)
         {
             if (clip.name == _blotDisappearAnim)
@@ -32,13 +30,50 @@ public class InkBlotSpell : MonoBehaviour, ISpellStamp
                 _blotDisappearAnimLength = clip.length;
             }
         }
-        ActivateStampAbility();
     }
 
     public void ActivateStampAbility()
     {
-
+        LoadBaseStats();
+        _blotColliders = Physics2D.OverlapCircleAll(transform.position, _blotRange);
+        if (_blotColliders != null)
+        {
+            if(DeckManager.Instance.RemoveInk(DeckManager.Instance.SelectedCard.CardSO.InkCost))
+            {
+                foreach (Collider2D collider in _blotColliders)
+                {
+                    
+                    if (collider.TryGetComponent(out IEnemy enemy))
+                    {
+                        if (BoardManager.Instance.GetLane(_laneNumber).GetLeylineStatus())
+                        {
+                            float multiplier = BoardManager.Instance.GetLane(_laneNumber).GetLeylineMultiplier();
+                            enemy.TakeDamage(_blotDamage * multiplier); 
+                        }
+                        else
+                        {
+                        enemy.TakeDamage(_blotDamage);  
+                        }    
+                    }
+                }
+            }   
+        }
+        _isDead = true;
+        _blotAnimator.Play(_blotDisappearAnim);
+    }      
+        
+    private void FixedUpdate() 
+    {
+        if (_isDead)
+        {
+            _blotDisappearAnimLength -= Time.deltaTime;
+            if (_blotDisappearAnimLength <= -1)
+            {
+                Destroy(gameObject);
+            }
+        }  
     }
+    
 
     public void SetTile(BoardTile tile)
     {
