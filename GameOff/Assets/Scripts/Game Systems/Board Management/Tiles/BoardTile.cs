@@ -37,13 +37,12 @@ public class BoardTile : MonoBehaviour
     {
         if (spell.TryGetComponent(out ISpellStamp spellStamp))
         {
-            if(gameObject.transform.childCount == 1 && _currentSpell == null)
-            {
-                spellStamp.SetAffectedItem(gameObject.transform.GetChild(0).gameObject);
-                _currentSpell = Instantiate(spell, gameObject.transform.position, Quaternion.identity, gameObject.transform);
-                _currentSpell.GetComponent<IStamp>().SetLane(_laneNumber);
-                return true;
-            }
+            //spellStamp.SetAffectedItem(gameObject.transform.GetChild(0).gameObject);
+            _currentSpell = Instantiate(spell, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+            _currentSpell.GetComponent<IStamp>().SetLane(_laneNumber);
+            _currentSpell.GetComponent<ISpellStamp>().SetTile(gameObject.GetComponent<BoardTile>());
+            _currentSpell.GetComponent<ISpellStamp>().ActivateStampAbility();
+            return true;
         }
         return false;
     }

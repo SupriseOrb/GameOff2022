@@ -97,6 +97,27 @@ public class InputManager : MonoBehaviour
                         }
                         DeckManager.Instance.ResetCardSelection();
                     }
+                    else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.SPELL)
+                    {
+                        if (unitTile.GetHeldStamp() != null && unitTile.GetHeldStamp().TryGetComponent(out IUnitStamp unit))
+                        {
+                            if (DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
+                            { 
+                                unitTile.PlaySpell(_selectedCard.CardSO.StampGO);
+                                Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
+                            }
+                            else
+                            {
+                                //do some error thing
+                                //Maybe make the ink bar flash w/ a shader
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("There is no item stamp on this tile!");
+                        }
+                        DeckManager.Instance.ResetCardSelection(); 
+                    }
                     
                 }
                 else if (_raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile)) //If drag is released on BoardTile / BoardTile clicked
@@ -132,7 +153,7 @@ public class InputManager : MonoBehaviour
                     }
                     else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.SPELL)
                     {
-                        if (boardTile.GetHeldStamp() != null)
+                        if (boardTile.GetHeldStamp() != null && boardTile.GetHeldStamp().TryGetComponent(out IItemStamp item))
                         {
                             if (DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
                             { 

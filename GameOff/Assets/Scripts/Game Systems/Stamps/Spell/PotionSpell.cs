@@ -10,7 +10,7 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
     [SerializeField] private bool _isEmpowered = false;
     [SerializeField] private Sprite _potionSprite;
     [SerializeField] private int _laneNumber;
-    [SerializeField] private GameObject _affectedItem;
+    [SerializeField] private BoardTile _affectedTile;
     [SerializeField] private SpellStampScriptableObject _potionSpellSO;
 
     #region Animation
@@ -21,19 +21,7 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
 
     private void Start() 
     {
-        _potionSprite = _potionSpellSO.StampSprite;
-        _potionHealAmount = (int)_potionSpellSO.SpellValue;
-        _empoweredPotionHealAmount = 999;
-
-        foreach (AnimationClip clip in _potionAnimator.runtimeAnimatorController.animationClips)
-        {
-            if (clip.name == _potionDisappearAnim)
-            {
-                _potionDisappearAnimLength = clip.length;
-            }
-        }
-
-        ActivateStampAbility();
+        
     }
 
     private void FixedUpdate() 
@@ -48,23 +36,45 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
         }
     }
 
+    public void LoadBaseStats()
+    {
+        _potionSprite = _potionSpellSO.StampSprite;
+        _potionHealAmount = (int)_potionSpellSO.SpellValue;
+        _empoweredPotionHealAmount = 999;
+
+        foreach (AnimationClip clip in _potionAnimator.runtimeAnimatorController.animationClips)
+        {
+            if (clip.name == _potionDisappearAnim)
+            {
+                _potionDisappearAnimLength = clip.length;
+            }
+        }
+    }
+
     public void ActivateStampAbility()
     {
-        if (_affectedItem.TryGetComponent(out IItemStamp itemStamp))
+        LoadBaseStats();
+        if(_affectedTile.GetHeldStamp() != null)
         {
-            if (BoardManager.Instance.GetLane(_laneNumber).GetLeylineStatus())
+            if (_affectedTile.GetHeldStamp().TryGetComponent(out IItemStamp itemStamp))
             {
-                //float multiplier = BoardManager.Instance.GetLane(_laneNumber).GetLeylineMultiplier();
-                //itemStamp.HealHealth(_potionHealAmount * multiplier); 
-                itemStamp.HealHealth(_empoweredPotionHealAmount); 
-                //This value will likely just be 999
+                if(DeckManager.Instance.RemoveInk(DeckManager.Instance.SelectedCard.CardSO.InkCost))
+                {
+                    if (BoardManager.Instance.GetLane(_laneNumber).GetLeylineStatus())
+                    {
+                        //float multiplier = BoardManager.Instance.GetLane(_laneNumber).GetLeylineMultiplier();
+                        //itemStamp.HealHealth(_potionHealAmount * multiplier); 
+                        itemStamp.HealHealth(_empoweredPotionHealAmount); 
+                        //This value will likely just be 999
+                    }
+                    else
+                    {
+                        itemStamp.HealHealth(_potionHealAmount);    
+                    }
+                    _isDead = true;
+                    _potionAnimator.Play(_potionDisappearAnim);
+                }
             }
-            else
-            {
-                itemStamp.HealHealth(_potionHealAmount);    
-            }
-            _isDead = true;
-            _potionAnimator.Play(_potionDisappearAnim);
         }
     }
     
@@ -88,9 +98,9 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
         _laneNumber = lane;
     }
 
-    public void SetAffectedItem(GameObject item)
+    public void SetTile(BoardTile tile)
     {
-        _affectedItem = item;
+        _affectedTile = tile;
     }
 
     public bool IsDead()
