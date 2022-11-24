@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -1201209585
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1730513724, guid: f63c650670802de44a531c0b308f8728, type: 3}
+  m_Sprite: {fileID: 913334440, guid: dcb62f2e9b4211e499cee932f10065d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 4239279701672861172}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 42983425b047585409873e3bd966c91f, type: 2}
+  m_Controller: {fileID: 9100000, guid: aaea4708df9f8aa4694bbca17f35cb15, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -114,9 +114,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4239279702888943667}
-  - component: {fileID: 4239279702888943666}
+  - component: {fileID: 6510612382041482516}
   m_Layer: 0
-  m_Name: PotionSpell
+  m_Name: TimepieceSpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,7 +138,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4239279702888943666
+--- !u!114 &6510612382041482516
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,19 +147,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 4239279702888943664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8407bd163cfd39a449e2f157287770ec, type: 3}
+  m_Script: {fileID: 11500000, guid: de535a29150025648967fa206ad7e7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isDeactivated: 1
   _isActivated: 0
-  _potionHealAmount: 0
-  _empoweredPotionHealAmount: 0
-  _potionSprite: {fileID: 0}
+  _timepieceReductionAmount: 0
+  _timepieceSprite: {fileID: 0}
   _laneNumber: 0
   _affectedTile: {fileID: 0}
-  _potionSpellSO: {fileID: 11400000, guid: 0160b183fd2aef24daeda51ade4cceb1, type: 2}
-  _potionAnimator: {fileID: 4239279701672861169}
-  _potionAppearAnimation: Potion_Appear
-  _potionAppearAnimationLength: 0
-  _potionDisappearAnimation: Potion_Dissapear
-  _potionDisappearAnimationLength: 0
+  _timepieceSpellSO: {fileID: 11400000, guid: 7b3c3dc7b43fdcb4da47ea23b9ea63bc, type: 2}
+  _affectedUnits: []
+  _timepieceAnimator: {fileID: 4239279701672861169}
+  _timepieceAppearAnimation: Timepiece_Appear
+  _timepieceAppearAnimationLength: 0
+  _timepieceDisappearAnimation: Timepiece_Disappear
+  _timepieceDisappearAnimationLength: 0

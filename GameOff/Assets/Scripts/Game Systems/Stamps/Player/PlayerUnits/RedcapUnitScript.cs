@@ -111,6 +111,11 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         
     }
 
+    public void ReduceCooldown(float reductionAmount)
+    {
+        _redcapAttackCooldown -= reductionAmount;
+    }
+
 #region Ability Functions
     public void ActivateStampAbility()
     {

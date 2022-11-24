@@ -4,6 +4,5 @@ using UnityEngine;
 
 public interface ISpellStamp : IStamp
 {
-    bool IsDead();
     void SetTile(BoardTile tile);
 }

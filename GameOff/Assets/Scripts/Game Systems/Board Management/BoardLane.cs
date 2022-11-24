@@ -71,13 +71,6 @@ public class BoardLane : MonoBehaviour
         }
     }
 
-    //its here in case we need it, not sure we do tho
-    // It might be needed by certain lane stamps
-    public BoardTile[] GetLaneTiles()
-    {
-        return _laneTiles;
-    }
-
     //Used by certain lane stamps
     public List<GameObject> GetLaneEnemies()
     {
@@ -106,6 +99,11 @@ public class BoardLane : MonoBehaviour
     public void SetLaneUnit(GameObject unit, int tileNumber)
     {
         _laneUnits[tileNumber] = unit;
+    }
+
+    public GameObject[] GetLaneUnits()
+    {
+        return _laneUnits;
     }
 
     //Gets the rightmost tile that does not have a held stamp inside of it

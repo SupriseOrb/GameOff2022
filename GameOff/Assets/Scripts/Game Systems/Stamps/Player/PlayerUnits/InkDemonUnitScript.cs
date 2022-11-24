@@ -109,6 +109,11 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
         }
     }
 
+    public void ReduceCooldown(float reductionAmount)
+    {
+        _currentInkDemonAbilityCooldown -= reductionAmount;
+    }
+
 #region Ability Functions
     public void ActivateStampAbility()
     {

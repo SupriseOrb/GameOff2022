@@ -109,11 +109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7391363688061450737, guid: f27a4cc48adff7541bddd0d4a4cc76ec, type: 3}
       propertyPath: m_Name
-      value: Potion_Spell
+      value: Timepiece_Spell
       objectReference: {fileID: 0}
     - target: {fileID: 7851350964140434175, guid: f27a4cc48adff7541bddd0d4a4cc76ec, type: 3}
       propertyPath: _cardSO
       value: 
-      objectReference: {fileID: 11400000, guid: c837a90b27bf73049bd25639d499af7a, type: 2}
+      objectReference: {fileID: 11400000, guid: 77fdc22ddcaecd54489f3047f3c3743c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f27a4cc48adff7541bddd0d4a4cc76ec, type: 3}

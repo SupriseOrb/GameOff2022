@@ -80,11 +80,6 @@ public class InkBlotSpell : MonoBehaviour, ISpellStamp
         _affectedTile = tile;
     }
 
-    public bool IsDead()
-    {
-        return _isDead;
-    }
-
     public string GetStampName()
     {
         return _blotSpellSO.StampName;

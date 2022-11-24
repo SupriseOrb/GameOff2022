@@ -39,7 +39,7 @@ public class BoardTile : MonoBehaviour
         if (spell.TryGetComponent(out ISpellStamp spellStamp))
         {
             //spellStamp.SetAffectedItem(gameObject.transform.GetChild(0).gameObject);
-            _currentSpell = Instantiate(spell, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+            _currentSpell = Instantiate(spell, gameObject.transform.position, Quaternion.identity);
             _currentSpell.GetComponent<IStamp>().SetLane(_laneNumber);
             _currentSpell.GetComponent<ISpellStamp>().SetTile(gameObject.GetComponent<BoardTile>());
             _currentSpell.GetComponent<ISpellStamp>().ActivateStampAbility();

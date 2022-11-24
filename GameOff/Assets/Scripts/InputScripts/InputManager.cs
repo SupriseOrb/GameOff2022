@@ -99,23 +99,8 @@ public class InputManager : MonoBehaviour
                     }
                     else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.SPELL)
                     {
-                        if (unitTile.GetHeldStamp() != null && unitTile.GetHeldStamp().TryGetComponent(out IUnitStamp unit))
-                        {
-                            if (DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
-                            { 
-                                unitTile.PlaySpell(_selectedCard.CardSO.StampGO);
-                                Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
-                            }
-                            else
-                            {
-                                //do some error thing
-                                //Maybe make the ink bar flash w/ a shader
-                            }
-                        }
-                        else
-                        {
-                            Debug.Log("There is no item stamp on this tile!");
-                        }
+                        unitTile.PlaySpell(_selectedCard.CardSO.StampGO);
+                        Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
                         DeckManager.Instance.ResetCardSelection(); 
                     }
                     
@@ -153,23 +138,8 @@ public class InputManager : MonoBehaviour
                     }
                     else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.SPELL)
                     {
-                        if (boardTile.GetHeldStamp() != null && boardTile.GetHeldStamp().TryGetComponent(out IItemStamp item))
-                        {
-                            if (DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
-                            { 
-                                boardTile.PlaySpell(_selectedCard.CardSO.StampGO);
-                                Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
-                            }
-                            else
-                            {
-                                //do some error thing
-                                //Maybe make the ink bar flash w/ a shader
-                            }
-                        }
-                        else
-                        {
-                            Debug.Log("There is no item stamp on this tile!");
-                        }
+                        boardTile.PlaySpell(_selectedCard.CardSO.StampGO);
+                        Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
                         DeckManager.Instance.ResetCardSelection(); 
                     }
                 }
