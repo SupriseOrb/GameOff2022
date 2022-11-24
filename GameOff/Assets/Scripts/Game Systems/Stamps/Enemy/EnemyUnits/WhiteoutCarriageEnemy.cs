@@ -200,7 +200,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
 
     private void SetAnimationSpeeds()
     {
-        _carriageAnimator.SetFloat("WalkSpeedMultiplier", _carriageMovementSpeed / (1/_carriageWalkAnimationLength));
+        _carriageAnimator.SetFloat("WalkSpeedModifier", _carriageMovementSpeed / (1/_carriageWalkAnimationLength));
     }
 
     public void Stun(float stunDuration)
