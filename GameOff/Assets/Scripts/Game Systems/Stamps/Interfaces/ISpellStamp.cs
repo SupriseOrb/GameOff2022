@@ -5,5 +5,5 @@ using UnityEngine;
 public interface ISpellStamp : IStamp
 {
     bool IsDead();
-    void SetAffectedItem(GameObject item);
+    void SetTile(BoardTile item);
 }
