@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1cbc222da9e674eb7b47ed89b1bf37, type: 3}
   m_Name: WhiteoutCarriageEnemy
   m_EditorClassIdentifier: 
-  _spawnedUnit: {fileID: 0}
-  _enemyHealth: 20
+  _spawnedUnit: {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+  _enemyHealth: 100
   _enemyAbilityCooldown: 0
   _enemyCooldownReduction: 0
-  _enemyDamage: 2
+  _enemyDamage: 1000
   _enemyAttackSpeed: 1
-  _enemyMovementSpeed: 1
+  _enemyMovementSpeed: 0.4

@@ -20,16 +20,49 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
 
     [SerializeField] private GameObject _attackTarget;
     [SerializeField] private bool _isStunned = false;
+    [SerializeField] private bool _isMoveSlowed = false;
+    [SerializeField] private bool _isDead = false;
     [SerializeField] private Rigidbody2D _carriageRigidBody;
+    [SerializeField] private BoxCollider2D _carriageCollider;
 
     [SerializeField] private float _currentStunDuration;
+    [SerializeField] private float _currentMoveSlowDuration;
+    [SerializeField] private float _currentAttackSlowDuration;
+    [SerializeField] private float _currentSlowMultiplier;
     [SerializeField] private int _laneNumber;
+    [SerializeField] private Animator _carriageAnimator;
+    [SerializeField] private float _carriageWalkAnimationLength;
+    [SerializeField] private float _carriageDieAnimationLength;
+    [SerializeField] private float _carriageDieAnimationHalfLength;
+    [SerializeField] private string _carriageWalkAnimationName = "Carriage_Walk";
+    [SerializeField] private string _carriageDieAnimationName = "Carriage_Disappear";
+
+    private void Awake() 
+    {
+        _carriageRigidBody = GetComponent<Rigidbody2D>();    
+        _carriageCollider = GetComponent<BoxCollider2D>();
+
+    }
 
     private void Start() 
     {
         LoadBaseStats();
-        _carriageRigidBody = GetComponent<Rigidbody2D>();    
-        _carriageRigidBody.velocity = Vector2.left * _carriageMovementSpeed;
+        _isAttacking = true;
+        
+        foreach(AnimationClip clip in _carriageAnimator.runtimeAnimatorController.animationClips)
+        {
+            if(clip.name == _carriageWalkAnimationName)
+            {
+                _carriageWalkAnimationLength = clip.length;
+            }
+            else if(clip.name == _carriageDieAnimationName)
+            {
+                _carriageDieAnimationLength = clip.length;
+            }
+        }
+        _carriageDieAnimationHalfLength = _carriageDieAnimationLength/2;
+        
+        SetAnimationSpeeds();
     }
 
     public void LoadBaseStats()
@@ -59,10 +92,13 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
             *IMPORTANT*: We also need to add them to their respective Lane's _laneEnemies
             Instantiate(_soliderPrefab,gameObject.transform.position, Quaternion.identity);
             */
+            
 
             //Temp Destroy
             BoardManager.Instance.GetLane(_laneNumber).RemoveEnemyFromList(gameObject);
-            Destroy(gameObject);
+            _carriageAnimator.Play(_carriageDieAnimationName);
+            _isDead = true;
+            _carriageCollider.enabled = false;
 
             /*TODO:
                 Disable enemy collider
@@ -74,7 +110,36 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
 
     private void FixedUpdate() 
     {
-        if (_isStunned)
+        if(_isMoveSlowed)
+        {
+            if(_currentMoveSlowDuration > 0)
+            {
+                _currentMoveSlowDuration -= Time.deltaTime;
+            }
+            else
+            {
+                _carriageMovementSpeed = _carriageMovementSpeed / _currentSlowMultiplier;
+                _isAttacking = true;
+                SetAnimationSpeeds();
+            }
+        }
+
+        if(_isDead)
+        {
+            _carriageAnimator.speed = 1;
+            _carriageDieAnimationLength -= Time.deltaTime;
+            if(_carriageDieAnimationLength < 0)
+            {
+                Destroy(gameObject);
+            } 
+            else if(_carriageDieAnimationLength < _carriageDieAnimationHalfLength)
+            {
+                GameObject spawnedEnemy = Instantiate(_spawnedUnit, gameObject.transform.position, Quaternion.identity);
+                BoardManager.Instance.GetLane(_laneNumber).AddEnemyToList(spawnedEnemy);
+                _carriageDieAnimationHalfLength = -100;
+            }
+        }
+        else if(_isStunned)
         {
             _currentStunDuration -= Time.deltaTime;
             if (_currentStunDuration <= 0)
@@ -83,10 +148,9 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
                 _isAttacking = true;
             }
         }
-
-        if(_isAttacking)
+        else if(_isAttacking)
         {
-            if(_attackTarget == null)
+            if(_attackTarget == null || _attackTarget.GetComponent<IItemStamp>().IsDead())
             {
                 _isAttacking = false;
                 _carriageRigidBody.velocity = Vector2.left * _carriageMovementSpeed;
@@ -104,7 +168,6 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     {
         _attackTarget = target;
         _isAttacking = true;
-        _carriageRigidBody.velocity = Vector2.zero;
     }
 
     public void ActivateStampAttack()
@@ -113,18 +176,31 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
         //Play attack animation
     }
 
-    public void ModifySpeeds(float movementModifier, float moveDuration, float attackSpeedModifier = 0, float attackDuration = 0)
+    public void ModifySpeeds(float movementModifier, float moveDuration = 0, float attackSpeedModifier = 0, float attackDuration = 0)
     {
-        /*
-        _soldierMovementSpeed = _soldierMovementSpeed * (1 - movementModifier);
+        _carriageMovementSpeed = _carriageMovementSpeed * movementModifier;
         _currentMoveSlowDuration = moveDuration;
         _isAttacking = true;
+        if(moveDuration > 0)
+        {
+            if(_currentSlowMultiplier != 0)
+            {
+                _currentSlowMultiplier = _currentSlowMultiplier * movementModifier;
+            }
+            else
+            {
+                _currentSlowMultiplier = movementModifier;
+            }
+            _isMoveSlowed = true;
+        }
 
-        _soldierAttackSpeed = _soldierAttackSpeed * (1 - attackSpeedModifier);
-        _currentAttackSlowDuration = attackDuration;
-        //_soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
         SetAnimationSpeeds();
-        */
+        
+    }
+
+    private void SetAnimationSpeeds()
+    {
+        _carriageAnimator.SetFloat("WalkSpeedMultiplier", _carriageMovementSpeed / (1/_carriageWalkAnimationLength));
     }
 
     public void Stun(float stunDuration)
