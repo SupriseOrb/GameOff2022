@@ -7,6 +7,7 @@ public class InkBlotSpell : MonoBehaviour, ISpellStamp
     [SerializeField] private bool _isDead = false;
     [SerializeField] private bool _isOffensive = false;
     [SerializeField] private int _blotDamageAmount;
+    [SerializeField] private BoardTile _affectedTile;
     //[SerializeField] private int _empoweredBlotHealAmount;
     [SerializeField] private Sprite _blotSprite;
     [SerializeField] private int _laneNumber;
@@ -39,6 +40,11 @@ public class InkBlotSpell : MonoBehaviour, ISpellStamp
 
     }
 
+    public void SetTile(BoardTile tile)
+    {
+        _affectedTile = tile;
+    }
+
     public bool IsDead()
     {
         return _isDead;
@@ -63,5 +69,4 @@ public class InkBlotSpell : MonoBehaviour, ISpellStamp
     {
         _laneNumber = lane;
     }
-
 }
