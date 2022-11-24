@@ -120,9 +120,9 @@ public class BoardLane : MonoBehaviour
         return null;
     }
 
-    public BoolVariable GetLeylineStatus()
+    public bool GetLeylineStatus()
     {
-        return _leylineActive;
+        return _leylineActive.Value;
     }
 
     public void SetLeylineStatus(bool status)

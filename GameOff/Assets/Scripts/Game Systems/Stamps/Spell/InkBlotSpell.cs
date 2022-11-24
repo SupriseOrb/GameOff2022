@@ -42,8 +42,7 @@ public class InkBlotSpell : MonoBehaviour, ISpellStamp
             {
                 foreach (Collider2D collider in _blotColliders)
                 {
-                    
-                    if (collider.TryGetComponent(out IEnemy enemy))
+                    if (collider.gameObject.TryGetComponent(out IEnemy enemy))
                     {
                         if (BoardManager.Instance.GetLane(_laneNumber).GetLeylineStatus())
                         {
@@ -52,14 +51,13 @@ public class InkBlotSpell : MonoBehaviour, ISpellStamp
                         }
                         else
                         {
-                        enemy.TakeDamage(_blotDamage);  
+                            enemy.TakeDamage(_blotDamage); 
                         }    
                     }
                 }
             }   
         }
         _isDead = true;
-        _blotAnimator.Play(_blotDisappearAnim);
     }      
         
     private void FixedUpdate() 
