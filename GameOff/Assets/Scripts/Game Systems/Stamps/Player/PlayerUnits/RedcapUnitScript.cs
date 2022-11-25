@@ -5,6 +5,7 @@ using UnityEngine;
 public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 {
     [SerializeField] private UnitStampScriptableObject _redcapSO;
+    [SerializeField] private CardScriptableObject _redcapCardSO;
     [SerializeField] private bool _isActive = false;
     [SerializeField] private float _redcapAttackCooldown;
 
@@ -84,7 +85,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 
     public void OpenUnitUpgrade()
     {
-        //Opens the upgrade UI
+        UpgradeMenu.Instance.Open(this, _redcapCardSO.CardIcon, _redcapSO.Upgrades);
     }
 
     public void UpgradeUnit(int upgradePath)

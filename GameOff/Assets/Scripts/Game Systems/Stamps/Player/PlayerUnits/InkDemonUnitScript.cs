@@ -5,6 +5,7 @@ using UnityEngine;
 public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 {
     [SerializeField] private UnitStampScriptableObject _inkDemonSO;
+    [SerializeField] private CardScriptableObject _inkDemonCardSO;
     [SerializeField] private bool _isActive = false;
 
 #region UnitStats
@@ -90,7 +91,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 
     public void OpenUnitUpgrade()
     {
-        //Opens the upgrade UI
+        UpgradeMenu.Instance.Open(this, _inkDemonCardSO.CardIcon, _inkDemonSO.Upgrades);
     }
 
     public void UpgradeUnit(int upgradePath)

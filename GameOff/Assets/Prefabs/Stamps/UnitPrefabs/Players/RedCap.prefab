@@ -236,9 +236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _redcapSO: {fileID: 11400000, guid: acaec4a539d4648458bdaaa715435b7d, type: 2}
+  _redcapCardSO: {fileID: 11400000, guid: 92bd21ad69f0b8d44b9eab688d2e79ac, type: 2}
   _isActive: 1
   _redcapAttackCooldown: 0
-  _redcapName: 
   _unitType: 
   _redcapDamage: 0
   _redcapAttackSpeed: 0

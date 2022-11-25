@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inkDemonSO: {fileID: 11400000, guid: e38f8e183e514b14baff580bbf626115, type: 2}
+  _inkDemonCardSO: {fileID: 11400000, guid: adafe14398f921248a1bb3fcdd8f9341, type: 2}
   _isActive: 1
   _unitType: 
   _inkDemonAbilityCooldown: 0
@@ -60,8 +61,13 @@ MonoBehaviour:
   _summonTile: {fileID: 0}
   _currentInkDemonAbilityCooldown: 0
   _inkDemonAnimator: {fileID: 2645122873858024069}
-  _inkDemonAttackAnimationName: InkDemon_Green_Attack
-  _inkDemonAppearAnimationName: InkDemon_Green_Appear
+  _inkDemonGreenAttackAnimationName: InkDemon_Green_Attack
+  _inkDemonGreenAppearAnimationName: InkDemon_Green_Appear
+  _inkDemonBlueAttackAnimationName: InkDemon_Blue_Attack
+  _inkDemonBlueAppearAnimationName: InkDemon_Blue_Appear
+  _inkDemonRedAttackAnimationName: InkDemon_Red_Attack
+  _inkDemonRedAppearAnimationName: InkDemon_Red_Appear
+  _inkMinionAttackAnimationLength: 0
   _inkDemonLaneNumber: 0
   _activeMinions: []
   _currentUpgradePath: 0

@@ -6,9 +6,7 @@ using UnityEngine;
 public class UnitStampScriptableObject : StampScriptableObject
 {
 #region SO Backing Fields
-    
-
-    //Unit Stats
+    [Header("Unit Stats")]
     [SerializeField] private GameObject _spawnedUnit;
     [SerializeField] private string _unitType;
     [SerializeField] private float _unitAbilityCooldown;
@@ -19,6 +17,15 @@ public class UnitStampScriptableObject : StampScriptableObject
     [SerializeField] private int _unitHealth;
     //not super important to have in here
     [SerializeField] private IStamp _stampAbilityScript;
+
+    [Header("Upgrade Menu")]
+    [SerializeField] private UpgradeInfo[] _upgrades;
+    [System.Serializable]
+    public struct UpgradeInfo
+    {
+        [SerializeField] public string name;
+        [SerializeField] [TextArea] public string description;
+    }
 #endregion
 
 #region SO Getters
@@ -66,6 +73,11 @@ public class UnitStampScriptableObject : StampScriptableObject
     public IStamp StampAbilityScript
     {
         get {return _stampAbilityScript;}
+    }
+
+    public UpgradeInfo[] Upgrades
+    {
+        get {return _upgrades;}
     }
 #endregion
 }

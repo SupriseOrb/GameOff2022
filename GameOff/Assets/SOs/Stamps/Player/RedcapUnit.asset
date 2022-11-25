@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stampName: Redcap
   _stampSprite: {fileID: 1501192276, guid: c77cce2d7856e3844b3d1e2021741876, type: 3}
-  _stampHealth: 0
   _spawnedUnit: {fileID: 0}
   _unitType: Ranged
   _unitAbilityCooldown: 0
@@ -23,3 +22,8 @@ MonoBehaviour:
   _unitAttackSpeed: 0.2
   _unitSlowAmount: 0
   _unitHealth: 5
+  _upgrades:
+  - name: Choppy-Whoppy
+    description: "The Redcap\u2019s inkball pierces through an additional enemy."
+  - name: Can't Touch This
+    description: "The Redcap\u2019s inkball can now stun enemies."
