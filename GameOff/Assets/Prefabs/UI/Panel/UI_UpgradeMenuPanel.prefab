@@ -206,7 +206,7 @@ PrefabInstance:
     - target: {fileID: 6031995771527583842, guid: 672749be344f13141b1db8847e851460, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: db218465edd96464e9ebb1f24d73dae1, type: 3}
+      objectReference: {fileID: 21300000, guid: c848aebe6bc36d745ac90fa55c6c381f, type: 3}
     - target: {fileID: 6031995772054734680, guid: 672749be344f13141b1db8847e851460, type: 3}
       propertyPath: m_Name
       value: LeftUpgrade
@@ -295,6 +295,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6031995772541193397, guid: 672749be344f13141b1db8847e851460, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: d93b54e24a61c004abe83df4cfb0c0cd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 672749be344f13141b1db8847e851460, type: 3}
 --- !u!224 &5136388586168327857 stripped
