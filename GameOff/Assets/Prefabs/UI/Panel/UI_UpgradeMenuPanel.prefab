@@ -203,9 +203,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6031995771527583842, guid: 672749be344f13141b1db8847e851460, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: db218465edd96464e9ebb1f24d73dae1, type: 3}
     - target: {fileID: 6031995772054734680, guid: 672749be344f13141b1db8847e851460, type: 3}
       propertyPath: m_Name
-      value: CardUpgradeBase
+      value: LeftUpgrade
       objectReference: {fileID: 0}
     - target: {fileID: 6031995772054734681, guid: 672749be344f13141b1db8847e851460, type: 3}
       propertyPath: m_Pivot.x
@@ -337,9 +341,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6031995771527583842, guid: 672749be344f13141b1db8847e851460, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6676423b9cf8c2f4d95bf357784dae64, type: 3}
     - target: {fileID: 6031995772054734680, guid: 672749be344f13141b1db8847e851460, type: 3}
       propertyPath: m_Name
-      value: CardUpgradeBase (1)
+      value: RightUpgrade
       objectReference: {fileID: 0}
     - target: {fileID: 6031995772054734681, guid: 672749be344f13141b1db8847e851460, type: 3}
       propertyPath: m_Pivot.x
