@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: StampOutline
+  m_Name: StampIcon
   m_Shader: {fileID: -6465566751694194690, guid: 8f9dc86843c47a5459b5fc4b6c1c5728, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
