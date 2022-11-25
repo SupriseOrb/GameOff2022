@@ -43,6 +43,7 @@ public class UpgradeMenu : MonoBehaviour
 
     public void Open(IUnitStamp unit, Sprite unitIcon, UnitStampScriptableObject.UpgradeInfo[] upgrades)
     {
+        AkSoundEngine.PostEvent("Play_UIPause", gameObject);
         for (int i = 0; i < _cardUpgrades.Length; i++)
         {
             _cardUpgrades[i].icon.sprite = unitIcon;
@@ -56,6 +57,8 @@ public class UpgradeMenu : MonoBehaviour
 
     public void ChooseUpgrade(int path)
     {
+        AkSoundEngine.PostEvent("Play_Upgrade", gameObject);
+        AkSoundEngine.PostEvent("Play_UIResume", gameObject);
         _animator.Play(_animationCloseString);
         _unitToBeUpgraded.UpgradeUnit(path);
     }
