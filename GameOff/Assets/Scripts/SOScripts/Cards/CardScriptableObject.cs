@@ -8,7 +8,7 @@ public class CardScriptableObject : ScriptableObject
     #region SO Backing Fields
     [Header("Card Values")]
     [SerializeField] private string _cardName = "";
-    [SerializeField] private string _cardDescription = "";
+    [SerializeField] [TextArea] private string _cardDescription = "";
     [SerializeField] private int _inkCost = 0;
     [SerializeField] private bool _hasBeenUsed = false;
     [SerializeField] private GameObject _stampGORef;

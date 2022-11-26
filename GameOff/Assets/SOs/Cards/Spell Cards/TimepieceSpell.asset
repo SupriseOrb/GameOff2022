@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: TimepieceSpell
   m_EditorClassIdentifier: 
   _cardName: Timepiece
-  _cardDescription: Reduces the current cooldown of units in this lane by an amount
+  _cardDescription: Activates the abilities of all Demons, Harpies, and Redcaps in
+    a lane. When messing with time travel, only go foward.
   _inkCost: 1
   _hasBeenUsed: 0
   _stampGORef: {fileID: 4239279702888943664, guid: c122c83a2fb43b64fa44ade8c8598219, type: 3}

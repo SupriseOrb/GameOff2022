@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SpikeBushItem
   m_EditorClassIdentifier: 
   _cardName: Spike Bush
-  _cardDescription: Damages enemies that attack it.
+  _cardDescription: Deals damage to back to enemies when they attack it. Its spikes
+    are strong enough to penetrate steel.
   _inkCost: 1
   _hasBeenUsed: 0
   _stampGORef: {fileID: 5551045160796070647, guid: 318f92eff39c8ab419a6e83855998c2f, type: 3}

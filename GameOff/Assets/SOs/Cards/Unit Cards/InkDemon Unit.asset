@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: InkDemon Unit
   m_EditorClassIdentifier: 
   _cardName: Ink Demon
-  _cardDescription: Duplicates and summons ink minions to fight for it.
+  _cardDescription: Summons inky minions to block and damage your foes. Their ink
+    is almost impossible to wash off, and also sometimes just comes to life.
   _inkCost: 5
   _hasBeenUsed: 0
   _stampGORef: {fileID: 2645122873845147038, guid: 9ff3cf4caccb93948bc1f270223c3f0c, type: 3}

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Redcap Unit
   m_EditorClassIdentifier: 
   _cardName: Redcap
-  _cardDescription: Rolls ink at your enemies
+  _cardDescription: Roll balls of ink down that damages enemies. While ink balls
+    seem entirely made of ink, theres actually a heavy steel ball hidden in the center.
   _inkCost: 3
   _hasBeenUsed: 0
   _stampGORef: {fileID: 5931444529041067665, guid: d924d01c6850f5a43bbcfcfec2a5792b, type: 3}
