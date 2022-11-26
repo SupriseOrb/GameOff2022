@@ -215,4 +215,8 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     {
         return _playerHealthDamage;
     }
+    public void ForcedMove(Vector3 startPos, Vector3 endPos, float forcedMoveSpeed)
+    {
+
+    }
 }

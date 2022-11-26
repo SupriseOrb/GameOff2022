@@ -4,44 +4,69 @@ using UnityEngine;
 
 public class RedcapInkBallProjectile : MonoBehaviour
 {
+    [SerializeField] private RedcapUnitScript _redcapScript;
+    [SerializeField] private RedcapUnitScript.RedcapUpgradePaths _currentUpgradePath;
+
+#region Projectile Stats
+    [SerializeField] private float _inkballDamage;
+    [SerializeField] private int _inkballPiercingAmount = 0;
+    [SerializeField] private float _inkballStunDuration;
+    [SerializeField] private bool _inkballStunActive = false;
+#endregion
+
+#region Projectile Visuals
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Sprite _upgradeBaseSprite;
     [SerializeField] private Sprite _upgradeOneSprite;
     [SerializeField] private Sprite _upgradeTwoSprite;
+    [SerializeField] private Vector3 _inkballScale;
+#endregion
+    
+#region Projectile Variables
+    [SerializeField] private float _inkballMovementSpeed;
+    [SerializeField] private Rigidbody2D _inkballRigidbody;
+    [SerializeField] private float _inkballDestroyTime;
+    [SerializeField] private float _inkballScaleTime;
     private float _spriteRotationSpeed;
-    [SerializeField] private Vector3 _projectileScale;
-    [SerializeField] private float _projectileScaleTime;
-    private float _projectileScaleSpeed;
-    [SerializeField] private float _projectileMovementSpeed;
-    [SerializeField] private Rigidbody2D _projectileRigidbody;
-    [SerializeField] private float _destroyTime;
-    [SerializeField] private float _projectileDamage;
-    [SerializeField] private int _projectilePiercingAmt = 0;
-    [SerializeField] private float _projectileStunDuration;
-    [SerializeField] private bool _projectileStunActive = false;
-    // Start is called before the first frame update
+    private float _inkballScaleSpeed;
+#endregion
+    
     void Start()
     {
-        AkSoundEngine.PostEvent("Play_RedcapAbility",gameObject);
-        _projectileRigidbody = GetComponent<Rigidbody2D>(); 
-        _projectileRigidbody.velocity = Vector2.right * _projectileMovementSpeed;
-        _spriteRotationSpeed = _projectileMovementSpeed * 100;
-        Destroy(gameObject, _destroyTime);
-        _projectileScale = transform.localScale;
-        _projectileScaleSpeed = _projectileScale.x/_projectileScaleTime;
+        AkSoundEngine.PostEvent("Play_RedcapAbility", gameObject);
+        _inkballRigidbody = GetComponent<Rigidbody2D>();
+        _redcapScript = gameObject.GetComponentInParent<RedcapUnitScript>();
+
+        LoadBaseStats(); 
+        Destroy(gameObject, _inkballDestroyTime);
+    }
+
+    private void LoadBaseStats()
+    {
+        _inkballDamage = _redcapScript.Damage;
+        _inkballPiercingAmount = _redcapScript.PierceAmount;
+        _inkballStunActive = _redcapScript.CanStun;
+        _inkballStunDuration = _redcapScript.StunDuration;
+        _currentUpgradePath = _redcapScript._currentUpgradePath;
+
+        _spriteRenderer.sprite = SetSprite();
+        _inkballRigidbody.velocity = Vector2.right * _inkballMovementSpeed;
+        _spriteRotationSpeed = _inkballMovementSpeed * 100;
+        _inkballScale = transform.localScale;
+        _inkballScaleSpeed = _inkballScale.x/_inkballScaleTime;
         transform.localScale = Vector3.forward;
     }
 
     private void Update() 
     {
-        if(transform.localScale.x < _projectileScale.x)
+        if(transform.localScale.x < _inkballScale.x)
         {
-            float scalar = transform.localScale.x + (_projectileScaleSpeed * Time.deltaTime);
+            float scalar = transform.localScale.x + (_inkballScaleSpeed * Time.deltaTime);
             transform.localScale = new Vector3(scalar, scalar, transform.localScale.z);
         }   
-        else if(transform.localScale.x > _projectileScale.x)
+        else if(transform.localScale.x > _inkballScale.x)
         {
-            transform.localScale = _projectileScale;
+            transform.localScale = _inkballScale;
         }
     }
 
@@ -56,58 +81,49 @@ public class RedcapInkBallProjectile : MonoBehaviour
         if(other.gameObject.TryGetComponent(out IEnemy enemy))
         {
             AkSoundEngine.PostEvent("Play_EnemyTakeDamage", gameObject);
-            //If upgrade 2 is active
-            if(_projectilePiercingAmt > 0)
+            
+            if(_currentUpgradePath == RedcapUnitScript.RedcapUpgradePaths.upgradeLeadInk)
             {
-                Debug.Log("Pierced!");
-                enemy.TakeDamage(_projectileDamage);
-                _projectilePiercingAmt--;
-                Debug.Log(_projectilePiercingAmt);
+                if(_inkballStunActive == true && _inkballDamage > 0)
+                {   
+                    enemy.TakeDamage(_inkballDamage);
+                    enemy.Stun(_inkballStunDuration);
+                }
             }
-            else if(_projectilePiercingAmt <= 0)
+            else if(_currentUpgradePath == RedcapUnitScript.RedcapUpgradePaths.upgradeStickyInk)
             {
-                enemy.TakeDamage(_projectileDamage);
-                _projectileDamage = 0;
-                Destroy(gameObject);
+                if(_inkballPiercingAmount > 0)
+                {
+                    enemy.TakeDamage(_inkballDamage);
+                    _inkballPiercingAmount--;
+                }
             }
-
-            //If upgrade 3 is active
-            if (_projectileStunActive == true && _projectileDamage > 0)
+            else
             {
-                enemy.Stun(_projectileStunDuration);
-            }
+                //I don't think this if check matters anymore given we make sure that there is a specific upgrade for pierce to go through
+                if(_inkballPiercingAmount <= 0)
+                {
+                    enemy.TakeDamage(_inkballDamage);
+                    _inkballDamage = 0;
+                    Destroy(gameObject);
+                }
+            }     
         }
     }
 
-    public void SetDamage(float damage)
+    public Sprite SetSprite()
     {
-        _projectileDamage = damage;
-    }
-
-    public void SetPiercing(int pierce)
-    {
-        _projectilePiercingAmt = pierce;
-    }
-
-    public void SetStunValues(bool isStunned, float duration)
-    {
-        _projectileStunActive = isStunned;
-        _projectileStunDuration = duration;
-    }
-
-    public void SetSprite(int upgrade)
-    {
-        switch (upgrade)
+        if (_currentUpgradePath == RedcapUnitScript.RedcapUpgradePaths.upgradeLeadInk)
         {
-            case 0:
-                _spriteRenderer.sprite = _upgradeBaseSprite;
-                break;
-            case 1:
-                _spriteRenderer.sprite = _upgradeOneSprite;
-                break;
-            default:
-                _spriteRenderer.sprite = _upgradeTwoSprite;
-                break;
+            return _upgradeOneSprite;
+        }
+        else if (_currentUpgradePath == RedcapUnitScript.RedcapUpgradePaths.upgradeStickyInk)
+        {
+            return _upgradeTwoSprite;
+        }
+        else //if no upgrade
+        {
+            return _upgradeBaseSprite;
         }
     }
 }

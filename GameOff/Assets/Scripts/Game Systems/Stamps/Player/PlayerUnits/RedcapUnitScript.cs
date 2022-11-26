@@ -18,9 +18,31 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private float _redcapStunDuration;
 #endregion
 
+#region UnitStatGetters
+    public float Damage
+    {
+        get {return _redcapDamage;}
+    }
+
+    public int PierceAmount
+    {
+        get {return _redcapPierceAmount;}
+    }
+
+    public float StunDuration
+    {
+        get {return _redcapStunDuration;}
+    }
+    public bool CanStun
+    {
+        get {return _canStun;}
+    }
+#endregion
+
 #region UnitVariables
     [SerializeField] private GameObject _inkProjectile;
     [SerializeField] private Transform _inkProjectileSpawnLocation;
+    [SerializeField] private bool _canStun = false;
     [SerializeField] private Animator _redcapAnimator;
     [SerializeField] private string _redcapAppearAnimationName = "Redcap_Red_Appear";
     [SerializeField] private string _bluecapAppearAnimationName = "Redcap_Blue_Appear";
@@ -145,10 +167,11 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
                 _currentUpgradePath = RedcapUpgradePaths.upgradeLeadInk;
                 _redcapAnimator.Play(_bluecapAppearAnimationName);
             }
-            else
+            else //if upgradePath == (int)RedcapUpgradePaths.upgradeTwo
             {
                 LoadBaseStats();
                 _redcapStunDuration = 2;
+                _canStun = true;
                 _currentUpgradePath = RedcapUpgradePaths.upgradeStickyInk;
                 _redcapAnimator.Play(_purplecapAppearAnimationName);
             }
@@ -183,10 +206,8 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
             _redcapAnimator.speed = _redcapAttackSpeed;
         }
         // Do the attack
-        GameObject inkball = Instantiate(_inkProjectile, _inkProjectileSpawnLocation.position, Quaternion.identity);
-        //Consider just declaring the inkballScript
+        GameObject inkball = Instantiate(_inkProjectile, _inkProjectileSpawnLocation.position, Quaternion.identity, gameObject.transform);
         RedcapInkBallProjectile inkballScript = inkball.GetComponent<RedcapInkBallProjectile>();
-        inkballScript.SetDamage(_redcapDamage);
         switch(_currentUpgradePath)
         {
             /*
@@ -196,8 +217,6 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
             case RedcapUpgradePaths.upgradeLeadInk:
                 // Do the attack animation
                 _redcapAnimator.Play(_bluecapAttackAnimationName);
-                inkballScript.SetSprite((int)RedcapUpgradePaths.upgradeLeadInk);
-                inkballScript.SetPiercing(_redcapPierceAmount);
                 break;
             /*
             For stun, have the enemy hit have their velocity set to 0 for x amount of time
@@ -205,13 +224,10 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
             case RedcapUpgradePaths.upgradeStickyInk:
                 // Do the attack animation
                 _redcapAnimator.Play(_purplecapAttackAnimationName);
-                inkballScript.SetSprite((int)RedcapUpgradePaths.upgradeStickyInk);
-                inkballScript.SetStunValues(true, _redcapStunDuration);
                 break;
             default:
                 // Do the attack animation
                 _redcapAnimator.Play(_redcapAttackAnimationName);
-                inkballScript.SetSprite((int)RedcapUpgradePaths.upgradeBase);
                 break;
         }
     }

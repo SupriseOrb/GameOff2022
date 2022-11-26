@@ -58,22 +58,25 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
     public void UpdateMinionStats
     (
         InkDemonUnitScript.InkDemonUpgradePaths upgradePath,
-        int health = 0, 
+        int newMaxHealth = 0, 
         float attackSpeed = 0, 
         float attackDamage = 0, 
-        int deathMultiplier = 0, 
+        int deathDamageMultiplier = 0, 
         float slowAmount = 0, 
         float slowDuration = 0,
         int laneNumber = 0
     )
     {
         _upgradePath = upgradePath;
-        health = health - _inkMinionMaxHealth;
-        _inkMinionMaxHealth += health;
-        _inkMinionCurrentHealth += health;
+        newMaxHealth = newMaxHealth - _inkMinionMaxHealth;
+        _inkMinionMaxHealth += newMaxHealth;
+        if (newMaxHealth > 0)
+        {
+            _inkMinionCurrentHealth += newMaxHealth;
+        }
         _inkMinionAttackSpeed = attackSpeed;
         _inkMinionAttackDamage = attackDamage;
-        _inkMinionDeathDamageMultiplier = deathMultiplier;
+        _inkMinionDeathDamageMultiplier = deathDamageMultiplier;
         _inkMinionSlowAmount = slowAmount;
         _inkMinionSlowDuration = slowDuration;
 

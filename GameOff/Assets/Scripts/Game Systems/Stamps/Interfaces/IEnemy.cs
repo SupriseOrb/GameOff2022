@@ -13,4 +13,5 @@ public interface IEnemy
     void ModifySpeeds(float movementModifier, float moveDuration = 0, float attackSpeedModifier = 0, float attackDuration = 0);
     void SetLane(int laneNumber);
     int GetPlayerHealthDamage();
+    void ForcedMove(Vector3 startPos, Vector3 endPos, float forcedMoveSpeed);
 }

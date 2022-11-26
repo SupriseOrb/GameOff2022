@@ -21,11 +21,20 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     [SerializeField] private int _playerHealthDamage;
 #endregion
 
+#region Lerping Variables
+    private Vector3 _startingPosition;
+    private Vector3 _endingPosition;
+    private float _moveDistance;
+    private float _startTime;
+    private float _forcedMoveSpeed;
+#endregion
+
     [SerializeField] private GameObject _attackTarget;
     [SerializeField] private bool _isStunned = false;
     [SerializeField] private bool _isMoveSlowed = false;
     [SerializeField] private bool _isAttackSlowed = false;
     [SerializeField] private bool _isDead = false;
+    [SerializeField] private bool _isLerping = false;
     [SerializeField] private Rigidbody2D _soldierRigidBody;
     [SerializeField] private BoxCollider2D _soldierCollider;
 
@@ -141,6 +150,24 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
                 SetAnimationSpeeds();
             }
         }
+        
+        if (_isLerping)
+        {
+            float distanceMoved = (Time.time - _startTime) * _forcedMoveSpeed;
+            float movementPercentage = distanceMoved / _moveDistance;
+
+            if (movementPercentage < 1)
+            {
+                transform.position = Vector3.Lerp(_startingPosition, _endingPosition, movementPercentage);
+            }
+            else
+            {
+                _isAttacking = true;
+                _soldierAnimator.speed = 1;
+                _isLerping = false;
+            }
+            
+        }
 
         if(_isDead)
         {
@@ -246,5 +273,19 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     public int GetPlayerHealthDamage()
     {
         return _playerHealthDamage;
+    }
+    public void ForcedMove(Vector3 startPos, Vector3 endPos, float forcedMoveSpeed)
+    {
+        _soldierAnimator.speed = 0;
+        _isAttacking = false;
+        _attackTarget = null;
+        _soldierRigidBody.velocity = Vector2.zero;
+
+        _startingPosition = startPos;
+        _endingPosition = endPos;
+        _forcedMoveSpeed = forcedMoveSpeed;
+        _moveDistance = Vector3.Distance(_startingPosition, _endingPosition);
+        _startTime = Time.time;
+        _isLerping = true;
     }
 }
