@@ -21,6 +21,11 @@ public class CardScriptLoader : MonoBehaviour, IPointerDownHandler, IPointerEnte
     [SerializeField] private Animator _animator;
     [SerializeField] private string _animationHighlight;
     [SerializeField] private string _animationIdle;
+
+    [Header("Ink")]
+    [SerializeField] private Image _inkBG;
+    [SerializeField] private Sprite[] _inkBGs;
+    [SerializeField] private int[] _inkCostCutoff = {0, 16, 18};
     private void Start()
     {
        LoadCardValues(); 
@@ -35,8 +40,24 @@ public class CardScriptLoader : MonoBehaviour, IPointerDownHandler, IPointerEnte
         _cardType = _cardSO.CardType;
         _hasBeenUsed = _cardSO.HasBeenUsed;
         _nameText.text = _cardSO.CardName;
-        _inkCostText.text = "" + _cardSO.InkCost;
+
+        SetInkCost(_cardSO.InkCost);
+
         _cardIcon.sprite = _cardSO.CardIcon;
+    }
+
+    private void SetInkCost(int inkCost)
+    {
+        _inkCostText.text = "" + inkCost;
+
+        for (int i = _inkCostCutoff.Length - 1; i > 0; i--)
+        {
+            if (inkCost >= _inkCostCutoff[i])
+            {
+                _inkBG.sprite = _inkBGs[i];
+                return;
+            }
+        }        
     }
 
     public CardScriptableObject.Type CardType
