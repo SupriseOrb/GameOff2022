@@ -170,12 +170,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7557992254034520773, guid: 8b94515ea979e154ea9bcedcea843511, type: 3}
       propertyPath: m_text
-      value: "Voluptas eligendi nostrum\r\nLorem ipsum dolor sit amet. 33 voluptas
-        eligendi eos nostrum suscipit sit quibusdam culpa.\r\n[quibusdam], [eligendi]\r"
+      value: Sings a haunting song that damages an enemy and then forces them to
+        change lanes. This song is so annoying, the soldiers immediately try to avoid
+        hearing it by leaving the area.
       objectReference: {fileID: 0}
     - target: {fileID: 7557992254034520773, guid: 8b94515ea979e154ea9bcedcea843511, type: 3}
       propertyPath: m_fontSize
-      value: 24
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7557992254034520773, guid: 8b94515ea979e154ea9bcedcea843511, type: 3}
       propertyPath: m_margin.w
@@ -207,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7557992254034520773, guid: 8b94515ea979e154ea9bcedcea843511, type: 3}
       propertyPath: m_fontSizeBase
-      value: 24
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7557992254034520773, guid: 8b94515ea979e154ea9bcedcea843511, type: 3}
       propertyPath: m_fontColor32.rgba

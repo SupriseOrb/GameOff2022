@@ -108,6 +108,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8220365055881799347}
     m_Modifications:
+    - target: {fileID: 5273267916359323698, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
+      propertyPath: m_text
+      value: "Voluptas eligendi nostrum | Land | X Ink\r\nLorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Viverra justo nec ultrices dui sapien.\r\nVoluptas eligendi
+        nostrum | Item | X Ink\r\nLorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Viverra justo nec ultrices dui sapien.\r\nX adipiscing, Y% consectetur\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273267916359323698, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
+      propertyPath: m_margin.w
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273267916359323698, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
+      propertyPath: m_margin.y
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 5302253879563389176, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
       propertyPath: m_margin.y
       value: 65
@@ -118,7 +135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7086832390021043891, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9081966667118878716, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
       propertyPath: m_Pivot.x
@@ -154,7 +171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9081966667118878716, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 370
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 9081966667118878716, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -190,7 +207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9081966667118878716, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 9081966667118878716, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
