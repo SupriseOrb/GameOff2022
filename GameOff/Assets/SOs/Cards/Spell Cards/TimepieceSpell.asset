@@ -15,7 +15,7 @@ MonoBehaviour:
   _cardName: Timepiece
   _cardDescription: Activates the abilities of all Demons, Harpies, and Redcaps in
     a lane. When messing with time travel, only go foward.
-  _inkCost: 1
+  _inkCost: 5
   _hasBeenUsed: 0
   _stampGORef: {fileID: 4239279702888943664, guid: c122c83a2fb43b64fa44ade8c8598219, type: 3}
   _cardType: 4

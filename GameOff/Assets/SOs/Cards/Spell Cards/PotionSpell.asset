@@ -15,7 +15,7 @@ MonoBehaviour:
   _cardName: Potion
   _cardDescription: Heals an allied unit. The magic of a leyline empowers potions,
     allowing them to fully recover an unit. For external wounds only.
-  _inkCost: 1
+  _inkCost: 10
   _hasBeenUsed: 0
   _stampGORef: {fileID: 4239279702888943664, guid: c7e5c93e94cb87f40a96e60f7f39ca2a, type: 3}
   _cardType: 4

@@ -13,52 +13,61 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   _wave:
-  - _laneOneEnemies: []
+  - _laneOneEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
     _laneTwoEnemies: []
     _laneThreeEnemies: []
     _enemySpawnDistance: 0
-    _timeToSpawn: 1
+    _timeToSpawn: 10
+  - _laneOneEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 20
   - _laneOneEnemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _laneTwoEnemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _laneThreeEnemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _enemySpawnDistance: 0
-    _timeToSpawn: 5
-  - _laneOneEnemies: []
-    _laneTwoEnemies: []
+    _timeToSpawn: 40
+  - _laneOneEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
     _laneThreeEnemies: []
     _enemySpawnDistance: 0
-    _timeToSpawn: 10
-  - _laneOneEnemies: []
+    _timeToSpawn: 60
+  - _laneOneEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
     _laneTwoEnemies: []
+    _laneThreeEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 80
+  - _laneOneEnemies: []
+    _laneTwoEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
     _laneThreeEnemies: []
     _enemySpawnDistance: 0
-    _timeToSpawn: 11
-  - _laneOneEnemies: []
-    _laneTwoEnemies: []
-    _laneThreeEnemies: []
+    _timeToSpawn: 100
+  - _laneOneEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _enemySpawnDistance: 0
-    _timeToSpawn: 12
-  - _laneOneEnemies: []
-    _laneTwoEnemies: []
-    _laneThreeEnemies: []
-    _enemySpawnDistance: 0
-    _timeToSpawn: 13
-  - _laneOneEnemies: []
-    _laneTwoEnemies: []
-    _laneThreeEnemies: []
-    _enemySpawnDistance: 0
-    _timeToSpawn: 2
-  _waveDuration: 25
+    _timeToSpawn: 110
+  _waveDuration: 110
   _waveBreakBeforeDuration: 10

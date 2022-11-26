@@ -16,11 +16,12 @@ MonoBehaviour:
   _stampSprite: {fileID: 0}
   _spawnedUnit: {fileID: 942562487849597904, guid: 23f564e76c8a65b419d9862be6fbcd11, type: 3}
   _unitType: Summoner
-  _unitAbilityCooldown: 10
+  _unitAbilityCooldown: 15
   _unitCooldownReduction: 0
   _unitDamage: 1
   _unitAttackSpeed: 1
   _unitSlowAmount: 0
+  _unitSlowDuration: 0
   _unitHealth: 5
   _attackDamageIncreaseAmount: 0.5
   _attackSpeedIncreaseAmount: 0.2

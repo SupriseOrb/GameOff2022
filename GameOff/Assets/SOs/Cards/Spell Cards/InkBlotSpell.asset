@@ -16,7 +16,7 @@ MonoBehaviour:
   _cardDescription: Deals damage to all enemy units on that tile. The magic of a
     leyline empowers ink blots, causing them to deal double damage. Turns out erasers
     are bad at erasing stains on themselves.
-  _inkCost: 1
+  _inkCost: 5
   _hasBeenUsed: 0
   _stampGORef: {fileID: 1451145231450130912, guid: fc711af6dfc76e14b9074065d7f664cf, type: 3}
   _cardType: 4
