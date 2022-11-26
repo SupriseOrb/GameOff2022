@@ -48,8 +48,7 @@ public class InputManager : MonoBehaviour
     private void OnEnable() 
     {
         _lClickAction.performed += OnLeftClick;
-        // TODO: Ask Gim, why do we have OnLeftClick listening on performed and canceled
-        //_lClickAction.canceled += OnLeftClick;
+        _lClickAction.canceled += OnLeftClick; // To implement card dragging
 
         _rClickAction.performed += OnRightClick;
         _mousePosAction.performed += MousePosition;
@@ -58,7 +57,7 @@ public class InputManager : MonoBehaviour
     private void OnDisable() 
     {
         _lClickAction.performed -= OnLeftClick;
-        //_lClickAction.canceled -= OnLeftClick;
+        _lClickAction.canceled -= OnLeftClick;
 
         _rClickAction.performed -= OnRightClick;
         _mousePosAction.performed -= MousePosition;
@@ -145,7 +144,7 @@ public class InputManager : MonoBehaviour
                 }
             }          
         }
-        else if (_selectedCard == null && _raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile))
+        else if (context.performed && _selectedCard == null && _raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile))
         {
             //Note: Need to reference StampScriptableObject description to fill in desc panel
             if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
