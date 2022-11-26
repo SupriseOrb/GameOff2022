@@ -15,4 +15,4 @@ MonoBehaviour:
   _stampName: Magic Leyline
   _stampSprite: {fileID: 21300000, guid: b2d78f2190d9a5f4c86e470f09948400, type: 3}
   _landStampAbilityCooldown: 0
-  _landStampAbilityValue: 10
+  _landStampAbilityValue: 2

@@ -15,7 +15,7 @@ MonoBehaviour:
   _cardName: Rough Ground
   _cardDescription: Slows the movement and attacks of enemies walking over it. A
     kilogram of it actually weighs less than a kilogram of feathers.
-  _inkCost: 1
+  _inkCost: 5
   _hasBeenUsed: 0
   _stampGORef: {fileID: 4424480200185991471, guid: d49ffd6296a3c7f4c8d93ced4c5711d2, type: 3}
   _cardType: 3

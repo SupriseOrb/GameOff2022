@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WhiteoutCarriageEnemy
   m_EditorClassIdentifier: 
   _spawnedUnit: {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-  _enemyHealth: 250
+  _enemyHealth: 200
   _enemyAbilityCooldown: 0
   _enemyCooldownReduction: 0
   _enemyDamage: 1000

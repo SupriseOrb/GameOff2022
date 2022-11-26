@@ -27,7 +27,7 @@ MonoBehaviour:
   _attackSpeedIncreaseAmount: 0.2
   _uniqueUpgradeOneIncreaseAmount: 1
   _uniqueUpgradeTwoIncreaseAmount: 50
-  _uniqueUpgradeThreeIncreaseAmount: 30
+  _uniqueUpgradeThreeIncreaseAmount: 0.2
   _upgrades:
   - name: Disorienting Song
     descriptionBase: The Harpy attacks less frequently and no longer slows, but moves

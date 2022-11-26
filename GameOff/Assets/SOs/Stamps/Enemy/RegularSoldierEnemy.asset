@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RegularSoldierEnemy
   m_EditorClassIdentifier: 
   _spawnedUnit: {fileID: 0}
-  _enemyHealth: 30
+  _enemyHealth: 20
   _enemyAbilityCooldown: 0
   _enemyCooldownReduction: 0
   _enemyDamage: 1

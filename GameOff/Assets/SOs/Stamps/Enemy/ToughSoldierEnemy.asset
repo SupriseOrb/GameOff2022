@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ToughSoldierEnemy
   m_EditorClassIdentifier: 
   _spawnedUnit: {fileID: 0}
-  _enemyHealth: 100
+  _enemyHealth: 50
   _enemyAbilityCooldown: 0
   _enemyCooldownReduction: 0
   _enemyDamage: 5

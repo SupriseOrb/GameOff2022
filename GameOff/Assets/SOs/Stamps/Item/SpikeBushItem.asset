@@ -15,5 +15,5 @@ MonoBehaviour:
   _stampName: Spiky Bush
   _stampSprite: {fileID: 21300000, guid: 66ccc869a7c8eeb4d9fdbded507bb671, type: 3}
   _itemStampValue: 4
-  _itemCooldown: 1
-  _itemHealth: 10
+  _itemCooldown: 2
+  _itemHealth: 20

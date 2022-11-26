@@ -15,7 +15,7 @@ MonoBehaviour:
   _cardName: Ink Cow
   _cardDescription: Generates ink over time. The magic of a leyline empowers cows,
     doubling their ink generation. Suprisingly, this cow does not require any milking.
-  _inkCost: 1
+  _inkCost: 10
   _hasBeenUsed: 0
   _stampGORef: {fileID: 1818134814049103548, guid: ef496cd06f88bdf44af968447a8a4988, type: 3}
   _cardType: 3

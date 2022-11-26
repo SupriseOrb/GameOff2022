@@ -15,7 +15,7 @@ MonoBehaviour:
   _cardName: Magic Leyline
   _cardDescription: Empowers magical items and spells, tapping into the primal power
     of the earth.
-  _inkCost: 1
+  _inkCost: 30
   _hasBeenUsed: 0
   _stampGORef: {fileID: 7704762201357935458, guid: 8fdc9314bb9d72b42aa166d33f6cd7e2, type: 3}
   _cardType: 2

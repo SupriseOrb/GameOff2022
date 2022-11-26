@@ -14,7 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stampName: Bramble Patch
   _stampSprite: {fileID: 21300000, guid: 1c94d4869a7ce0f4ca53f2dc8ecc7a77, type: 3}
-  _stampAbilityCooldown: 5
-  _stampAbilityValue: 10
-  _landStampAbilityCooldown: 5
-  _landStampAbilityValue: 10
+  _landStampAbilityCooldown: 4
+  _landStampAbilityValue: 5
