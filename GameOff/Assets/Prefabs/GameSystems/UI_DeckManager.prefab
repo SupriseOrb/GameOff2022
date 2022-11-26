@@ -1125,7 +1125,7 @@ MonoBehaviour:
   _spriteDrag: {fileID: 0}
   _cardInfoPanel: {fileID: 4354047173407271891}
   _cardInfoDescription: {fileID: 4195161308774078090}
-  _cardInfoPanelOffset: {x: 0, y: 240, z: 0}
+  _cardInfoPanelOffset: {x: 0, y: 312, z: 0}
   _firstDrawDelay: 1
   _drawNumber: 4
   _baseReshuffleTimer: 5
@@ -1485,11 +1485,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3557188691034905848, guid: 1e97a7a9c66c5c94da6a7a8cda2d9009, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 444
+      value: 334
       objectReference: {fileID: 0}
     - target: {fileID: 3557188691034905848, guid: 1e97a7a9c66c5c94da6a7a8cda2d9009, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 275
+      value: 365
       objectReference: {fileID: 0}
     - target: {fileID: 3557188691034905848, guid: 1e97a7a9c66c5c94da6a7a8cda2d9009, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1525,7 +1525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3557188691034905848, guid: 1e97a7a9c66c5c94da6a7a8cda2d9009, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 240
+      value: 312
       objectReference: {fileID: 0}
     - target: {fileID: 3557188691034905848, guid: 1e97a7a9c66c5c94da6a7a8cda2d9009, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1542,6 +1542,10 @@ PrefabInstance:
     - target: {fileID: 3557188691034905855, guid: 1e97a7a9c66c5c94da6a7a8cda2d9009, type: 3}
       propertyPath: m_Name
       value: Card_InfoPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3557188691034905855, guid: 1e97a7a9c66c5c94da6a7a8cda2d9009, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e97a7a9c66c5c94da6a7a8cda2d9009, type: 3}
