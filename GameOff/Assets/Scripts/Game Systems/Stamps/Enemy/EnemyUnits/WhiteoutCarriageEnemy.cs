@@ -144,7 +144,13 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
             float movementPercentage = distanceMoved / _moveDistance;
 
             //Check done this way to prevent floating point inaccuracy
-            if (Vector3.Distance(transform.position, _endingPosition) > 0)
+            //Check done this way to prevent floating point inaccuracy
+            if (_startingPosition.y == _endingPosition.y && Vector3.Distance(transform.position, _endingPosition) > 0)
+            {
+                transform.position = Vector3.Lerp(_startingPosition, _endingPosition, movementPercentage);
+            }
+            //This is here because sometimes while swapping lanes, the x value changes causing distance to not go to 0 or below;
+            else if(_startingPosition.y != _endingPosition.y && transform.position.y - _endingPosition.y != 0)
             {
                 transform.position = Vector3.Lerp(_startingPosition, _endingPosition, movementPercentage);
             }

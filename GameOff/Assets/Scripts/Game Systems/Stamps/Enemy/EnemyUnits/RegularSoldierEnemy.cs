@@ -22,11 +22,12 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
 #endregion
 
 #region Lerping Variables
-    private Vector3 _startingPosition;
-    private Vector3 _endingPosition;
-    private float _moveDistance;
-    private float _startTime;
-    private float _forcedMoveSpeed;
+    [Header("Lerping Variables")]
+    [SerializeField] private Vector3 _startingPosition;
+    [SerializeField] private Vector3 _endingPosition;
+    [SerializeField] private float _moveDistance;
+    [SerializeField] private float _startTime;
+    [SerializeField] private float _forcedMoveSpeed;
 #endregion
 
     [SerializeField] private GameObject _attackTarget;
@@ -161,9 +162,14 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         {
             float distanceMoved = (Time.time - _startTime) * _forcedMoveSpeed;
             float movementPercentage = distanceMoved / _moveDistance;
-
+            
             //Check done this way to prevent floating point inaccuracy
-            if (Vector3.Distance(transform.position, _endingPosition) > 0)
+            if (_startingPosition.y == _endingPosition.y && Vector3.Distance(transform.position, _endingPosition) > 0)
+            {
+                transform.position = Vector3.Lerp(_startingPosition, _endingPosition, movementPercentage);
+            }
+            //This is here because sometimes while swapping lanes, the x value changes causing distance to not go to 0 or below;
+            else if(_startingPosition.y != _endingPosition.y && transform.position.y - _endingPosition.y != 0)
             {
                 transform.position = Vector3.Lerp(_startingPosition, _endingPosition, movementPercentage);
             }
@@ -219,9 +225,12 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
 
     public void GetAttackTarget(GameObject target)
     {
-        _attackTarget = target;
-        _isAttacking = true;
-        _soldierRigidBody.velocity = Vector2.zero;
+        if(!_isLerping)
+        {
+            _attackTarget = target;
+            _isAttacking = true;
+            _soldierRigidBody.velocity = Vector2.zero;
+        }
     }
 
     public void ActivateStampAttack()
