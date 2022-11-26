@@ -29,11 +29,17 @@ MonoBehaviour:
   _uniqueUpgradeTwoIncreaseAmount: 50
   _uniqueUpgradeThreeIncreaseAmount: 30
   _upgrades:
-  - name: EXPLOSION
-    descriptionBase: 
-    descriptionRandom: 
-    descriptionResetWarning: 
-  - name: Vroomies
-    descriptionBase: 
-    descriptionRandom: 
-    descriptionResetWarning: 
+  - name: Volatile Summons
+    descriptionBase: The Ink Demon summons minions less frequently, but minions now
+      deal damage and slow enemies on death.
+    descriptionRandom: 'Randomly increase one of the following stats: Attack Damage,
+      Attack Speed, or Minion Health'
+    descriptionResetWarning: The Ink Demon summons minions less frequently, but minions
+      now deal damage and slow enemies on death. Choosing this upgrade will remove
+      all previous upgrades.
+  - name: Mass-Produced Summons
+    descriptionBase: The Ink Demon summons minions more frequently.
+    descriptionRandom: 'Randomly increase one of the following stats: Attack Damage,
+      Attack Speed, or Minion Health'
+    descriptionResetWarning: The Ink Demon summons minions more frequently. Choosing
+      this upgrade will remove all previous upgrades.
