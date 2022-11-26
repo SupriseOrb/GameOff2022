@@ -12,4 +12,5 @@ public interface IEnemy
     //how long the attack speed slow is (0 = infinite) 
     void ModifySpeeds(float movementModifier, float moveDuration = 0, float attackSpeedModifier = 0, float attackDuration = 0);
     void SetLane(int laneNumber);
+    int GetPlayerHealthDamage();
 }

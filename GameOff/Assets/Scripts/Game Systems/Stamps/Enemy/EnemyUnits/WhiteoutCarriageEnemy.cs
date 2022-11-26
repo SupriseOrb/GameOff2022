@@ -11,11 +11,10 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
 #region UnitStats
     [SerializeField] private GameObject _spawnedUnit; //Regular Solider prefab
     [SerializeField] private float _carriageHealth;
-    [SerializeField] private float _carriageAbilityCooldown;
-    [SerializeField] private float _carriageCooldownReduction;
     [SerializeField] private float _carriageDamage;
     [SerializeField] private float _carriageAttackSpeed;
     [SerializeField] private float _carriageMovementSpeed;
+    [SerializeField] private int _playerHealthDamage;
 #endregion
 
     [SerializeField] private GameObject _attackTarget;
@@ -27,7 +26,6 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
 
     [SerializeField] private float _currentStunDuration;
     [SerializeField] private float _currentMoveSlowDuration;
-    [SerializeField] private float _currentAttackSlowDuration;
     [SerializeField] private float _currentSlowMultiplier;
     [SerializeField] private int _laneNumber;
     [SerializeField] private Animator _carriageAnimator;
@@ -69,12 +67,12 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     {
         _spawnedUnit = _carriageSO.SpawnedUnit;
         _carriageHealth = _carriageSO.EnemyHealth;
-        _carriageAbilityCooldown = _carriageSO.EnemyAbilityCooldown;
-        _carriageCooldownReduction = _carriageSO.EnemyCooldownReduction;
         _carriageDamage = _carriageSO.EnemyDamage;
         _carriageAttackSpeed = _carriageSO.EnemyAttackSpeed;
         _carriageMovementSpeed = _carriageSO.EnemyMovementSpeed;
         _carriageAttackCooldown = 1 / _carriageAttackSpeed;
+
+        _playerHealthDamage = _carriageSO.PlayerHealthDamage;
     }
 
     public void SetLane(int laneNumber)
@@ -211,5 +209,10 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
         _carriageAnimator.speed = 0;
         _carriageRigidBody.velocity = Vector3.zero;
         _currentStunDuration = stunDuration;
+    }
+
+    public int GetPlayerHealthDamage()
+    {
+        return _playerHealthDamage;
     }
 }

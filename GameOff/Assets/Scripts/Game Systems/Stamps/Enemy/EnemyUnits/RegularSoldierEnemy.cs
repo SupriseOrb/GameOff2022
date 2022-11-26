@@ -18,6 +18,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     [SerializeField] private float _soldierBaseAttackSpeed;
     [SerializeField] private float _soldierMovementSpeed;
     [SerializeField] private float _soldierBaseMovementSpeed;
+    [SerializeField] private int _playerHealthDamage;
 #endregion
 
     [SerializeField] private GameObject _attackTarget;
@@ -87,6 +88,8 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         _soldierMovementSpeed = _soldierBaseMovementSpeed;
 
         _soldierAttackCooldown = 1 / _soldierAttackSpeed;
+
+        _playerHealthDamage = _soldierSO.PlayerHealthDamage;
     }
 
     public void SetLane(int laneNumber)
@@ -238,5 +241,10 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         _soldierAnimator.speed = 0;
         _soldierRigidBody.velocity = Vector3.zero;
         _currentStunDuration = stunDuration;
+    }
+
+    public int GetPlayerHealthDamage()
+    {
+        return _playerHealthDamage;
     }
 }

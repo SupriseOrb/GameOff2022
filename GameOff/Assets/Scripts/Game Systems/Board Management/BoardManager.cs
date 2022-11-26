@@ -10,6 +10,8 @@ public class BoardManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _tileInfoPanelText;
     [SerializeField] BoardLane[] _boardLanes;
 
+    [SerializeField] private int _playerHealth;
+
     private static BoardManager _instance;
 
     public static BoardManager Instance
@@ -45,5 +47,18 @@ public class BoardManager : MonoBehaviour
     public BoardLane GetLane(int laneNumber)
     {
         return _boardLanes[laneNumber];
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.TryGetComponent(out IEnemy enemy))
+        {
+            _playerHealth -= enemy.GetPlayerHealthDamage();
+            enemy.TakeDamage(1000f);
+            if(_playerHealth < 0)
+            {
+                Debug.Log("Game Over bro, Game Over");
+            }
+        }
     }
 }

@@ -19,3 +19,4 @@ MonoBehaviour:
   _enemyDamage: 1
   _enemyAttackSpeed: 2
   _enemyMovementSpeed: 2
+  _playerHealthDamage: 2

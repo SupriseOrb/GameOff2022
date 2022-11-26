@@ -14,6 +14,7 @@ public class EnemyScriptableObject : ScriptableObject
     [SerializeField] private float _enemyDamage;
     [SerializeField] private float _enemyAttackSpeed;
     [SerializeField] private float _enemyMovementSpeed;
+    [SerializeField] private int _playerHealthDamage = 1;
 
 #endregion
 
@@ -52,6 +53,11 @@ public class EnemyScriptableObject : ScriptableObject
     public float EnemyMovementSpeed
     {
         get {return _enemyMovementSpeed;}
+    }
+
+    public int PlayerHealthDamage
+    {
+        get {return _playerHealthDamage;}
     }
 #endregion
 }
