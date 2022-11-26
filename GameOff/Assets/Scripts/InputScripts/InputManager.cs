@@ -35,6 +35,8 @@ public class InputManager : MonoBehaviour
     private InputAction _mousePosAction;
     #endregion
 
+    [Header("Error Message")]
+    [SerializeField] [TextArea] private string _errorNotEnoughInk = "Cannot Stamp, not enough ink";
     private void Awake() 
     {
         _lClickAction = _playerInput.actions[_lClickString];
@@ -46,7 +48,8 @@ public class InputManager : MonoBehaviour
     private void OnEnable() 
     {
         _lClickAction.performed += OnLeftClick;
-        _lClickAction.canceled += OnLeftClick;
+        // TODO: Ask Gim, why do we have OnLeftClick listening on performed and canceled
+        //_lClickAction.canceled += OnLeftClick;
 
         _rClickAction.performed += OnRightClick;
         _mousePosAction.performed += MousePosition;
@@ -55,7 +58,7 @@ public class InputManager : MonoBehaviour
     private void OnDisable() 
     {
         _lClickAction.performed -= OnLeftClick;
-        _lClickAction.canceled -= OnLeftClick;
+        //_lClickAction.canceled -= OnLeftClick;
 
         _rClickAction.performed -= OnRightClick;
         _mousePosAction.performed -= MousePosition;
@@ -70,15 +73,15 @@ public class InputManager : MonoBehaviour
     public void OnLeftClick(InputAction.CallbackContext context)
     {
         _selectedCard = DeckManager.Instance.SelectedCard;
-        if (_spriteDrag.IsDragging) //Need to figure out how we're getting _selectedCard
-        {
-            _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f, _layerMask);
+        _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f, _layerMask);
 
-            if (_raycastHit.collider == null) //If no collider on click
-            {
-                return;
-            }
-            
+        if (_raycastHit.collider == null) //If no collider on click
+        {
+            return;
+        }
+
+        if (_spriteDrag.IsDragging) //Need to figure out how we're getting _selectedCard
+        {            
             if (_selectedCard != null)
             {
                 if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile)) //If drag is released on UnitTile / UnitTile clicked
@@ -92,9 +95,7 @@ public class InputManager : MonoBehaviour
                         }
                         else
                         {
-                            Debug.Log("I will kiss your mom");
-                            //do some error thing
-                            //Maybe make the ink bar flash w/ a shader
+                            AnnounceError(_errorNotEnoughInk);
                         }
                         DeckManager.Instance.ResetCardSelection();
                     }
@@ -117,8 +118,7 @@ public class InputManager : MonoBehaviour
                         }
                         else
                         {
-                            //do some error thing
-                            //Maybe make the ink bar flash w/ a shader
+                            AnnounceError(_errorNotEnoughInk);
                         }
                         DeckManager.Instance.ResetCardSelection();
                     }
@@ -132,8 +132,7 @@ public class InputManager : MonoBehaviour
                         }
                         else
                         {
-                            //do some error thing
-                            //Maybe make the ink bar flash w/ a shader
+                            AnnounceError(_errorNotEnoughInk);
                         }
                         DeckManager.Instance.ResetCardSelection();
                     }
@@ -144,30 +143,37 @@ public class InputManager : MonoBehaviour
                         DeckManager.Instance.ResetCardSelection(); 
                     }
                 }
-            }
-            else //if selectedCard = null
+            }          
+        }
+        else if (_selectedCard == null && _raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile))
+        {
+            //Note: Need to reference StampScriptableObject description to fill in desc panel
+            if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
             {
-                //Note: Need to reference StampScriptableObject description to fill in desc panel
-                if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
-                {
-                    //Opens up description panel based on the unit on the tile
-                    //This means that the panel must be able to be triggered by the Stamps themselves
-                }
-
-                if (_raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile))
-                {
-                    if (BoardManager.Instance.GetLane(boardTile._laneNumber).CurrentLandStamp != null) //Don't think I need the null check
-                    {
-                        //show land desc panel
-                    }
-                    if (boardTile.GetHeldStamp().TryGetComponent(out IItemStamp itemStamp))
-                    {
-                        //add item desc to land desc panel with magic
-                    }
-                    //Note: Shouldn't need to showcase desc panel for Spell Stamps
-                }
+                // TODO: Call a UnitTile function to tell it has been clicked on and then it'll figure out the rest
+                // e.g. Figure out how to populate the info panel with the unit info
+                // Then in the unit tile, pass the string to the BoardManager which should have an instance to the description panel
+                Debug.Log("Click on Unit Tile");
             }
-            
+            else
+            {
+                Debug.Log("Click on Board Tile");
+                // TODO: Call a BoardTile function to tell it has been clicked on and then it'll figure out the rest
+                // e.g. Figure out how to populate the info panel with the land and item info
+                // Then in the board tile, pass the string to the BoardManager which should have an instance to the description panel
+                
+                /*if (BoardManager.Instance.GetLane(boardTile._laneNumber).CurrentLandStamp != null) //Don't think I need the null check
+                {
+                    Debug.Log("Get Land");
+                    //show land desc panel
+                }
+                if (boardTile.GetHeldStamp().TryGetComponent(out IItemStamp itemStamp))
+                {
+                    Debug.Log("Get Item");
+                    //add item desc to land desc panel with magic
+                }
+                //Note: Shouldn't need to showcase desc panel for Spell Stamps*/
+            }
         }
     }
 
@@ -177,6 +183,15 @@ public class InputManager : MonoBehaviour
         _mousePositionScreen = context.ReadValue<Vector2>();
         _mousePositionWorld = Camera.main.ScreenToWorldPoint(_mousePositionScreen);
         _spriteDrag.Move(new Vector3(_mousePositionWorld.x, _mousePositionWorld.y, 0f));
+    }
+
+    private void AnnounceError(string errorMessage)
+    {
+        Debug.Log(errorMessage);
+        if (errorMessage == _errorNotEnoughInk)
+        {
+            // TODO: Make the ink bar flash w/ a shader
+        }
     }
 
     /*
