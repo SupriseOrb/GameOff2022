@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8219a680d11d2214dbd7ff16e95671cc, type: 3}
+  m_Name: HarpyUnit
+  m_EditorClassIdentifier: 
+  _stampName: Harpy
+  _stampSprite: {fileID: 0}
+  _spawnedUnit: {fileID: 0}
+  _unitType: IDK why we have this here tbh
+  _unitAbilityCooldown: 0
+  _unitCooldownReduction: 0
+  _unitDamage: 1
+  _unitAttackSpeed: 0.5
+  _unitSlowAmount: 0.2
+  _unitHealth: 0
+  _attackDamageIncreaseAmount: 0.5
+  _attackSpeedIncreaseAmount: 0.2
+  _uniqueUpgradeOneIncreaseAmount: 1
+  _uniqueUpgradeTwoIncreaseAmount: 50
+  _uniqueUpgradeThreeIncreaseAmount: 30
+  _upgrades:
+  - name: Disorienting Song
+    descriptionBase: The Harpy attacks less frequently and no longer slows, but moves
+      enemies to a different lane instead.
+    descriptionRandom: 'Randomly increase one of the following stats: Attack Damage
+      or Attack Speed'
+    descriptionResetWarning: The Harpy attacks less frequently and no longer slows,
+      but moves enemies to a different lane instead. Choosing this upgrade will remove
+      all previous upgrades.
+  - name: Booming Song
+    descriptionBase: Pushes enemies back and slows enemies.
+    descriptionRandom: 'Randomly increase one of the following stats: Attack Damage,
+      Attack Speed, Push Distance, or Slow Intensity'
+    descriptionResetWarning: Pushes enemies back and slows enemies. Choosing this
+      upgrade will remove all previous upgrades.

@@ -92,6 +92,7 @@ public class InputManager : MonoBehaviour
                         }
                         else
                         {
+                            Debug.Log("I will kiss your mom");
                             //do some error thing
                             //Maybe make the ink bar flash w/ a shader
                         }

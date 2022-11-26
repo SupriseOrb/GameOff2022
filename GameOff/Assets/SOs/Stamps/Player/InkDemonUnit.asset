@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8219a680d11d2214dbd7ff16e95671cc, type: 3}
   m_Name: InkDemonUnit
   m_EditorClassIdentifier: 
-  _stampName: 
+  _stampName: Ink Demon
   _stampSprite: {fileID: 0}
   _spawnedUnit: {fileID: 942562487849597904, guid: 23f564e76c8a65b419d9862be6fbcd11, type: 3}
   _unitType: Summoner

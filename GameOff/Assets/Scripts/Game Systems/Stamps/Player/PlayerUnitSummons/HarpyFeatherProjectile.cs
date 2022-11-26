@@ -32,7 +32,7 @@ public class HarpyFeatherProjectile : MonoBehaviour
     
     void Start()
     {
-        AkSoundEngine.PostEvent("Play_HarpyAbility", gameObject);
+        //AkSoundEngine.PostEvent("Play_HarpyAbility", gameObject);
         _featherRigidbody = GetComponent<Rigidbody2D>();
         _harpyScript = gameObject.GetComponentInParent<HarpyUnitScript>();
 
@@ -50,7 +50,6 @@ public class HarpyFeatherProjectile : MonoBehaviour
         _currentUpgradePath = _harpyScript._currentUpgradePath;
 
         _featherRigidbody.velocity = Vector2.right * _featherMovementSpeed;
-        transform.localScale = Vector3.forward;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

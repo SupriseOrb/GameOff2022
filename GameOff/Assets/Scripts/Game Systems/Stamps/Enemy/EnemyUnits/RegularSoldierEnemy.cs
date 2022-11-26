@@ -134,6 +134,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
             else
             {
                 _soldierMovementSpeed = _soldierMovementSpeed / _currentSlowMultiplier;
+                _isMoveSlowed = false;
                 _isAttacking = true;
                 SetAnimationSpeeds();
             }
@@ -229,27 +230,29 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
 
     public void ModifySpeeds(float movementModifier, float moveDuration = 0, float attackSpeedModifier = 0, float attackDuration = 0)
     {
-        _soldierMovementSpeed = _soldierMovementSpeed * movementModifier;
-        _currentMoveSlowDuration = moveDuration;
-        _isAttacking = true;
-        if(moveDuration > 0)
+        if(movementModifier > 0)
         {
-            if(_currentSlowMultiplier != 0)
+            if(_soldierMovementSpeed > _soldierBaseMovementSpeed * movementModifier)
             {
-                _currentSlowMultiplier = _currentSlowMultiplier * movementModifier;
+                _soldierMovementSpeed = _soldierBaseMovementSpeed * movementModifier;
             }
-            else
+            _currentMoveSlowDuration = moveDuration;
+            _isAttacking = true;
+            if(moveDuration > 0)
             {
                 _currentSlowMultiplier = movementModifier;
+                _isMoveSlowed = true;
             }
-            _isMoveSlowed = true;
         }
 
-        _soldierAttackSpeed = _soldierAttackSpeed * attackSpeedModifier;
-        _currentAttackSlowDuration = attackDuration;
-        if(attackDuration > 0)
+        if(attackSpeedModifier > 0)
         {
-            _isAttackSlowed = true;
+            _soldierAttackSpeed = _soldierAttackSpeed * attackSpeedModifier;
+            _currentAttackSlowDuration = attackDuration;
+            if(attackDuration > 0)
+            {
+                _isAttackSlowed = true;
+            }
         }
         //_soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
         SetAnimationSpeeds();

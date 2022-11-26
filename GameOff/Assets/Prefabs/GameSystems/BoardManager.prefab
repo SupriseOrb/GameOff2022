@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034426191955441
@@ -292,6 +293,8 @@ MonoBehaviour:
   _laneUnits:
   - {fileID: 0}
   - {fileID: 0}
+  _leylineActive: {fileID: 0}
+  _leylineMultiplier: 0
   _laneNumber: 1
 --- !u!1 &4365034426385286206
 GameObject:
@@ -365,6 +368,8 @@ MonoBehaviour:
   _laneUnits:
   - {fileID: 0}
   - {fileID: 0}
+  _leylineActive: {fileID: 0}
+  _leylineMultiplier: 0
   _laneNumber: 2
 --- !u!1 &4365034426390978397
 GameObject:
@@ -465,6 +470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034426390978399
@@ -592,6 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034426522365011
@@ -719,6 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034426539563155
@@ -846,6 +854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034426590517180
@@ -973,6 +982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034426733583544
@@ -1100,6 +1110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034426739913102
@@ -1227,6 +1238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034426755523112
@@ -1354,6 +1366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034426936585601
@@ -1481,6 +1494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034426991835055
@@ -1608,6 +1622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034426996203740
@@ -1735,6 +1750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427032400221
@@ -1862,6 +1878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427063251887
@@ -1989,6 +2006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427075569705
@@ -2116,6 +2134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427222635201
@@ -2243,6 +2262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427399537258
@@ -2370,6 +2390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427465274881
@@ -2497,6 +2518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427524947059
@@ -2624,6 +2646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427551019803
@@ -2751,6 +2774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427596686132
@@ -2878,6 +2902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427640978836
@@ -3005,6 +3030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427643399907
@@ -3132,6 +3158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427655681607
@@ -3259,6 +3286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427805246267
@@ -3386,6 +3414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427833672021
@@ -3513,6 +3542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427891124780
@@ -3640,6 +3670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034427953361931
@@ -3679,7 +3710,7 @@ GameObject:
   - component: {fileID: 4365034428020167248}
   - component: {fileID: 4365034428020167249}
   - component: {fileID: 4953599616631265044}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: BoardManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3723,6 +3754,7 @@ MonoBehaviour:
   - {fileID: 4365034428043049835}
   - {fileID: 4365034426243923943}
   - {fileID: 4365034426385286201}
+  _playerHealth: 0
 --- !u!114 &4953599616631265044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3752,6 +3784,7 @@ MonoBehaviour:
   _previousWaveTime: 0
   _baseWaveBreakDuration: 0
   _currentWaveBreakDuration: 0
+  _enemySpawnDistance: 0.2
   _addedSpawnCorrectly: 0
   _levelFinished: 0
 --- !u!1 &4365034428043049832
@@ -3827,6 +3860,8 @@ MonoBehaviour:
   _laneUnits:
   - {fileID: 0}
   - {fileID: 0}
+  _leylineActive: {fileID: 0}
+  _leylineMultiplier: 0
   _laneNumber: 0
 --- !u!1 &4365034428081961766
 GameObject:
@@ -3927,6 +3962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034428081961760
@@ -4054,6 +4090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034428155920629
@@ -4181,6 +4218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heldStamp: {fileID: 0}
+  _currentSpell: {fileID: 0}
   _laneNumber: 0
   _tileNumber: 0
 --- !u!61 &4365034428174996021

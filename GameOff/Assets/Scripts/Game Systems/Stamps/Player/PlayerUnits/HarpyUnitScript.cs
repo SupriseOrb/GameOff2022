@@ -46,12 +46,12 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private GameObject _featherProjectile;
     [SerializeField] private Transform _featherProjectileSpawnLocation;
     [SerializeField] private Animator _harpyAnimator;
-    [SerializeField] private string _harpyAppearAnimationName = "Harpy_Appear";
-    [SerializeField] private string _xharpyAppearAnimationName = "Harpy_x_Appear";
-    [SerializeField] private string _zharpyAppearAnimationName = "Harpy_z_Appear";
-    [SerializeField] private string _harpyAttackAnimationName = "Harpy_Attack";
-    [SerializeField] private string _xharpyAttackAnimationName = "Harpy_x_Attack";
-    [SerializeField] private string _zharpyAttackAnimationName = "Harpy_z_Attack";
+    [SerializeField] private string _harpyAquaAppearAnimationName = "Harpy_Aqua_Appear";
+    [SerializeField] private string _harpyBlueAppearAnimationName = "Harpy_Blue_Appear";
+    [SerializeField] private string _harpyGreenAppearAnimationName = "Harpy_Green_Appear";
+    [SerializeField] private string _harpyAquaAttackAnimationName = "Harpy_Aqua_Attack";
+    [SerializeField] private string _harpyBlueAttackAnimationName = "Harpy_Blue_Attack";
+    [SerializeField] private string _harpyGreenAttackAnimationName = "Harpy_Green_Attack";
     
     [SerializeField] private int _harpyLaneNumber;
 #endregion
@@ -81,7 +81,7 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
         LoadBaseStats();
         LoadUpgradeStats();
         _harpyAttackCooldown = 1 / _harpyAttackSpeed;
-        _harpyAnimator.Play(_harpyAppearAnimationName);
+        _harpyAnimator.Play(_harpyAquaAppearAnimationName);
     }
 
     public void LoadBaseStats()
@@ -166,13 +166,13 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
                 LoadBaseStats();
                 _harpySlowIntensity = 0f;
                 _currentUpgradePath = HarpyUpgradePaths.upgradeDisorientingSong;
-                _harpyAnimator.Play(_xharpyAppearAnimationName);
+                _harpyAnimator.Play(_harpyBlueAppearAnimationName);
             }
             else //if upgradePath == (int)HarpyUpgradePaths.upgradeTwo
             {
                 _harpyPushDistance = 3f;   
                 _currentUpgradePath = HarpyUpgradePaths.upgradeBoomingSong;
-                _harpyAnimator.Play(_zharpyAppearAnimationName);
+                _harpyAnimator.Play(_harpyGreenAppearAnimationName);
             }
         }
         
@@ -217,7 +217,7 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
             */
             case HarpyUpgradePaths.upgradeDisorientingSong:
                 // Do the attack animation
-                _harpyAnimator.Play(_xharpyAttackAnimationName);
+                _harpyAnimator.Play(_harpyBlueAttackAnimationName);
                 //featherScript.SetSprite((int)HarpyUpgradePaths.upgradeOne);
                 //Upgrade: Move enemy to a different lane (top, bottom => middle); longer CD
                 //This probably holds 3 positions for the y to switch between (?) and lerps (?)
@@ -227,14 +227,14 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
             */
             case HarpyUpgradePaths.upgradeBoomingSong:
                 // Do the attack animation
-                _harpyAnimator.Play(_zharpyAttackAnimationName);
+                _harpyAnimator.Play(_harpyGreenAttackAnimationName);
                 //featherScript.SetSprite((int)HarpyUpgradePaths.upgradeTwo);
                 //Upgrade: Push enemy back and slow
                 
                 break;
             default:
                 // Do the attack animation
-                _harpyAnimator.Play(_harpyAttackAnimationName);
+                _harpyAnimator.Play(_harpyAquaAttackAnimationName);
                 //featherScript.SetSprite((int)HarpyUpgradePaths.upgradeBase);
                 break;
         }
