@@ -7,7 +7,7 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private List<WaveScriptableObject> _waves;
     [SerializeField] private Transform[] _spawnLocations;
     [SerializeField] private BoolVariable _isInWave;
-    private Dictionary<int, GameObject[]> _currentWaveSpawns;
+    private Dictionary<int, GameObject[][]> _currentWaveSpawns;
 
     private const int MAXINTENSITYLEVEL = 3;
     private int _currentIntensity
@@ -42,7 +42,7 @@ public class WaveManager : MonoBehaviour
     void Start()
     {
         _currentWaveIndex = 0;
-        _currentWaveSpawns = new Dictionary<int, GameObject[]>();
+        _currentWaveSpawns = new Dictionary<int, GameObject[][]>();
         BroadcastIntensityChange();
         LoadNextWave();
     }
@@ -102,7 +102,11 @@ public class WaveManager : MonoBehaviour
             _currentWave = _waves[_currentWaveIndex];
             foreach (WaveScriptableObject.EnemySpawn spawn in _currentWave.Wave)
             {
-                _addedSpawnCorrectly = _currentWaveSpawns.TryAdd(spawn._timeToSpawn, spawn._enemies);
+                GameObject[][] enemies = new GameObject[3][];
+                enemies[0] = spawn._laneOneEnemies;
+                enemies[1] = spawn._laneTwoEnemies;
+                enemies[2] = spawn._laneThreeEnemies;
+                _addedSpawnCorrectly = _currentWaveSpawns.TryAdd(spawn._timeToSpawn, enemies);
                 if (_addedSpawnCorrectly != true)
                 {
                     Debug.LogError("Enemies are already being spawned at this time: " + spawn._timeToSpawn);
@@ -130,15 +134,19 @@ public class WaveManager : MonoBehaviour
             _previousWaveTime = _currentWaveTime;
             if (_currentWaveSpawns.ContainsKey(_currentWaveTime))
             {
-                _currentEnemySpawns = _currentWaveSpawns[_currentWaveTime];
-                for (int i = 0; i < 3; i++) //We always know the size of the spawns will be 3
+                for(int spawnLaneNumber = 0; spawnLaneNumber < 3; spawnLaneNumber++) //We always know the size of the lanes will be 3
                 {
-                    if (_currentEnemySpawns[i] != null)
+                    _currentEnemySpawns = _currentWaveSpawns[_currentWaveTime][spawnLaneNumber]; //Get all the enemies to be spawned in this lane
+                    for (int enemyIndex = 0; enemyIndex < _currentEnemySpawns.Length; enemyIndex++) 
                     {
-                        GameObject spawnedEnemy = Instantiate(_currentEnemySpawns[i], _spawnLocations[i].position, Quaternion.identity);
-                        BoardManager.Instance.GetLane(i).AddEnemyToList(spawnedEnemy);
-                    }
-                } 
+                        if (_currentEnemySpawns[enemyIndex] != null)
+                        {
+                            Vector3 currentSpawnLocation = new Vector3(_spawnLocations[spawnLaneNumber].position.x + (enemyIndex * .2f), _spawnLocations[spawnLaneNumber].position.y, _spawnLocations[spawnLaneNumber].position.z);
+                            GameObject spawnedEnemy = Instantiate(_currentEnemySpawns[enemyIndex], currentSpawnLocation, Quaternion.identity);
+                            BoardManager.Instance.GetLane(spawnLaneNumber).AddEnemyToList(spawnedEnemy);
+                        }
+                    } 
+                }
             }
         }
 #region Backup Code

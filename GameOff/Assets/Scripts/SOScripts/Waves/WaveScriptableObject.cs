@@ -8,8 +8,12 @@ public class WaveScriptableObject : ScriptableObject
     [System.Serializable]
     public struct EnemySpawn
     {
-        [Tooltip("Array of prefab of the enemies that will be spawned. Their index corresponds with the lane they will be spawned in. If you dont want to spawn in all three lanes, have the other two indices exist but hold nothing")]
-        public GameObject[] _enemies; //Array of prefab of the enemies that will be spawned
+        [Tooltip("Array of prefab of the enemies that will be spawned in lane one. Leave this array empty if you dont want to spawn anything in this lane.")]
+        public GameObject[] _laneOneEnemies; //Array of prefab of the enemies that will be spawned in lane 1
+        [Tooltip("Array of prefab of the enemies that will be spawned in lane two. Leave this array empty if you dont want to spawn anything in this lane.")]
+        public GameObject[] _laneTwoEnemies; //Array of prefab of the enemies that will be spawned in lane 2
+        [Tooltip("Array of prefab of the enemies that will be spawned in lane three. Leave this array empty if you dont want to spawn anything in this lane.")]
+        public GameObject[] _laneThreeEnemies; //Array of prefab of the enemies that will be spawned in lane 3
 
         [Tooltip("How many seconds into the wave they will be spawned")]
         public int _timeToSpawn; //What time the enemy will be spawned
