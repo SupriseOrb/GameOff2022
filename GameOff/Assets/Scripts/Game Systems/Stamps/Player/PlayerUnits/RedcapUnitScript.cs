@@ -31,6 +31,14 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     
     //Just in case we need this value (unlikely for redcap but necessary for ink demon)
     [SerializeField] private int _redcapLaneNumber;
+    
+#endregion
+
+#region Unit Upgrade Values
+    [SerializeField] private float _attackDamageUpgradeIncrease;
+    [SerializeField] private float _attackSpeedUpgradeIncrease;
+    [SerializeField] private int _pierceUpgradeIncrease = 1;
+    [SerializeField] private float _stunDurationUpgradeIncrease;
 #endregion
 
     public enum RedcapUpgradePaths
@@ -38,9 +46,9 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         //Red
         upgradeBase = 0,
         //Blue
-        upgradeOne = 1,
+        upgradeLeadInk = 1,
         //Purple
-        upgradeTwo = 2,
+        upgradeStickyInk = 2,
     }
     public RedcapUpgradePaths _currentUpgradePath = RedcapUpgradePaths.upgradeBase;
 
@@ -49,6 +57,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     {
         AkSoundEngine.PostEvent("Play_StampGeneral", gameObject);
         LoadBaseStats();
+        LoadUpgradeStats();
         _redcapAttackCooldown = 1 / _redcapAttackSpeed;
         _redcapAnimator.Play(_redcapAppearAnimationName);
         _currentUpgradePath = RedcapUpgradePaths.upgradeBase;
@@ -57,14 +66,23 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     public void LoadBaseStats()
     {
         //Test variables:
-        _redcapStunDuration = 3;
-        _redcapPierceAmount = 1;
+        _redcapStunDuration = 0;
+        _redcapPierceAmount = 0;
 
         _unitType = _redcapSO.UnitType;
         _redcapDamage = _redcapSO.UnitDamage;
         _redcapAttackSpeed = _redcapSO.UnitAttackSpeed;
         _unitSlowAmount = _redcapSO.UnitSlowAmount;
     }
+
+    public void LoadUpgradeStats()
+    {
+        _attackDamageUpgradeIncrease = _redcapSO.AttackDamageIncreaseAmount;
+        _attackSpeedUpgradeIncrease = _redcapSO.AttackSpeedIncreaseAmount;
+        _pierceUpgradeIncrease = (int)_redcapSO.UniqueUpgradeOneIncreaseAmount;
+        _stunDurationUpgradeIncrease = _redcapSO.UniqueUpgradeTwoIncreaseAmount;
+    }
+
 
     public void SetLane(int lane)
     {
@@ -95,19 +113,43 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         if(upgradePath == (int)_currentUpgradePath)
         {
             Debug.Log("Upgrading Random Stat");
+            int upgradedStat = Random.Range(0, 3);
+            switch (upgradedStat)
+            {
+                case 0:
+                    _redcapDamage += _attackDamageUpgradeIncrease;
+                    break;
+                case 1:
+                    _redcapAttackSpeed += _attackSpeedUpgradeIncrease;
+                    break;
+                default:
+                    if(_currentUpgradePath == RedcapUpgradePaths.upgradeLeadInk)
+                    {
+                        _redcapPierceAmount += _pierceUpgradeIncrease;
+                    }
+                    else
+                    {
+                        _redcapStunDuration += _stunDurationUpgradeIncrease;
+                    }
+                    break;
+            }
             //Note: Cap Atk Speed at 1.0 (matches animation length) or increase anim speed
             //Random Upgradable Stats: Attack, Attack Speed, Pierce Amt/Stun Duration (depending on Upgrade path)
         }
         else
         {
-            if(upgradePath == (int)RedcapUpgradePaths.upgradeOne)
+            if(upgradePath == (int)RedcapUpgradePaths.upgradeLeadInk)
             {
-                _currentUpgradePath = RedcapUpgradePaths.upgradeOne;
+                LoadBaseStats();
+                _redcapPierceAmount = 1;
+                _currentUpgradePath = RedcapUpgradePaths.upgradeLeadInk;
                 _redcapAnimator.Play(_bluecapAppearAnimationName);
             }
             else
             {
-                _currentUpgradePath = RedcapUpgradePaths.upgradeTwo;
+                LoadBaseStats();
+                _redcapStunDuration = 2;
+                _currentUpgradePath = RedcapUpgradePaths.upgradeStickyInk;
                 _redcapAnimator.Play(_purplecapAppearAnimationName);
             }
         }
@@ -124,9 +166,9 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     {
         switch(_currentUpgradePath)
         {
-            case RedcapUpgradePaths.upgradeOne:
+            case RedcapUpgradePaths.upgradeLeadInk:
                 break;
-            case RedcapUpgradePaths.upgradeTwo:
+            case RedcapUpgradePaths.upgradeStickyInk:
                 break;
             default:
                 break;
@@ -151,19 +193,19 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
             For pierce, maybe have a raycast shoot out when the inkball hits the 1st enemy and check for other enemies
             If they exist, deal x% of the initial hit to them?
             */
-            case RedcapUpgradePaths.upgradeOne:
+            case RedcapUpgradePaths.upgradeLeadInk:
                 // Do the attack animation
                 _redcapAnimator.Play(_bluecapAttackAnimationName);
-                inkballScript.SetSprite((int)RedcapUpgradePaths.upgradeOne);
+                inkballScript.SetSprite((int)RedcapUpgradePaths.upgradeLeadInk);
                 inkballScript.SetPiercing(_redcapPierceAmount);
                 break;
             /*
             For stun, have the enemy hit have their velocity set to 0 for x amount of time
             */
-            case RedcapUpgradePaths.upgradeTwo:
+            case RedcapUpgradePaths.upgradeStickyInk:
                 // Do the attack animation
                 _redcapAnimator.Play(_purplecapAttackAnimationName);
-                inkballScript.SetSprite((int)RedcapUpgradePaths.upgradeTwo);
+                inkballScript.SetSprite((int)RedcapUpgradePaths.upgradeStickyInk);
                 inkballScript.SetStunValues(true, _redcapStunDuration);
                 break;
             default:

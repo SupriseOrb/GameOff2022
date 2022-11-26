@@ -22,6 +22,11 @@ MonoBehaviour:
   _unitAttackSpeed: 0.2
   _unitSlowAmount: 0
   _unitHealth: 5
+  _attackDamageIncreaseAmount: 2
+  _attackSpeedIncreaseAmount: 0.1
+  _uniqueUpgradeOneIncreaseAmount: 1
+  _uniqueUpgradeTwoIncreaseAmount: 0.5
+  _uniqueUpgradeThreeIncreaseAmount: 0
   _upgrades:
   - name: Choppy-Whoppy
     descriptionBase: "The Redcap\u2019s inkball pierces through an additional enemy."

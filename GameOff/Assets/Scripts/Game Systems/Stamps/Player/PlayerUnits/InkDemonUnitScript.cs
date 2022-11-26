@@ -42,11 +42,19 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private List<InkDemonMinion> _activeMinions;
 #endregion
 
+#region Unit Upgrade Values
+    [SerializeField] private float _attackDamageUpgradeIncrease;
+    [SerializeField] private float _attackSpeedUpgradeIncrease;
+    [SerializeField] private int _maxHealthUpgradeIncrease;
+    [SerializeField] private int _cooldownReductionUpgrade;
+    [SerializeField] private int _cooldownIncreaseUpgrade;
+#endregion
+
     public enum InkDemonUpgradePaths
     {
         upgradeBase = 0,
-        upgradeOne = 1,
-        upgradeTwo = 2,
+        upgradeVolatileSummons = 1,
+        upgradeMassProducedSummons = 2,
     }
     public InkDemonUpgradePaths _currentUpgradePath = InkDemonUpgradePaths.upgradeBase;
 
@@ -55,6 +63,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
     {
         AkSoundEngine.PostEvent("Play_StampGeneral", gameObject);
         LoadBaseStats();
+        LoadUpgradeStats();
         _inkDemonAnimator.Play(_inkDemonGreenAppearAnimationName);
     }
 
@@ -68,6 +77,15 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
         _inkMinionHealth = _inkDemonSO.UnitHealth;
         _inkMinionAttackSpeed = _inkDemonSO.UnitAttackSpeed;
         _inkMinionDamage = _inkDemonSO.UnitDamage;
+    }
+
+    public void LoadUpgradeStats()
+    {
+        _attackDamageUpgradeIncrease = _inkDemonSO.AttackDamageIncreaseAmount;
+        _attackSpeedUpgradeIncrease = _inkDemonSO.AttackSpeedIncreaseAmount;
+        _maxHealthUpgradeIncrease = (int)_inkDemonSO.UniqueUpgradeOneIncreaseAmount;
+        _cooldownIncreaseUpgrade = (int)_inkDemonSO.UniqueUpgradeTwoIncreaseAmount;
+        _cooldownReductionUpgrade = (int)_inkDemonSO.UniqueUpgradeThreeIncreaseAmount;
     }
 
     public void SetLane(int lane)
@@ -96,14 +114,52 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 
     public void UpgradeUnit(int upgradePath)
     {
-        //bring up the upgrade menu I think
-        if(_currentUpgradePath == InkDemonUpgradePaths.upgradeOne)
+        if(upgradePath == (int)_currentUpgradePath)
         {
-            _inkMinionDeathDamageMultiplier = 4;
-            _inkMinionSlowAmount = .5f;
-            _inkMinionSlowDuration = 1f;
+            Debug.Log("Upgrading Random Stat");
+            int upgradedStat = Random.Range(0, 3);
+            switch (upgradedStat)
+            {
+                case 0:
+                    _inkMinionDamage += _attackDamageUpgradeIncrease;
+                    break;
+                case 1:
+                    _inkMinionAttackSpeed += _attackSpeedUpgradeIncrease;
+                    break;
+                default:
+                    _inkMinionHealth += _maxHealthUpgradeIncrease;
+                    break;
+            }
+            //Note: Cap Atk Speed at 1.0 (matches animation length) or increase anim speed
+            //Random Upgradable Stats: Attack, Attack Speed, Pierce Amt/Stun Duration (depending on Upgrade path)
         }
-        //Random Upgradable Stats: Minion Attack, Minion Attack Speed, Ink Minion Health, Slow Duration(depending on upgrade path)
+        else
+        {
+            if(upgradePath == (int)InkDemonUpgradePaths.upgradeVolatileSummons)
+            {
+                LoadBaseStats();
+                _inkMinionDeathDamageMultiplier = 4;
+                _inkMinionSlowAmount = .5f;
+                _inkMinionSlowDuration = 1f;
+                _inkDemonCooldownReduction = _cooldownIncreaseUpgrade;
+
+                _currentUpgradePath = InkDemonUpgradePaths.upgradeVolatileSummons;
+                _inkDemonAnimator.Play(_inkDemonBlueAppearAnimationName);
+            }
+            else
+            {
+                LoadBaseStats();
+                _inkMinionDeathDamageMultiplier = 0;
+                _inkMinionSlowAmount = 0;
+                _inkMinionSlowDuration = 0;
+                _inkDemonCooldownReduction = _cooldownReductionUpgrade;
+                
+                _currentUpgradePath = InkDemonUpgradePaths.upgradeMassProducedSummons;
+                _inkDemonAnimator.Play(_inkDemonRedAppearAnimationName);
+            }
+            //Random Upgradable Stats: Minion Attack, Minion Attack Speed, Ink Minion Health, Slow Duration(depending on upgrade path)
+        }
+
         foreach(InkDemonMinion inkMinion in _activeMinions)
         {
             inkMinion.UpdateMinionStats(_currentUpgradePath, _inkMinionHealth, _inkMinionAttackSpeed, _inkMinionDamage, _inkMinionDeathDamageMultiplier, _inkMinionSlowAmount, _inkMinionSlowDuration, _inkDemonLaneNumber);
@@ -127,10 +183,10 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
         }
         switch(_currentUpgradePath)
         {
-            case InkDemonUpgradePaths.upgradeOne:
+            case InkDemonUpgradePaths.upgradeVolatileSummons:
                 UpgradeOneAbilityHelper();
                 break;
-            case InkDemonUpgradePaths.upgradeTwo:
+            case InkDemonUpgradePaths.upgradeMassProducedSummons:
                 UpgradeTwoAbilityHelper();
                 break;
             default:

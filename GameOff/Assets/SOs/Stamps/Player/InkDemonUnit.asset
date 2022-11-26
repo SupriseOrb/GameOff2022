@@ -22,9 +22,17 @@ MonoBehaviour:
   _unitAttackSpeed: 1
   _unitSlowAmount: 0
   _unitHealth: 5
+  _attackDamageIncreaseAmount: 0.5
+  _attackSpeedIncreaseAmount: 0.2
+  _uniqueUpgradeOneIncreaseAmount: 1
+  _uniqueUpgradeTwoIncreaseAmount: 50
+  _uniqueUpgradeThreeIncreaseAmount: 30
   _upgrades:
   - name: EXPLOSION
-    description: Increase minion summon CD, but minions now deal damage and slow
-      enemies on death.
+    descriptionBase: 
+    descriptionRandom: 
+    descriptionResetWarning: 
   - name: Vroomies
-    description: Decrease minion summon CD.
+    descriptionBase: 
+    descriptionRandom: 
+    descriptionResetWarning: 

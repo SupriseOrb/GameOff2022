@@ -18,6 +18,12 @@ public class UnitStampScriptableObject : StampScriptableObject
     //not super important to have in here
     [SerializeField] private IStamp _stampAbilityScript;
 
+    [SerializeField] private float _attackDamageIncreaseAmount;
+    [SerializeField] private float _attackSpeedIncreaseAmount;
+    [SerializeField] private float _uniqueUpgradeOneIncreaseAmount;
+    [SerializeField] private float _uniqueUpgradeTwoIncreaseAmount;
+    [SerializeField] private float _uniqueUpgradeThreeIncreaseAmount;
+
     [Header("Upgrade Menu")]
     [SerializeField] private UpgradeInfo[] _upgrades;
     [System.Serializable]
@@ -76,6 +82,31 @@ public class UnitStampScriptableObject : StampScriptableObject
     public IStamp StampAbilityScript
     {
         get {return _stampAbilityScript;}
+    }
+
+    public float AttackDamageIncreaseAmount
+    {
+        get {return _attackDamageIncreaseAmount;}
+    }
+
+    public float AttackSpeedIncreaseAmount
+    {
+        get {return _attackSpeedIncreaseAmount;}
+    }
+
+    public float UniqueUpgradeOneIncreaseAmount
+    {
+        get {return _uniqueUpgradeOneIncreaseAmount;}
+    }
+
+    public float UniqueUpgradeTwoIncreaseAmount
+    {
+        get {return _uniqueUpgradeTwoIncreaseAmount;}
+    }
+
+    public float UniqueUpgradeThreeIncreaseAmount
+    {
+        get {return _uniqueUpgradeThreeIncreaseAmount;}
     }
 
     public UpgradeInfo[] Upgrades

@@ -85,7 +85,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
             case InkDemonUnitScript.InkDemonUpgradePaths.upgradeBase:
                 _inkMinionAnimator.Play(_inkMinionGreenAppearAnimationName);
                 break;
-            case InkDemonUnitScript.InkDemonUpgradePaths.upgradeOne:
+            case InkDemonUnitScript.InkDemonUpgradePaths.upgradeVolatileSummons:
                 _inkMinionAnimator.Play(_inkMinionBlueAppearAnimationName);
                 break;        
             default:
@@ -155,7 +155,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
             case InkDemonUnitScript.InkDemonUpgradePaths.upgradeBase:
                 _inkMinionAnimator.Play(_inkMinionGreenAttackAnimationName);
                 break;
-            case InkDemonUnitScript.InkDemonUpgradePaths.upgradeOne:
+            case InkDemonUnitScript.InkDemonUpgradePaths.upgradeVolatileSummons:
                 _inkMinionAnimator.Play(_inkMinionBlueAttackAnimationName);
                 break;        
             default:
@@ -176,7 +176,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
                 case InkDemonUnitScript.InkDemonUpgradePaths.upgradeBase:
                     _inkMinionAnimator.Play(_inkMinionGreenDieAnimationName);
                     break;
-                case InkDemonUnitScript.InkDemonUpgradePaths.upgradeOne:
+                case InkDemonUnitScript.InkDemonUpgradePaths.upgradeVolatileSummons:
                     _inkMinionAnimator.Play(_inkMinionBlueDieAnimationName);
                     break;        
                 default:
