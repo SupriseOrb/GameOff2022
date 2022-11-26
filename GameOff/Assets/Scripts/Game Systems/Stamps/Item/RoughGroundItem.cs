@@ -69,7 +69,7 @@ public class RoughGroundItem : MonoBehaviour, IItemStamp
     {
         if(other.gameObject.TryGetComponent(out IEnemy enemy))
         {
-            enemy.ModifySpeeds(1 - _groundSlowPercentage, 0, 1 - _groundSlowPercentage, 0);
+            enemy.ReduceSpeeds(1 - _groundSlowPercentage, 0, 1 - _groundSlowPercentage, 0);
         }
     }
 
@@ -77,7 +77,7 @@ public class RoughGroundItem : MonoBehaviour, IItemStamp
     {
         if(other.gameObject.TryGetComponent(out IEnemy enemy))
         {
-            enemy.ModifySpeeds(1/(1 - _groundSlowPercentage), 0, 1/(1 - _groundSlowPercentage), 0);
+            enemy.IncreaseSpeeds(1/(1 - _groundSlowPercentage), 1/(1 - _groundSlowPercentage));
         }    
     }
 

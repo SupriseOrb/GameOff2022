@@ -84,14 +84,14 @@ public class HarpyFeatherProjectile : MonoBehaviour
                         Vector3 newLocation = new Vector3(_featherPushDistance, 0, 0);
                         _featherForcedMoveSpeed = _harpyScript.ForcedMoveSpeed;
                         enemy.TakeDamage(_featherDamage);
-                        enemy.ModifySpeeds(1 - _featherSlowIntensity, _featherSlowDuration);
+                        enemy.ReduceSpeeds(1 - _featherSlowIntensity, _featherSlowDuration);
                         enemy.ForcedMove(other.gameObject.transform.position, other.gameObject.transform.position + newLocation, _featherForcedMoveSpeed);
                     }
                 }
                 else
                 {
                     enemy.TakeDamage(_featherDamage);
-                    enemy.ModifySpeeds(1 - _featherSlowIntensity, _featherSlowDuration);
+                    enemy.ReduceSpeeds(1 - _featherSlowIntensity, _featherSlowDuration);
                 }
                 _featherDamage = 0;
                 Destroy(gameObject); 

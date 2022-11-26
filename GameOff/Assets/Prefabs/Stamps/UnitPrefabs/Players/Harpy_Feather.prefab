@@ -91,7 +91,7 @@ MonoBehaviour:
   _featherForcedMoveSpeed: 0
   _featherSlowIntensity: 0
   _featherSlowDuration: 0
-  _featherMovementSpeed: 5
+  _featherMovementSpeed: 75
   _featherRigidbody: {fileID: 6197164183251949291}
   _featherDestroyTime: 5
 --- !u!1 &6197164184629580865
@@ -110,7 +110,7 @@ GameObject:
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6197164184629580864
 Transform:
   m_ObjectHideFlags: 0

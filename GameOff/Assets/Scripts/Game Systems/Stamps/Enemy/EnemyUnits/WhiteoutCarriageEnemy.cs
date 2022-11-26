@@ -14,6 +14,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     [SerializeField] private float _carriageDamage;
     [SerializeField] private float _carriageAttackSpeed;
     [SerializeField] private float _carriageMovementSpeed;
+    [SerializeField] private float _carriageBaseMovementSpeed;
     [SerializeField] private int _playerHealthDamage;
 #endregion
 
@@ -69,7 +70,8 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
         _carriageHealth = _carriageSO.EnemyHealth;
         _carriageDamage = _carriageSO.EnemyDamage;
         _carriageAttackSpeed = _carriageSO.EnemyAttackSpeed;
-        _carriageMovementSpeed = _carriageSO.EnemyMovementSpeed;
+        _carriageBaseMovementSpeed = _carriageSO.EnemyMovementSpeed;
+        _carriageMovementSpeed = _carriageBaseMovementSpeed;
         _carriageAttackCooldown = 1 / _carriageAttackSpeed;
 
         _playerHealthDamage = _carriageSO.PlayerHealthDamage;
@@ -175,26 +177,36 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
         //Play attack animation
     }
 
-    public void ModifySpeeds(float movementModifier, float moveDuration = 0, float attackSpeedModifier = 0, float attackDuration = 0)
+    public void ReduceSpeeds(float movementModifier, float moveDuration = 0, float attackSpeedModifier = 0, float attackDuration = 0)
     {
-        _carriageMovementSpeed = _carriageMovementSpeed * movementModifier;
-        _currentMoveSlowDuration = moveDuration;
-        _isAttacking = true;
-        if(moveDuration > 0)
+        if(movementModifier > 0)
         {
-            if(_currentSlowMultiplier != 0)
+            if(_carriageMovementSpeed > _carriageBaseMovementSpeed * movementModifier)
             {
-                _currentSlowMultiplier = _currentSlowMultiplier * movementModifier;
+                _carriageMovementSpeed = _carriageBaseMovementSpeed * movementModifier;
+                _isAttacking = true;
+                if(moveDuration > 0)
+                {
+                    _currentMoveSlowDuration = moveDuration;
+                    _currentSlowMultiplier = movementModifier;
+                    _isMoveSlowed = true;
+                }
             }
-            else
-            {
-                _currentSlowMultiplier = movementModifier;
-            }
-            _isMoveSlowed = true;
         }
 
         SetAnimationSpeeds();
         
+    }
+
+    public void IncreaseSpeeds(float movementModifier, float attackSpeedModifier)
+    {
+        if(movementModifier > 0)
+        {
+            _carriageMovementSpeed = _carriageBaseMovementSpeed * movementModifier;
+            _isAttacking = true;
+        }
+        //_soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
+        SetAnimationSpeeds();
     }
 
     private void SetAnimationSpeeds()

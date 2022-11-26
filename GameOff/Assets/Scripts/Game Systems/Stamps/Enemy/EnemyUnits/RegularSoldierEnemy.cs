@@ -228,31 +228,47 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         //Play attack animation
     }
 
-    public void ModifySpeeds(float movementModifier, float moveDuration = 0, float attackSpeedModifier = 0, float attackDuration = 0)
+    public void ReduceSpeeds(float movementModifier, float moveDuration = 0, float attackSpeedModifier = 0, float attackDuration = 0)
     {
         if(movementModifier > 0)
         {
             if(_soldierMovementSpeed > _soldierBaseMovementSpeed * movementModifier)
             {
                 _soldierMovementSpeed = _soldierBaseMovementSpeed * movementModifier;
-            }
-            _currentMoveSlowDuration = moveDuration;
-            _isAttacking = true;
-            if(moveDuration > 0)
-            {
-                _currentSlowMultiplier = movementModifier;
-                _isMoveSlowed = true;
+                _isAttacking = true;
+                if(moveDuration > 0)
+                {
+                    _currentMoveSlowDuration = moveDuration;
+                    _currentSlowMultiplier = movementModifier;
+                    _isMoveSlowed = true;
+                }
             }
         }
 
         if(attackSpeedModifier > 0)
         {
             _soldierAttackSpeed = _soldierAttackSpeed * attackSpeedModifier;
-            _currentAttackSlowDuration = attackDuration;
             if(attackDuration > 0)
             {
+                _currentAttackSlowDuration = attackDuration;
                 _isAttackSlowed = true;
             }
+        }
+        //_soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
+        SetAnimationSpeeds();
+    }
+
+    public void IncreaseSpeeds(float movementModifier, float attackSpeedModifier)
+    {
+        if(movementModifier > 0)
+        {
+            _soldierMovementSpeed = _soldierMovementSpeed * movementModifier;
+            _isAttacking = true;
+        }
+
+        if(attackSpeedModifier > 0)
+        {
+            _soldierAttackSpeed = _soldierAttackSpeed * attackSpeedModifier;
         }
         //_soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
         SetAnimationSpeeds();
