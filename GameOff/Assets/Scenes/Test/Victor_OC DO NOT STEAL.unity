@@ -967,6 +967,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9016208755882374603, guid: ffed6b7cb619d414dab9a8991f984926, type: 3}
+      propertyPath: _currentReshuffleTimer
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 9016208755995955297, guid: ffed6b7cb619d414dab9a8991f984926, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
