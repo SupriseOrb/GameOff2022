@@ -15,6 +15,10 @@ public class WaveScriptableObject : ScriptableObject
         [Tooltip("Array of prefab of the enemies that will be spawned in lane three. Leave this array empty if you dont want to spawn anything in this lane.")]
         public GameObject[] _laneThreeEnemies; //Array of prefab of the enemies that will be spawned in lane 3
 
+        [Tooltip("How far away from each other the enemies will be spawned")]
+        [Range(0f, .5f)]
+        public float _enemySpawnDistance;
+
         [Tooltip("How many seconds into the wave they will be spawned")]
         public int _timeToSpawn; //What time the enemy will be spawned
     }

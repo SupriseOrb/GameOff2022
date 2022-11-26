@@ -34,6 +34,9 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private float _baseWaveBreakDuration;
     [SerializeField] private float _currentWaveBreakDuration;
 #endregion
+    [Tooltip("How far away from each other the enemies will be spawned")]
+    [Range(0f, .5f)]
+    [SerializeField] private float _enemySpawnDistance = .2f;
 
     [SerializeField] private bool _addedSpawnCorrectly;
     [SerializeField] private bool _levelFinished = false;
@@ -141,7 +144,7 @@ public class WaveManager : MonoBehaviour
                     {
                         if (_currentEnemySpawns[enemyIndex] != null)
                         {
-                            Vector3 currentSpawnLocation = new Vector3(_spawnLocations[spawnLaneNumber].position.x + (enemyIndex * .2f), _spawnLocations[spawnLaneNumber].position.y, _spawnLocations[spawnLaneNumber].position.z);
+                            Vector3 currentSpawnLocation = new Vector3(_spawnLocations[spawnLaneNumber].position.x + (enemyIndex * _enemySpawnDistance), _spawnLocations[spawnLaneNumber].position.y, _spawnLocations[spawnLaneNumber].position.z);
                             GameObject spawnedEnemy = Instantiate(_currentEnemySpawns[enemyIndex], currentSpawnLocation, Quaternion.identity);
                             BoardManager.Instance.GetLane(spawnLaneNumber).AddEnemyToList(spawnedEnemy);
                         }
