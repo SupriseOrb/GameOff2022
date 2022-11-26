@@ -81,33 +81,24 @@ public class RedcapInkBallProjectile : MonoBehaviour
         if(other.gameObject.TryGetComponent(out IEnemy enemy))
         {
             AkSoundEngine.PostEvent("Play_EnemyTakeDamage", gameObject);
-            
-            if(_currentUpgradePath == RedcapUnitScript.RedcapUpgradePaths.upgradeLeadInk)
-            {
-                if(_inkballStunActive == true && _inkballDamage > 0)
-                {   
-                    enemy.TakeDamage(_inkballDamage);
-                    enemy.Stun(_inkballStunDuration);
-                }
+
+            //If upgrade 2
+            if(_inkballStunActive == true && _inkballDamage > 0)
+            {   
+                enemy.Stun(_inkballStunDuration);
             }
-            else if(_currentUpgradePath == RedcapUnitScript.RedcapUpgradePaths.upgradeStickyInk)
+            //If upgrade 1
+            if(_inkballPiercingAmount > 0)
             {
-                if(_inkballPiercingAmount > 0)
-                {
-                    enemy.TakeDamage(_inkballDamage);
-                    _inkballPiercingAmount--;
-                }
+                enemy.TakeDamage(_inkballDamage);
+                _inkballPiercingAmount--;
             }
-            else
+            else if(_inkballPiercingAmount <= 0)
             {
-                //I don't think this if check matters anymore given we make sure that there is a specific upgrade for pierce to go through
-                if(_inkballPiercingAmount <= 0)
-                {
-                    enemy.TakeDamage(_inkballDamage);
-                    _inkballDamage = 0;
-                    Destroy(gameObject);
-                }
-            }     
+                enemy.TakeDamage(_inkballDamage);
+                _inkballDamage = 0;
+                Destroy(gameObject);
+            }    
         }
     }
 

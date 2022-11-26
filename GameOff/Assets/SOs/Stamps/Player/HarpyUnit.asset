@@ -21,6 +21,7 @@ MonoBehaviour:
   _unitDamage: 1
   _unitAttackSpeed: 0.5
   _unitSlowAmount: 0.2
+  _unitSlowDuration: 1
   _unitHealth: 0
   _attackDamageIncreaseAmount: 0.5
   _attackSpeedIncreaseAmount: 0.2

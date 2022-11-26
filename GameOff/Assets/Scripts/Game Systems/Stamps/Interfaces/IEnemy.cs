@@ -13,6 +13,7 @@ public interface IEnemy
     void ReduceSpeeds(float movementModifier, float moveDuration = 0, float attackSpeedModifier = 0, float attackDuration = 0);
     void IncreaseSpeeds(float movementModifier, float attackSpeedModifier);
     void SetLane(int laneNumber);
+    int GetLane();
     int GetPlayerHealthDamage();
     void ForcedMove(Vector3 startPos, Vector3 endPos, float forcedMoveSpeed);
 }

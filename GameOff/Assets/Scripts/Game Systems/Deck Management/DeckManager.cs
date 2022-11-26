@@ -290,7 +290,6 @@ public class DeckManager : MonoBehaviour
         {
             AkSoundEngine.PostEvent("Play_UIBack", gameObject);
             ResetCardSelection();
-            Debug.Log("Deselect card");
         }
     }
 

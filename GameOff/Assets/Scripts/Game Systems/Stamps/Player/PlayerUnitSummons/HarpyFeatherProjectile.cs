@@ -15,15 +15,6 @@ public class HarpyFeatherProjectile : MonoBehaviour
     [SerializeField] private float _featherSlowIntensity;
     [SerializeField] private float _featherSlowDuration;
 #endregion
-
-/*#region Projectile Visuals
-    [SerializeField] private SpriteRenderer _spriteRenderer;
-    [SerializeField] private Sprite _upgradeBaseSprite;
-    [SerializeField] private Sprite _upgradeOneSprite;
-    [SerializeField] private Sprite _upgradeTwoSprite;
-#endregion*/
-//Shouldn't need any visuals
-    
 #region Projectile Variables
     [SerializeField] private float _featherMovementSpeed;
     [SerializeField] private Rigidbody2D _featherRigidbody;
@@ -46,7 +37,6 @@ public class HarpyFeatherProjectile : MonoBehaviour
         _featherPushDistance = _harpyScript.PushDistance;
         _featherSlowIntensity = _harpyScript.SlowIntensity;
         _featherSlowDuration = _harpyScript.SlowDuration;
-        _featherPushDistance = _harpyScript.PushDistance;
         _currentUpgradePath = _harpyScript._currentUpgradePath;
 
         _featherRigidbody.velocity = Vector2.right * _featherMovementSpeed;
@@ -63,30 +53,43 @@ public class HarpyFeatherProjectile : MonoBehaviour
             {
                 if(_currentUpgradePath == HarpyUnitScript.HarpyUpgradePaths.upgradeDisorientingSong)
                 {
+                    _featherForcedMoveSpeed = _harpyScript.ForcedMoveSpeed;
+                    float currentYValue = 0.2f;
                     enemy.TakeDamage(_featherDamage);
-                    //_featherForcedMoveSpeed = _harpyScript.
-                    /*
-                    Based on the lane of the enemy:
-                    [1] If it's the top or bottom lane:
-                        Vector3 newLocation = new Vector3(other.gameObject.transform.position.x, (y value representing middle lane), other.gameObject.transform.position.z);
-                        enemy.ForcedMove(other.gameObject.transform.position, newLocation, timer);
-                    [2] If it's the middle lane:
-                    - int poopy = Random.Range (0,2)
-
-
-
-                    */
+                    int currentLane = enemy.GetLane();
+                    if (currentLane == 0 || currentLane == 2) //If bottom or top lane
+                    {
+                        BoardManager.Instance.GetLane(currentLane).RemoveEnemyFromList(other.gameObject);
+                        Vector3 newLocation = new Vector3(other.gameObject.transform.position.x, currentYValue, 0);
+                        enemy.ForcedMove(other.gameObject.transform.position, newLocation, _featherForcedMoveSpeed);
+                        BoardManager.Instance.GetLane(1).AddEnemyToList(other.gameObject); //This already sets the lane of the enemy
+                    }
+                    else if (currentLane == 1) //If middle lane
+                    {
+                        BoardManager.Instance.GetLane(currentLane).RemoveEnemyFromList(other.gameObject);
+                        int randomLane = Random.Range(0,2);
+                        switch (randomLane)
+                        {
+                            case 0:
+                                currentYValue = 2.72f;
+                                BoardManager.Instance.GetLane(0).AddEnemyToList(other.gameObject);
+                                break;
+                            default:
+                                currentYValue = -2.32f;
+                                BoardManager.Instance.GetLane(2).AddEnemyToList(other.gameObject);
+                                break;
+                        }
+                        Vector3 newLocation = new Vector3(other.gameObject.transform.position.x, currentYValue, 0);
+                        enemy.ForcedMove(other.gameObject.transform.position, newLocation, _featherForcedMoveSpeed);
+                    }
                 }
                 else if(_currentUpgradePath == HarpyUnitScript.HarpyUpgradePaths.upgradeBoomingSong)
                 {
-                    if (_featherDamage > 0)
-                    {
                         Vector3 newLocation = new Vector3(_featherPushDistance, 0, 0);
                         _featherForcedMoveSpeed = _harpyScript.ForcedMoveSpeed;
                         enemy.TakeDamage(_featherDamage);
                         enemy.ReduceSpeeds(1 - _featherSlowIntensity, _featherSlowDuration);
                         enemy.ForcedMove(other.gameObject.transform.position, other.gameObject.transform.position + newLocation, _featherForcedMoveSpeed);
-                    }
                 }
                 else
                 {

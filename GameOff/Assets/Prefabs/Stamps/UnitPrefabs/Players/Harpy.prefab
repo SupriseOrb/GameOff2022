@@ -260,4 +260,4 @@ MonoBehaviour:
   _attackSpeedUpgradeIncrease: 0
   _slowIntensityUpgradeIncrease: 0
   _pushDistanceUpgradeIncrease: 0
-  _currentUpgradePath: 2
+  _currentUpgradePath: 0

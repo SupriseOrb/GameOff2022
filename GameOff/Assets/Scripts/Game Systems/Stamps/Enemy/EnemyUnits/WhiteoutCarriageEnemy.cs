@@ -18,10 +18,19 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     [SerializeField] private int _playerHealthDamage;
 #endregion
 
+#region Lerping Variables
+    private Vector3 _startingPosition;
+    private Vector3 _endingPosition;
+    private float _moveDistance;
+    private float _startTime;
+    private float _forcedMoveSpeed;
+#endregion
+
     [SerializeField] private GameObject _attackTarget;
     [SerializeField] private bool _isStunned = false;
     [SerializeField] private bool _isMoveSlowed = false;
     [SerializeField] private bool _isDead = false;
+    [SerializeField] private bool _isLerping = false;
     [SerializeField] private Rigidbody2D _carriageRigidBody;
     [SerializeField] private BoxCollider2D _carriageCollider;
 
@@ -81,6 +90,11 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     {
         _laneNumber = laneNumber;
     }
+    
+    public int GetLane()
+    {
+        return _laneNumber;
+    }
 
     public void TakeDamage(float damage)
     {
@@ -122,6 +136,25 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
                 _isAttacking = true;
                 SetAnimationSpeeds();
             }
+        }
+
+        if (_isLerping)
+        {
+            float distanceMoved = (Time.time - _startTime) * _forcedMoveSpeed;
+            float movementPercentage = distanceMoved / _moveDistance;
+
+            //Check done this way to prevent floating point inaccuracy
+            if (Vector3.Distance(transform.position, _endingPosition) > 0)
+            {
+                transform.position = Vector3.Lerp(_startingPosition, _endingPosition, movementPercentage);
+            }
+            else
+            {
+                _isAttacking = true;
+                _carriageAnimator.speed = 1;
+                _carriageCollider.enabled = true;
+                _isLerping = false;
+            }    
         }
 
         if(_isDead)
@@ -229,6 +262,18 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     }
     public void ForcedMove(Vector3 startPos, Vector3 endPos, float forcedMoveSpeed)
     {
+        _carriageAnimator.speed = 0;
+        _isAttacking = false;
+        _attackTarget = null;
+        _carriageRigidBody.velocity = Vector2.zero;
+        _carriageCollider.enabled = false;
+
+        _startingPosition = startPos;
+        _endingPosition = endPos;
+        _forcedMoveSpeed = forcedMoveSpeed;
+        _moveDistance = Vector3.Distance(_startingPosition, _endingPosition);
+        _startTime = Time.time;
+        _isLerping = true;
 
     }
 }

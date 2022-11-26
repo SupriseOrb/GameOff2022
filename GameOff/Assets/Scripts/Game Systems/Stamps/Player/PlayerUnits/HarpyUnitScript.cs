@@ -65,11 +65,11 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
 
     public enum HarpyUpgradePaths
     {
-        //Red
+        //Aqua
         upgradeBase = 0,
         //Blue
         upgradeDisorientingSong = 1,
-        //Purple
+        //Green
         upgradeBoomingSong = 2,
     }
     public HarpyUpgradePaths _currentUpgradePath = HarpyUpgradePaths.upgradeBase;
@@ -90,8 +90,10 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
         _harpyDamage = _harpySO.UnitDamage;
         _harpyAttackSpeed = _harpySO.UnitAttackSpeed;
         _harpySlowIntensity = _harpySO.UnitSlowAmount;
-        //_harpySlowDuration = 1f;
-        //_harpyPushDistance = 0f;
+        _harpySlowDuration = _harpySO.UnitSlowDuration;
+        
+        //Set once testing is done
+        //_harpyForcedMoveSpeed = 0f;
     }
 
     public void LoadUpgradeStats()
@@ -165,12 +167,15 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
             {
                 LoadBaseStats();
                 _harpySlowIntensity = 0f;
+                _harpyForcedMoveSpeed = 25f;
                 _currentUpgradePath = HarpyUpgradePaths.upgradeDisorientingSong;
                 _harpyAnimator.Play(_harpyBlueAppearAnimationName);
             }
             else //if upgradePath == (int)HarpyUpgradePaths.upgradeTwo
             {
+                LoadBaseStats();
                 _harpyPushDistance = 3f;   
+                _harpyForcedMoveSpeed = 10 * _harpyPushDistance;
                 _currentUpgradePath = HarpyUpgradePaths.upgradeBoomingSong;
                 _harpyAnimator.Play(_harpyGreenAppearAnimationName);
             }
@@ -202,40 +207,23 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
     {
         if(_harpyAttackSpeed > 1)
         {
-            _harpyAnimator.speed = _harpyAttackSpeed;
+            _harpyAnimator.SetFloat("AttackSpeedModifier", _harpyAttackSpeed);
         }
         // Do the attack
         GameObject feather = Instantiate(_featherProjectile, _featherProjectileSpawnLocation.position, Quaternion.identity, gameObject.transform);
-        //Consider just declaring the inkballScript
-        //FeatherProjectile featherScript = feather.GetComponent<FeatherProjectile>();
-        //featherScript.SetDamage(_harpyDamage);
         switch(_currentUpgradePath)
         {
-            /*
-            For pierce, maybe have a raycast shoot out when the inkball hits the 1st enemy and check for other enemies
-            If they exist, deal x% of the initial hit to them?
-            */
             case HarpyUpgradePaths.upgradeDisorientingSong:
                 // Do the attack animation
                 _harpyAnimator.Play(_harpyBlueAttackAnimationName);
-                //featherScript.SetSprite((int)HarpyUpgradePaths.upgradeOne);
-                //Upgrade: Move enemy to a different lane (top, bottom => middle); longer CD
-                //This probably holds 3 positions for the y to switch between (?) and lerps (?)
                 break;
-            /*
-            For stun, have the enemy hit have their velocity set to 0 for x amount of time
-            */
             case HarpyUpgradePaths.upgradeBoomingSong:
                 // Do the attack animation
                 _harpyAnimator.Play(_harpyGreenAttackAnimationName);
-                //featherScript.SetSprite((int)HarpyUpgradePaths.upgradeTwo);
-                //Upgrade: Push enemy back and slow
-                
                 break;
             default:
                 // Do the attack animation
                 _harpyAnimator.Play(_harpyAquaAttackAnimationName);
-                //featherScript.SetSprite((int)HarpyUpgradePaths.upgradeBase);
                 break;
         }
     }

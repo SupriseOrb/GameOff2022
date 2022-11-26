@@ -105,6 +105,11 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     {
         _laneNumber = laneNumber;
     }
+    
+    public int GetLane()
+    {
+        return _laneNumber;
+    }
 
     public void TakeDamage(float damage)
     {
@@ -157,7 +162,8 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
             float distanceMoved = (Time.time - _startTime) * _forcedMoveSpeed;
             float movementPercentage = distanceMoved / _moveDistance;
 
-            if (movementPercentage < 1)
+            //Check done this way to prevent floating point inaccuracy
+            if (Vector3.Distance(transform.position, _endingPosition) > 0)
             {
                 transform.position = Vector3.Lerp(_startingPosition, _endingPosition, movementPercentage);
             }
@@ -165,9 +171,9 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
             {
                 _isAttacking = true;
                 _soldierAnimator.speed = 1;
+                _soldierCollider.enabled = true;
                 _isLerping = false;
-            }
-            
+            }    
         }
 
         if(_isDead)
@@ -299,6 +305,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         _isAttacking = false;
         _attackTarget = null;
         _soldierRigidBody.velocity = Vector2.zero;
+        _soldierCollider.enabled = false;
 
         _startingPosition = startPos;
         _endingPosition = endPos;

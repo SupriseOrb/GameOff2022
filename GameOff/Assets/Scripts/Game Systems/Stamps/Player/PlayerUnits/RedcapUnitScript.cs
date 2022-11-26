@@ -203,11 +203,10 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     {
         if(_redcapAttackSpeed > 1)
         {
-            _redcapAnimator.speed = _redcapAttackSpeed;
+            _redcapAnimator.SetFloat("AttackSpeedModifier", _redcapAttackSpeed);
         }
         // Do the attack
         GameObject inkball = Instantiate(_inkProjectile, _inkProjectileSpawnLocation.position, Quaternion.identity, gameObject.transform);
-        RedcapInkBallProjectile inkballScript = inkball.GetComponent<RedcapInkBallProjectile>();
         switch(_currentUpgradePath)
         {
             /*

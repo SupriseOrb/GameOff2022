@@ -84,19 +84,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb63bf512dbee9c40a05351ef928895c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _redcapScript: {fileID: 0}
+  _currentUpgradePath: 0
+  _inkballDamage: 0
+  _inkballPiercingAmount: 0
+  _inkballStunDuration: 0
+  _inkballStunActive: 0
   _spriteRenderer: {fileID: 6197164184629580867}
   _upgradeBaseSprite: {fileID: 21300000, guid: 26129ab549e2bd948a87c2f7db682460, type: 3}
   _upgradeOneSprite: {fileID: 21300000, guid: 0ab7d72534e627d4896891af8f59a0fd, type: 3}
   _upgradeTwoSprite: {fileID: 21300000, guid: 9ff4f255a8597f742b28778b9449dece, type: 3}
-  _projectileScale: {x: 0, y: 0, z: 0}
-  _projectileScaleTime: 0.5
-  _projectileMovementSpeed: 5
-  _projectileRigidbody: {fileID: 6197164183251949291}
-  _destroyTime: 6
-  _projectileDamage: 0
-  _projectilePiercingAmt: 0
-  _projectileStunDuration: 0
-  _projectileStunActive: 0
+  _inkballScale: {x: 0, y: 0, z: 0}
+  _inkballMovementSpeed: 5
+  _inkballRigidbody: {fileID: 0}
+  _inkballDestroyTime: 6
+  _inkballScaleTime: 0.5
 --- !u!1 &6197164184629580865
 GameObject:
   m_ObjectHideFlags: 0
