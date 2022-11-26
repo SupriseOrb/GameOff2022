@@ -27,6 +27,7 @@ public class PauseMenu : Menu
     {
         if (!_isPaused.Value && _pauseMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("Panel_IdleClose"))
         {
+            Time.timeScale = 0f;
             AkSoundEngine.PostEvent("Play_UIPause", this.gameObject);
             AkSoundEngine.SetRTPCValue("Is_Paused", 100f);
             AkSoundEngine.PostEvent("Mute_Ambience", this.gameObject);
@@ -41,6 +42,7 @@ public class PauseMenu : Menu
     {
         if (_isPaused.Value && _pauseMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("Panel_IdleOpen"))
         {
+            Time.timeScale = 1f;
             AkSoundEngine.PostEvent("Play_UIResume", this.gameObject);
             ResumeAudio();
             _isPaused.Value = false;
@@ -56,6 +58,7 @@ public class PauseMenu : Menu
 
     public void MainMenu()
     {
+        Time.timeScale = 1f;
         ResumeAudio();
         AkSoundEngine.PostEvent("Stop_Ambience", this.gameObject);
         LoadScene(0);

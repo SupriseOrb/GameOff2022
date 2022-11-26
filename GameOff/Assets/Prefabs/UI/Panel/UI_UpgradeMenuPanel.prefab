@@ -119,7 +119,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ccaff20673f4da945a1ed49a65681752, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -187,6 +187,7 @@ MonoBehaviour:
   - icon: {fileID: 1512622364100001329}
     name: {fileID: 1553457829409495445}
     description: {fileID: 8943739772877112346}
+  _unitToBeUpgraded: {fileID: 0}
 --- !u!1001 &1512622363723962856
 PrefabInstance:
   m_ObjectHideFlags: 0
