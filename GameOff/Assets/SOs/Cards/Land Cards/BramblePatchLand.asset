@@ -15,7 +15,7 @@ MonoBehaviour:
   _cardName: Bramble Patch
   _cardDescription: Periodically hurts enemy soldiers as they travel through its
     thick brambles
-  _inkCost: 30
+  _inkCost: 20
   _hasBeenUsed: 0
   _stampGORef: {fileID: 6221314376822832820, guid: 22e99187584c2c747a5666c3a5b91f16, type: 3}
   _cardType: 2
