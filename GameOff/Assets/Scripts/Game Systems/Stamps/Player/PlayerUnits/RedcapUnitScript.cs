@@ -51,6 +51,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         LoadBaseStats();
         _redcapAttackCooldown = 1 / _redcapAttackSpeed;
         _redcapAnimator.Play(_redcapAppearAnimationName);
+        _currentUpgradePath = RedcapUpgradePaths.upgradeBase;
     }
 
     public void LoadBaseStats()
@@ -85,7 +86,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 
     public void OpenUnitUpgrade()
     {
-        UpgradeMenu.Instance.Open(this, _redcapCardSO.CardIcon, _redcapSO.Upgrades);
+        UpgradeMenu.Instance.Open(gameObject, _redcapCardSO.CardIcon, _redcapSO.Upgrades, (int)_currentUpgradePath);
     }
 
     public void UpgradeUnit(int upgradePath)
@@ -93,6 +94,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         //bring up the upgrade menu I think
         if(upgradePath == (int)_currentUpgradePath)
         {
+            Debug.Log("Upgrading Random Stat");
             //Note: Cap Atk Speed at 1.0 (matches animation length) or increase anim speed
             //Random Upgradable Stats: Attack, Attack Speed, Pierce Amt/Stun Duration (depending on Upgrade path)
         }

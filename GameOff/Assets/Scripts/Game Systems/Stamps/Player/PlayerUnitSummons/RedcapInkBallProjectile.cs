@@ -72,7 +72,7 @@ public class RedcapInkBallProjectile : MonoBehaviour
             }
 
             //If upgrade 3 is active
-            if (_projectileStunActive == true)
+            if (_projectileStunActive == true && _projectileDamage > 0)
             {
                 enemy.Stun(_projectileStunDuration);
             }

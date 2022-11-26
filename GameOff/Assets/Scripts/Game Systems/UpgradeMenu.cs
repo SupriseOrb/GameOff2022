@@ -20,7 +20,7 @@ public class UpgradeMenu : MonoBehaviour
     [Header("Upgrades")]
     [SerializeField] private Upgrade[] _cardUpgrades;
 
-    [SerializeField] private IUnitStamp _unitToBeUpgraded;
+    [SerializeField] private GameObject _unitToBeUpgraded;
     [System.Serializable]
     public struct Upgrade
     {
@@ -41,14 +41,27 @@ public class UpgradeMenu : MonoBehaviour
         }
     }
 
-    public void Open(IUnitStamp unit, Sprite unitIcon, UnitStampScriptableObject.UpgradeInfo[] upgrades)
+    public void Open(GameObject unit, Sprite unitIcon, UnitStampScriptableObject.UpgradeInfo[] upgrades, int upgradePath)
     {
         AkSoundEngine.PostEvent("Play_UIPause", gameObject);
         for (int i = 0; i < _cardUpgrades.Length; i++)
         {
             _cardUpgrades[i].icon.sprite = unitIcon;
             _cardUpgrades[i].name.text = upgrades[i].name;
-            _cardUpgrades[i].description.text = upgrades[i].description;
+            _cardUpgrades[i].description.text = upgrades[i].descriptionBase;
+        }
+        switch (upgradePath)
+        {
+            case 1:
+                _cardUpgrades[0].description.text = upgrades[0].descriptionRandom;
+                _cardUpgrades[1].description.text = upgrades[1].descriptionResetWarning;
+                break;
+            case 2:
+                _cardUpgrades[0].description.text = upgrades[0].descriptionResetWarning;
+                _cardUpgrades[1].description.text = upgrades[1].descriptionRandom;
+                break;
+            default:
+                break;
         }
         _unitToBeUpgraded = unit;
 
@@ -60,6 +73,6 @@ public class UpgradeMenu : MonoBehaviour
         AkSoundEngine.PostEvent("Play_Upgrade", gameObject);
         AkSoundEngine.PostEvent("Play_UIResume", gameObject);
         _animator.Play(_animationCloseString);
-        _unitToBeUpgraded.UpgradeUnit(path);
+        _unitToBeUpgraded.GetComponent<IUnitStamp>().UpgradeUnit(path);
     }
 }

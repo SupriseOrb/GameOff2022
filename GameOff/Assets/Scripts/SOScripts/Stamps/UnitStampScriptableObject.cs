@@ -24,7 +24,10 @@ public class UnitStampScriptableObject : StampScriptableObject
     public struct UpgradeInfo
     {
         [SerializeField] public string name;
-        [SerializeField] [TextArea] public string description;
+        [SerializeField] [TextArea] public string descriptionBase;
+        [SerializeField] [TextArea] public string descriptionRandom;
+        [SerializeField] [TextArea] public string descriptionResetWarning;
+        
     }
 #endregion
 

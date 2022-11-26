@@ -91,7 +91,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 
     public void OpenUnitUpgrade()
     {
-        UpgradeMenu.Instance.Open(this, _inkDemonCardSO.CardIcon, _inkDemonSO.Upgrades);
+        UpgradeMenu.Instance.Open(gameObject, _inkDemonCardSO.CardIcon, _inkDemonSO.Upgrades, (int)_currentUpgradePath);
     }
 
     public void UpgradeUnit(int upgradePath)

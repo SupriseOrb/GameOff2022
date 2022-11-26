@@ -144,6 +144,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
             _currentStunDuration -= Time.deltaTime;
             if (_currentStunDuration <= 0)
             {
+                _carriageAnimator.speed = 1;
                 _isStunned = false;
                 _isAttacking = true;
             }
@@ -207,6 +208,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     {
         _isAttacking = false;
         _isStunned = true;
+        _carriageAnimator.speed = 0;
         _carriageRigidBody.velocity = Vector3.zero;
         _currentStunDuration = stunDuration;
     }

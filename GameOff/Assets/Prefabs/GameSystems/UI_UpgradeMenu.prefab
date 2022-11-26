@@ -156,6 +156,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2038050105985657971, guid: be46e53da8df9ac4faeccfdf5a4931c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5136388586078945673, guid: be46e53da8df9ac4faeccfdf5a4931c3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -275,6 +279,10 @@ PrefabInstance:
     - target: {fileID: 5632165120926304085, guid: be46e53da8df9ac4faeccfdf5a4931c3, type: 3}
       propertyPath: m_Name
       value: UI_UpgradeMenuPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5763886208697026335, guid: be46e53da8df9ac4faeccfdf5a4931c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6804004201520803567, guid: be46e53da8df9ac4faeccfdf5a4931c3, type: 3}
       propertyPath: m_AnchorMax.y
