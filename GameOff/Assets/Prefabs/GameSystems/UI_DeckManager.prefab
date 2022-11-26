@@ -1128,8 +1128,8 @@ MonoBehaviour:
   _cardInfoPanelOffset: {x: 0, y: 220, z: 0}
   _firstDrawDelay: 1
   _drawNumber: 4
-  _baseReshuffleTimer: 5
-  _currentReshuffleTimer: 5
+  _baseReshuffleTimer: 10
+  _currentReshuffleTimer: 10
   _isInWave: {fileID: 11400000, guid: 8f4a5478ae728304a813c62d9be70350, type: 2}
   _isFirstDraw: 1
   _timerSlider: {fileID: 4354047172935908987}
