@@ -6,9 +6,15 @@ using TMPro;
 public class BoardManager : MonoBehaviour
 {
     // TODO: Implement Tile info panel
-    [SerializeField] GameObject _tileInfoPanel;
-    [SerializeField] TextMeshProUGUI _tileInfoPanelText;
-    [SerializeField] BoardLane[] _boardLanes;
+    [Header("Info Panel")]
+    [SerializeField] private GameObject _tileInfoPanel;
+    [SerializeField] private TextMeshProUGUI _tileInfoPanelText;
+    [SerializeField] private int _tileInfoLaneNum;
+    [SerializeField] private int _tileInfoTileNum;
+
+
+    [Header("Misc")]
+    [SerializeField] private BoardLane[] _boardLanes;
 
     [SerializeField] private int _playerHealth;
 
@@ -35,7 +41,7 @@ public class BoardManager : MonoBehaviour
     {
         //Tells each lane what lane number they
         //Each lane then tells each of their tiles their lane and tile number
-        for(int i = 0; i < _boardLanes.Length; i++)
+        for (int i = 0; i < _boardLanes.Length; i++)
         {
             _boardLanes[i]._laneNumber = i;
             _boardLanes[i].SetTileIndexValues();
@@ -51,14 +57,39 @@ public class BoardManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.TryGetComponent(out IEnemy enemy))
+        if (other.TryGetComponent(out IEnemy enemy))
         {
             _playerHealth -= enemy.GetPlayerHealthDamage();
             enemy.TakeDamage(1000f);
-            if(_playerHealth < 0)
+            if (_playerHealth < 0)
             {
                 Debug.Log("Game Over bro, Game Over");
             }
         }
+    }
+
+    public void ToggleTileInfo(int laneNum, int tileNum, string TileInfo)
+    {
+        if (laneNum == _tileInfoLaneNum && tileNum == _tileInfoTileNum)
+        {
+            _tileInfoLaneNum = _tileInfoTileNum = -1;
+            HideTileInfo();
+        }
+        else
+        {
+            _tileInfoLaneNum = laneNum;
+            _tileInfoTileNum = tileNum;
+            ShowTileInfo(TileInfo);
+        }
+    }
+    private void ShowTileInfo(string TileInfo)
+    {
+        _tileInfoPanelText.text = TileInfo;
+        _tileInfoPanel.SetActive(true);
+    }
+
+    private void HideTileInfo()
+    {
+        _tileInfoPanel.SetActive(false);
     }
 }

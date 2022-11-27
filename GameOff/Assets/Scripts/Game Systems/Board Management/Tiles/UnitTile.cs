@@ -30,4 +30,11 @@ public class UnitTile : BoardTile
         return false;
     }
 
+    public override void Clicked()
+    {
+        if (_heldStamp !=  null)
+        {
+            BoardManager.Instance.ToggleTileInfo(_laneNumber, _tileNumber, _heldStamp.GetComponent<IUnitStamp>().GetTileDescription());
+        }
+    }
 }

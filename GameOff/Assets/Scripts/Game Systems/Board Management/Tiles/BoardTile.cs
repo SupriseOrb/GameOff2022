@@ -6,8 +6,20 @@ public class BoardTile : MonoBehaviour
 {
     [SerializeField] protected GameObject _heldStamp;
     [SerializeField] protected GameObject _currentSpell;
-    [SerializeField] public int _laneNumber;
-    [SerializeField] public int _tileNumber;
+    [SerializeField] protected int _laneNumber;
+    [SerializeField] protected int _tileNumber;
+
+    public int LaneNumber
+    {
+        get{return _laneNumber;}
+        set{_laneNumber = value;}
+    }
+
+    public int TileNumber
+    {
+        get{return _tileNumber;}
+        set{_tileNumber = value;}
+    }
 
     public GameObject GetHeldStamp()
     {
@@ -46,5 +58,12 @@ public class BoardTile : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public virtual void Clicked()
+    {
+        /*
+        If it's a Unit, 
+        */
     }
 }

@@ -9,4 +9,5 @@ public interface IUnitStamp : IStamp
     void OpenUnitUpgrade();
     void ReduceCooldown(float reductionAmount);
     void UpgradeUnit(int upgradePath);
+    string GetTileDescription();
 }

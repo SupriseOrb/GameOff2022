@@ -125,7 +125,7 @@ public class InputManager : MonoBehaviour
                     {
                         if(DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
                         {
-                            BoardLane boardLane = BoardManager.Instance.GetLane(boardTile._laneNumber);
+                            BoardLane boardLane = BoardManager.Instance.GetLane(boardTile.LaneNumber);
                             boardLane.ApplyLandStamp(_selectedCard.CardSO.StampGO);
                             Debug.Log("Placed Land " + _selectedCard + " onto BoardLane!");
                         }
@@ -152,7 +152,7 @@ public class InputManager : MonoBehaviour
                 // TODO: Call a UnitTile function to tell it has been clicked on and then it'll figure out the rest
                 // e.g. Figure out how to populate the info panel with the unit info
                 // Then in the unit tile, pass the string to the BoardManager which should have an instance to the description panel
-                Debug.Log("Click on Unit Tile");
+                unitTile.Clicked();
             }
             else
             {

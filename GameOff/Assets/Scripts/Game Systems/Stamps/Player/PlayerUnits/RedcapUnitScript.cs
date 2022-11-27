@@ -245,4 +245,13 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     {
         return _redcapSO.StampName;
     }
+
+    public string GetTileDescription()
+    {
+        string name = _redcapCardSO.CardName + " | Unit | " + _redcapCardSO.InkCost + " Ink";
+        string description = _redcapCardSO.CardDescription;
+        string stats = StunDuration + "sec Stun | " + PierceAmount + " Pierce Amount | " + Damage + " Damage | " + _redcapAttackSpeed + " Attacks/Sec";
+
+        return name + "\n" + description + "\n" + stats;
+    }
 }

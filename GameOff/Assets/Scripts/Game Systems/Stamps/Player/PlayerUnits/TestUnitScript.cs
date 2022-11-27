@@ -154,4 +154,9 @@ public class TestUnitScript : MonoBehaviour, IUnitStamp
     {
         return _unitName;
     }
+
+    public string GetTileDescription()
+    {
+        return "";
+    }
 }

@@ -275,4 +275,13 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
     {
         return _inkDemonSO.StampName;
     }
+
+    public string GetTileDescription()
+    {
+        string name = _inkDemonCardSO.CardName + " | Unit | " + _inkDemonCardSO.InkCost + " Ink";
+        string description = _inkDemonCardSO.CardDescription;
+        string stats = _inkDemonAbilityCooldown + " Cooldown | " + _inkMinionHealth + " Minion Health | " + _inkMinionDamage + " Minion Damage | " + _inkMinionAttackSpeed + " Minion Attacks/Sec";
+
+        return name + "\n" + description + "\n" + stats;
+    }
 }

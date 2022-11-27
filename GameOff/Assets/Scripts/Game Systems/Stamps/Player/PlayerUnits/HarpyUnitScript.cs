@@ -242,4 +242,12 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
     {
         return _harpySO.StampName;
     }
+
+    public string GetTileDescription()
+    {
+        string name = _harpyCardSO.CardName + " | Unit | " + _harpyCardSO.InkCost + " Ink";
+        string description = _harpyCardSO.CardDescription;
+        string stats = PushDistance + " Push Distance | " + SlowIntensity + " Slow Amount | " + _harpyDamage + " Damage | " + _harpyAttackSpeed +  " Attack Speed";
+        return name + "\n" + description + "\n" + stats;
+    }
 }

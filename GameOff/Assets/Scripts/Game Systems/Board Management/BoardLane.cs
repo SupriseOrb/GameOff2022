@@ -66,8 +66,8 @@ public class BoardLane : MonoBehaviour
     {
         for(int i = 0; i < _laneTiles.Length; i++)
         {
-            _laneTiles[i]._laneNumber = _laneNumber;
-            _laneTiles[i]._tileNumber = i;
+            _laneTiles[i].LaneNumber = _laneNumber;
+            _laneTiles[i].TileNumber = i;
         }
     }
 
