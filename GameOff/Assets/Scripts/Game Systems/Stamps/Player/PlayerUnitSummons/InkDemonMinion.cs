@@ -137,16 +137,28 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
         }
     }
 
+    //Activates the on death explosion for the Ink Minions (Upgrade 1)
     public void ActivateStampAbility()
     {
         if(_inkMinionDeathDamageMultiplier != 0)
         {
-            //Find nearby enemies
-            //Deal damage = _inkMinionAttackDamage * _inkMinionDeathDamageMultiplier + _inkMinionMaxHealth
-            //Apply a _inkMinionSlowAmount slow for _inkMinionSlowDuration seconds
+            _inkMinionHitColliders = Physics2D.OverlapCircleAll(transform.position, _inkMinionAttackRange);
+            if (_inkMinionHitColliders != null)
+            {
+                foreach (Collider2D collider in _inkMinionHitColliders)
+                {
+                    if (collider.TryGetComponent(out IEnemy enemy))
+                    {
+                        enemy.TakeDamage(_inkMinionAttackDamage * _inkMinionDeathDamageMultiplier + _inkMinionMaxHealth);
+                        enemy.ReduceSpeeds(1 - _inkMinionSlowAmount, _inkMinionSlowDuration);
+                    }
+                }
+            }
         }
     }
 
+
+    //Visuals of the Ink Minion Attack
     public void ActivateStampAttack()
     {
         switch (_upgradePath)
@@ -164,6 +176,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
         _hasDamaged = false;
     }
 
+    //Functionality of the Ink Minion Attack
     public void ActivateStampDamage()
     {
         //Debug to test ink demon attack range
@@ -192,6 +205,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
         if(_inkMinionCurrentHealth <= 0)
         {
             AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
+            //Will only activate if the 2nd upgrade is in play
             ActivateStampAbility();
             switch (_upgradePath)
             {
@@ -208,13 +222,6 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
             // Collin todo: play dead sfx
             _isDead = true;
             _inkMinionCollider.enabled = false;
-            //Destroy(gameObject);
-
-            /*TODO:
-                Disable minion collider
-                Play death animation
-                Destroy after animation completes
-            */
         }
         else
         {
