@@ -124,6 +124,9 @@ public class DeckManager : MonoBehaviour
         }
         else
         {
+         
+            //Should be called in func called by wavemanager
+            //_currentReshuffleTimer = _baseReshuffleTimer;
             //stop / swap UI stuff
             //Should activate timer to next wave UI as well as disable the shuffle timer
             //We also need to reset the _currentReshuffleTimer

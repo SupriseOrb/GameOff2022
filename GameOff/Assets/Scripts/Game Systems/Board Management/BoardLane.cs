@@ -99,6 +99,11 @@ public class BoardLane : MonoBehaviour
         _laneUnits[tileNumber] = unit;
     }
 
+    public GameObject CurrentLandStamp
+    {
+        get {return _currentLandStamp;}
+    }
+    
     public GameObject[] GetLaneUnits()
     {
         return _laneUnits;
