@@ -36,6 +36,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
     [SerializeField] private string _inkMinionName = "Ink Demon Minion";
     [SerializeField] private InkDemonUnitScript.InkDemonUpgradePaths _upgradePath;
     [SerializeField] private bool _isDead = false;
+    private bool _hasDamaged = true;
     [SerializeField] private BoxCollider2D _inkMinionCollider;
 
     [SerializeField] private SpriteRenderer _inkMinionSpriteRenderer;
@@ -126,6 +127,11 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
                 ActivateStampAttack();
                 _inkMinionAttackCooldown = 1 / _inkMinionAttackSpeed;
             }
+            else if(!_hasDamaged && _inkMinionAttackCooldown <= (1 / _inkMinionAttackSpeed) * .4)
+            {
+                _hasDamaged = true;
+                ActivateStampDamage();
+            }        
             _inkMinionAttackCooldown -= Time.deltaTime;
         }
     }
@@ -141,6 +147,23 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
     }
 
     public void ActivateStampAttack()
+    {
+        switch (_upgradePath)
+        {
+            case InkDemonUnitScript.InkDemonUpgradePaths.upgradeBase:
+                _inkMinionAnimator.Play(_inkMinionGreenAttackAnimationName);
+                break;
+            case InkDemonUnitScript.InkDemonUpgradePaths.upgradeVolatileSummons:
+                _inkMinionAnimator.Play(_inkMinionBlueAttackAnimationName);
+                break;        
+            default:
+                _inkMinionAnimator.Play(_inkMinionRedAttackAnimationName);
+                break;
+        }
+        _hasDamaged = false;
+    }
+
+    public void ActivateStampDamage()
     {
         //Debug to test ink demon attack range
         Vector3 DebugLeft = new Vector3(gameObject.transform.position.x - _inkMinionAttackRange, gameObject.transform.position.y, gameObject.transform.position.z);
@@ -158,18 +181,6 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
                 AkSoundEngine.PostEvent("Play_EnemyTakeDamage", gameObject);
                 enemyScript.TakeDamage(_inkMinionAttackDamage);
             }
-        }
-        switch (_upgradePath)
-        {
-            case InkDemonUnitScript.InkDemonUpgradePaths.upgradeBase:
-                _inkMinionAnimator.Play(_inkMinionGreenAttackAnimationName);
-                break;
-            case InkDemonUnitScript.InkDemonUpgradePaths.upgradeVolatileSummons:
-                _inkMinionAnimator.Play(_inkMinionBlueAttackAnimationName);
-                break;        
-            default:
-                _inkMinionAnimator.Play(_inkMinionRedAttackAnimationName);
-                break;
         }
     }
 

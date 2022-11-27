@@ -36,6 +36,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     [SerializeField] private bool _isAttackSlowed = false;
     [SerializeField] private bool _isDead = false;
     [SerializeField] private bool _isLerping = false;
+    private bool _hasDamaged = true;
     [SerializeField] private Rigidbody2D _soldierRigidBody;
     [SerializeField] private BoxCollider2D _soldierCollider;
 
@@ -234,6 +235,10 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
                     _soldierAttackCooldown = 1 / _soldierAttackSpeed;
                 }
             }
+            else if(!_hasDamaged && _soldierAttackCooldown <= (1 / _soldierAttackSpeed) * .4)
+            {
+                ActivateStampDamage();
+            }
             _soldierAttackCooldown -= Time.deltaTime;
         }
         
@@ -253,10 +258,19 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     {
         if(_attackTarget != null)
         {
+            _hasDamaged = false;
             _soldierAnimator.Play(_soldierAttackAnimationName);
-            _attackTarget.GetComponent<IItemStamp>().TakeDamage(_soldierDamage);
         }
         //Play attack animation
+    }
+
+    public void ActivateStampDamage()
+    {
+        if(_attackTarget != null)
+        {
+            _hasDamaged = true;
+            _attackTarget.GetComponent<IItemStamp>().TakeDamage(_soldierDamage);
+        }
     }
 
     public void ReduceSpeeds(float movementModifier, float moveDuration = 0, float attackSpeedModifier = 0, float attackDuration = 0)

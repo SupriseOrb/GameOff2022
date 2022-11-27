@@ -58,10 +58,26 @@ MonoBehaviour:
   _inkMinionAttackRange: 2
   _inkMinionHitColliders: []
   _inkMinionAnimator: {fileID: 942562487899098156}
-  _inkMinionAttackAnimationName: InkDemon_Green_Attack
-  _inkMinionAppearAnimationName: InkDemon_Green_Appear
+  _inkMinionGreenAttackAnimationName: InkDemon_Green_Attack
+  _inkMinionGreenAppearAnimationName: InkDemon_Green_Appear
+  _inkMinionGreenDieAnimationName: InkDemon_Green_Death
+  _inkMinionBlueAttackAnimationName: InkDemon_Blue_Attack
+  _inkMinionBlueAppearAnimationName: InkDemon_Blue_Appear
+  _inkMinionBlueDieAnimationName: InkDemon_Blue_Death
+  _inkMinionRedAttackAnimationName: InkDemon_Red_Attack
+  _inkMinionRedAppearAnimationName: InkDemon_Red_Appear
+  _inkMinionRedDieAnimationName: InkDemon_Red_Death
+  _inkMinionAttackAnimationLength: 0
+  _inkMinionDeathAnimationLength: 0
   _inkMinionLaneNumber: 0
   _inkMinionName: Ink Demon Minion
+  _upgradePath: 0
+  _isDead: 0
+  _inkMinionCollider: {fileID: 0}
+  _inkMinionSpriteRenderer: {fileID: 942562487899098157}
+  _defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  _damageFlashMaterial: {fileID: 2100000, guid: 176a06a98be8d7044b8db8eaefab3132, type: 2}
+  _flashTime: 0.125
 --- !u!61 &1612765099
 BoxCollider2D:
   m_ObjectHideFlags: 0

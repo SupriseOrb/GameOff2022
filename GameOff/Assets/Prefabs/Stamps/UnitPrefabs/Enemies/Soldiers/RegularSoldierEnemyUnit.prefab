@@ -87,7 +87,7 @@ MonoBehaviour:
   _soldierAttackAnimationName: Soldier_Pink_Attack
   _soldierWalkAnimationName: Soldier_Pink_Walk
   _soldierDieAnimationName: Soldier_Pink_Death
-  _soldierSprite: {fileID: 4928695222031376390}
+  _soldierSpriteRenderer: {fileID: 4928695222031376390}
   _defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   _damageFlashMaterial: {fileID: 2100000, guid: 176a06a98be8d7044b8db8eaefab3132, type: 2}
   _flashTime: 0.125

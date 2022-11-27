@@ -45,7 +45,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     [SerializeField] private string _carriageWalkAnimationName = "Carriage_Walk";
     [SerializeField] private string _carriageDieAnimationName = "Carriage_Disappear";
 
-    [SerializeField] private SpriteRenderer _carriageSprite;
+    [SerializeField] private SpriteRenderer _carriageSpriteRenderer;
     [SerializeField] private Material _defaultMaterial;
     [SerializeField] private Material _damageFlashMaterial;
     [SerializeField] private float _flashTime = .125f;
@@ -300,10 +300,10 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
 
     private IEnumerator DamageFlashCoroutine()
     {
-        _carriageSprite.material = _damageFlashMaterial;
+        _carriageSpriteRenderer.material = _damageFlashMaterial;
 
         yield return new WaitForSeconds(_flashTime);
-        _carriageSprite.material = _defaultMaterial;
+        _carriageSpriteRenderer.material = _defaultMaterial;
         _damageFlashCoroutine = null;
     }
 }

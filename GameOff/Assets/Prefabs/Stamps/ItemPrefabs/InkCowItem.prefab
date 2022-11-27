@@ -56,9 +56,14 @@ MonoBehaviour:
   _cowSprite: {fileID: 0}
   _cowCollider: {fileID: 1818134814049103545}
   _cowItemSO: {fileID: 11400000, guid: fd416dbc4f787694e819f6a52cdabc33, type: 2}
+  _laneNumber: 0
   _cowAnimator: {fileID: 1818134814736977699}
   _cowDisappearAnim: InkCow_Disappear
   _cowDisappearAnimLength: 0
+  _cowSpriteRenderer: {fileID: 1818134814736977700}
+  _defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  _damageFlashMaterial: {fileID: 2100000, guid: 176a06a98be8d7044b8db8eaefab3132, type: 2}
+  _flashTime: 0.125
 --- !u!61 &1818134814049103545
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -69,10 +74,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.19094312, y: -0.18089336}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -83,7 +88,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.226055, y: 1.8843676}
   m_EdgeRadius: 0
 --- !u!1 &1818134814736977702
 GameObject:
