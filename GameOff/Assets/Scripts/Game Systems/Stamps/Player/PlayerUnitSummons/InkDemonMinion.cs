@@ -38,6 +38,12 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
     [SerializeField] private bool _isDead = false;
     [SerializeField] private BoxCollider2D _inkMinionCollider;
 
+    [SerializeField] private SpriteRenderer _inkMinionSpriteRenderer;
+    [SerializeField] private Material _defaultMaterial;
+    [SerializeField] private Material _damageFlashMaterial;
+    [SerializeField] private float _flashTime = .125f;
+    [SerializeField] private Coroutine _damageFlashCoroutine = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -196,6 +202,15 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
                 Destroy after animation completes
             */
         }
+        else
+        {
+            if(_damageFlashCoroutine != null)
+            {
+                StopCoroutine(_damageFlashCoroutine);
+            }
+            
+            _damageFlashCoroutine = StartCoroutine(DamageFlashCoroutine());
+        }
     }
 
     public void HealHealth(float health)
@@ -230,5 +245,14 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
     public void EnableStamp()
     {
 
+    }    
+
+    private IEnumerator DamageFlashCoroutine()
+    {
+        _inkMinionSpriteRenderer.material = _damageFlashMaterial;
+
+        yield return new WaitForSeconds(_flashTime);
+        _inkMinionSpriteRenderer.material = _defaultMaterial;
+        _damageFlashCoroutine = null;
     }
 }

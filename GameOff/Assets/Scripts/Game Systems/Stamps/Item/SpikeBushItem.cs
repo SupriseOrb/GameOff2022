@@ -23,6 +23,12 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
     [SerializeField] private float _bushDisappearAnimLength;
     #endregion
 
+    [SerializeField] private SpriteRenderer _bushSpriteRenderer;
+    [SerializeField] private Material _defaultMaterial;
+    [SerializeField] private Material _damageFlashMaterial;
+    [SerializeField] private float _flashTime = .125f;
+    [SerializeField] private Coroutine _damageFlashCoroutine = null;
+
     private void Start() 
     {
         AkSoundEngine.PostEvent("Play_StampSpikeyBush", gameObject);
@@ -79,6 +85,15 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
             _bushAnimator.Play(_bushDisappearAnim);
             _bushCollider.enabled = false;
         }
+        else
+        {
+            if(_damageFlashCoroutine != null)
+            {
+                StopCoroutine(_damageFlashCoroutine);
+            }
+            
+            _damageFlashCoroutine = StartCoroutine(DamageFlashCoroutine());
+        }
     }
 
     public void HealHealth(float health)
@@ -129,6 +144,14 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
     public bool IsDead()
     {
         return _isDead;
-    }
+    }    
+    
+    private IEnumerator DamageFlashCoroutine()
+    {
+        _bushSpriteRenderer.material = _damageFlashMaterial;
 
+        yield return new WaitForSeconds(_flashTime);
+        _bushSpriteRenderer.material = _defaultMaterial;
+        _damageFlashCoroutine = null;
+    }
 }

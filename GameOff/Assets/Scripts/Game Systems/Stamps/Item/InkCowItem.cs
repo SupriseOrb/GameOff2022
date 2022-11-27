@@ -22,6 +22,12 @@ public class InkCowItem : MonoBehaviour, IItemStamp
     [SerializeField] private float _cowDisappearAnimLength;
     #endregion
 
+    [SerializeField] private SpriteRenderer _cowSpriteRenderer;
+    [SerializeField] private Material _defaultMaterial;
+    [SerializeField] private Material _damageFlashMaterial;
+    [SerializeField] private float _flashTime = .125f;
+    [SerializeField] private Coroutine _damageFlashCoroutine = null;
+
     private void Start() 
     {
         _cowBaseHealth = _cowItemSO.ItemHealth;
@@ -77,6 +83,15 @@ public class InkCowItem : MonoBehaviour, IItemStamp
             _cowAnimator.Play(_cowDisappearAnim);
             _cowCollider.enabled = false;
         }
+        else
+        {
+            if(_damageFlashCoroutine != null)
+            {
+                StopCoroutine(_damageFlashCoroutine);
+            }
+            
+            _damageFlashCoroutine = StartCoroutine(DamageFlashCoroutine());
+        }
     }
 
     public void HealHealth(float health)
@@ -127,4 +142,12 @@ public class InkCowItem : MonoBehaviour, IItemStamp
         return _isDead;
     }
 
+    private IEnumerator DamageFlashCoroutine()
+    {
+        _cowSpriteRenderer.material = _damageFlashMaterial;
+
+        yield return new WaitForSeconds(_flashTime);
+        _cowSpriteRenderer.material = _defaultMaterial;
+        _damageFlashCoroutine = null;
+    }
 }

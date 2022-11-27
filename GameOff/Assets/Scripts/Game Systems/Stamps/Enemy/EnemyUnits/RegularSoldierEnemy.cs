@@ -53,7 +53,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     [SerializeField] private string _soldierWalkAnimationName = "Soldier_Pink_Walk";
     [SerializeField] private string _soldierDieAnimationName = "Soldier_Pink_Death";
 
-    [SerializeField] private SpriteRenderer _soldierSprite;
+    [SerializeField] private SpriteRenderer _soldierSpriteRenderer;
     [SerializeField] private Material _defaultMaterial;
     [SerializeField] private Material _damageFlashMaterial;
     [SerializeField] private float _flashTime = .125f;
@@ -342,10 +342,10 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
 
     private IEnumerator DamageFlashCoroutine()
     {
-        _soldierSprite.material = _damageFlashMaterial;
+        _soldierSpriteRenderer.material = _damageFlashMaterial;
 
         yield return new WaitForSeconds(_flashTime);
-        _soldierSprite.material = _defaultMaterial;
+        _soldierSpriteRenderer.material = _defaultMaterial;
         _damageFlashCoroutine = null;
     }
 }
