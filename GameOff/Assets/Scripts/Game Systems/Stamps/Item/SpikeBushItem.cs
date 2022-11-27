@@ -74,6 +74,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
 
     public void TakeDamage(float damage)
     {
+        // COLLIN TODO: PLAYER STAMP TAKE DAMAGE
         _bushCurrentHealth -= damage;
         if (!_isOnCooldown)
         {
@@ -81,6 +82,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
         }
         if (_bushCurrentHealth <= 0)
         {
+            // Collin todo: play dead sfx
             _isDead = true;
             AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
             _bushAnimator.Play(_bushDisappearAnim);
@@ -108,6 +110,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
 
     public void ActivateStampAbility()
     {
+        // COLLIN TODO: SPIKE BUSH ACTION
         _bushColliders = Physics2D.OverlapCircleAll(transform.position, _bushAttackRange);
         if (_bushColliders != null && _bushCollider != null)
         {

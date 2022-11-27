@@ -174,6 +174,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 #region Ability Functions
     public void ActivateStampAbility()
     {
+        // COLLIN TODO: Add ink demon summon sfx
         for(int i = _activeMinions.Count - 1; i >= 0; i--)
         {
             if(_activeMinions[i] == null)

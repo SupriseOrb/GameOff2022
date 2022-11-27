@@ -124,6 +124,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         _soldierHealth -= damage;
         if(_soldierHealth <= 0)
         {
+            // Collin todo: play dead sfx
             BoardManager.Instance.GetLane(_laneNumber).RemoveEnemyFromList(gameObject);
             _soldierAnimator.Play(_soldierDieAnimationName);
             _isDead = true;
@@ -260,6 +261,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         {
             _hasDamaged = false;
             _soldierAnimator.Play(_soldierAttackAnimationName);
+            // COLLIN TODO: Soldier attack sfx
         }
         //Play attack animation
     }

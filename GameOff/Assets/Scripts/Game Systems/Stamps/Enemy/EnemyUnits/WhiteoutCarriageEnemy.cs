@@ -115,6 +115,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
             
 
             //Temp Destroy
+            // Collin todo: play dead sfx
             BoardManager.Instance.GetLane(_laneNumber).RemoveEnemyFromList(gameObject);
             _carriageAnimator.Play(_carriageDieAnimationName);
             _isDead = true;

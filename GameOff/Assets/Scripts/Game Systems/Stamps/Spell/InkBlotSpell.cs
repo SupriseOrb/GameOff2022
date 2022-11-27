@@ -34,6 +34,7 @@ public class InkBlotSpell : MonoBehaviour, ISpellStamp
 
     public void ActivateStampAbility()
     {
+        // COLLIN TODO: ADD INKBLOT SFX
         LoadBaseStats();
         _blotColliders = Physics2D.OverlapCircleAll(transform.position, _blotRange);
         if (_blotColliders != null)

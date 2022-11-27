@@ -187,6 +187,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
 
     public void TakeDamage(float damage)
     {
+        // COLLIN TODO: PLAYER STAMP TAKE DAMAGE
         _inkMinionCurrentHealth -= damage;
         if(_inkMinionCurrentHealth <= 0)
         {
@@ -204,6 +205,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
                     _inkMinionAnimator.Play(_inkMinionRedDieAnimationName);
                     break;
             }
+            // Collin todo: play dead sfx
             _isDead = true;
             _inkMinionCollider.enabled = false;
             //Destroy(gameObject);

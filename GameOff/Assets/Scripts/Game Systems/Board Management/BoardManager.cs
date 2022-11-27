@@ -59,6 +59,8 @@ public class BoardManager : MonoBehaviour
     {
         if (other.TryGetComponent(out IEnemy enemy))
         {
+            // COLLIN TODO: so...we don't know if we have health
+            // but this is where we would put the enemy crosses border sfx
             _playerHealth -= enemy.GetPlayerHealthDamage();
             enemy.TakeDamage(1000f);
             if (_playerHealth < 0)
@@ -122,15 +124,19 @@ public class BoardManager : MonoBehaviour
     
     private void ShowTileInfo(string TileInfo)
     {        
+        AkSoundEngine.PostEvent("Play_UISelect", gameObject);
         _tileInfoPanelText.text = TileInfo;
         _tileInfoPanel.SetActive(true);
     }
 
     public void HideTileInfo()
     {
-        _tileInfoLaneNum = _tileInfoTileNum = -1;
-        _tileInfoPanel.SetActive(false);
-
+        if (_tileInfoPanel.activeSelf)
+        {
+            AkSoundEngine.PostEvent("Play_UIBack", gameObject);
+            _tileInfoLaneNum = _tileInfoTileNum = -1;
+            _tileInfoPanel.SetActive(false);
+        }
     }
 
     //Clears all land stamps from the boardlanes

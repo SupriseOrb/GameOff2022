@@ -67,6 +67,7 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
 
     public void ActivateStampAbility()
     {
+        // COLLIN TODO: ADD potion spell SFX
         LoadBaseStats();
         if(_affectedTile.GetHeldStamp() != null)
         {

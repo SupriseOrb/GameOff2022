@@ -46,8 +46,10 @@ public class WaveManager : MonoBehaviour
     {
         _currentWaveIndex = 0;
         _currentWaveSpawns = new Dictionary<int, GameObject[][]>();
-        BroadcastIntensityChange();
         LoadNextWave();
+        // TODO: REMOVE THIS when we have the start button functioning and start wave is being called
+        BroadcastIntensityChange();
+        //Clear last wave information
     }
 
     // We may want to add in a way to determine if all the enemies in a wave have died
@@ -94,20 +96,20 @@ public class WaveManager : MonoBehaviour
         //Add ink equal to the time left in the countdown
         if(_currentWaveBreakDuration > 0)
         {
+            // COLLIN TODO: ADD BONUS INK SFX
             DeckManager.Instance.AddInk((int)_currentWaveBreakDuration);
         }
+        // COLLIN TODO: Add start wave stinger
+        //BroadcastIntensityChange();
         _isInWave.Value = true;
     }
 
     public void LoadNextWave()
     {
-        //Clear last wave information
         _currentWaveSpawns.Clear();
 
         if (_currentWaveIndex < _waves.Count)
         {
-            BroadcastIntensityChange();
-
             //Load next wave information
             _currentWave = _waves[_currentWaveIndex];
             foreach (WaveScriptableObject.EnemySpawn spawn in _currentWave.Wave)

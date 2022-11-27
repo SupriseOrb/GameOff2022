@@ -75,10 +75,12 @@ public class InkCowItem : MonoBehaviour, IItemStamp
 
     public void TakeDamage(float damage)
     {
+        // COLLIN TODO: PLAYER STAMP TAKE DAMAGE
         _cowCurrentHealth -= damage;
         AkSoundEngine.PostEvent("Play_ItemTakeDamage", gameObject);
         if (_cowCurrentHealth <= 0)
         {
+            // Collin todo: play dead sfx
             _isDead = true;
             AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
             _cowAnimator.Play(_cowDisappearAnim);
@@ -106,6 +108,7 @@ public class InkCowItem : MonoBehaviour, IItemStamp
 
     public void ActivateStampAbility()
     {
+        // COLLIN TODO: INK COW ACTION
         if(BoardManager.Instance.GetLane(_laneNumber).GetLeylineStatus())
         {
             float multiplier = BoardManager.Instance.GetLane(_laneNumber).GetLeylineMultiplier();

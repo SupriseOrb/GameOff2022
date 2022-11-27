@@ -208,6 +208,7 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
     
     public void ActivateStampAttack()
     {
+        // COLLIN TODO: HARPY ATTACK SFX
         if(_harpyAttackSpeed > 1)
         {
             _harpyAnimator.SetFloat("AttackSpeedModifier", _harpyAttackSpeed);
