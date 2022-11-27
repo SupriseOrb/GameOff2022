@@ -97,10 +97,10 @@ public class WaveManager : MonoBehaviour
         //Add ink equal to the time left in the countdown
         if (_currentWaveBreakDuration > 0)
         {
-            // COLLIN TODO: ADD BONUS INK SFX
+            // AkSoundEngine.PostEvent("Play_InkBonus", gameObject);
             DeckManager.Instance.AddInk((int)_currentWaveBreakDuration);
         }
-        // COLLIN TODO: Add start wave stinger
+        AkSoundEngine.PostEvent("Play_WaveStart", gameObject);
         //BroadcastIntensityChange();
         _isInWave.Value = true;
         _startWaveCanvas.enabled = false;
