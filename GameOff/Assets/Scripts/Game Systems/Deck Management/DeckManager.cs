@@ -125,7 +125,6 @@ public class DeckManager : MonoBehaviour
         }
         else
         {
-         
             //Should be called in func called by wavemanager
             //_currentReshuffleTimer = _baseReshuffleTimer;
             //stop / swap UI stuff

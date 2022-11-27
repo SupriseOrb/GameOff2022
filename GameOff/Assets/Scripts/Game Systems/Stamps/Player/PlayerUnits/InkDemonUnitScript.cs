@@ -77,6 +77,8 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
         _inkMinionHealth = _inkDemonSO.UnitHealth;
         _inkMinionAttackSpeed = _inkDemonSO.UnitAttackSpeed;
         _inkMinionDamage = _inkDemonSO.UnitDamage;
+        _inkMinionSlowAmount = _inkDemonSO.UnitSlowAmount;
+        _inkMinionSlowDuration = _inkDemonSO.UnitSlowDuration;
     }
 
     public void LoadUpgradeStats()
@@ -139,8 +141,12 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
             {
                 LoadBaseStats();
                 _inkMinionDeathDamageMultiplier = 4;
-                _inkMinionSlowAmount = .5f;
-                _inkMinionSlowDuration = 1f;
+                /*
+                These values should only be used when this upgrade is in play.
+                Therefore, the base values of SlowAmount and SlowDuration can be set to match this upgrade.
+                _inkMinionSlowAmount = .15f;
+                _inkMinionSlowDuration = .5f;
+                */
                 _inkDemonCooldownReduction = _cooldownIncreaseUpgrade;
 
                 _currentUpgradePath = InkDemonUpgradePaths.upgradeVolatileSummons;

@@ -21,8 +21,11 @@ public class UnitStampScriptableObject : StampScriptableObject
 
     [SerializeField] private float _attackDamageIncreaseAmount;
     [SerializeField] private float _attackSpeedIncreaseAmount;
+    [Tooltip("Redcap: Pierce Amount (rng), Ink Demon: Max HP (for Minions; rng), Harpy: Slow Intensity (rng)")]
     [SerializeField] private float _uniqueUpgradeOneIncreaseAmount;
+    [Tooltip("Redcap: Stun Duration (rng), Ink Demon: CD Increase (Debuff; 1st Upgrade), Harpy: Push Distance (rng)")]
     [SerializeField] private float _uniqueUpgradeTwoIncreaseAmount;
+    [Tooltip("Redcap: Stun Duration (Buff; 2nd Upgrade), Ink Demon: CD Decrease (Buff; 2nd Upgrade), Harpy: Attack Speed Decrease (Debuff; 1st Upgrade)")]
     [SerializeField] private float _uniqueUpgradeThreeIncreaseAmount;
 
     [Header("Upgrade Menu")]

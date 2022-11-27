@@ -59,8 +59,9 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 #region Unit Upgrade Values
     [SerializeField] private float _attackDamageUpgradeIncrease;
     [SerializeField] private float _attackSpeedUpgradeIncrease;
-    [SerializeField] private int _pierceUpgradeIncrease = 1;
+    [SerializeField] private int _pierceUpgradeIncrease;
     [SerializeField] private float _stunDurationUpgradeIncrease;
+    [SerializeField] private float _stunDurationBaseUpgrade;
 #endregion
 
     public enum RedcapUpgradePaths
@@ -103,6 +104,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         _attackSpeedUpgradeIncrease = _redcapSO.AttackSpeedIncreaseAmount;
         _pierceUpgradeIncrease = (int)_redcapSO.UniqueUpgradeOneIncreaseAmount;
         _stunDurationUpgradeIncrease = _redcapSO.UniqueUpgradeTwoIncreaseAmount;
+        _stunDurationBaseUpgrade = _redcapSO.UniqueUpgradeThreeIncreaseAmount;
     }
 
 
