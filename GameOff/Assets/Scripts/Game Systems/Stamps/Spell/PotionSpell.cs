@@ -67,7 +67,7 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
 
     public void ActivateStampAbility()
     {
-        // COLLIN TODO: ADD potion spell SFX
+        AkSoundEngine.PostEvent("Play_StampPotion", gameObject);
         LoadBaseStats();
         if(_affectedTile.GetHeldStamp() != null)
         {

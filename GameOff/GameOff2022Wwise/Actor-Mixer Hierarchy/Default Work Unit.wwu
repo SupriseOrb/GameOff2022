@@ -620,6 +620,36 @@
 								<ActiveSource Name="Upgrade Select_v1" ID="{A8955CCC-AFB8-4077-872D-F2CC31CB2EDD}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="MenuUI_ErrorMessage_v2" ID="{D8C779A2-4B37-44E5-9FD2-32720224D4BC}" ShortID="271267613">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MenuUI_ErrorMessage_v2" ID="{D6D88453-C57E-497D-A726-EA89F3BF7250}">
+									<Language>SFX</Language>
+									<AudioFile>MenuUI_ErrorMessage_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="837447019"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="MenuUI_ErrorMessage_v2" ID="{D6D88453-C57E-497D-A726-EA89F3BF7250}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<RandomSequenceContainer Name="Text animation" ID="{89B0AC16-149E-45F1-842F-1CE2E36E1216}" ShortID="1001916098">
@@ -804,6 +834,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Spikey Bush Stamp_v1" ID="{C2633BA9-7C9C-4460-BCD3-BDC1EEE575E1}" ShortID="1021378438">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -827,6 +864,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Time Piece Stamp_v1" ID="{21C414DD-583D-478C-BAC5-CE902F47F676}" ShortID="933480317">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -876,7 +920,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -903,10 +947,17 @@
 										<MediaID ID="249095607"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Bramble Patch_v2" ID="{3DB4D81B-E1D6-47AA-A443-D6D4AA2202CE}">
+									<Language>SFX</Language>
+									<AudioFile>Bramble Patch_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="407116397"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Bramble Patch_v1" ID="{CE9B5A36-744D-4A43-8A9A-EB12472CB004}" Platform="Linked"/>
+								<ActiveSource Name="Bramble Patch_v2" ID="{3DB4D81B-E1D6-47AA-A443-D6D4AA2202CE}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Ink Reservoir" ID="{995BD140-135F-4938-B480-F67A4BC8D972}" ShortID="562877585">
@@ -933,10 +984,47 @@
 										<MediaID ID="385046979"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Ink Reservoir_v2" ID="{056B5C3C-F6FF-4B70-AA9A-544D147DB708}">
+									<Language>SFX</Language>
+									<AudioFile>Ink Reservoir_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1058540028"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Ink reservoir_v1" ID="{918DFA12-2DEE-44DC-83E8-D227B337A8D6}" Platform="Linked"/>
+								<ActiveSource Name="Ink Reservoir_v2" ID="{056B5C3C-F6FF-4B70-AA9A-544D147DB708}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Leyline Stamp_v1" ID="{CECFBC27-470F-49FB-8B90-84B8E9D48170}" ShortID="617406944">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Leyline Stamp_v1" ID="{37CA4270-0961-41E8-A711-B243EA8CC695}">
+									<Language>SFX</Language>
+									<AudioFile>Leyline Stamp_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="239928254"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Leyline Stamp_v1" ID="{37CA4270-0961-41E8-A711-B243EA8CC695}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -996,6 +1084,29 @@
 								<ActiveSource Name="Ink_Full_v1" ID="{C66D96CE-C73F-4966-B9E0-81C4F7E96208}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Ink Bonus_v1" ID="{57C38916-6396-48C9-949F-585CDC94EE45}" ShortID="321853203">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ink Bonus_v1" ID="{1C843707-4C8B-44DF-B84D-54E00D5875DD}">
+									<Language>SFX</Language>
+									<AudioFile>Ink Bonus_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="179904349"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Ink Bonus_v1" ID="{1C843707-4C8B-44DF-B84D-54E00D5875DD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Combat" ID="{BE5D8A09-CEE6-4F5E-87F1-F1E28B6F9D1E}" ShortID="70047241">
@@ -1028,7 +1139,7 @@
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
-										<Value>1</Value>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OutputBusHighpass" Type="int16">
@@ -1074,7 +1185,7 @@
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
-										<Value>1</Value>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -1106,6 +1217,19 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Redcap Ability" ID="{D1E82BBF-E2A9-499F-AF74-147BAFA338F6}" ShortID="418320996">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -1141,6 +1265,11 @@
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1162,6 +1291,83 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Item and Enemy Death_v1" ID="{197E4CB6-A06E-407A-9377-9E6CFC9ECD40}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Spikey Bush Hit_v1" ID="{C9C225B0-ED75-42AF-B0AE-111ABD7DA20E}" ShortID="38362398">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Spikey Bush Hit_v1" ID="{99CBAA8D-C626-4A65-9479-77185D685EDF}">
+									<Language>SFX</Language>
+									<AudioFile>Spikey Bush Hit_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="775798058"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Spikey Bush Hit_v1" ID="{99CBAA8D-C626-4A65-9479-77185D685EDF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Harpy Attack 1_v1" ID="{33302D76-62CC-4517-99C9-396D8E6B15B9}" ShortID="637674443">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Harpy Attack 1_v1" ID="{FD9A1370-A88F-4110-8939-1625238D3FAE}">
+									<Language>SFX</Language>
+									<AudioFile>Harpy Attack 1_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="430046344"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Harpy Attack 1_v1" ID="{FD9A1370-A88F-4110-8939-1625238D3FAE}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

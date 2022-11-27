@@ -191,8 +191,8 @@ public class InputManager : MonoBehaviour
             return;
         }
 
-        // COLLIN TODO: Play error message sfx
-        AkSoundEngine.PostEvent("Play_Placeholder", gameObject);
+        
+        AkSoundEngine.PostEvent("Play_ErrorMessage", gameObject);
         _errorMessageTextBox.text = errorMessage;
         _errorMessagePanelAnimator.Play(_openErrorMessagePanelAnim);
         if (errorMessage == _errorNotEnoughInk)

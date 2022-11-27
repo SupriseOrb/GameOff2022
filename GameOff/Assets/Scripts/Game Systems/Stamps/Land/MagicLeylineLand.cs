@@ -14,7 +14,7 @@ public class MagicLeylineLand : MonoBehaviour, ILandStamp
     // Start is called before the first frame update
     void Start()
     {
-        // COLLIN TODO: ADD LEYLINE STAMP SOUND
+        AkSoundEngine.PostEvent("Play_LeylineStamp", gameObject);
         LoadBaseStats();
         ActivateStampAbility();
     }

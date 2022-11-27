@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Linux" BasePlatform="Linux" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
-		<SourceFilesRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Linux/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Linux/</SoundBanksRoot>
+		<ProjectRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Linux/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Linux/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Linux</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Linux</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX">
+		<SoundBank Id="393239870" Language="SFX" Hash="2511166498">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -57,11 +57,11 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="1584037851" Name="Play_BramblePatch" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_BramblePatch" DurationType="OneShot" DurationMin="0.597732" DurationMax="0.597732">
+				<Event Id="1584037851" Name="Play_BramblePatch" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_BramblePatch" DurationType="OneShot" DurationMin="0.957098" DurationMax="0.957098">
 					<IncludedMemoryFiles>
-						<File Id="249095607" Language="SFX">
-							<ShortName>Bramble Patch_v1.wav</ShortName>
-							<Path>SFX/Bramble Patch_v1_10C4C929.wem</Path>
+						<File Id="407116397" Language="SFX">
+							<ShortName>Bramble Patch_v2.wav</ShortName>
+							<Path>SFX/Bramble Patch_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -117,6 +117,31 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1984185677" Name="Play_ErrorMessage" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_ErrorMessage" DurationType="OneShot" DurationMin="0.467506" DurationMax="0.467506">
+					<IncludedMemoryFiles>
+						<File Id="837447019" Language="SFX">
+							<ShortName>MenuUI_ErrorMessage_v2.wav</ShortName>
+							<Path>SFX/MenuUI_ErrorMessage_v2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2530650837" Name="Play_HarpyAbility1" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_HarpyAbility1" DurationType="OneShot" DurationMin="0.709569" DurationMax="0.709569">
+					<IncludedMemoryFiles>
+						<File Id="430046344" Language="SFX">
+							<ShortName>Harpy Attack 1_v1.wav</ShortName>
+							<Path>SFX/Harpy Attack 1_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3656330787" Name="Play_InkBonus" ObjectPath="\Events\Default Work Unit\SFX Events\Ink\Play_InkBonus" DurationType="OneShot" DurationMin="1.284036" DurationMax="1.284036">
+					<IncludedMemoryFiles>
+						<File Id="179904349" Language="SFX">
+							<ShortName>Ink Bonus_v1.wav</ShortName>
+							<Path>SFX/Ink Bonus_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1719192379" Name="Play_InkDemonAbility" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_InkDemonAbility" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="289833391" Name="Play_InkDepleted" ObjectPath="\Events\Default Work Unit\SFX Events\Ink\Play_InkDepleted" DurationType="OneShot" DurationMin="0.305057" DurationMax="0.305057">
 					<IncludedMemoryFiles>
 						<File Id="1040327169" Language="SFX">
@@ -133,11 +158,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4293477421" Name="Play_InkReservoir" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_InkReservoir" DurationType="OneShot" DurationMin="1.442018" DurationMax="1.442018">
+				<Event Id="4293477421" Name="Play_InkReservoir" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_InkReservoir" DurationType="OneShot" DurationMin="0.879025" DurationMax="0.879025">
 					<IncludedMemoryFiles>
-						<File Id="385046979" Language="SFX">
-							<ShortName>Ink reservoir_v1.wav</ShortName>
-							<Path>SFX/Ink reservoir_v1_10C4C929.wem</Path>
+						<File Id="1058540028" Language="SFX">
+							<ShortName>Ink Reservoir_v2.wav</ShortName>
+							<Path>SFX/Ink Reservoir_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -146,6 +171,14 @@
 						<File Id="593876093" Language="SFX">
 							<ShortName>Item take Damage_v1.wav</ShortName>
 							<Path>SFX/Item take Damage_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2261868947" Name="Play_LeylineStamp" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_LeylineStamp" DurationType="OneShot" DurationMin="1.819819" DurationMax="1.819819">
+					<IncludedMemoryFiles>
+						<File Id="239928254" Language="SFX">
+							<ShortName>Leyline Stamp_v1.wav</ShortName>
+							<Path>SFX/Leyline Stamp_v1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -162,6 +195,14 @@
 						<File Id="220711120" Language="SFX">
 							<ShortName>Redcap Ability_v1.wav</ShortName>
 							<Path>SFX/Redcap Ability_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="613402922" Name="Play_SpikeyBushHit" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_SpikeyBushHit" DurationType="OneShot" DurationMin="0.292472" DurationMax="0.292472">
+					<IncludedMemoryFiles>
+						<File Id="775798058" Language="SFX">
+							<ShortName>Spikey Bush Hit_v1.wav</ShortName>
+							<Path>SFX/Spikey Bush Hit_v1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -344,7 +385,7 @@
 				<GameParameter Id="2731583604" Name="AllVolume" ObjectPath="\Game Parameters\Default Work Unit\AllVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="3974068853">
+		<SoundBank Id="3991942870" Language="SFX" Hash="422715002">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>

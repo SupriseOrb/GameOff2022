@@ -74,7 +74,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
 
     public void TakeDamage(float damage)
     {
-        // COLLIN TODO: PLAYER STAMP TAKE DAMAGE
+        AkSoundEngine.PostEvent("Play_SpikeyBushHit", gameObject);
         _bushCurrentHealth -= damage;
         if (!_isOnCooldown)
         {
@@ -82,7 +82,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
         }
         if (_bushCurrentHealth <= 0)
         {
-            // Collin todo: play dead sfx
+            
             _isDead = true;
             AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
             _bushAnimator.Play(_bushDisappearAnim);
