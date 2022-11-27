@@ -316,6 +316,39 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Play_StampRedcap" ID="{D52D822B-A38C-4C1A-97B7-3F28DA8E8504}">
+									<ChildrenList>
+										<Action Name="" ID="{B205B013-4A32-44AE-9BE3-14A8DB992445}" ShortID="860218042">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Redcap Stamp_v1" ID="{5ADBFF48-3CB7-4700-8CBE-7628418F3153}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_StampHarpy" ID="{F84BFE78-C492-4991-B7BD-EAEEE99E7980}">
+									<ChildrenList>
+										<Action Name="" ID="{0C0BAAD5-57FA-40E9-BE1B-311A70FDEE61}" ShortID="489550624">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Harpy Stamp_v1" ID="{E946CD2F-F261-4724-BC4C-D6B8DA4AA07D}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_StampInkDemon" ID="{8A6731B5-1132-4B59-A817-B44CD7320C4F}">
+									<ChildrenList>
+										<Action Name="" ID="{4C54F965-EE8E-4C4D-ACD6-2CF9089830B9}" ShortID="408059912">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ink Demon Stamp_v1" ID="{718E687B-B0B9-47A0-BE5B-0F197C8EE70F}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Text" ID="{10CA57DD-9F6C-4C1C-95DE-1B7F679B0AB9}" ShortID="685348060">
@@ -429,13 +462,59 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Play_InkDemonAbility" ID="{363E6DD3-7ACC-4F47-A41E-947F6DC66D24}"/>
+								<Event Name="Play_InkDemonAbility" ID="{363E6DD3-7ACC-4F47-A41E-947F6DC66D24}">
+									<ChildrenList>
+										<Action Name="" ID="{27CDCF7C-51C8-4EFF-9B31-C4CB34847129}" ShortID="84007035">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ink Demon Ability_v1" ID="{E26AE0FA-BAFE-4916-921D-F50643E24E8C}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 								<Event Name="Play_SpikeyBushHit" ID="{D04D5244-256A-40E9-8856-4B114DCE0839}">
 									<ChildrenList>
 										<Action Name="" ID="{50E70829-0C8E-4C59-BC9F-05FB574318DD}" ShortID="686375929">
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Spikey Bush Hit_v1" ID="{C9C225B0-ED75-42AF-B0AE-111ABD7DA20E}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_CarriageMovement" ID="{5A41AAF1-9BED-4946-9CC1-756D71C43535}">
+									<ChildrenList>
+										<Action Name="" ID="{87B34EAA-3215-47A7-8637-450C9A91859C}" ShortID="977826118">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Carriage Movement Loop_v1" ID="{9C23E6CA-DBD1-4E2E-A1C8-B594EFB86E2A}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_CarriageMovement" ID="{4E7F89AB-1730-488D-B458-14990A04E780}">
+									<ChildrenList>
+										<Action Name="" ID="{ADF99FD1-E1EA-4078-8339-4BF3FEBE8457}" ShortID="802146561">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Carriage Movement Loop_v1" ID="{9C23E6CA-DBD1-4E2E-A1C8-B594EFB86E2A}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_CarriageEntrance" ID="{D156E067-21CC-4B4F-BEDA-250B1EE6258C}">
+									<ChildrenList>
+										<Action Name="" ID="{99ACEC68-22F8-40AB-BDD7-BB80F08D3A68}" ShortID="575755051">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Dark Drone_v1" ID="{5ACFCAD5-005A-4F63-9BA6-87CA88A25000}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

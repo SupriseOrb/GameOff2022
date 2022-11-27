@@ -19,6 +19,8 @@ namespace AK
         static const AkUniqueID PAY_UISLIDER = 2719045197U;
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_BRAMBLEPATCH = 1584037851U;
+        static const AkUniqueID PLAY_CARRIAGEENTRANCE = 174838902U;
+        static const AkUniqueID PLAY_CARRIAGEMOVEMENT = 2844713035U;
         static const AkUniqueID PLAY_CLICHEHOVER = 1817342604U;
         static const AkUniqueID PLAY_CLICHEMOVEMENT = 1396175505U;
         static const AkUniqueID PLAY_CLICHEMOVEMENTCANCEL = 3212791047U;
@@ -38,8 +40,11 @@ namespace AK
         static const AkUniqueID PLAY_SPIKEYBUSHHIT = 613402922U;
         static const AkUniqueID PLAY_STAMPCOW = 679587648U;
         static const AkUniqueID PLAY_STAMPGENERAL = 2266250969U;
+        static const AkUniqueID PLAY_STAMPHARPY = 900136553U;
         static const AkUniqueID PLAY_STAMPINK = 1200679653U;
+        static const AkUniqueID PLAY_STAMPINKDEMON = 366059098U;
         static const AkUniqueID PLAY_STAMPPOTION = 2448762110U;
+        static const AkUniqueID PLAY_STAMPREDCAP = 3620808356U;
         static const AkUniqueID PLAY_STAMPROUGHGROUND = 2666091979U;
         static const AkUniqueID PLAY_STAMPSPIKEYBUSH = 3893200314U;
         static const AkUniqueID PLAY_STAMPTIMEPIECE = 3000230226U;
@@ -52,6 +57,7 @@ namespace AK
         static const AkUniqueID PLAY_UPGRADE = 2062295234U;
         static const AkUniqueID PLAY_WAVESTART = 377318551U;
         static const AkUniqueID STOP_AMBIENCE = 2477713992U;
+        static const AkUniqueID STOP_CARRIAGEMOVEMENT = 2636349021U;
         static const AkUniqueID STOP_REDCAPABILITY = 334102883U;
         static const AkUniqueID STOP_TEXT = 2235615413U;
         static const AkUniqueID TIMER = 3920142940U;

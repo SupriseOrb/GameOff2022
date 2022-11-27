@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
-		<SourceFilesRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ProjectRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX">
+		<SoundBank Id="393239870" Language="SFX" Hash="3670631629">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -62,6 +62,22 @@
 						<File Id="407116397" Language="SFX">
 							<ShortName>Bramble Patch_v2.wav</ShortName>
 							<Path>SFX/Bramble Patch_v2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="174838902" Name="Play_CarriageEntrance" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_CarriageEntrance" DurationType="OneShot" DurationMin="7.876712" DurationMax="7.876712">
+					<IncludedMemoryFiles>
+						<File Id="851253141" Language="SFX">
+							<ShortName>Dark Drone_v1.wav</ShortName>
+							<Path>SFX/Dark Drone_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2844713035" Name="Play_CarriageMovement" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_CarriageMovement" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="426370904" Language="SFX">
+							<ShortName>Carriage Movement Loop_v1.wav</ShortName>
+							<Path>SFX/Carriage Movement Loop_v1_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -125,11 +141,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2530650837" Name="Play_HarpyAbility1" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_HarpyAbility1" DurationType="OneShot" DurationMin="0.709569" DurationMax="0.709569">
+				<Event Id="2530650837" Name="Play_HarpyAbility1" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_HarpyAbility1" DurationType="OneShot" DurationMin="0.500113" DurationMax="0.500113">
 					<IncludedMemoryFiles>
-						<File Id="430046344" Language="SFX">
-							<ShortName>Harpy Attack 1_v1.wav</ShortName>
-							<Path>SFX/Harpy Attack 1_v1_10C4C929.wem</Path>
+						<File Id="738157367" Language="SFX">
+							<ShortName>Harpy Ability_v2.wav</ShortName>
+							<Path>SFX/Harpy Ability_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -141,7 +157,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1719192379" Name="Play_InkDemonAbility" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_InkDemonAbility" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1719192379" Name="Play_InkDemonAbility" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_InkDemonAbility" DurationType="OneShot" DurationMin="1.501701" DurationMax="1.501701">
+					<IncludedMemoryFiles>
+						<File Id="847123605" Language="SFX">
+							<ShortName>Ink Demon Ability_v1.wav</ShortName>
+							<Path>SFX/Ink Demon Ability_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="289833391" Name="Play_InkDepleted" ObjectPath="\Events\Default Work Unit\SFX Events\Ink\Play_InkDepleted" DurationType="OneShot" DurationMin="0.305057" DurationMax="0.305057">
 					<IncludedMemoryFiles>
 						<File Id="1040327169" Language="SFX">
@@ -222,6 +245,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="900136553" Name="Play_StampHarpy" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampHarpy" DurationType="OneShot" DurationMin="1.429819" DurationMax="1.429819">
+					<IncludedMemoryFiles>
+						<File Id="22757368" Language="SFX">
+							<ShortName>Harpy Stamp_v1.wav</ShortName>
+							<Path>SFX/Harpy Stamp_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1200679653" Name="Play_StampInk" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampInk" DurationType="OneShot" DurationMin="0.484989" DurationMax="0.484989">
 					<IncludedMemoryFiles>
 						<File Id="597791133" Language="SFX">
@@ -230,11 +261,27 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="366059098" Name="Play_StampInkDemon" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampInkDemon" DurationType="OneShot" DurationMin="1.429819" DurationMax="1.429819">
+					<IncludedMemoryFiles>
+						<File Id="57120246" Language="SFX">
+							<ShortName>Ink Demon Stamp_v1.wav</ShortName>
+							<Path>SFX/Ink Demon Stamp_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2448762110" Name="Play_StampPotion" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampPotion" DurationType="OneShot" DurationMin="2.666893" DurationMax="2.666893">
 					<IncludedMemoryFiles>
 						<File Id="370467919" Language="SFX">
 							<ShortName>Potion Item Stamp_v1.wav</ShortName>
 							<Path>SFX/Potion Item Stamp_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3620808356" Name="Play_StampRedcap" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampRedcap" DurationType="OneShot" DurationMin="1.594036" DurationMax="1.594036">
+					<IncludedMemoryFiles>
+						<File Id="153322102" Language="SFX">
+							<ShortName>Redcap Stamp_v1.wav</ShortName>
+							<Path>SFX/Redcap Stamp_v1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -351,6 +398,7 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2477713992" Name="Stop_Ambience" ObjectPath="\Events\Default Work Unit\SFX Events\Ambience\Stop_Ambience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2636349021" Name="Stop_CarriageMovement" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Stop_CarriageMovement" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="334102883" Name="Stop_RedcapAbility" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Stop_RedcapAbility" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2235615413" Name="Stop_Text" ObjectPath="\Events\Default Work Unit\SFX Events\Text\Stop_Text" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3920142940" Name="Timer" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Timer" DurationType="OneShot" DurationMin="3.000408" DurationMax="3.000408">
@@ -385,7 +433,7 @@
 				<GameParameter Id="2731583604" Name="AllVolume" ObjectPath="\Game Parameters\Default Work Unit\AllVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="2661940970">
+		<SoundBank Id="3991942870" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
@@ -395,10 +443,6 @@
 						<File Id="71543844" Language="SFX">
 							<ShortName>Battle_Intensity_2_V1_120bpm3-4_L60M-P0.wav</ShortName>
 							<Path>SFX/Battle_Intensity_2_V1_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
-						</File>
-						<File Id="92602430" Language="SFX">
-							<ShortName>Battle_Intensity_1_V2_120bpm3-4_L60M-P0.wav</ShortName>
-							<Path>SFX/Battle_Intensity_1_V2_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
 						</File>
 						<File Id="249291453" Language="SFX">
 							<ShortName>Win_V1_120bpm3-4_L6-P0.wav</ShortName>
@@ -411,10 +455,6 @@
 						<File Id="458433170" Language="SFX">
 							<ShortName>Battle_Intensity_1_V1_120bpm3-4_L60M-P0.wav</ShortName>
 							<Path>SFX/Battle_Intensity_1_V1_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
-						</File>
-						<File Id="462216228" Language="SFX">
-							<ShortName>Battle_Intensity_2_V2_120bpm3-4_L60M-P0.wav</ShortName>
-							<Path>SFX/Battle_Intensity_2_V2_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
 						</File>
 						<File Id="534264164" Language="SFX">
 							<ShortName>Title-Battle_Transition.wav</ShortName>
@@ -440,7 +480,6 @@
 									<Children>
 										<SwitchContainer SwitchValue="{D85FCDF0-5F32-4588-8933-BC446D0CFB9A}">
 											<Media>
-												<File Id="92602430"/>
 												<File Id="458433170"/>
 											</Media>
 										</SwitchContainer>
@@ -451,7 +490,6 @@
 										<SwitchContainer SwitchValue="{3407E5A0-7DE9-4531-9956-F89833DC81A8}">
 											<Media>
 												<File Id="71543844"/>
-												<File Id="462216228"/>
 											</Media>
 										</SwitchContainer>
 									</Children>
