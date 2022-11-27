@@ -92,7 +92,12 @@ public class BoardManager : MonoBehaviour
                 GameObject landStamp = GetLane(_tileInfoLaneNum).CurrentLandStamp;
                 if (landStamp != null)
                 {
-                    tempText += "\n" + landStamp.GetComponent<ILandStamp>().GetTileDescription();
+                    if (tempText != "")
+                    {
+                        tempText += "\n";
+                    }
+
+                    tempText += landStamp.GetComponent<ILandStamp>().GetTileDescription();                    
                 }
 
                 // Scenario 2

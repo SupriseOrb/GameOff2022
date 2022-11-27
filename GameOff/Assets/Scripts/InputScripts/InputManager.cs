@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class InputManager : MonoBehaviour
 {
@@ -23,24 +24,27 @@ public class InputManager : MonoBehaviour
     #region Input Action Strings
     [Header("Input Strings")]
     [SerializeField] private string _lClickString;
-    [SerializeField] private string _lClickHoldString;
     [SerializeField] private string _rClickString;
     [SerializeField] private string _mousePosString;
     #endregion
 
     #region Input Actions
     private InputAction _lClickAction;
-    private InputAction _lClickHoldAction;
     private InputAction _rClickAction;
     private InputAction _mousePosAction;
     #endregion
 
     [Header("Error Message")]
+    [SerializeField] private Animator _errorMessagePanelAnimator;
+    [SerializeField] private string _openErrorMessagePanelAnim = "ErrorMessage_Appear";
+    [SerializeField] private TextMeshProUGUI _errorMessageTextBox;
     [SerializeField] [TextArea] private string _errorNotEnoughInk = "Cannot Stamp, not enough ink";
+    [SerializeField] [TextArea] private string _stampOutsideGrid = "Cannot stamp outside of the grid";
+    [SerializeField] [TextArea] private string _stampUnknownOnUnit = "Cannot stamp items / lands on allied unit tiles";
+    [SerializeField] [TextArea] private string _stampUnitOnBoardTile = "Cannot stamp allied unit outside of unit tiles";
     private void Awake() 
     {
         _lClickAction = _playerInput.actions[_lClickString];
-        _lClickHoldAction = _playerInput.actions[_lClickHoldString];
         _rClickAction = _playerInput.actions[_rClickString];
         _mousePosAction = _playerInput.actions[_mousePosString];
     }
@@ -66,7 +70,6 @@ public class InputManager : MonoBehaviour
     public void OnRightClick(InputAction.CallbackContext context)
     { 
         DeckManager.Instance.DeselectCard();
-        //ResetCardSelection();
     }
 
     public void OnLeftClick(InputAction.CallbackContext context)
@@ -76,12 +79,16 @@ public class InputManager : MonoBehaviour
 
         if (_raycastHit.collider == null) //If no collider on click
         {
+            if (_selectedCard != null && context.performed)
+            {
+                AnnounceError(_stampOutsideGrid);
+            }
             // Deselect when clicking outside of the tiles
             BoardManager.Instance.HideTileInfo();
             return;
         }
 
-        if (_spriteDrag.IsDragging) //Need to figure out how we're getting _selectedCard
+        if (_spriteDrag.IsDragging)
         {            
             if (_selectedCard != null)
             {
@@ -105,6 +112,10 @@ public class InputManager : MonoBehaviour
                         unitTile.PlaySpell(_selectedCard.CardSO.StampGO);
                         Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
                         DeckManager.Instance.ResetCardSelection(); 
+                    }
+                    else
+                    {
+                        AnnounceError(_stampUnknownOnUnit);
                     }
                     
                 }
@@ -144,6 +155,10 @@ public class InputManager : MonoBehaviour
                         Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
                         DeckManager.Instance.ResetCardSelection(); 
                     }
+                    else
+                    {
+                        AnnounceError(_stampUnitOnBoardTile);
+                    }
                 }
             }          
         }
@@ -165,7 +180,6 @@ public class InputManager : MonoBehaviour
 
     public void MousePosition(InputAction.CallbackContext context)
     {
-        //Need to test to see if having this be checked only on "performed" is actually getting the value consistently
         _mousePositionScreen = context.ReadValue<Vector2>();
         _mousePositionWorld = Camera.main.ScreenToWorldPoint(_mousePositionScreen);
         _spriteDrag.Move(new Vector3(_mousePositionWorld.x, _mousePositionWorld.y, 0f));
@@ -173,136 +187,12 @@ public class InputManager : MonoBehaviour
 
     private void AnnounceError(string errorMessage)
     {
-        Debug.Log(errorMessage);
+        // COLLIN TODO: Play error message sfx
+        _errorMessageTextBox.text = errorMessage;
+        _errorMessagePanelAnimator.Play(_openErrorMessagePanelAnim);
         if (errorMessage == _errorNotEnoughInk)
         {
             // TODO: Make the ink bar flash w/ a shader
         }
     }
-
-    /*
-    TODO:
-    Set up all the inputs to work for the tiles exclusively, with the cards working thru inspector calls + DeckManager
-    [1] Left Click (OnClick)
-    - If you click a tile, if _selectedCard isn't null, setStamp(_selectedCard)
-    - setStamp should take the GO referenced in the SO in _selectedCard and activate it and move its position/instantiate it on the tile
-    - Note: this will need different functionality for the land stamps
-    [2] Drag
-    - HahahahahahaHAhahahahaHAHAHahHAhah no
-    */
-
-    //TODO: Need to check before clicking if _selectedCard is not null. If so, deselect the other card and update 
-    //..._selectedCard to current card
-    /*public void OnLeftClick(InputAction.CallbackContext context)
-    {
-        _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
-        if (_raycastHit.collider == null)
-        {
-            return;
-        }
-
-        if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
-        {
-            if (_selectedCard != null && _selectedCard.CardType == CardScriptableObject.Type.UNIT)
-            {
-                UnitStampScriptableObject unitSO = (UnitStampScriptableObject)_selectedCard.CardSO.StampObjectRef;
-                unitSO.SpawnedUnit.SetActive(true);
-                _selectedCard.HasBeenUsed = true;  
-                unitTile.SetHeldStamp(unitSO.SpawnedUnit);
-                ResetCardSelection();
-            }
-        }
-        else if (_raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile))
-        {
-            if (_selectedCard != null)
-            {
-                if (_selectedCard.CardType == CardScriptableObject.Type.ITEM)
-                {   
-                    ItemStampScriptableObject itemSO = (ItemStampScriptableObject)_selectedCard.CardSO.StampObjectRef;
-                    itemSO.SpawnedItem.SetActive(true);
-                    _selectedCard.HasBeenUsed = true; 
-                    boardTile.SetHeldStamp(itemSO.SpawnedItem);
-                    ResetCardSelection();
-                }
-                else if (_selectedCard.CardType == CardScriptableObject.Type.LAND)
-                {
-                    LandStampScriptableObject itemSO = (LandStampScriptableObject)_selectedCard.CardSO.StampObjectRef;
-                    itemSO.SpawnedLand.SetActive(true);
-                    _selectedCard.HasBeenUsed = true; 
-                    boardTile.SetHeldStamp(itemSO.SpawnedLand);
-                    ResetCardSelection();
-                }
-            }
-                
-        }
-
-    }*/
-
-    
-
-  
-        /*//move isdraggingcard to bottom of function because we want to use this as a check
-        _isDraggingCard = false;
-        _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f);
-        //TODO: Apparently error here if you left-click while "dragging" a tile
-        if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
-        {
-            if (_selectedCard != null && _selectedCard.GetCardType() == CardScriptableObject.Type.UNIT)
-            {
-                UnitStampScriptableObject unitSO = (UnitStampScriptableObject)_selectedCard.GetCardSO.StampObjectRef;
-                unitSO.SpawnedUnit.SetActive(true);
-                _selectedCard.HasBeenUsed = true;  
-                unitTile.SetHeldStamp(unitSO.SpawnedUnit);
-                ResetCardSelection();
-            }
-        }
-        else if (_raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile))
-        {
-            if (_selectedCard != null)
-            {
-                if (_selectedCard.GetCardType() == CardScriptableObject.Type.ITEM)
-                {   
-                    ItemStampScriptableObject itemSO = (ItemStampScriptableObject)_selectedCard.GetCardSO.StampObjectRef;
-                    itemSO.SpawnedItem.SetActive(true);
-                    _selectedCard.HasBeenUsed = true; 
-                    boardTile.SetHeldStamp(itemSO.SpawnedItem);
-                    ResetCardSelection();
-                }
-                else if (_selectedCard.GetCardType() == CardScriptableObject.Type.LAND)
-                {
-                    LandStampScriptableObject itemSO = (LandStampScriptableObject)_selectedCard.GetCardSO.StampObjectRef;
-                    itemSO.SpawnedLand.SetActive(true);
-                    _selectedCard.HasBeenUsed = true; 
-                    boardTile.SetHeldStamp(itemSO.SpawnedLand);
-                    ResetCardSelection();
-                }      
-            }
-                
-        }
-        else if (_selectedCard != null && _raycastHit.transform.gameObject.TryGetComponent(out CardScriptLoader card)) 
-        {       
-            //Done to prevent initial a perpetual loop of LClick picking up card ==> LClickRelease dropping it
-            Debug.Log("No interaction needed!");
-            return;
-        }
-        else
-        {
-            ResetCardSelection();
-        }*/
-
-    
-
-    public void OnLeftClickHold(InputAction.CallbackContext context)
-    {
-        /*
-        _isDraggingCard = true;
-        //Note: OnLeftClick is also being called if OnLeftClickHold is
-        Sprite _cardSprite = _selectedCard.GetCardSO.StampObjectRef.StampSprite;
-        Debug.Log(_cardSprite);
-        _spriteDragScript.gameObject.SetActive(true);
-        _spriteDragScript.SpriteReference = _cardSprite;
-        _spriteDragScript.IsDragging = true;
-        */
-    }
-
 }
