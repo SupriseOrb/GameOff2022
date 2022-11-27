@@ -63,6 +63,6 @@ public class BramblePatchLand : MonoBehaviour, ILandStamp
 
     public void DisableStamp()
     {
-
+        
     }
 }

@@ -127,6 +127,7 @@ public class InputManager : MonoBehaviour
                         {
                             BoardLane boardLane = BoardManager.Instance.GetLane(boardTile.LaneNumber);
                             boardLane.ApplyLandStamp(_selectedCard.CardSO.StampGO);
+                            _selectedCard.HasBeenUsed = true;
                             Debug.Log("Placed Land " + _selectedCard + " onto BoardLane!");
                         }
                         else

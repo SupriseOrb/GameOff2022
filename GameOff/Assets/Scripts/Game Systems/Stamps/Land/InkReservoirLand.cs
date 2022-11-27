@@ -66,6 +66,6 @@ public class InkReservoirLand : MonoBehaviour, ILandStamp
 
     public void DisableStamp()
     {
-
+        
     }
 }

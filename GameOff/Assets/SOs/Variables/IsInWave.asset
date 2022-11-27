@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ee8971ac74445458975c428a3c15e1, type: 3}
   m_Name: IsInWave
   m_EditorClassIdentifier: 
-  _defaultValue: 0
+  _defaultValue: 1
   _currentValue: 0

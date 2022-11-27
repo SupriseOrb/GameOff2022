@@ -95,52 +95,86 @@ public class DeckManager : MonoBehaviour
     
     private void FixedUpdate() 
     {
-        if (!_isFirstDraw)
+        if (_isInWave.Value)
         {
-            if (_currentReshuffleTimer <= 0)
+            if (!_isFirstDraw)
             {
-                CycleHand();
-                DrawCards();
-                _currentReshuffleTimer = _baseReshuffleTimer;
-                AkSoundEngine.PostEvent("Cliche_HandCycle", gameObject);
+                if (_currentReshuffleTimer <= 0)
+                {
+                    CycleHand();
+                    DrawCards();
+                    _currentReshuffleTimer = _baseReshuffleTimer;
+                    AkSoundEngine.PostEvent("Cliche_HandCycle", gameObject);
+                }
+                _currentReshuffleTimer -= Time.deltaTime;    
+                _timerText.text = ((int)_currentReshuffleTimer).ToString() + "s";
+                _timerSlider.value = _currentReshuffleTimer/_baseReshuffleTimer;
+                /* TODO: Figure out how to trigger the timer sound when the timer reads 3 seconds
+                if (_currentReshuffletimer == 3f);
+                {
+                    AkSoundEngine.PostEvent("Timer", gameObject);
+                }*/
+                if(_currentInkTimer <= 0)
+                {
+                    AddInk(_inkPerSecond);
+                    _currentInkTimer = 1;
+                }
+                _currentInkTimer -= Time.deltaTime;
             }
-            _currentReshuffleTimer -= Time.deltaTime;    
-            _timerText.text = ((int)_currentReshuffleTimer).ToString() + "s";
-            _timerSlider.value = _currentReshuffleTimer/_baseReshuffleTimer;
-            /* TODO: Figure out how to trigger the timer sound when the timer reads 3 seconds
-            if (_currentReshuffletimer == 3f);
-            {
-                AkSoundEngine.PostEvent("Timer", gameObject);
-            }*/
-            if(_currentInkTimer <= 0)
-            {
-                AddInk(_inkPerSecond);
-                _currentInkTimer = 1;
-            }
-            _currentInkTimer -= Time.deltaTime;
         }
-        
+        else
+        {
+            //stop / swap UI stuff
+            //Should activate timer to next wave UI as well as disable the shuffle timer
+            //We also need to reset the _currentReshuffleTimer
+        }
+    }
 
+    //Returns all cards from discard deck to active deck, and moves all cards from card hand to active deck
+    public void ResetDeck()
+    {
+        foreach(GameObject card in _discardDeck)    
+        {
+            CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
+            loader._hasBeenUsed = false;
+            _activeDeck.Add(card);
+            card.transform.position = _activeDeckTransform.position;
+        }
+        _discardDeck.Clear();
+        
+        foreach(GameObject card in _cardHand)
+        {
+            CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
+            loader._hasBeenUsed = false;
+            _activeDeck.Add(card);
+            card.transform.position = _activeDeckTransform.position;
+        }
+        System.Array.Clear(_cardHand, 0, _cardHand.Length);
     }
 
     private void CycleHand()
     {
-        if(!_isInWave.Value)
+        foreach(GameObject card in _discardDeck)
         {
-            _isInWave.Value = true;
-            foreach(GameObject card in _discardDeck)
+            CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
+            if (loader.CardType == CardScriptableObject.Type.LAND && loader._hasBeenUsed == true)
             {
-                CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
+                
+            }
+            else
+            {
                 loader._hasBeenUsed = false;
                 _activeDeck.Add(card);
                 card.transform.position = _activeDeckTransform.position;
             }
-            _discardDeck.Clear();
         }
 
         foreach(GameObject card in _cardHand)
         {
             CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
+            //BUG: If the hand cycles and you're still holding a land card that you end up playing, this won't trigger
+            //Easiest way to fix this bug would be to give InputManager access to cardHand
+            //So that we can check if _selectedCard is in cardHand (Linq.Contains) and if it's a land, yeet it to discard
             if(loader.CardType == CardScriptableObject.Type.LAND && loader._hasBeenUsed == true)
             {
                 _discardDeck.Add(card);
@@ -162,7 +196,7 @@ public class DeckManager : MonoBehaviour
 
     public void AddInk(int ink)
     {
-        if (_isInWave)
+        if (_isInWave.Value)
         {
             if(_currentInk + ink <= _maxInk)
             {

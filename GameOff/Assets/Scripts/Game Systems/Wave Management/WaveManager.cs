@@ -63,7 +63,10 @@ public class WaveManager : MonoBehaviour
                 if (_currentWaveDuration <= 0)
                 {
                     //Wave is over
+                    _isInWave.Value = false;
                     LoadNextWave();
+                    DeckManager.Instance.ResetDeck();
+                    BoardManager.Instance.ResetBoardState();
                 }
                 else
                 {
@@ -124,7 +127,6 @@ public class WaveManager : MonoBehaviour
             _baseWaveDuration = _currentWave.WaveDuration;
             _currentWaveBreakDuration = _baseWaveBreakDuration;
             _currentWaveDuration = _baseWaveDuration;
-            _isInWave.Value = false;
             _currentWaveIndex += 1;
         }
         else
@@ -187,6 +189,7 @@ public class WaveManager : MonoBehaviour
     private void FinishLevel()
     {
         _levelFinished = true;
+        _isInWave.Value = false;
         Debug.Log("YOU WIN SMILE");
     }
 

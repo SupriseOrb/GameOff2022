@@ -46,7 +46,10 @@ public class BoardLane : MonoBehaviour
     //called at the start of a wave
     public void RemoveLandStamp()
     {
-        Destroy(_currentLandStamp);
+        if (_currentLandStamp != null)
+        {
+            Destroy(_currentLandStamp);
+        }
     }
 
     public void AddEnemyToList(GameObject enemy)
@@ -88,11 +91,6 @@ public class BoardLane : MonoBehaviour
             }
         }
         return laneItems;
-    }
-
-    public GameObject CurrentLandStamp
-    {
-        get {return _currentLandStamp;}
     }
 
     //Keeping track of player units inside of a lane just in case we need to access them    

@@ -91,5 +91,15 @@ public class BoardManager : MonoBehaviour
     private void HideTileInfo()
     {
         _tileInfoPanel.SetActive(false);
+
+    }
+
+    //Clears all land stamps from the boardlanes
+    public void ResetBoardState()
+    {
+        foreach(BoardLane lane in _boardLanes)
+        {
+            lane.RemoveLandStamp();
+        }
     }
 }
