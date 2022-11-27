@@ -55,7 +55,8 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private Slider _inkBar;
     [SerializeField] private TextMeshProUGUI _inkText;
     [SerializeField] private int _inkPerSecond;
-    private float _currentInkTimer; 
+    private float _currentInkTimer;
+    private bool _inkFullSoundPlayed = false;
 
     private static System.Random r = new System.Random();
     private static DeckManager _instance;
@@ -170,6 +171,12 @@ public class DeckManager : MonoBehaviour
             else
             {
                 _currentInk = _maxInk;
+                if(_inkFullSoundPlayed == false)
+                {
+                    AkSoundEngine.PostEvent("Play_InkFull", gameObject);
+                    _inkFullSoundPlayed = true;
+                }
+                    
             }
             UpdateInkBar();
         }
@@ -177,13 +184,19 @@ public class DeckManager : MonoBehaviour
 
     public bool RemoveInk(int ink)
     {
-        if(_currentInk - ink >= 0)
+        _inkFullSoundPlayed = false;
+        if (_currentInk - ink >= 0)
         {
             _currentInk -= ink;
             UpdateInkBar();
             return true;
         }
+        else
+        {
+            AkSoundEngine.PostEvent("Play_InkDepleted", gameObject);
+        }
         return false;
+        
     }
 
     public void UpdateInkBar()
