@@ -1027,6 +1027,75 @@
 								<ActiveSource Name="Leyline Stamp_v1" ID="{37CA4270-0961-41E8-A711-B243EA8CC695}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Ink Demon Stamp_v1" ID="{718E687B-B0B9-47A0-BE5B-0F197C8EE70F}" ShortID="1060339934">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ink Demon Stamp_v1" ID="{ACD670DF-B36D-4BC9-AF10-21EB1DF53FE9}">
+									<Language>SFX</Language>
+									<AudioFile>Ink Demon Stamp_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="57120246"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Ink Demon Stamp_v1" ID="{ACD670DF-B36D-4BC9-AF10-21EB1DF53FE9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Redcap Stamp_v1" ID="{5ADBFF48-3CB7-4700-8CBE-7628418F3153}" ShortID="769902283">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Redcap Stamp_v1" ID="{DA384091-C2D2-4B3C-B156-E9D04F3F5BB0}">
+									<Language>SFX</Language>
+									<AudioFile>Redcap Stamp_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="153322102"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Redcap Stamp_v1" ID="{DA384091-C2D2-4B3C-B156-E9D04F3F5BB0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Harpy Stamp_v1" ID="{E946CD2F-F261-4724-BC4C-D6B8DA4AA07D}" ShortID="690397406">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Harpy Stamp_v1" ID="{53F6D3FB-9CDB-4D20-8E0A-EBF8859B5B48}">
+									<Language>SFX</Language>
+									<AudioFile>Harpy Stamp_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="22757368"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Harpy Stamp_v1" ID="{53F6D3FB-9CDB-4D20-8E0A-EBF8859B5B48}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ink UI" ID="{E5C7E1CE-4412-43E4-BB5C-12EF4483038B}" ShortID="917611174">
@@ -1364,10 +1433,142 @@
 										<MediaID ID="430046344"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Harpy Ability_v2" ID="{36986EBB-E1F2-4D82-9D36-0B3AE1BFE7E2}">
+									<Language>SFX</Language>
+									<AudioFile>Harpy Ability_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="738157367"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Harpy Attack 1_v1" ID="{FD9A1370-A88F-4110-8939-1625238D3FAE}" Platform="Linked"/>
+								<ActiveSource Name="Harpy Ability_v2" ID="{36986EBB-E1F2-4D82-9D36-0B3AE1BFE7E2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Carriage Movement Loop_v1" ID="{9C23E6CA-DBD1-4E2E-A1C8-B594EFB86E2A}" ShortID="506687537">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Carriage Movement Loop_v1" ID="{4A351965-6468-48F1-A47D-EA5B53386271}">
+									<Language>SFX</Language>
+									<AudioFile>Carriage Movement Loop_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="426370904"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Carriage Movement Loop_v1" ID="{4A351965-6468-48F1-A47D-EA5B53386271}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Ink Demon Ability_v1" ID="{E26AE0FA-BAFE-4916-921D-F50643E24E8C}" ShortID="763537184">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ink Demon Ability_v1" ID="{D182ABD9-B396-4B67-89E6-BB724FF6BDF5}">
+									<Language>SFX</Language>
+									<AudioFile>Ink Demon Ability_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="847123605"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Ink Demon Ability_v1" ID="{D182ABD9-B396-4B67-89E6-BB724FF6BDF5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Dark Drone_v1" ID="{5ACFCAD5-005A-4F63-9BA6-87CA88A25000}" ShortID="222637769">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OutputBusLowpass" Type="int16">
+									<ValueList>
+										<Value>63</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Dark Drone_v1" ID="{28700CB1-9C90-4019-8678-36B77D172BAE}">
+									<Language>SFX</Language>
+									<AudioFile>Dark Drone_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="851253141"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Dark Drone_v1" ID="{28700CB1-9C90-4019-8678-36B77D172BAE}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

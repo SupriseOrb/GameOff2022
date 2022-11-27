@@ -34,17 +34,23 @@
 						<ObjectRef Name="Play_Ambience" ID="{8D979914-47DE-4831-BAD6-7F5F126143F9}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyTakeDamage" ID="{EF49E9F7-EAAB-484A-9FA2-E1B675DBE616}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampGeneral" ID="{B0323596-6BE7-4874-838D-899071D4DC57}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_CarriageMovement" ID="{4E7F89AB-1730-488D-B458-14990A04E780}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Mute_Ambience" ID="{721CD5A3-A45C-489B-838D-5A8A2FCB50F9}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIHover" ID="{DA8A0EE9-F0D7-48B2-976A-53FC0D2C6BC3}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_InkReservoir" ID="{77D73884-32FD-48FA-BC75-505AE4D159FF}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIResume" ID="{56C6ACD0-ECD0-490C-AFF4-BF7ED0FBD2F1}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CarriageMovement" ID="{5A41AAF1-9BED-4946-9CC1-756D71C43535}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampInk" ID="{A0618F6C-5B35-494D-9090-109F040509C4}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_StampHarpy" ID="{F84BFE78-C492-4991-B7BD-EAEEE99E7980}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Cliche_HandCycle" ID="{19029E53-357C-49C1-A219-DB7DBDEB411C}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ErrorMessage" ID="{E23B847F-7987-49ED-9E45-E79AF2B7C838}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_InkBonus" ID="{3A2302DC-493A-49F2-8AE6-328FF9353D18}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampSpikeyBush" ID="{D3BEF240-C5B5-4B03-B1EC-231319B1DBDC}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CarriageEntrance" ID="{D156E067-21CC-4B4F-BEDA-250B1EE6258C}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Timer" ID="{CCCF5211-AF10-4B51-BED2-A256C289C5B2}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_StampInkDemon" ID="{8A6731B5-1132-4B59-A817-B44CD7320C4F}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeathAnimation" ID="{5FEC9B67-0A5D-4BF3-B84F-BAA3518ED4CC}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_StampRedcap" ID="{D52D822B-A38C-4C1A-97B7-3F28DA8E8504}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ClicheHover" ID="{A5058C67-0EC8-4C1D-97E1-1919B89D0B29}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ClicheMovementCancel" ID="{74AE54F2-D22B-4CF0-BED0-2BE88494B1A4}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampRoughGround" ID="{A09B1EC9-5F4E-4E26-9D70-61BBA686A7C8}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
