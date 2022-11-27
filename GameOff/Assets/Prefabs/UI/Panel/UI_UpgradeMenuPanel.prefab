@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1444e851722fd44c980f3e8ddcae5d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inUpgradeMenu: {fileID: 11400000, guid: ee47c2e5dd227cb4a97d75243fa8a95a, type: 2}
   _animator: {fileID: 2841518992439700776}
   _animationOpenString: Panel_Open
   _animationCloseString: Panel_Close

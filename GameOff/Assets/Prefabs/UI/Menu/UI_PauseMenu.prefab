@@ -352,7 +352,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4353365759932646430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +386,7 @@ MonoBehaviour:
   _pauseMenuCanvas: {fileID: 4353365759932646400}
   _isPaused: {fileID: 11400000, guid: aa70333282a23e84792d95a53d327032, type: 2}
   _pauseMenuAnimator: {fileID: 6137316908940377922}
+  _inUpgradeMenu: {fileID: 11400000, guid: ee47c2e5dd227cb4a97d75243fa8a95a, type: 2}
 --- !u!1 &9007723768434081459
 GameObject:
   m_ObjectHideFlags: 0

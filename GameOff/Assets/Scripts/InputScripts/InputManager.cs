@@ -7,7 +7,6 @@ using TMPro;
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private PlayerInput _playerInput;
-    [SerializeField] private GameObject _heldObject = null;
     private Vector3 _mousePositionScreen;
     [SerializeField] private Vector3 _mousePositionWorld;
     [SerializeField] private CardScriptLoader _selectedCard;
@@ -81,7 +80,7 @@ public class InputManager : MonoBehaviour
         {
             if (_selectedCard != null && context.performed)
             {
-                AnnounceError(_stampOutsideGrid);
+                AnnounceError(_stampOutsideGrid, context.performed);
             }
             // Deselect when clicking outside of the tiles
             BoardManager.Instance.HideTileInfo();
@@ -103,7 +102,7 @@ public class InputManager : MonoBehaviour
                         }
                         else
                         {
-                            AnnounceError(_errorNotEnoughInk);
+                            AnnounceError(_errorNotEnoughInk, context.performed);
                         }
                         DeckManager.Instance.ResetCardSelection();
                     }
@@ -115,7 +114,7 @@ public class InputManager : MonoBehaviour
                     }
                     else
                     {
-                        AnnounceError(_stampUnknownOnUnit);
+                        AnnounceError(_stampUnknownOnUnit, context.performed);
                     }
                     
                 }
@@ -130,7 +129,7 @@ public class InputManager : MonoBehaviour
                         }
                         else
                         {
-                            AnnounceError(_errorNotEnoughInk);
+                            AnnounceError(_errorNotEnoughInk, context.performed);
                         }
                         DeckManager.Instance.ResetCardSelection();
                     }
@@ -145,7 +144,7 @@ public class InputManager : MonoBehaviour
                         }
                         else
                         {
-                            AnnounceError(_errorNotEnoughInk);
+                            AnnounceError(_errorNotEnoughInk, context.performed);
                         }
                         DeckManager.Instance.ResetCardSelection();
                     }
@@ -157,7 +156,7 @@ public class InputManager : MonoBehaviour
                     }
                     else
                     {
-                        AnnounceError(_stampUnitOnBoardTile);
+                        AnnounceError(_stampUnitOnBoardTile, context.performed);
                     }
                 }
             }          
@@ -185,8 +184,13 @@ public class InputManager : MonoBehaviour
         _spriteDrag.Move(new Vector3(_mousePositionWorld.x, _mousePositionWorld.y, 0f));
     }
 
-    private void AnnounceError(string errorMessage)
+    private void AnnounceError(string errorMessage, bool isOnPerformed)
     {
+        if (!isOnPerformed)
+        {
+            return;
+        }
+
         // COLLIN TODO: Play error message sfx
         AkSoundEngine.PostEvent("Play_Placeholder", gameObject);
         _errorMessageTextBox.text = errorMessage;

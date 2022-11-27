@@ -11,6 +11,7 @@ public class UpgradeMenu : MonoBehaviour
     {
         get{return _instance;}
     }
+    [SerializeField] private BoolVariable _inUpgradeMenu;
 
     [Header("Animation")]
     [SerializeField] private Animator _animator;
@@ -41,8 +42,16 @@ public class UpgradeMenu : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        _inUpgradeMenu.Value = false;
+    }
+
     public void Open(GameObject unit, Sprite unitIcon, UnitStampScriptableObject.UpgradeInfo[] upgrades, int upgradePath)
     {
+        _inUpgradeMenu.Value = true;
+        Time.timeScale = 0f;
+
         AkSoundEngine.PostEvent("Play_UIPause", gameObject);
         for (int i = 0; i < _cardUpgrades.Length; i++)
         {
@@ -70,6 +79,9 @@ public class UpgradeMenu : MonoBehaviour
 
     public void ChooseUpgrade(int path)
     {
+        _inUpgradeMenu.Value = false;
+        Time.timeScale = 1f;
+        
         AkSoundEngine.PostEvent("Play_Upgrade", gameObject);
         AkSoundEngine.PostEvent("Play_UIResume", gameObject);
         _animator.Play(_animationCloseString);
