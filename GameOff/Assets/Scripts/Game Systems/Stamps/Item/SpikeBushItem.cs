@@ -51,7 +51,6 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
             _bushDisappearAnimLength -= Time.deltaTime;
             if (_bushDisappearAnimLength <= -1)
             {
-                AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
                 Destroy(gameObject);
             }
         }
@@ -76,6 +75,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
         if (_bushCurrentHealth <= 0)
         {
             _isDead = true;
+            AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
             _bushAnimator.Play(_bushDisappearAnim);
             _bushCollider.enabled = false;
         }

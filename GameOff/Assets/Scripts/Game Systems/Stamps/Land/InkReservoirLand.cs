@@ -17,6 +17,7 @@ public class InkReservoirLand : MonoBehaviour, ILandStamp
     void Start()
     {
         LoadBaseStats();
+        AkSoundEngine.PostEvent("Play_InkReservoir", gameObject);
     }
 
     private void LoadBaseStats()
