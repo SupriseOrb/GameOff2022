@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wind_TreeLeaves
+  m_Name: Wind_Waves2
   m_Shader: {fileID: -6465566751694194690, guid: d6dab88590c4d504081d45dce9eac3e2, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -38,9 +38,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _WindScale: -0.15
-    - _WindSpeed: -0.15
+    - _WindScale: 0.1
+    - _WindSpeed: 5
     m_Colors:
-    - _Offset: {r: -0.3, g: -0.3, b: 0, a: 0}
-    - _WindDirection: {r: -1, g: 0, b: 0, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _WindDirection: {r: -0.25, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
