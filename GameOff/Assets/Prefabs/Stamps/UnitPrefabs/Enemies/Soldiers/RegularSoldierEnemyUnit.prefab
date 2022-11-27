@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _soldierSO: {fileID: 11400000, guid: d1605ab6af89169408b49285d2756966, type: 2}
   _isAttacking: 0
-  _soliderAttackCooldown: 0
+  _soldierAttackCooldown: 0
   _spawnedUnit: {fileID: 0}
   _soldierHealth: 0
   _soldierAbilityCooldown: 0
@@ -60,16 +60,24 @@ MonoBehaviour:
   _soldierBaseAttackSpeed: 0
   _soldierMovementSpeed: 0
   _soldierBaseMovementSpeed: 0
+  _playerHealthDamage: 0
+  _startingPosition: {x: 0, y: 0, z: 0}
+  _endingPosition: {x: 0, y: 0, z: 0}
+  _moveDistance: 0
+  _startTime: 0
+  _forcedMoveSpeed: 0
   _attackTarget: {fileID: 0}
   _isStunned: 0
   _isMoveSlowed: 0
   _isAttackSlowed: 0
   _isDead: 0
+  _isLerping: 0
   _soldierRigidBody: {fileID: 0}
   _soldierCollider: {fileID: 0}
   _currentStunDuration: 0
   _currentMoveSlowDuration: 0
   _currentAttackSlowDuration: 0
+  _currentSlowMultiplier: 0
   _laneNumber: 0
   _soldierAnimator: {fileID: 3594619414032416753}
   _soldierAttackAnimationLength: 0
@@ -79,6 +87,10 @@ MonoBehaviour:
   _soldierAttackAnimationName: Soldier_Pink_Attack
   _soldierWalkAnimationName: Soldier_Pink_Walk
   _soldierDieAnimationName: Soldier_Pink_Death
+  _soldierSprite: {fileID: 4928695222031376390}
+  _defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  _damageFlashMaterial: {fileID: 2100000, guid: 176a06a98be8d7044b8db8eaefab3132, type: 2}
+  _flashTime: 0.125
 --- !u!50 &4928695220663604932
 Rigidbody2D:
   serializedVersion: 4

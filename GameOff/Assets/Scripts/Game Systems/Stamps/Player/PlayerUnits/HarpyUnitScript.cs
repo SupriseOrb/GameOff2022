@@ -61,6 +61,7 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private float _attackSpeedUpgradeIncrease;
     [SerializeField] private float _slowIntensityUpgradeIncrease;
     [SerializeField] private float _pushDistanceUpgradeIncrease;
+    [SerializeField] private float _attackSpeedUpgradeDecrease;
 #endregion
 
     public enum HarpyUpgradePaths
@@ -102,6 +103,7 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
         _attackSpeedUpgradeIncrease = _harpySO.AttackSpeedIncreaseAmount;
         _slowIntensityUpgradeIncrease = _harpySO.UniqueUpgradeOneIncreaseAmount;
         _pushDistanceUpgradeIncrease = _harpySO.UniqueUpgradeTwoIncreaseAmount;
+        _attackSpeedUpgradeDecrease = _harpySO.UniqueUpgradeThreeIncreaseAmount;
     }
 
 
@@ -168,6 +170,7 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
                 LoadBaseStats();
                 _harpySlowIntensity = 0f;
                 _harpyForcedMoveSpeed = 25f;
+                _harpyAttackSpeed = _attackSpeedUpgradeDecrease;
                 _currentUpgradePath = HarpyUpgradePaths.upgradeDisorientingSong;
                 _harpyAnimator.Play(_harpyBlueAppearAnimationName);
             }

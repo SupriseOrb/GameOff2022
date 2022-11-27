@@ -89,6 +89,10 @@ public class WaveManager : MonoBehaviour
     public void StartWave()
     {
         //Add ink equal to the time left in the countdown
+        if(_currentWaveBreakDuration > 0)
+        {
+            DeckManager.Instance.AddInk((int)_currentWaveBreakDuration);
+        }
         _isInWave.Value = true;
     }
 

@@ -1553,6 +1553,11 @@ MonoBehaviour:
   _soldierMovementSpeed: 0
   _soldierBaseMovementSpeed: 0
   _playerHealthDamage: 0
+  _startingPosition: {x: 0, y: 0, z: 0}
+  _endingPosition: {x: 0, y: 0, z: 0}
+  _moveDistance: 0
+  _startTime: 0
+  _forcedMoveSpeed: 0
   _attackTarget: {fileID: 0}
   _isStunned: 0
   _isMoveSlowed: 0
@@ -1650,6 +1655,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4333634295955966673, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 826df8aa3f227394691fcf4cb8ebad59, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
 --- !u!1001 &905767066
@@ -1885,6 +1894,11 @@ MonoBehaviour:
   _soldierMovementSpeed: 0
   _soldierBaseMovementSpeed: 0
   _playerHealthDamage: 0
+  _startingPosition: {x: 0, y: 0, z: 0}
+  _endingPosition: {x: 0, y: 0, z: 0}
+  _moveDistance: 0
+  _startTime: 0
+  _forcedMoveSpeed: 0
   _attackTarget: {fileID: 0}
   _isStunned: 0
   _isMoveSlowed: 0

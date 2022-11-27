@@ -53,6 +53,12 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     [SerializeField] private string _soldierWalkAnimationName = "Soldier_Pink_Walk";
     [SerializeField] private string _soldierDieAnimationName = "Soldier_Pink_Death";
 
+    [SerializeField] private SpriteRenderer _soldierSprite;
+    [SerializeField] private Material _defaultMaterial;
+    [SerializeField] private Material _damageFlashMaterial;
+    [SerializeField] private float _flashTime = .125f;
+    [SerializeField] private Coroutine _damageFlashCoroutine = null;
+
     private void Awake() 
     {
         _soldierRigidBody = GetComponent<Rigidbody2D>();    
@@ -127,6 +133,15 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
                 Destroy after animation completes
             */
         }
+        else
+        {
+            if(_damageFlashCoroutine != null)
+            {
+                StopCoroutine(_damageFlashCoroutine);
+            }
+            
+            _damageFlashCoroutine = StartCoroutine(DamageFlashCoroutine());
+        }
     }
 
     private void FixedUpdate() 
@@ -145,6 +160,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
                 SetAnimationSpeeds();
             }
         }
+
         if(_isAttackSlowed)
         {
             if(_currentAttackSlowDuration > 0)
@@ -157,7 +173,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
                 SetAnimationSpeeds();
             }
         }
-        
+
         if (_isLerping)
         {
             float distanceMoved = (Time.time - _startTime) * _forcedMoveSpeed;
@@ -322,5 +338,14 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         _moveDistance = Vector3.Distance(_startingPosition, _endingPosition);
         _startTime = Time.time;
         _isLerping = true;
+    }
+
+    private IEnumerator DamageFlashCoroutine()
+    {
+        _soldierSprite.material = _damageFlashMaterial;
+
+        yield return new WaitForSeconds(_flashTime);
+        _soldierSprite.material = _defaultMaterial;
+        _damageFlashCoroutine = null;
     }
 }

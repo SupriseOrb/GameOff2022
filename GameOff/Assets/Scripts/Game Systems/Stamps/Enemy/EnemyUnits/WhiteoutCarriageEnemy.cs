@@ -45,6 +45,12 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     [SerializeField] private string _carriageWalkAnimationName = "Carriage_Walk";
     [SerializeField] private string _carriageDieAnimationName = "Carriage_Disappear";
 
+    [SerializeField] private SpriteRenderer _carriageSprite;
+    [SerializeField] private Material _defaultMaterial;
+    [SerializeField] private Material _damageFlashMaterial;
+    [SerializeField] private float _flashTime = .125f;
+    [SerializeField] private Coroutine _damageFlashCoroutine = null;
+
     private void Awake() 
     {
         _carriageRigidBody = GetComponent<Rigidbody2D>();    
@@ -119,6 +125,15 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
                 Play death animation
                 Destroy after animation completes
             */
+        }
+        else
+        {
+            if(_damageFlashCoroutine != null)
+            {
+                StopCoroutine(_damageFlashCoroutine);
+            }
+            
+            _damageFlashCoroutine = StartCoroutine(DamageFlashCoroutine());
         }
     }
 
@@ -281,5 +296,14 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
         _startTime = Time.time;
         _isLerping = true;
 
+    }
+
+    private IEnumerator DamageFlashCoroutine()
+    {
+        _carriageSprite.material = _damageFlashMaterial;
+
+        yield return new WaitForSeconds(_flashTime);
+        _carriageSprite.material = _defaultMaterial;
+        _damageFlashCoroutine = null;
     }
 }
