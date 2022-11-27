@@ -1579,6 +1579,10 @@ MonoBehaviour:
   _soldierAttackAnimationName: Soldier_Pink_Attack
   _soldierWalkAnimationName: Soldier_Pink_Walk
   _soldierDieAnimationName: Soldier_Pink_Death
+  _soldierSprite: {fileID: 0}
+  _defaultMaterial: {fileID: 0}
+  _damageFlashMaterial: {fileID: 0}
+  _flashTime: 0.125
 --- !u!4 &869259829
 Transform:
   m_ObjectHideFlags: 0
@@ -1658,7 +1662,7 @@ PrefabInstance:
     - target: {fileID: 4333634295955966673, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 826df8aa3f227394691fcf4cb8ebad59, type: 2}
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
 --- !u!1001 &905767066
@@ -1920,6 +1924,10 @@ MonoBehaviour:
   _soldierAttackAnimationName: Soldier_Pink_Attack
   _soldierWalkAnimationName: Soldier_Pink_Walk
   _soldierDieAnimationName: Soldier_Pink_Death
+  _soldierSprite: {fileID: 0}
+  _defaultMaterial: {fileID: 0}
+  _damageFlashMaterial: {fileID: 0}
+  _flashTime: 0.125
 --- !u!4 &1394077381
 Transform:
   m_ObjectHideFlags: 0

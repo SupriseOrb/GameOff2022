@@ -229,27 +229,32 @@ MonoBehaviour:
   _carriageAttackCooldown: 0
   _spawnedUnit: {fileID: 0}
   _carriageHealth: 0
-  _carriageAbilityCooldown: 0
-  _carriageCooldownReduction: 0
   _carriageDamage: 0
   _carriageAttackSpeed: 0
   _carriageMovementSpeed: 0
+  _carriageBaseMovementSpeed: 0
+  _playerHealthDamage: 0
   _attackTarget: {fileID: 0}
   _isStunned: 0
   _isMoveSlowed: 0
   _isDead: 0
+  _isLerping: 0
   _carriageRigidBody: {fileID: 0}
   _carriageCollider: {fileID: 0}
   _currentStunDuration: 0
   _currentMoveSlowDuration: 0
-  _currentAttackSlowDuration: 0
   _currentSlowMultiplier: 0
   _laneNumber: 0
   _carriageAnimator: {fileID: 8180495680529312672}
   _carriageWalkAnimationLength: 0
   _carriageDieAnimationLength: 0
+  _carriageDieAnimationHalfLength: 0
   _carriageWalkAnimationName: Carriage_Walk
   _carriageDieAnimationName: Carriage_Disappear
+  _carriageSprite: {fileID: 288912097047655511}
+  _defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  _damageFlashMaterial: {fileID: 2100000, guid: 176a06a98be8d7044b8db8eaefab3132, type: 2}
+  _flashTime: 0.125
 --- !u!50 &288912098885304981
 Rigidbody2D:
   serializedVersion: 4
