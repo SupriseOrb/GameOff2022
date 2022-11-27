@@ -25,8 +25,9 @@ public class RoughGroundItem : MonoBehaviour, IItemStamp
         _groundSlowPercentage = _groundItemSO.ItemStampValue;
         //Debug.DrawLine(transform.position, transform.position + (Vector3.one * _bushAttackRange), Color.cyan, 100f);
         //Debug.DrawLine(transform.position, transform.position - (Vector3.one * _bushAttackRange), Color.cyan, 100f);
+        AkSoundEngine.PostEvent("Play_StampRoughGround", gameObject);
 
-        foreach(AnimationClip clip in _groundAnimator.runtimeAnimatorController.animationClips)
+        foreach (AnimationClip clip in _groundAnimator.runtimeAnimatorController.animationClips)
         {
             if(clip.name == _groundDisappearAnimation)
             {

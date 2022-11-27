@@ -30,6 +30,7 @@ public class InkCowItem : MonoBehaviour, IItemStamp
         _cowInkGeneration = (int)_cowItemSO.ItemStampValue;
         _cowBaseCooldown = _cowItemSO.ItemCooldown;
         _cowCurrentCooldown = _cowBaseCooldown;
+        AkSoundEngine.PostEvent("Play_StampCow", gameObject);
 
         foreach (AnimationClip clip in _cowAnimator.runtimeAnimatorController.animationClips)
         {
@@ -68,9 +69,11 @@ public class InkCowItem : MonoBehaviour, IItemStamp
     public void TakeDamage(float damage)
     {
         _cowCurrentHealth -= damage;
+        AkSoundEngine.PostEvent("Play_ItemTakeDamage", gameObject);
         if (_cowCurrentHealth <= 0)
         {
             _isDead = true;
+            AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
             _cowAnimator.Play(_cowDisappearAnim);
             _cowCollider.enabled = false;
         }
