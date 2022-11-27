@@ -71,9 +71,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 331223075
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayerID: 1008057619
+  m_SortingLayer: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1501192276, guid: c77cce2d7856e3844b3d1e2021741876, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -176,7 +176,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 331223075
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 26129ab549e2bd948a87c2f7db682460, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -260,4 +260,5 @@ MonoBehaviour:
   _attackSpeedUpgradeIncrease: 0
   _pierceUpgradeIncrease: 1
   _stunDurationUpgradeIncrease: 0
+  _stunDurationBaseUpgrade: 0
   _currentUpgradePath: 0

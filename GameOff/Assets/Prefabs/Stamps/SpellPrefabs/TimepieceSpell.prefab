@@ -71,9 +71,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1201209585
-  m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingLayerID: 1008057619
+  m_SortingLayer: 2
+  m_SortingOrder: 18
   m_Sprite: {fileID: 913334440, guid: dcb62f2e9b4211e499cee932f10065d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -151,7 +151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isDeactivated: 1
-  _isActivated: 0
   _timepieceReductionAmount: 0
   _timepieceSprite: {fileID: 0}
   _laneNumber: 0
@@ -159,7 +158,5 @@ MonoBehaviour:
   _timepieceSpellSO: {fileID: 11400000, guid: 7b3c3dc7b43fdcb4da47ea23b9ea63bc, type: 2}
   _affectedUnits: []
   _timepieceAnimator: {fileID: 4239279701672861169}
-  _timepieceAppearAnimation: Timepiece_Appear
-  _timepieceAppearAnimationLength: 0
   _timepieceDisappearAnimation: Timepiece_Disappear
   _timepieceDisappearAnimationLength: 0

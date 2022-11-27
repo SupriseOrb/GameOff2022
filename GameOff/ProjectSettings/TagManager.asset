@@ -44,17 +44,8 @@ TagManager:
   - name: Background
     uniqueID: 2408403311
     locked: 0
-  - name: Land
+  - name: Stamps
     uniqueID: 1008057619
-    locked: 0
-  - name: Unit
-    uniqueID: 331223075
-    locked: 0
-  - name: Item
-    uniqueID: 1639880483
-    locked: 0
-  - name: Spell
-    uniqueID: 3093757711
     locked: 0
   - name: Foreground
     uniqueID: 336284779
