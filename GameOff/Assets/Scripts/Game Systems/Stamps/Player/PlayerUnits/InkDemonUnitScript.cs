@@ -61,7 +61,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
     // Start is called before the first frame update
     void Start()
     {
-        AkSoundEngine.PostEvent("Play_StampGeneral", gameObject);
+        AkSoundEngine.PostEvent("Play_StampInkDemon", gameObject);
         LoadBaseStats();
         LoadUpgradeStats();
         _inkDemonAnimator.Play(_inkDemonGreenAppearAnimationName);
@@ -180,7 +180,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 #region Ability Functions
     public void ActivateStampAbility()
     {
-        // COLLIN TODO: Add ink demon summon sfx
+        AkSoundEngine.PostEvent("Play_InkDemonAbility", gameObject);
         for(int i = _activeMinions.Count - 1; i >= 0; i--)
         {
             if(_activeMinions[i] == null)

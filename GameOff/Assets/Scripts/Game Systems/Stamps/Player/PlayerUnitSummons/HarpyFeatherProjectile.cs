@@ -23,7 +23,7 @@ public class HarpyFeatherProjectile : MonoBehaviour
     
     void Start()
     {
-        //AkSoundEngine.PostEvent("Play_HarpyAbility", gameObject);
+        AkSoundEngine.PostEvent("Play_HarpyAbility1", gameObject);
         _featherRigidbody = GetComponent<Rigidbody2D>();
         _harpyScript = gameObject.GetComponentInParent<HarpyUnitScript>();
 

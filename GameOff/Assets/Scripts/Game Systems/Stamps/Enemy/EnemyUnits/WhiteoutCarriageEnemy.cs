@@ -60,6 +60,8 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
 
     private void Start() 
     {
+        AkSoundEngine.PostEvent("Play_CarriageEntrance", gameObject);
+        AkSoundEngine.PostEvent("Play_CarriageMovement", gameObject);
         LoadBaseStats();
         _isAttacking = true;
         
@@ -112,10 +114,10 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
             *IMPORTANT*: We also need to add them to their respective Lane's _laneEnemies
             Instantiate(_soliderPrefab,gameObject.transform.position, Quaternion.identity);
             */
-            
+
 
             //Temp Destroy
-            // Collin todo: play dead sfx
+            AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
             BoardManager.Instance.GetLane(_laneNumber).RemoveEnemyFromList(gameObject);
             _carriageAnimator.Play(_carriageDieAnimationName);
             _isDead = true;
