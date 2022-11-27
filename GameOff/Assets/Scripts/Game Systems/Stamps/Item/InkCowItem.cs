@@ -75,12 +75,11 @@ public class InkCowItem : MonoBehaviour, IItemStamp
 
     public void TakeDamage(float damage)
     {
-        // COLLIN TODO: PLAYER STAMP TAKE DAMAGE
         _cowCurrentHealth -= damage;
         AkSoundEngine.PostEvent("Play_ItemTakeDamage", gameObject);
         if (_cowCurrentHealth <= 0)
         {
-            // Collin todo: play dead sfx
+            
             _isDead = true;
             AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
             _cowAnimator.Play(_cowDisappearAnim);

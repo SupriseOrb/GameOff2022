@@ -200,7 +200,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
 
     public void TakeDamage(float damage)
     {
-        // COLLIN TODO: PLAYER STAMP TAKE DAMAGE
+        AkSoundEngine.PostEvent("Play_ItemTakeDamage", gameObject);
         _inkMinionCurrentHealth -= damage;
         if(_inkMinionCurrentHealth <= 0)
         {
