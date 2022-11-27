@@ -197,7 +197,7 @@ public class InputManager : MonoBehaviour
         _errorMessagePanelAnimator.Play(_openErrorMessagePanelAnim);
         if (errorMessage == _errorNotEnoughInk)
         {
-            // TODO: Make the ink bar flash w/ a shader
+            // TODO : Make the ink bar flash w/ a shader
         }
     }
 }

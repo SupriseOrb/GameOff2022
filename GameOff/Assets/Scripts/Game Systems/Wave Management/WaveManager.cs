@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WaveManager : MonoBehaviour
 {
@@ -41,13 +42,15 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private bool _addedSpawnCorrectly;
     [SerializeField] private bool _levelFinished = false;
 
+    [SerializeField] private Canvas _startWaveCanvas;
+    [SerializeField] private TextMeshProUGUI _bonusInk;
+
     // Start is called before the first frame update
     void Start()
     {
         _currentWaveIndex = 0;
         _currentWaveSpawns = new Dictionary<int, GameObject[][]>();
         LoadNextWave();
-        // TODO: REMOVE THIS when we have the start button functioning and start wave is being called
         BroadcastIntensityChange();
         //Clear last wave information
     }
@@ -59,16 +62,12 @@ public class WaveManager : MonoBehaviour
         if (!_levelFinished)
         {
             _isInWaveValueDebug = _isInWave.Value;
-            //TODO:: Figure when to reset these current timer values
+            // TODO : Figure when to reset these current timer values
             if (_isInWave.Value)
             {
                 if (_currentWaveDuration <= 0)
                 {
-                    //Wave is over
-                    _isInWave.Value = false;
-                    LoadNextWave();
-                    DeckManager.Instance.ResetDeck();
-                    BoardManager.Instance.ResetBoardState();
+                    FinishWave();
                 }
                 else
                 {
@@ -80,11 +79,13 @@ public class WaveManager : MonoBehaviour
             {
                 if (_currentWaveBreakDuration <= 0)
                 {
+                    // TODO : Do we want players to choose when they start regardless of the _currentWaveBreakDuration?
                     //Break is over
                     StartWave();
                 }
                 else
                 {
+                    _bonusInk.text = "Get +" + Mathf.Min((int)_currentWaveBreakDuration, 50);
                     _currentWaveBreakDuration -= Time.deltaTime;
                 }
             }
@@ -94,7 +95,7 @@ public class WaveManager : MonoBehaviour
     public void StartWave()
     {
         //Add ink equal to the time left in the countdown
-        if(_currentWaveBreakDuration > 0)
+        if (_currentWaveBreakDuration > 0)
         {
             // COLLIN TODO: ADD BONUS INK SFX
             DeckManager.Instance.AddInk((int)_currentWaveBreakDuration);
@@ -102,6 +103,7 @@ public class WaveManager : MonoBehaviour
         // COLLIN TODO: Add start wave stinger
         //BroadcastIntensityChange();
         _isInWave.Value = true;
+        _startWaveCanvas.enabled = false;
     }
 
     public void LoadNextWave()
@@ -186,6 +188,15 @@ public class WaveManager : MonoBehaviour
         }
 */
 #endregion
+    }
+
+    private void FinishWave()
+    {
+        _isInWave.Value = false;
+        LoadNextWave();
+        DeckManager.Instance.ResetDeck();
+        BoardManager.Instance.ResetBoardState();
+        _startWaveCanvas.enabled = true;
     }
 
     private void FinishLevel()

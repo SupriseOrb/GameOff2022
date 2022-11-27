@@ -80,7 +80,7 @@ public class DeckManager : MonoBehaviour
 
     void Start()
     {
-        // TODO: Might want to initialize the decks here, like adding cards and setting up the hand for the tutorial and such
+        // TODO : Might want to initialize the decks here, like adding cards and setting up the hand for the tutorial and such
         // Note: Need slight delay in order to get the correct _cardHolders transforms 
         StartCoroutine(DelayDrawCards());
         _currentInk = _startingInk;
@@ -123,14 +123,6 @@ public class DeckManager : MonoBehaviour
                 _currentInkTimer -= Time.deltaTime;
             }
         }
-        else
-        {
-            //Should be called in func called by wavemanager
-            //_currentReshuffleTimer = _baseReshuffleTimer;
-            //stop / swap UI stuff
-            //Should activate timer to next wave UI as well as disable the shuffle timer
-            //We also need to reset the _currentReshuffleTimer
-        }
     }
 
     //Returns all cards from discard deck to active deck, and moves all cards from card hand to active deck
@@ -153,6 +145,13 @@ public class DeckManager : MonoBehaviour
             card.transform.position = _activeDeckTransform.position;
         }
         System.Array.Clear(_cardHand, 0, _cardHand.Length);
+
+        /* TODO :
+            Should activate timer to next wave UI as well as disable the shuffle timer
+            _currentReshuffleTimer = _baseReshuffleTimer;
+            reset the _currentReshuffleTimer?
+            disable CardFrame entirely?
+        */ 
     }
 
     private void CycleHand()

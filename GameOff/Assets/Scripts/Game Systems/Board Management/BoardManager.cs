@@ -5,7 +5,6 @@ using TMPro;
 
 public class BoardManager : MonoBehaviour
 {
-    // TODO: Implement Tile info panel
     [Header("Info Panel")]
     [SerializeField] private GameObject _tileInfoPanel;
     [SerializeField] private TextMeshProUGUI _tileInfoPanelText;

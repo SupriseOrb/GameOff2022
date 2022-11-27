@@ -37,7 +37,7 @@ public class CardScriptableObject : ScriptableObject
     {
         get
         {
-            // TODO: Figure out how we want to format the card description
+            // TODO : Figure out how we want to format the card description
             // For now, just return _cardDescription, but we might want to list stats and upgrades (if applicable)
             return _cardDescription;
         }

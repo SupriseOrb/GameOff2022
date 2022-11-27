@@ -144,7 +144,7 @@ public class SettingsManager : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Play_UISelect", gameObject);
 
-        // TODO: When full screen is enabled, any resolution that is not the default resolution looks wonky
+        // TODO : When full screen is enabled, any resolution that is not the default resolution looks wonky
         Resolution resolution = _resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, _fullScreenToggle.isOn);
     }
