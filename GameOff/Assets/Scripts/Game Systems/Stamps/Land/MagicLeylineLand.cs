@@ -5,7 +5,8 @@ using UnityEngine;
 public class MagicLeylineLand : MonoBehaviour, ILandStamp
 {
     [SerializeField] private LandStampScriptableObject _leylineSO;
-    
+    [SerializeField] private CardScriptableObject _cardSO;
+
     [Header("Debug Values")]
     [SerializeField] private float _leylineMultiplier;
     [SerializeField] private int _laneNumber;
@@ -52,4 +53,12 @@ public class MagicLeylineLand : MonoBehaviour, ILandStamp
     {
 
     }
+
+    public string GetTileDescription()
+    {
+        string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.LAND, Vocab.INKCOST(_cardSO.InkCost)});
+        string description = _cardSO.CardDescription;
+        return name + "\n" + description;
+    }
+    
 }

@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _brambleSO: {fileID: 11400000, guid: b8ba333a2cb73e0459d1d05a4783c7f1, type: 2}
+  _cardSO: {fileID: 11400000, guid: 59dde44fa2aa9ee4b9d69176df244f35, type: 2}
   _laneNumber: 0
   _brambleDamage: 0
   _baseDamageCooldown: 0

@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _redcapSO: {fileID: 11400000, guid: acaec4a539d4648458bdaaa715435b7d, type: 2}
-  _redcapCardSO: {fileID: 11400000, guid: 92bd21ad69f0b8d44b9eab688d2e79ac, type: 2}
+  _cardSO: {fileID: 11400000, guid: 92bd21ad69f0b8d44b9eab688d2e79ac, type: 2}
   _isActive: 1
   _redcapAttackCooldown: 0
   _unitType: 
@@ -247,6 +247,7 @@ MonoBehaviour:
   _redcapStunDuration: 0
   _inkProjectile: {fileID: 6197164183251949288, guid: e5d27ba7bc3d1fb4b9cf0eb0542d543b, type: 3}
   _inkProjectileSpawnLocation: {fileID: 5931444528080003716}
+  _canStun: 0
   _redcapAnimator: {fileID: 5931444527902903502}
   _redcapAppearAnimationName: Redcap_Red_Appear
   _bluecapAppearAnimationName: Redcap_Blue_Appear
@@ -255,4 +256,8 @@ MonoBehaviour:
   _bluecapAttackAnimationName: Redcap_Blue_Attack
   _purplecapAttackAnimationName: Redcap_Purple_Attack
   _redcapLaneNumber: 0
+  _attackDamageUpgradeIncrease: 0
+  _attackSpeedUpgradeIncrease: 0
+  _pierceUpgradeIncrease: 1
+  _stunDurationUpgradeIncrease: 0
   _currentUpgradePath: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class HarpyUnitScript : MonoBehaviour, IUnitStamp
 {
     [SerializeField] private UnitStampScriptableObject _harpySO;
-    [SerializeField] private CardScriptableObject _harpyCardSO;
+    [SerializeField] private CardScriptableObject _cardSO;
     [SerializeField] private bool _isActive = false;
     [SerializeField] private float _harpyAttackCooldown;
     [SerializeField] private float _harpyForcedMoveSpeed;
@@ -127,7 +127,7 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
 
     public void OpenUnitUpgrade()
     {
-        UpgradeMenu.Instance.Open(gameObject, _harpyCardSO.CardIcon, _harpySO.Upgrades, (int)_currentUpgradePath);
+        UpgradeMenu.Instance.Open(gameObject, _cardSO.CardIcon, _harpySO.Upgrades, (int)_currentUpgradePath);
     }
 
     public void UpgradeUnit(int upgradePath)
@@ -248,9 +248,9 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
 
     public string GetTileDescription()
     {
-        string name = _harpyCardSO.CardName + " | Unit | " + _harpyCardSO.InkCost + " Ink";
-        string description = _harpyCardSO.CardDescription;
-        string stats = PushDistance + " Push Distance | " + SlowIntensity + " Slow Amount | " + _harpyDamage + " Damage | " + _harpyAttackSpeed +  " Attack Speed";
+        string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.PLAYER_UNIT, Vocab.INKCOST(_cardSO.InkCost)});
+        string description = _cardSO.CardDescriptionGivenInt((int)_currentUpgradePath);
+        string stats = Vocab.SEPARATE(new string[] {Vocab.PUSH_DISTANCE(PushDistance), Vocab.DAMAGE(_harpyDamage), Vocab.DAMAGE(Damage), Vocab.ATKSPD(_harpyAttackSpeed)});
         return name + "\n" + description + "\n" + stats;
     }
 }

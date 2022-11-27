@@ -52,6 +52,7 @@ MonoBehaviour:
   _groundSlowPercentage: 0
   _groundCollider: {fileID: 4424480200185991440}
   _groundItemSO: {fileID: 11400000, guid: f149fef41a2241f4f89f31898a6c37a6, type: 2}
+  _cardSO: {fileID: 11400000, guid: d54685b9933de364e9bea1eaef1d5e41, type: 2}
   _groundAnimator: {fileID: 4424480200796593537}
   _groundDisappearAnimation: RoughGround_Disappear
   _groundDisappearAnimationLength: 0

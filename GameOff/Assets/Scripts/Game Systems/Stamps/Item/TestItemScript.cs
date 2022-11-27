@@ -6,6 +6,7 @@ public class TestItemScript : MonoBehaviour , IItemStamp
 {
     [SerializeField] private float _itemHealth = 3;
     [SerializeField] private Transform _itemTransform;
+    [SerializeField] private CardScriptableObject _cardSO;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,5 +62,12 @@ public class TestItemScript : MonoBehaviour , IItemStamp
     public void DisableStamp()
     {
 
+    }
+
+    public string GetTileDescription()
+    {
+        string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.ITEM, Vocab.INKCOST(_cardSO.InkCost)});
+        string description = _cardSO.CardDescription;
+        return name + "\n" + description;
     }
 }

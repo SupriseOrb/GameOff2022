@@ -97,4 +97,9 @@ public class InkBlotSpell : MonoBehaviour, ISpellStamp
     {
         _laneNumber = lane;
     }
+
+    public string GetTileDescription()
+    {
+        return "";
+    }
 }

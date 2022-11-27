@@ -5,7 +5,7 @@ using UnityEngine;
 public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 {
     [SerializeField] private UnitStampScriptableObject _redcapSO;
-    [SerializeField] private CardScriptableObject _redcapCardSO;
+    [SerializeField] private CardScriptableObject _cardSO;
     [SerializeField] private bool _isActive = false;
     [SerializeField] private float _redcapAttackCooldown;
 
@@ -126,7 +126,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 
     public void OpenUnitUpgrade()
     {
-        UpgradeMenu.Instance.Open(gameObject, _redcapCardSO.CardIcon, _redcapSO.Upgrades, (int)_currentUpgradePath);
+        UpgradeMenu.Instance.Open(gameObject, _cardSO.CardIcon, _redcapSO.Upgrades, (int)_currentUpgradePath);
     }
 
     public void UpgradeUnit(int upgradePath)
@@ -248,10 +248,9 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 
     public string GetTileDescription()
     {
-        string name = _redcapCardSO.CardName + " | Unit | " + _redcapCardSO.InkCost + " Ink";
-        string description = _redcapCardSO.CardDescription;
-        string stats = StunDuration + "sec Stun | " + PierceAmount + " Pierce Amount | " + Damage + " Damage | " + _redcapAttackSpeed + " Attacks/Sec";
-
+        string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.PLAYER_UNIT, Vocab.INKCOST(_cardSO.InkCost)});
+        string description = _cardSO.CardDescriptionGivenInt((int)_currentUpgradePath);
+        string stats = Vocab.SEPARATE(new string[] {Vocab.STUN_DURATION(StunDuration), Vocab.PIERCE_AMOUNT(PierceAmount), Vocab.DAMAGE(Damage), Vocab.ATKSPD(_redcapAttackSpeed)});
         return name + "\n" + description + "\n" + stats;
     }
 }

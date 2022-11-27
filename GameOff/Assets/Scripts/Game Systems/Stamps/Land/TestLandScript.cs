@@ -5,6 +5,7 @@ using UnityEngine;
 public class TestLandScript : MonoBehaviour, ILandStamp
 {
     [SerializeField] private LandStampScriptableObject _landSO;
+    [SerializeField] private CardScriptableObject _cardSO;
 
     public void ActivateStampAbility()
     {
@@ -30,5 +31,12 @@ public class TestLandScript : MonoBehaviour, ILandStamp
     public void EnableStamp()
     {
 
+    }
+
+    public string GetTileDescription()
+    {
+        string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.LAND, Vocab.INKCOST(_cardSO.InkCost)});
+        string description = _cardSO.CardDescription;
+        return name + "\n" + description;
     }
 }

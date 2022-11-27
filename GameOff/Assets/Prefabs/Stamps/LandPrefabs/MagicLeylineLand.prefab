@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _leylineSO: {fileID: 11400000, guid: 6fdf7d352a1935141971fac818eb9469, type: 2}
+  _cardSO: {fileID: 11400000, guid: 84379cf39f5fe634ea740a803598e6a0, type: 2}
   _leylineMultiplier: 0
   _laneNumber: 0
 --- !u!1 &7704762201598620149

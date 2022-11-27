@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _reservoirSO: {fileID: 11400000, guid: c7d11a9a266b225439d229d0b7226366, type: 2}
+  _cardSO: {fileID: 11400000, guid: 750f51d47928b3140ac851bab7ea15c9, type: 2}
   _laneNumber: 0
   _reservoirHeal: 0
   _baseHealCooldown: 0

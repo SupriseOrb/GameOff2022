@@ -5,6 +5,8 @@ using UnityEngine;
 public class TestUnitScript : MonoBehaviour, IUnitStamp
 {
     [SerializeField] private UnitStampScriptableObject _unitSO;
+    [SerializeField] private CardScriptableObject _cardSO;
+
     [SerializeField] private bool _isActive;
     [SerializeField] private float _currentUnitAbilityCooldown;
     [SerializeField] private float _currentUnitAttackCooldown;
@@ -157,6 +159,8 @@ public class TestUnitScript : MonoBehaviour, IUnitStamp
 
     public string GetTileDescription()
     {
-        return "";
+        string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.PLAYER_UNIT, Vocab.INKCOST(_cardSO.InkCost)});
+        string description = _cardSO.CardDescription;
+        return name + "\n" + description;
     }
 }

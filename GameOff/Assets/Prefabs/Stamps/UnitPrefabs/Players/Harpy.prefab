@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _harpySO: {fileID: 11400000, guid: b8aaf624bdafbf540b7996f4397fb6c1, type: 2}
-  _harpyCardSO: {fileID: 11400000, guid: 0bf150d65d2bd8142afb719e87b0c6ed, type: 2}
+  _cardSO: {fileID: 11400000, guid: 0bf150d65d2bd8142afb719e87b0c6ed, type: 2}
   _isActive: 1
   _harpyAttackCooldown: 0
   _harpyForcedMoveSpeed: 15
@@ -260,4 +260,5 @@ MonoBehaviour:
   _attackSpeedUpgradeIncrease: 0
   _slowIntensityUpgradeIncrease: 0
   _pushDistanceUpgradeIncrease: 0
+  _attackSpeedUpgradeDecrease: 0
   _currentUpgradePath: 0

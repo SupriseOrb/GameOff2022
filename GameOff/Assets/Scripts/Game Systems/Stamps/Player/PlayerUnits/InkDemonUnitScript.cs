@@ -5,7 +5,7 @@ using UnityEngine;
 public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 {
     [SerializeField] private UnitStampScriptableObject _inkDemonSO;
-    [SerializeField] private CardScriptableObject _inkDemonCardSO;
+    [SerializeField] private CardScriptableObject _cardSO;
     [SerializeField] private bool _isActive = false;
 
 #region UnitStats
@@ -109,7 +109,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 
     public void OpenUnitUpgrade()
     {
-        UpgradeMenu.Instance.Open(gameObject, _inkDemonCardSO.CardIcon, _inkDemonSO.Upgrades, (int)_currentUpgradePath);
+        UpgradeMenu.Instance.Open(gameObject, _cardSO.CardIcon, _inkDemonSO.Upgrades, (int)_currentUpgradePath);
     }
 
     public void UpgradeUnit(int upgradePath)
@@ -278,10 +278,9 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 
     public string GetTileDescription()
     {
-        string name = _inkDemonCardSO.CardName + " | Unit | " + _inkDemonCardSO.InkCost + " Ink";
-        string description = _inkDemonCardSO.CardDescription;
-        string stats = _inkDemonAbilityCooldown + " Cooldown | " + _inkMinionHealth + " Minion Health | " + _inkMinionDamage + " Minion Damage | " + _inkMinionAttackSpeed + " Minion Attacks/Sec";
-
-        return name + "\n" + description + "\n" + stats;
+        string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.PLAYER_UNIT, Vocab.INKCOST(_cardSO.InkCost)});
+        string description = _cardSO.CardDescriptionGivenInt((int)_currentUpgradePath);
+        string stats = Vocab.SEPARATE(new string[] {Vocab.COOLDOWN(_inkDemonAbilityCooldown), Vocab.MINION_HEALTH(_inkMinionHealth), Vocab.MINION_DAMAGE(_inkMinionDamage), Vocab.MINION_ATKSPD(_inkMinionAttackSpeed)});
+        return name + "\n" + description + "\n" + stats;  
     }
 }

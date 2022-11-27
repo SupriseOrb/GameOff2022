@@ -162,6 +162,7 @@ MonoBehaviour:
   _bushAttackRange: 1.2
   _bushCollider: {fileID: 5551045160796070600}
   _bushItemSO: {fileID: 11400000, guid: f224ce3a599c2074ea9305916e7479cb, type: 2}
+  _cardSO: {fileID: 11400000, guid: 17dee6aaa3c26194fa21ccdf621f21ad, type: 2}
   _bushAnimator: {fileID: 5551045160144055897}
   _bushDisappearAnim: SpikyBush_Disappear
   _bushDisappearAnimLength: 0

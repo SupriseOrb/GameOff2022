@@ -56,6 +56,7 @@ MonoBehaviour:
   _cowSprite: {fileID: 0}
   _cowCollider: {fileID: 1818134814049103545}
   _cowItemSO: {fileID: 11400000, guid: fd416dbc4f787694e819f6a52cdabc33, type: 2}
+  _cardSO: {fileID: 11400000, guid: 1305d3bf1ed081b4797c1ba64d72a3d7, type: 2}
   _laneNumber: 0
   _cowAnimator: {fileID: 1818134814736977699}
   _cowDisappearAnim: InkCow_Disappear

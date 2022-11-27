@@ -9,6 +9,8 @@ public class CardScriptableObject : ScriptableObject
     [Header("Card Values")]
     [SerializeField] private string _cardName = "";
     [SerializeField] [TextArea] private string _cardDescription = "";
+    [SerializeField] [TextArea] private string _upgrade1Description = "";
+    [SerializeField] [TextArea] private string _upgrade2Description = "";
     [SerializeField] private int _inkCost = 0;
     [SerializeField] private bool _hasBeenUsed = false;
     [SerializeField] private GameObject _stampGORef;
@@ -38,6 +40,21 @@ public class CardScriptableObject : ScriptableObject
             // TODO: Figure out how we want to format the card description
             // For now, just return _cardDescription, but we might want to list stats and upgrades (if applicable)
             return _cardDescription;
+        }
+    }
+
+    public string CardDescriptionGivenInt(int i)
+    {
+        switch (i)
+        {
+            case 0:
+                return _cardDescription;
+            case 1:
+                return _upgrade1Description;
+            case 2:
+                return _upgrade2Description;
+            default:
+                return "";
         }
     }
 

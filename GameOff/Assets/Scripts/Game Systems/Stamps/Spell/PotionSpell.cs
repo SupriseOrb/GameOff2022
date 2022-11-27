@@ -117,4 +117,9 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
     {
         _affectedTile = tile;
     }
+
+    public string GetTileDescription()
+    {
+        return "";
+    }
 }

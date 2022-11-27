@@ -110,4 +110,9 @@ public class TimepieceSpell : MonoBehaviour, ISpellStamp
     {
         _affectedTile = tile;
     }
+
+    public string GetTileDescription()
+    {
+        return "";
+    }
 }

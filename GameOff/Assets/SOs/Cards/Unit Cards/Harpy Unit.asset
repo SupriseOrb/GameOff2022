@@ -15,6 +15,11 @@ MonoBehaviour:
   _cardName: Harpy
   _cardDescription: Sings a haunting song that damages and slows enemies. This song
     reminds the soldiers of their families they have left behind.
+  _upgrade1Description: Sings a haunting song that damages an enemy and then forces
+    them to change lanes. This song is so annoying, the soldiers immediately try
+    to avoid hearing it by leaving the area.
+  _upgrade2Description: Sings a haunting song that damages, slows, and pushes enemies
+    away. This song has a little bit more force behind it.
   _inkCost: 15
   _hasBeenUsed: 0
   _stampGORef: {fileID: 5931444529041067665, guid: 6f162629a83dcec4a814af5ebd5ac588, type: 3}

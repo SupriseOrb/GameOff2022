@@ -15,6 +15,11 @@ MonoBehaviour:
   _cardName: Redcap
   _cardDescription: Roll balls of ink down that damages enemies. While ink balls
     seem entirely made of ink, theres actually a heavy steel ball hidden in the center.
+  _upgrade1Description: Rolls balls of ink that pierce through and damage multiple
+    enemies. The steel ball in the center has been replaced with a lead one, which
+    somehow allows it to pierce armor.
+  _upgrade2Description: Roll balls of ink that stun enemies. The ink coating the
+    ball has been replaced with a substance similar to glue.
   _inkCost: 10
   _hasBeenUsed: 0
   _stampGORef: {fileID: 5931444529041067665, guid: d924d01c6850f5a43bbcfcfec2a5792b, type: 3}

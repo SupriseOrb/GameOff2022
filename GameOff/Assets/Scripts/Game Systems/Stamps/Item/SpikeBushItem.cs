@@ -15,6 +15,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
     [SerializeField] private float _bushAttackRange;
     [SerializeField] private BoxCollider2D _bushCollider;
     [SerializeField] private ItemStampScriptableObject _bushItemSO;
+    [SerializeField] private CardScriptableObject _cardSO;
     private Collider2D[] _bushColliders;
 
     #region Animation
@@ -153,5 +154,13 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
         yield return new WaitForSeconds(_flashTime);
         _bushSpriteRenderer.material = _defaultMaterial;
         _damageFlashCoroutine = null;
+    }
+
+    public string GetTileDescription()
+    {
+        string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.ITEM, Vocab.INKCOST(_cardSO.InkCost)});
+        string description = _cardSO.CardDescription;
+        string stats = Vocab.SEPARATE(new string[] {Vocab.HEALTH(_bushCurrentHealth), Vocab.DAMAGE(_bushDamage)});
+        return name + "\n" + description + "\n" + stats;
     }
 }

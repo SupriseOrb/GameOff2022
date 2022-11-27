@@ -5,6 +5,7 @@ using UnityEngine;
 public class BramblePatchLand : MonoBehaviour, ILandStamp
 {
     [SerializeField] private LandStampScriptableObject _brambleSO;
+    [SerializeField] private CardScriptableObject _cardSO;
     
     [Header("Debug Values")]
     [SerializeField] private int _laneNumber;
@@ -64,5 +65,12 @@ public class BramblePatchLand : MonoBehaviour, ILandStamp
     public void DisableStamp()
     {
         
+    }
+
+    public string GetTileDescription()
+    {
+        string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.LAND, Vocab.INKCOST(_cardSO.InkCost)});
+        string description = _cardSO.CardDescription;
+        return name + "\n" + description;
     }
 }

@@ -14,6 +14,7 @@ public class InkCowItem : MonoBehaviour, IItemStamp
     [SerializeField] private Sprite _cowSprite;
     [SerializeField] private BoxCollider2D _cowCollider;
     [SerializeField] private ItemStampScriptableObject _cowItemSO;
+    [SerializeField] private CardScriptableObject _cardSO;
     [SerializeField] private int _laneNumber;
 
     #region Animation
@@ -149,5 +150,13 @@ public class InkCowItem : MonoBehaviour, IItemStamp
         yield return new WaitForSeconds(_flashTime);
         _cowSpriteRenderer.material = _defaultMaterial;
         _damageFlashCoroutine = null;
+    }
+
+    public string GetTileDescription()
+    {
+        string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.ITEM, Vocab.INKCOST(_cardSO.InkCost)});
+        string description = _cardSO.CardDescription;
+        string stats = Vocab.SEPARATE(new string[] {Vocab.HEALTH(_cowCurrentHealth), Vocab.INKDELTA(_cowInkGeneration)});
+        return name + "\n" + description + "\n" + stats;
     }
 }

@@ -62,8 +62,15 @@ public class BoardTile : MonoBehaviour
 
     public virtual void Clicked()
     {
-        /*
-        If it's a Unit, 
-        */
+        if (_heldStamp !=  null)
+        {
+            BoardManager.Instance.ToggleTileInfo(_laneNumber, _tileNumber,
+                                                _heldStamp.GetComponent<IStamp>().GetTileDescription(),
+                                                true);
+        }
+        else
+        {
+            BoardManager.Instance.ToggleTileInfo(_laneNumber, _tileNumber, "", true);
+        }
     }
 }

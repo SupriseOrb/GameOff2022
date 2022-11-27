@@ -76,6 +76,8 @@ public class InputManager : MonoBehaviour
 
         if (_raycastHit.collider == null) //If no collider on click
         {
+            // Deselect when clicking outside of the tiles
+            BoardManager.Instance.HideTileInfo();
             return;
         }
 
@@ -145,35 +147,19 @@ public class InputManager : MonoBehaviour
                 }
             }          
         }
-        else if (context.performed && _selectedCard == null && _raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile))
+        else if (context.performed) // Only need to do this check once when performed (canceled doesn't matter)
         {
-            //Note: Need to reference StampScriptableObject description to fill in desc panel
-            if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
+            if (_selectedCard == null && _raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile))
             {
-                // TODO: Call a UnitTile function to tell it has been clicked on and then it'll figure out the rest
-                // e.g. Figure out how to populate the info panel with the unit info
-                // Then in the unit tile, pass the string to the BoardManager which should have an instance to the description panel
-                unitTile.Clicked();
-            }
-            else
-            {
-                Debug.Log("Click on Board Tile");
-                // TODO: Call a BoardTile function to tell it has been clicked on and then it'll figure out the rest
-                // e.g. Figure out how to populate the info panel with the land and item info
-                // Then in the board tile, pass the string to the BoardManager which should have an instance to the description panel
-                
-                /*if (BoardManager.Instance.GetLane(boardTile._laneNumber).CurrentLandStamp != null) //Don't think I need the null check
+                if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
                 {
-                    Debug.Log("Get Land");
-                    //show land desc panel
+                    unitTile.Clicked();
                 }
-                if (boardTile.GetHeldStamp().TryGetComponent(out IItemStamp itemStamp))
+                else
                 {
-                    Debug.Log("Get Item");
-                    //add item desc to land desc panel with magic
+                    boardTile.Clicked();
                 }
-                //Note: Shouldn't need to showcase desc panel for Spell Stamps*/
-            }
+            }     
         }
     }
 

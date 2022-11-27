@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inkDemonSO: {fileID: 11400000, guid: e38f8e183e514b14baff580bbf626115, type: 2}
-  _inkDemonCardSO: {fileID: 11400000, guid: adafe14398f921248a1bb3fcdd8f9341, type: 2}
+  _cardSO: {fileID: 11400000, guid: adafe14398f921248a1bb3fcdd8f9341, type: 2}
   _isActive: 1
   _unitType: 
   _inkDemonAbilityCooldown: 0
@@ -70,6 +70,11 @@ MonoBehaviour:
   _inkMinionAttackAnimationLength: 0
   _inkDemonLaneNumber: 0
   _activeMinions: []
+  _attackDamageUpgradeIncrease: 0
+  _attackSpeedUpgradeIncrease: 0
+  _maxHealthUpgradeIncrease: 0
+  _cooldownReductionUpgrade: 0
+  _cooldownIncreaseUpgrade: 0
   _currentUpgradePath: 0
 --- !u!1 &2645122873858024068
 GameObject:

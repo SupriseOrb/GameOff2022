@@ -10,6 +10,7 @@ public class RoughGroundItem : MonoBehaviour, IItemStamp
     [SerializeField] private float _groundSlowPercentage;
     [SerializeField] private BoxCollider2D _groundCollider;
     [SerializeField] private ItemStampScriptableObject _groundItemSO;
+    [SerializeField] private CardScriptableObject _cardSO;
 
     #region Animation
     [SerializeField] private Animator _groundAnimator; 
@@ -105,6 +106,13 @@ public class RoughGroundItem : MonoBehaviour, IItemStamp
     public bool IsDead()
     {
         return _isDead;
+    }
+
+    public string GetTileDescription()
+    {
+        string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.ITEM, Vocab.INKCOST(_cardSO.InkCost)});
+        string description = _cardSO.CardDescription;
+        return name + "\n" + description;
     }
 
 }

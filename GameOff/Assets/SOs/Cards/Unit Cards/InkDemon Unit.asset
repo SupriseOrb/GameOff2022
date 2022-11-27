@@ -15,6 +15,11 @@ MonoBehaviour:
   _cardName: Ink Demon
   _cardDescription: Summons inky minions to block and damage your foes. Their ink
     is almost impossible to wash off, and also sometimes just comes to life.
+  _upgrade1Description: Slowly summons inky minions to block and damage your foes.
+    Minions now have an explosive parting gift. This information is kept hidden for
+    everyone's safety.
+  _upgrade2Description: Quickly summons inky minions to block and damage your foes.
+    The minions have unionized, causing an influx of interested applicants.
   _inkCost: 20
   _hasBeenUsed: 0
   _stampGORef: {fileID: 2645122873845147038, guid: 9ff3cf4caccb93948bc1f270223c3f0c, type: 3}

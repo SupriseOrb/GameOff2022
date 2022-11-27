@@ -36,5 +36,9 @@ public class UnitTile : BoardTile
         {
             BoardManager.Instance.ToggleTileInfo(_laneNumber, _tileNumber, _heldStamp.GetComponent<IUnitStamp>().GetTileDescription());
         }
+        else
+        {
+            BoardManager.Instance.HideTileInfo();
+        }
     }
 }

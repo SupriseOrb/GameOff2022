@@ -9,4 +9,5 @@ public interface IStamp
     string GetStampName();
     void DisableStamp();
     void EnableStamp();
+    string GetTileDescription();
 }

@@ -44,6 +44,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
     [SerializeField] private Material _damageFlashMaterial;
     [SerializeField] private float _flashTime = .125f;
     [SerializeField] private Coroutine _damageFlashCoroutine = null;
+    [SerializeField] private CardScriptableObject _cardSO;
 
     // Start is called before the first frame update
     void Start()
@@ -265,5 +266,13 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
         yield return new WaitForSeconds(_flashTime);
         _inkMinionSpriteRenderer.material = _defaultMaterial;
         _damageFlashCoroutine = null;
+    }
+
+    public string GetTileDescription()
+    {
+        string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.SUMMON});
+        string description = _cardSO.CardDescription;
+        string stats = Vocab.SEPARATE(new string[] {Vocab.HEALTH(_inkMinionCurrentHealth), Vocab.DAMAGE(_inkMinionAttackDamage)});
+        return name + "\n" + description + "\n" + stats;
     }
 }

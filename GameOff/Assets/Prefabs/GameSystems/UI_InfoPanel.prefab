@@ -110,12 +110,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5273267916359323698, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
       propertyPath: m_text
-      value: "Voluptas eligendi nostrum | Land | X Ink\r\nLorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Viverra justo nec ultrices dui sapien.\r\nVoluptas eligendi
-        nostrum | Item | X Ink\r\nLorem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Viverra justo nec ultrices dui sapien.\r\nX adipiscing, Y% consectetur\r"
+      value: "Voluptas eligendi nostrum | Land | X Ink\r\nAttacks enemies that get
+        close to it. Ink minions are actually an exact smaller copy of the demon
+        that summoned it, down to their personality. Don't tell the union reps...\nX
+        adipiscing, Y% consectetur\r\n\nVoluptas eligendi nostrum | Item | X Ink\r\nEmpowers
+        magical items and spells, tapping into the primal power of the earth.\nX
+        adipiscing, Y% consectetur\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273267916359323698, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
+      propertyPath: m_fontSize
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5273267916359323698, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
       propertyPath: m_margin.w
@@ -123,7 +127,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5273267916359323698, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
       propertyPath: m_margin.y
-      value: 70
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273267916359323698, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5302253879563389176, guid: f2a0b8565c6c7e34eb1a93d644f8bba9, type: 3}
       propertyPath: m_margin.y
