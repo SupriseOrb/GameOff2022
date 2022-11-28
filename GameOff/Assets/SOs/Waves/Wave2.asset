@@ -56,4 +56,4 @@ MonoBehaviour:
     _enemySpawnDistance: 0
     _timeToSpawn: 100
   _waveDuration: 120
-  _waveBreakBeforeDuration: 0
+  _waveBreakBeforeDuration: 10
