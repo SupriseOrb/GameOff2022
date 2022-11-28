@@ -12,6 +12,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: dd3ffd7846f23d24f90c063e1681e96b, type: 2}
     - target: {fileID: 4928695220663604935, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+      propertyPath: _spriteLayerRange.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928695220663604935, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+      propertyPath: _spriteLayerRange.y
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928695220663604935, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
       propertyPath: _soldierDieAnimationName
       value: Soldier_White_Death
       objectReference: {fileID: 0}

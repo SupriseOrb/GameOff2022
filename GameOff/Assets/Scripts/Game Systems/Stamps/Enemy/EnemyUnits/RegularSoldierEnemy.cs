@@ -56,6 +56,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     [SerializeField] private string _soldierDieAnimationName = "Soldier_Pink_Death";
 
     [SerializeField] private SpriteRenderer _soldierSpriteRenderer;
+    [SerializeField] private Vector2Int _spriteLayerRange;
     [SerializeField] private Material _defaultMaterial;
     [SerializeField] private Material _damageFlashMaterial;
     [SerializeField] private float _flashTime = .125f;
@@ -69,6 +70,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
 
     private void Start() 
     {
+        _soldierSpriteRenderer.sortingOrder = Random.Range(_spriteLayerRange.x, _spriteLayerRange.y + 1);
         LoadBaseStats();
         _isAttacking = true;
         

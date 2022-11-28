@@ -252,6 +252,7 @@ MonoBehaviour:
   _carriageWalkAnimationName: Carriage_Walk
   _carriageDieAnimationName: Carriage_Disappear
   _carriageSpriteRenderer: {fileID: 288912097047655511}
+  _spriteLayerRange: {x: 100, y: 129}
   _defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   _damageFlashMaterial: {fileID: 2100000, guid: a5cd46e541c39164e9682f36c1ec2eac, type: 2}
   _flashTime: 0.125

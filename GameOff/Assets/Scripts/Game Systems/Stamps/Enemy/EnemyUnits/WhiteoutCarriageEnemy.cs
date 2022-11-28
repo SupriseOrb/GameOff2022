@@ -46,6 +46,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     [SerializeField] private string _carriageDieAnimationName = "Carriage_Disappear";
 
     [SerializeField] private SpriteRenderer _carriageSpriteRenderer;
+    [SerializeField] private Vector2Int _spriteLayerRange;
     [SerializeField] private Material _defaultMaterial;
     [SerializeField] private Material _damageFlashMaterial;
     [SerializeField] private float _flashTime = .125f;
@@ -55,11 +56,11 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     {
         _carriageRigidBody = GetComponent<Rigidbody2D>();    
         _carriageCollider = GetComponent<BoxCollider2D>();
-
     }
 
     private void Start() 
     {
+        _carriageSpriteRenderer.sortingOrder = Random.Range(_spriteLayerRange.x, _spriteLayerRange.y + 1);
         AkSoundEngine.PostEvent("Play_CarriageEntrance", gameObject);
         AkSoundEngine.PostEvent("Play_CarriageMovement", gameObject);
         LoadBaseStats();
