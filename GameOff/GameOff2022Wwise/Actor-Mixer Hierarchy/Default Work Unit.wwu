@@ -168,14 +168,9 @@
 						</RandomSequenceContainer>
 						<Sound Name="Cliche Hand Cycle" ID="{41FB3350-2BF5-46F7-BAB3-5F1521EA5049}" ShortID="599368527">
 							<PropertyList>
-								<Property Name="OutputBusLowpass" Type="int16">
-									<ValueList>
-										<Value>62</Value>
-									</ValueList>
-								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -195,10 +190,17 @@
 										<MediaID ID="31150185"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Cliche_HandCycle_v2" ID="{07C438CD-24F7-46EF-B605-E07A6CEA8349}">
+									<Language>SFX</Language>
+									<AudioFile>Cliche_HandCycle_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="495478347"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Cliche_HandCycle_v1" ID="{DAE16AAB-EA73-4E71-867B-625888851AF5}" Platform="Linked"/>
+								<ActiveSource Name="Cliche_HandCycle_v2" ID="{07C438CD-24F7-46EF-B605-E07A6CEA8349}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Cliche Movement" ID="{916A96F9-22F1-49DB-A17D-BD2DD7EF254C}" ShortID="663630041">

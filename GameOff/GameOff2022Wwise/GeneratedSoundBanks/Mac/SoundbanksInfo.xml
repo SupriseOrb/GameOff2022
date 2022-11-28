@@ -11,16 +11,16 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="3473867798">
+		<SoundBank Id="393239870" Language="SFX" Hash="2689194068">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3559121215" Name="Cliche_HandCycle" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Cliche_HandCycle" DurationType="OneShot" DurationMin="1.741814" DurationMax="1.741814">
 					<IncludedMemoryFiles>
-						<File Id="31150185" Language="SFX">
-							<ShortName>Cliche_HandCycle_v1.wav</ShortName>
-							<Path>SFX/Cliche_HandCycle_v1_10C4C929.wem</Path>
+						<File Id="495478347" Language="SFX">
+							<ShortName>Cliche_HandCycle_v2.wav</ShortName>
+							<Path>SFX/Cliche_HandCycle_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -411,6 +411,9 @@
 				</Event>
 				<Event Id="4159098002" Name="Unmute_Ambience" ObjectPath="\Events\Default Work Unit\SFX Events\Ambience\Unmute_Ambience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="2649027589" Name="Carriage_Time" ObjectPath="\Game Parameters\Default Work Unit\Carriage_Time"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1768843490" Name="Ambience_states" ObjectPath="\States\Default Work Unit\Ambience_states" GUID="{15F33CAD-23F8-48F3-A4AB-9E7FC70A61A4}">
 					<States>
@@ -421,7 +424,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="555639807">
+		<SoundBank Id="1355168291" Language="SFX" Hash="365719913">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>

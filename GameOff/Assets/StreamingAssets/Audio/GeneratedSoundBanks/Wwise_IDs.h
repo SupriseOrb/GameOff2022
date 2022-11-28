@@ -111,6 +111,7 @@ namespace AK
     {
         static const AkUniqueID ALLVOLUME = 2731583604U;
         static const AkUniqueID AMBIENCEVOLUME = 1204480359U;
+        static const AkUniqueID CARRIAGE_TIME = 2649027589U;
         static const AkUniqueID IS_PAUSED = 316213210U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID SFXVOLUME = 988953028U;

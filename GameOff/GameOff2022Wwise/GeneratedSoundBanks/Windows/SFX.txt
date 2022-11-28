@@ -56,6 +56,9 @@ State	ID	Name	State Group			Notes
 	1625584349	Ambience_1	Ambience_states			
 	1625584350	Ambience_2	Ambience_states			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2649027589	Carriage_Time			\Default Work Unit\Carriage_Time	
+
 Effect plug-ins	ID	Name	Type				Notes
 	1992114213	Sidechain_Meter	Wwise Meter			
 
@@ -63,7 +66,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	3597688	MenuUI_Hover_Eb_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\MenuUI_Hover_Eb_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_Eb_v1		10742
 	21150305	Placeholder	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Placeholder_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Placeholder		150000
 	22757368	Harpy Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Harpy Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Harpy Stamp_v1		126174
-	31150185	Cliche Hand Cycle	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Cliche_HandCycle_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hand Cycle		307320
 	45222698	Time Piece Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Time Piece Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Time Piece Stamp_v1		106626
 	57120246	Ink Demon Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Ink Demon Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Ink Demon Stamp_v1		126174
 	95509999	Rough Ground Item Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Rough Ground Item Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Rough Ground Item Stamp_v1		84398
@@ -87,6 +89,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	384752991	Cliche_HoverAnimation_3_v2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Cliche_HoverAnimation_3_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_3_v2		8628
 	407116397	Bramble Patch	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Bramble Patch_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Bramble Patch		84480
 	426370904	Carriage Movement Loop_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Carriage Movement Loop_v1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Carriage Movement Loop_v1		1347226
+	495478347	Cliche Hand Cycle	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Cliche_HandCycle_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hand Cycle		153692
 	593876093	Item take Damage_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Item take Damage_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Item take Damage_v1		21300
 	597791133	Ink Blot Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Ink Blot Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Ink Blot Stamp_v1		42840
 	657855576	Slider Tick	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\MenuUI_Slider_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Slider Tick		12242
