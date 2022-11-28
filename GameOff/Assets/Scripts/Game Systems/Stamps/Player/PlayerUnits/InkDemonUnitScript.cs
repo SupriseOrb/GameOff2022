@@ -116,6 +116,15 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 
     public void UpgradeUnit(int upgradePath)
     {
+        //Remove dead minions
+        for(int i = _activeMinions.Count - 1; i >= 0; i--)
+        {
+            if(_activeMinions[i] == null)
+            {
+                _activeMinions.RemoveAt(i);
+            }
+        }
+
         if(upgradePath == (int)_currentUpgradePath)
         {
             Debug.Log("Upgrading Random Stat");
@@ -221,7 +230,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
         {
             _summonTile.SetHeldStamp(_inkMinionPrefab);
             _activeMinions.Insert(0, _summonTile.GetHeldStamp().GetComponent<InkDemonMinion>());
-            _activeMinions[0].UpdateMinionStats(_currentUpgradePath, _inkMinionHealth, _inkMinionAttackSpeed, _inkMinionDamage, 4, 5, _inkDemonLaneNumber); //Set its stats based on its upgrades
+            _activeMinions[0].UpdateMinionStats(_currentUpgradePath, _inkMinionHealth, _inkMinionAttackSpeed, _inkMinionDamage, _inkMinionDeathDamageMultiplier, _inkMinionSlowAmount, _inkMinionSlowDuration, _inkDemonLaneNumber); //Set its stats based on its upgrades
             _inkDemonAnimator.Play(_inkDemonBlueAttackAnimationName);
         }
     }

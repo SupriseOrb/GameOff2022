@@ -46,7 +46,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
     [SerializeField] BoolVariable _isInWave;
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         foreach(AnimationClip clip in _inkMinionAnimator.runtimeAnimatorController.animationClips)
         {
@@ -124,6 +124,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
         {
             if(_inkMinionAttackCooldown <= 0)
             {
+                Debug.Log("Im attacking at: " + _inkMinionAttackCooldown);
                 ActivateStampAttack();
                 _inkMinionAttackCooldown = 1 / _inkMinionAttackSpeed;
             }

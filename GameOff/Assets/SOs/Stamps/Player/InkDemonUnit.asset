@@ -20,8 +20,8 @@ MonoBehaviour:
   _unitCooldownReduction: 0
   _unitDamage: 1
   _unitAttackSpeed: 1
-  _unitSlowAmount: 0
-  _unitSlowDuration: 0
+  _unitSlowAmount: 0.2
+  _unitSlowDuration: 1
   _unitHealth: 5
   _attackDamageIncreaseAmount: 0.5
   _attackSpeedIncreaseAmount: 0.2
