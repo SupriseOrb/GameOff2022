@@ -313,9 +313,9 @@
 						</Sound>
 						<Sound Name="Back_Button" ID="{1B603DA1-656C-4E0E-9969-FF5BA81F1DF7}" ShortID="350062024">
 							<PropertyList>
-								<Property Name="Volume" Type="Real64">
+								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>6</Value>
+										<Value>-100</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -803,13 +803,6 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Spikey Bush Stamp_v1" ID="{C2633BA9-7C9C-4460-BCD3-BDC1EEE575E1}" ShortID="1021378438">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>2</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -826,10 +819,17 @@
 										<MediaID ID="366129106"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Spikey Bush Stamp_v3" ID="{40C6B1A8-BD2E-4F56-B365-2F67E3293050}">
+									<Language>SFX</Language>
+									<AudioFile>Spikey Bush Stamp_v3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="594252858"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Spikey Bush Stamp_v1" ID="{B18C7B2B-ACFE-416C-9D2E-DACC04A5CF1F}" Platform="Linked"/>
+								<ActiveSource Name="Spikey Bush Stamp_v3" ID="{40C6B1A8-BD2E-4F56-B365-2F67E3293050}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Time Piece Stamp_v1" ID="{21C414DD-583D-478C-BAC5-CE902F47F676}" ShortID="933480317">
@@ -1277,51 +1277,6 @@
 								<ActiveSource Name="Item take Damage_v1" ID="{94D86786-8C49-4BF7-8A37-FF32D4CD1720}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Redcap Ability" ID="{D1E82BBF-E2A9-499F-AF74-147BAFA338F6}" ShortID="418320996">
-							<PropertyList>
-								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>2</Value>
-									</ValueList>
-								</Property>
-								<Property Name="SpeakerPanning" Type="int16" Value="2"/>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Redcap Ability_v1" ID="{AB5A5668-AF8C-46CE-9644-643238503A67}">
-									<Language>SFX</Language>
-									<AudioFile>Redcap Ability_v1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="220711120"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<PositioningInfo>
-								<Panner Name="" ID="{28BF8700-1FFB-435A-AC68-31C6E2A547ED}">
-									<PropertyList>
-										<Property Name="PanX" Type="Real64" Value="-36.7201426024955"/>
-										<Property Name="PanY" Type="Real64" Value="-0.767754318618042"/>
-									</PropertyList>
-								</Panner>
-							</PositioningInfo>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="Redcap Ability_v1" ID="{AB5A5668-AF8C-46CE-9644-643238503A67}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Item &amp; Enemy death" ID="{6BAAEFD4-8A13-4A15-B926-B87C72188EF2}" ShortID="637727673">
 							<PropertyList>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
@@ -1402,49 +1357,6 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Spikey Bush Hit_v1" ID="{99CBAA8D-C626-4A65-9479-77185D685EDF}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Harpy Attack 1_v1" ID="{33302D76-62CC-4517-99C9-396D8E6B15B9}" ShortID="637674443">
-							<PropertyList>
-								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>2</Value>
-									</ValueList>
-								</Property>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Harpy Attack 1_v1" ID="{FD9A1370-A88F-4110-8939-1625238D3FAE}">
-									<Language>SFX</Language>
-									<AudioFile>Harpy Attack 1_v1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="430046344"/>
-									</MediaIDList>
-								</AudioFileSource>
-								<AudioFileSource Name="Harpy Ability_v2" ID="{36986EBB-E1F2-4D82-9D36-0B3AE1BFE7E2}">
-									<Language>SFX</Language>
-									<AudioFile>Harpy Ability_v2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="738157367"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="Harpy Ability_v2" ID="{36986EBB-E1F2-4D82-9D36-0B3AE1BFE7E2}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Carriage Movement Loop_v1" ID="{9C23E6CA-DBD1-4E2E-A1C8-B594EFB86E2A}" ShortID="506687537">
@@ -1611,6 +1523,366 @@
 								<ActiveSource Name="Dark Drone_v1" ID="{28700CB1-9C90-4019-8678-36B77D172BAE}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="Harpy Attack" ID="{696BECA3-B4F4-428C-9721-AC2597101CF3}" ShortID="726529537">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Harpy Attack 1_v1" ID="{33302D76-62CC-4517-99C9-396D8E6B15B9}" ShortID="637674443">
+									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Harpy Attack 1_v1" ID="{FD9A1370-A88F-4110-8939-1625238D3FAE}">
+											<Language>SFX</Language>
+											<AudioFile>Harpy Attack 1_v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="430046344"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Harpy Ability_v2" ID="{36986EBB-E1F2-4D82-9D36-0B3AE1BFE7E2}">
+											<Language>SFX</Language>
+											<AudioFile>Harpy Ability_v2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="738157367"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Harpy Ability_v3" ID="{CA2EB941-E727-43AA-A687-4DFAEE80497D}">
+											<Language>SFX</Language>
+											<AudioFile>Harpy Ability_v3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="582375716"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Harpy Ability_v3" ID="{CA2EB941-E727-43AA-A687-4DFAEE80497D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Harpy Attack 1_v1_01" ID="{F26F8B3C-2BD8-44E2-A227-A76FE4906E6A}" ShortID="33912723">
+									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>50</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Harpy Attack 1_v1" ID="{7D409651-FD65-4153-8160-5EC8AA5BF009}">
+											<Language>SFX</Language>
+											<AudioFile>Harpy Attack 1_v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="430046344"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Harpy Ability_v2" ID="{45A6C60D-D853-420D-8DB2-A7294EBAE8C3}">
+											<Language>SFX</Language>
+											<AudioFile>Harpy Ability_v2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="738157367"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Harpy Ability_v3" ID="{C18B2076-5CEA-4200-A621-A73646C0FF47}">
+											<Language>SFX</Language>
+											<AudioFile>Harpy Ability_v3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="582375716"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Harpy Ability_v3" ID="{C18B2076-5CEA-4200-A621-A73646C0FF47}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Harpy Attack 1_v1_02" ID="{BD7C6F32-5AB3-49EF-83B0-DC2832587FD2}" ShortID="1058502559">
+									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-50</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Harpy Attack 1_v1" ID="{9AF6D466-AB39-4945-84D8-B5997A0CED61}">
+											<Language>SFX</Language>
+											<AudioFile>Harpy Attack 1_v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="430046344"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Harpy Ability_v2" ID="{84B4BABA-C4B3-49D4-92CC-835BC5C64757}">
+											<Language>SFX</Language>
+											<AudioFile>Harpy Ability_v2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="738157367"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Harpy Ability_v3" ID="{87B51655-0104-4405-A52E-C51C45EB796D}">
+											<Language>SFX</Language>
+											<AudioFile>Harpy Ability_v3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="582375716"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Harpy Ability_v3" ID="{87B51655-0104-4405-A52E-C51C45EB796D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Redcap Attack" ID="{3141DD2B-E705-4657-A6E9-B25A5E5118CA}" ShortID="854989764">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Redcap Ability" ID="{D1E82BBF-E2A9-499F-AF74-147BAFA338F6}" ShortID="418320996">
+									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="SpeakerPanning" Type="int16" Value="2"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Redcap Ability_v1" ID="{AB5A5668-AF8C-46CE-9644-643238503A67}">
+											<Language>SFX</Language>
+											<AudioFile>Redcap Ability_v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="220711120"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Redcap Ability_v2" ID="{F8FB5F3C-8523-4D0D-A3D9-E3E84307A297}">
+											<Language>SFX</Language>
+											<AudioFile>Redcap Ability_v2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="83428983"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{28BF8700-1FFB-435A-AC68-31C6E2A547ED}">
+											<PropertyList>
+												<Property Name="PanX" Type="Real64" Value="-36.7201426024955"/>
+												<Property Name="PanY" Type="Real64" Value="-0.767754318618042"/>
+											</PropertyList>
+										</Panner>
+									</PositioningInfo>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Redcap Ability_v2" ID="{F8FB5F3C-8523-4D0D-A3D9-E3E84307A297}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Redcap Ability_01" ID="{79B4BB5E-689A-43C4-AA55-16B6703B8E3F}" ShortID="979723756">
+									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-50</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Redcap Ability_v1" ID="{F4815F66-7D99-4352-9368-F737796B2502}">
+											<Language>SFX</Language>
+											<AudioFile>Redcap Ability_v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="220711120"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Redcap Ability_v2" ID="{C0529ED3-B3F0-4B2C-91BF-ED087AC6B849}">
+											<Language>SFX</Language>
+											<AudioFile>Redcap Ability_v2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="83428983"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Redcap Ability_v2" ID="{C0529ED3-B3F0-4B2C-91BF-ED087AC6B849}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Redcap Ability_02" ID="{A4617535-AA78-4214-B0CA-BF4F6B6CB53C}" ShortID="374765711">
+									<PropertyList>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Redcap Ability_v1" ID="{11046499-3A8B-4C1B-93CF-B87AD7F24BDA}">
+											<Language>SFX</Language>
+											<AudioFile>Redcap Ability_v1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="220711120"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Redcap Ability_v2" ID="{CF152FBC-4B0B-4AC8-AF45-FBBAA48EC91A}">
+											<Language>SFX</Language>
+											<AudioFile>Redcap Ability_v2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="83428983"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Redcap Ability_v2" ID="{CF152FBC-4B0B-4AC8-AF45-FBBAA48EC91A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambience" ID="{CF3088AB-B553-4DE8-BC89-145AA3F4078A}" ShortID="362472830">

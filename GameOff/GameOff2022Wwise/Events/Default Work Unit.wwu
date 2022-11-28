@@ -409,7 +409,7 @@
 										<Action Name="" ID="{E080484B-41B0-4165-A4F1-EFE414994948}" ShortID="85333004">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Redcap Ability" ID="{D1E82BBF-E2A9-499F-AF74-147BAFA338F6}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+													<ObjectRef Name="Redcap Attack" ID="{3141DD2B-E705-4657-A6E9-B25A5E5118CA}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -445,7 +445,7 @@
 										<Action Name="" ID="{9F241132-A4CD-43A8-A384-62051529F8CF}" ShortID="32973036">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Harpy Attack 1_v1" ID="{33302D76-62CC-4517-99C9-396D8E6B15B9}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+													<ObjectRef Name="Harpy Attack" ID="{696BECA3-B4F4-428C-9721-AC2597101CF3}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -547,6 +547,26 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
+										<Action Name="" ID="{386C75D9-2C7E-406A-8F32-4B995649BC1E}" ShortID="358327410">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="7"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Carriage Movement Loop_v1" ID="{9C23E6CA-DBD1-4E2E-A1C8-B594EFB86E2A}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{FE874FC9-6AA0-422B-A1A2-A1F5EFE2AC79}" ShortID="174342431">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="7"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Redcap Attack" ID="{3141DD2B-E705-4657-A6E9-B25A5E5118CA}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="Stop_Ambience" ID="{3A128923-861C-428D-8C06-84569EC2B2F9}">
@@ -573,6 +593,26 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="AmbienceVolume" ID="{003FB62E-3072-4B7E-BFF0-F8A957BFB63E}" WorkUnitID="{9B49F9C4-C032-4014-AC8A-C0ECD3D54925}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{D3D22591-4A8C-4D37-B068-5EF1BDEF729E}" ShortID="447258207">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="9"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Redcap Attack" ID="{3141DD2B-E705-4657-A6E9-B25A5E5118CA}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{ACAE5CDA-A2E1-419F-84AF-300CE0778197}" ShortID="1048125581">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="9"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Carriage Movement Loop_v1" ID="{9C23E6CA-DBD1-4E2E-A1C8-B594EFB86E2A}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
