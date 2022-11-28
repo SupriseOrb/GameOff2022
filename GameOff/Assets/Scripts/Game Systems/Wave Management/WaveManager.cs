@@ -11,13 +11,22 @@ public class WaveManager : MonoBehaviour
     private Dictionary<int, GameObject[][]> _currentWaveSpawns;
 
     private const int MAXINTENSITYLEVEL = 3;
+    private int _lastIntensitySet;
     private int _currentIntensity
     {
         get
         {
-            return Mathf.Min(_currentWaveIndex / MAXINTENSITYLEVEL + 1, MAXINTENSITYLEVEL);
+            for (int multiplier = 1; multiplier <= MAXINTENSITYLEVEL; multiplier++)
+            {
+                if (_currentWaveIndex <= (Mathf.RoundToInt(_waves.Count/(float)MAXINTENSITYLEVEL)*multiplier))
+                {
+                    return multiplier;
+                }
+            }
+            return MAXINTENSITYLEVEL;
         }
     }
+    [SerializeField] private EnvironmentManager _environmentManager;
 
     [Header("Debug Variables")]
     [SerializeField] private WaveScriptableObject _currentWave;
@@ -53,9 +62,10 @@ public class WaveManager : MonoBehaviour
         _currentWaveIndex = 0;
         _currentWaveSpawns = new Dictionary<int, GameObject[][]>();
         LoadNextWave();
-        BroadcastIntensityChange();
         _startWaveCanvas.enabled = true;
         //Clear last wave information
+        _lastIntensitySet = 0;
+        BroadcastIntensityChange();
     }
 
     // We may want to add in a way to determine if all the enemies in a wave have died
@@ -121,7 +131,7 @@ public class WaveManager : MonoBehaviour
             }
         }
         AkSoundEngine.PostEvent("Play_WaveStart", gameObject);
-        //BroadcastIntensityChange();
+        BroadcastIntensityChange();
         _startWaveCanvas.enabled = false;
         _isFirstWave = false;
     }
@@ -229,8 +239,14 @@ public class WaveManager : MonoBehaviour
     // Used to broadcast intensity changes to the music, ambience, and art
     private void BroadcastIntensityChange()
     {
+        if (_lastIntensitySet == _currentIntensity)
+        {
+            return;
+        }
+        _lastIntensitySet = _currentIntensity;
         AkSoundEngine.SetState("Battle_Intensity", "Battle_Intensity_" + _currentIntensity);
         AkSoundEngine.SetState("Ambience_states", "Ambience_" + _currentIntensity);
+        _environmentManager.ChangeIntensity(_currentIntensity);
     }
 }
 

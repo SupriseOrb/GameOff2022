@@ -29,7 +29,7 @@ public class EnvironmentManager : MonoBehaviour
         }
 
         _currentIntensity = newIntensity - 1;
-        
+
         // 1) Lighting
         for (int i = 0; i < _lighting.Length; i++)
         {

@@ -159,7 +159,7 @@ public class BoardManager : MonoBehaviour
                 debugList = lane.GetLaneEnemies();
                 if(debugList.Count != 0)
                 {
-                   Debug.Log("Wave is not over: " + debugList.Count);
+                   // Debug.Log("Wave is not over: " + debugList.Count);
                    return;
                 }
             }

@@ -98,7 +98,7 @@ public class InputManager : MonoBehaviour
                         if(DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
                         {
                             unitTile.SetHeldStamp(_selectedCard.CardSO.StampGO);
-                            Debug.Log("Placed Unit " + _selectedCard + " onto UnitTile!");
+                            // Debug.Log("Placed Unit " + _selectedCard + " onto UnitTile!");
                         }
                         else
                         {
@@ -109,7 +109,7 @@ public class InputManager : MonoBehaviour
                     else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.SPELL)
                     {
                         unitTile.PlaySpell(_selectedCard.CardSO.StampGO);
-                        Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
+                        // Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
                         DeckManager.Instance.ResetCardSelection(); 
                     }
                     else
@@ -125,7 +125,7 @@ public class InputManager : MonoBehaviour
                         if(DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
                         {
                             boardTile.SetHeldStamp(_selectedCard.CardSO.StampGO);
-                            Debug.Log("Placed Item " + _selectedCard + " onto BoardTile!");
+                            // Debug.Log("Placed Item " + _selectedCard + " onto BoardTile!");
                         }
                         else
                         {
@@ -140,7 +140,7 @@ public class InputManager : MonoBehaviour
                             BoardLane boardLane = BoardManager.Instance.GetLane(boardTile.LaneNumber);
                             boardLane.ApplyLandStamp(_selectedCard.CardSO.StampGO);
                             _selectedCard.HasBeenUsed = true;
-                            Debug.Log("Placed Land " + _selectedCard + " onto BoardLane!");
+                            // Debug.Log("Placed Land " + _selectedCard + " onto BoardLane!");
                         }
                         else
                         {
@@ -151,7 +151,7 @@ public class InputManager : MonoBehaviour
                     else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.SPELL)
                     {
                         boardTile.PlaySpell(_selectedCard.CardSO.StampGO);
-                        Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
+                        // Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
                         DeckManager.Instance.ResetCardSelection(); 
                     }
                     else
