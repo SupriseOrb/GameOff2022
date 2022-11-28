@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnvironmentManager : MonoBehaviour
 {
     [SerializeField] GameObject[] _lighting;
-    [SerializeField] private int _debugIntensity = 2;
     [SerializeField] private int _currentIntensity = 0;
 
     [SerializeField] Material[] _treeMaterials;
@@ -20,10 +19,6 @@ public class EnvironmentManager : MonoBehaviour
             2) Ocean
             3) Trees
     */
-    void Start()
-    {
-        ChangeIntensity(_debugIntensity);
-    }
 
     public void ChangeIntensity(int newIntensity)
     {
