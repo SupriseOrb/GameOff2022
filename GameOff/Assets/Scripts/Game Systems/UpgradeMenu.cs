@@ -55,8 +55,10 @@ public class UpgradeMenu : MonoBehaviour
         AkSoundEngine.PostEvent("Play_UIPause", gameObject);
         for (int i = 0; i < _cardUpgrades.Length; i++)
         {
+            _cardUpgrades[i].icon.material = upgrades[i].material;
             _cardUpgrades[i].icon.sprite = unitIcon;
             _cardUpgrades[i].name.text = upgrades[i].name;
+            _cardUpgrades[i].name.color = upgrades[i].color;
             _cardUpgrades[i].description.text = upgrades[i].descriptionBase;
         }
         switch (upgradePath)

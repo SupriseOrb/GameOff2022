@@ -21,6 +21,7 @@ MonoBehaviour:
   _unitDamage: 5
   _unitAttackSpeed: 0.2
   _unitSlowAmount: 0
+  _unitSlowDuration: 0
   _unitHealth: 5
   _attackDamageIncreaseAmount: 2
   _attackSpeedIncreaseAmount: 0.1
@@ -29,12 +30,16 @@ MonoBehaviour:
   _uniqueUpgradeThreeIncreaseAmount: 0
   _upgrades:
   - name: Choppy-Whoppy
+    material: {fileID: 2100000, guid: f9d29727a81aa8f499a8c9f2c5d6c0c3, type: 2}
+    color: {r: 0.08235294, g: 0.16078432, b: 0.29411766, a: 1}
     descriptionBase: "The Redcap\u2019s inkball pierces through an additional enemy."
     descriptionRandom: 'Randomly increase one of the following stats: Attack Damage,
       Attack Speed, or Projectile Piercing'
     descriptionResetWarning: "The Redcap\u2019s inkball pierces through an additional
       enemy. Choosing this upgrade will remove all previous upgrades."
   - name: Can't Touch This
+    material: {fileID: 2100000, guid: 86564ecd4baadf540b46b9142acd5f53, type: 2}
+    color: {r: 0.23137255, g: 0.14117648, b: 0.30980393, a: 1}
     descriptionBase: "The Redcap\u2019s inkball can now stun enemies."
     descriptionRandom: 'Randomly increase one of the following stats: Attack Damage,
       Attack Speed, or Stun Duration'

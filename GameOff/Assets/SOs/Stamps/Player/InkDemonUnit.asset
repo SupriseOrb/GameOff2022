@@ -30,6 +30,8 @@ MonoBehaviour:
   _uniqueUpgradeThreeIncreaseAmount: 30
   _upgrades:
   - name: Volatile Summons
+    material: {fileID: 2100000, guid: d93b54e24a61c004abe83df4cfb0c0cd, type: 2}
+    color: {r: 0.08235294, g: 0.11764706, b: 0.24705882, a: 1}
     descriptionBase: The Ink Demon summons minions less frequently, but minions now
       deal damage and slow enemies on death.
     descriptionRandom: 'Randomly increase one of the following stats: Attack Damage,
@@ -38,6 +40,8 @@ MonoBehaviour:
       now deal damage and slow enemies on death. Choosing this upgrade will remove
       all previous upgrades.
   - name: Mass-Produced Summons
+    material: {fileID: 2100000, guid: 2bca6a16006464643b641cde98f0a985, type: 2}
+    color: {r: 0.34901962, g: 0.08627451, b: 0.0627451, a: 1}
     descriptionBase: The Ink Demon summons minions more frequently.
     descriptionRandom: 'Randomly increase one of the following stats: Attack Damage,
       Attack Speed, or Minion Health'

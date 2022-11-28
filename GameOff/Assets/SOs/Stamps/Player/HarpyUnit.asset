@@ -30,6 +30,8 @@ MonoBehaviour:
   _uniqueUpgradeThreeIncreaseAmount: 0.2
   _upgrades:
   - name: Disorienting Song
+    material: {fileID: 2100000, guid: 3b79ddd3414eedd40ab19499a14461ce, type: 2}
+    color: {r: 0.22745098, g: 0.41960785, b: 0.34509805, a: 1}
     descriptionBase: The Harpy attacks less frequently and no longer slows, but moves
       enemies to a different lane instead.
     descriptionRandom: 'Randomly increase one of the following stats: Attack Damage
@@ -38,6 +40,8 @@ MonoBehaviour:
       but moves enemies to a different lane instead. Choosing this upgrade will remove
       all previous upgrades.
   - name: Booming Song
+    material: {fileID: 2100000, guid: b0d09e7c2653aed4ab3e4fdf269db2b7, type: 2}
+    color: {r: 0.1764706, g: 0.32156864, b: 0.41960785, a: 1}
     descriptionBase: Pushes enemies back and slows enemies.
     descriptionRandom: 'Randomly increase one of the following stats: Attack Damage,
       Attack Speed, Push Distance, or Slow Intensity'
