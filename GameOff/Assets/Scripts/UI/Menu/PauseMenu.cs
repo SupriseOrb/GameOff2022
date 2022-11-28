@@ -38,7 +38,7 @@ public class PauseMenu : Menu
             AkSoundEngine.PostEvent("Mute_Ambience", this.gameObject);
 
             _isPaused.Value = true;
-            // Collin TODO: Set the bus to 0 for sounds to be muted when paused
+            AkSoundEngine.SetRTPCValue("PauseBusVolume", 0f);
             _pauseMenuAnimator.Play("Panel_Open");
         }
         
@@ -59,7 +59,7 @@ public class PauseMenu : Menu
             if (!_inUpgradeMenu.Value)
             {
                 Time.timeScale = 1f;
-                // Collin TODO: Set the bus to 1 for sounds to be unmuted when resumed
+                AkSoundEngine.SetRTPCValue("PauseBusVolume", 100f);
             }
 
             _pauseMenuPanel.SetActive(false);

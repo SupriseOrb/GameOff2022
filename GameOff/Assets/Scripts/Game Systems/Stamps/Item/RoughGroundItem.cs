@@ -52,7 +52,7 @@ public class RoughGroundItem : MonoBehaviour, IItemStamp
 
     public void TakeDamage(float damage)
     {
-        // Collin todo: play dead sfx
+        AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
         _isDead = true;
         _groundAnimator.Play(_groundDisappearAnimation);
         _groundCollider.enabled = false;

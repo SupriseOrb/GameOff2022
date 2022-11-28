@@ -74,7 +74,46 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
-							<ReferenceList/>
+							<ChildrenList>
+								<Bus Name="PauseMenu" ID="{95063107-9096-4C43-94D2-623BE11B52D4}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{EC848276-F8D6-4CAF-A40B-210F9B59568D}" ShortID="1033441646">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="PauseBusVolume" ID="{8AD10FB3-AC9E-4B94-A96B-6006D212C42C}" WorkUnitID="{9B49F9C4-C032-4014-AC8A-C0ECD3D54925}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{F5203B9B-7870-4911-A1CB-53B4BD1170B2}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>98.75156</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
 							<ObjectLists/>
 						</Bus>
 						<Bus Name="Music" ID="{149B24FE-2813-495B-8104-0972DC1F5FAE}">

@@ -74,7 +74,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
 
     public void TakeDamage(float damage)
     {
-        AkSoundEngine.PostEvent("Play_SpikeyBushHit", gameObject);
+        
         _bushCurrentHealth -= damage;
         if (!_isOnCooldown)
         {
@@ -110,7 +110,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
 
     public void ActivateStampAbility()
     {
-        // COLLIN TODO: SPIKE BUSH ACTION
+        AkSoundEngine.PostEvent("Play_SpikeyBushHit", gameObject);
         _bushColliders = Physics2D.OverlapCircleAll(transform.position, _bushAttackRange);
         if (_bushColliders != null && _bushCollider != null)
         {

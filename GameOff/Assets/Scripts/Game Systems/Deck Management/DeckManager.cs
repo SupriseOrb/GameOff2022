@@ -104,7 +104,7 @@ public class DeckManager : MonoBehaviour
                     CycleHand();
                     DrawCards();
                     _currentReshuffleTimer = _baseReshuffleTimer;
-                    // COLLIN TODO: SFX makes people feel annoyed, anxious, and/or confused
+                    
                     AkSoundEngine.PostEvent("Cliche_HandCycle", gameObject);
                 }
                 _currentReshuffleTimer -= Time.deltaTime;    

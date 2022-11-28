@@ -51,7 +51,7 @@ public class UpgradeMenu : MonoBehaviour
     {
         _inUpgradeMenu.Value = true;
         Time.timeScale = 0f;
-        // Collin TODO: Set the bus to 0 for sounds to be muted when paused
+        AkSoundEngine.SetRTPCValue("PauseBusVolume", 0f);
 
         AkSoundEngine.PostEvent("Play_UIPause", gameObject);
         for (int i = 0; i < _cardUpgrades.Length; i++)
@@ -84,8 +84,8 @@ public class UpgradeMenu : MonoBehaviour
     {
         _inUpgradeMenu.Value = false;
         Time.timeScale = 1f;
-        // Collin TODO: Set the bus to 1 for sounds to be unmuted when resumed
-        
+        AkSoundEngine.SetRTPCValue("PauseBusVolume", 100f);
+
         AkSoundEngine.PostEvent("Play_Upgrade", gameObject);
         AkSoundEngine.PostEvent("Play_UIResume", gameObject);
         _animator.Play(_animationCloseString);

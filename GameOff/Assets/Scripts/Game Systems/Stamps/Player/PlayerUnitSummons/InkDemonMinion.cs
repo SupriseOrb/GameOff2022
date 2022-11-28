@@ -219,7 +219,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
                     _inkMinionAnimator.Play(_inkMinionRedDieAnimationName);
                     break;
             }
-            // Collin todo: play dead sfx
+            
             _isDead = true;
             _inkMinionCollider.enabled = false;
         }

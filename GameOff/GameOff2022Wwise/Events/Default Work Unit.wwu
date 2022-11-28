@@ -509,34 +509,6 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Mute_CarriageMovement" ID="{A841A89D-41A5-4970-93CE-D643070901B9}">
-									<ChildrenList>
-										<Action Name="" ID="{A9DB142A-15B8-4D36-AA00-B641DEE7D759}" ShortID="280679411">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="4"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Carriage Movement Loop_v1" ID="{9C23E6CA-DBD1-4E2E-A1C8-B594EFB86E2A}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="Unmute_CarriageMovement" ID="{1960100C-4A4F-4C8B-9DEE-637A28D87606}">
-									<ChildrenList>
-										<Action Name="" ID="{76269A6D-360E-4A40-9A7F-EC17A61DF562}" ShortID="836229197">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="5"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Carriage Movement Loop_v1" ID="{9C23E6CA-DBD1-4E2E-A1C8-B594EFB86E2A}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Ambience" ID="{6E0B9678-4952-48FA-898D-58617236A38C}" ShortID="44228726">

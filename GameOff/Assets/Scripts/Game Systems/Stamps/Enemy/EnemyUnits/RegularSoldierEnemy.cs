@@ -263,6 +263,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
             _hasDamaged = false;
             _soldierAnimator.Play(_soldierAttackAnimationName);
             // COLLIN TODO: Soldier attack sfx
+            // Opted to not make a soldier attack sfx, rather a ally take damage sound - Collin
         }
         //Play attack animation
     }
