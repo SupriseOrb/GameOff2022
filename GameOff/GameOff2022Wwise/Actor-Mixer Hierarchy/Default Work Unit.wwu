@@ -1038,6 +1038,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Ink Demon Stamp_v1" ID="{718E687B-B0B9-47A0-BE5B-0F197C8EE70F}" ShortID="1060339934">
+							<PropertyList>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -1055,12 +1058,23 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{FF1C8362-50E5-43D7-88AD-E416929E584B}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-77.7183600713012"/>
+										<Property Name="PanY" Type="Real64" Value="-0.383877159309021"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Ink Demon Stamp_v1" ID="{ACD670DF-B36D-4BC9-AF10-21EB1DF53FE9}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Redcap Stamp_v1" ID="{5ADBFF48-3CB7-4700-8CBE-7628418F3153}" ShortID="769902283">
+							<PropertyList>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -1078,12 +1092,25 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{27AD579E-15C7-4648-AF40-50E9795F96AB}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-74.1532976827095"/>
+										<Property Name="PanY" Type="Real64" Value="-0.383877159309021"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Redcap Stamp_v1" ID="{DA384091-C2D2-4B3C-B156-E9D04F3F5BB0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Harpy Stamp_v1" ID="{E946CD2F-F261-4724-BC4C-D6B8DA4AA07D}" ShortID="690397406">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -1101,6 +1128,13 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{7FD03F3E-783D-4A93-BF34-7C1B8C20F217}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-77.1836007130125"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Harpy Stamp_v1" ID="{53F6D3FB-9CDB-4D20-8E0A-EBF8859B5B48}" Platform="Linked"/>
@@ -1191,6 +1225,9 @@
 				<Folder Name="Combat" ID="{BE5D8A09-CEE6-4F5E-87F1-F1E28B6F9D1E}" ShortID="70047241">
 					<ChildrenList>
 						<Sound Name="Wave Start_v1" ID="{818E440E-1A93-46C8-98DC-065623F0D917}" ShortID="137241628">
+							<PropertyList>
+								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -1208,6 +1245,13 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{A45F7BCB-3EE3-44B2-96F8-9EBFC2A87A53}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="51.3368983957219"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Wave Start_v1" ID="{35D2A221-6EE9-47BE-A24D-6FD69931397B}" Platform="Linked"/>
@@ -1303,6 +1347,7 @@
 										<Value>2</Value>
 									</ValueList>
 								</Property>
+								<Property Name="SpeakerPanning" Type="int16" Value="2"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
@@ -1326,6 +1371,14 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{28BF8700-1FFB-435A-AC68-31C6E2A547ED}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-36.7201426024955"/>
+										<Property Name="PanY" Type="Real64" Value="-0.767754318618042"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Redcap Ability_v1" ID="{AB5A5668-AF8C-46CE-9644-643238503A67}" Platform="Linked"/>
@@ -1469,6 +1522,34 @@
 									<ValueList>
 										<Value>1</Value>
 									</ValueList>
+								</Property>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{7396CB61-2719-4124-A41C-7A8F05C1F69A}" ShortID="214798222">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Carriage_Time" ID="{BC51D99A-6800-443D-815C-47CF2D01BD7D}" WorkUnitID="{9B49F9C4-C032-4014-AC8A-C0ECD3D54925}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{370A58D9-DD6B-4452-B085-441F728943DD}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>100</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
 								</Property>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>

@@ -125,7 +125,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
         _soldierHealth -= damage;
         if(_soldierHealth <= 0)
         {
-            // Collin todo: play dead sfx
+            AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
             BoardManager.Instance.GetLane(_laneNumber).RemoveEnemyFromList(gameObject);
             _soldierAnimator.Play(_soldierDieAnimationName);
             _isDead = true;

@@ -226,7 +226,7 @@ public class WaveManager : MonoBehaviour
         Debug.Log("YOU WIN SMILE");
     }
 
-    // Used to broadcast intensity changes to the music and art
+    // Used to broadcast intensity changes to the music, ambience, and art
     private void BroadcastIntensityChange()
     {
         AkSoundEngine.SetState("Battle_Intensity", "Battle_Intensity_" + _currentIntensity);

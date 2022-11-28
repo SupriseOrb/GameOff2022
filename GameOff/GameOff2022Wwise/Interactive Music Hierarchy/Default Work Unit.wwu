@@ -1706,7 +1706,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicPlaylistContainer Name="Ambience_Loop_1" ID="{AB8FF17D-477E-4506-B536-A1B07760EBBB}" ShortID="1012519147">
+								<MusicPlaylistContainer Name="Ambience_Loop_1_Day" ID="{AB8FF17D-477E-4506-B536-A1B07760EBBB}" ShortID="1012519147">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -1830,7 +1830,7 @@
 										</MusicPlaylistItem>
 									</Playlist>
 								</MusicPlaylistContainer>
-								<MusicPlaylistContainer Name="Ambience_Loop_2" ID="{7FAB8E8B-6359-4BB4-8F1B-E0BA5A61CFE6}" ShortID="127345429">
+								<MusicPlaylistContainer Name="Ambience_Loop_3_Night" ID="{7FAB8E8B-6359-4BB4-8F1B-E0BA5A61CFE6}" ShortID="127345429">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -1840,7 +1840,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicSegment Name="Ambience Loop 2 (wind)" ID="{345822E2-90B7-44F5-B454-C5BC0556F200}" ShortID="314391607">
+										<MusicSegment Name="Ambience 2_v2" ID="{68EEF212-7A8C-41C7-9718-3AB4E4FECD68}" ShortID="267058642">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="101456.462585034"/>
 											</PropertyList>
@@ -1853,23 +1853,23 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="Ambience Loop 2 (wind)" ID="{2D4966B5-E01D-45AF-B2E6-80EA6AD56188}" ShortID="263749413">
+												<MusicTrack Name="Ambience 2_v2" ID="{7444309B-3FEC-4CC3-8D7D-BD957279408B}" ShortID="910715012">
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Ambience Loop 2 (wind)" ID="{0DE71724-C9F0-40FF-A437-628B3960027C}">
+														<AudioFileSource Name="Ambience 2_v2" ID="{D9114F4A-61DE-430F-88EE-BFC1602B513A}">
 															<Language>SFX</Language>
-															<AudioFile>Ambience Loop 2 (wind).wav</AudioFile>
+															<AudioFile>Ambience 2_v2.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="353146256"/>
+																<MediaID ID="364280936"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<TransitionList>
-														<MusicTransition Name="Root" ID="{AFC78205-305A-48CD-A39D-AE0B9686D120}">
+														<MusicTransition Name="Root" ID="{F0A9F28A-9E6F-4727-B235-80C123281EE5}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -1880,18 +1880,18 @@
 														<ObjectList Name="Sequences">
 															<Reference>
 																<Local>
-																	<MusicTrackSequence Name="" ID="{CC16929C-EF12-4DDD-AA9F-91EB76C4E4C1}">
+																	<MusicTrackSequence Name="" ID="{23B2DF9E-53A9-4649-A89C-A29203C523EA}">
 																		<ObjectLists>
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="Ambience Loop 2 (wind)" ID="{BC5FEF90-1CEF-484F-BE60-5D2AB8E2ADCE}">
+																						<MusicClip Name="Ambience 2_v2" ID="{515C2CBD-F7D1-4F36-BC9D-5C9B143F1829}">
 																							<PropertyList>
 																								<Property Name="EndTrimOffset" Type="Real64" Value="101456.462585034"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="Ambience Loop 2 (wind)" ID="{0DE71724-C9F0-40FF-A437-628B3960027C}"/>
+																							<AudioSourceRef Name="Ambience 2_v2" ID="{D9114F4A-61DE-430F-88EE-BFC1602B513A}"/>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -1908,12 +1908,12 @@
 												<ObjectList Name="Cues">
 													<Reference>
 														<Local>
-															<MusicCue Name="Entry Cue" ID="{0A30C855-399E-43C6-862F-7B7D0DDEA6BF}"/>
+															<MusicCue Name="Entry Cue" ID="{0B4CAE28-852A-4D44-8A5F-09755079A235}"/>
 														</Local>
 													</Reference>
 													<Reference>
 														<Local>
-															<MusicCue Name="Exit Cue" ID="{9FF7BD39-C7A6-44DD-8E55-EFE8AEC249AB}">
+															<MusicCue Name="Exit Cue" ID="{A6A27862-62A1-46BF-994B-1AB1B2AFDF73}">
 																<PropertyList>
 																	<Property Name="CueType" Type="int16" Value="1"/>
 																	<Property Name="TimeMs" Type="Real64" Value="101456.462585034"/>
@@ -1942,12 +1942,135 @@
 									<Playlist>
 										<MusicPlaylistItem Name="" ID="{BA669E55-B7CE-4EE8-B3BD-3B64134EF36C}" ShortID="75746999">
 											<ChildrenList>
-												<MusicPlaylistItem Name="" ID="{09FF5978-B8F8-4A8B-87EB-5442A6327BA1}" ShortID="9335661">
+												<MusicPlaylistItem Name="" ID="{3F98C1F3-0EFB-40FA-B000-A9A73935D9B6}" ShortID="1053263145">
 													<PropertyList>
 														<Property Name="LoopCount" Type="int16" Value="0"/>
 														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 													</PropertyList>
-													<SegmentRef Name="Ambience Loop 2 (wind)" ID="{345822E2-90B7-44F5-B454-C5BC0556F200}"/>
+													<SegmentRef Name="Ambience 2_v2" ID="{68EEF212-7A8C-41C7-9718-3AB4E4FECD68}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Playlist>
+								</MusicPlaylistContainer>
+								<MusicPlaylistContainer Name="Ambience_Loop_2_Dawn" ID="{4EE131FB-1EB1-46AD-8F51-C57F3CE79A53}" ShortID="61350026">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicSegment Name="Dawn Ambience_v2" ID="{40E6741C-89CF-48B6-9281-3254D78B1207}" ShortID="1062543385">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="106771.519274376"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Ambience" ID="{0CAED3A4-89D2-46DB-B78E-2BBF48FFA4F2}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="Dawn Ambience_v2" ID="{F93046AF-606E-47E3-BD8E-67B66587AFCC}" ShortID="654966829">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Dawn Ambience_v2" ID="{96975066-E03D-40A7-B727-3444FEE74EFE}">
+															<Language>SFX</Language>
+															<AudioFile>Dawn Ambience_v2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="248236009"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{2F20AEAE-E36D-41D1-9996-C02E8D3125AB}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{AA3860A1-392A-4037-BD0C-EC36A2280262}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Dawn Ambience_v2" ID="{E639DF17-07D4-4917-8A80-EC90181E2639}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="106771.519274376"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Dawn Ambience_v2" ID="{96975066-E03D-40A7-B727-3444FEE74EFE}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Cues">
+													<Reference>
+														<Local>
+															<MusicCue Name="Entry Cue" ID="{8FA1AC3E-E4E9-4B9F-AF25-01186AF100B7}"/>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicCue Name="Exit Cue" ID="{F6880BC4-4BCE-4253-ACCD-20EC5438C3B3}">
+																<PropertyList>
+																	<Property Name="CueType" Type="int16" Value="1"/>
+																	<Property Name="TimeMs" Type="Real64" Value="106771.519274376"/>
+																</PropertyList>
+															</MusicCue>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicSegment>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{C1F086D9-EEDE-4188-BFCE-E01BC49799D3}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{765412D0-F46F-499A-9210-7CAB3E31FD63}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists/>
+									<Playlist>
+										<MusicPlaylistItem Name="" ID="{DC0BC2CE-DB2F-44AE-BE55-C8D8847FE084}" ShortID="147185038">
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{18D982CD-F4D2-4D68-84DE-9C5CB9E98AC3}" ShortID="683515646">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Dawn Ambience_v2" ID="{40E6741C-89CF-48B6-9281-3254D78B1207}"/>
 												</MusicPlaylistItem>
 											</ChildrenList>
 										</MusicPlaylistItem>
@@ -1961,7 +2084,30 @@
 									</PropertyList>
 									<ChildrenList>
 										<MusicTransition Name="Transition" ID="{A50BCA75-CEEB-42B5-A472-6B2DEE50B573}">
-											<TransitionInfo/>
+											<PropertyList>
+												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="4"/>
+												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+											</PropertyList>
+											<TransitionInfo>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{F0439DEB-4E57-4592-BAEB-7EE9CE168CF2}">
+														<PropertyList>
+															<Property Name="FadeTime" Type="Real64" Value="8"/>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+												<DestinationFadeIn>
+													<MusicFade Name="Destination Fade-in" ID="{741B1FBE-D001-4EB4-AE33-E8886A041364}">
+														<PropertyList>
+															<Property Name="FadeOffset" Type="Real64" Value="-8"/>
+															<Property Name="FadeTime" Type="Real64" Value="8"/>
+														</PropertyList>
+													</MusicFade>
+												</DestinationFadeIn>
+											</TransitionInfo>
 										</MusicTransition>
 										<MusicTransition Name="Transition" ID="{F688185D-2865-435D-8F1E-028111F04C14}">
 											<PropertyList>
@@ -1974,10 +2120,10 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="DestinationContextObject">
-													<ObjectRef Name="Ambience_Loop_2" ID="{7FAB8E8B-6359-4BB4-8F1B-E0BA5A61CFE6}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+													<ObjectRef Name="Ambience_Loop_2_Dawn" ID="{4EE131FB-1EB1-46AD-8F51-C57F3CE79A53}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
 												</Reference>
 												<Reference Name="SourceContextObject">
-													<ObjectRef Name="Ambience_Loop_1" ID="{AB8FF17D-477E-4506-B536-A1B07760EBBB}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+													<ObjectRef Name="Ambience_Loop_1_Day" ID="{AB8FF17D-477E-4506-B536-A1B07760EBBB}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
 												</Reference>
 											</ReferenceList>
 											<TransitionInfo>
@@ -2010,10 +2156,10 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="DestinationContextObject">
-													<ObjectRef Name="Ambience_Loop_1" ID="{AB8FF17D-477E-4506-B536-A1B07760EBBB}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+													<ObjectRef Name="Ambience_Loop_3_Night" ID="{7FAB8E8B-6359-4BB4-8F1B-E0BA5A61CFE6}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
 												</Reference>
 												<Reference Name="SourceContextObject">
-													<ObjectRef Name="Ambience_Loop_2" ID="{7FAB8E8B-6359-4BB4-8F1B-E0BA5A61CFE6}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+													<ObjectRef Name="Ambience_Loop_2_Dawn" ID="{4EE131FB-1EB1-46AD-8F51-C57F3CE79A53}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
 												</Reference>
 											</ReferenceList>
 											<TransitionInfo>
@@ -2028,6 +2174,42 @@
 												</SourceFadeOut>
 												<DestinationFadeIn>
 													<MusicFade Name="Destination Fade-in" ID="{454DE687-035A-4FE8-8C38-42D5091156BB}">
+														<PropertyList>
+															<Property Name="FadeTime" Type="Real64" Value="8"/>
+														</PropertyList>
+													</MusicFade>
+												</DestinationFadeIn>
+											</TransitionInfo>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{A09A9764-A353-4E06-84EB-EAB1DCB5F017}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="4"/>
+												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="Ambience_Loop_1_Day" ID="{AB8FF17D-477E-4506-B536-A1B07760EBBB}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="Ambience_Loop_3_Night" ID="{7FAB8E8B-6359-4BB4-8F1B-E0BA5A61CFE6}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{C91EDFF7-C26A-46D9-82D1-C22AC77F4FF7}">
+														<PropertyList>
+															<Property Name="FadeOffset" Type="Real64" Value="8"/>
+															<Property Name="FadeTime" Type="Real64" Value="8"/>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+												<DestinationFadeIn>
+													<MusicFade Name="Destination Fade-in" ID="{2B57ED53-926E-443F-8A3E-7839708CBB79}">
 														<PropertyList>
 															<Property Name="FadeTime" Type="Real64" Value="8"/>
 														</PropertyList>
@@ -2079,18 +2261,26 @@
 							<EntryList>
 								<Entry>
 									<Path>
-										<PathElementRef Name="Ambience_2" ID="{E9BDBE55-1810-4124-816D-F965D36E5D5C}"/>
+										<PathElementRef Name="Dawn" ID="{E9BDBE55-1810-4124-816D-F965D36E5D5C}"/>
 									</Path>
 									<AudioNodeInfo>
-										<AudioNodeRef Name="Ambience_Loop_2" ID="{7FAB8E8B-6359-4BB4-8F1B-E0BA5A61CFE6}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}" Platform="Linked"/>
+										<AudioNodeRef Name="Ambience_Loop_2_Dawn" ID="{4EE131FB-1EB1-46AD-8F51-C57F3CE79A53}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}" Platform="Linked"/>
 									</AudioNodeInfo>
 								</Entry>
 								<Entry>
 									<Path>
-										<PathElementRef Name="Ambience_1" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
+										<PathElementRef Name="Day" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
 									</Path>
 									<AudioNodeInfo>
-										<AudioNodeRef Name="Ambience_Loop_1" ID="{AB8FF17D-477E-4506-B536-A1B07760EBBB}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}" Platform="Linked"/>
+										<AudioNodeRef Name="Ambience_Loop_1_Day" ID="{AB8FF17D-477E-4506-B536-A1B07760EBBB}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}" Platform="Linked"/>
+									</AudioNodeInfo>
+								</Entry>
+								<Entry>
+									<Path>
+										<PathElementRef Name="Night" ID="{62A6DBB4-E7F7-4119-97C6-2806A693EE6D}"/>
+									</Path>
+									<AudioNodeInfo>
+										<AudioNodeRef Name="Ambience_Loop_3_Night" ID="{7FAB8E8B-6359-4BB4-8F1B-E0BA5A61CFE6}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}" Platform="Linked"/>
 									</AudioNodeInfo>
 								</Entry>
 							</EntryList>

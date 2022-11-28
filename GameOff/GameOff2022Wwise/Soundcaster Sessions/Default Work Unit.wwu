@@ -20,6 +20,10 @@
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="Carriage_Time" ID="{BC51D99A-6800-443D-815C-47CF2D01BD7D}"/>
+							<Value>50.4369538077403</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="AllVolume" ID="{7E7B122A-9145-4910-8BC9-8083DEF38723}"/>
 							<Value>71.7852684144819</Value>
 						</RTPCValue>
@@ -43,7 +47,7 @@
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Battle_Intensity_3" ID="{F5404297-96CB-4787-B9FF-BB405B4A8E8B}"/>
 						<CurrentStateRef Name="Battle" ID="{05029B2D-7F58-46C1-8207-3AF1677D41F8}"/>
-						<CurrentStateRef Name="Ambience_1" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
+						<CurrentStateRef Name="Day" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
@@ -87,7 +91,7 @@
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Battle_Intensity_1" ID="{D85FCDF0-5F32-4588-8933-BC446D0CFB9A}"/>
 						<CurrentStateRef Name="Battle" ID="{05029B2D-7F58-46C1-8207-3AF1677D41F8}"/>
-						<CurrentStateRef Name="Ambience_1" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
+						<CurrentStateRef Name="Day" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

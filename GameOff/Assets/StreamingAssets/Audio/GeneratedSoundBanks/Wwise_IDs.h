@@ -72,8 +72,9 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID AMBIENCE_1 = 1625584349U;
-                static const AkUniqueID AMBIENCE_2 = 1625584350U;
+                static const AkUniqueID DAWN = 2009803003U;
+                static const AkUniqueID DAY = 311764537U;
+                static const AkUniqueID NIGHT = 1011622525U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace AMBIENCE_STATES

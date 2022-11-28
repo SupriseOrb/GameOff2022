@@ -52,9 +52,10 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1768843490	Ambience_states			\Default Work Unit\Ambience_states	
 
 State	ID	Name	State Group			Notes
+	311764537	Day	Ambience_states			
 	748895195	None	Ambience_states			
-	1625584349	Ambience_1	Ambience_states			
-	1625584350	Ambience_2	Ambience_states			
+	1011622525	Night	Ambience_states			
+	2009803003	Dawn	Ambience_states			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2649027589	Carriage_Time			\Default Work Unit\Carriage_Time	
