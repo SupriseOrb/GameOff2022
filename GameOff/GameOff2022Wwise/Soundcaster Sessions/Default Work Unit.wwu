@@ -21,7 +21,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Carriage_Time" ID="{BC51D99A-6800-443D-815C-47CF2D01BD7D}"/>
-							<Value>62.6716604244694</Value>
+							<Value>87.8901373283396</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="AllVolume" ID="{7E7B122A-9145-4910-8BC9-8083DEF38723}"/>

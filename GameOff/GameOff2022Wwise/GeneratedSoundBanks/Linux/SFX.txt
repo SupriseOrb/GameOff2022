@@ -92,7 +92,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	495478347	Cliche Hand Cycle	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_HandCycle_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hand Cycle		153692
 	582375716	Harpy Attack 1_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Harpy Ability_v3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Harpy Attack\Harpy Attack 1_v1		106412
 	593876093	Item take Damage_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Item take Damage_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Item take Damage_v1		21300
-	594252858	Spikey Bush Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Spikey Bush Stamp_v3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Spikey Bush Stamp_v1		88264
 	657855576	Slider Tick	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Slider_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Slider Tick		12242
 	687362730	MenuUI_Hover_Bb_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Hover_Bb_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_Bb_v1		12626
 	733354389	Text Sound 2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Text Sound 2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Text animation\Text Sound 2		216170
@@ -105,6 +104,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	843979227	Wave Start_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Wave Start_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Wave Start_v1		521158
 	847123605	Ink Demon Ability_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Ink Demon Ability_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Ink Demon Ability_v1		132514
 	851253141	Dark Drone_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Dark Drone_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Dark Drone_v1		1389516
+	888398214	Spikey Bush Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Spikey Bush Stamp_v4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Spikey Bush Stamp_v1		110314
 	902073114	Resume	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\MenuUI_Resume_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Resume		58652
 	907166050	Cliche_HoverAnimation_2_v2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cliche_HoverAnimation_2_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_2_v2		9100
 	957178096	Cow Moo Item Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Linux\SFX\Cow Moo Item Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Cow Moo Item Stamp_v1		106626

@@ -6,6 +6,7 @@
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Documents\Reaper Projects\Game Off Game Jam\Bounces\"/>
 				<Property Name="Event Action List\{0A1BB36C-9949-44A4-A783-1C42F1503A37}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{19029E53-357C-49C1-A219-DB7DBDEB411C}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{1960100C-4A4F-4C8B-9DEE-637A28D87606}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2774CB0E-7435-4425-ADED-7A1AD176FA30}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2B35E5C4-89FB-415C-B5CE-B0FA08716B6D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{363E6DD3-7ACC-4F47-A41E-947F6DC66D24}\x64_Expand States" Type="string" Value=""/>
@@ -39,6 +40,7 @@
 				<Property Name="Event Action List\{A09B1EC9-5F4E-4E26-9D70-61BBA686A7C8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{A2A2D83C-274D-4408-B0CF-C85BDB6313BA}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{A5058C67-0EC8-4C1D-97E1-1919B89D0B29}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{A841A89D-41A5-4970-93CE-D643070901B9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B0323596-6BE7-4874-838D-899071D4DC57}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{BCF66CC1-CE17-4F30-BA85-C8D45496F774}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{C9105AD8-D0E0-466E-ADB5-AFD6C4C3E610}\x64_Expand States" Type="string" Value=""/>

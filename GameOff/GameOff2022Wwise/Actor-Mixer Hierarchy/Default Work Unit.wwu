@@ -826,10 +826,17 @@
 										<MediaID ID="594252858"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Spikey Bush Stamp_v4" ID="{08E38EE6-3515-455F-AD0E-A8AE9CFA7D5F}">
+									<Language>SFX</Language>
+									<AudioFile>Spikey Bush Stamp_v4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="888398214"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Spikey Bush Stamp_v3" ID="{40C6B1A8-BD2E-4F56-B365-2F67E3293050}" Platform="Linked"/>
+								<ActiveSource Name="Spikey Bush Stamp_v4" ID="{08E38EE6-3515-455F-AD0E-A8AE9CFA7D5F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Time Piece Stamp_v1" ID="{21C414DD-583D-478C-BAC5-CE902F47F676}" ShortID="933480317">
@@ -1419,12 +1426,12 @@
 														<PointList>
 															<Point>
 																<XPos>0</XPos>
-																<YPos>200</YPos>
+																<YPos>63.41464</YPos>
 																<Flags>5</Flags>
 															</Point>
 															<Point>
 																<XPos>100</XPos>
-																<YPos>-200</YPos>
+																<YPos>-100</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>
@@ -1432,6 +1439,7 @@
 												</RTPC>
 											</RTPCList>
 										</Property>
+										<Property Name="PanY" Type="Real64" Value="-0.386100386100386"/>
 									</PropertyList>
 								</Panner>
 							</PositioningInfo>

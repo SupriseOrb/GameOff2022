@@ -36,6 +36,7 @@ public class PauseMenu : Menu
             AkSoundEngine.PostEvent("Play_UIPause", this.gameObject);
             AkSoundEngine.SetRTPCValue("Is_Paused", 100f);
             AkSoundEngine.PostEvent("Mute_Ambience", this.gameObject);
+            AkSoundEngine.PostEvent("Mute_CarriageMovement", this.gameObject);
 
             _isPaused.Value = true;
             _pauseMenuAnimator.Play("Panel_Open");
@@ -72,6 +73,7 @@ public class PauseMenu : Menu
     {
         AkSoundEngine.SetRTPCValue("Is_Paused", 0f);
         AkSoundEngine.PostEvent("Unmute_Ambience", this.gameObject);
+        AkSoundEngine.PostEvent("Unmute_CarriageMovement", this.gameObject);
     }
 
     public void MainMenu()

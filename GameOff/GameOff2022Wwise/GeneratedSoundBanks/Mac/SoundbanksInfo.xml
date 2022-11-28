@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="3016744979">
+		<SoundBank Id="393239870" Language="SFX" Hash="565212509">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -294,11 +294,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3893200314" Name="Play_StampSpikeyBush" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampSpikeyBush" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="3893200314" Name="Play_StampSpikeyBush" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampSpikeyBush" DurationType="OneShot" DurationMin="1.25" DurationMax="1.25">
 					<IncludedMemoryFiles>
-						<File Id="594252858" Language="SFX">
-							<ShortName>Spikey Bush Stamp_v3.wav</ShortName>
-							<Path>SFX/Spikey Bush Stamp_v3_10C4C929.wem</Path>
+						<File Id="888398214" Language="SFX">
+							<ShortName>Spikey Bush Stamp_v4.wav</ShortName>
+							<Path>SFX/Spikey Bush Stamp_v4_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -439,7 +439,7 @@
 				<GameParameter Id="2923328739" Name="UpgradeSound_IsPlaying" ObjectPath="\Game Parameters\Default Work Unit\UpgradeSound_IsPlaying"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX">
+		<SoundBank Id="3991942870" Language="SFX" Hash="3104922184">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
