@@ -41,6 +41,6 @@ Material:
     - _WindScale: 0.1
     - _WindSpeed: 10
     m_Colors:
-    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Offset: {r: -0.5, g: 0, b: 0, a: 0}
     - _WindDirection: {r: -0.25, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
