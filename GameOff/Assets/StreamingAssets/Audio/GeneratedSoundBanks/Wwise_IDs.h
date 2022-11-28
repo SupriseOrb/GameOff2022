@@ -114,6 +114,7 @@ namespace AK
         static const AkUniqueID IS_PAUSED = 316213210U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID SFXVOLUME = 988953028U;
+        static const AkUniqueID UPGRADESOUND_ISPLAYING = 2923328739U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

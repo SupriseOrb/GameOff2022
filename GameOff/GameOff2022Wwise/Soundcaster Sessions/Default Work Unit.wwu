@@ -24,6 +24,10 @@
 							<Value>71.7852684144819</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="UpgradeSound_IsPlaying" ID="{35601D65-CB1F-49F6-A852-0831334826EE}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="SFXVolume" ID="{0624FF16-60E5-4B3E-9A98-E0102DB7D98A}"/>
 							<Value>70</Value>
 						</RTPCValue>
@@ -38,6 +42,50 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Battle_Intensity_3" ID="{F5404297-96CB-4787-B9FF-BB405B4A8E8B}"/>
+						<CurrentStateRef Name="Battle" ID="{05029B2D-7F58-46C1-8207-3AF1677D41F8}"/>
+						<CurrentStateRef Name="Ambience_1" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="ducking Test" ID="{CF798D23-BECE-440A-8CBB-169674BF4D36}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Music" ID="{70E2C04F-B2F5-41FB-8983-734605B3D4D8}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Upgrade" ID="{A2A2D83C-274D-4408-B0CF-C85BDB6313BA}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Is_Paused" ID="{B0CAEB18-E3DB-416E-938A-4C7FFA46563C}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="AllVolume" ID="{7E7B122A-9145-4910-8BC9-8083DEF38723}"/>
+							<Value>71.7852684144819</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="UpgradeSound_IsPlaying" ID="{35601D65-CB1F-49F6-A852-0831334826EE}"/>
+							<Value>1.09341075202351E-317</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SFXVolume" ID="{0624FF16-60E5-4B3E-9A98-E0102DB7D98A}"/>
+							<Value>70</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="AmbienceVolume" ID="{003FB62E-3072-4B7E-BFF0-F8A957BFB63E}"/>
+							<Value>1.11633116878862E-315</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="MusicVolume" ID="{4A1D2C2F-0D27-4F7F-9D44-856492FCC85C}"/>
+							<Value>38.0774032459426</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Battle_Intensity_1" ID="{D85FCDF0-5F32-4588-8933-BC446D0CFB9A}"/>
 						<CurrentStateRef Name="Battle" ID="{05029B2D-7F58-46C1-8207-3AF1677D41F8}"/>
 						<CurrentStateRef Name="Ambience_1" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
 					</CurrentStateList>

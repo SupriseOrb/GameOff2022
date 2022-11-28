@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="3670631629">
+		<SoundBank Id="393239870" Language="SFX" Hash="3473867798">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -421,7 +421,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3529675082">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3702192105">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -431,6 +431,7 @@
 				<GameParameter Id="1204480359" Name="AmbienceVolume" ObjectPath="\Game Parameters\Default Work Unit\AmbienceVolume"/>
 				<GameParameter Id="2346531308" Name="MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\MusicVolume"/>
 				<GameParameter Id="2731583604" Name="AllVolume" ObjectPath="\Game Parameters\Default Work Unit\AllVolume"/>
+				<GameParameter Id="2923328739" Name="UpgradeSound_IsPlaying" ObjectPath="\Game Parameters\Default Work Unit\UpgradeSound_IsPlaying"/>
 			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="3991942870" Language="SFX">
@@ -444,6 +445,10 @@
 							<ShortName>Battle_Intensity_2_V1_120bpm3-4_L60M-P0.wav</ShortName>
 							<Path>SFX/Battle_Intensity_2_V1_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
 						</File>
+						<File Id="92602430" Language="SFX">
+							<ShortName>Battle_Intensity_1_V2_120bpm3-4_L60M-P0.wav</ShortName>
+							<Path>SFX/Battle_Intensity_1_V2_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
+						</File>
 						<File Id="249291453" Language="SFX">
 							<ShortName>Win_V1_120bpm3-4_L6-P0.wav</ShortName>
 							<Path>SFX/Win_V1_120bpm3-4_L6-P0_D79FB2B7.wem</Path>
@@ -455,6 +460,10 @@
 						<File Id="458433170" Language="SFX">
 							<ShortName>Battle_Intensity_1_V1_120bpm3-4_L60M-P0.wav</ShortName>
 							<Path>SFX/Battle_Intensity_1_V1_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
+						</File>
+						<File Id="462216228" Language="SFX">
+							<ShortName>Battle_Intensity_2_V2_120bpm3-4_L60M-P0.wav</ShortName>
+							<Path>SFX/Battle_Intensity_2_V2_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
 						</File>
 						<File Id="534264164" Language="SFX">
 							<ShortName>Title-Battle_Transition.wav</ShortName>
@@ -480,6 +489,7 @@
 									<Children>
 										<SwitchContainer SwitchValue="{D85FCDF0-5F32-4588-8933-BC446D0CFB9A}">
 											<Media>
+												<File Id="92602430"/>
 												<File Id="458433170"/>
 											</Media>
 										</SwitchContainer>
@@ -490,6 +500,7 @@
 										<SwitchContainer SwitchValue="{3407E5A0-7DE9-4531-9956-F89833DC81A8}">
 											<Media>
 												<File Id="71543844"/>
+												<File Id="462216228"/>
 											</Media>
 										</SwitchContainer>
 									</Children>
