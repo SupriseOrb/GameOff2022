@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2179189025">
+		<SoundBank Id="393239870" Language="SFX" Hash="1539908415">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -35,24 +35,33 @@
 				</Event>
 				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\SFX Events\Ambience\Play_Ambience" DurationType="Infinite">
 					<IncludedMemoryFiles>
+						<File Id="248236009" Language="SFX">
+							<ShortName>Dawn Ambience_v2.wav</ShortName>
+							<Path>SFX/Dawn Ambience_v2_D79FB2B7.wem</Path>
+						</File>
 						<File Id="287838291" Language="SFX">
 							<ShortName>Ambience Loop 1.wav</ShortName>
 							<Path>SFX/Ambience Loop 1_D79FB2B7.wem</Path>
 						</File>
-						<File Id="353146256" Language="SFX">
-							<ShortName>Ambience Loop 2 (wind).wav</ShortName>
-							<Path>SFX/Ambience Loop 2 (wind)_D79FB2B7.wem</Path>
+						<File Id="364280936" Language="SFX">
+							<ShortName>Ambience 2_v2.wav</ShortName>
+							<Path>SFX/Ambience 2_v2_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{E9BDBE55-1810-4124-816D-F965D36E5D5C}">
 							<Media>
-								<File Id="353146256"/>
+								<File Id="248236009"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{CC158771-B0EB-4744-A788-5B07A6460296}">
 							<Media>
 								<File Id="287838291"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{62A6DBB4-E7F7-4119-97C6-2806A693EE6D}">
+							<Media>
+								<File Id="364280936"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -418,9 +427,9 @@
 				<StateGroup Id="1768843490" Name="Ambience_states" ObjectPath="\States\Default Work Unit\Ambience_states" GUID="{15F33CAD-23F8-48F3-A4AB-9E7FC70A61A4}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Ambience_states\None" GUID="{336F76E2-B0BE-40EF-B868-0EF257228F7A}"/>
-						<State Id="311764537" Name="Day" ObjectPath="\States\Default Work Unit\Ambience_states\Day" GUID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
-						<State Id="2009803003" Name="Dawn" ObjectPath="\States\Default Work Unit\Ambience_states\Dawn" GUID="{E9BDBE55-1810-4124-816D-F965D36E5D5C}"/>
-						<State Id="1011622525" Name="Night" ObjectPath="\States\Default Work Unit\Ambience_states\Night" GUID="{62A6DBB4-E7F7-4119-97C6-2806A693EE6D}"/>
+						<State Id="1625584349" Name="Ambience_1" ObjectPath="\States\Default Work Unit\Ambience_states\Ambience_1" GUID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
+						<State Id="1625584350" Name="Ambience_2" ObjectPath="\States\Default Work Unit\Ambience_states\Ambience_2" GUID="{E9BDBE55-1810-4124-816D-F965D36E5D5C}"/>
+						<State Id="1625584351" Name="Ambience_3" ObjectPath="\States\Default Work Unit\Ambience_states\Ambience_3" GUID="{62A6DBB4-E7F7-4119-97C6-2806A693EE6D}"/>
 					</States>
 				</StateGroup>
 			</StateGroups>

@@ -2261,7 +2261,7 @@
 							<EntryList>
 								<Entry>
 									<Path>
-										<PathElementRef Name="Dawn" ID="{E9BDBE55-1810-4124-816D-F965D36E5D5C}"/>
+										<PathElementRef Name="Ambience_2" ID="{E9BDBE55-1810-4124-816D-F965D36E5D5C}"/>
 									</Path>
 									<AudioNodeInfo>
 										<AudioNodeRef Name="Ambience_Loop_2_Dawn" ID="{4EE131FB-1EB1-46AD-8F51-C57F3CE79A53}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}" Platform="Linked"/>
@@ -2269,7 +2269,7 @@
 								</Entry>
 								<Entry>
 									<Path>
-										<PathElementRef Name="Day" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
+										<PathElementRef Name="Ambience_1" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
 									</Path>
 									<AudioNodeInfo>
 										<AudioNodeRef Name="Ambience_Loop_1_Day" ID="{AB8FF17D-477E-4506-B536-A1B07760EBBB}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}" Platform="Linked"/>
@@ -2277,7 +2277,7 @@
 								</Entry>
 								<Entry>
 									<Path>
-										<PathElementRef Name="Night" ID="{62A6DBB4-E7F7-4119-97C6-2806A693EE6D}"/>
+										<PathElementRef Name="Ambience_3" ID="{62A6DBB4-E7F7-4119-97C6-2806A693EE6D}"/>
 									</Path>
 									<AudioNodeInfo>
 										<AudioNodeRef Name="Ambience_Loop_3_Night" ID="{7FAB8E8B-6359-4BB4-8F1B-E0BA5A61CFE6}" WorkUnitID="{DBACB4B0-9173-4988-8AF6-0EB75BF3E8AD}" Platform="Linked"/>

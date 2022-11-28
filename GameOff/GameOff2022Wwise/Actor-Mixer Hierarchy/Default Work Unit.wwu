@@ -1511,6 +1511,8 @@
 						</Sound>
 						<Sound Name="Carriage Movement Loop_v1" ID="{9C23E6CA-DBD1-4E2E-A1C8-B594EFB86E2A}" ShortID="506687537">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
 								<Property Name="InitialDelay" Type="Real64">
 									<ValueList>
 										<Value>2</Value>
@@ -1523,39 +1525,14 @@
 										<Value>1</Value>
 									</ValueList>
 								</Property>
-								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32">
-									<RTPCList>
-										<RTPC Name="" ID="{7396CB61-2719-4124-A41C-7A8F05C1F69A}" ShortID="214798222">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Carriage_Time" ID="{BC51D99A-6800-443D-815C-47CF2D01BD7D}" WorkUnitID="{9B49F9C4-C032-4014-AC8A-C0ECD3D54925}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{370A58D9-DD6B-4452-B085-441F728943DD}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="65537"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>100</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>100</XPos>
-														<YPos>0</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
-								</Property>
+								<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="2"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1574,6 +1551,40 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{D72F072E-D066-4953-88D6-FAFA72ED5E7D}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{7396CB61-2719-4124-A41C-7A8F05C1F69A}" ShortID="214798222">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Carriage_Time" ID="{BC51D99A-6800-443D-815C-47CF2D01BD7D}" WorkUnitID="{9B49F9C4-C032-4014-AC8A-C0ECD3D54925}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{370A58D9-DD6B-4452-B085-441F728943DD}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="1"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Carriage Movement Loop_v1" ID="{4A351965-6468-48F1-A47D-EA5B53386271}" Platform="Linked"/>

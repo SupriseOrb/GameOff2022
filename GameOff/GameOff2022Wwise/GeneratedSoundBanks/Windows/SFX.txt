@@ -52,10 +52,10 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1768843490	Ambience_states			\Default Work Unit\Ambience_states	
 
 State	ID	Name	State Group			Notes
-	311764537	Day	Ambience_states			
 	748895195	None	Ambience_states			
-	1011622525	Night	Ambience_states			
-	2009803003	Dawn	Ambience_states			
+	1625584349	Ambience_1	Ambience_states			
+	1625584350	Ambience_2	Ambience_states			
+	1625584351	Ambience_3	Ambience_states			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2649027589	Carriage_Time			\Default Work Unit\Carriage_Time	
@@ -78,12 +78,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	220711120	Redcap Ability	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Redcap Ability_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Redcap Ability		330992
 	225264234	Cliche_HoverAnimation_1_v2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Cliche_HoverAnimation_1_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_1_v2		8628
 	239928254	Leyline Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Leyline Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Leyline Stamp_v1		160572
+	248236009	Dawn Ambience_v2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Dawn Ambience_v2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Ambience_States\Ambience_Loop_2_Dawn\Dawn Ambience_v2\Dawn Ambience_v2		18834560
 	273270463	Enemy Take Damage_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Enemy Take Damage_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Enemy Take Damage_v1		21656
 	276893809	Pause	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\MenuUI_Pause_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Pause		46426
-	287838291	Ambience Loop 1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Ambience Loop 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Ambience_States\Ambience_Loop_1\Ambience Loop 1\Ambience Loop 1		27375004
+	287838291	Ambience Loop 1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Ambience Loop 1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Ambience_States\Ambience_Loop_1_Day\Ambience Loop 1\Ambience Loop 1		27375004
 	288070851	Cliche_HoverAnimation_4_v2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Cliche_HoverAnimation_4_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_4_v2		9100
-	353146256	Ambience Loop 2 (wind)	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Ambience Loop 2 (wind)_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Ambience_States\Ambience_Loop_2\Ambience Loop 2 (wind)\Ambience Loop 2 (wind)		17896984
 	357140707	Unit Stamp	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Unit Stamp		81752
+	364280936	Ambience 2_v2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Ambience 2_v2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Ambience_States\Ambience_Loop_3_Night\Ambience 2_v2\Ambience 2_v2		17896984
 	366129106	Spikey Bush Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Spikey Bush Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Spikey Bush Stamp_v1		52180
 	370467919	Potion Item Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Potion Item Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Potion Item Stamp_v1		235284
 	378939211	Hand Cycle Timer	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Timer_Click_v1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Hand Cycle Timer		88276

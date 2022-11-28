@@ -118,6 +118,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
 
             //Temp Destroy
             AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
+            AkSoundEngine.PostEvent("Stop_CarriageMovement",gameObject);
             BoardManager.Instance.GetLane(_laneNumber).RemoveEnemyFromList(gameObject);
             _carriageAnimator.Play(_carriageDieAnimationName);
             _isDead = true;
