@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d077e3891bddebf478df100b65851b4f, type: 3}
+  m_Name: Wave1
+  m_EditorClassIdentifier: 
+  _wave:
+  - _laneOneEnemies: []
+    _laneTwoEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _laneThreeEnemies: []
+    _enemySpawnDistance: 0
+    _timeToSpawn: 10
+  - _laneOneEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _laneTwoEnemies: []
+    _laneThreeEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 30
+  - _laneOneEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 50
+  - _laneOneEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _laneTwoEnemies: []
+    _laneThreeEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 70
+  _waveDuration: 80
+  _waveBreakBeforeDuration: 0
