@@ -116,14 +116,14 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
             */
 
 
-            //Temp Destroy
-            AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
-            AkSoundEngine.PostEvent("Stop_CarriageMovement",gameObject);
-            BoardManager.Instance.GetLane(_laneNumber).RemoveEnemyFromList(gameObject);
-            _carriageAnimator.Play(_carriageDieAnimationName);
-            _isDead = true;
-            _carriageCollider.enabled = false;
-
+            if(!_isDead)
+            {
+                AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
+                AkSoundEngine.PostEvent("Stop_CarriageMovement",gameObject);
+                _carriageAnimator.Play(_carriageDieAnimationName);
+                _isDead = true;
+                _carriageCollider.enabled = false;
+            }
             /*TODO:
                 Disable enemy collider
                 Play death animation
@@ -194,6 +194,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
             {
                 GameObject spawnedEnemy = Instantiate(_spawnedUnit, gameObject.transform.position, Quaternion.identity);
                 BoardManager.Instance.GetLane(_laneNumber).AddEnemyToList(spawnedEnemy);
+                BoardManager.Instance.GetLane(_laneNumber).RemoveEnemyFromList(gameObject);
                 _carriageDieAnimationHalfLength = -100;
             }
         }
