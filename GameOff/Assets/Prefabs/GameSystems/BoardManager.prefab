@@ -3753,11 +3753,15 @@ MonoBehaviour:
   _tileInfoPanelText: {fileID: 3298569681395073119}
   _tileInfoLaneNum: -1
   _tileInfoTileNum: -1
+  _isWaveFinished: {fileID: 0}
+  _isHoveringUI: {fileID: 11400000, guid: b57a48a9f00bb884f8e5c3d6c54c7bad, type: 2}
   _boardLanes:
   - {fileID: 4365034428043049835}
   - {fileID: 4365034426243923943}
   - {fileID: 4365034426385286201}
   _playerHealth: 0
+  _waveManager: {fileID: 0}
+  debugList: []
 --- !u!114 &4953599616631265044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3779,6 +3783,9 @@ MonoBehaviour:
   - {fileID: 666406589}
   - {fileID: 1779245666}
   _isInWave: {fileID: 11400000, guid: 8f4a5478ae728304a813c62d9be70350, type: 2}
+  _winPanel: {fileID: 0}
+  _losePanel: {fileID: 0}
+  _environmentManager: {fileID: 0}
   _currentWave: {fileID: 0}
   _currentEnemySpawns: []
   _currentWaveIndex: 0
@@ -3794,6 +3801,8 @@ MonoBehaviour:
   _levelFinished: 0
   _startWaveCanvas: {fileID: 6534397378192174741}
   _bonusInk: {fileID: 2096795864665022023}
+  _isFirstWave: 1
+  _isWaveComplete: {fileID: 0}
 --- !u!1 &4365034428043049832
 GameObject:
   m_ObjectHideFlags: 0

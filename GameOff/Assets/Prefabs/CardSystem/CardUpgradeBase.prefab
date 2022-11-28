@@ -161,6 +161,7 @@ MonoBehaviour:
   _animator: {fileID: 7589382288135726870}
   _animationHighlight: Card_Highlighted
   _animationIdle: Card_Idle
+  _isHoveringUI: {fileID: 11400000, guid: b57a48a9f00bb884f8e5c3d6c54c7bad, type: 2}
 --- !u!1 &6031995772054734680
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class BoardManager : MonoBehaviour
     [SerializeField] private int _tileInfoLaneNum;
     [SerializeField] private int _tileInfoTileNum;
     [SerializeField] private BoolVariable _isWaveFinished;
+    [SerializeField] private BoolVariable _isHoveringUI;
 
 
     [Header("Misc")]
@@ -66,6 +67,11 @@ public class BoardManager : MonoBehaviour
     */
     public void ToggleTileInfo(int laneNum, int tileNum, string TileInfo, bool isBoardTile = false)
     {
+        if (_isHoveringUI.Value)
+        {
+            return;
+        }
+        
         if (laneNum == _tileInfoLaneNum && tileNum == _tileInfoTileNum)
         {
             // Scenario 1
