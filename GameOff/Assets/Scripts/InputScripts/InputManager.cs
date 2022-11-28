@@ -42,6 +42,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] [TextArea] private string _stampOutsideGrid = "Cannot stamp outside of the grid";
     [SerializeField] [TextArea] private string _stampUnknownOnUnit = "Cannot stamp items / lands on allied unit tiles";
     [SerializeField] [TextArea] private string _stampUnitOnBoardTile = "Cannot stamp allied unit outside of unit tiles";
+    [SerializeField] private BoolVariable _isHoveringUI;
     private void Awake() 
     {
         _lClickAction = _playerInput.actions[_lClickString];
@@ -187,12 +188,11 @@ public class InputManager : MonoBehaviour
 
     private void AnnounceError(string errorMessage, bool isOnPerformed)
     {
-        if (!isOnPerformed || _errorMessagePanelAnimator.GetCurrentAnimatorStateInfo(0).IsName(_closeErrorMessagePanelAnim))
+        if (!isOnPerformed || _isHoveringUI.Value)
         {
             return;
         }
 
-        
         AkSoundEngine.PostEvent("Play_ErrorMessage", gameObject);
         _errorMessageTextBox.text = errorMessage;
         _errorMessagePanelAnimator.Play(_openErrorMessagePanelAnim, -1, 0f);

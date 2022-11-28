@@ -225,11 +225,13 @@ MonoBehaviour:
   _mousePosString: MousePos
   _errorMessagePanelAnimator: {fileID: 780822104038892649}
   _openErrorMessagePanelAnim: ErrorMessage_Appear
+  _closeErrorMessagePanelAnim: ErrorMessage_Dissappear
   _errorMessageTextBox: {fileID: 2523034216331454637}
   _errorNotEnoughInk: Cannot stamp, not enough ink
   _stampOutsideGrid: Cannot stamp outside of the grid
   _stampUnknownOnUnit: Cannot stamp items / lands on allied unit tiles
   _stampUnitOnBoardTile: Cannot stamp allied unit outside of unit tiles
+  _isHoveringUI: {fileID: 11400000, guid: b57a48a9f00bb884f8e5c3d6c54c7bad, type: 2}
 --- !u!114 &7213334819845911193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -904,7 +906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 153401001665192218, guid: d87a00ab84be5b74fa676e490e4aa4f0, type: 3}
       propertyPath: m_InstanceId
-      value: -521306
+      value: -603862
       objectReference: {fileID: 0}
     - target: {fileID: 672940076311003831, guid: d87a00ab84be5b74fa676e490e4aa4f0, type: 3}
       propertyPath: m_Mesh
@@ -912,7 +914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 672940076311003831, guid: d87a00ab84be5b74fa676e490e4aa4f0, type: 3}
       propertyPath: m_InstanceId
-      value: -521294
+      value: -603850
       objectReference: {fileID: 0}
     - target: {fileID: 5153812734803897408, guid: d87a00ab84be5b74fa676e490e4aa4f0, type: 3}
       propertyPath: m_RootOrder
@@ -968,7 +970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8791266926776440792, guid: d87a00ab84be5b74fa676e490e4aa4f0, type: 3}
       propertyPath: m_InstanceId
-      value: -521300
+      value: -603856
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d87a00ab84be5b74fa676e490e4aa4f0, type: 3}

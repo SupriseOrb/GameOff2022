@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class CardScriptLoader : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     //NOTE: With this design, these cards shouldn't really have functionality beyond "building" themselves aesthetically (LoadCardValues)
+    [SerializeField] private BoolVariable _isHoveringUI;
     [SerializeField] CardScriptableObject _cardSO = null;
     
     [SerializeField] public CardScriptableObject.Type _cardType {get; protected set;}
@@ -87,6 +88,7 @@ public class CardScriptLoader : MonoBehaviour, IPointerDownHandler, IPointerEnte
     public void OnPointerEnter(PointerEventData eventData)
     {
         _animator.Play(_animationHighlight);
+        _isHoveringUI.Value = true;
         AkSoundEngine.PostEvent("Play_ClicheHover", gameObject);
         DeckManager.Instance.OpenCardInfoPanel(_cardSO.CardDescription, transform.localPosition);
     }
@@ -94,6 +96,7 @@ public class CardScriptLoader : MonoBehaviour, IPointerDownHandler, IPointerEnte
     public void OnPointerExit(PointerEventData eventData)
     {
         _animator.Play(_animationIdle);
+        _isHoveringUI.Value = false;
         DeckManager.Instance.CloseCardInfoPanel();
     }
 

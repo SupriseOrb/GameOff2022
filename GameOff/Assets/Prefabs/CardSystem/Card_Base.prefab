@@ -402,6 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc65f4aff1036d44acb9e0f4301c5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isHoveringUI: {fileID: 11400000, guid: b57a48a9f00bb884f8e5c3d6c54c7bad, type: 2}
   _cardSO: {fileID: 0}
   _hasBeenUsed: 0
   _selectedBorder: {fileID: 3284363774167275362}
