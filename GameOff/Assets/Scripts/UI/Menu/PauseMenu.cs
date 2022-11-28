@@ -9,6 +9,7 @@ public class PauseMenu : Menu
     [SerializeField] private BoolVariable _isPaused;
     [SerializeField] private Animator _pauseMenuAnimator;
     [SerializeField] private BoolVariable _inUpgradeMenu;
+    [SerializeField] private GameObject _pauseMenuPanel;
 
     private EventSystem _currentEventSystem;
     void Start()
@@ -30,6 +31,7 @@ public class PauseMenu : Menu
     {
         if (!_isPaused.Value && _pauseMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("Panel_IdleClose"))
         {
+            _pauseMenuPanel.SetActive(true);
             Time.timeScale = 0f;
             AkSoundEngine.PostEvent("Play_UIPause", this.gameObject);
             AkSoundEngine.SetRTPCValue("Is_Paused", 100f);
@@ -58,6 +60,7 @@ public class PauseMenu : Menu
                 Time.timeScale = 1f;
             }
 
+            _pauseMenuPanel.SetActive(false);
             AkSoundEngine.PostEvent("Play_UIResume", this.gameObject);
             ResumeAudio();
             _isPaused.Value = false;

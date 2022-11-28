@@ -61,7 +61,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 15
   m_TargetDisplay: 0
 --- !u!114 &8184018335324467733
 MonoBehaviour:
@@ -678,9 +678,21 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3915073411815299209, guid: 8055923677ba0744d97289f0d333a943, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3943495148943572936, guid: 8055923677ba0744d97289f0d333a943, type: 3}
       propertyPath: m_Name
       value: UI_EndGameCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908055271930786480, guid: 8055923677ba0744d97289f0d333a943, type: 3}
+      propertyPath: m_SortingOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908055271930786480, guid: 8055923677ba0744d97289f0d333a943, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7685997281335515253, guid: 8055923677ba0744d97289f0d333a943, type: 3}
       propertyPath: m_Pivot.x

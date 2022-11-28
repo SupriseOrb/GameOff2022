@@ -60,7 +60,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 12
   m_TargetDisplay: 0
 --- !u!114 &6759735069304526633
 MonoBehaviour:
@@ -158,7 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059983213869949221, guid: c0b4c97f5a1e7dc45af3d1f8936783c4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8059983213869949221, guid: c0b4c97f5a1e7dc45af3d1f8936783c4, type: 3}
       propertyPath: m_AnchorMin.x
@@ -166,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059983213869949221, guid: c0b4c97f5a1e7dc45af3d1f8936783c4, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8059983213869949221, guid: c0b4c97f5a1e7dc45af3d1f8936783c4, type: 3}
       propertyPath: m_SizeDelta.x
@@ -210,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059983213869949221, guid: c0b4c97f5a1e7dc45af3d1f8936783c4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -184
+      value: 184
       objectReference: {fileID: 0}
     - target: {fileID: 8059983213869949221, guid: c0b4c97f5a1e7dc45af3d1f8936783c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
