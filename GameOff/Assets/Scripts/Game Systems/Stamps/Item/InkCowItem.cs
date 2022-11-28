@@ -28,6 +28,7 @@ public class InkCowItem : MonoBehaviour, IItemStamp
     [SerializeField] private Material _damageFlashMaterial;
     [SerializeField] private float _flashTime = .125f;
     [SerializeField] private Coroutine _damageFlashCoroutine = null;
+    [SerializeField] BoolVariable _isInWave;
 
     private void Start() 
     {
@@ -51,26 +52,29 @@ public class InkCowItem : MonoBehaviour, IItemStamp
 
     private void FixedUpdate() 
     {
-        if (_isDead)
+        if(_isInWave.Value)
         {
-            _cowDisappearAnimLength -= Time.deltaTime;
-            if (_cowDisappearAnimLength <= -1)
+            if (_isDead)
             {
-                Destroy(gameObject);
+                _cowDisappearAnimLength -= Time.deltaTime;
+                if (_cowDisappearAnimLength <= -1)
+                {
+                    Destroy(gameObject);
+                }
             }
-        }
 
-        if (_isOnCooldown)
-        {
-            _cowCurrentCooldown -= Time.deltaTime;
-        }
+            if (_isOnCooldown)
+            {
+                _cowCurrentCooldown -= Time.deltaTime;
+            }
 
-        if (_cowCurrentCooldown <= 0)
-        {
-            _isOnCooldown = false;
-            _cowCurrentCooldown = _cowBaseCooldown;
-            ActivateStampAbility();
-        }     
+            if (_cowCurrentCooldown <= 0)
+            {
+                _isOnCooldown = false;
+                _cowCurrentCooldown = _cowBaseCooldown;
+                ActivateStampAbility();
+            }     
+        }
     }
 
     public void TakeDamage(float damage)
@@ -123,16 +127,6 @@ public class InkCowItem : MonoBehaviour, IItemStamp
     public string GetStampName()
     {
         return _cowItemSO.StampName;
-    }
-
-    public void EnableStamp()
-    {
-        
-    }
-
-    public void DisableStamp()
-    {
-
     }
 
     public void SetLane(int lane)

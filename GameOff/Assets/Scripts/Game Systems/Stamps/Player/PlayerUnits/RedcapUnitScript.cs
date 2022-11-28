@@ -6,7 +6,6 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 {
     [SerializeField] private UnitStampScriptableObject _redcapSO;
     [SerializeField] private CardScriptableObject _cardSO;
-    [SerializeField] private bool _isActive = false;
     [SerializeField] private float _redcapAttackCooldown;
 
 #region UnitStats
@@ -63,6 +62,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private float _stunDurationUpgradeIncrease;
     [SerializeField] private float _stunDurationBaseUpgrade;
 #endregion
+    [SerializeField] BoolVariable _isInWave;
 
     public enum RedcapUpgradePaths
     {
@@ -115,7 +115,7 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
 
     private void FixedUpdate() 
     {
-        if(_isActive)
+        if(_isInWave.Value)
         {
             if(_redcapAttackCooldown <= 0)
             {
@@ -231,16 +231,6 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
                 _redcapAnimator.Play(_redcapAttackAnimationName);
                 break;
         }
-    }
-
-    public void DisableStamp()
-    {
-        _isActive = false;
-    }
-
-    public void EnableStamp()
-    {
-        _isActive = true;
     }
 
     public string GetStampName()

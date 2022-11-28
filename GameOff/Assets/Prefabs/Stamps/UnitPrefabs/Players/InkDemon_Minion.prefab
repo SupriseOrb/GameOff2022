@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60781101861c6aa428f263f7c8547695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isActive: 1
   _inkMinionMaxHealth: 3
   _inkMinionCurrentHealth: 3
   _inkMinionAttackSpeed: 1
@@ -79,6 +78,7 @@ MonoBehaviour:
   _damageFlashMaterial: {fileID: 2100000, guid: 176a06a98be8d7044b8db8eaefab3132, type: 2}
   _flashTime: 0.125
   _cardSO: {fileID: 11400000, guid: 51e0cd4117ce2944490d48fe2aec331b, type: 2}
+  _isInWave: {fileID: 11400000, guid: 8f4a5478ae728304a813c62d9be70350, type: 2}
 --- !u!61 &1612765099
 BoxCollider2D:
   m_ObjectHideFlags: 0

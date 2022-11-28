@@ -62,6 +62,7 @@ public class BoardLane : MonoBehaviour
     public void RemoveEnemyFromList(GameObject enemy)
     {
         _laneEnemies.Remove(enemy);
+        BoardManager.Instance.CheckIfWaveIsFinished();
     }
 
     //Tells each of its tiles what lane and tile number they are

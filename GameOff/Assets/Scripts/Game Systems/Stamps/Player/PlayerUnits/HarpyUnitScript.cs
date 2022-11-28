@@ -6,7 +6,6 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
 {
     [SerializeField] private UnitStampScriptableObject _harpySO;
     [SerializeField] private CardScriptableObject _cardSO;
-    [SerializeField] private bool _isActive = false;
     [SerializeField] private float _harpyAttackCooldown;
     [SerializeField] private float _harpyForcedMoveSpeed;
 
@@ -63,6 +62,7 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private float _pushDistanceUpgradeIncrease;
     [SerializeField] private float _attackSpeedUpgradeDecrease;
 #endregion
+    [SerializeField] BoolVariable _isInWave;
 
     public enum HarpyUpgradePaths
     {
@@ -114,7 +114,7 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
 
     private void FixedUpdate() 
     {
-        if(_isActive)
+        if(_isInWave.Value)
         {
             if(_harpyAttackCooldown <= 0)
             {
@@ -230,16 +230,6 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
                 _harpyAnimator.Play(_harpyAquaAttackAnimationName);
                 break;
         }
-    }
-
-    public void DisableStamp()
-    {
-        _isActive = false;
-    }
-
-    public void EnableStamp()
-    {
-        _isActive = true;
     }
 
     public string GetStampName()

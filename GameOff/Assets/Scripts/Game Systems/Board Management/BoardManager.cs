@@ -10,12 +10,15 @@ public class BoardManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _tileInfoPanelText;
     [SerializeField] private int _tileInfoLaneNum;
     [SerializeField] private int _tileInfoTileNum;
+    [SerializeField] private BoolVariable _isWaveFinished;
 
 
     [Header("Misc")]
     [SerializeField] private BoardLane[] _boardLanes;
 
     [SerializeField] private int _playerHealth;
+    [SerializeField] private WaveManager _waveManager;
+    [SerializeField] List<GameObject> debugList;
 
     private static BoardManager _instance;
 
@@ -144,6 +147,23 @@ public class BoardManager : MonoBehaviour
         foreach(BoardLane lane in _boardLanes)
         {
             lane.RemoveLandStamp();
+        }
+    }
+
+    public void CheckIfWaveIsFinished()
+    {
+        if(_isWaveFinished.Value)
+        {
+            foreach(BoardLane lane in _boardLanes)
+            {
+                debugList = lane.GetLaneEnemies();
+                if(debugList.Count != 0)
+                {
+                   Debug.Log("Wave is not over: " + debugList.Count);
+                   return;
+                }
+            }
+            _waveManager.FinishWave();
         }
     }
 }

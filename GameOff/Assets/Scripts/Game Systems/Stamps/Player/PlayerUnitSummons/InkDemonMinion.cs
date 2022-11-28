@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class InkDemonMinion : MonoBehaviour, IItemStamp
 {
-    [SerializeField] private bool _isActive = false;
-
 #region ItemStats
     [SerializeField] private int _inkMinionMaxHealth;
     [SerializeField] private float _inkMinionCurrentHealth;
@@ -45,6 +43,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
     [SerializeField] private float _flashTime = .125f;
     [SerializeField] private Coroutine _damageFlashCoroutine = null;
     [SerializeField] private CardScriptableObject _cardSO;
+    [SerializeField] BoolVariable _isInWave;
 
     // Start is called before the first frame update
     void Start()
@@ -121,7 +120,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
                 Destroy(gameObject);
             }
         }
-        else if(_isActive)
+        else if(_isInWave.Value)
         {
             if(_inkMinionAttackCooldown <= 0)
             {
@@ -257,16 +256,6 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
     {
         return _inkMinionName;
     }
-
-    public void DisableStamp()
-    {
-
-    }
-
-    public void EnableStamp()
-    {
-
-    }    
 
     private IEnumerator DamageFlashCoroutine()
     {

@@ -44,6 +44,8 @@ public class WaveManager : MonoBehaviour
 
     [SerializeField] private Canvas _startWaveCanvas;
     [SerializeField] private TextMeshProUGUI _bonusInk;
+    [SerializeField] private bool _isFirstWave = true;
+    [SerializeField] private BoolVariable _isWaveComplete;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +54,7 @@ public class WaveManager : MonoBehaviour
         _currentWaveSpawns = new Dictionary<int, GameObject[][]>();
         LoadNextWave();
         BroadcastIntensityChange();
+        _startWaveCanvas.enabled = true;
         //Clear last wave information
     }
 
@@ -65,14 +68,19 @@ public class WaveManager : MonoBehaviour
             // TODO : Figure when to reset these current timer values
             if (_isInWave.Value)
             {
-                if (_currentWaveDuration <= 0)
+                if(!_isWaveComplete.Value)
                 {
-                    FinishWave();
-                }
-                else
-                {
-                    SpawnEnemies();
-                    _currentWaveDuration -= Time.deltaTime;
+                    if (_currentWaveDuration <= 0)
+                    {
+                        SpawnEnemies();
+                        //FinishWave();
+                        _isWaveComplete.Value = true;
+                    }
+                    else
+                    {
+                        SpawnEnemies();
+                        _currentWaveDuration -= Time.deltaTime;
+                    }
                 }
             }
             else
@@ -85,8 +93,15 @@ public class WaveManager : MonoBehaviour
                 }
                 else
                 {
-                    _bonusInk.text = "Get +" + Mathf.Min((int)_currentWaveBreakDuration, 50);
-                    _currentWaveBreakDuration -= Time.deltaTime;
+                    if(!_isFirstWave)
+                    {
+                        _bonusInk.text = "Get +" + Mathf.Min((int)_currentWaveBreakDuration, 50);
+                        _currentWaveBreakDuration -= Time.deltaTime;
+                    }
+                    else
+                    {
+                        _bonusInk.text = "Get +0";
+                    }
                 }
             }
         }
@@ -94,16 +109,21 @@ public class WaveManager : MonoBehaviour
 
     public void StartWave()
     {
+        _isInWave.Value = true;
+        _isWaveComplete.Value = false;
         //Add ink equal to the time left in the countdown
         if (_currentWaveBreakDuration > 0)
         {
             AkSoundEngine.PostEvent("Play_InkBonus", gameObject);
-            DeckManager.Instance.AddInk((int)_currentWaveBreakDuration);
+            if(!_isFirstWave)
+            {
+                DeckManager.Instance.AddInk((int)_currentWaveBreakDuration);
+            }
         }
         AkSoundEngine.PostEvent("Play_WaveStart", gameObject);
         //BroadcastIntensityChange();
-        _isInWave.Value = true;
         _startWaveCanvas.enabled = false;
+        _isFirstWave = false;
     }
 
     public void LoadNextWave()
@@ -190,7 +210,7 @@ public class WaveManager : MonoBehaviour
 #endregion
     }
 
-    private void FinishWave()
+    public void FinishWave()
     {
         _isInWave.Value = false;
         LoadNextWave();

@@ -6,7 +6,6 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 {
     [SerializeField] private UnitStampScriptableObject _inkDemonSO;
     [SerializeField] private CardScriptableObject _cardSO;
-    [SerializeField] private bool _isActive = false;
 
 #region UnitStats
     [SerializeField] private string _unitType;
@@ -49,6 +48,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private int _cooldownReductionUpgrade;
     [SerializeField] private int _cooldownIncreaseUpgrade;
 #endregion
+    [SerializeField] BoolVariable _isInWave;
 
     public enum InkDemonUpgradePaths
     {
@@ -97,7 +97,7 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
 
     private void FixedUpdate() 
     {
-        if(_isActive)
+        if(_isInWave.Value)
         {
             if(_currentInkDemonAbilityCooldown <= 0)
             {
@@ -268,16 +268,6 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
         }
     }
 */
-    public void DisableStamp()
-    {
-        _isActive = false;
-    }
-
-    public void EnableStamp()
-    {
-        _isActive = true;
-    }
-
     public string GetStampName()
     {
         return _inkDemonSO.StampName;

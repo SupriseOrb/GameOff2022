@@ -237,7 +237,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _redcapSO: {fileID: 11400000, guid: acaec4a539d4648458bdaaa715435b7d, type: 2}
   _cardSO: {fileID: 11400000, guid: 92bd21ad69f0b8d44b9eab688d2e79ac, type: 2}
-  _isActive: 1
   _redcapAttackCooldown: 0
   _unitType: 
   _redcapDamage: 0
@@ -261,4 +260,5 @@ MonoBehaviour:
   _pierceUpgradeIncrease: 1
   _stunDurationUpgradeIncrease: 0
   _stunDurationBaseUpgrade: 0
+  _isInWave: {fileID: 11400000, guid: 8f4a5478ae728304a813c62d9be70350, type: 2}
   _currentUpgradePath: 0

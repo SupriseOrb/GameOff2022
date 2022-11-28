@@ -47,7 +47,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inkDemonSO: {fileID: 11400000, guid: e38f8e183e514b14baff580bbf626115, type: 2}
   _cardSO: {fileID: 11400000, guid: adafe14398f921248a1bb3fcdd8f9341, type: 2}
-  _isActive: 1
   _unitType: 
   _inkDemonAbilityCooldown: 0
   _inkDemonCooldownReduction: 0
@@ -75,6 +74,7 @@ MonoBehaviour:
   _maxHealthUpgradeIncrease: 0
   _cooldownReductionUpgrade: 0
   _cooldownIncreaseUpgrade: 0
+  _isInWave: {fileID: 11400000, guid: 8f4a5478ae728304a813c62d9be70350, type: 2}
   _currentUpgradePath: 0
 --- !u!1 &2645122873858024068
 GameObject:

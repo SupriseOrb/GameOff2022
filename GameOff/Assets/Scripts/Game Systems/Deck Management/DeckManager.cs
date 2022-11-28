@@ -95,8 +95,8 @@ public class DeckManager : MonoBehaviour
     
     private void FixedUpdate() 
     {
-        if (_isInWave.Value)
-        {
+        //if (_isInWave.Value)
+        //{
             if (!_isFirstDraw)
             {
                 if (_currentReshuffleTimer <= 0)
@@ -115,6 +115,9 @@ public class DeckManager : MonoBehaviour
                 {
                     AkSoundEngine.PostEvent("Timer", gameObject);
                 }*/
+            }
+            if(_isInWave.Value)
+            {
                 if(_currentInkTimer <= 0)
                 {
                     AddInk(_inkPerSecond);
@@ -122,7 +125,7 @@ public class DeckManager : MonoBehaviour
                 }
                 _currentInkTimer -= Time.deltaTime;
             }
-        }
+        //}
     }
 
     //Returns all cards from discard deck to active deck, and moves all cards from card hand to active deck
@@ -173,26 +176,29 @@ public class DeckManager : MonoBehaviour
 
         foreach(GameObject card in _cardHand)
         {
-            CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
-            //BUG: If the hand cycles and you're still holding a land card that you end up playing, this won't trigger
-            //Easiest way to fix this bug would be to give InputManager access to cardHand
-            //So that we can check if _selectedCard is in cardHand (Linq.Contains) and if it's a land, yeet it to discard
-            if(loader.CardType == CardScriptableObject.Type.LAND && loader._hasBeenUsed == true)
+            if(card != null)
             {
-                _discardDeck.Add(card);
-                _activeDeck.Remove(card);
+                CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
+                //BUG: If the hand cycles and you're still holding a land card that you end up playing, this won't trigger
+                //Easiest way to fix this bug would be to give InputManager access to cardHand
+                //So that we can check if _selectedCard is in cardHand (Linq.Contains) and if it's a land, yeet it to discard
+                if(loader.CardType == CardScriptableObject.Type.LAND && loader._hasBeenUsed == true)
+                {
+                    _discardDeck.Add(card);
+                    _activeDeck.Remove(card);
+                }
+                //If card is a unit, put it back in the top 3 cards in the deck list
+                else if(loader.CardType == CardScriptableObject.Type.UNIT)
+                {
+                    _activeDeck.Insert(0, card);
+                }
+                //Otherwise, put card at the bottom of the deck
+                else
+                {
+                    _activeDeck.Add(card);
+                }
+                card.transform.position = _activeDeckTransform.position;
             }
-            //If card is a unit, put it back in the top 3 cards in the deck list
-            else if(loader.CardType == CardScriptableObject.Type.UNIT)
-            {
-                _activeDeck.Insert(0, card);
-            }
-            //Otherwise, put card at the bottom of the deck
-            else
-            {
-                _activeDeck.Add(card);
-            }
-            card.transform.position = _activeDeckTransform.position;
         }
     }
 
