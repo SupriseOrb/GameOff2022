@@ -10,7 +10,7 @@ public class PauseMenu : Menu
     [SerializeField] private Animator _pauseMenuAnimator;
     [SerializeField] private BoolVariable _inUpgradeMenu;
     [SerializeField] private GameObject _pauseMenuPanel;
-
+    
     private EventSystem _currentEventSystem;
     void Start()
     {
@@ -36,9 +36,9 @@ public class PauseMenu : Menu
             AkSoundEngine.PostEvent("Play_UIPause", this.gameObject);
             AkSoundEngine.SetRTPCValue("Is_Paused", 100f);
             AkSoundEngine.PostEvent("Mute_Ambience", this.gameObject);
-            AkSoundEngine.PostEvent("Mute_CarriageMovement", gameObject);
 
             _isPaused.Value = true;
+            // Collin TODO: Set the bus to 0 for sounds to be muted when paused
             _pauseMenuAnimator.Play("Panel_Open");
         }
         
@@ -59,6 +59,7 @@ public class PauseMenu : Menu
             if (!_inUpgradeMenu.Value)
             {
                 Time.timeScale = 1f;
+                // Collin TODO: Set the bus to 1 for sounds to be unmuted when resumed
             }
 
             _pauseMenuPanel.SetActive(false);
@@ -73,7 +74,6 @@ public class PauseMenu : Menu
     {
         AkSoundEngine.SetRTPCValue("Is_Paused", 0f);
         AkSoundEngine.PostEvent("Unmute_Ambience", this.gameObject);
-        AkSoundEngine.PostEvent("Unmute_CarriageMovement", gameObject);
     }
 
     public void MainMenu()
