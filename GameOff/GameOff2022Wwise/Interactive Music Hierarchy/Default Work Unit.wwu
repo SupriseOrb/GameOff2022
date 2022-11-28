@@ -6,7 +6,7 @@
 				<MusicSwitchContainer Name="Music_Main" ID="{75595D23-8CDB-471C-8B6E-F8DF15B7C82A}" ShortID="760555901">
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Music" ID="{149B24FE-2813-495B-8104-0972DC1F5FAE}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
@@ -844,6 +844,95 @@
 										</ObjectList>
 									</ObjectLists>
 								</MusicSegment>
+								<MusicSegment Name="Title_V2_120bpm4-4_L32M-P0" ID="{1FAD6F82-B33D-46E2-BC13-6BF91BC42DF8}" ShortID="248971535">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="66635.6462585034"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Title_V2_120bpm4-4_L32M-P0" ID="{E702B73C-9AFB-49B8-B6AC-C41757D6A1FE}" ShortID="1017746700">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Title_V2_120bpm4-4_L32M-P0" ID="{D7987418-FF82-4CAB-8412-E411D05FABDF}">
+													<Language>SFX</Language>
+													<AudioFile>Title_V2_120bpm4-4_L32M-P0.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="908609770"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{F02FA270-D155-480D-B89C-2C9101C7EB21}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C0B8935F-26C6-46E6-8840-FE1D01F5E51D}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Title_V2_120bpm4-4_L32M-P0" ID="{491DD016-B424-433A-B9FF-27C70E07B768}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="66635.6462585034"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Title_V2_120bpm4-4_L32M-P0" ID="{D7987418-FF82-4CAB-8412-E411D05FABDF}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{A208AEE9-025F-4101-AF28-B55E9471DA77}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{29200C60-B4E2-4D2D-A2FF-D4432E9FAF66}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="64000"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
 							</ChildrenList>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{002BB1E7-C60B-419D-BF29-D95C97B2FE35}">
@@ -863,6 +952,7 @@
 								<MusicPlaylistItem Name="" ID="{F7B21176-1B3E-40B7-AB68-D27524BBC059}" ShortID="765924286">
 									<PropertyList>
 										<Property Name="LoopCount" Type="int16" Value="0"/>
+										<Property Name="PlayMode" Type="int16" Value="2"/>
 									</PropertyList>
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{0CDA6C17-A700-487A-9C17-40FE8E6A3085}" ShortID="8497971">
@@ -870,6 +960,12 @@
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="Title_V1_120bpm4-4_L32M-P0" ID="{F6FF8D64-A0CD-4B66-8674-D4E51B565603}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{1F1B6DCE-C271-4F0B-B1F7-2E21181ED93D}" ShortID="641315070">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Title_V2_120bpm4-4_L32M-P0" ID="{1FAD6F82-B33D-46E2-BC13-6BF91BC42DF8}"/>
 										</MusicPlaylistItem>
 									</ChildrenList>
 								</MusicPlaylistItem>
@@ -1396,7 +1492,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Music" ID="{149B24FE-2813-495B-8104-0972DC1F5FAE}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
@@ -1549,7 +1645,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Music" ID="{149B24FE-2813-495B-8104-0972DC1F5FAE}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>

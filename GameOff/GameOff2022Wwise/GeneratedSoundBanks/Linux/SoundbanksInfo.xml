@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Linux" BasePlatform="Linux" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
-		<SourceFilesRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Linux/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Linux/</SoundBanksRoot>
+		<ProjectRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Linux/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Linux/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Linux</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Linux</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1539908415">
+		<SoundBank Id="393239870" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -447,7 +447,7 @@
 				<GameParameter Id="2923328739" Name="UpgradeSound_IsPlaying" ObjectPath="\Game Parameters\Default Work Unit\UpgradeSound_IsPlaying"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX">
+		<SoundBank Id="3991942870" Language="SFX" Hash="114596842">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
@@ -456,43 +456,47 @@
 					<IncludedMemoryFiles>
 						<File Id="71543844" Language="SFX">
 							<ShortName>Battle_Intensity_2_V1_120bpm3-4_L60M-P0.wav</ShortName>
-							<Path>SFX/Battle_Intensity_2_V1_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
+							<Path>SFX/Battle_Intensity_2_V1_120bpm3-4_L60M-P0_9EDFC787.wem</Path>
 						</File>
 						<File Id="92602430" Language="SFX">
 							<ShortName>Battle_Intensity_1_V2_120bpm3-4_L60M-P0.wav</ShortName>
-							<Path>SFX/Battle_Intensity_1_V2_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
+							<Path>SFX/Battle_Intensity_1_V2_120bpm3-4_L60M-P0_9EDFC787.wem</Path>
 						</File>
 						<File Id="249291453" Language="SFX">
 							<ShortName>Win_V1_120bpm3-4_L6-P0.wav</ShortName>
-							<Path>SFX/Win_V1_120bpm3-4_L6-P0_D79FB2B7.wem</Path>
+							<Path>SFX/Win_V1_120bpm3-4_L6-P0_9EDFC787.wem</Path>
 						</File>
 						<File Id="417475394" Language="SFX">
 							<ShortName>Battle1-2_Transition.wav</ShortName>
-							<Path>SFX/Battle1-2_Transition_D79FB2B7.wem</Path>
+							<Path>SFX/Battle1-2_Transition_9EDFC787.wem</Path>
 						</File>
 						<File Id="458433170" Language="SFX">
 							<ShortName>Battle_Intensity_1_V1_120bpm3-4_L60M-P0.wav</ShortName>
-							<Path>SFX/Battle_Intensity_1_V1_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
+							<Path>SFX/Battle_Intensity_1_V1_120bpm3-4_L60M-P0_9EDFC787.wem</Path>
 						</File>
 						<File Id="462216228" Language="SFX">
 							<ShortName>Battle_Intensity_2_V2_120bpm3-4_L60M-P0.wav</ShortName>
-							<Path>SFX/Battle_Intensity_2_V2_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
+							<Path>SFX/Battle_Intensity_2_V2_120bpm3-4_L60M-P0_9EDFC787.wem</Path>
 						</File>
 						<File Id="534264164" Language="SFX">
 							<ShortName>Title-Battle_Transition.wav</ShortName>
-							<Path>SFX/Title-Battle_Transition_D79FB2B7.wem</Path>
+							<Path>SFX/Title-Battle_Transition_9EDFC787.wem</Path>
 						</File>
 						<File Id="541412239" Language="SFX">
 							<ShortName>Battle_Intensity_3_V1_120bpm3-4_L60M-P0.wav</ShortName>
-							<Path>SFX/Battle_Intensity_3_V1_120bpm3-4_L60M-P0_D79FB2B7.wem</Path>
+							<Path>SFX/Battle_Intensity_3_V1_120bpm3-4_L60M-P0_9EDFC787.wem</Path>
 						</File>
 						<File Id="574094760" Language="SFX">
 							<ShortName>Lose_V1_120bpm3-4_L8-P0.wav</ShortName>
-							<Path>SFX/Lose_V1_120bpm3-4_L8-P0_D79FB2B7.wem</Path>
+							<Path>SFX/Lose_V1_120bpm3-4_L8-P0_9EDFC787.wem</Path>
 						</File>
 						<File Id="604336901" Language="SFX">
 							<ShortName>Title_V1_120bpm4-4_L32M-P0.wav</ShortName>
-							<Path>SFX/Title_V1_120bpm4-4_L32M-P0_D79FB2B7.wem</Path>
+							<Path>SFX/Title_V1_120bpm4-4_L32M-P0_9EDFC787.wem</Path>
+						</File>
+						<File Id="908609770" Language="SFX">
+							<ShortName>Title_V2_120bpm4-4_L32M-P0.wav</ShortName>
+							<Path>SFX/Title_V2_120bpm4-4_L32M-P0_9EDFC787.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -532,6 +536,7 @@
 						<SwitchContainer SwitchValue="{BFA391C7-C9AF-4231-A182-E8BF4AC6FDF7}">
 							<Media>
 								<File Id="604336901"/>
+								<File Id="908609770"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{4F24EAA2-1AAD-4FA2-9B55-BFEBAEE0287B}">

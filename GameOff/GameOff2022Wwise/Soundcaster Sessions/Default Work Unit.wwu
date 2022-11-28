@@ -46,7 +46,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Battle_Intensity_3" ID="{F5404297-96CB-4787-B9FF-BB405B4A8E8B}"/>
-						<CurrentStateRef Name="Battle" ID="{05029B2D-7F58-46C1-8207-3AF1677D41F8}"/>
+						<CurrentStateRef Name="Title" ID="{BFA391C7-C9AF-4231-A182-E8BF4AC6FDF7}"/>
 						<CurrentStateRef Name="Ambience_3" ID="{62A6DBB4-E7F7-4119-97C6-2806A693EE6D}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
