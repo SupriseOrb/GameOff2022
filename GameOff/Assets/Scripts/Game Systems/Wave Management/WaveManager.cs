@@ -9,6 +9,9 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private Transform[] _spawnLocations;
     [SerializeField] private BoolVariable _isInWave;
     private Dictionary<int, GameObject[][]> _currentWaveSpawns;
+    [SerializeField] private GameObject _winPanel;
+    [SerializeField] private GameObject _losePanel;
+    private bool _gameOver = false;
 
     private const int MAXINTENSITYLEVEL = 3;
     private int _lastIntensitySet;
@@ -72,7 +75,7 @@ public class WaveManager : MonoBehaviour
     // This way we can disable card draw and stuff only when no enemies are present
     private void FixedUpdate()
     {
-        if (!_levelFinished)
+        if (!_levelFinished && !_gameOver)
         {
             _isInWaveValueDebug = _isInWave.Value;
             // TODO : Figure when to reset these current timer values
@@ -165,7 +168,7 @@ public class WaveManager : MonoBehaviour
         }
         else
         {
-            FinishLevel();
+            WinGame();
         }
     }
 
@@ -220,6 +223,11 @@ public class WaveManager : MonoBehaviour
 #endregion
     }
 
+    private void WinGame()
+    {
+        _winPanel.SetActive(true);
+        AkSoundEngine.SetState("Music_State", "Win");
+    }
     public void FinishWave()
     {
         _isInWave.Value = false;
@@ -229,11 +237,30 @@ public class WaveManager : MonoBehaviour
         _startWaveCanvas.enabled = true;
     }
 
-    private void FinishLevel()
+    private void FinishGame()
     {
         _levelFinished = true;
         _isInWave.Value = false;
-        Debug.Log("YOU WIN SMILE");
+        _gameOver = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if (other.TryGetComponent(out IEnemy enemy) && !_gameOver)
+        {
+            // COLLIN TODO: so...we don't know if we have health
+            // but this is where we would put the enemy crosses border sfx
+            /*_playerHealth -= enemy.GetPlayerHealthDamage();
+            enemy.TakeDamage(1000f);
+            if (_playerHealth < 0)
+            {
+                Debug.Log("Game Over bro, Game Over");
+            }*/
+
+            _losePanel.SetActive(true);
+            AkSoundEngine.SetState("Music_State", "Lose");
+            FinishGame();
+        }
     }
 
     // Used to broadcast intensity changes to the music, ambience, and art
@@ -243,6 +270,7 @@ public class WaveManager : MonoBehaviour
         {
             return;
         }
+        Debug.Log("Set Intensity");
         _lastIntensitySet = _currentIntensity;
         AkSoundEngine.SetState("Battle_Intensity", "Battle_Intensity_" + _currentIntensity);
         AkSoundEngine.SetState("Ambience_states", "Ambience_" + _currentIntensity);

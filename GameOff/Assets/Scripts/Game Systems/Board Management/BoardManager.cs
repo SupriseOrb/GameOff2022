@@ -57,21 +57,6 @@ public class BoardManager : MonoBehaviour
         return _boardLanes[laneNumber];
     }
 
-    private void OnTriggerEnter2D(Collider2D other) 
-    {
-        if (other.TryGetComponent(out IEnemy enemy))
-        {
-            // COLLIN TODO: so...we don't know if we have health
-            // but this is where we would put the enemy crosses border sfx
-            _playerHealth -= enemy.GetPlayerHealthDamage();
-            enemy.TakeDamage(1000f);
-            if (_playerHealth < 0)
-            {
-                Debug.Log("Game Over bro, Game Over");
-            }
-        }
-    }
-
     /*
         Toggle the Info Panel based on a few scenarios
         Scenario 1) Info Panel is Opened + Click on Same Tile = Close Info Panel

@@ -41,6 +41,14 @@ public class PauseMenu : Menu
         
     }
 
+    public void Retry()
+    {
+        // Note: the main gameplay scene should be 1
+        // TODO : if tutorial scene is 1, change this to something else
+        LoadScene(1);
+        AkSoundEngine.PostEvent("Stop_Ambience", this.gameObject);
+    }
+
     public void ResumeGame()
     {
         if (_isPaused.Value && _pauseMenuAnimator.GetCurrentAnimatorStateInfo(0).IsName("Panel_IdleOpen"))
