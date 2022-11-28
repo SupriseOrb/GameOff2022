@@ -78,7 +78,7 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
     // Start is called before the first frame update
     void Start()
     {
-        AkSoundEngine.PostEvent("Play_StampGeneral", gameObject);
+        AkSoundEngine.PostEvent("Play_StampHarpy", gameObject);
         LoadBaseStats();
         LoadUpgradeStats();
         _harpyAttackCooldown = 1 / _harpyAttackSpeed;
