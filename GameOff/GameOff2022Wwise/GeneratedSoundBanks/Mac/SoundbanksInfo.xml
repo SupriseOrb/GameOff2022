@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
-		<SourceFilesRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Mac/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ProjectRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Mac/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/rob/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/collin_anderson/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameOff2022/GameOff/GameOff2022Wwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX">
+		<SoundBank Id="393239870" Language="SFX" Hash="1454442345">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -182,11 +182,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3028081509" Name="Play_InkFull" ObjectPath="\Events\Default Work Unit\SFX Events\Ink\Play_InkFull" DurationType="OneShot" DurationMin="0.14873" DurationMax="0.14873">
+				<Event Id="3028081509" Name="Play_InkFull" ObjectPath="\Events\Default Work Unit\SFX Events\Ink\Play_InkFull" DurationType="OneShot" DurationMin="1.077551" DurationMax="1.077551">
 					<IncludedMemoryFiles>
-						<File Id="742379802" Language="SFX">
-							<ShortName>Ink_Full_v1.wav</ShortName>
-							<Path>SFX/Ink_Full_v1_10C4C929.wem</Path>
+						<File Id="1007704302" Language="SFX">
+							<ShortName>Ink_Full_v2.wav</ShortName>
+							<Path>SFX/Ink_Full_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -246,14 +246,6 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2266250969" Name="Play_StampGeneral" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampGeneral" DurationType="OneShot" DurationMin="0.463084" DurationMax="0.463084">
-					<IncludedMemoryFiles>
-						<File Id="357140707" Language="SFX">
-							<ShortName>Stamp_v1.wav</ShortName>
-							<Path>SFX/Stamp_v1_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
 				<Event Id="900136553" Name="Play_StampHarpy" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampHarpy" DurationType="OneShot" DurationMin="1.429819" DurationMax="1.429819">
 					<IncludedMemoryFiles>
 						<File Id="22757368" Language="SFX">
@@ -262,11 +254,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1200679653" Name="Play_StampInk" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampInk" DurationType="OneShot" DurationMin="0.484989" DurationMax="0.484989">
+				<Event Id="1200679653" Name="Play_StampInk" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampInk" DurationType="OneShot" DurationMin="1." DurationMax="1.">
 					<IncludedMemoryFiles>
-						<File Id="597791133" Language="SFX">
-							<ShortName>Ink Blot Stamp_v1.wav</ShortName>
-							<Path>SFX/Ink Blot Stamp_v1_10C4C929.wem</Path>
+						<File Id="351053968" Language="SFX">
+							<ShortName>InkBlot Stamp_v3.wav</ShortName>
+							<Path>SFX/InkBlot Stamp_v3_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -447,7 +439,7 @@
 				<GameParameter Id="2923328739" Name="UpgradeSound_IsPlaying" ObjectPath="\Game Parameters\Default Work Unit\UpgradeSound_IsPlaying"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="2660660988">
+		<SoundBank Id="3991942870" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>

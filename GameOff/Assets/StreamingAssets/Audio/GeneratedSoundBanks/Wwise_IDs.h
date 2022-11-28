@@ -39,7 +39,6 @@ namespace AK
         static const AkUniqueID PLAY_REDCAPABILITY = 1011269733U;
         static const AkUniqueID PLAY_SPIKEYBUSHHIT = 613402922U;
         static const AkUniqueID PLAY_STAMPCOW = 679587648U;
-        static const AkUniqueID PLAY_STAMPGENERAL = 2266250969U;
         static const AkUniqueID PLAY_STAMPHARPY = 900136553U;
         static const AkUniqueID PLAY_STAMPINK = 1200679653U;
         static const AkUniqueID PLAY_STAMPINKDEMON = 366059098U;

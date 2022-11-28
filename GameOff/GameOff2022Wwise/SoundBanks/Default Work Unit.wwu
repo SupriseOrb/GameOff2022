@@ -33,7 +33,6 @@
 						<ObjectRef Name="Play_Text" ID="{71AD5968-9025-470D-89C4-ACADEA1552B5}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience" ID="{8D979914-47DE-4831-BAD6-7F5F126143F9}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EnemyTakeDamage" ID="{EF49E9F7-EAAB-484A-9FA2-E1B675DBE616}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_StampGeneral" ID="{B0323596-6BE7-4874-838D-899071D4DC57}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_CarriageMovement" ID="{4E7F89AB-1730-488D-B458-14990A04E780}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Mute_Ambience" ID="{721CD5A3-A45C-489B-838D-5A8A2FCB50F9}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UIHover" ID="{DA8A0EE9-F0D7-48B2-976A-53FC0D2C6BC3}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>

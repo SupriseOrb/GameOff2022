@@ -206,17 +206,6 @@
 						</Folder>
 						<Folder Name="Stamps" ID="{C2399809-7D80-4BA8-9CA3-06EFF9BDCD73}" ShortID="417418503">
 							<ChildrenList>
-								<Event Name="Play_StampGeneral" ID="{B0323596-6BE7-4874-838D-899071D4DC57}">
-									<ChildrenList>
-										<Action Name="" ID="{FA891806-441F-4BE7-BD58-093E3AAF7CF6}" ShortID="236009906">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Unit Stamp" ID="{E7E19623-88D1-4751-9AD7-DE799B5AECBE}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
 								<Event Name="Play_StampCow" ID="{6BC84963-8496-4F00-AAA9-406904D14F76}">
 									<ChildrenList>
 										<Action Name="" ID="{687D6150-8936-4886-90AE-98F6E198C347}" ShortID="565328661">
