@@ -51,7 +51,6 @@ public class TimepieceSpell : MonoBehaviour, ISpellStamp
 
     public void ActivateStampAbility()
     {
-        AkSoundEngine.PostEvent("Play_StampTimePiece", gameObject);
         LoadBaseStats();
         _affectedUnits = BoardManager.Instance.GetLane(_laneNumber).GetLaneUnits();
         bool paidInkCost = false;
@@ -68,6 +67,7 @@ public class TimepieceSpell : MonoBehaviour, ISpellStamp
                     }
                     else
                     {
+                        AkSoundEngine.PostEvent("Play_StampTimePiece", gameObject);
                         unitScript.ReduceCooldown(_timepieceReductionAmount);
                         _isDeactivated = true;
                         _timepieceAnimator.Play(_timepieceDisappearAnimation);

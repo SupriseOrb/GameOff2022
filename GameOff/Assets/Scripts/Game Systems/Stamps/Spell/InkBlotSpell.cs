@@ -34,29 +34,36 @@ public class InkBlotSpell : MonoBehaviour, ISpellStamp
 
     public void ActivateStampAbility()
     {
-        AkSoundEngine.PostEvent("Play_StampInk", gameObject);
         LoadBaseStats();
         _blotColliders = Physics2D.OverlapCircleAll(transform.position, _blotRange);
         if (_blotColliders != null)
         {
-            if(DeckManager.Instance.RemoveInk(DeckManager.Instance.SelectedCard.CardSO.InkCost))
+            if(BoardManager.Instance.GetLane(_laneNumber).GetLaneEnemies().Count != 0)
             {
-                foreach (Collider2D collider in _blotColliders)
+                if(DeckManager.Instance.RemoveInk(DeckManager.Instance.SelectedCard.CardSO.InkCost))
                 {
-                    if (collider.gameObject.TryGetComponent(out IEnemy enemy))
+                    AkSoundEngine.PostEvent("Play_StampInk", gameObject);
+                    foreach (Collider2D collider in _blotColliders)
                     {
-                        if (BoardManager.Instance.GetLane(_laneNumber).GetLeylineStatus())
+                        if (collider.gameObject.TryGetComponent(out IEnemy enemy))
                         {
-                            float multiplier = BoardManager.Instance.GetLane(_laneNumber).GetLeylineMultiplier();
-                            enemy.TakeDamage(_blotDamage * multiplier); 
+                            if (BoardManager.Instance.GetLane(_laneNumber).GetLeylineStatus())
+                            {
+                                float multiplier = BoardManager.Instance.GetLane(_laneNumber).GetLeylineMultiplier();
+                                enemy.TakeDamage(_blotDamage * multiplier); 
+                            }
+                            else
+                            {
+                                enemy.TakeDamage(_blotDamage); 
+                            }    
                         }
-                        else
-                        {
-                            enemy.TakeDamage(_blotDamage); 
-                        }    
                     }
                 }
-            }   
+            }
+            else
+            {
+                Destroy(gameObject);
+            }  
         }
         _isDead = true;
     }      

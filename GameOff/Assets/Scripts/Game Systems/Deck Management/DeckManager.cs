@@ -140,6 +140,7 @@ public class DeckManager : MonoBehaviour
         }
         _discardDeck.Clear();
         
+        /*
         foreach(GameObject card in _cardHand)
         {
             CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
@@ -148,6 +149,7 @@ public class DeckManager : MonoBehaviour
             card.transform.position = _activeDeckTransform.position;
         }
         System.Array.Clear(_cardHand, 0, _cardHand.Length);
+        */
 
         /* TODO :
             Should activate timer to next wave UI as well as disable the shuffle timer
@@ -362,4 +364,5 @@ public class DeckManager : MonoBehaviour
         _selectedCard.ToggleBorder(true);
         _spriteDrag.ToggleIsDragging(true, cardToSelect);
     }
+
 }

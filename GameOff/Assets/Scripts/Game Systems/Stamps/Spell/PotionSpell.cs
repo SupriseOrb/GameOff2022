@@ -67,7 +67,6 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
 
     public void ActivateStampAbility()
     {
-        AkSoundEngine.PostEvent("Play_StampPotion", gameObject);
         LoadBaseStats();
         if(_affectedTile.GetHeldStamp() != null)
         {
@@ -88,6 +87,7 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
                     }
                     _isDeactivated = false;
                     _isActivated = true;
+                    AkSoundEngine.PostEvent("Play_StampPotion", gameObject);
                     _potionAnimator.Play(_potionAppearAnimation);
                 }
             }
