@@ -36,6 +36,7 @@ public class InputManager : MonoBehaviour
     [Header("Error Message")]
     [SerializeField] private Animator _errorMessagePanelAnimator;
     [SerializeField] private string _openErrorMessagePanelAnim = "ErrorMessage_Appear";
+    [SerializeField] private string _closeErrorMessagePanelAnim = "ErrorMessage_Dissappear";
     [SerializeField] private TextMeshProUGUI _errorMessageTextBox;
     [SerializeField] [TextArea] private string _errorNotEnoughInk = "Cannot Stamp, not enough ink";
     [SerializeField] [TextArea] private string _stampOutsideGrid = "Cannot stamp outside of the grid";
@@ -186,7 +187,7 @@ public class InputManager : MonoBehaviour
 
     private void AnnounceError(string errorMessage, bool isOnPerformed)
     {
-        if (!isOnPerformed)
+        if (!isOnPerformed || _errorMessagePanelAnimator.GetCurrentAnimatorStateInfo(0).IsName(_closeErrorMessagePanelAnim))
         {
             return;
         }
@@ -194,7 +195,7 @@ public class InputManager : MonoBehaviour
         
         AkSoundEngine.PostEvent("Play_ErrorMessage", gameObject);
         _errorMessageTextBox.text = errorMessage;
-        _errorMessagePanelAnimator.Play(_openErrorMessagePanelAnim);
+        _errorMessagePanelAnimator.Play(_openErrorMessagePanelAnim, -1, 0f);
         if (errorMessage == _errorNotEnoughInk)
         {
             // TODO : Make the ink bar flash w/ a shader
