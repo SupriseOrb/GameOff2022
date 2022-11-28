@@ -11,6 +11,18 @@ public class InkCowItem : MonoBehaviour, IItemStamp
     [SerializeField] private bool _isOnCooldown = true;
     [SerializeField] private bool _isDead = false;
     [SerializeField] private int _cowInkGeneration;
+    private int _currentCowInkGeneration
+    {
+        get 
+        {
+            float multiplier = BoardManager.Instance.GetLane(_laneNumber).GetLeylineMultiplier();
+            if (multiplier <= 0f)
+            {
+                multiplier = 1f;
+            }
+            return (int)(_cowInkGeneration*multiplier);
+        }
+    }
     [SerializeField] private Sprite _cowSprite;
     [SerializeField] private BoxCollider2D _cowCollider;
     [SerializeField] private ItemStampScriptableObject _cowItemSO;
@@ -114,8 +126,7 @@ public class InkCowItem : MonoBehaviour, IItemStamp
         // COLLIN TODO: INK COW ACTION
         if(BoardManager.Instance.GetLane(_laneNumber).GetLeylineStatus())
         {
-            float multiplier = BoardManager.Instance.GetLane(_laneNumber).GetLeylineMultiplier();
-            DeckManager.Instance.AddInk((int)(_cowInkGeneration * multiplier));
+            DeckManager.Instance.AddInk(_currentCowInkGeneration);
         }
         else
         {
@@ -152,7 +163,7 @@ public class InkCowItem : MonoBehaviour, IItemStamp
     {
         string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.ITEM, Vocab.INKCOST(_cardSO.InkCost)});
         string description = _cardSO.CardDescription;
-        string stats = Vocab.SEPARATE(new string[] {Vocab.HEALTH(_cowCurrentHealth), Vocab.INKDELTA(_cowInkGeneration)});
+        string stats = Vocab.SEPARATE(new string[] {Vocab.HEALTH(_cowCurrentHealth), Vocab.INKDELTA(_currentCowInkGeneration)});
         return name + "\n" + description + "\n" + stats;
     }
 }

@@ -83,7 +83,7 @@ public class BoardManager : MonoBehaviour
                 {
                     if (tempText != "")
                     {
-                        tempText += "\n";
+                        tempText += "\n\n";
                     }
 
                     tempText += landStamp.GetComponent<ILandStamp>().GetTileDescription();                    
