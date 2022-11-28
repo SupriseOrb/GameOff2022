@@ -75,7 +75,7 @@ MonoBehaviour:
   _inkMinionCollider: {fileID: 0}
   _inkMinionSpriteRenderer: {fileID: 942562487899098157}
   _defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  _damageFlashMaterial: {fileID: 2100000, guid: 176a06a98be8d7044b8db8eaefab3132, type: 2}
+  _damageFlashMaterial: {fileID: 2100000, guid: a5cd46e541c39164e9682f36c1ec2eac, type: 2}
   _flashTime: 0.125
   _cardSO: {fileID: 11400000, guid: 51e0cd4117ce2944490d48fe2aec331b, type: 2}
   _isInWave: {fileID: 11400000, guid: 8f4a5478ae728304a813c62d9be70350, type: 2}
