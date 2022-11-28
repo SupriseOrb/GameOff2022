@@ -447,7 +447,7 @@
 				<GameParameter Id="2923328739" Name="UpgradeSound_IsPlaying" ObjectPath="\Game Parameters\Default Work Unit\UpgradeSound_IsPlaying"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="114596842">
+		<SoundBank Id="3991942870" Language="SFX" Hash="2660660988">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
