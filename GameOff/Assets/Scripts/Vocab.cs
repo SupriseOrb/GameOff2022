@@ -17,12 +17,12 @@ public static class Vocab
     }
     public static string VAR(float amount)
     {
-        return "<color=#F1BD7E>" + amount + "</color>";
+        return "<color=#A6823F>" + amount + "</color>";
     }
 
     public static string VAR(int amount)
     {
-        return "<color=#F1BD7E>" + amount + "</color>";
+        return "<color=#A6823F>" + amount + "</color>";
     }
     public static string PLAYER_UNIT = "Allied Unit";
     public static string SUMMON = "Allied Summon";
