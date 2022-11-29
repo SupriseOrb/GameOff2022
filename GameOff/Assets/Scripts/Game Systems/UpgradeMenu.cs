@@ -52,7 +52,7 @@ public class UpgradeMenu : MonoBehaviour
         _inUpgradeMenu.Value = true;
         Time.timeScale = 0f;
         AkSoundEngine.SetRTPCValue("PauseBusVolume", 0f);
-
+        AkSoundEngine.SetRTPCValue("Is_Paused", 100f);
         AkSoundEngine.PostEvent("Play_UIPause", gameObject);
         for (int i = 0; i < _cardUpgrades.Length; i++)
         {
@@ -85,7 +85,8 @@ public class UpgradeMenu : MonoBehaviour
         _inUpgradeMenu.Value = false;
         Time.timeScale = 1f;
         AkSoundEngine.SetRTPCValue("PauseBusVolume", 100f);
-
+        AkSoundEngine.SetRTPCValue("Is_Paused", 0f);
+        AkSoundEngine.PostEvent("Unmute_Ambience", gameObject);
         AkSoundEngine.PostEvent("Play_Upgrade", gameObject);
         AkSoundEngine.PostEvent("Play_UIResume", gameObject);
         _animator.Play(_animationCloseString);

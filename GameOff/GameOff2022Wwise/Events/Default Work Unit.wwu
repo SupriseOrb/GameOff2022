@@ -509,6 +509,32 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Play_CowLoop" ID="{3F225BA6-86F2-4534-ACB0-FBB0009609F4}">
+									<ChildrenList>
+										<Action Name="" ID="{21C32483-40BD-4A1F-9567-E9FBD8B451BD}" ShortID="421815047">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Cow Moo Loop" ID="{85043DF3-FAD4-46BD-81F9-58D0C29C0D13}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_CowLoop" ID="{72716D4B-BB7B-4B1B-AF29-834E2E822C00}">
+									<ChildrenList>
+										<Action Name="" ID="{9071C19F-4ECD-4D2E-AECE-CD7C4DC8F817}" ShortID="765084062">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Cow Moo Loop" ID="{85043DF3-FAD4-46BD-81F9-58D0C29C0D13}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Ambience" ID="{6E0B9678-4952-48FA-898D-58617236A38C}" ShortID="44228726">

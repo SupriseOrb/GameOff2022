@@ -23,6 +23,7 @@
 						<ObjectRef Name="Play_InkFull" ID="{0A1BB36C-9949-44A4-A783-1C42F1503A37}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_WaveStart" ID="{EA2C7185-B14E-44A9-8CA5-9E9FC73E20FF}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_HarpyAbility1" ID="{8981C21B-587D-450A-9256-78B081A78513}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CowLoop" ID="{3F225BA6-86F2-4534-ACB0-FBB0009609F4}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ClicheMovement" ID="{5D5D493C-FE88-45B1-94A7-4D665FBA9C23}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_InkDepleted" ID="{4791D040-BCF5-45D2-81DF-465A1F03E0E0}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BramblePatch" ID="{4170ADD7-C828-4601-92CD-162879DCB17D}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
@@ -45,6 +46,7 @@
 						<ObjectRef Name="Play_ErrorMessage" ID="{E23B847F-7987-49ED-9E45-E79AF2B7C838}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_InkBonus" ID="{3A2302DC-493A-49F2-8AE6-328FF9353D18}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampSpikeyBush" ID="{D3BEF240-C5B5-4B03-B1EC-231319B1DBDC}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_CowLoop" ID="{72716D4B-BB7B-4B1B-AF29-834E2E822C00}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CarriageEntrance" ID="{D156E067-21CC-4B4F-BEDA-250B1EE6258C}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Timer" ID="{CCCF5211-AF10-4B51-BED2-A256C289C5B2}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_StampInkDemon" ID="{8A6731B5-1132-4B59-A817-B44CD7320C4F}" WorkUnitID="{DA41164C-AF4F-4191-910D-3DC5CB7426FF}" Origin="Manual" Filter="7"/>

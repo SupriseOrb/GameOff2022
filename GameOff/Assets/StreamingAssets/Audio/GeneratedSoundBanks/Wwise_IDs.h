@@ -24,6 +24,7 @@ namespace AK
         static const AkUniqueID PLAY_CLICHEHOVER = 1817342604U;
         static const AkUniqueID PLAY_CLICHEMOVEMENT = 1396175505U;
         static const AkUniqueID PLAY_CLICHEMOVEMENTCANCEL = 3212791047U;
+        static const AkUniqueID PLAY_COWLOOP = 890097977U;
         static const AkUniqueID PLAY_DEATHANIMATION = 2720241158U;
         static const AkUniqueID PLAY_ENEMYTAKEDAMAGE = 3195081828U;
         static const AkUniqueID PLAY_ERRORMESSAGE = 1984185677U;
@@ -57,6 +58,7 @@ namespace AK
         static const AkUniqueID PLAY_WAVESTART = 377318551U;
         static const AkUniqueID STOP_AMBIENCE = 2477713992U;
         static const AkUniqueID STOP_CARRIAGEMOVEMENT = 2636349021U;
+        static const AkUniqueID STOP_COWLOOP = 4087679631U;
         static const AkUniqueID STOP_REDCAPABILITY = 334102883U;
         static const AkUniqueID STOP_TEXT = 2235615413U;
         static const AkUniqueID TIMER = 3920142940U;

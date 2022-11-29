@@ -98,6 +98,7 @@ public class InkCowItem : MonoBehaviour, IItemStamp
             
             _isDead = true;
             AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
+            AkSoundEngine.PostEvent("Stop_CowLoop",gameObject);
             _cowAnimator.Play(_cowDisappearAnim);
             _cowCollider.enabled = false;
         }
@@ -123,7 +124,7 @@ public class InkCowItem : MonoBehaviour, IItemStamp
 
     public void ActivateStampAbility()
     {
-        // COLLIN TODO: INK COW ACTION
+        AkSoundEngine.PostEvent("Play_CowLoop",gameObject);
         if(BoardManager.Instance.GetLane(_laneNumber).GetLeylineStatus())
         {
             DeckManager.Instance.AddInk(_currentCowInkGeneration);

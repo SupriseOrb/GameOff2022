@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="29615514">
+		<SoundBank Id="393239870" Language="SFX" Hash="2934422591">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -35,33 +35,33 @@
 				</Event>
 				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\SFX Events\Ambience\Play_Ambience" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="248236009" Language="SFX">
-							<ShortName>Dawn Ambience_v2.wav</ShortName>
-							<Path>SFX/Dawn Ambience_v2_D79FB2B7.wem</Path>
+						<File Id="640210475" Language="SFX">
+							<ShortName>Day Ambience_v3.wav</ShortName>
+							<Path>SFX/Day Ambience_v3_D79FB2B7.wem</Path>
 						</File>
-						<File Id="287838291" Language="SFX">
-							<ShortName>Ambience Loop 1.wav</ShortName>
-							<Path>SFX/Ambience Loop 1_D79FB2B7.wem</Path>
+						<File Id="827178777" Language="SFX">
+							<ShortName>Dawn Ambience_v3.wav</ShortName>
+							<Path>SFX/Dawn Ambience_v3_D79FB2B7.wem</Path>
 						</File>
-						<File Id="364280936" Language="SFX">
-							<ShortName>Ambience 2_v2.wav</ShortName>
-							<Path>SFX/Ambience 2_v2_D79FB2B7.wem</Path>
+						<File Id="966812552" Language="SFX">
+							<ShortName>Night Ambience_v3.wav</ShortName>
+							<Path>SFX/Night Ambience_v3_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{E9BDBE55-1810-4124-816D-F965D36E5D5C}">
 							<Media>
-								<File Id="248236009"/>
+								<File Id="827178777"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{CC158771-B0EB-4744-A788-5B07A6460296}">
 							<Media>
-								<File Id="287838291"/>
+								<File Id="640210475"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{62A6DBB4-E7F7-4119-97C6-2806A693EE6D}">
 							<Media>
-								<File Id="364280936"/>
+								<File Id="966812552"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -123,6 +123,18 @@
 						<File Id="761191295" Language="SFX">
 							<ShortName>Cliche_MovementCancel_v1.wav</ShortName>
 							<Path>SFX/Cliche_MovementCancel_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="890097977" Name="Play_CowLoop" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_CowLoop" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="438714938" Language="SFX">
+							<ShortName>Cow Moos 2.wav</ShortName>
+							<Path>SFX/Cow Moos 2_10C4C929.wem</Path>
+						</File>
+						<File Id="453965610" Language="SFX">
+							<ShortName>Cow Moos 1.wav</ShortName>
+							<Path>SFX/Cow Moos 1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -400,6 +412,7 @@
 				</Event>
 				<Event Id="2477713992" Name="Stop_Ambience" ObjectPath="\Events\Default Work Unit\SFX Events\Ambience\Stop_Ambience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2636349021" Name="Stop_CarriageMovement" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Stop_CarriageMovement" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="4087679631" Name="Stop_CowLoop" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Stop_CowLoop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="334102883" Name="Stop_RedcapAbility" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Stop_RedcapAbility" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2235615413" Name="Stop_Text" ObjectPath="\Events\Default Work Unit\SFX Events\Text\Stop_Text" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3920142940" Name="Timer" ObjectPath="\Events\Default Work Unit\SFX Events\Cliche UI\Timer" DurationType="OneShot" DurationMin="3.000408" DurationMax="3.000408">
@@ -426,7 +439,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1991172471">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3451587313">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
