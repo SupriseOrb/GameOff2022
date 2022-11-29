@@ -93,7 +93,7 @@ MonoBehaviour:
   _featherSlowDuration: 0
   _featherMovementSpeed: 75
   _featherRigidbody: {fileID: 6197164183251949291}
-  _featherDestroyTime: 5
+  _featherDestroyTime: 0.315
 --- !u!1 &6197164184629580865
 GameObject:
   m_ObjectHideFlags: 0

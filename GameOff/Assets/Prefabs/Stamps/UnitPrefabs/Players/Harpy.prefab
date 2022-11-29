@@ -247,6 +247,7 @@ MonoBehaviour:
   _harpyPushDistance: 2
   _featherProjectile: {fileID: 6197164183251949288, guid: afe304ba225a15341a3e7f2c0f6c7be5, type: 3}
   _featherProjectileSpawnLocation: {fileID: 5931444528080003716}
+  _featherDestroyTime: 0.315
   _harpyAnimator: {fileID: 5931444527902903502}
   _harpyAquaAppearAnimationName: Harpy_Aqua_Appear
   _harpyBlueAppearAnimationName: Harpy_Blue_Appear

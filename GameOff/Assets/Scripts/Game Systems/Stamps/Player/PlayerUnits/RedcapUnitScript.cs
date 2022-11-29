@@ -38,9 +38,18 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     }
 #endregion
 
-#region UnitVariables
+#region InkballVariables
     [SerializeField] private GameObject _inkProjectile;
     [SerializeField] private Transform _inkProjectileSpawnLocation;
+    [SerializeField] private float _inkballDestroyTime;
+
+    public float InkballDestroyTime
+    {
+        get {return _inkballDestroyTime;}
+    }
+#endregion
+
+#region UnitVariables
     [SerializeField] private bool _canStun = false;
     [SerializeField] private Animator _redcapAnimator;
     [SerializeField] private string _redcapAppearAnimationName = "Redcap_Red_Appear";
@@ -79,8 +88,8 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
     void Start()
     {
         AkSoundEngine.PostEvent("Play_StampRedcap", gameObject);
-        LoadBaseStats();
         LoadUpgradeStats();
+        LoadBaseStats();
         _redcapAttackCooldown = 1 / _redcapAttackSpeed;
         _redcapAnimator.Play(_redcapAppearAnimationName);
         _currentUpgradePath = RedcapUpgradePaths.upgradeBase;
@@ -96,6 +105,19 @@ public class RedcapUnitScript : MonoBehaviour, IUnitStamp
         _redcapDamage = _redcapSO.UnitDamage;
         _redcapAttackSpeed = _redcapSO.UnitAttackSpeed;
         _unitSlowAmount = _redcapSO.UnitSlowAmount;
+
+        //If left tile has a unit and it's this unit
+        if (BoardManager.Instance.GetLane(_redcapLaneNumber).GetLaneUnits()[0] != null &&
+            BoardManager.Instance.GetLane(_redcapLaneNumber).GetLaneUnits()[0].transform.position == this.gameObject.transform.position)
+        {
+            _inkballDestroyTime = 4.7f;
+        }
+        //If right tile has a unit and it's this unit
+        else if (BoardManager.Instance.GetLane(_redcapLaneNumber).GetLaneUnits()[1] != null &&
+            BoardManager.Instance.GetLane(_redcapLaneNumber).GetLaneUnits()[1].transform.position == this.gameObject.transform.position)
+        {
+            _inkballDestroyTime = 4.2f;
+        }
     }
 
     public void LoadUpgradeStats()

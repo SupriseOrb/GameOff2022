@@ -38,6 +38,7 @@ public class HarpyFeatherProjectile : MonoBehaviour
         _featherSlowIntensity = _harpyScript.SlowIntensity;
         _featherSlowDuration = _harpyScript.SlowDuration;
         _currentUpgradePath = _harpyScript._currentUpgradePath;
+        _featherDestroyTime = _harpyScript.FeatherDestroyTime;
 
         _featherRigidbody.velocity = Vector2.right * _featherMovementSpeed;
     }

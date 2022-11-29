@@ -246,6 +246,7 @@ MonoBehaviour:
   _redcapStunDuration: 0
   _inkProjectile: {fileID: 6197164183251949288, guid: e5d27ba7bc3d1fb4b9cf0eb0542d543b, type: 3}
   _inkProjectileSpawnLocation: {fileID: 5931444528080003716}
+  _inkballDestroyTime: 4.7
   _canStun: 0
   _redcapAnimator: {fileID: 5931444527902903502}
   _redcapAppearAnimationName: Redcap_Red_Appear

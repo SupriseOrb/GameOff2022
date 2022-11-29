@@ -41,9 +41,17 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
     }
 #endregion
 
-#region UnitVariables
+#region FeatherVariables
     [SerializeField] private GameObject _featherProjectile;
     [SerializeField] private Transform _featherProjectileSpawnLocation;
+    [SerializeField] private float _featherDestroyTime;
+    public float FeatherDestroyTime
+    {
+        get {return _featherDestroyTime;}
+    }
+#endregion
+
+#region UnitVariables
     [SerializeField] private Animator _harpyAnimator;
     [SerializeField] private string _harpyAquaAppearAnimationName = "Harpy_Aqua_Appear";
     [SerializeField] private string _harpyBlueAppearAnimationName = "Harpy_Blue_Appear";
@@ -92,6 +100,19 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
         _harpyAttackSpeed = _harpySO.UnitAttackSpeed;
         _harpySlowIntensity = _harpySO.UnitSlowAmount;
         _harpySlowDuration = _harpySO.UnitSlowDuration;
+
+        //If left tile has a unit and it's this unit
+        if (BoardManager.Instance.GetLane(_harpyLaneNumber).GetLaneUnits()[0] != null &&
+            BoardManager.Instance.GetLane(_harpyLaneNumber).GetLaneUnits()[0].transform.position == this.gameObject.transform.position)
+        {
+            _featherDestroyTime = 0.315f;
+        }
+        //If right tile has a unit and it's this unit
+        else if (BoardManager.Instance.GetLane(_harpyLaneNumber).GetLaneUnits()[1] != null &&
+            BoardManager.Instance.GetLane(_harpyLaneNumber).GetLaneUnits()[1].transform.position == this.gameObject.transform.position)
+        {
+            _featherDestroyTime = 0.277f;
+        }
         
         //Set once testing is done
         //_harpyForcedMoveSpeed = 0f;

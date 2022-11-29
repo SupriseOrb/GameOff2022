@@ -24,6 +24,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     private float _moveDistance;
     private float _startTime;
     private float _forcedMoveSpeed;
+    private float _distanceCheck = 0.01f;
 #endregion
 
     [SerializeField] private GameObject _attackTarget;
@@ -153,6 +154,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
             else
             {
                 _carriageMovementSpeed = _carriageMovementSpeed / _currentSlowMultiplier;
+                _isMoveSlowed = false;
                 _isAttacking = true;
                 SetAnimationSpeeds();
             }
@@ -162,10 +164,9 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
         {
             float distanceMoved = (Time.time - _startTime) * _forcedMoveSpeed;
             float movementPercentage = distanceMoved / _moveDistance;
-
+            float distanceRemaining = Mathf.Abs(Vector3.Distance(transform.position, _endingPosition));
             //Check done this way to prevent floating point inaccuracy
-            //Check done this way to prevent floating point inaccuracy
-            if (_startingPosition.y == _endingPosition.y && Vector3.Distance(transform.position, _endingPosition) > 0)
+            if (_startingPosition.y == _endingPosition.y && distanceRemaining > _distanceCheck)
             {
                 transform.position = Vector3.Lerp(_startingPosition, _endingPosition, movementPercentage);
             }
@@ -253,20 +254,20 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
                 }
             }
         }
-
-        SetAnimationSpeeds();
         
+        SetAnimationSpeeds();
     }
 
     public void IncreaseSpeeds(float movementModifier, float attackSpeedModifier)
     {
         if(movementModifier > 0)
         {
-            _carriageMovementSpeed = _carriageBaseMovementSpeed * movementModifier;
+            _carriageMovementSpeed = _carriageMovementSpeed * movementModifier;
             _isAttacking = true;
         }
         //_soldierRigidBody.velocity = Vector2.left * _soldierMovementSpeed;
         SetAnimationSpeeds();
+        Debug.Log(_carriageMovementSpeed);
     }
 
     private void SetAnimationSpeeds()
@@ -296,12 +297,18 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
         _carriageCollider.enabled = false;
 
         _startingPosition = startPos;
-        _endingPosition = endPos;
+        if (endPos.x > 12f) 
+        {
+            _endingPosition = new Vector3(12f, endPos.y, endPos.z);
+        }
+        else
+        {
+            _endingPosition = endPos;
+        }
         _forcedMoveSpeed = forcedMoveSpeed;
         _moveDistance = Vector3.Distance(_startingPosition, _endingPosition);
         _startTime = Time.time;
         _isLerping = true;
-
     }
 
     private IEnumerator DamageFlashCoroutine()

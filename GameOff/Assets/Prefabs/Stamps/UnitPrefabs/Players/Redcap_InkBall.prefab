@@ -97,7 +97,7 @@ MonoBehaviour:
   _inkballScale: {x: 0, y: 0, z: 0}
   _inkballMovementSpeed: 5
   _inkballRigidbody: {fileID: 0}
-  _inkballDestroyTime: 6
+  _inkballDestroyTime: 4.7
   _inkballScaleTime: 0.5
 --- !u!1 &6197164184629580865
 GameObject:

@@ -48,6 +48,7 @@ public class RedcapInkBallProjectile : MonoBehaviour
         _inkballStunActive = _redcapScript.CanStun;
         _inkballStunDuration = _redcapScript.StunDuration;
         _currentUpgradePath = _redcapScript._currentUpgradePath;
+        _inkballDestroyTime = _redcapScript.InkballDestroyTime;
 
         _spriteRenderer.sprite = SetSprite();
         _inkballRigidbody.velocity = Vector2.right * _inkballMovementSpeed;
