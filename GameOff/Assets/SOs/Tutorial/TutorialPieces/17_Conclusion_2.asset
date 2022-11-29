@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee4929c22782b846a123ae4fa8e6ed1, type: 3}
+  m_Name: 17_Conclusion_2
+  m_EditorClassIdentifier: 
+  _image: {fileID: 21300000, guid: 4d28dd4612449024b82c7d12c48e32ad, type: 3}
+  _description: "Anyways, if you need a refresher on anything I talked about, look
+    at the handbook. You can find it in the \u201CPause Menu\u201D...what does God
+    mean\u2026 I don\u2019t understand their words sometimes\u2026\r\n"

@@ -57,7 +57,7 @@ MonoBehaviour:
   _systemTextBox: {fileID: 7154393228130747684}
   _textHolder: {fileID: 3742683724265425993}
   _canContinueIndicator: {fileID: 7256254577490403989}
-  animator: {fileID: 752256672514548744}
+  animator: {fileID: 0}
   _playerCanContinue: 1
   _systemTextOn: {fileID: 11400000, guid: a7e45bf93e7831e4b98e80bcb2bc7a5b, type: 2}
   _isPaused: {fileID: 11400000, guid: aa70333282a23e84792d95a53d327032, type: 2}
@@ -120,6 +120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_SystemText
       objectReference: {fileID: 0}
+    - target: {fileID: 5860448193338785729, guid: c0b4c97f5a1e7dc45af3d1f8936783c4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9ab3fe7ccb648044ca44c764e1f81e45, type: 2}
     - target: {fileID: 8059983213869949221, guid: c0b4c97f5a1e7dc45af3d1f8936783c4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -234,11 +238,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0b4c97f5a1e7dc45af3d1f8936783c4, type: 3}
---- !u!95 &752256672514548744 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2537928194288734734, guid: c0b4c97f5a1e7dc45af3d1f8936783c4, type: 3}
-  m_PrefabInstance: {fileID: 2974633370457404934}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3742683724265425993 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1925476095979223631, guid: c0b4c97f5a1e7dc45af3d1f8936783c4, type: 3}

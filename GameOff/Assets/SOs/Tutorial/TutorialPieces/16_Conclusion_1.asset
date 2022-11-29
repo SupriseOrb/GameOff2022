@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee4929c22782b846a123ae4fa8e6ed1, type: 3}
+  m_Name: 16_Conclusion_1
+  m_EditorClassIdentifier: 
+  _image: {fileID: 21300000, guid: a84a24d3c9fc4944eb062f23cb1ab945, type: 3}
+  _description: "Well, as the oracle I have some words of wisdom from the Ink God:
+    \u201CGood luck, bestie x3\u201D.\r"
