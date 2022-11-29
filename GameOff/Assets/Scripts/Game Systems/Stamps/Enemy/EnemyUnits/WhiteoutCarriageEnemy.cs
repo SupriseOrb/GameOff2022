@@ -24,7 +24,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     private float _moveDistance;
     private float _startTime;
     private float _forcedMoveSpeed;
-    private float _distanceCheck = 0.01f;
+    private float _distanceCheck = 0.011f;
 #endregion
 
     [SerializeField] private GameObject _attackTarget;

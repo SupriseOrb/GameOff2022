@@ -86,11 +86,11 @@ public class HarpyFeatherProjectile : MonoBehaviour
                 }
                 else if(_currentUpgradePath == HarpyUnitScript.HarpyUpgradePaths.upgradeBoomingSong)
                 {
-                        Vector3 newLocation = new Vector3(_featherPushDistance, 0, 0);
-                        _featherForcedMoveSpeed = _harpyScript.ForcedMoveSpeed;
-                        enemy.TakeDamage(_featherDamage);
-                        enemy.ReduceSpeeds(1 - _featherSlowIntensity, _featherSlowDuration);
-                        enemy.ForcedMove(other.gameObject.transform.position, other.gameObject.transform.position + newLocation, _featherForcedMoveSpeed);
+                    Vector3 newLocation = new Vector3(_featherPushDistance, 0, 0);
+                    _featherForcedMoveSpeed = _harpyScript.ForcedMoveSpeed;
+                    enemy.TakeDamage(_featherDamage);
+                    enemy.ReduceSpeeds(1 - _featherSlowIntensity, _featherSlowDuration);
+                    enemy.ForcedMove(other.gameObject.transform.position, other.gameObject.transform.position + newLocation, _featherForcedMoveSpeed);
                 }
                 else
                 {

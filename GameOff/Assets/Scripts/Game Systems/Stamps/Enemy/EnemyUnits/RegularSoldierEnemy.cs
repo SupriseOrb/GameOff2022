@@ -28,7 +28,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     [SerializeField] private float _moveDistance;
     [SerializeField] private float _startTime;
     [SerializeField] private float _forcedMoveSpeed;
-    [SerializeField] private float _distanceCheck = 0.01f;
+    [SerializeField] private float _distanceCheck = 0.011f;
 #endregion
 
     [SerializeField] private GameObject _attackTarget;
