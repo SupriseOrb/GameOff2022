@@ -298,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2371857296523986230, guid: 8a0aec236b51f4d4088d2d567d620291, type: 3}
       propertyPath: m_text
-      value: Start Wave
+      value: Start Wave 1
       objectReference: {fileID: 0}
     - target: {fileID: 2371857296523986230, guid: 8a0aec236b51f4d4088d2d567d620291, type: 3}
       propertyPath: m_fontSize

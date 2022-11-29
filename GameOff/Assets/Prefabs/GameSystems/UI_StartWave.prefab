@@ -108,6 +108,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5377316664616599263}
     m_Modifications:
+    - target: {fileID: 4284616307220490326, guid: b810e20cf1b92514ca1acbe12468f5ed, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284616307220490326, guid: b810e20cf1b92514ca1acbe12468f5ed, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284616307220490326, guid: b810e20cf1b92514ca1acbe12468f5ed, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284616307220490326, guid: b810e20cf1b92514ca1acbe12468f5ed, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159424241348818292, guid: b810e20cf1b92514ca1acbe12468f5ed, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159424241348818292, guid: b810e20cf1b92514ca1acbe12468f5ed, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159424241348818292, guid: b810e20cf1b92514ca1acbe12468f5ed, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159424241348818292, guid: b810e20cf1b92514ca1acbe12468f5ed, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6823976596393824477, guid: b810e20cf1b92514ca1acbe12468f5ed, type: 3}
       propertyPath: m_Name
       value: UI_StartWavePanel

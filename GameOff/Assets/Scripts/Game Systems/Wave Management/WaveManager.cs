@@ -11,6 +11,7 @@ public class WaveManager : MonoBehaviour
     private Dictionary<int, GameObject[][]> _currentWaveSpawns;
     [SerializeField] private GameObject _winPanel;
     [SerializeField] private GameObject _losePanel;
+    [SerializeField] private TextMeshProUGUI _startWaveButtonText;
     private bool _gameOver = false;
 
     private const int MAXINTENSITYLEVEL = 3;
@@ -234,6 +235,7 @@ public class WaveManager : MonoBehaviour
         LoadNextWave();
         DeckManager.Instance.ResetDeck();
         BoardManager.Instance.ResetBoardState();
+        _startWaveButtonText.text = "Start Wave " + _currentWaveIndex;
         _startWaveCanvas.enabled = true;
     }
 
