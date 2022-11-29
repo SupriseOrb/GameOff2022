@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="2934422591">
+		<SoundBank Id="393239870" Language="SFX" Hash="3518794207">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -35,6 +35,10 @@
 				</Event>
 				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\SFX Events\Ambience\Play_Ambience" DurationType="Infinite">
 					<IncludedMemoryFiles>
+						<File Id="17044261" Language="SFX">
+							<ShortName>Night Ambience_v4.wav</ShortName>
+							<Path>SFX/Night Ambience_v4_D79FB2B7.wem</Path>
+						</File>
 						<File Id="640210475" Language="SFX">
 							<ShortName>Day Ambience_v3.wav</ShortName>
 							<Path>SFX/Day Ambience_v3_D79FB2B7.wem</Path>
@@ -42,10 +46,6 @@
 						<File Id="827178777" Language="SFX">
 							<ShortName>Dawn Ambience_v3.wav</ShortName>
 							<Path>SFX/Dawn Ambience_v3_D79FB2B7.wem</Path>
-						</File>
-						<File Id="966812552" Language="SFX">
-							<ShortName>Night Ambience_v3.wav</ShortName>
-							<Path>SFX/Night Ambience_v3_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -61,7 +61,7 @@
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{62A6DBB4-E7F7-4119-97C6-2806A693EE6D}">
 							<Media>
-								<File Id="966812552"/>
+								<File Id="17044261"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -453,7 +453,7 @@
 				<GameParameter Id="4079584867" Name="PauseBusVolume" ObjectPath="\Game Parameters\Default Work Unit\PauseBusVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="1364324702">
+		<SoundBank Id="3991942870" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>

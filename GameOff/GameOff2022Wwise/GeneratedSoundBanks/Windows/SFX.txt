@@ -66,6 +66,7 @@ Effect plug-ins	ID	Name	Type				Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	3597688	MenuUI_Hover_Eb_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\MenuUI_Hover_Eb_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_Eb_v1		10742
+	17044261	Night Ambience_v4	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Night Ambience_v4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Ambience_States\Ambience_Loop_3_Night\Night Ambience_v4\Night Ambience_v4		17896984
 	21150305	Placeholder	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Placeholder_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Placeholder		150000
 	22757368	Harpy Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Harpy Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Harpy Stamp_v1		126174
 	45222698	Time Piece Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Time Piece Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Time Piece Stamp_v1		106626
@@ -112,7 +113,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	907166050	Cliche_HoverAnimation_2_v2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Cliche_HoverAnimation_2_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_2_v2		9100
 	957178096	Cow Moo Item Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Cow Moo Item Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Cow Moo Item Stamp_v1		106626
 	966265383	MenuUI_Hover_D_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\MenuUI_Hover_D_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_D_v1		14108
-	966812552	Night Ambience_v3	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Night Ambience_v3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Ambience_States\Ambience_Loop_3_Night\Night Ambience_v3\Night Ambience_v3		17896984
 	974058342	Text Sound 1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Text Sound 1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Text animation\Text Sound 1		293994
 	1007704302	Ink Full	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Ink_Full_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ink UI\Ink Full		95104
 	1040327169	Ink Depleted	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Windows\SFX\Ink_Depleted_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ink UI\Ink Depleted		26970

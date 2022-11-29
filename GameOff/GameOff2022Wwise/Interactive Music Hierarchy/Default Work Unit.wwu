@@ -1933,7 +1933,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-3</Value>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1946,7 +1946,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicSegment Name="Night Ambience_v3" ID="{CD801B35-B640-493A-A073-40538E29E42F}" ShortID="714363598">
+										<MusicSegment Name="Night Ambience_v4" ID="{CD801B35-B640-493A-A073-40538E29E42F}" ShortID="714363598">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="101456.462585034"/>
 											</PropertyList>
@@ -1959,23 +1959,23 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="Night Ambience_v3" ID="{1E0819E9-7BF0-4B4B-9FED-A03572E412E5}" ShortID="711985590">
+												<MusicTrack Name="Night Ambience_v4" ID="{35E68996-2C43-4B7A-8BBD-F2243DD8B6E2}" ShortID="1045448426">
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Night Ambience_v3" ID="{021C9D9A-2B48-4033-8FCE-2698C08DA9C0}">
+														<AudioFileSource Name="Night Ambience_v4" ID="{CDA16226-0327-4077-9D7B-61397376188C}">
 															<Language>SFX</Language>
-															<AudioFile>Night Ambience_v3.wav</AudioFile>
+															<AudioFile>Night Ambience_v4.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="966812552"/>
+																<MediaID ID="17044261"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<TransitionList>
-														<MusicTransition Name="Root" ID="{3430E8D2-73F9-4FE8-BDE5-BC2D6D19FAE0}">
+														<MusicTransition Name="Root" ID="{E18B8B67-096B-49EA-9F5B-218BAF13705D}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -1986,18 +1986,18 @@
 														<ObjectList Name="Sequences">
 															<Reference>
 																<Local>
-																	<MusicTrackSequence Name="" ID="{754AD4C6-3235-4946-ADFD-5394EA75973A}">
+																	<MusicTrackSequence Name="" ID="{CCF8C2E1-8877-4004-BD6C-8ED0895BEB8F}">
 																		<ObjectLists>
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="Night Ambience_v3" ID="{64385A73-6142-4D74-A07C-F45D79208A54}">
+																						<MusicClip Name="Night Ambience_v4" ID="{05A7EF96-F99A-4E3F-9023-32352DB6BBB3}">
 																							<PropertyList>
 																								<Property Name="EndTrimOffset" Type="Real64" Value="101456.462585034"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="Night Ambience_v3" ID="{021C9D9A-2B48-4033-8FCE-2698C08DA9C0}"/>
+																							<AudioSourceRef Name="Night Ambience_v4" ID="{CDA16226-0327-4077-9D7B-61397376188C}"/>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -2053,7 +2053,7 @@
 														<Property Name="LoopCount" Type="int16" Value="0"/>
 														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 													</PropertyList>
-													<SegmentRef Name="Night Ambience_v3" ID="{CD801B35-B640-493A-A073-40538E29E42F}"/>
+													<SegmentRef Name="Night Ambience_v4" ID="{CD801B35-B640-493A-A073-40538E29E42F}"/>
 												</MusicPlaylistItem>
 											</ChildrenList>
 										</MusicPlaylistItem>
