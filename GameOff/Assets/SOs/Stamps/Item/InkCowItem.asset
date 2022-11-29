@@ -15,5 +15,5 @@ MonoBehaviour:
   _stampName: 'Ink Cow '
   _stampSprite: {fileID: 21300000, guid: 3fc721d25b7e4b74fa6c3d1666f058b4, type: 3}
   _itemStampValue: 2
-  _itemCooldown: 3
+  _itemCooldown: 5
   _itemHealth: 10

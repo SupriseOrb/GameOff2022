@@ -27,7 +27,7 @@ MonoBehaviour:
   _attackSpeedIncreaseAmount: 0.2
   _uniqueUpgradeOneIncreaseAmount: 1
   _uniqueUpgradeTwoIncreaseAmount: -50
-  _uniqueUpgradeThreeIncreaseAmount: 30
+  _uniqueUpgradeThreeIncreaseAmount: 10
   _upgrades:
   - name: Volatile Summons
     material: {fileID: 2100000, guid: d93b54e24a61c004abe83df4cfb0c0cd, type: 2}

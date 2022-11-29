@@ -24,10 +24,10 @@ MonoBehaviour:
   _unitSlowDuration: 1
   _unitHealth: 0
   _attackDamageIncreaseAmount: 0.5
-  _attackSpeedIncreaseAmount: 0.2
+  _attackSpeedIncreaseAmount: 0.05
   _uniqueUpgradeOneIncreaseAmount: 1
   _uniqueUpgradeTwoIncreaseAmount: 50
-  _uniqueUpgradeThreeIncreaseAmount: 0.2
+  _uniqueUpgradeThreeIncreaseAmount: 0.05
   _upgrades:
   - name: Disorienting Song
     material: {fileID: 2100000, guid: 3b79ddd3414eedd40ab19499a14461ce, type: 2}

@@ -15,17 +15,22 @@ MonoBehaviour:
   _wave:
   - _laneOneEnemies:
     - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
+    - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
     _laneTwoEnemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _laneThreeEnemies:
+    - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
     - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
     _enemySpawnDistance: 0
     _timeToSpawn: 10
   - _laneOneEnemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _laneTwoEnemies:
     - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
     _laneThreeEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _enemySpawnDistance: 0
     _timeToSpawn: 30
@@ -38,9 +43,12 @@ MonoBehaviour:
     _timeToSpawn: 45
   - _laneOneEnemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _laneTwoEnemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _laneThreeEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _enemySpawnDistance: 0
     _timeToSpawn: 70
@@ -55,5 +63,5 @@ MonoBehaviour:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _enemySpawnDistance: 0
     _timeToSpawn: 100
-  _waveDuration: 120
+  _waveDuration: 110
   _waveBreakBeforeDuration: 10

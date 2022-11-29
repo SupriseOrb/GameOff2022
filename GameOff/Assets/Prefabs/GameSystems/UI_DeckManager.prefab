@@ -1128,8 +1128,8 @@ MonoBehaviour:
   _cardInfoPanelOffset: {x: 0, y: 220, z: 0}
   _firstDrawDelay: 1
   _drawNumber: 4
-  _baseReshuffleTimer: 10
-  _currentReshuffleTimer: 10
+  _baseReshuffleTimer: 15
+  _currentReshuffleTimer: 15
   _isInWave: {fileID: 11400000, guid: 8f4a5478ae728304a813c62d9be70350, type: 2}
   _isFirstDraw: 1
   _timerSlider: {fileID: 4354047172935908987}
@@ -1141,7 +1141,7 @@ MonoBehaviour:
   _cardFrameIdleCloseString: CardFrame_IdleClose
   _maxInk: 50
   _currentInk: 0
-  _startingInk: 20
+  _startingInk: 25
   _inkBar: {fileID: 4354047172278828696}
   _inkText: {fileID: 6093316680163575162}
   _inkPerSecond: 1
