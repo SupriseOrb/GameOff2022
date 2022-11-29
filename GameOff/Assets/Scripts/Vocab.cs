@@ -89,7 +89,7 @@ public static class Vocab
         return VAR(amount) + " Push Distance";
     }
 
-    public static string SLOW_INTENSITY(int amount)
+    public static string SLOW_INTENSITY(float amount)
     {
         return VAR(amount) + " Slow Intensity";
     }

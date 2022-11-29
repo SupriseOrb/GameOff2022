@@ -36,7 +36,6 @@ public class InputManager : MonoBehaviour
     [Header("Error Message")]
     [SerializeField] private Animator _errorMessagePanelAnimator;
     [SerializeField] private string _openErrorMessagePanelAnim = "ErrorMessage_Appear";
-    [SerializeField] private string _closeErrorMessagePanelAnim = "ErrorMessage_Dissappear";
     [SerializeField] private TextMeshProUGUI _errorMessageTextBox;
     [SerializeField] [TextArea] private string _errorNotEnoughInk = "Cannot Stamp, not enough ink";
     [SerializeField] [TextArea] private string _stampOutsideGrid = "Cannot stamp outside of the grid";
