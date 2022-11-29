@@ -74,7 +74,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
 
     public void TakeDamage(float damage)
     {
-        
+        AkSoundEngine.PostEvent("Play_ItemTakeDamage", gameObject);
         _bushCurrentHealth -= damage;
         if (!_isOnCooldown)
         {

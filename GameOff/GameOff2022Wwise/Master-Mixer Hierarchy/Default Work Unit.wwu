@@ -113,6 +113,12 @@
 									</PropertyList>
 									<ObjectLists/>
 								</Bus>
+								<Bus Name="Upgrade_Sound" ID="{3132DF46-0D9C-42A9-88C0-DDCCEDD0BF71}">
+									<PropertyList>
+										<Property Name="RecoveryTime" Type="Real64" Value="0"/>
+									</PropertyList>
+									<ObjectLists/>
+								</Bus>
 							</ChildrenList>
 							<ObjectLists/>
 						</Bus>

@@ -72,30 +72,38 @@
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="Carriage_Time" ID="{BC51D99A-6800-443D-815C-47CF2D01BD7D}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="AllVolume" ID="{7E7B122A-9145-4910-8BC9-8083DEF38723}"/>
-							<Value>71.7852684144819</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="UpgradeSound_IsPlaying" ID="{35601D65-CB1F-49F6-A852-0831334826EE}"/>
-							<Value>1.09341075202351E-317</Value>
+							<Value>-48</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SFXVolume" ID="{0624FF16-60E5-4B3E-9A98-E0102DB7D98A}"/>
-							<Value>70</Value>
+							<Value>69.9126092384519</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="AmbienceVolume" ID="{003FB62E-3072-4B7E-BFF0-F8A957BFB63E}"/>
-							<Value>1.11633116878862E-315</Value>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="PauseBusVolume" ID="{8AD10FB3-AC9E-4B94-A96B-6006D212C42C}"/>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="MusicVolume" ID="{4A1D2C2F-0D27-4F7F-9D44-856492FCC85C}"/>
-							<Value>38.0774032459426</Value>
+							<Value>71.1610486891386</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Battle_Intensity_1" ID="{D85FCDF0-5F32-4588-8933-BC446D0CFB9A}"/>
-						<CurrentStateRef Name="Battle" ID="{05029B2D-7F58-46C1-8207-3AF1677D41F8}"/>
-						<CurrentStateRef Name="Ambience_1" ID="{CC158771-B0EB-4744-A788-5B07A6460296}"/>
+						<CurrentStateRef Name="Title" ID="{BFA391C7-C9AF-4231-A182-E8BF4AC6FDF7}"/>
+						<CurrentStateRef Name="None" ID="{336F76E2-B0BE-40EF-B868-0EF257228F7A}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

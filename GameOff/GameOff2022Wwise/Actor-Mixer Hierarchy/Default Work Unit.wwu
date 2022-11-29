@@ -591,13 +591,6 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Select Upgrade" ID="{4DC557D2-280F-4C38-B082-FA51F5411562}" ShortID="165377875">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>1</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -606,7 +599,7 @@
 									<ObjectRef Name="Sidechain_Meter" ID="{DEC8A8A4-10DC-4BD4-9112-E227DF7E63A2}" WorkUnitID="{A031CB47-75AD-4CDF-B610-641A899D8B4C}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+									<ObjectRef Name="Upgrade_Sound" ID="{3132DF46-0D9C-42A9-88C0-DDCCEDD0BF71}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1259,6 +1252,11 @@
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

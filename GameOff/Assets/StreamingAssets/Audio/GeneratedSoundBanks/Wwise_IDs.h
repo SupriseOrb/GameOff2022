@@ -133,6 +133,7 @@ namespace AK
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PAUSEMENU = 3494343696U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID UPGRADE_SOUND = 2920301223U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

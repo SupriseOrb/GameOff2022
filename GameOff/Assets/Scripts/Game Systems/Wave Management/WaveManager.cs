@@ -128,10 +128,11 @@ public class WaveManager : MonoBehaviour
         //Add ink equal to the time left in the countdown
         if (_currentWaveBreakDuration > 0)
         {
-            AkSoundEngine.PostEvent("Play_InkBonus", gameObject);
+            
             if(!_isFirstWave)
             {
                 DeckManager.Instance.AddInk((int)_currentWaveBreakDuration);
+                AkSoundEngine.PostEvent("Play_InkBonus", gameObject);
             }
         }
         AkSoundEngine.PostEvent("Play_WaveStart", gameObject);
