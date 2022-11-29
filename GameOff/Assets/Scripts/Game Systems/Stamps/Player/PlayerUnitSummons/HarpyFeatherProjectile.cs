@@ -60,14 +60,13 @@ public class HarpyFeatherProjectile : MonoBehaviour
                     int currentLane = enemy.GetLane();
                     if (currentLane == 0 || currentLane == 2) //If bottom or top lane
                     {
+                        BoardManager.Instance.GetLane(1).AddEnemyToList(other.gameObject); //This already sets the lane of the enemy
                         BoardManager.Instance.GetLane(currentLane).RemoveEnemyFromList(other.gameObject);
                         Vector3 newLocation = new Vector3(other.gameObject.transform.position.x, currentYValue, 0);
                         enemy.ForcedMove(other.gameObject.transform.position, newLocation, _featherForcedMoveSpeed);
-                        BoardManager.Instance.GetLane(1).AddEnemyToList(other.gameObject); //This already sets the lane of the enemy
                     }
                     else if (currentLane == 1) //If middle lane
                     {
-                        BoardManager.Instance.GetLane(currentLane).RemoveEnemyFromList(other.gameObject);
                         int randomLane = Random.Range(0,2);
                         switch (randomLane)
                         {
@@ -80,6 +79,7 @@ public class HarpyFeatherProjectile : MonoBehaviour
                                 BoardManager.Instance.GetLane(2).AddEnemyToList(other.gameObject);
                                 break;
                         }
+                        BoardManager.Instance.GetLane(currentLane).RemoveEnemyFromList(other.gameObject);
                         Vector3 newLocation = new Vector3(other.gameObject.transform.position.x, currentYValue, 0);
                         enemy.ForcedMove(other.gameObject.transform.position, newLocation, _featherForcedMoveSpeed);
                     }
