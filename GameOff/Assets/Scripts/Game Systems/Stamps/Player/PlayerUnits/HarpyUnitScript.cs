@@ -262,7 +262,7 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
     {
         string name = Vocab.SEPARATE(new string[] {_cardSO.CardName, Vocab.PLAYER_UNIT, Vocab.INKCOST(_cardSO.InkCost)});
         string description = _cardSO.CardDescriptionGivenInt((int)_currentUpgradePath);
-        string stats = Vocab.SEPARATE(new string[] {Vocab.PUSH_DISTANCE(PushDistance), Vocab.DAMAGE(_harpyDamage), Vocab.DAMAGE(Damage), Vocab.ATKSPD(_harpyAttackSpeed)});
+        string stats = Vocab.SEPARATE(new string[] {Vocab.PUSH_DISTANCE(PushDistance), Vocab.SlowIntensity(_harpySlowIntensity), Vocab.DAMAGE(Damage), Vocab.ATKSPD(_harpyAttackSpeed)});
         return name + "\n" + description + "\n" + stats;
     }
 }
