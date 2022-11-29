@@ -161,11 +161,11 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
             int upgradedStat;
             if (_currentUpgradePath == HarpyUpgradePaths.upgradeDisorientingSong)
             {
-                upgradedStat = Random.Range(0, 4);
+                upgradedStat = Random.Range(0, 2);
             }
             else //if upgrade 2
             {
-                upgradedStat = Random.Range(0, 2);
+                upgradedStat = Random.Range(0, 4);
             }
 
             switch(upgradedStat)

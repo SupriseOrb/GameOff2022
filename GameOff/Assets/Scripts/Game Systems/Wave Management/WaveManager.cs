@@ -229,15 +229,16 @@ public class WaveManager : MonoBehaviour
     {
         _winPanel.SetActive(true);
         AkSoundEngine.SetState("Music_State", "Win");
+        _startWaveCanvas.enabled = false;
     }
     public void FinishWave()
     {
         _isInWave.Value = false;
+        _startWaveCanvas.enabled = true;
         LoadNextWave();
         DeckManager.Instance.ResetDeck();
         BoardManager.Instance.ResetBoardState();
         _startWaveButtonText.text = "Start Wave " + _currentWaveIndex;
-        _startWaveCanvas.enabled = true;
     }
 
     private void FinishGame()
