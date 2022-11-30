@@ -17,6 +17,7 @@ public class UpgradeMenu : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private string _animationOpenString = "Panel_Open";
     [SerializeField] private string _animationCloseString = "Panel_Close";
+    [SerializeField] private GameObject _upgradeMenuPanel;
 
     [Header("Upgrades")]
     [SerializeField] private Upgrade[] _cardUpgrades;
@@ -49,6 +50,7 @@ public class UpgradeMenu : MonoBehaviour
 
     public void Open(GameObject unit, Sprite unitIcon, UnitStampScriptableObject.UpgradeInfo[] upgrades, int upgradePath)
     {
+        _upgradeMenuPanel.SetActive(true);
         _inUpgradeMenu.Value = true;
         Time.timeScale = 0f;
         AkSoundEngine.SetRTPCValue("PauseBusVolume", 0f);
@@ -82,6 +84,7 @@ public class UpgradeMenu : MonoBehaviour
 
     public void ChooseUpgrade(int path)
     {
+        _upgradeMenuPanel.SetActive(false);
         _inUpgradeMenu.Value = false;
         Time.timeScale = 1f;
         AkSoundEngine.SetRTPCValue("PauseBusVolume", 100f);
