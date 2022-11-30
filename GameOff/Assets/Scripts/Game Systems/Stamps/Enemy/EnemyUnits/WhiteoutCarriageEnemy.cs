@@ -24,7 +24,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     private float _moveDistance;
     private float _startTime;
     private float _forcedMoveSpeed;
-    private float _distanceCheck = 0.011f;
+    private float _distanceCheck = 0.02f;
 #endregion
 
     [SerializeField] private GameObject _attackTarget;
@@ -162,11 +162,16 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
 
         if (_isLerping)
         {
-            float distanceMoved = (Time.time - _startTime) * _forcedMoveSpeed;
+            float timePassed = Time.time - _startTime;
+            float distanceMoved = timePassed * _forcedMoveSpeed;
             float movementPercentage = distanceMoved / _moveDistance;
             float distanceRemaining = Mathf.Abs(Vector3.Distance(transform.position, _endingPosition));
+            if (timePassed > 1.2f)
+            {
+                _isLerping = false;
+            }
             //Check done this way to prevent floating point inaccuracy
-            if (_startingPosition.y == _endingPosition.y && distanceRemaining > _distanceCheck)
+            else if (_startingPosition.y == _endingPosition.y && distanceRemaining > _distanceCheck)
             {
                 transform.position = Vector3.Lerp(_startingPosition, _endingPosition, movementPercentage);
             }
