@@ -14,6 +14,22 @@ public class TutorialSequence : ScriptableObject
         get {return _pieces;}
     }
 
+    public int Length
+    {
+        get {return Sequence.Length;}
+    }
+
+    public CaptionedImage GoBack()
+    {
+        CaptionedImage result = _pieces[_currentIndex];
+        _currentIndex--;
+        return result;
+    }
+
+    public bool CanGoBack
+    {
+        get {return _currentIndex >= 0;}
+    }
     public CaptionedImage Continue()
     {
         CaptionedImage result = _pieces[_currentIndex];

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dcc198163e193b4193331a3911f16f6, type: 3}
+  m_Name: 2Cliches
+  m_EditorClassIdentifier: 
+  _pieces:
+  - {fileID: 11400000, guid: 6a0c5e36226b8cb48827f497737d800a, type: 2}
+  - {fileID: 11400000, guid: 231f3845b638978488f2e4543c42c3a1, type: 2}
+  - {fileID: 11400000, guid: 3193057c6c3173b4d8b021cedb77280d, type: 2}
+  - {fileID: 11400000, guid: 6c1ca28e172e3fd4a8d601b8d15a67f4, type: 2}
+  - {fileID: 11400000, guid: e975688d70cd6fa499c34826094b643e, type: 2}
+  - {fileID: 11400000, guid: d6b8d051de824224b948b88475c1e24a, type: 2}
+  _defaultIndex: 0
+  _currentIndex: 0
