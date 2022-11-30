@@ -940,7 +940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5821990230708233239, guid: 70e941f1c6be07340966a9a1ba43b305, type: 3}
       propertyPath: m_text
-      value: Concept/Character Artist, Animator
+      value: Concept/Character Artist, Animator, Marketing
       objectReference: {fileID: 0}
     - target: {fileID: 8266915043415592674, guid: 70e941f1c6be07340966a9a1ba43b305, type: 3}
       propertyPath: m_AnchorMax.y
