@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class WaveManager : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private Transform[] _spawnLocations;
     [SerializeField] private BoolVariable _isInWave;
     private Dictionary<int, GameObject[][]> _currentWaveSpawns;
-    [SerializeField] private GameObject _winPanel;
-    [SerializeField] private GameObject _losePanel;
+    [SerializeField] private Canvas _winPanel;
+    [SerializeField] private Canvas _losePanel;
     [SerializeField] private TextMeshProUGUI _startWaveButtonText;
     private bool _gameOver = false;
 
@@ -227,9 +228,10 @@ public class WaveManager : MonoBehaviour
 
     private void WinGame()
     {
-        _winPanel.SetActive(true);
+        _winPanel.enabled = true;
         AkSoundEngine.SetState("Music_State", "Win");
         _startWaveCanvas.enabled = false;
+        FinishGame();
     }
     public void FinishWave()
     {
@@ -260,7 +262,7 @@ public class WaveManager : MonoBehaviour
                 Debug.Log("Game Over bro, Game Over");
             }*/
 
-            _losePanel.SetActive(true);
+            _losePanel.enabled = true;
             AkSoundEngine.SetState("Music_State", "Lose");
             FinishGame();
         }
