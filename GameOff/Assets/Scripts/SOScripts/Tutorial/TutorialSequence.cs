@@ -21,19 +21,18 @@ public class TutorialSequence : ScriptableObject
 
     public CaptionedImage GoBack()
     {
-        CaptionedImage result = _pieces[_currentIndex];
+        CaptionedImage result = _pieces[_currentIndex-2];
         _currentIndex--;
         return result;
     }
 
     public bool CanGoBack
     {
-        get {return _currentIndex >= 0;}
+        get {return _currentIndex > 1;}
     }
     public CaptionedImage Continue()
     {
-        CaptionedImage result = _pieces[_currentIndex];
-        _currentIndex++;
+        CaptionedImage result = _pieces[_currentIndex++];
         return result;
     }
 
