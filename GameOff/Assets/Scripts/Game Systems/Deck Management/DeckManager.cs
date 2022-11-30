@@ -199,7 +199,7 @@ public class DeckManager : MonoBehaviour
                 {
                     _activeDeck.Add(card);
                 }
-                card.transform.position = _activeDeckTransform.position;
+                card.transform.parent.position = _activeDeckTransform.position;
             }
         }
     }
@@ -261,14 +261,16 @@ public class DeckManager : MonoBehaviour
                 _cardHand[i] = _activeDeck[randomNum];
                 _activeDeck.RemoveAt(randomNum);
                 //replace w/ animation later
-                _cardHand[i].transform.position = _cardHolders[i].transform.position;
+                _cardHand[i].transform.parent.position = _cardHolders[i].transform.position;
+                _cardHand[i].GetComponent<Animator>().Play("Draw_"+i);
             }
             //Debug.Log("Deck Length - 1: " + (_activeDeck.Count -1));
             int j = Random.Range(0, _activeDeck.Count);
             //Debug.Log("j: " + j);
             _cardHand[3] = _activeDeck[j];
             _activeDeck.RemoveAt(j);
-            _cardHand[3].transform.position = _cardHolders[3].transform.position;
+            _cardHand[3].transform.parent.position = _cardHolders[3].transform.position;
+            _cardHand[3].GetComponent<Animator>().Play("Draw_"+3);
         }
         else
         {
@@ -277,8 +279,8 @@ public class DeckManager : MonoBehaviour
                 int randomNum = Random.Range(0, _activeDeck.Count);
                 _cardHand[i] = _activeDeck[randomNum];
                 _activeDeck.RemoveAt(randomNum);
-                _cardHand[i].transform.position = _cardHolders[i].position;
-
+                _cardHand[i].transform.parent.position = _cardHolders[i].position;
+                _cardHand[i].GetComponent<Animator>().Play("Draw_"+i);
             }
         }
     }
