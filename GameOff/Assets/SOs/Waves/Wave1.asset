@@ -41,5 +41,5 @@ MonoBehaviour:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _enemySpawnDistance: 0
     _timeToSpawn: 70
-  _waveDuration: 80
-  _waveBreakBeforeDuration: 10
+  _waveDuration: 70
+  _waveBreakBeforeDuration: 15

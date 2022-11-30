@@ -3778,6 +3778,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a122cfe1ad4f7b4429d20aa80ddf3254, type: 2}
   - {fileID: 11400000, guid: 2345484617c28414cbb3f2e9675b5ebb, type: 2}
   - {fileID: 11400000, guid: a8ceb1dc3cb9bcf4caaf1dac02a66d72, type: 2}
+  - {fileID: 11400000, guid: 4b01d45a771756f41b5eea71dd233bee, type: 2}
+  - {fileID: 11400000, guid: a847c90f6c9fc4741a54e02004455b82, type: 2}
   _spawnLocations:
   - {fileID: 1858233533}
   - {fileID: 666406589}

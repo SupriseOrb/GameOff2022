@@ -86,10 +86,20 @@ MonoBehaviour:
   - _laneOneEnemies:
     - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
     _laneTwoEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 110
+  - _laneOneEnemies:
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    _laneTwoEnemies:
     - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
     _laneThreeEnemies:
     - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
     _enemySpawnDistance: 0
     _timeToSpawn: 120
-  _waveDuration: 125
-  _waveBreakBeforeDuration: 10
+  _waveDuration: 120
+  _waveBreakBeforeDuration: 20

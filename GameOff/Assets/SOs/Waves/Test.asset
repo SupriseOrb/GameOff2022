@@ -55,7 +55,7 @@ MonoBehaviour:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _enemySpawnDistance: 0
-    _timeToSpawn: 35
+    _timeToSpawn: 30
   - _laneOneEnemies:
     - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
     - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
@@ -77,7 +77,7 @@ MonoBehaviour:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _enemySpawnDistance: 0
-    _timeToSpawn: 80
+    _timeToSpawn: 60
   - _laneOneEnemies:
     - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
     _laneTwoEnemies:
@@ -85,6 +85,28 @@ MonoBehaviour:
     _laneThreeEnemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _enemySpawnDistance: 0
+    _timeToSpawn: 70
+  - _laneOneEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 85
+  - _laneOneEnemies:
+    - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _enemySpawnDistance: 0
     _timeToSpawn: 100
   _waveDuration: 100
-  _waveBreakBeforeDuration: 10
+  _waveBreakBeforeDuration: 20

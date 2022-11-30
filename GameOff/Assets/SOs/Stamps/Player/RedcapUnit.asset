@@ -23,11 +23,11 @@ MonoBehaviour:
   _unitSlowAmount: 0
   _unitSlowDuration: 0
   _unitHealth: 5
-  _attackDamageIncreaseAmount: 2
+  _attackDamageIncreaseAmount: 1
   _attackSpeedIncreaseAmount: 0.1
   _uniqueUpgradeOneIncreaseAmount: 1
-  _uniqueUpgradeTwoIncreaseAmount: 0.5
-  _uniqueUpgradeThreeIncreaseAmount: 0
+  _uniqueUpgradeTwoIncreaseAmount: 0.1
+  _uniqueUpgradeThreeIncreaseAmount: 0.01
   _upgrades:
   - name: Lead Ink
     material: {fileID: 2100000, guid: f9d29727a81aa8f499a8c9f2c5d6c0c3, type: 2}

@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d077e3891bddebf478df100b65851b4f, type: 3}
+  m_Name: FINALWAVE
+  m_EditorClassIdentifier: 
+  _wave:
+  - _laneOneEnemies:
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 0
+  - _laneOneEnemies:
+    - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 7
+  - _laneOneEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
+    - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 16
+  - _laneOneEnemies:
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    - {fileID: 4333634294102522908, guid: 0a2f97f5154815049be6a6a43777cce0, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 30
+  - _laneOneEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 50
+  - _laneOneEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 60
+  - _laneOneEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 70
+  - _laneOneEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 288912098885304986, guid: c5e81b6faa3c14d4498c901963c8978d, type: 3}
+    _enemySpawnDistance: 0
+    _timeToSpawn: 90
+  _waveDuration: 90
+  _waveBreakBeforeDuration: 0
