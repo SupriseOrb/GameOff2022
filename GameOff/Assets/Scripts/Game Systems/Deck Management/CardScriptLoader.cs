@@ -87,15 +87,15 @@ public class CardScriptLoader : MonoBehaviour, IPointerDownHandler, IPointerEnte
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        _animator.Play(_animationHighlight);
+        _animator.SetBool("Highlight", true);
         _isHoveringUI.Value = true;
         AkSoundEngine.PostEvent("Play_ClicheHover", gameObject);
-        DeckManager.Instance.OpenCardInfoPanel(_cardSO.CardDescription, transform.localPosition);
+        DeckManager.Instance.OpenCardInfoPanel(_cardSO.CardDescription, transform.parent.localPosition);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        _animator.Play(_animationIdle);
+        _animator.SetBool("Highlight", false);
         _isHoveringUI.Value = false;
         DeckManager.Instance.CloseCardInfoPanel();
     }
