@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 21300000, guid: bc34e1318bee52346bf7d4034183030d, type: 3}
   _description: "Hey, ready for another battle? As the resident ink oracle, I\u2019m
-    here to remind you how to protect our home. Do you need the reminder or are you
-    good to go?"
+    here to remind you how to protect our home."

@@ -17,7 +17,7 @@ public static class Vocab
     }
     public static string VAR(float amount)
     {
-        return "<color=#A6823F>" + amount + "</color>";
+        return "<color=#A6823F>" + Mathf.Round(amount) + "</color>";
     }
 
     public static string VAR(int amount)
