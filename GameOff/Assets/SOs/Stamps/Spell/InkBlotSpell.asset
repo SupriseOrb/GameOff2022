@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stampName: Ink Blot
   _stampSprite: {fileID: 21300000, guid: b4f9dcf82f85ce9488b81b962e219092, type: 3}
-  _spellStampValue: 4
+  _spellStampValue: 5
