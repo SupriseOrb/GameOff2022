@@ -61,6 +61,10 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private bool _isFirstWave = true;
     [SerializeField] private BoolVariable _isWaveComplete;
 
+    void Awake()
+    {
+        _isInWave.Reset();
+    }
     // Start is called before the first frame update
     void Start()
     {

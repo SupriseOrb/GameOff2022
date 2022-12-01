@@ -14,6 +14,11 @@ public class BoolVariable : ScriptableObject
     }
     private void OnEnable()
     {
+        Reset();
+    }
+
+    public void Reset()
+    {
         _currentValue = _defaultValue;
     }
 }
