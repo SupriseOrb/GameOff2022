@@ -15,7 +15,7 @@ public class PauseMenu : Menu
     void Start()
     {
         _currentEventSystem = EventSystem.current;
-        _isPaused.Value = false;
+        _isPaused.Reset();
 
         if (!_isMusicPlaying.Value)
         {

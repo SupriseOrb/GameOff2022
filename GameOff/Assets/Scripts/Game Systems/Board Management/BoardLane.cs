@@ -16,6 +16,7 @@ public class BoardLane : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _leylineActive.Reset();
         _landStampSpawnPosition = new Vector3(gameObject.transform.position.x + 14, gameObject.transform.position.y, gameObject.transform.position.z);
     }
 

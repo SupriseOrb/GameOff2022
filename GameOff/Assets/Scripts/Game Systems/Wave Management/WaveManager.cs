@@ -64,6 +64,7 @@ public class WaveManager : MonoBehaviour
     void Awake()
     {
         _isInWave.Reset();
+        _isWaveComplete.Reset();
     }
     // Start is called before the first frame update
     void Start()
