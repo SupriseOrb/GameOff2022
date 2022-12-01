@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class MainMenu : Menu
 {
-    [SerializeField] private BoolVariable _hasSeenTutorial;
     [SerializeField] private Tutorial _tutorial;
     [SerializeField] private UnityEvent _afterTutorial;
     public void Start()
