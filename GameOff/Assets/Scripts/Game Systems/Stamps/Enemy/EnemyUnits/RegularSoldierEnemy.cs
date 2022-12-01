@@ -188,6 +188,9 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
             if (timePassed > 1.2f)
             {
                 _isLerping = false;
+                _isAttacking = true;
+                _soldierAnimator.speed = 1;
+                _soldierCollider.enabled = true;
             }
             //Check done this way to prevent floating point inaccuracy
             else if (_startingPosition.y == _endingPosition.y && distanceRemaining > _distanceCheck)
