@@ -140,6 +140,7 @@ public class WaveManager : MonoBehaviour
         BroadcastIntensityChange();
         _startWaveCanvas.enabled = false;
         _isFirstWave = false;
+        DeckManager.Instance.IsFirstDraw = false;
     }
 
     public void LoadNextWave()

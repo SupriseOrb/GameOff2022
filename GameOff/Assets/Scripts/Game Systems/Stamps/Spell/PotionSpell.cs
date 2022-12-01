@@ -15,9 +15,9 @@ public class PotionSpell : MonoBehaviour, ISpellStamp
 
     #region Animation
     [SerializeField] private Animator _potionAnimator; 
-    [SerializeField] private string _potionAppearAnimation;
+    [SerializeField] private string _potionAppearAnimation = "Potion_Appear";
     [SerializeField] private float _potionAppearAnimationLength;
-    [SerializeField] private string _potionDisappearAnimation;
+    [SerializeField] private string _potionDisappearAnimation = "Potion_Disappear";
     [SerializeField] private float _potionDisappearAnimationLength;
     #endregion
 

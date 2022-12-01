@@ -239,7 +239,7 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
                 }
                 else
                 {
-                    Debug.Log("Target is Dead = " + _attackTarget.GetComponent<IItemStamp>().IsDead());
+                    // Debug.Log("Target is Dead = " + _attackTarget.GetComponent<IItemStamp>().IsDead());
                     ActivateStampAttack();
                     _soldierAttackCooldown = 1 / _soldierAttackSpeed;
                 }
@@ -351,23 +351,30 @@ public class RegularSoldierEnemy : MonoBehaviour, IEnemy
     }
     public void ForcedMove(Vector3 startPos, Vector3 endPos, float forcedMoveSpeed)
     {
-        _soldierAnimator.speed = 0;
-        _isAttacking = false;
-        _attackTarget = null;
-        _soldierRigidBody.velocity = Vector2.zero;
-        _soldierCollider.enabled = false;
-
         _startingPosition = startPos;
         //checking to see if the endingPosition would go past the end of the board (12.25f)
         //Their current spawn value is 13.87f
         if (endPos.x > 12.25f) 
         {
-            _endingPosition = new Vector3(12.25f, endPos.y, endPos.z);
+            if (transform.position.x < 12.25)
+            {
+                _endingPosition = new Vector3(12.25f, endPos.y, endPos.z);
+            }
+            else
+            {
+                return; //Don't push back if they're not visible on the board
+            }
         }
         else
         {
             _endingPosition = endPos;
         }
+
+        _soldierAnimator.speed = 0;
+        _isAttacking = false;
+        _attackTarget = null;
+        _soldierRigidBody.velocity = Vector2.zero;
+        _soldierCollider.enabled = false;
         _forcedMoveSpeed = forcedMoveSpeed;
         _moveDistance = Vector3.Distance(_startingPosition, _endingPosition);
         _startTime = Time.time;

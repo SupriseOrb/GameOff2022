@@ -36,6 +36,11 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private float _currentReshuffleTimer; //Current time till hand is reset
     [SerializeField] private BoolVariable _isInWave; //Is there currently a wave happening? //Does this belong here? Should this be a SO bool?
     [SerializeField] private bool _isFirstDraw; //Is this the first draw of the wave?
+    public bool IsFirstDraw
+    {
+        get {return _isFirstDraw;}
+        set {_isFirstDraw = value;}
+    }
 
     [Header("Timer")]
     [SerializeField] private Slider _timerSlider;
@@ -80,7 +85,6 @@ public class DeckManager : MonoBehaviour
 
     void Start()
     {
-        // TODO : Might want to initialize the decks here, like adding cards and setting up the hand for the tutorial and such
         // Note: Need slight delay in order to get the correct _cardHolders transforms 
         StartCoroutine(DelayDrawCards());
         _currentInk = _startingInk;
@@ -95,37 +99,29 @@ public class DeckManager : MonoBehaviour
     
     private void FixedUpdate() 
     {
-        //if (_isInWave.Value)
-        //{
-            if (!_isFirstDraw)
+        if (!_isFirstDraw)
+        {
+            if (_currentReshuffleTimer <= 0)
             {
-                if (_currentReshuffleTimer <= 0)
-                {
-                    CycleHand();
-                    DrawCards();
-                    _currentReshuffleTimer = _baseReshuffleTimer;
-                    
-                    AkSoundEngine.PostEvent("Cliche_HandCycle", gameObject);
-                }
-                _currentReshuffleTimer -= Time.deltaTime;    
-                _timerText.text = ((int)_currentReshuffleTimer).ToString() + "s";
-                _timerSlider.value = _currentReshuffleTimer/_baseReshuffleTimer;
-                /* TODO: Figure out how to trigger the timer sound when the timer reads 3 seconds
-                if (_currentReshuffletimer == 3f);
-                {
-                    AkSoundEngine.PostEvent("Timer", gameObject);
-                }*/
+                CycleHand();
+                DrawCards();
+                _currentReshuffleTimer = _baseReshuffleTimer;
+                
+                AkSoundEngine.PostEvent("Cliche_HandCycle", gameObject);
             }
-            if(_isInWave.Value)
+            _currentReshuffleTimer -= Time.deltaTime;    
+            _timerText.text = ((int)_currentReshuffleTimer).ToString() + "s";
+            _timerSlider.value = _currentReshuffleTimer/_baseReshuffleTimer;
+        }
+        if(_isInWave.Value)
+        {
+            if(_currentInkTimer <= 0)
             {
-                if(_currentInkTimer <= 0)
-                {
-                    AddInk(_inkPerSecond);
-                    _currentInkTimer = 1;
-                }
-                _currentInkTimer -= Time.deltaTime;
+                AddInk(_inkPerSecond);
+                _currentInkTimer = 1;
             }
-        //}
+            _currentInkTimer -= Time.deltaTime;
+        }
     }
 
     //Returns all cards from discard deck to active deck, and moves all cards from card hand to active deck
@@ -139,24 +135,6 @@ public class DeckManager : MonoBehaviour
             card.transform.position = _activeDeckTransform.position;
         }
         _discardDeck.Clear();
-        
-        /*
-        foreach(GameObject card in _cardHand)
-        {
-            CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
-            loader._hasBeenUsed = false;
-            _activeDeck.Add(card);
-            card.transform.position = _activeDeckTransform.position;
-        }
-        System.Array.Clear(_cardHand, 0, _cardHand.Length);
-        */
-
-        /* TODO :
-            Should activate timer to next wave UI as well as disable the shuffle timer
-            _currentReshuffleTimer = _baseReshuffleTimer;
-            reset the _currentReshuffleTimer?
-            disable CardFrame entirely?
-        */ 
     }
 
     private void CycleHand()
@@ -253,24 +231,27 @@ public class DeckManager : MonoBehaviour
     {
         if(_isFirstDraw)
         {
-            _isFirstDraw = false;
             //Draw 3 units and then a random card from the deck
-            for(int i = 0; i < _cardHand.Length - 1; i++)
+            for(int i = 0; i < _cardHand.Length; i++)
             {
-                int randomNum = Random.Range(0, 2 - i);
+                int randomNum = Random.Range(0, 3 - i);
                 _cardHand[i] = _activeDeck[randomNum];
                 _activeDeck.RemoveAt(randomNum);
                 //replace w/ animation later
                 _cardHand[i].transform.parent.position = _cardHolders[i].transform.position;
                 _cardHand[i].GetComponent<Animator>().Play("Draw_"+i);
             }
-            //Debug.Log("Deck Length - 1: " + (_activeDeck.Count -1));
-            int j = Random.Range(0, _activeDeck.Count);
-            //Debug.Log("j: " + j);
-            _cardHand[3] = _activeDeck[j];
-            _activeDeck.RemoveAt(j);
-            _cardHand[3].transform.parent.position = _cardHolders[3].transform.position;
-            _cardHand[3].GetComponent<Animator>().Play("Draw_"+3);
+            /*
+                No Cow w/First Draw:
+                ------------------------------------------------- 
+                //Debug.Log("Deck Length - 1: " + (_activeDeck.Count -1));
+                int j = Random.Range(0, _activeDeck.Count);
+                //Debug.Log("j: " + j);
+                _cardHand[3] = _activeDeck[j];
+                _activeDeck.RemoveAt(j);
+                _cardHand[3].transform.parent.position = _cardHolders[3].transform.position;
+                _cardHand[3].GetComponent<Animator>().Play("Draw_"+3);
+            */
         }
         else
         {
@@ -283,16 +264,6 @@ public class DeckManager : MonoBehaviour
                 _cardHand[i].GetComponent<Animator>().Play("Draw_"+i);
             }
         }
-    }
-
-    public void ToggleInWave()
-    {
-        _isInWave.Value = !_isInWave.Value;
-    }
-
-    public void IsFirstDraw()
-    {
-        _isFirstDraw = true;
     }
 
     public void ToggleCardFrameVisibility()

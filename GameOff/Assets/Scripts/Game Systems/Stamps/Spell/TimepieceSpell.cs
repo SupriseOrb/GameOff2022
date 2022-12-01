@@ -14,7 +14,7 @@ public class TimepieceSpell : MonoBehaviour, ISpellStamp
 
     #region Animation
     [SerializeField] private Animator _timepieceAnimator; 
-    [SerializeField] private string _timepieceDisappearAnimation = "Timepiece_Disappear";
+    [SerializeField] private string _timepieceDisappearAnimation = "TimePiece_Disappear";
     [SerializeField] private float _timepieceDisappearAnimationLength;
     #endregion
 
@@ -70,14 +70,12 @@ public class TimepieceSpell : MonoBehaviour, ISpellStamp
                         AkSoundEngine.PostEvent("Play_StampTimePiece", gameObject);
                         unitScript.ReduceCooldown(_timepieceReductionAmount);
                         _isDeactivated = true;
-                        _timepieceAnimator.Play(_timepieceDisappearAnimation);
                     }
                 }
                 else 
                 {
                     unitScript.ReduceCooldown(_timepieceReductionAmount);
                     _isDeactivated = true;
-                    _timepieceAnimator.Play(_timepieceDisappearAnimation);
                 }
             }
         }

@@ -31,7 +31,7 @@ public class InkCowItem : MonoBehaviour, IItemStamp
 
     #region Animation
     [SerializeField] private Animator _cowAnimator; 
-    [SerializeField] private string _cowDisappearAnim;
+    [SerializeField] private string _cowDisappearAnim = "InkCow_Disappear";
     [SerializeField] private float _cowDisappearAnimLength;
     #endregion
 

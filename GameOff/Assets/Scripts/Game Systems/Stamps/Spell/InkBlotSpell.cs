@@ -15,7 +15,7 @@ public class InkBlotSpell : MonoBehaviour, ISpellStamp
 
     #region Animation
     [SerializeField] private Animator _blotAnimator; 
-    [SerializeField] private string _blotDisappearAnim;
+    [SerializeField] private string _blotDisappearAnim = "InkBlot_Disappear";
     [SerializeField] private float _blotDisappearAnimLength;
     #endregion
 

@@ -217,15 +217,18 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
         }
         else if(_isAttacking)
         {
-            if(_attackTarget == null || _attackTarget.GetComponent<IItemStamp>().IsDead())
+            if (_carriageAttackCooldown <= 0)
             {
-                _isAttacking = false;
-                _carriageRigidBody.velocity = Vector2.left * _carriageMovementSpeed;
-            }
-            if(_carriageAttackCooldown <= 0)
-            {
-                ActivateStampAttack();
-                _carriageAttackCooldown = 1 / _carriageAttackSpeed;
+                if(_attackTarget == null || _attackTarget.GetComponent<IItemStamp>().IsDead())
+                {
+                    _isAttacking = false;
+                    _carriageRigidBody.velocity = Vector2.left * _carriageMovementSpeed;
+                }
+                else
+                {
+                    ActivateStampAttack();
+                    _carriageAttackCooldown = 1 / _carriageAttackSpeed;
+                }
             }
             _carriageAttackCooldown -= Time.deltaTime;
         }
@@ -295,21 +298,28 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
     }
     public void ForcedMove(Vector3 startPos, Vector3 endPos, float forcedMoveSpeed)
     {
-        _carriageAnimator.speed = 0;
-        _isAttacking = false;
-        _attackTarget = null;
-        _carriageRigidBody.velocity = Vector2.zero;
-        _carriageCollider.enabled = false;
-
         _startingPosition = startPos;
         if (endPos.x > 12f) 
         {
-            _endingPosition = new Vector3(12f, endPos.y, endPos.z);
+            if (transform.position.x < 12.25)
+            {
+                _endingPosition = new Vector3(12.25f, endPos.y, endPos.z);
+            }
+            else
+            {
+                return; //Don't push back if they're not visible on the board
+            }
         }
         else
         {
             _endingPosition = endPos;
         }
+        
+        _carriageAnimator.speed = 0;
+        _isAttacking = false;
+        _attackTarget = null;
+        _carriageRigidBody.velocity = Vector2.zero;
+        _carriageCollider.enabled = false;
         _forcedMoveSpeed = forcedMoveSpeed;
         _moveDistance = Vector3.Distance(_startingPosition, _endingPosition);
         _startTime = Time.time;

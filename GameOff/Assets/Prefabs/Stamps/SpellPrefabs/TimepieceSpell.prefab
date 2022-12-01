@@ -158,5 +158,5 @@ MonoBehaviour:
   _timepieceSpellSO: {fileID: 11400000, guid: 7b3c3dc7b43fdcb4da47ea23b9ea63bc, type: 2}
   _affectedUnits: []
   _timepieceAnimator: {fileID: 4239279701672861169}
-  _timepieceDisappearAnimation: Timepiece_Disappear
+  _timepieceDisappearAnimation: TimePiece_Disappear
   _timepieceDisappearAnimationLength: 0

@@ -20,7 +20,7 @@ public class SpikeBushItem : MonoBehaviour, IItemStamp
 
     #region Animation
     [SerializeField] private Animator _bushAnimator; 
-    [SerializeField] private string _bushDisappearAnim;
+    [SerializeField] private string _bushDisappearAnim = "SpikyBush_Disappear";
     [SerializeField] private float _bushDisappearAnimLength;
     #endregion
 
