@@ -127,7 +127,6 @@ public class HarpyUnitScript : MonoBehaviour, IUnitStamp
         _attackSpeedUpgradeDecrease = _harpySO.UniqueUpgradeThreeIncreaseAmount;
     }
 
-
     public void SetLane(int lane)
     {
         _harpyLaneNumber = lane;

@@ -21,6 +21,8 @@ public class UnitStampScriptableObject : StampScriptableObject
 
     [SerializeField] private float _attackDamageIncreaseAmount;
     [SerializeField] private float _attackSpeedIncreaseAmount;
+
+    // TODO : Have a child SO class for each unit to account for the varying upgrade increase amounts 
     [Tooltip("Redcap: Pierce Amount (rng), Ink Demon: Max HP (for Minions; rng), Harpy: Slow Intensity (rng)")]
     [SerializeField] private float _uniqueUpgradeOneIncreaseAmount;
     [Tooltip("Redcap: Stun Duration (rng), Ink Demon: CD Increase (Debuff; 1st Upgrade), Harpy: Push Distance (rng)")]

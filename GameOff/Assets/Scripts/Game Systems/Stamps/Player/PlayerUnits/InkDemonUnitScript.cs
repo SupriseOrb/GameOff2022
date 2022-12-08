@@ -35,7 +35,6 @@ public class InkDemonUnitScript : MonoBehaviour, IUnitStamp
     [SerializeField] private string _inkDemonBlueAppearAnimationName = "InkDemon_Blue_Appear";
     [SerializeField] private string _inkDemonRedAttackAnimationName = "InkDemon_Red_Attack";
     [SerializeField] private string _inkDemonRedAppearAnimationName = "InkDemon_Red_Appear";
-    [SerializeField] private float _inkMinionAttackAnimationLength;
     //Just in case we need this value (unlikely for redcap but necessary for ink demon)
     [SerializeField] private int _inkDemonLaneNumber;
     [SerializeField] private List<InkDemonMinion> _activeMinions;

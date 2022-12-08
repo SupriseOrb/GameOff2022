@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CardScriptableObject", menuName = "GameOff2022/Cards/CardSO", order = 0)]
+// TODO : Combine with StampScriptableObject.cs
 public class CardScriptableObject : ScriptableObject
 {
     #region SO Backing Fields

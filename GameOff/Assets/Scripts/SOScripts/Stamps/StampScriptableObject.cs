@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// TODO : Combine with CardScriptableObject.cs
 public class StampScriptableObject : ScriptableObject
 {
     #region SO Backing Fields

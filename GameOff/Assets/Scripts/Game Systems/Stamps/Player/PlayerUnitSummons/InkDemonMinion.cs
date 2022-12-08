@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// TODO : Reconsider inheriting from IItemStamp
 public class InkDemonMinion : MonoBehaviour, IItemStamp
 {
 #region ItemStats
@@ -138,6 +139,7 @@ public class InkDemonMinion : MonoBehaviour, IItemStamp
     }
 
     //Activates the on death explosion for the Ink Minions (Upgrade 1)
+    // TODO : Move this to another function
     public void ActivateStampAbility()
     {
         if(_inkMinionDeathDamageMultiplier != 0)
