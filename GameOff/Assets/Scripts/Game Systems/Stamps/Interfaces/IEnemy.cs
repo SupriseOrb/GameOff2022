@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// TODO : Make this a class instead of an interface
 public interface IEnemy
 {
     void TakeDamage(float damage);
