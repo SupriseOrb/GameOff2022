@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="3518794207">
+		<SoundBank Id="393239870" Language="SFX" Hash="1295311841">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -334,11 +334,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1224305705" Name="Play_UIBack" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UIBack" DurationType="OneShot" DurationMin="0.182439" DurationMax="0.182439">
+				<Event Id="1224305705" Name="Play_UIBack" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UIBack" DurationType="OneShot" DurationMin="0.182511" DurationMax="0.182511">
 					<IncludedMemoryFiles>
-						<File Id="783715838" Language="SFX">
-							<ShortName>MenuUI_BackButton_v1.wav</ShortName>
-							<Path>SFX/MenuUI_BackButton_v1_10C4C929.wem</Path>
+						<File Id="13871146" Language="SFX">
+							<ShortName>MenuUI_BackButton_v2.wav</ShortName>
+							<Path>SFX/MenuUI_BackButton_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -388,9 +388,9 @@
 				</Event>
 				<Event Id="3703192648" Name="Play_UISelect" ObjectPath="\Events\Default Work Unit\SFX Events\Menu UI\Play_UISelect" DurationType="OneShot" DurationMin="0.100748" DurationMax="0.100748">
 					<IncludedMemoryFiles>
-						<File Id="797317282" Language="SFX">
-							<ShortName>MenuUI_Button_v1.wav</ShortName>
-							<Path>SFX/MenuUI_Button_v1_10C4C929.wem</Path>
+						<File Id="8453054" Language="SFX">
+							<ShortName>MenuUI_Button_v1_v2.wav</ShortName>
+							<Path>SFX/MenuUI_Button_v1_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -453,7 +453,7 @@
 				<GameParameter Id="4079584867" Name="PauseBusVolume" ObjectPath="\Game Parameters\Default Work Unit\PauseBusVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX">
+		<SoundBank Id="3991942870" Language="SFX" Hash="1364324702">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>

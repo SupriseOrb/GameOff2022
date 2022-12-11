@@ -305,17 +305,34 @@
 										<MediaID ID="797317282"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="MenuUI_Button_v1_v2" ID="{E86449F4-6B45-4FEC-B2F0-004A1B9DB71F}">
+									<Language>SFX</Language>
+									<AudioFile>MenuUI_Button_v1_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="8453054"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="MenuUI_Button_v1" ID="{D18B0A59-B00D-41CC-956D-D88807611765}" Platform="Linked"/>
+								<ActiveSource Name="MenuUI_Button_v1_v2" ID="{E86449F4-6B45-4FEC-B2F0-004A1B9DB71F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Back_Button" ID="{1B603DA1-656C-4E0E-9969-FF5BA81F1DF7}" ShortID="350062024">
 							<PropertyList>
+								<Property Name="OutputBusHighpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>-100</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -335,10 +352,17 @@
 										<MediaID ID="783715838"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="MenuUI_BackButton_v2" ID="{A206FD10-E71D-4732-9D27-CF00DA4FC7EF}">
+									<Language>SFX</Language>
+									<AudioFile>MenuUI_BackButton_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="13871146"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="MenuUI_BackButton_v1" ID="{1C2C72B4-E919-4D13-AF59-9647A6AE8B22}" Platform="Linked"/>
+								<ActiveSource Name="MenuUI_BackButton_v2" ID="{A206FD10-E71D-4732-9D27-CF00DA4FC7EF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Pause" ID="{83D1E9AD-AC18-42AC-9BC2-0E9E82D5706E}" ShortID="663993853">
