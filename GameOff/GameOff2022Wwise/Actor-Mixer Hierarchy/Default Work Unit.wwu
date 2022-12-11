@@ -1075,6 +1075,11 @@
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1092,6 +1097,13 @@
 										<MediaID ID="22757368"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Harpy Stamp_v2" ID="{75CE6866-E04F-45A3-924D-3C707106BEFD}">
+									<Language>SFX</Language>
+									<AudioFile>Harpy Stamp_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="407903202"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<PositioningInfo>
 								<Panner Name="" ID="{7FD03F3E-783D-4A93-BF34-7C1B8C20F217}">
@@ -1102,7 +1114,7 @@
 							</PositioningInfo>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Harpy Stamp_v1" ID="{53F6D3FB-9CDB-4D20-8E0A-EBF8859B5B48}" Platform="Linked"/>
+								<ActiveSource Name="Harpy Stamp_v2" ID="{75CE6866-E04F-45A3-924D-3C707106BEFD}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -1113,7 +1125,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1133,13 +1145,27 @@
 										<MediaID ID="1040327169"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Ink_Depleted_v2" ID="{A97B2B28-B0D7-4B45-BC6A-D26C44E2AB31}">
+									<Language>SFX</Language>
+									<AudioFile>Ink_Depleted_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1038834482"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Ink_Depleted_v1" ID="{DE16ED21-B1E3-44D3-915A-7EB6F88F426F}" Platform="Linked"/>
+								<ActiveSource Name="Ink_Depleted_v2" ID="{A97B2B28-B0D7-4B45-BC6A-D26C44E2AB31}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Ink Full" ID="{D43238EA-9879-4E02-9CFC-C33A9AC2ED56}" ShortID="696956519">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
@@ -1163,10 +1189,17 @@
 										<MediaID ID="1007704302"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Ink_Full_v3" ID="{4FF91774-EA9A-4B9F-84B4-4DD44092E3DB}">
+									<Language>SFX</Language>
+									<AudioFile>Ink_Full_v3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1027948144"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Ink_Full_v2" ID="{BDA7B922-B463-4096-9261-E38692CA7117}" Platform="Linked"/>
+								<ActiveSource Name="Ink_Full_v3" ID="{4FF91774-EA9A-4B9F-84B4-4DD44092E3DB}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Ink Bonus_v1" ID="{57C38916-6396-48C9-949F-585CDC94EE45}" ShortID="321853203">

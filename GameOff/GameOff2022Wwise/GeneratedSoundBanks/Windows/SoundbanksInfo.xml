@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="1295311841">
+		<SoundBank Id="393239870" Language="SFX" Hash="3842672649">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -188,17 +188,17 @@
 				</Event>
 				<Event Id="289833391" Name="Play_InkDepleted" ObjectPath="\Events\Default Work Unit\SFX Events\Ink\Play_InkDepleted" DurationType="OneShot" DurationMin="0.305057" DurationMax="0.305057">
 					<IncludedMemoryFiles>
-						<File Id="1040327169" Language="SFX">
-							<ShortName>Ink_Depleted_v1.wav</ShortName>
-							<Path>SFX/Ink_Depleted_v1_10C4C929.wem</Path>
+						<File Id="1038834482" Language="SFX">
+							<ShortName>Ink_Depleted_v2.wav</ShortName>
+							<Path>SFX/Ink_Depleted_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3028081509" Name="Play_InkFull" ObjectPath="\Events\Default Work Unit\SFX Events\Ink\Play_InkFull" DurationType="OneShot" DurationMin="1.077551" DurationMax="1.077551">
+				<Event Id="3028081509" Name="Play_InkFull" ObjectPath="\Events\Default Work Unit\SFX Events\Ink\Play_InkFull" DurationType="OneShot" DurationMin="1.081837" DurationMax="1.081837">
 					<IncludedMemoryFiles>
-						<File Id="1007704302" Language="SFX">
-							<ShortName>Ink_Full_v2.wav</ShortName>
-							<Path>SFX/Ink_Full_v2_10C4C929.wem</Path>
+						<File Id="1027948144" Language="SFX">
+							<ShortName>Ink_Full_v3.wav</ShortName>
+							<Path>SFX/Ink_Full_v3_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -258,11 +258,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="900136553" Name="Play_StampHarpy" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampHarpy" DurationType="OneShot" DurationMin="1.429819" DurationMax="1.429819">
+				<Event Id="900136553" Name="Play_StampHarpy" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_StampHarpy" DurationType="OneShot" DurationMin="1.594036" DurationMax="1.594036">
 					<IncludedMemoryFiles>
-						<File Id="22757368" Language="SFX">
-							<ShortName>Harpy Stamp_v1.wav</ShortName>
-							<Path>SFX/Harpy Stamp_v1_10C4C929.wem</Path>
+						<File Id="407903202" Language="SFX">
+							<ShortName>Harpy Stamp_v2.wav</ShortName>
+							<Path>SFX/Harpy Stamp_v2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

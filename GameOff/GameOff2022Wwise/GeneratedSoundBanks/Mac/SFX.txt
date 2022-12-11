@@ -70,7 +70,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	13871146	Back_Button	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_BackButton_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Back_Button		15258
 	17044261	Night Ambience_v4	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Night Ambience_v4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Ambience_States\Ambience_Loop_3_Night\Night Ambience_v4\Night Ambience_v4		17896984
 	21150305	Placeholder	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Placeholder_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Placeholder		150000
-	22757368	Harpy Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Harpy Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Harpy Stamp_v1		126174
 	45222698	Time Piece Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Time Piece Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Time Piece Stamp_v1		106626
 	57120246	Ink Demon Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Ink Demon Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Ink Demon Stamp_v1		126174
 	83428983	Redcap Ability	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Redcap Ability_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Redcap Attack\Redcap Ability		661920
@@ -90,6 +89,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	378939211	Hand Cycle Timer	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Timer_Click_v1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Hand Cycle Timer		88276
 	384752991	Cliche_HoverAnimation_3_v2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cliche_HoverAnimation_3_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cliche\Cliche Hover\Cliche_HoverAnimation_3_v2		8628
 	407116397	Bramble Patch	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Bramble Patch_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Bramble Patch		84480
+	407903202	Harpy Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Harpy Stamp_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Harpy Stamp_v1		140658
 	426370904	Carriage Movement Loop_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Carriage Movement Loop_v1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Carriage Movement Loop_v1		1347226
 	438714938	Cow Moos 2	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cow Moos 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Cow Moo Loop\Cow Moos 2		7051844
 	453965610	Cow Moos 1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cow Moos 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Cow Moo Loop\Cow Moos 1		5640644
@@ -114,8 +114,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	957178096	Cow Moo Item Stamp_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Cow Moo Item Stamp_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Cow Moo Item Stamp_v1		106626
 	966265383	MenuUI_Hover_D_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Hover_D_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_D_v1		14108
 	974058342	Text Sound 1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Text Sound 1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Text animation\Text Sound 1		293994
-	1007704302	Ink Full	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Ink_Full_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ink UI\Ink Full		95104
-	1040327169	Ink Depleted	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Ink_Depleted_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ink UI\Ink Depleted		26970
+	1027948144	Ink Full	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Ink_Full_v3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ink UI\Ink Full		95482
+	1038834482	Ink Depleted	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Ink_Depleted_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ink UI\Ink Depleted		26970
 	1057876740	Select Upgrade	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Upgrade Select_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Select Upgrade		280188
 	1058540028	Ink Reservoir	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\Ink Reservoir_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stamps\Ink Reservoir		77594
 	1060547979	MenuUI_Hover_F_v1	Y:\Documents\GitHub\GameOff2022\GameOff\GameOff2022Wwise\.cache\Mac\SFX\MenuUI_Hover_F_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu UI\Hover\MenuUI_Hover_F_v1		10180
