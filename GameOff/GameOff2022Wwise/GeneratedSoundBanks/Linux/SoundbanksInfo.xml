@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Language="SFX" Hash="3842672649">
+		<SoundBank Id="393239870" Language="SFX" Hash="658298562">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -66,6 +66,14 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="694925737" Name="Play_BossDeath" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_BossDeath" DurationType="OneShot" DurationMin="1.018186" DurationMax="1.018186">
+					<IncludedMemoryFiles>
+						<File Id="524984933" Language="SFX">
+							<ShortName>Wod Crash_v2.wav</ShortName>
+							<Path>SFX/Wod Crash_v2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1584037851" Name="Play_BramblePatch" ObjectPath="\Events\Default Work Unit\SFX Events\Stamps\Play_BramblePatch" DurationType="OneShot" DurationMin="0.957098" DurationMax="0.957098">
 					<IncludedMemoryFiles>
 						<File Id="407116397" Language="SFX">
@@ -74,7 +82,23 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="174838902" Name="Play_CarriageEntrance" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_CarriageEntrance" DurationType="OneShot" DurationMin="7.876712" DurationMax="7.876712">
+				<Event Id="174838902" Name="Play_CarriageEntrance" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_CarriageEntrance" DurationType="OneShot" DurationMin="8.191338" DurationMax="8.191338">
+					<IncludedMemoryFiles>
+						<File Id="1026667857" Language="SFX">
+							<ShortName>Catapult Horn_v1.wav</ShortName>
+							<Path>SFX/Catapult Horn_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2844713035" Name="Play_CarriageMovement" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_CarriageMovement" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="624644346" Language="SFX">
+							<ShortName>Carriage Movement Loop_v2.wav</ShortName>
+							<Path>SFX/Carriage Movement Loop_v2_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1410406984" Name="Play_CatapultEntrance" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_CatapultEntrance" DurationType="OneShot" DurationMin="7.876712" DurationMax="7.876712">
 					<IncludedMemoryFiles>
 						<File Id="851253141" Language="SFX">
 							<ShortName>Dark Drone_v1.wav</ShortName>
@@ -82,11 +106,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2844713035" Name="Play_CarriageMovement" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_CarriageMovement" DurationType="Infinite">
+				<Event Id="3960109849" Name="Play_CatapultMovement" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Play_CatapultMovement" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="426370904" Language="SFX">
-							<ShortName>Carriage Movement Loop_v1.wav</ShortName>
-							<Path>SFX/Carriage Movement Loop_v1_D79FB2B7.wem</Path>
+						<File Id="697153069" Language="SFX">
+							<ShortName>Catapult Movement_v1.wav</ShortName>
+							<Path>SFX/Catapult Movement_v1_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -412,6 +436,7 @@
 				</Event>
 				<Event Id="2477713992" Name="Stop_Ambience" ObjectPath="\Events\Default Work Unit\SFX Events\Ambience\Stop_Ambience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2636349021" Name="Stop_CarriageMovement" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Stop_CarriageMovement" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3951645527" Name="Stop_CatapultMovement" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Stop_CatapultMovement" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="4087679631" Name="Stop_CowLoop" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Stop_CowLoop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="334102883" Name="Stop_RedcapAbility" ObjectPath="\Events\Default Work Unit\SFX Events\Combat\Stop_RedcapAbility" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2235615413" Name="Stop_Text" ObjectPath="\Events\Default Work Unit\SFX Events\Text\Stop_Text" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
@@ -453,7 +478,7 @@
 				<GameParameter Id="4079584867" Name="PauseBusVolume" ObjectPath="\Game Parameters\Default Work Unit\PauseBusVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="1364324702">
+		<SoundBank Id="3991942870" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>

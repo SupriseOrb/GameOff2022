@@ -503,7 +503,7 @@
 										<Action Name="" ID="{99ACEC68-22F8-40AB-BDD7-BB80F08D3A68}" ShortID="575755051">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Dark Drone_v1" ID="{5ACFCAD5-005A-4F63-9BA6-87CA88A25000}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+													<ObjectRef Name="Dark Drone 1" ID="{2DFF8EC1-9B0D-4B2E-A2AC-ADC0D995CC1C}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -530,6 +530,53 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Cow Moo Loop" ID="{85043DF3-FAD4-46BD-81F9-58D0C29C0D13}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_CatapultEntrance" ID="{44898B94-6970-48E9-8EB5-6F128605366F}">
+									<ChildrenList>
+										<Action Name="" ID="{18B36726-C884-4800-95CF-F1F38704E92F}" ShortID="415529948">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Dark Drone 2" ID="{5ACFCAD5-005A-4F63-9BA6-87CA88A25000}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_BossDeath" ID="{72A697CA-5CAD-4C6A-9D35-71F74E6A8DC1}">
+									<ChildrenList>
+										<Action Name="" ID="{6A1A0D47-9C24-4FEF-99C5-022FB04DCEEE}" ShortID="988528010">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Wood Crash_v1" ID="{B36CB039-0289-4DF6-B047-8CB5948F2F1A}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_CatapultMovement" ID="{810B5E0E-9BC7-4CDE-BBFD-4126DD501B09}">
+									<ChildrenList>
+										<Action Name="" ID="{E25C2A01-07CD-43A3-81BB-F23A58BB05E5}" ShortID="615425656">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Catapult MovementLoop_v1" ID="{29054A05-C23B-4E51-B3D7-94A9F3475A02}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_CatapultMovement" ID="{87BDCEE2-27D8-49DD-B143-156A57CD9724}">
+									<ChildrenList>
+										<Action Name="" ID="{BD0AA20B-C8AE-438E-804B-B24D7D686466}" ShortID="745844408">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Catapult MovementLoop_v1" ID="{29054A05-C23B-4E51-B3D7-94A9F3475A02}" WorkUnitID="{79438126-7E78-4C8E-B57D-D2A5F0B16461}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

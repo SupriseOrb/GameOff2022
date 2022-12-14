@@ -121,6 +121,7 @@ public class WhiteoutCarriageEnemy : MonoBehaviour, IEnemy
             if(!_isDead)
             {
                 AkSoundEngine.PostEvent("Play_DeathAnimation", gameObject);
+                AkSoundEngine.PostEvent("Play_BossDeath", gameObject);
                 AkSoundEngine.PostEvent("Stop_CarriageMovement",gameObject);
                 _carriageAnimator.Play(_carriageDieAnimationName);
                 _isDead = true;

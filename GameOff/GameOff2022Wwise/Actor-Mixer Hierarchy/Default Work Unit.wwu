@@ -1238,7 +1238,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+									<ObjectRef Name="PauseMenu" ID="{95063107-9096-4C43-94D2-623BE11B52D4}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1435,12 +1435,7 @@
 						<Sound Name="Carriage Movement Loop_v1" ID="{9C23E6CA-DBD1-4E2E-A1C8-B594EFB86E2A}" ShortID="506687537">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
-								<Property Name="InitialDelay" Type="Real64">
-									<ValueList>
-										<Value>2</Value>
-									</ValueList>
-								</Property>
+								<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
@@ -1471,6 +1466,13 @@
 									<AudioFile>Carriage Movement Loop_v1.wav</AudioFile>
 									<MediaIDList>
 										<MediaID ID="426370904"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="Carriage Movement Loop_v2" ID="{3B43B9A3-72BA-4C01-81EF-15552D2929DE}">
+									<Language>SFX</Language>
+									<AudioFile>Carriage Movement Loop_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="624644346"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -1511,7 +1513,7 @@
 							</PositioningInfo>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Carriage Movement Loop_v1" ID="{4A351965-6468-48F1-A47D-EA5B53386271}" Platform="Linked"/>
+								<ActiveSource Name="Carriage Movement Loop_v2" ID="{3B43B9A3-72BA-4C01-81EF-15552D2929DE}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Ink Demon Ability_v1" ID="{E26AE0FA-BAFE-4916-921D-F50643E24E8C}" ShortID="763537184">
@@ -1550,7 +1552,7 @@
 								<ActiveSource Name="Ink Demon Ability_v1" ID="{D182ABD9-B396-4B67-89E6-BB724FF6BDF5}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Dark Drone_v1" ID="{5ACFCAD5-005A-4F63-9BA6-87CA88A25000}" ShortID="222637769">
+						<Sound Name="Dark Drone 2" ID="{5ACFCAD5-005A-4F63-9BA6-87CA88A25000}" ShortID="222637769">
 							<PropertyList>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
@@ -1571,7 +1573,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2207,6 +2209,127 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</RandomSequenceContainer>
+						<Sound Name="Dark Drone 1" ID="{2DFF8EC1-9B0D-4B2E-A2AC-ADC0D995CC1C}" ShortID="749718278">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PauseMenu" ID="{95063107-9096-4C43-94D2-623BE11B52D4}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Catapult Horn_v1" ID="{F8774801-606E-4BC6-B07E-62BC19584C41}">
+									<Language>SFX</Language>
+									<AudioFile>Catapult Horn_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1026667857"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Catapult Horn_v1" ID="{F8774801-606E-4BC6-B07E-62BC19584C41}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Catapult MovementLoop_v1" ID="{29054A05-C23B-4E51-B3D7-94A9F3475A02}" ShortID="416600541">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PauseMenu" ID="{95063107-9096-4C43-94D2-623BE11B52D4}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Catapult Movement_v1" ID="{2D07DBF8-B605-447A-A79D-835A6E597A24}">
+									<Language>SFX</Language>
+									<AudioFile>Catapult Movement_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="697153069"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Catapult Movement_v1" ID="{2D07DBF8-B605-447A-A79D-835A6E597A24}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wood Crash_v1" ID="{B36CB039-0289-4DF6-B047-8CB5948F2F1A}" ShortID="427487779">
+							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1420EFC7-B62A-4D1A-9391-1A7299E00031}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{8018A78B-C44B-4D1E-B743-24F93E5B2B8E}" WorkUnitID="{013B0C9D-54EF-4E4B-A1E8-69249EB05D23}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wod Crash_v2" ID="{0E2CA8CC-E26D-4216-B3B7-77B0BD554B05}">
+									<Language>SFX</Language>
+									<AudioFile>Wod Crash_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="524984933"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Wod Crash_v2" ID="{0E2CA8CC-E26D-4216-B3B7-77B0BD554B05}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambience" ID="{CF3088AB-B553-4DE8-BC89-145AA3F4078A}" ShortID="362472830">
