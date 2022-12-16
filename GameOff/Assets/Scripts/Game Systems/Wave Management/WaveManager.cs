@@ -167,19 +167,22 @@ public class WaveManager : MonoBehaviour
     {
         if (!_levelFinished && !_gameOver)
         {
-            if (_isInWave.Value && !_finishedSpawningWave)
+            if (_isInWave.Value)
             {
-                // 1a
-                if (_currentWaveDuration <= 0)
+                if (!_finishedSpawningWave)
                 {
-                    SpawnEnemies();
-                    _finishedSpawningWave = true;
-                }
-                // 1b
-                else
-                {
-                    SpawnEnemies();
-                    _currentWaveDuration -= Time.deltaTime;
+                    // 1a
+                    if (_currentWaveDuration <= 0)
+                    {
+                        SpawnEnemies();
+                        _finishedSpawningWave = true;
+                    }
+                    // 1b
+                    else
+                    {
+                        SpawnEnemies();
+                        _currentWaveDuration -= Time.deltaTime;
+                    }
                 }
             }
             // 2
