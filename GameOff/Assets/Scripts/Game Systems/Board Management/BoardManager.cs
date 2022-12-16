@@ -5,24 +5,20 @@ using TMPro;
 
 public class BoardManager : MonoBehaviour
 {
+    [SerializeField] private WaveManager _waveManager;
+    private static BoardManager _instance;
+    [SerializeField] private BoardLane[] _boardLanes;    
+ 
+    #region UI
+    [SerializeField] private BoolVariable _isHoveringUI;
+
     [Header("Info Panel")]
     [SerializeField] private GameObject _tileInfoPanel;
     [SerializeField] private TextMeshProUGUI _tileInfoPanelText;
     [SerializeField] private int _tileInfoLaneNum;
     [SerializeField] private int _tileInfoTileNum;
-    [SerializeField] private BoolVariable _isWaveFinished;
-    [SerializeField] private BoolVariable _isHoveringUI;
-
-
-    [Header("Misc")]
-    [SerializeField] private BoardLane[] _boardLanes;
-
-    [SerializeField] private int _playerHealth;
-    [SerializeField] private WaveManager _waveManager;
-    [SerializeField] List<GameObject> debugList;
-
-    private static BoardManager _instance;
-
+    #endregion
+    
     public static BoardManager Instance
     {
         get{return _instance;}
@@ -40,19 +36,15 @@ public class BoardManager : MonoBehaviour
         }
     }
 
+   
     private void Start() 
     {
-        //Tells each lane what lane number they
-        //Each lane then tells each of their tiles their lane and tile number
         for (int i = 0; i < _boardLanes.Length; i++)
         {
-            _boardLanes[i]._laneNumber = i;
-            _boardLanes[i].SetTileIndexValues();
+            _boardLanes[i].SetValues(i);
         }
     }
 
-    //Its kinda wild this returns the boardlane instead of the boardlanes array
-    //Not sure we want things to access all lanes however so idk 
     public BoardLane GetLane(int laneNumber)
     {
         return _boardLanes[laneNumber];
@@ -132,7 +124,6 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    //Clears all land stamps from the boardlanes
     public void ResetBoardState()
     {
         foreach(BoardLane lane in _boardLanes)
@@ -143,15 +134,14 @@ public class BoardManager : MonoBehaviour
 
     public void CheckIfWaveIsFinished()
     {
-        if(_isWaveFinished.Value)
+        if(_waveManager.FinishedSpawningWave)
         {
             foreach(BoardLane lane in _boardLanes)
             {
-                debugList = lane.GetLaneEnemies();
-                if(debugList.Count != 0)
+                // TODO : Check if this is comprehensive (e.g. take care of Carriages)
+                if (lane.HasEnemies)
                 {
-                   // Debug.Log("Wave is not over: " + debugList.Count);
-                   return;
+                    return;
                 }
             }
             _waveManager.FinishWave();

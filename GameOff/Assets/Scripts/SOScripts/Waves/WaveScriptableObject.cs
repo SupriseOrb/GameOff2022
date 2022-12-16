@@ -25,7 +25,8 @@ public class WaveScriptableObject : ScriptableObject
 
     [Tooltip("All of the enemy spawns that will occur in this wave")]
     [SerializeField] private List<EnemySpawn> _wave;
-    
+
+    // TODO : Delete this
     [Tooltip("How many seconds the wave will last")]
     [SerializeField] private float _waveDuration;
 
@@ -36,12 +37,14 @@ public class WaveScriptableObject : ScriptableObject
     {
         get {return _wave;}
     }
-
+    
     public float WaveDuration
     {
+        // TODO : return LastEnemySpawnTime instead of waveDuration
         get {return _waveDuration;}
     }
 
+    // TODO : Rename this to WaitingPeriod
     public float WaveBreakBeforeDuration
     {
         get {return _waveBreakBeforeDuration;}

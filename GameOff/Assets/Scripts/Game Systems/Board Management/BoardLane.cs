@@ -4,26 +4,50 @@ using UnityEngine;
 
 public class BoardLane : MonoBehaviour
 {
+    #region Land
     [SerializeField] private GameObject _currentLandStamp = null;
     [SerializeField] private Vector3 _landStampSpawnPosition;
-    [SerializeField] private List<GameObject> _laneEnemies;
-    [SerializeField] private BoardTile[] _laneTiles;
-    [SerializeField] private GameObject[] _laneUnits;
+
+    /*
+        TODO: Have the stamps take care of the leyline multiplier
+        Get rid of boolvariable
+    */
+    
     [SerializeField] private BoolVariable _leylineActive;
     [SerializeField] private float _leylineMultiplier;
-    [SerializeField] public int _laneNumber;
+    #endregion
+
+    #region Enemies
+    [SerializeField] private List<GameObject> _laneEnemies;
+    public bool HasEnemies
+    {
+        get {return _laneEnemies.Count == 0;}
+    }
+    #endregion
+
+    #region Lane
+    [SerializeField] private int _laneNumber;
+    [SerializeField] private BoardTile[] _laneTiles;
+    [SerializeField] private GameObject[] _laneUnits;
     
-    // Start is called before the first frame update
+    #endregion
+    
     void Start()
     {
         _leylineActive.Reset();
         _landStampSpawnPosition = new Vector3(gameObject.transform.position.x + 14, gameObject.transform.position.y, gameObject.transform.position.z);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetValues(int laneNumber)
     {
-        
+        _laneNumber = laneNumber;
+
+        // Set each tile's lane and tile number
+        for(int i = 0; i < _laneTiles.Length; i++)
+        {
+            _laneTiles[i].LaneNumber = _laneNumber;
+            _laneTiles[i].TileNumber = i;
+        }
     }
 
     //Called when user places down an lane stamp
@@ -44,7 +68,6 @@ public class BoardLane : MonoBehaviour
         _laneEnemies.Clear();
     }
 
-    //called at the start of a wave
     public void RemoveLandStamp()
     {
         if (_currentLandStamp != null)
@@ -59,21 +82,11 @@ public class BoardLane : MonoBehaviour
         enemy.GetComponent<IEnemy>().SetLane(_laneNumber);
     }
 
-    //Needs to be called when an enemy dies
+    // Called when an enemy dies
     public void RemoveEnemyFromList(GameObject enemy)
     {
         _laneEnemies.Remove(enemy);
         BoardManager.Instance.CheckIfWaveIsFinished();
-    }
-
-    //Tells each of its tiles what lane and tile number they are
-    public void SetTileIndexValues()
-    {
-        for(int i = 0; i < _laneTiles.Length; i++)
-        {
-            _laneTiles[i].LaneNumber = _laneNumber;
-            _laneTiles[i].TileNumber = i;
-        }
     }
 
     //Used by certain lane stamps

@@ -125,6 +125,11 @@ public class InkCowItem : MonoBehaviour, IItemStamp
     public void ActivateStampAbility()
     {
         AkSoundEngine.PostEvent("Play_CowLoop",gameObject);
+        
+        /* 
+            TODO : Get rid of the if check
+            Just add _currentCowInkGeneration
+        */
         if(BoardManager.Instance.GetLane(_laneNumber).GetLeylineStatus())
         {
             DeckManager.Instance.AddInk(_currentCowInkGeneration);
