@@ -48,6 +48,7 @@ public class UpgradeMenu : MonoBehaviour
         _inUpgradeMenu.Value = false;
     }
 
+    // TODO : Clean up base on the refactoring of stamps
     public void Open(GameObject unit, Sprite unitIcon, UnitStampScriptableObject.UpgradeInfo[] upgrades, int upgradePath)
     {
         _upgradeMenuPanel.SetActive(true);

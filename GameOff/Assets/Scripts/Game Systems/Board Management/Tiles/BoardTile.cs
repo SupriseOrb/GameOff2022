@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoardTile : MonoBehaviour
 {
     [SerializeField] protected GameObject _heldStamp;
-    [SerializeField] protected GameObject _currentSpell;
+    [SerializeField] private GameObject _currentSpell;
     [SerializeField] protected int _laneNumber;
     [SerializeField] protected int _tileNumber;
 
@@ -21,6 +21,7 @@ public class BoardTile : MonoBehaviour
         set{_tileNumber = value;}
     }
 
+    // TODO : Turn GetHeldStamp into a property, but not SetHeldStamp
     public GameObject GetHeldStamp()
     {
         if(gameObject.transform.childCount >= 1)
@@ -45,7 +46,7 @@ public class BoardTile : MonoBehaviour
         return false;
     }
 
-
+    // TODO : Let it hard crash instead of checking it
     public virtual bool PlaySpell(GameObject spell)
     {
         if (spell.TryGetComponent(out ISpellStamp spellStamp))

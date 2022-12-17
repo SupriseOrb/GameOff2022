@@ -8,11 +8,6 @@ public class SpriteDrag : MonoBehaviour
     [SerializeField] private SpriteRenderer _iconSR;
     [SerializeField] private GameObject _gameObject;
 
-    public bool IsDragging
-    {
-        get {return _isDragging;}
-    }
-
     private void Awake()
     {
         _isDragging = false;

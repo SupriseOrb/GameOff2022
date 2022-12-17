@@ -12,7 +12,8 @@ public class CardScriptLoader : MonoBehaviour, IPointerDownHandler, IPointerEnte
     [SerializeField] CardScriptableObject _cardSO = null;
     
     [SerializeField] public CardScriptableObject.Type _cardType {get; protected set;}
-    [SerializeField] public bool _hasBeenUsed;
+    // TODO : Change to _isExhausted
+    [SerializeField] private bool _hasBeenUsed;
     [SerializeField] private GameObject _selectedBorder;
     [SerializeField] private Image _cardIcon;
     [SerializeField] private TextMeshProUGUI _nameText;
@@ -26,6 +27,7 @@ public class CardScriptLoader : MonoBehaviour, IPointerDownHandler, IPointerEnte
     [Header("Ink")]
     [SerializeField] private Image _inkBG;
     [SerializeField] private Sprite[] _inkBGs;
+    // TODO : Update these values
     [SerializeField] private int[] _inkCostCutoff = {0, 16, 18};
     private void Start()
     {

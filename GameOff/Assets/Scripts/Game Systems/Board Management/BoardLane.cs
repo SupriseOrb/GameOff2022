@@ -50,19 +50,19 @@ public class BoardLane : MonoBehaviour
         }
     }
 
-    //Called when user places down an lane stamp
     public void ApplyLandStamp(GameObject landStamp)
     {
         if(_currentLandStamp != null)
         {
             RemoveLandStamp();
         }
-        //kill all enemies in the lane
+
+        // Kill all enemies in the lane
         _currentLandStamp = Instantiate(landStamp, _landStampSpawnPosition, Quaternion.identity, gameObject.transform);
         _currentLandStamp.GetComponent<ILandStamp>().SetLane(_laneNumber);
-        //_currentLaneSprite = how to get the SO info?
         for(int i = _laneEnemies.Count - 1; i >= 0; i--)
         {
+            // TODO : TakeDamage() --> OneShotKill()
             _laneEnemies[i].GetComponent<IEnemy>().TakeDamage(1000);
         }
         _laneEnemies.Clear();
@@ -82,12 +82,14 @@ public class BoardLane : MonoBehaviour
         enemy.GetComponent<IEnemy>().SetLane(_laneNumber);
     }
 
-    // Called when an enemy dies
     public void RemoveEnemyFromList(GameObject enemy)
     {
         _laneEnemies.Remove(enemy);
         BoardManager.Instance.CheckIfWaveIsFinished();
     }
+
+    // TODO : Whenever possible, use properties for the following function
+    // exception is SetlaneUnit (depends if each stamp knows each lane / tile number)
 
     //Used by certain lane stamps
     public List<GameObject> GetLaneEnemies()

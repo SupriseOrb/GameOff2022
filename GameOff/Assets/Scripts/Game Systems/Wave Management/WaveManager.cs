@@ -225,7 +225,6 @@ public class WaveManager : MonoBehaviour
         _startWaveCanvas.enabled = false;
         
         _isFirstWave = false;
-        DeckManager.Instance.IsFirstDraw = false;
     }
 
     private void SpawnEnemies()

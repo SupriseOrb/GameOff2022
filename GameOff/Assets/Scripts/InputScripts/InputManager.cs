@@ -9,16 +9,9 @@ public class InputManager : MonoBehaviour
     [SerializeField] private PlayerInput _playerInput;
     private Vector3 _mousePositionScreen;
     [SerializeField] private Vector3 _mousePositionWorld;
-    [SerializeField] private CardScriptLoader _selectedCard;
     [SerializeField] private SpriteDrag _spriteDrag;
+    // Note : this is a Tile Layer Mask
     [SerializeField] private LayerMask _layerMask;
-    private Ray2D _raycast;
-    private RaycastHit2D _raycastHit;
-
-    public Vector3 MousePositionWorld
-    {
-        get {return _mousePositionWorld;}
-    }
 
     #region Input Action Strings
     [Header("Input Strings")]
@@ -74,99 +67,88 @@ public class InputManager : MonoBehaviour
 
     public void OnLeftClick(InputAction.CallbackContext context)
     {
-        _selectedCard = DeckManager.Instance.SelectedCard;
-        _raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f, _layerMask);
+        CardScriptLoader selectedCard = DeckManager.Instance.SelectedCard;
+        RaycastHit2D raycastHit = Physics2D.Raycast(_mousePositionWorld, _mousePositionWorld, 100f, _layerMask);
 
-        if (_raycastHit.collider == null) //If no collider on click
+        if (raycastHit.collider == null) //If no collider on click
         {
-            if (_selectedCard != null && context.performed)
+            if (selectedCard != null && !_isHoveringUI.Value)
             {
-                AnnounceError(_stampOutsideGrid, context.performed);
+                AnnounceError(_stampOutsideGrid);
+                DeckManager.Instance.ResetCardSelection();
             }
             // Deselect when clicking outside of the tiles
             BoardManager.Instance.HideTileInfo();
             return;
         }
 
-        if (_spriteDrag.IsDragging)
+        if (selectedCard != null)
         {            
-            if (_selectedCard != null)
+            if (raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile)) //If drag is released on UnitTile / UnitTile clicked
             {
-                if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile)) //If drag is released on UnitTile / UnitTile clicked
+                if (selectedCard.CardSO.CardType == CardScriptableObject.Type.UNIT)
                 {
-                    if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.UNIT)
+                    if(DeckManager.Instance.RemoveInk(selectedCard.CardSO.InkCost))
                     {
-                        if(DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
-                        {
-                            unitTile.SetHeldStamp(_selectedCard.CardSO.StampGO);
-                            // Debug.Log("Placed Unit " + _selectedCard + " onto UnitTile!");
-                        }
-                        else
-                        {
-                            AnnounceError(_errorNotEnoughInk, context.performed);
-                        }
-                        DeckManager.Instance.ResetCardSelection();
-                    }
-                    else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.SPELL)
-                    {
-                        unitTile.PlaySpell(_selectedCard.CardSO.StampGO);
-                        // Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
-                        DeckManager.Instance.ResetCardSelection(); 
+                        unitTile.SetHeldStamp(selectedCard.CardSO.StampGO);
                     }
                     else
                     {
-                        AnnounceError(_stampUnknownOnUnit, context.performed);
+                        AnnounceError(_errorNotEnoughInk);
                     }
-                    
                 }
-                else if (_raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile)) //If drag is released on BoardTile / BoardTile clicked
+                else if (selectedCard.CardSO.CardType == CardScriptableObject.Type.SPELL)
                 {
-                    if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.ITEM)
+                    unitTile.PlaySpell(selectedCard.CardSO.StampGO);
+                }
+                else
+                {
+                    AnnounceError(_stampUnknownOnUnit);
+                }
+                
+            }
+            else if (raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile)) //If drag is released on BoardTile / BoardTile clicked
+            {
+                if (selectedCard.CardSO.CardType == CardScriptableObject.Type.ITEM)
+                {
+                    if(DeckManager.Instance.RemoveInk(selectedCard.CardSO.InkCost))
                     {
-                        if(DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
-                        {
-                            boardTile.SetHeldStamp(_selectedCard.CardSO.StampGO);
-                            // Debug.Log("Placed Item " + _selectedCard + " onto BoardTile!");
-                        }
-                        else
-                        {
-                            AnnounceError(_errorNotEnoughInk, context.performed);
-                        }
-                        DeckManager.Instance.ResetCardSelection();
-                    }
-                    else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.LAND)
-                    {
-                        if(DeckManager.Instance.RemoveInk(_selectedCard.CardSO.InkCost))
-                        {
-                            BoardLane boardLane = BoardManager.Instance.GetLane(boardTile.LaneNumber);
-                            boardLane.ApplyLandStamp(_selectedCard.CardSO.StampGO);
-                            _selectedCard.HasBeenUsed = true;
-                            // Debug.Log("Placed Land " + _selectedCard + " onto BoardLane!");
-                        }
-                        else
-                        {
-                            AnnounceError(_errorNotEnoughInk, context.performed);
-                        }
-                        DeckManager.Instance.ResetCardSelection();
-                    }
-                    else if (_selectedCard.CardSO.CardType == CardScriptableObject.Type.SPELL)
-                    {
-                        boardTile.PlaySpell(_selectedCard.CardSO.StampGO);
-                        // Debug.Log("Placed Spell " + _selectedCard + " onto the item!");
-                        DeckManager.Instance.ResetCardSelection(); 
+                        boardTile.SetHeldStamp(selectedCard.CardSO.StampGO);
                     }
                     else
                     {
-                        AnnounceError(_stampUnitOnBoardTile, context.performed);
+                        AnnounceError(_errorNotEnoughInk);
                     }
                 }
-            }          
+                else if (selectedCard.CardSO.CardType == CardScriptableObject.Type.LAND)
+                {
+                    if(DeckManager.Instance.RemoveInk(selectedCard.CardSO.InkCost))
+                    {
+                        BoardLane boardLane = BoardManager.Instance.GetLane(boardTile.LaneNumber);
+                        boardLane.ApplyLandStamp(selectedCard.CardSO.StampGO);
+                        selectedCard.HasBeenUsed = true;
+                    }
+                    else
+                    {
+                        AnnounceError(_errorNotEnoughInk);
+                    }
+                }
+                else if (selectedCard.CardSO.CardType == CardScriptableObject.Type.SPELL)
+                {
+                    boardTile.PlaySpell(selectedCard.CardSO.StampGO);
+                }
+                else
+                {
+                    AnnounceError(_stampUnitOnBoardTile);
+                }
+            }
+            DeckManager.Instance.ResetCardSelection();
         }
         else if (context.performed) // Only need to do this check once when performed (canceled doesn't matter)
         {
-            if (_selectedCard == null && _raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile))
+            if (selectedCard == null && raycastHit.transform.gameObject.TryGetComponent(out BoardTile boardTile))
             {
-                if (_raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
+                if (raycastHit.transform.gameObject.TryGetComponent(out UnitTile unitTile))
                 {
                     unitTile.Clicked();
                 }
@@ -185,9 +167,9 @@ public class InputManager : MonoBehaviour
         _spriteDrag.Move(new Vector3(_mousePositionWorld.x, _mousePositionWorld.y, 0f));
     }
 
-    private void AnnounceError(string errorMessage, bool isOnPerformed)
+    private void AnnounceError(string errorMessage)
     {
-        if (!isOnPerformed || _isHoveringUI.Value)
+        if (_isHoveringUI.Value)
         {
             return;
         }

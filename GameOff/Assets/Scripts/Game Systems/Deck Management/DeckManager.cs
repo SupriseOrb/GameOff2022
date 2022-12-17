@@ -7,11 +7,20 @@ using TMPro;
 
 public class DeckManager : MonoBehaviour
 {
+    private static DeckManager _instance;
+    public static DeckManager Instance
+    {
+        get{return _instance;}
+    }
+
     [Header("Cards")]
-    [SerializeField] private List<GameObject> _activeDeck; //Holds all active cards
-    [SerializeField] private Transform _activeDeckTransform; //Location of the deck
+    [SerializeField] private List<GameObject> _activeDeck;
+    [SerializeField] private Transform _activeDeckTransform;
+    // TODO : Perhaps rename to _exhaustDeck
     [SerializeField] private List<GameObject> _discardDeck; //Holds all discarded cards
+    // TODO : cardHolders --> cardPositions
     [SerializeField] private Transform[] _cardHolders; //Holds positions for each card in _cardHand
+    // TODO : Maybe just rename to hand
     [SerializeField] private GameObject[] _cardHand; //Holds all cards in hand (filling the card "slots")
     
     [Header("Select Card")]
@@ -31,16 +40,10 @@ public class DeckManager : MonoBehaviour
 
     [Header("Deck Vars")]
     [SerializeField] private float _firstDrawDelay;
-    [SerializeField] private int _drawNumber; //How many cards to draw (how many cards we want in hand at a time)
     [SerializeField] private float _baseReshuffleTimer; //Base time till hand is reset
     [SerializeField] private float _currentReshuffleTimer; //Current time till hand is reset
-    [SerializeField] private BoolVariable _isInWave; //Is there currently a wave happening? //Does this belong here? Should this be a SO bool?
+    [SerializeField] private BoolVariable _isInWave; //Is there currently a wave happening?
     [SerializeField] private bool _isFirstDraw; //Is this the first draw of the wave?
-    public bool IsFirstDraw
-    {
-        get {return _isFirstDraw;}
-        set {_isFirstDraw = value;}
-    }
 
     [Header("Timer")]
     [SerializeField] private Slider _timerSlider;
@@ -62,14 +65,6 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private int _inkPerSecond;
     private float _currentInkTimer;
     private bool _inkFullSoundPlayed = false;
-
-    private static System.Random r = new System.Random();
-    private static DeckManager _instance;
-
-    public static DeckManager Instance
-    {
-        get{return _instance;}
-    }
 
     void Awake()
     {
@@ -99,6 +94,7 @@ public class DeckManager : MonoBehaviour
     
     private void FixedUpdate() 
     {
+        // Handles card shuffling
         if (!_isFirstDraw)
         {
             if (_currentReshuffleTimer <= 0)
@@ -113,10 +109,13 @@ public class DeckManager : MonoBehaviour
             _timerText.text = ((int)_currentReshuffleTimer).ToString() + "s";
             _timerSlider.value = _currentReshuffleTimer/_baseReshuffleTimer;
         }
+
+        // Handles steady ink updates
         if(_isInWave.Value)
         {
             if(_currentInkTimer <= 0)
             {
+                // TODO : Add a baseInkTimer variable
                 AddInk(_inkPerSecond);
                 _currentInkTimer = 1;
             }
@@ -124,13 +123,13 @@ public class DeckManager : MonoBehaviour
         }
     }
 
-    //Returns all cards from discard deck to active deck, and moves all cards from card hand to active deck
+    // Puts all the cards back into the deck
     public void ResetDeck()
     {
         foreach(GameObject card in _discardDeck)    
         {
             CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
-            loader._hasBeenUsed = false;
+            loader.HasBeenUsed = false;
             _activeDeck.Add(card);
             card.transform.position = _activeDeckTransform.position;
         }
@@ -139,16 +138,14 @@ public class DeckManager : MonoBehaviour
 
     private void CycleHand()
     {
+        // TODO : Probably delete this for loop
         foreach(GameObject card in _discardDeck)
         {
             CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
-            if (loader.CardType == CardScriptableObject.Type.LAND && loader._hasBeenUsed == true)
+            
+            if (!(loader.CardType == CardScriptableObject.Type.LAND && loader.HasBeenUsed == true))
             {
-                
-            }
-            else
-            {
-                loader._hasBeenUsed = false;
+                loader.HasBeenUsed = false;
                 _activeDeck.Add(card);
                 card.transform.position = _activeDeckTransform.position;
             }
@@ -156,17 +153,19 @@ public class DeckManager : MonoBehaviour
 
         foreach(GameObject card in _cardHand)
         {
+            // TODO : card shouldn't be null, let it hard crash if it is
             if(card != null)
             {
                 CardScriptLoader loader = card.GetComponent<CardScriptLoader>();
                 //BUG: If the hand cycles and you're still holding a land card that you end up playing, this won't trigger
                 //Easiest way to fix this bug would be to give InputManager access to cardHand
                 //So that we can check if _selectedCard is in cardHand (Linq.Contains) and if it's a land, yeet it to discard
-                if(loader.CardType == CardScriptableObject.Type.LAND && loader._hasBeenUsed == true)
+                if(loader.CardType == CardScriptableObject.Type.LAND && loader.HasBeenUsed == true)
                 {
                     _discardDeck.Add(card);
                     _activeDeck.Remove(card);
                 }
+                // TODO : Do we need this functionality here? Or should it even exist?
                 //If card is a unit, put it back in the top 3 cards in the deck list
                 else if(loader.CardType == CardScriptableObject.Type.UNIT)
                 {
@@ -231,27 +230,17 @@ public class DeckManager : MonoBehaviour
     {
         if(_isFirstDraw)
         {
-            //Draw 3 units and then a random card from the deck
             for(int i = 0; i < _cardHand.Length; i++)
             {
+                // TODO : Instead of hardcoding 3 - i, just use the cardHolders length
                 int randomNum = Random.Range(0, 3 - i);
                 _cardHand[i] = _activeDeck[randomNum];
                 _activeDeck.RemoveAt(randomNum);
-                //replace w/ animation later
+
                 _cardHand[i].transform.parent.position = _cardHolders[i].transform.position;
                 _cardHand[i].GetComponent<Animator>().Play("Draw_"+i);
             }
-            /*
-                No Cow w/First Draw:
-                ------------------------------------------------- 
-                //Debug.Log("Deck Length - 1: " + (_activeDeck.Count -1));
-                int j = Random.Range(0, _activeDeck.Count);
-                //Debug.Log("j: " + j);
-                _cardHand[3] = _activeDeck[j];
-                _activeDeck.RemoveAt(j);
-                _cardHand[3].transform.parent.position = _cardHolders[3].transform.position;
-                _cardHand[3].GetComponent<Animator>().Play("Draw_"+3);
-            */
+            _isFirstDraw = false;
         }
         else
         {
