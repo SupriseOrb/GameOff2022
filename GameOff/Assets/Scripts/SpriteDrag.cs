@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// TODO : Rename to something else
+// It implies we are dragging it, but in reality we're trying to convey that we are holding a card
 public class SpriteDrag : MonoBehaviour
 {
     [SerializeField] private bool _isDragging;
