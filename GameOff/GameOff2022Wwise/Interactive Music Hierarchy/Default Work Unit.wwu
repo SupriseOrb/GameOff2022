@@ -608,7 +608,6 @@
 										<MusicTransition Name="Transition" ID="{6CCB286B-E32A-43BE-A972-DEE06EB0561D}">
 											<PropertyList>
 												<Property Name="DestinationContextType" Type="int16" Value="2"/>
-												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
@@ -649,7 +648,6 @@
 										<MusicTransition Name="Transition" ID="{38DA986F-E77E-4E1F-8D22-D586A067959A}">
 											<PropertyList>
 												<Property Name="DestinationContextType" Type="int16" Value="2"/>
-												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
@@ -676,7 +674,6 @@
 										<MusicTransition Name="Transition" ID="{CF29958E-0E40-4532-9A0A-4840E85D581E}">
 											<PropertyList>
 												<Property Name="DestinationContextType" Type="int16" Value="2"/>
-												<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
 												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
