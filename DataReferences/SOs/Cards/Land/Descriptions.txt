@@ -1,0 +1,9 @@
+Bramble Patch:
+Periodically hurts enemy soldiers as they travel through its thick brambles.
+
+Ink Reservoir:
+Periodically revitalizes allied units on the field as they soak in its revitalizing ink.
+
+Magic Leyline:
+Empowers magical items and spells, tapping into the primal power of the earth.
+

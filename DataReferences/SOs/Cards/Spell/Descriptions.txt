@@ -1,0 +1,9 @@
+Ink Blot:
+Deals damage to all enemy units on that tile. The magic of a leyline empowers ink blots, causing them to deal double damage. Turns out erasers are bad at erasing stains on themselves.
+
+Potion:
+Heals an allied unit. The magic of a leyline empowers potions, allowing them to fully recover an unit. For external wounds only.
+
+Timepiece:
+Activates the abilities of all Demons, Harpies, and Redcaps in a lane. When messing with time travel, only go forward.
+(Note: Should be "Reduces the cooldown of the abilities of all....")

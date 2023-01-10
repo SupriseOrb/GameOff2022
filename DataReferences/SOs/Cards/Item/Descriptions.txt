@@ -1,0 +1,8 @@
+Ink Cow:
+Generates ink over time. The magic of a leyline empowers cows, doubling their ink generation. Suprisingly, this cow does not require any milking.
+
+Rough Ground:
+Slows the movement and attacks of enemies walking over it. A kilogram of it actually weighs less than a kilogram of feathers.
+
+Spike Bush:
+Deals damage to back to enemies when they attack it. Its spikes are strong enough to penetrate steel.

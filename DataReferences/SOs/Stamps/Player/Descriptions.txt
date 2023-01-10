@@ -1,0 +1,76 @@
+Harpy:
+*Unique Upg1 = Slow Intensity (rng), Unique Upg2 = Push Distance (rng), Unique Upg3 = Atk Speed Decrease (1st Upgrade Debuff)
+
+Disorienting Song:
+Base: 
+The Harpy attacks less frequently and no longer slows, but moves enemies to a different lane instead.
+
+Description Random:
+Randomly increase one of the following stats: Attack Damage or Attack Speed.
+
+Description Reset Warning:
+The Harpy attacks less frequently and no longer slows, but moves enemies to a different lane instead. Choosing this upgrade will remove all previous upgrades.
+
+Booming Song:
+Base:
+Pushes enemies back and slows enemies.
+
+Description Random:
+Randomly increase one of the following stats: Attack Damage, Attack Speed, Push Distance, or Slow Intensity.
+
+Description Reset Warning:
+Pushes enemies back and slows enemies. Choosing this upgrade will remove all previous upgrades.
+
+
+Ink Demon:
+*Unique Upg1 = Max HP (rng), Unique Upg2 = CD Increase (1st Upgrade Debuff), Unique Upg3 = CD Decrease (2nd Upgrade Buff)
+
+Volatile Summons:
+Base:
+The Ink Demon summons minions less frequently, but minions now deal damage and slow enemies on death.
+
+Description Random: 
+Randomly increase one of the following stats: Attack Damage, Attack Speed, or Minion Health.
+
+Description Reset Warning:
+The Ink Demon summons minions less frequently, but minions now deal damage and slow enemies on death. Choosing this upgrade will remove all previous upgrades.
+
+Mass-Produced Summons:
+Base:
+The Ink Demon summons minions more frequently.
+
+Description Random:
+Randomly increase one of the following stats: Attack Damage, Attack Speed, or Minion Health.
+
+Description Reset Warning:
+The Ink Demon summons minions more frequently. Choosing this upgrade will remove all previous upgrades.
+
+
+Redcap:
+*Unique Upg1 = Pierce Amt (rng), Unique Upg2 = Stun Duration (rng), Unique Upg3 = Stun Duration (2nd Upgrade Buff)
+
+Lead Ink:
+Base:
+The Redcap’s inkball pierces through an additional enemy.
+
+Description Random: 
+Randomly increase one of the following stats: Attack Damage, Attack Speed, or Projectile Piercing.
+
+
+Description Reset Warning:
+The Redcap’s inkball pierces through an additional enemy. Choosing this upgrade will remove all previous upgrades.
+
+Sticky Ink:
+Base:
+The Redcap’s inkball can now stun enemies.
+
+Description Random:
+Randomly increase one of the following stats: Attack Damage, Attack Speed, or Stun Duration.
+
+Description Reset Warning:
+The Redcap’s inkball can now stun enemies. Choosing this upgrade will remove all previous upgrades.
+
+
+
+
+
