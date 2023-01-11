@@ -20,45 +20,15 @@ public class CardData : ScriptableObject
     #endregion
 
     #region Card Properties
-    public string CardName
-    {
-        get {return _name;}
-    }
-
-    public string CardDescription
-    {
-        get
-        {
-            // TODO : Figure out how we want to format the card description
-            // For now, just return _cardDescription, but we might want to list stats and upgrades (if applicable)
-            return _baseDescription;
-        }
-    }
-
-    public int InkCost
-    {
-        get {return _inkCost;}
-    }
-
-    public bool HasBeenUsed
-    {
-        get {return _hasBeenUsed;}
-    }
-
-    public GameObject StampGO
-    {
-        get {return _stampReference;}
-    }
-
-    public Type CardType
-    {
-        get {return _type;}
-    }
-
-    public Sprite CardIcon
-    {
-        get {return _icon;}
-    }
+    public string CardName {get {return _name;}}
+    // TODO : Figure out how we want to format the card description
+        // For now, just return _cardDescription, but we might want to list stats and upgrades (if applicable)
+    public string CardDescription {get {return _baseDescription;}}
+    public int InkCost {get {return _inkCost;}}
+    public bool HasBeenUsed {get {return _hasBeenUsed;}}
+    public GameObject StampGO {get {return _stampReference;}}
+    public Type CardType {get {return _type;}}
+    public Sprite CardIcon {get {return _icon;}}
     #endregion
     public string CardDescriptionGivenInt(int i)
     {

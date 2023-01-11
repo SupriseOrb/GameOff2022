@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerUnit : MonoBehaviour
 {
     #region General Unit Info
-    private CardData _data;
+    // TODO : CardData should be separated into multiple categories, one of which should be PlayerCardData. Use that instead.
+    [SerializeField] private CardData _data;
+    [SerializeField] private BoolVariable _isInWave;
     private string _tileDescription;
     private int _laneNumber;
     private int _tileNumber;
@@ -13,7 +15,7 @@ public class PlayerUnit : MonoBehaviour
     #endregion
 
     #region Animation
-    private Animator _animator;
+    [SerializeField] private Animator _animator;
     private string _appearBaseAnimationName;
     private string _appear1AnimationName;
     private string _appear2AnimationName;
@@ -22,45 +24,89 @@ public class PlayerUnit : MonoBehaviour
     private string _attack2AnimationName;
     #endregion
 
-    #region Unit RNG Upgrades
+    #region Unit RNG Stats
     private float _attackDamageUpgradeValue;
-    private float _attackSpeedUpgradeValue;
+    private float _cooldownReductionUpgradeValue;
     #endregion
 
     private string _appearSFXName;
 
-    #region Unit Getters
+    #region Unit Functions
+    protected void Start()
+    {
+        LoadBaseStats();
+        LoadUpgradeStats();
+        _animator.Play(_appearBaseAnimationName);
+        AkSoundEngine.PostEvent(_appearSFXName, gameObject);
+    }
+
+    protected virtual void FixedUpdate()
+    {
+
+    }
+
+    protected virtual void OpenUpgradeMenu()
+    {
+        //UpgradeMenu.Instance.Open(gameObject, _data.CardIcon, _data.Upgrades, (int)_currentUpgradePath);
+    }
+
+    protected virtual void ReduceCooldown()
+    {
+        // TODO : Can't this be taken care of through a setter on the CD Value of the unit (which is in place currently)?
+    }
+
+    protected virtual void LoadBaseStats()
+    {
+
+    }
+
+    protected virtual void LoadUpgradeStats()
+    {
+
+    }
+
+    protected virtual void UpgradeUnit()
+    {
+
+    }
+    #endregion
+    #region Properties
     /*
     =================
     General Unit Info
     =================
     */
-    protected virtual CardData Data {get {return _data;}}
-    protected virtual string TileDescription {get {return _tileDescription;}}
-    protected virtual int LaneNumber {get {return _laneNumber;}}
-    protected virtual int TileNumber {get {return _tileNumber;}}
-    protected virtual int CurrentUpgradePath {get {return _currentUpgradePath;}}
+    protected CardData Data {get {return _data;}}
+    protected BoolVariable IsInWave {get {return _isInWave;}}
+    protected string TileDescription {get {return _tileDescription;} set {_tileDescription = value;}}
+    protected int LaneNumber {get {return _laneNumber;} set {_laneNumber = value;}}
+    protected int TileNumber {get {return _tileNumber;} set {_tileNumber = value;}}
+    protected int CurrentUpgradePath {get {return _currentUpgradePath;} set {_currentUpgradePath = value;}}
     /*
     =================
     Animation
     =================
     */
-    protected virtual Animator Animator {get {return _animator;}}
-    protected virtual string AppearBaseAnimationName {get {return _appearBaseAnimationName;}}
-    protected virtual string Appear1AnimationName {get {return _appear1AnimationName;}}
-    protected virtual string Appear2AnimationName {get {return _appear2AnimationName;}}
-    protected virtual string AttackBaseAnimationName {get {return _attackBaseAnimationName;}}
-    protected virtual string Attack1AnimationName {get {return _attack1AnimationName;}}
-    protected virtual string Attack2AnimationName {get {return _attack2AnimationName;}}
+    protected Animator Animator {get {return _animator;}}
+    protected string AppearBaseAnimationName {get {return _appearBaseAnimationName;} set {_appearBaseAnimationName = value;}}
+    protected string Appear1AnimationName {get {return _appear1AnimationName;} set {_appear1AnimationName = value;}}
+    protected string Appear2AnimationName {get {return _appear2AnimationName;} set {_appear2AnimationName = value;}}
+    protected string AttackBaseAnimationName {get {return _attackBaseAnimationName;} set {_attackBaseAnimationName = value;}}
+    protected string Attack1AnimationName {get {return _attack1AnimationName;} set {_attack1AnimationName = value;}}
+    protected string Attack2AnimationName {get {return _attack2AnimationName;} set {_attack2AnimationName = value;}}
     /*
     =================
-    Unit RNG Upgrades
+    Unit RNG Stats
     =================
     */
-    protected virtual float AttackDamageUpgradeValue {get {return _attackDamageUpgradeValue;}}
-    protected virtual float AttackSpeedUpgradeValue {get {return _attackSpeedUpgradeValue;}}
-
-    protected virtual string AppearSFXName {get {return _appearSFXName;}}
+    protected float AttackDamageUpgradeValue {get {return _attackDamageUpgradeValue;} set {_attackDamageUpgradeValue = value;}}
+    protected float CooldownReductionUpgradeValue {get {return _cooldownReductionUpgradeValue;} set {_cooldownReductionUpgradeValue = value;}}
+    protected string AppearSFXName {get {return _appearSFXName;} set {_appearSFXName = value;}}
+    /*
+    =================
+    Card Data
+    =================
+    */
     #endregion
 
 }
