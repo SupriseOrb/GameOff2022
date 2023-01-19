@@ -49,6 +49,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ToggleUI",
+                    "type": "Button",
+                    "id": "a7b3cd0b-7296-485f-bfac-0f6dae218ce3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AddInk",
+                    "type": "Button",
+                    "id": "349e3f3e-5511-4990-9261-f14d3de52db6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -104,6 +122,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "OnLeftClickHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4fab0f53-8afd-4296-9708-bb3a8d7ca41a",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dd2c7e43-3188-407f-9eff-717e44076444",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AddInk",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

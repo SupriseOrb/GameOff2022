@@ -71,6 +71,24 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ToggleUI"",
+                    ""type"": ""Button"",
+                    ""id"": ""a7b3cd0b-7296-485f-bfac-0f6dae218ce3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AddInk"",
+                    ""type"": ""Button"",
+                    ""id"": ""349e3f3e-5511-4990-9261-f14d3de52db6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -128,6 +146,28 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""OnLeftClickHold"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4fab0f53-8afd-4296-9708-bb3a8d7ca41a"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleUI"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dd2c7e43-3188-407f-9eff-717e44076444"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AddInk"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -141,6 +181,8 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Player_OnRightClick = m_Player.FindAction("OnRightClick", throwIfNotFound: true);
         m_Player_OnMiddleClick = m_Player.FindAction("OnMiddleClick", throwIfNotFound: true);
         m_Player_MousePos = m_Player.FindAction("MousePos", throwIfNotFound: true);
+        m_Player_ToggleUI = m_Player.FindAction("ToggleUI", throwIfNotFound: true);
+        m_Player_AddInk = m_Player.FindAction("AddInk", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -205,6 +247,8 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_OnRightClick;
     private readonly InputAction m_Player_OnMiddleClick;
     private readonly InputAction m_Player_MousePos;
+    private readonly InputAction m_Player_ToggleUI;
+    private readonly InputAction m_Player_AddInk;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -214,6 +258,8 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @OnRightClick => m_Wrapper.m_Player_OnRightClick;
         public InputAction @OnMiddleClick => m_Wrapper.m_Player_OnMiddleClick;
         public InputAction @MousePos => m_Wrapper.m_Player_MousePos;
+        public InputAction @ToggleUI => m_Wrapper.m_Player_ToggleUI;
+        public InputAction @AddInk => m_Wrapper.m_Player_AddInk;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -238,6 +284,12 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @MousePos.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePos;
                 @MousePos.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePos;
                 @MousePos.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePos;
+                @ToggleUI.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleUI;
+                @ToggleUI.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleUI;
+                @ToggleUI.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleUI;
+                @AddInk.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAddInk;
+                @AddInk.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAddInk;
+                @AddInk.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAddInk;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -257,6 +309,12 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @MousePos.started += instance.OnMousePos;
                 @MousePos.performed += instance.OnMousePos;
                 @MousePos.canceled += instance.OnMousePos;
+                @ToggleUI.started += instance.OnToggleUI;
+                @ToggleUI.performed += instance.OnToggleUI;
+                @ToggleUI.canceled += instance.OnToggleUI;
+                @AddInk.started += instance.OnAddInk;
+                @AddInk.performed += instance.OnAddInk;
+                @AddInk.canceled += instance.OnAddInk;
             }
         }
     }
@@ -268,5 +326,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnOnRightClick(InputAction.CallbackContext context);
         void OnOnMiddleClick(InputAction.CallbackContext context);
         void OnMousePos(InputAction.CallbackContext context);
+        void OnToggleUI(InputAction.CallbackContext context);
+        void OnAddInk(InputAction.CallbackContext context);
     }
 }

@@ -25,12 +25,16 @@ public class InputManager : MonoBehaviour
     [SerializeField] private string _lClickString;
     [SerializeField] private string _rClickString;
     [SerializeField] private string _mousePosString;
+    [SerializeField] private string _toggleUIString;
+    [SerializeField] private string _addInkString;
     #endregion
 
     #region Input Actions
     private InputAction _lClickAction;
     private InputAction _rClickAction;
     private InputAction _mousePosAction;
+    private InputAction _toggleUIAction;
+    private InputAction _addInkAction;
     #endregion
 
     [Header("Error Message")]
@@ -42,11 +46,19 @@ public class InputManager : MonoBehaviour
     [SerializeField] [TextArea] private string _stampUnknownOnUnit = "Cannot stamp items / lands on allied unit tiles";
     [SerializeField] [TextArea] private string _stampUnitOnBoardTile = "Cannot stamp allied unit outside of unit tiles";
     [SerializeField] private BoolVariable _isHoveringUI;
+
+    [Header("Debug")]
+    [SerializeField] private List<Canvas> _UICanvas;
+    [SerializeField] private bool _hideUI = false;
+    [SerializeField] private int _inkToAdd = 10;
     private void Awake() 
     {
         _lClickAction = _playerInput.actions[_lClickString];
         _rClickAction = _playerInput.actions[_rClickString];
         _mousePosAction = _playerInput.actions[_mousePosString];
+
+        _toggleUIAction = _playerInput.actions[_toggleUIString];
+        _addInkAction = _playerInput.actions[_addInkString];
     }
 
     private void OnEnable() 
@@ -56,6 +68,9 @@ public class InputManager : MonoBehaviour
 
         _rClickAction.performed += OnRightClick;
         _mousePosAction.performed += MousePosition;
+
+        _toggleUIAction.performed += ToggleUI;
+        _addInkAction.performed += AddInk;
     }
 
     private void OnDisable() 
@@ -65,6 +80,9 @@ public class InputManager : MonoBehaviour
 
         _rClickAction.performed -= OnRightClick;
         _mousePosAction.performed -= MousePosition;
+
+        _toggleUIAction.performed -= ToggleUI;
+        _addInkAction.performed -= AddInk;
     }
 
     public void OnRightClick(InputAction.CallbackContext context)
@@ -199,5 +217,19 @@ public class InputManager : MonoBehaviour
         {
             // TODO : Make the ink bar flash w/ a shader
         }
+    }
+
+    private void ToggleUI(InputAction.CallbackContext context)
+    {
+        _hideUI = !_hideUI;
+        for (int i = 0; i < _UICanvas.Count; i++)
+        {
+            _UICanvas[i].enabled = _hideUI;
+        }
+    }
+
+    private void AddInk(InputAction.CallbackContext context)
+    {
+        DeckManager.Instance.AddInk(_inkToAdd, true);
     }
 }

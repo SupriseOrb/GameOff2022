@@ -182,9 +182,9 @@ public class DeckManager : MonoBehaviour
         }
     }
 
-    public void AddInk(int ink)
+    public void AddInk(int ink, bool overrideBoolCheck = false)
     {
-        if (_isInWave.Value)
+        if (_isInWave.Value || overrideBoolCheck)
         {
             if(_currentInk + ink <= _maxInk)
             {
