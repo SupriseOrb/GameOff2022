@@ -10,32 +10,45 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d077e3891bddebf478df100b65851b4f, type: 3}
-  m_Name: Scene2
+  m_Name: Scene3_3
   m_EditorClassIdentifier: 
   _wave:
   - _laneOneEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _enemySpawnDistance: 0.5
+    _timeToSpawn: 3
+  - _laneOneEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _laneTwoEnemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _laneThreeEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    _enemySpawnDistance: 0.25
-    _timeToSpawn: 5
+    _enemySpawnDistance: 0.5
+    _timeToSpawn: 24
+  - _laneOneEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _laneTwoEnemies:
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    _laneThreeEnemies:
+    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _enemySpawnDistance: 0.5
+    _timeToSpawn: 45
   - _laneOneEnemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _laneTwoEnemies:
     - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
     _laneThreeEnemies:
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    _enemySpawnDistance: 0.25
-    _timeToSpawn: 7
-  - _laneOneEnemies:
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    _laneTwoEnemies:
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    _laneThreeEnemies:
-    - {fileID: 4928695220663604939, guid: 974851932a7a76e4f90affc2680e49af, type: 3}
-    _enemySpawnDistance: 0.25
-    _timeToSpawn: 9
-  _waveDuration: 9
+    - {fileID: 3901090085370978051, guid: c7971a2604dfec4449a8a273fa2a52a0, type: 3}
+    _enemySpawnDistance: 0.5
+    _timeToSpawn: 50
+  _waveDuration: 50
   _waveBreakBeforeDuration: 90
