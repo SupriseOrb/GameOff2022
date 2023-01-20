@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
 
     [SerializeField] private GameObject _loadingScreen;
 
-    protected void LoadScene(int sceneIndex)
+    public void LoadScene(int sceneIndex)
     {
         AkSoundEngine.PostEvent("Play_UISelect", this.gameObject);
         
